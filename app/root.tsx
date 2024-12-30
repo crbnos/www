@@ -99,7 +99,7 @@ function Document({
         <Links />
       </head>
       <body className="h-[100dvh] w-[100dvw] flex flex-col bg-background text-foreground antialiased selection:bg-[#00cc9937] selection:text-[#007763fd] dark:selection:bg-[#00fff61d] dark:selection:text-[#67ffded2]">
-        <header className="flex select-none items-center bg-transparent pl-5 pr-4 border-b h-[var(--header-height)] border-transparent fixed top-0 left-0 right-0 z-50">
+        <header className="flex select-none items-center bg-transparent pl-5 pr-2 border-b h-[var(--header-height)] border-transparent fixed top-0 left-0 right-0 z-50">
           <div className="flex items-center justify-between gap-2 z-logo text-foreground w-full">
             <a href="/" className="cursor-pointer">
               <img
@@ -114,16 +114,31 @@ function Document({
               />
             </a>
             <div className="flex items-center gap-2">
-              <Button variant="ghost" asChild className="cursor-pointer">
-                <Link prefetch="intent" to="/blog">
-                  Blog
-                </Link>
-              </Button>
-              <Button variant="outline" asChild className="cursor-pointer">
-                <a href="https://app.carbonos.dev">Login</a>
-              </Button>
-              <Button variant="default" className="cursor-pointer" asChild>
-                <Link to="/#try-carbonos">Try It</Link>
+              <div className="flex items-center gap-0">
+                <Button
+                  variant="ghost"
+                  asChild
+                  className="cursor-pointer rounded-full"
+                >
+                  <Link prefetch="intent" to="/blog">
+                    Blog
+                  </Link>
+                </Button>
+
+                <Button
+                  variant="ghost"
+                  className="cursor-pointer rounded-full"
+                  asChild
+                >
+                  <Link to="/#try-carbonos">Sign Up</Link>
+                </Button>
+              </div>
+              <Button
+                variant="secondary"
+                className="cursor-pointer rounded-full"
+                asChild
+              >
+                <a href="https://app.carbonos.dev">Open App</a>
               </Button>
             </div>
           </div>
