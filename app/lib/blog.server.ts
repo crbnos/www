@@ -12,24 +12,29 @@ type Metadata = {
   author: string;
 };
 
+type Author = {
+  name: string;
+  avatar: string;
+  title: string;
+};
+
 type BlogPost = {
   metadata: Metadata;
   slug: string;
   html: string;
-  author?: {
-    name: string;
-    avatar: string;
-  };
+  author?: Author;
 };
 
-const authors = {
+const authors: Record<string, Author> = {
   rob: {
     name: "Rob Carrington",
     avatar: "/faces/rob.png",
+    title: "CEO & Co-Founder",
   },
   brad: {
     name: "Brad Barbin",
     avatar: "/faces/brad.png",
+    title: "CTO & Co-Founder",
   },
 };
 

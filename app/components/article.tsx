@@ -13,6 +13,7 @@ type ArticleProps = {
     author?: {
       name: string;
       avatar: string;
+      title: string;
     };
   };
   preview?: boolean;
@@ -24,16 +25,7 @@ export function Article({ data, preview = false }: ArticleProps) {
       <Link prefetch="intent" className="mb-6 block" to={`/blog/${data.slug}`}>
         <h2 className="font-medium text-2xl mb-6">{data.metadata.title}</h2>
       </Link>
-      {data.author && (
-        <div className="flex items-center gap-2 mb-6">
-          <img
-            src={data.author.avatar}
-            alt={data.author.name}
-            className="size-8 object-cover rounded-full"
-          />
-          <span className="text-sm text-gray-500">{data.author.name}</span>
-        </div>
-      )}
+
       <div className="updates">
         {data.metadata.image && (
           <img
@@ -49,6 +41,23 @@ export function Article({ data, preview = false }: ArticleProps) {
             className="prose prose-md prose-invert max-w-none mt-12"
             dangerouslySetInnerHTML={{ __html: data.html }}
           />
+        )}
+        {data.author && (
+          <div className="flex items-center gap-2 mt-6">
+            <img
+              src={data.author.avatar}
+              alt={data.author.name}
+              className="size-10 object-cover rounded-lg"
+            />
+            <div className="flex flex-col">
+              <span className="text-sm text-foreground font-semibold">
+                {data.author.name}
+              </span>
+              <span className="text-xs text-muted-foreground">
+                {data.author.title}
+              </span>
+            </div>
+          </div>
         )}
       </div>
     </article>
