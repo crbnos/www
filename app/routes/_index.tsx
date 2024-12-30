@@ -28,7 +28,7 @@ export default function Route() {
       <IntroducingCarbonOS />
       <Header />
       {isMobile ? <div className="h-[60vh]" /> : <Hero />}
-      <DontSettleForCrap />
+      <DontSettleForSaaS />
       <WhyNotOffTheShelf />
       <DontBuildItFromScratch />
       <GanttComparison />
@@ -162,7 +162,7 @@ function WithCarbonOS() {
   );
 }
 
-function DontSettleForCrap() {
+function DontSettleForSaaS() {
   return (
     <ScrollStage pages={2}>
       <div className="sticky top-0 flex h-screen flex-col items-center justify-center">
@@ -174,7 +174,7 @@ function DontSettleForCrap() {
             transition={{ duration: 0.5 }}
             className="mt-5 text-3xl md:text-5xl"
           >
-            💩💩💩💩💩💩
+            😭😭😭😭😭😭
           </motion.span>
         </Actor>
       </div>
