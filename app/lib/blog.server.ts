@@ -36,7 +36,12 @@ const authors: Record<string, Author> = {
     avatar: "/faces/brad.png",
     title: "CTO & Co-Founder",
   },
-};
+  tom: {
+    name: "Tom Smith",
+    avatar: "/faces/tom.png",
+    title: "Co-Founder",
+  },
+} as const;
 
 const postsCache = new LRUCache<string, BlogPost>({
   max: 100, // Maximum number of items to store

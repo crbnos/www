@@ -310,12 +310,11 @@ function Team() {
             <SocialIcon type="x" href="https://x.com/barbinbrad" />
           </div>
           <p className="text-sm lg:text-base text-muted-foreground">
-            After founding an NLP startup and building a social media platform
-            as an early engineer, Brad moved to the manufacturing industry. He
-            has built custom manufacturing systems for heavy equipment, nuclear
-            reactors, and bio-pharmaceuticals. His 7 years of experience on shop
-            floors drove him to build the missing piece of the manufacturing
-            stack.
+            Brad has built custom manufacturing systems for heavy equipment,
+            nuclear reactors, and bio-pharmaceuticals. His 7 years of experience
+            on shop floors drove him to build the missing piece of the
+            manufacturing stack. Before manufacturing, he founded an NLP
+            startup, built a successful social media app.
           </p>
         </div>
 
