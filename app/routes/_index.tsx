@@ -268,7 +268,7 @@ function Team() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="flex flex-col items-start gap-2">
           <img
-            src="/faces/rob.png"
+            src="/faces/rob.webp"
             alt="Rob Carrington"
             className="w-full aspect-[3/4] rounded-lg object-cover mb-4 opacity-80"
           />
@@ -294,7 +294,7 @@ function Team() {
 
         <div className="flex flex-col items-start gap-2">
           <img
-            src="/faces/brad.png"
+            src="/faces/brad.webp"
             alt="Brad Barbin"
             className="w-full aspect-[3/4] rounded-lg object-cover mb-4 opacity-80"
           />
@@ -320,7 +320,7 @@ function Team() {
 
         <div className="flex flex-col items-start gap-2">
           <img
-            src="/faces/tom.png"
+            src="/faces/tom.webp"
             alt="Tom Smith"
             className="w-full aspect-[3/4] rounded-lg object-cover mb-4 opacity-80"
           />

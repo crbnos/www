@@ -156,66 +156,66 @@ export function Header() {
 export const screenshots = [
   {
     title: "Resources",
-    thumbnail: "/screenshots/permissions.jpeg",
+    thumbnail: "/screenshots/permissions.webp",
   },
   {
     title: "Bill of Materials",
-    thumbnail: "/screenshots/bom.jpeg",
+    thumbnail: "/screenshots/bom.webp",
   },
   {
     title: "Work Instructions",
-    thumbnail: "/screenshots/bop.jpeg",
+    thumbnail: "/screenshots/bop.webp",
   },
   {
     title: "Quotes Table",
-    thumbnail: "/screenshots/quotes-table.jpeg",
+    thumbnail: "/screenshots/quotes-table.webp",
   },
   {
     title: "Global Search",
-    thumbnail: "/screenshots/search.jpeg",
+    thumbnail: "/screenshots/search.webp",
   },
   {
     title: "Documents",
-    thumbnail: "/screenshots/documents.jpeg",
+    thumbnail: "/screenshots/documents.webp",
   },
   {
     title: "MES Work Instructions",
-    thumbnail: "/screenshots/mes-instructions.jpeg",
+    thumbnail: "/screenshots/mes-instructions.webp",
   },
   {
     title: "Auto-generated API Documentation",
-    thumbnail: "/screenshots/api-docs.jpeg",
+    thumbnail: "/screenshots/api-docs.webp",
   },
   {
     title: "Kanban Schedule",
-    thumbnail: "/screenshots/kanban.jpeg",
+    thumbnail: "/screenshots/kanban.webp",
   },
   {
     title: "MES 3D Viewer",
-    thumbnail: "/screenshots/mes-model.jpeg",
+    thumbnail: "/screenshots/mes-model.webp",
   },
   {
     title: "Customer Portal",
-    thumbnail: "/screenshots/customer-portal-entry.jpeg",
+    thumbnail: "/screenshots/customer-portal-entry.webp",
   },
   {
     title: "Resources",
-    thumbnail: "/screenshots/resources.jpeg",
+    thumbnail: "/screenshots/resources.webp",
   },
   {
     title: "Quote Pricing",
-    thumbnail: "/screenshots/quote-pricing.jpeg",
+    thumbnail: "/screenshots/quote-pricing.webp",
   },
   {
     title: "Configurator",
-    thumbnail: "/screenshots/configurator.jpeg",
+    thumbnail: "/screenshots/configurator.webp",
   },
   {
     title: "Customer Portal",
-    thumbnail: "/screenshots/customer-portal.jpeg",
+    thumbnail: "/screenshots/customer-portal.webp",
   },
   {
     title: "MES Details",
-    thumbnail: "/screenshots/mes-details.jpeg",
+    thumbnail: "/screenshots/mes-details.webp",
   },
 ];

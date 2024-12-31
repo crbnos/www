@@ -28,17 +28,17 @@ type BlogPost = {
 const authors: Record<string, Author> = {
   rob: {
     name: "Rob Carrington",
-    avatar: "/faces/rob.png",
+    avatar: "/faces/rob.webp",
     title: "CEO & Co-Founder",
   },
   brad: {
     name: "Brad Barbin",
-    avatar: "/faces/brad.png",
+    avatar: "/faces/brad.webp",
     title: "CTO & Co-Founder",
   },
   tom: {
     name: "Tom Smith",
-    avatar: "/faces/tom.png",
+    avatar: "/faces/tom.webp",
     title: "Co-Founder",
   },
 } as const;
