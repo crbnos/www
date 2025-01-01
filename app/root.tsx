@@ -120,20 +120,12 @@ function Document({
             </a>
             <div className="flex items-center gap-2">
               <div className="flex items-center gap-0">
-                <Button
-                  variant="ghost"
-                  asChild
-                  className="cursor-pointer rounded-full"
-                >
+                <Button variant="ghost" asChild className="cursor-pointer">
                   <Link prefetch="intent" to="/blog">
                     Blog
                   </Link>
                 </Button>
-                <Button
-                  variant="ghost"
-                  className="cursor-pointer rounded-full"
-                  asChild
-                >
+                <Button variant="ghost" className="cursor-pointer" asChild>
                   <a href="https://app.carbonos.dev">
                     <Fingerprint className="size-4" />
                     Login
@@ -142,16 +134,12 @@ function Document({
               </div>
               <Button
                 variant="secondary"
-                className="cursor-pointer rounded-full"
+                className="cursor-pointer"
                 onClick={() => setShowWizard(true)}
               >
                 <Lightbulb className="size-4" />
                 Start your trial
               </Button>
-              <WizardForm
-                open={showWizard}
-                onClose={() => setShowWizard(false)}
-              />
             </div>
           </div>
         </header>
@@ -159,6 +147,7 @@ function Document({
         <div className="relative flex h-full w-full items-start justify-center">
           <LightRays />
           <main>{children}</main>
+          <WizardForm open={showWizard} onClose={() => setShowWizard(false)} />
         </div>
 
         <ScrollRestoration />

@@ -210,7 +210,9 @@ export default function WizardForm({ open, onClose }: WizardFormProps) {
 
     const totalSteps = getTotalSteps(newAnswers);
     if (currentStep < totalSteps - 1) {
-      setCurrentStep(getNextStep(currentStep, newAnswers));
+      setTimeout(() => {
+        setCurrentStep(getNextStep(currentStep, newAnswers));
+      }, 300);
     }
   };
 
@@ -250,6 +252,7 @@ export default function WizardForm({ open, onClose }: WizardFormProps) {
 
   return (
     <Dialog
+      modal
       open={open}
       onOpenChange={(open) => {
         if (!open) {
@@ -422,7 +425,7 @@ function StepContent({ stepData, currentAnswer, onSelect }: StepContentProps) {
             variant="outline"
             type="button"
             className={cn(
-              "w-full p-4 h-auto flex justify-between items-center text-wrap",
+              "w-full p-4 h-auto flex justify-between items-center text-wrap rounded-lg",
               currentAnswer === option.value &&
                 "border-primary ring-1 ring-primary"
             )}

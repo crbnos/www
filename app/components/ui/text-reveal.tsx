@@ -59,7 +59,7 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
             <p
               key={pIndex}
               className={
-                "flex flex-wrap p-5 text-xl text-foreground/20  md:p-8 md:text-2xl lg:text-3xl tracking-tight"
+                "flex flex-wrap p-5 text-xl text-foreground/20  md:p-8 md:text-2xl lg:text-3xl tracking-tight text-balance"
               }
             >
               {paragraph.map(({ word, isBold }, i) => {

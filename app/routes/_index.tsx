@@ -1,5 +1,7 @@
+import { Link } from "@remix-run/react";
 import { motion } from "framer-motion";
-import { CodeXml, Play } from "lucide-react";
+import { CodeXml, Lightbulb, Play } from "lucide-react";
+
 import {
   Gantt,
   GanttContainer,
@@ -14,13 +16,13 @@ import {
   AccordionTrigger,
 } from "~/components/ui/accordion";
 import { AnimatedShinyText } from "~/components/ui/animated-shiny-text";
-import { Actor, ScrollStage } from "~/components/ui/stage";
+import { Button } from "~/components/ui/button";
+import { Actor, ScrollStage, useStage } from "~/components/ui/stage";
 import TextRevealByWord from "~/components/ui/text-reveal";
 import { useIsMobile } from "~/hooks/useIsMobile";
 import { useWizard } from "~/hooks/useWizard";
 
 export default function Route() {
-  const { showWizard, setShowWizard } = useWizard();
   const isMobile = useIsMobile();
   return (
     <>
@@ -28,11 +30,12 @@ export default function Route() {
 
       {isMobile ? <div className="h-[60vh]" /> : <Hero />}
       <WhatIsCarbonOS />
+      <Features />
       <WhyNotOffTheShelf />
       <GanttComparison />
       <Team />
       <FAQs />
-
+      <CTA />
       <Footer />
     </>
   );
@@ -162,6 +165,148 @@ function WhatIsCarbonOS() {
   return <TextRevealByWord text={whatIsCarbonOSText} />;
 }
 
+type Slide = {
+  img: string;
+  description: string;
+  link?: string;
+  start: number;
+  end: number;
+};
+
+function FeatureDescription({
+  start,
+  end,
+  children,
+}: {
+  start: number;
+  end: number;
+  children: React.ReactNode;
+}) {
+  return (
+    <Actor start={start} end={end}>
+      <motion.p
+        className="fixed left-10 bottom-[10dvh] md:left-10 md:top-5 flex flex-col  justify-center md:min-h-[100dvh] w-[calc(100%-5rem)] md:w-1/3 items-start px-6 font-medium text-lg text-muted-foreground text-balance "
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        {children}
+      </motion.p>
+    </Actor>
+  );
+}
+
+const slides: Slide[] = [
+  {
+    img: "https://placehold.co/1280x800",
+    description:
+      "It starts with a delightful customer experience. We help you create a custom solution to feed requests to the system or use the API for instant quoting.",
+    link: "/blog/delightful-experience",
+    start: 0.1,
+    end: 0.25,
+  },
+  {
+    img: "https://placehold.co/1280x800",
+    description:
+      "Next, whatever you're making needs converted to a bill of materials and a routing. If you're not mass producing, our configurator will help you generate the perfect BoM and routing automatically.",
+    link: "/blog/configuration-is-all-you-need",
+    start: 0.25,
+    end: 0.433,
+  },
+  {
+    img: "https://placehold.co/1280x800",
+    description:
+      "With an accurate account of what needs made, everything falls into place. Purchasing, production, scheduling, inventory, receiving, and resource management all benefit from an integrated system of record.",
+    start: 0.433,
+    end: 0.617,
+  },
+  {
+    img: "https://placehold.co/1280x800",
+    description:
+      "CarbonOS is built entirely with our self-documenting API. With access to the source code, our SDK, and our realtime API, you'll be able to build custom applications that set your business apart.",
+
+    start: 0.617,
+    end: 0.8,
+  },
+  {
+    img: "https://placehold.co/1280x800",
+    description:
+      "In addition to our core application, we provide an MES app and a starter kit for building your own applications. This will save you years of development time, and allow you to avoid the pitfalls of off-the-shelf systems.",
+    start: 0.8,
+    end: 0.95,
+  },
+];
+
+function FeatureImages() {
+  const stage = useStage();
+
+  return (
+    <div className="-mt-[100dvh]">
+      {slides.map((slide, index) => {
+        const slideProgress = stage.progress * 6 - index;
+
+        const opacity =
+          slideProgress < 1.3
+            ? 1
+            : Math.max(0, 1 - (slideProgress - 1.3) / 0.7);
+
+        return (
+          <div
+            key={index}
+            className="flex items-center justify-center min-h-[100dvh]"
+          >
+            <div className="relative w-full" style={{ opacity }}>
+              <img
+                src={slide.img}
+                alt={slide.description}
+                className="w-full h-auto rounded-lg"
+              />
+              <div
+                className="absolute inset-0"
+                style={{
+                  content: "",
+                  background:
+                    "radial-gradient(97% 162% at -5% 6%, rgba(11, 11, 15, 0) 0%, rgba(11, 11, 15, 0) 60%, rgb(0, 0, 0) 100%)",
+                }}
+              />
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function Features() {
+  return (
+    <ScrollStage pages={5.5} fallbackLength={100} fallbackFrame={25}>
+      <div className="md:flex relative">
+        <div className="sticky bottom-0 w-1/3 md:bottom-auto md:top-0 md:flex md:h-screen md:flex-1 md:items-center md:self-start">
+          {slides.map((slide, index) => (
+            <FeatureDescription key={index} start={slide.start} end={slide.end}>
+              {slide.description}
+              {slide.link && (
+                <Button className="mt-4" variant="outline" asChild>
+                  <Link to={slide.link}>
+                    Learn more <Lightbulb className="size-4" />
+                  </Link>
+                </Button>
+              )}
+            </FeatureDescription>
+          ))}
+        </div>
+      </div>
+
+      <div className="ml-[50%] flex-1">
+        <div className="w-full md:max-w-3xl px-3">
+          <FeatureImages />
+        </div>
+      </div>
+    </ScrollStage>
+  );
+}
+
 const whyNotOffTheShelfText = `Off-the-shelf systems can __get you 80% of the way there.__ But the remaining 20%– everything that makes your business unique– becomes nearly impossible.
 __If you don't control the full stack__, you're at the mercy of a vendor's roadmap and fluctuating pricing. In essence, __you're a renter, not an owner.__`;
 
@@ -172,7 +317,7 @@ function WhyNotOffTheShelf() {
 function Team() {
   return (
     <div className="mx-auto w-screen max-w-6xl px-6 py-[40dvh] flex flex-col gap-8">
-      <h3 className="text-center text-3xl lg:text-4xl xl:text-5xl font-semibold leading-none tracking-tight text-zinc-200 dark:text-zinc-800">
+      <h3 className="text-center text-3xl lg:text-4xl xl:text-5xl font-semibold leading-none tracking-tight text-foreground">
         We know manufacturing
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -249,8 +394,8 @@ function Team() {
             brings a unique blend of manufacturing expertise and product
             management to CarbonOS. He has led software and operations teams at
             Arrival, CloudNC, Fictiv, and Saeki Robotics. He was motivated to
-            build CarbonOS by a lack of good digital tools for his family's
-            business.
+            build CarbonOS by his experience that no two manufacturers are
+            alike.
           </p>
         </div>
       </div>
@@ -279,14 +424,14 @@ function SocialIcon({ type, href }: { type: "linkedin" | "x"; href: string }) {
 
 function FAQs() {
   return (
-    <section className="w-full h-screen bg-zinc-100/30 dark:bg-zinc-900/30 py-32 ">
+    <section className="w-full h-screen py-32 ">
       <div className="mx-auto w-form-sm md:w-form-md lg:w-form-lg ">
-        <h2 className="mb-8 text-center text-xl md:text-2xl lg:text-3xl font-bold text-foreground shadow-inner">
+        <h2 className="mb-8 text-center text-xl md:text-2xl lg:text-3xl font-bold text-muted-foreground">
           FAQs
         </h2>
 
         <div className="space-y-4 text-base md:text-lg lg:text-xl">
-          <Accordion type="single" collapsible defaultValue="item-6">
+          <Accordion type="single" collapsible>
             <AccordionItem value="item-1">
               <AccordionTrigger>
                 Is CarbonOS hosted on-prem or in the cloud?
@@ -467,6 +612,33 @@ function FAQs() {
         </div>
       </div>
     </section>
+  );
+}
+
+function CTA() {
+  const { setShowWizard } = useWizard();
+  return (
+    <div className="border border-border rounded-lg max-w-5xl text-center px-10 py-14 mx-4 md:mx-auto md:px-24 md:py-20 mb-[20dvh] mt-24 flex items-center flex-col dark:bg-muted">
+      <img
+        src="https://app.carbonos.dev/carbon-logo-light.png"
+        alt="CarbonOS"
+        className="size-12"
+      />
+      <span className="text-6xl md:text-8xl font-bold tracking-tighter text-foreground">
+        CarbonOS
+      </span>
+      <p className="text-muted-foreground mt-6">
+        The new standard for custom manufacturing systems
+      </p>
+      <div className="mt-10 md:mb-8">
+        <div className="flex items-center">
+          <Button onClick={() => setShowWizard(true)}>
+            Start your trial
+            <Play className="size-4" />
+          </Button>
+        </div>
+      </div>
+    </div>
   );
 }
 
