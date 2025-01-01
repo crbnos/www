@@ -68,7 +68,7 @@ function Header() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        CarbonOS is the new standard for manufacturing software systems
+        CarbonOS is the new standard for custom manufacturing systems
       </motion.p>
     </div>
   );
