@@ -1,0 +1,84 @@
+---
+meta:
+  title: "Configuration Is All You Need"
+  publishedAt: "2025-01-03"
+  summary: "Configuration is the cornerstone of digital manufacturing. It's the foundation that enables manufacturers to create custom products and services that meet the unique needs of their customers."
+  image: "/images/stone-arch.webp"
+  author: "brad"
+---
+
+Maybe that's just a bit of a stretch. You also need a good API, a good data model, a UI that doesn't suck, and a way to change things when you need to. But configuration is super important for making a general-purpose manufacturing software work for your business-specific needs. Let's dive in.
+
+## What is Configuration?
+
+In order to automate manufacturing and support data-driven decision making, we need to first create an accurate model of the manufacturing processes. The problem with manufacturing software is that any general-purpose data model does not often work for the specific needs of a manufacturer. Each business is basically unique.
+
+On the other hand, every business is ~80% the same. Quotes, orders, purchasing, invoicing, time tracking, nested bills of materials, etc. All of this is basically the same for every manufacturing business.
+
+So we have two data models we need to support:
+
+1. The 20% which is unique to each business.
+2. The 80% which is the same for every business.
+
+A configurator is a tool that maps the unique 20% to the standard 80%.
+
+## What the Cuss Does That Mean?
+
+Let's say we're a door manufacturer. We need to ultimately arrive at a bill of material and bill of process (routing) for each door. But customers can choose the exact dimensions of their door, they can choose the material, the hinges, etc. It doesn't make sense for us to try to maintain a database of every possible door configuration for two reasons.
+
+1. It's not scalable. Even with 3 or 4 variables, we can't possibly support every possible door configuration.
+2. It's impossible to maintain. Say we make a process improvement. We'd have to update the routing for every part.
+
+So we need a way to instantly create an accurate bill of material and routing (and cost estimate) for any possible door configuration. The bill of material and routing are the 80%. The parameters of what makes a door are the 20%. Configuration is the process for mapping the 20% to the 80%.
+
+Let's look at a few examples of how we might might "define" a door.
+
+### Example 1: Doors
+
+```tsx
+type Params = {
+  wood: "Oak" | "Maple" | "Walnut" | "Cherry" | "Pine";
+  width: number;
+  height: number;
+  hinges: "Left" | "Right";
+  lock: "Single" | "Double";
+};
+```
+
+If we look at a sheet metal part, we have a similar situation.
+
+### Example 2: Sheet Metal
+
+```tsx
+type Params = {
+  material: "Aluminum" | "Steel" | "Stainless Steel";
+  thickness: "0.25" | "0.5" | "0.75" | "1";
+  width: number;
+  height: number;
+  cutDistance: number;
+};
+```
+
+We might also add parameters like number of bends, number of holes, etc. But the gist is the same. We have a set of parameters that can determine the bill of material and routing.
+
+It might seem like a big leap, but the same idea holds true for any manufacturing that is not mass-produced. Here's a slight oversimplified example of how a boat might be configured:
+
+### Example 3: Boat
+
+```tsx
+type Params = {
+  engine: "XSB" | "XSB2";
+  autopilot: boolean;
+  color: "Red" | "Blue" | "Green" | "Yellow";
+  secondStation: boolean;
+  upholstery: "Gray" | "Navy";
+  ledUpgrades: boolean;
+  navigationUpgrade: boolean;
+};
+```
+
+The idea is that for any manufactured part, we can define a set of parameters that can determine the bill of material and routing.
+
+## And Then What?
+
+...WIP...

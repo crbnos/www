@@ -1,0 +1,81 @@
+---
+meta:
+  title: "How to Build an Instant Quoting Engine for Configure-to-Order Manufacturing"
+  publishedAt: "2025-01-04"
+  summary: "The article explains how digital manufacturers can implement instant quoting systems to match modern e-commerce expectations, outlining steps from creating digital RFQ forms to automating Bills of Materials through ERP/MES systems or custom software, with the goal of reducing quote delivery time from days to seconds to improve sales conversion."
+  image: "/images/plane.webp"
+  author: "rob"
+---
+
+In 2025, buyers expect more from their suppliers. E-commerce giants like Amazon and Shopify have made online buying _easy_. Consumers can see instant pricing and availability for a wide range of products, and place 1-click orders, all from their smartphone.
+
+If you are a Digital Manufacturer looking to increase revenue or boost customer retention, take a page from the E-commerce playbook:
+
+Make it **easy** to buy from you.
+
+When ordering custom configured products, one of the main sources of friction buyers experience is simply waiting for a quote. The difference between waiting five days for a quote or waiting five seconds for a quote could very well be the difference between making the sale or losing the opportunity.
+
+In this article we’ll break down the concrete set of steps you can follow to build an instant quoting engine to [streamline your customers’ buying experience](/blog/delightful-experience).
+
+## Build a Digital RFQ Form
+
+The first step in providing an instant quote is getting the product configuration request from your customer. The best way to do this is with a digital request-for-quote (RFQ) form that:
+
+1. Is easy for customers to find (directly on your website, ideally)
+2. Clearly indicates what configuration options are available
+3. Captures the RFQ details in a structured digital format (i.e., not a blob of text)
+
+![Customer Portal Example](/images/customer-portal.webp)
+
+Your RFQ form should provide structured fields (drop-downs, date selectors, etc) that make it as easy as possible for your customers to browse the available options and make their selections. The simplest way to build such a form is to use a tool like [Typeform](https://www.typeform.com/). However, if you want to have complete control over the style and branding of your RFQ form – and if you want to be able to render an instant quote directly on your website – you’ll want to either build your own form, or hire someone to build it for you (like us\!).
+
+## Automate Your Bill of Materials (BoM)
+
+The next step is to determine what materials (Bill of Materials, BoM) and labor steps (Bill of Process, BoP) are required to produce the desired configuration of the product. The goal at this stage is to understand what your cost will be, so you can figure out the appropriate price to quote the customer.
+
+In order for the quote to be instant, the process for creating the BoM and BoP must be fully automated via software. This software automation needs to know about:
+
+- All the materials that could potentially be required
+- Their costs, inventory levels, etc
+- All of the labor steps that could be required and their costs
+
+This information typically lives in your ERP/MES system. There are two main ways to build this software automation:
+
+### Build the Automation Within Your ERP/MES
+
+Some ERP/MES solutions give users the ability to automatically generate a BoM and BoP based on a set of input parameters. For example, CarbonOS has an extremely flexible automation module called the Configurator – check out this [feature highlight article](/blog/configuration-is-all-you-need) to learn more.
+
+Tools like the Configurator allow users to specify logic rules that can be used to automatically generate the BoM and BoP. For example, you could create a rule that says “If the customer selects Option X, add Raw Material A to the BoM”.
+
+![Configurator Example](/images/configurator.webp)
+
+Once the BoM and BoP have been assembled, the cost and price can also be calculated automatically and the quote can be prepared to send to the customer.
+
+The benefit of building this automation within your ERP/MES is that all of the information needed to produce the product will be ready to go when the customer places an order. It is often as simple as a single button click to convert the quote into a sales order or job to begin production.
+
+### Custom Software Automation
+
+If your ERP/MES does not have an automation tool like the Configurator built in, it may be possible to build custom software automation external to your ERP/MES. In order for this to work your ERP/MES must have a robust API that provides access to all of the data listed above.
+
+The downside to this approach is that the external application will need to pull a lot of data from the ERP/MES for each RFQ, and it may not be possible to create the BoM and BoP inside the ERP/MES as part of this process.
+
+## Deliver the Instant Quote
+
+There are two primary ways to deliver an instant quote:
+
+### Directly on Your Website
+
+There are some key benefits to delivering the quote on the same page where the customer requested it:
+
+1. **Reduced Friction**: The customer can see the price – and place an order – without leaving the page
+2. **Creative Control**: You have more control over the look and feel of the quote on your website than you do in another medium like email
+
+### Via Email
+
+If you haven’t set up your website to be able to render the quote, the next best option is to send an email. In fact, even if you do display the quote on your website it is still a good idea to send an email so the customer has a record of the quote even if they navigate away from the page.
+
+## Putting it all Together
+
+The specifics of how you put together all the components of your instant quoting system will depend a lot on the technology stack you’ve chosen for your website, ERP/MES, cost automation, etc. There are many benefits to having a [vertically integrated end-to-end system](/blog/vertically-integrated-stack) that encompasses all of the above functionality. CarbonOS is an extensible operating system for manufacturers that is designed specifically to support advanced digital manufacturing use cases like instant quoting.
+
+Whether you have software developers on staff and want to build on top of a best-in-class software foundation, or are looking for a fully-tailored end-to-end custom solution, feel free to reach out to learn more about how CarbonOS can transform your business.

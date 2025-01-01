@@ -21,6 +21,7 @@ import { Actor, ScrollStage, useStage } from "~/components/ui/stage";
 import TextRevealByWord from "~/components/ui/text-reveal";
 import { useIsMobile } from "~/hooks/useIsMobile";
 import { useWizard } from "~/hooks/useWizard";
+import { cn } from "~/lib/utils";
 
 export default function Route() {
   const isMobile = useIsMobile();
@@ -158,11 +159,13 @@ function WithCarbonOS() {
   );
 }
 
-const whatIsCarbonOSText = `CarbonOS is an __API-first__ operating system for manufacturing. We give you __full access to the source code,__ so you have complete control.
-That means you're __never locked in__ and you can focus on building the things that makes your business unique.`;
-
 function WhatIsCarbonOS() {
-  return <TextRevealByWord text={whatIsCarbonOSText} />;
+  return (
+    <TextRevealByWord
+      text={`CarbonOS is an __API-first__ operating system for manufacturing. We give you __full access to the source code,__ so you have complete control.
+That means you're __never locked in__ and you can focus on building the things that makes your business unique.`}
+    />
+  );
 }
 
 type Slide = {
@@ -224,7 +227,7 @@ const slides: Slide[] = [
   {
     img: "https://placehold.co/1280x800",
     description:
-      "CarbonOS is built entirely with our self-documenting API. With access to the source code, our SDK, and our realtime API, you'll be able to build custom applications that set your business apart.",
+      "CarbonOS is built entirely with our self-documenting API. With access to the source code, our SDK, and our realtime API, you'll be able to build custom applications that drive your business.",
 
     start: 0.617,
     end: 0.8,
@@ -238,32 +241,36 @@ const slides: Slide[] = [
   },
 ];
 
-function FeatureImages() {
+function FeatureImages({ isMobile }: { isMobile: boolean }) {
   const stage = useStage();
 
   return (
-    <div className="-mt-[100dvh]">
+    <div className={cn(isMobile ? "flex flex-col gap-4" : "-mt-[100dvh]")}>
       {slides.map((slide, index) => {
         const slideProgress = stage.progress * 6 - index;
 
         const opacity =
-          slideProgress < 1.3
+          slideProgress < 1.3 || isMobile
             ? 1
             : Math.max(0, 1 - (slideProgress - 1.3) / 0.7);
 
         return (
           <div
             key={index}
-            className="flex items-center justify-center min-h-[100dvh]"
+            className={cn(
+              isMobile
+                ? "flex bg-muted rounded-lg border border-border p-6"
+                : "flex items-center justify-center min-h-[100dvh]"
+            )}
           >
             <div className="relative w-full" style={{ opacity }}>
               <img
                 src={slide.img}
                 alt={slide.description}
-                className="w-full h-auto rounded-lg"
+                className="w-full h-auto rounded-lg invert"
               />
               <div
-                className="absolute inset-0"
+                className="absolute inset-0 rounded-r-lg"
                 style={{
                   content: "",
                   background:
@@ -280,7 +287,11 @@ function FeatureImages() {
 
 function Features({ isMobile }: { isMobile: boolean }) {
   return (
-    <ScrollStage pages={5.5} fallbackLength={100} fallbackFrame={25}>
+    <ScrollStage
+      pages={isMobile ? 1 : 5.5}
+      fallbackLength={100}
+      fallbackFrame={25}
+    >
       {!isMobile && (
         <div className="md:flex relative">
           <div className="sticky bottom-0 w-1/3 md:bottom-auto md:top-0 md:flex md:h-screen md:flex-1 md:items-center md:self-start">
@@ -304,28 +315,30 @@ function Features({ isMobile }: { isMobile: boolean }) {
         </div>
       )}
 
-      <div className="ml-[50%] flex-1">
+      <div className={isMobile ? "flex-1" : "ml-[50%] flex-1"}>
         <div className="w-full md:max-w-3xl px-3">
-          <FeatureImages />
+          <FeatureImages isMobile={isMobile} />
         </div>
       </div>
     </ScrollStage>
   );
 }
 
-const whyNotOffTheShelfText = `Off-the-shelf systems can __get you 80% of the way there.__ But the remaining 20%– everything that makes your business unique– becomes nearly impossible.
-__If you don't control the full stack__, you're at the mercy of a vendor's roadmap and fluctuating pricing. In essence, __you're a renter, not an owner.__`;
-
 function WhyNotOffTheShelf() {
-  return <TextRevealByWord text={whyNotOffTheShelfText} />;
+  return (
+    <TextRevealByWord
+      text={`Off-the-shelf systems can __get you 80% of the way there.__ But the remaining 20%– everything that makes your business unique– becomes nearly impossible.
+__If you don't control the full stack__, you're at the mercy of a vendor's roadmap and fluctuating pricing. In essence, __you're a renter, not an owner.__`}
+    />
+  );
 }
 
 function Team() {
   return (
     <div className="mx-auto w-screen max-w-6xl px-6 py-[40dvh] flex flex-col gap-8">
-      <h3 className="text-center text-3xl lg:text-4xl xl:text-5xl font-semibold leading-none tracking-tight text-foreground">
+      {/* <h3 className="text-center text-3xl lg:text-4xl xl:text-5xl font-semibold leading-none tracking-tight text-foreground">
         We know manufacturing
-      </h3>
+      </h3> */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="flex flex-col items-start gap-2">
           <img
@@ -400,7 +413,8 @@ function Team() {
             brings a unique blend of manufacturing expertise and product
             management to CarbonOS. He has led software and operations teams at
             Arrival, CloudNC, Fictiv, and Saeki Robotics. He was motivated to
-            build CarbonOS by the insight that no two manufacturers are alike.
+            build CarbonOS by the insight that no two manufacturers are
+            identical.
           </p>
         </div>
       </div>
