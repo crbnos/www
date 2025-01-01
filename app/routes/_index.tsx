@@ -30,7 +30,7 @@ export default function Route() {
 
       {isMobile ? <div className="h-[60vh]" /> : <Hero />}
       <WhatIsCarbonOS />
-      <Features />
+      <Features isMobile={isMobile} />
       <WhyNotOffTheShelf />
       <GanttComparison />
       <Team />
@@ -278,25 +278,31 @@ function FeatureImages() {
   );
 }
 
-function Features() {
+function Features({ isMobile }: { isMobile: boolean }) {
   return (
     <ScrollStage pages={5.5} fallbackLength={100} fallbackFrame={25}>
-      <div className="md:flex relative">
-        <div className="sticky bottom-0 w-1/3 md:bottom-auto md:top-0 md:flex md:h-screen md:flex-1 md:items-center md:self-start">
-          {slides.map((slide, index) => (
-            <FeatureDescription key={index} start={slide.start} end={slide.end}>
-              {slide.description}
-              {slide.link && (
-                <Button className="mt-4" variant="outline" asChild>
-                  <Link to={slide.link}>
-                    Learn more <Lightbulb className="size-4" />
-                  </Link>
-                </Button>
-              )}
-            </FeatureDescription>
-          ))}
+      {!isMobile && (
+        <div className="md:flex relative">
+          <div className="sticky bottom-0 w-1/3 md:bottom-auto md:top-0 md:flex md:h-screen md:flex-1 md:items-center md:self-start">
+            {slides.map((slide, index) => (
+              <FeatureDescription
+                key={index}
+                start={slide.start}
+                end={slide.end}
+              >
+                {slide.description}
+                {slide.link && (
+                  <Button className="mt-4" variant="outline" asChild>
+                    <Link to={slide.link}>
+                      Learn more <Lightbulb className="size-4" />
+                    </Link>
+                  </Button>
+                )}
+              </FeatureDescription>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       <div className="ml-[50%] flex-1">
         <div className="w-full md:max-w-3xl px-3">
@@ -394,8 +400,7 @@ function Team() {
             brings a unique blend of manufacturing expertise and product
             management to CarbonOS. He has led software and operations teams at
             Arrival, CloudNC, Fictiv, and Saeki Robotics. He was motivated to
-            build CarbonOS by his experience that no two manufacturers are
-            alike.
+            build CarbonOS by the insight that no two manufacturers are alike.
           </p>
         </div>
       </div>
@@ -619,11 +624,6 @@ function CTA() {
   const { setShowWizard } = useWizard();
   return (
     <div className="border border-border rounded-lg max-w-5xl text-center px-10 py-14 mx-4 md:mx-auto md:px-24 md:py-20 mb-[20dvh] mt-24 flex items-center flex-col dark:bg-muted">
-      <img
-        src="https://app.carbonos.dev/carbon-logo-light.png"
-        alt="CarbonOS"
-        className="size-12"
-      />
       <span className="text-6xl md:text-8xl font-bold tracking-tighter text-foreground">
         CarbonOS
       </span>
