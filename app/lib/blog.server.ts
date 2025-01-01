@@ -102,7 +102,7 @@ async function getMDXData(dir: string) {
 
 export async function getBlogPosts() {
   return await getMDXData(
-    path.join(process.cwd(), "app", "routes", "blog+", "posts")
+    path.join(process.cwd(), "app", "routes", "learn+", "posts")
   );
 }
 

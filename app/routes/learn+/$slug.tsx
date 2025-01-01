@@ -49,7 +49,7 @@ export const meta: MetaFunction = ({ data, params }) => {
     ];
   }
 
-  let url = siteUrl ? `${siteUrl}/blog/${slug}` : null;
+  let url = siteUrl ? `${siteUrl}/learn/${slug}` : null;
   const socialImageUrl = `${siteUrl}${post.metadata.image}`;
 
   return [

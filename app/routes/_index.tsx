@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
 import { motion } from "framer-motion";
-import { CodeXml, Lightbulb, Play } from "lucide-react";
+import { Lightbulb, Play } from "lucide-react";
 
 import {
   Gantt,
@@ -20,7 +20,6 @@ import { Button } from "~/components/ui/button";
 import { Actor, ScrollStage, useStage } from "~/components/ui/stage";
 import TextRevealByWord from "~/components/ui/text-reveal";
 import { useIsMobile } from "~/hooks/useIsMobile";
-import { useWizard } from "~/hooks/useWizard";
 import { cn } from "~/lib/utils";
 
 export default function Route() {
@@ -36,8 +35,6 @@ export default function Route() {
       <GanttComparison />
       <Team />
       <FAQs />
-      <CTA />
-      <Footer />
     </>
   );
 }
@@ -205,7 +202,7 @@ const slides: Slide[] = [
     img: "https://placehold.co/1280x800",
     description:
       "It starts with a delightful customer experience. We help you create a custom solution to feed requests to the system or use the API for instant quoting.",
-    link: "/blog/delightful-experience",
+    link: "/learn/delightful-experience",
     start: 0.1,
     end: 0.25,
   },
@@ -213,7 +210,7 @@ const slides: Slide[] = [
     img: "https://placehold.co/1280x800",
     description:
       "Next, whatever you're making needs converted to a bill of materials and a routing. If you're not mass producing, our configurator will help you generate the perfect BoM and routing automatically.",
-    link: "/blog/configuration-is-all-you-need",
+    link: "/learn/configuration-is-all-you-need",
     start: 0.25,
     end: 0.433,
   },
@@ -259,7 +256,7 @@ function FeatureImages({ isMobile }: { isMobile: boolean }) {
             key={index}
             className={cn(
               isMobile
-                ? "flex bg-muted rounded-lg border border-border p-6"
+                ? "flex flex-col bg-muted rounded-lg border border-border gap-4 p-6"
                 : "flex items-center justify-center min-h-[100dvh]"
             )}
           >
@@ -278,6 +275,11 @@ function FeatureImages({ isMobile }: { isMobile: boolean }) {
                 }}
               />
             </div>
+            {isMobile && (
+              <p className="font-medium text-base text-muted-foreground text-balance">
+                {slide.description}
+              </p>
+            )}
           </div>
         );
       })}
@@ -631,43 +633,5 @@ function FAQs() {
         </div>
       </div>
     </section>
-  );
-}
-
-function CTA() {
-  const { setShowWizard } = useWizard();
-  return (
-    <div className="border border-border rounded-lg max-w-5xl text-center px-10 py-14 mx-4 md:mx-auto md:px-24 md:py-20 mb-[20dvh] mt-24 flex items-center flex-col dark:bg-muted">
-      <span className="text-6xl md:text-8xl font-bold tracking-tighter text-foreground">
-        CarbonOS
-      </span>
-      <p className="text-muted-foreground mt-6">
-        The new standard for custom manufacturing systems
-      </p>
-      <div className="mt-10 md:mb-8">
-        <div className="flex items-center">
-          <Button onClick={() => setShowWizard(true)}>
-            Start your trial
-            <Play className="size-4" />
-          </Button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Footer() {
-  return (
-    <div className="flex flex-col items-center justify-center py-8">
-      <a
-        href="https://github.com/crbnos"
-        className="mb-4 text-muted-foreground/50 hover:text-muted-foreground transition-colors"
-      >
-        <CodeXml className="size-8 rounded-full bg-foreground/10 text-foreground p-1.5" />
-      </a>
-      <p className="text-center text-xs text-muted-foreground/50">
-        Carbon Manufacturing Systems Corporation
-      </p>
-    </div>
   );
 }

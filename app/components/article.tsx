@@ -22,7 +22,7 @@ type ArticleProps = {
 export function Article({ data, preview = false }: ArticleProps) {
   return (
     <article key={data.slug} className="pt-28 -mt-28 mb-20 " id={data.slug}>
-      <Link prefetch="intent" className="mb-6 block" to={`/blog/${data.slug}`}>
+      <Link prefetch="intent" className="mb-6 block" to={`/learn/${data.slug}`}>
         <h2 className="font-medium text-2xl mb-6">{data.metadata.title}</h2>
       </Link>
 

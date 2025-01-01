@@ -13,7 +13,7 @@ import type { MetaFunction } from "@vercel/remix";
 import React from "react";
 
 import { motion } from "framer-motion";
-import { Fingerprint, Lightbulb } from "lucide-react";
+import { CodeXml, Fingerprint, Lightbulb, Play } from "lucide-react";
 import Tailwind from "~/styles/tailwind.css?url";
 import { Button } from "./components/ui/button";
 import WizardForm from "./components/wizard-form";
@@ -121,8 +121,8 @@ function Document({
             <div className="flex items-center gap-2">
               <div className="flex items-center gap-0">
                 <Button variant="ghost" asChild className="cursor-pointer">
-                  <Link prefetch="intent" to="/blog">
-                    Blog
+                  <Link prefetch="intent" to="/learn">
+                    Learn
                   </Link>
                 </Button>
                 <Button variant="ghost" className="cursor-pointer" asChild>
@@ -146,7 +146,11 @@ function Document({
 
         <div className="relative flex h-full w-full items-start justify-center">
           <LightRays />
-          <main>{children}</main>
+          <main className="flex flex-col w-full">
+            {children}
+            <CTA />
+            <Footer />
+          </main>
           <WizardForm open={showWizard} onClose={() => setShowWizard(false)} />
         </div>
 
@@ -155,6 +159,44 @@ function Document({
         <Analytics />
       </body>
     </html>
+  );
+}
+
+function CTA() {
+  const { setShowWizard } = useWizard();
+  return (
+    <div className="border border-border rounded-lg max-w-5xl text-center px-10 py-14 mx-4 md:mx-auto md:px-24 md:py-20 mb-[20dvh] mt-24 flex items-center flex-col dark:bg-muted">
+      <span className="text-6xl md:text-8xl font-bold tracking-tighter text-foreground">
+        CarbonOS
+      </span>
+      <p className="text-muted-foreground mt-6">
+        The new standard for custom manufacturing systems
+      </p>
+      <div className="mt-10 md:mb-8">
+        <div className="flex items-center">
+          <Button onClick={() => setShowWizard(true)}>
+            Start your trial
+            <Play className="size-4" />
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Footer() {
+  return (
+    <div className="flex flex-col items-center justify-center py-8">
+      <a
+        href="https://github.com/crbnos"
+        className="mb-4 text-muted-foreground/50 hover:text-muted-foreground transition-colors"
+      >
+        <CodeXml className="size-8 rounded-full bg-foreground/10 text-foreground p-1.5" />
+      </a>
+      <p className="text-center text-xs text-muted-foreground/50">
+        Carbon Manufacturing Systems Corporation
+      </p>
+    </div>
   );
 }
 
