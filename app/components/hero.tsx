@@ -6,8 +6,6 @@ import {
   useTransform,
 } from "framer-motion";
 import { useRef } from "react";
-import { Cover } from "./ui/cover";
-import { FlipWords } from "./ui/flip-words";
 
 export function Hero() {
   const firstRow = screenshots.slice(0, 5);
@@ -34,7 +32,7 @@ export function Hero() {
     springConfig
   );
   const opacity = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [0.2, 1]),
+    useTransform(scrollYProgress, [0, 0.7], [0.7, 1]),
     springConfig
   );
   const rotateZ = useSpring(
@@ -52,6 +50,9 @@ export function Hero() {
     >
       <div className="h-[45vh]" />
       <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.7 }}
+        transition={{ delay: 1.0, duration: 2.0 }}
         style={{
           rotateX,
           rotateZ,
@@ -127,29 +128,6 @@ export function ScreenshotCard({
         {screenshot.title}
       </h2>
     </motion.div>
-  );
-}
-
-export function Header() {
-  return (
-    <div className="w-full mx-auto">
-      <div className="absolute z-logo top-[calc(var(--header-height)+20dvh)] left-0 md:left-12 mx-auto py-20 md:py-40 px-4 w-full text-center md:text-left">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold dark:text-white">
-          The{" "}
-          <Cover>
-            <FlipWords words={["ERP", "MES", "MRP"]} />
-          </Cover>{" "}
-          you{" "}
-          <Cover>
-            <FlipWords words={["own", "control", "customize", "love"]} />
-          </Cover>
-        </h1>
-        <p className="max-w-3xl text-xl md:text-3xl mt-8 text-muted-foreground">
-          CarbonOS is a modern, extensible, foundation for{" "}
-          <span className="text-foreground">custom manufacturing systems</span>
-        </p>
-      </div>
-    </div>
   );
 }
 

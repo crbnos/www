@@ -12,8 +12,12 @@ import { Analytics } from "@vercel/analytics/react";
 import type { MetaFunction } from "@vercel/remix";
 import React from "react";
 
+import { motion } from "framer-motion";
+import { Fingerprint, Lightbulb } from "lucide-react";
 import Tailwind from "~/styles/tailwind.css?url";
 import { Button } from "./components/ui/button";
+import WizardForm from "./components/wizard-form";
+import { useWizard, WizardContext } from "./hooks/useWizard";
 
 export const config = { runtime: "edge" };
 
@@ -89,6 +93,7 @@ function Document({
   title?: string;
   mode?: "light" | "dark";
 }) {
+  const { showWizard, setShowWizard } = useWizard();
   return (
     <html lang="en" className={`${mode} h-full overflow-x-hidden w-[100dvw]`}>
       <head>
@@ -124,22 +129,29 @@ function Document({
                     Blog
                   </Link>
                 </Button>
-
                 <Button
                   variant="ghost"
                   className="cursor-pointer rounded-full"
                   asChild
                 >
-                  <Link to="/#try-carbonos">Sign Up</Link>
+                  <a href="https://app.carbonos.dev">
+                    <Fingerprint className="size-4" />
+                    Login
+                  </a>
                 </Button>
               </div>
               <Button
                 variant="secondary"
                 className="cursor-pointer rounded-full"
-                asChild
+                onClick={() => setShowWizard(true)}
               >
-                <a href="https://app.carbonos.dev">Open App</a>
+                <Lightbulb className="size-4" />
+                Start your trial
               </Button>
+              <WizardForm
+                open={showWizard}
+                onClose={() => setShowWizard(false)}
+              />
             </div>
           </div>
         </header>
@@ -159,17 +171,27 @@ function Document({
 
 function LightRays() {
   return ["one", "two", "three", "four", "five"].map((ray) => (
-    <div className="ray" data-theme="dark">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 0.7 }}
+      transition={{ delay: 1.0, duration: 2.0 }}
+      className="ray"
+      data-theme="dark"
+    >
       <div className={`light-ray ray-${ray}`} />
-    </div>
+    </motion.div>
   ));
 }
 
 export default function App() {
+  const [showWizard, setShowWizard] = React.useState(false);
+
   return (
-    <Document mode="dark">
-      <Outlet />
-    </Document>
+    <WizardContext.Provider value={{ showWizard, setShowWizard }}>
+      <Document mode="dark">
+        <Outlet />
+      </Document>
+    </WizardContext.Provider>
   );
 }
 

@@ -17,14 +17,15 @@ import { Label } from "./ui/label";
 
 import { cn } from "~/lib/utils";
 import { Button } from "./ui/button";
+import { CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "./ui/dialog";
 import { Progress } from "./ui/progress";
 
 export const steps: Step[] = [
@@ -166,7 +167,12 @@ export type FormAnswers = {
   contactInfo: ContactInfo;
 };
 
-export default function WizardForm() {
+type WizardFormProps = {
+  open: boolean;
+  onClose: () => void;
+};
+
+export default function WizardForm({ open, onClose }: WizardFormProps) {
   const fetcher = useFetcher();
   const [currentStep, setCurrentStep] = useState(0);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -186,6 +192,9 @@ export default function WizardForm() {
   useEffect(() => {
     if (fetcher.state === "submitting") {
       setIsSubmitted(true);
+      setTimeout(() => {
+        onClose();
+      }, 2000);
     }
   }, [fetcher.state]);
 
@@ -240,31 +249,30 @@ export default function WizardForm() {
   };
 
   return (
-    <div
-      id="try-carbonos"
-      className="min-h-screen p-6 flex items-start pt-[18dvh] justify-center"
+    <Dialog
+      open={open}
+      onOpenChange={(open) => {
+        if (!open) {
+          onClose();
+        }
+      }}
     >
-      <Card className="w-form-sm md:w-form-md lg:w-form-lg p-8">
-        {!isSubmitted ? (
-          <>
-            <ProgressBar
-              currentStep={currentStep}
-              totalSteps={getTotalSteps(answers)}
-            />
-
-            <fetcher.Form method="post" action="/api/try">
+      <DialogContent size="medium">
+        <fetcher.Form method="post" action="/api/try">
+          {!isSubmitted ? (
+            <>
               {isContactStep ? (
                 <>
-                  <CardHeader className="px-0">
-                    <CardTitle className="text-2xl flex items-center gap-2">
+                  <DialogHeader className="px-0">
+                    <DialogTitle className="text-2xl flex items-center gap-2">
                       <Users className="w-6 h-6" />
                       Contact Information
-                    </CardTitle>
-                    <CardDescription>
+                    </DialogTitle>
+                    <DialogDescription>
                       Please provide your contact details to complete the
                       process
-                    </CardDescription>
-                  </CardHeader>
+                    </DialogDescription>
+                  </DialogHeader>
                   <ContactForm
                     values={answers.contactInfo}
                     onChange={handleContactChange}
@@ -279,8 +287,11 @@ export default function WizardForm() {
                   onSelect={handleSelect}
                 />
               )}
-
-              <CardFooter className="px-0 pt-8">
+              <ProgressBar
+                currentStep={currentStep}
+                totalSteps={getTotalSteps(answers)}
+              />
+              <DialogFooter className="px-0 pt-8">
                 {currentStep > 0 && (
                   <Button
                     onClick={handleBack}
@@ -309,24 +320,24 @@ export default function WizardForm() {
                     </Button>
                   </>
                 )}
-              </CardFooter>
-            </fetcher.Form>
-          </>
-        ) : (
-          <div className="flex flex-col items-center justify-center min-h-[400px] space-y-4">
-            <div className="animate-bounce">
-              <Check className="w-16 h-16 text-green-500" />
+              </DialogFooter>
+            </>
+          ) : (
+            <div className="flex flex-col items-center justify-center min-h-[400px] space-y-4">
+              <div className="animate-bounce">
+                <Check className="w-16 h-16 text-green-500" />
+              </div>
+              <h2 className="text-2xl font-bold animate-fade-in">
+                Thank you for your interest!
+              </h2>
+              <p className="text-center text-muted-foreground animate-fade-in-delayed">
+                We'll be in touch with you shortly to get you started.
+              </p>
             </div>
-            <h2 className="text-2xl font-bold animate-fade-in">
-              Thank you for your interest!
-            </h2>
-            <p className="text-center text-muted-foreground animate-fade-in-delayed">
-              We'll be in touch with you shortly to get you started.
-            </p>
-          </div>
-        )}
-      </Card>
-    </div>
+          )}
+        </fetcher.Form>
+      </DialogContent>
+    </Dialog>
   );
 }
 

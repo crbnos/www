@@ -1,13 +1,12 @@
-import { Link } from "@remix-run/react";
 import { motion } from "framer-motion";
-import { CodeXml, MessageCircle, Play, PlayCircle } from "lucide-react";
+import { CodeXml, Play } from "lucide-react";
 import {
   Gantt,
   GanttContainer,
   GanttHeader,
   Resource,
 } from "~/components/gantt";
-import { Header, Hero } from "~/components/hero";
+import { Hero } from "~/components/hero";
 import {
   Accordion,
   AccordionContent,
@@ -15,69 +14,63 @@ import {
   AccordionTrigger,
 } from "~/components/ui/accordion";
 import { AnimatedShinyText } from "~/components/ui/animated-shiny-text";
-import { Button } from "~/components/ui/button";
 import { Actor, ScrollStage } from "~/components/ui/stage";
 import TextRevealByWord from "~/components/ui/text-reveal";
-import WizardForm from "~/components/wizard-form";
 import { useIsMobile } from "~/hooks/useIsMobile";
+import { useWizard } from "~/hooks/useWizard";
 
 export default function Route() {
+  const { showWizard, setShowWizard } = useWizard();
   const isMobile = useIsMobile();
   return (
     <>
-      <IntroducingCarbonOS />
       <Header />
+
       {isMobile ? <div className="h-[60vh]" /> : <Hero />}
-      <DontSettleForSaaS />
-      <WhyNotOffTheShelf />
-      <DontBuildItFromScratch />
-      <GanttComparison />
-      <BuildOnCarbonOS />
       <WhatIsCarbonOS />
+      <WhyNotOffTheShelf />
+      <GanttComparison />
       <Team />
       <FAQs />
-      <WizardForm />
+
       <Footer />
     </>
   );
 }
 
-function IntroducingCarbonOS() {
+function Header() {
   return (
-    <div className="z-logo absolute hidden md:flex top-12 left-1/2 -translate-x-1/2 items-center justify-center group rounded-full border border-black/5 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-zinc-200 dark:hover:bg-zinc-800/20 hover:filter-blur dark:border-white/5 ">
-      <AnimatedShinyText className="relative inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-zinc-600 hover:duration-300 hover:dark:text-zinc-400">
-        <span>🎉 Introducing CarbonOS</span>
-        <Play className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
-      </AnimatedShinyText>
+    <div className="flex flex-col items-center justify-start gap-4 pt-[30dvh] px-8">
+      <motion.div
+        className="w-[240px]"
+        initial={{ opacity: 0.3 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="z-logo flex items-center justify-center group rounded-full border border-black/5 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-zinc-200 dark:hover:bg-zinc-800/20 hover:filter-blur dark:border-white/5 ">
+          <AnimatedShinyText className="relative inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-zinc-600 hover:duration-300 hover:dark:text-zinc-400">
+            <span>Introducing CarbonOS</span>
+            <Play className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+          </AnimatedShinyText>
+        </div>
+      </motion.div>
+      <motion.h2
+        className="text-balance mx-auto mt-4 max-w-4xl text-center text-3xl font-semibold tracking-tight text-zinc-700 dark:text-zinc-300 md:text-5xl"
+        initial={{ opacity: 0.3 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        The manufacturing software you own
+      </motion.h2>
+      <motion.p
+        className="text-balance mx-auto  max-w-4xl text-center text-zinc-500 font-medium text-lg"
+        initial={{ opacity: 0.3 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        CarbonOS is the new standard for manufacturing software systems
+      </motion.p>
     </div>
-  );
-}
-
-function JumboText({ children }: { children: React.ReactNode }) {
-  return (
-    <h3 className="-mt-12 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black/80 to-black bg-clip-text text-center text-3xl md:text-5xl lg:text-6xl xl:text-8xl font-semibold leading-none tracking-tight text-transparent dark:from-white dark:to-zinc-300/10 relative z-10">
-      {children}
-    </h3>
-  );
-}
-
-function DontBuildItFromScratch() {
-  return (
-    <ScrollStage pages={2}>
-      <div className="sticky top-0 flex h-screen flex-col items-center justify-center">
-        <JumboText>Don't build from scratch</JumboText>
-        <Actor start={0.5}>
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className="mt-10 text-3xl md:text-5xl"
-          >
-            ⏰💰⏰💰⏰💰⏰
-          </motion.span>
-        </Actor>
-      </div>
-    </ScrollStage>
   );
 }
 
@@ -90,14 +83,14 @@ function GanttComparison() {
       >
         <div className="xl:flex">
           <div className="relative xl:-right-10 lg:mt-[18rem] ">
-            <GanttHeader>From Scratch</GanttHeader>
+            <GanttHeader>Build from Scratch</GanttHeader>
             <GanttContainer>
               <WithBuildItFromScratch />
             </GanttContainer>
           </div>
 
           <div className="relative xl:-left-10 lg:mt-[18rem] ">
-            <GanttHeader>On CarbonOS</GanttHeader>
+            <GanttHeader>Build on CarbonOS</GanttHeader>
             <GanttContainer>
               <WithCarbonOS />
             </GanttContainer>
@@ -162,109 +155,26 @@ function WithCarbonOS() {
   );
 }
 
-function DontSettleForSaaS() {
-  return (
-    <ScrollStage pages={2}>
-      <div className="sticky top-0 flex h-screen flex-col items-center justify-center">
-        <JumboText>Don't settle for SaaS</JumboText>
-        <Actor start={0.5}>
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className="mt-5 text-3xl md:text-5xl"
-          >
-            😭😭😭😭😭😭
-          </motion.span>
-        </Actor>
-      </div>
-    </ScrollStage>
-  );
+const whatIsCarbonOSText = `CarbonOS is an __API-first__ operating system for manufacturing. We give you __full access to the source code,__ so you have complete control.
+That means you're __never locked in__ and you can focus on building the things that makes your business unique.`;
+
+function WhatIsCarbonOS() {
+  return <TextRevealByWord text={whatIsCarbonOSText} />;
 }
 
-const whyNotOffTheShelfText = `Off-the-shelf systems can get you 80% of the way there. But the remaining 20%– everything that makes your business unique– becomes nearly impossible.
-That's because if you don't control the full stack, you're at the mercy of a vendor's roadmap and fluctuating pricing. In essence, you're a renter, not an owner.`;
+const whyNotOffTheShelfText = `Off-the-shelf systems can __get you 80% of the way there.__ But the remaining 20%– everything that makes your business unique– becomes nearly impossible.
+__If you don't control the full stack__, you're at the mercy of a vendor's roadmap and fluctuating pricing. In essence, __you're a renter, not an owner.__`;
 
 function WhyNotOffTheShelf() {
   return <TextRevealByWord text={whyNotOffTheShelfText} />;
 }
 
-function BuildOnCarbonOS() {
-  return (
-    <ScrollStage pages={2}>
-      <div className="sticky top-0 flex h-screen flex-col items-center justify-center">
-        <JumboText>Build on CarbonOS</JumboText>
-        <Actor start={0.5}>
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className="mt-5 text-3xl md:text-5xl"
-          >
-            🇺🇸🇺🇸🇺🇸🇺🇸🇺🇸
-          </motion.span>
-        </Actor>
-      </div>
-    </ScrollStage>
-  );
-}
-
-function WhatIsCarbonOS() {
-  return (
-    <div className="relative h-[200vh]">
-      <div className="sticky top-0 flex h-screen flex-col items-center justify-center">
-        <div className="w-form-sm md:w-form-md lg:w-form-lg text-xl md:text-2xl relative z-10 text-muted-foreground flex flex-col gap-8">
-          <p>
-            CarbonOS is an{" "}
-            <span className="font-semibold text-foreground">API-first</span>{" "}
-            operating system for manufacturing. We give you{" "}
-            <span className="font-semibold text-foreground">
-              full access to the source code
-            </span>
-            , so you have{" "}
-            <span className="font-semibold text-foreground">
-              complete control
-            </span>
-            .
-          </p>
-          <p>
-            {" "}
-            That means you're{" "}
-            <span className="font-semibold text-foreground">
-              never locked in
-            </span>{" "}
-            and you can focus on building the things that makes your business
-            unique.
-          </p>
-
-          <p>
-            We're a team of engineers and manufacturers who have been building
-            software for manufacturing for over 10 years.
-          </p>
-
-          <p>And we think we've found a better way.</p>
-          <div className="flex flex-col gap-4">
-            <Button size="lg" variant="outline" asChild>
-              <a href="https://cal.com/carbonos/founders">
-                Talk to the Founders
-                <MessageCircle className="size-5" />
-              </a>
-            </Button>
-            <Button size="lg" variant="default" asChild>
-              <Link to="#try-carbonos">
-                Try It for Free
-                <PlayCircle className="size-5" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
 function Team() {
   return (
-    <div className="mx-auto w-screen max-w-6xl px-6 py-[40dvh]">
+    <div className="mx-auto w-screen max-w-6xl px-6 py-[40dvh] flex flex-col gap-8">
+      <h3 className="text-center text-3xl lg:text-4xl xl:text-5xl font-semibold leading-none tracking-tight text-zinc-200 dark:text-zinc-800">
+        We know manufacturing
+      </h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="flex flex-col items-start gap-2">
           <img
@@ -286,9 +196,9 @@ function Team() {
             Rob was a principal engineer and product manager at Paperless Parts,
             where he led ERP integrations. He then started a manufacturing
             consulting company to help clients transform their manufacturing
-            businesses with software. After talking to hundreds of
-            manufacturers, and evaluating the available options, he decided to
-            build CarbonOS.
+            businesses with software. After talking to hundreds of manufacturers
+            and using the available options, he realized he had to build
+            CarbonOS.
           </p>
         </div>
 
@@ -369,190 +279,194 @@ function SocialIcon({ type, href }: { type: "linkedin" | "x"; href: string }) {
 
 function FAQs() {
   return (
-    <div className="mx-auto w-[360px] md:w-[580px] lg:w-[620px] py-16 mb-[30dvh]">
-      <h2 className="mb-8 text-center text-xl md:text-2xl lg:text-3xl font-bold text-foreground">
-        FAQs
-      </h2>
+    <section className="w-full h-screen bg-zinc-100/30 dark:bg-zinc-900/30 py-32 ">
+      <div className="mx-auto w-form-sm md:w-form-md lg:w-form-lg ">
+        <h2 className="mb-8 text-center text-xl md:text-2xl lg:text-3xl font-bold text-foreground shadow-inner">
+          FAQs
+        </h2>
 
-      <div className="space-y-4 text-base md:text-lg lg:text-xl">
-        <Accordion type="single" collapsible defaultValue="item-6">
-          <AccordionItem value="item-1">
-            <AccordionTrigger>
-              Is CarbonOS hosted on-prem or in the cloud?
-            </AccordionTrigger>
-            <AccordionContent>
-              You can host it yourself on-prem or in the cloud, or we can host
-              it for you in the cloud. If you want to host it yourself, we'll
-              help you get setup.
-            </AccordionContent>
-          </AccordionItem>
+        <div className="space-y-4 text-base md:text-lg lg:text-xl">
+          <Accordion type="single" collapsible defaultValue="item-6">
+            <AccordionItem value="item-1">
+              <AccordionTrigger>
+                Is CarbonOS hosted on-prem or in the cloud?
+              </AccordionTrigger>
+              <AccordionContent>
+                You can host it yourself on-prem or in the cloud, or we can host
+                it for you in the cloud. If you want to host it yourself, we'll
+                help you get setup.
+              </AccordionContent>
+            </AccordionItem>
 
-          <AccordionItem value="item-2">
-            <AccordionTrigger>Is CarbonOS open source?</AccordionTrigger>
-            <AccordionContent>
-              CarbonOS's source code is available for purchase, but it is not
-              "open source". This is different than the traditional SaaS model,
-              which treats you as an renter of the interfaces, as opposed to an
-              owner of the entire system.
-            </AccordionContent>
-          </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>Is CarbonOS open source?</AccordionTrigger>
+              <AccordionContent>
+                CarbonOS's source code is available for purchase, but it is not
+                "open source". This is different than the traditional SaaS
+                model, which treats you as an renter of the interfaces, as
+                opposed to an owner of the entire system.
+              </AccordionContent>
+            </AccordionItem>
 
-          <AccordionItem value="item-3">
-            <AccordionTrigger>Do I need to be able to code?</AccordionTrigger>
-            <AccordionContent>
-              No, CarbonOS works great out of the box. However, having access to
-              the source code means your development team can customize and
-              extend it as needed. We can do customizations for you or you can
-              just ask an LLM. We've found that LLMs are great at adding
-              small-to-medium-sized features but aren't capable of designing
-              full systems like an ERP (we keep trying).
-            </AccordionContent>
-          </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger>Do I need to be able to code?</AccordionTrigger>
+              <AccordionContent>
+                No, CarbonOS works great out of the box. However, having access
+                to the source code means your development team can customize and
+                extend it as needed. We can do customizations for you or you can
+                just ask an LLM. We've found that LLMs are great at adding
+                small-to-medium-sized features but aren't capable of designing
+                full systems like an ERP (we keep trying).
+              </AccordionContent>
+            </AccordionItem>
 
-          <AccordionItem value="item-4">
-            <AccordionTrigger>
-              How can I get started with CarbonOS?
-            </AccordionTrigger>
-            <AccordionContent>You can try CarbonOS for free.</AccordionContent>
-          </AccordionItem>
+            <AccordionItem value="item-4">
+              <AccordionTrigger>
+                How can I get started with CarbonOS?
+              </AccordionTrigger>
+              <AccordionContent>
+                You can try CarbonOS for free.
+              </AccordionContent>
+            </AccordionItem>
 
-          <AccordionItem value="item-5">
-            <AccordionTrigger>How much does CarbonOS cost?</AccordionTrigger>
-            <AccordionContent>
-              The least expensive in the short-term is to have us host it for
-              you in the cloud. And the least expensive in the long-term is to
-              buy the source code and host it yourself.
-            </AccordionContent>
-          </AccordionItem>
+            <AccordionItem value="item-5">
+              <AccordionTrigger>How much does CarbonOS cost?</AccordionTrigger>
+              <AccordionContent>
+                The least expensive in the short-term is to have us host it for
+                you in the cloud. And the least expensive in the long-term is to
+                buy the source code and host it yourself.
+              </AccordionContent>
+            </AccordionItem>
 
-          <AccordionItem value="item-6">
-            <AccordionTrigger>What is the tech stack?</AccordionTrigger>
-            <AccordionContent>
-              <div className="space-y-4">
-                <p className="text-lg font-medium">
-                  CarbonOS is a TypeScript monorepo built with the some of the
-                  best open-source tools:
-                </p>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                  <div className="flex flex-col items-center space-x-2 rounded-lg border p-3 text-sm bg-zinc-900">
-                    <a href="https://remix.run">
-                      <img
-                        src="/logos/remix.svg"
-                        alt="Remix"
-                        className="w-full h-auto"
-                      />
-                    </a>
-                  </div>
-                  <div className="flex items-center space-x-2 rounded-lg border p-3 text-sm bg-zinc-900">
-                    <a href="https://supabase.com">
-                      <img
-                        src="/logos/supabase.svg"
-                        alt="Supabase"
-                        className="w-full h-auto"
-                      />
-                    </a>
-                  </div>
-                  <div className=" rounded-lg border p-3 text-sm text-white bg-zinc-900">
-                    <a
-                      href="https://ui.shadcn.com"
-                      className="inline-flex items-center space-x-2"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 256 256"
-                        className="size-6"
+            <AccordionItem value="item-6">
+              <AccordionTrigger>What is the tech stack?</AccordionTrigger>
+              <AccordionContent>
+                <div className="space-y-4">
+                  <p className="text-lg font-medium">
+                    CarbonOS is a TypeScript monorepo built with the some of the
+                    best open-source tools:
+                  </p>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    <div className="flex flex-col items-center space-x-2 rounded-lg border p-3 text-sm bg-zinc-900">
+                      <a href="https://remix.run">
+                        <img
+                          src="/logos/remix.svg"
+                          alt="Remix"
+                          className="w-full h-auto"
+                        />
+                      </a>
+                    </div>
+                    <div className="flex items-center space-x-2 rounded-lg border p-3 text-sm bg-zinc-900">
+                      <a href="https://supabase.com">
+                        <img
+                          src="/logos/supabase.svg"
+                          alt="Supabase"
+                          className="w-full h-auto"
+                        />
+                      </a>
+                    </div>
+                    <div className=" rounded-lg border p-3 text-sm text-white bg-zinc-900">
+                      <a
+                        href="https://ui.shadcn.com"
+                        className="inline-flex items-center space-x-2"
                       >
-                        <rect width="256" height="256" fill="none"></rect>
-                        <line
-                          x1="208"
-                          y1="128"
-                          x2="128"
-                          y2="208"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="32"
-                        ></line>
-                        <line
-                          x1="192"
-                          y1="40"
-                          x2="40"
-                          y2="192"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="32"
-                        ></line>
-                      </svg>
-                      <span className="font-bold text-xl">shadcn</span>
-                    </a>
-                  </div>
-                  <div className="flex items-center space-x-2 rounded-lg border p-3 text-sm bg-zinc-900">
-                    <a href="https://tailwindcss.com">
-                      <img
-                        src="/logos/tailwind.svg"
-                        alt="Tailwind"
-                        className="w-full h-auto"
-                      />
-                    </a>
-                  </div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 256 256"
+                          className="size-6"
+                        >
+                          <rect width="256" height="256" fill="none"></rect>
+                          <line
+                            x1="208"
+                            y1="128"
+                            x2="128"
+                            y2="208"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="32"
+                          ></line>
+                          <line
+                            x1="192"
+                            y1="40"
+                            x2="40"
+                            y2="192"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="32"
+                          ></line>
+                        </svg>
+                        <span className="font-bold text-xl">shadcn</span>
+                      </a>
+                    </div>
+                    <div className="flex items-center space-x-2 rounded-lg border p-3 text-sm bg-zinc-900">
+                      <a href="https://tailwindcss.com">
+                        <img
+                          src="/logos/tailwind.svg"
+                          alt="Tailwind"
+                          className="w-full h-auto"
+                        />
+                      </a>
+                    </div>
 
-                  <div className="flex items-center space-x-2 rounded-lg border p-3 text-sm bg-zinc-900">
-                    <a href="https://trigger.dev">
-                      <img
-                        src="/logos/trigger.svg"
-                        alt="Trigger.dev"
-                        className="w-full h-auto"
-                      />
-                    </a>
+                    <div className="flex items-center space-x-2 rounded-lg border p-3 text-sm bg-zinc-900">
+                      <a href="https://trigger.dev">
+                        <img
+                          src="/logos/trigger.svg"
+                          alt="Trigger.dev"
+                          className="w-full h-auto"
+                        />
+                      </a>
+                    </div>
+                    <div className="flex items-center space-x-2 rounded-lg border p-3 text-sm bg-zinc-900">
+                      <a href="https://novu.co">
+                        <img
+                          src="/logos/novu.svg"
+                          alt="Novu"
+                          className="w-full h-auto"
+                        />
+                      </a>
+                    </div>
+                    <div className="flex items-center space-x-2 rounded-lg border p-3 text-sm bg-zinc-900">
+                      <a href="https://vercel.com">
+                        <img
+                          src="/logos/vercel.svg"
+                          alt="Vercel"
+                          className="w-full h-auto"
+                        />
+                      </a>
+                    </div>
+                    <div className="flex items-center space-x-2 rounded-lg border p-3 text-sm bg-zinc-900">
+                      <a href="https://resend.com">
+                        <img
+                          src="/logos/resend.svg"
+                          alt="Resend"
+                          className="w-full h-auto"
+                        />
+                      </a>
+                    </div>
                   </div>
-                  <div className="flex items-center space-x-2 rounded-lg border p-3 text-sm bg-zinc-900">
-                    <a href="https://novu.co">
-                      <img
-                        src="/logos/novu.svg"
-                        alt="Novu"
-                        className="w-full h-auto"
-                      />
-                    </a>
-                  </div>
-                  <div className="flex items-center space-x-2 rounded-lg border p-3 text-sm bg-zinc-900">
-                    <a href="https://vercel.com">
-                      <img
-                        src="/logos/vercel.svg"
-                        alt="Vercel"
-                        className="w-full h-auto"
-                      />
-                    </a>
-                  </div>
-                  <div className="flex items-center space-x-2 rounded-lg border p-3 text-sm bg-zinc-900">
-                    <a href="https://resend.com">
-                      <img
-                        src="/logos/resend.svg"
-                        alt="Resend"
-                        className="w-full h-auto"
-                      />
-                    </a>
-                  </div>
+                  <p className="text-muted-foreground">
+                    The languages we use are{" "}
+                    <span className="font-medium text-foreground">
+                      TypeScript
+                    </span>{" "}
+                    and <span className="font-medium text-foreground">SQL</span>
+                    . We also use{" "}
+                    <span className="font-medium text-foreground">React</span>{" "}
+                    for interfaces. This stack makes it easy to build
+                    customizations with LLMs.
+                  </p>
                 </div>
-                <p className="text-muted-foreground">
-                  The languages we use are{" "}
-                  <span className="font-medium text-foreground">
-                    TypeScript
-                  </span>{" "}
-                  and <span className="font-medium text-foreground">SQL</span>.
-                  We also use{" "}
-                  <span className="font-medium text-foreground">React</span> for
-                  interfaces. This stack makes it easy to build customizations
-                  with LLMs.
-                </p>
-              </div>
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 
