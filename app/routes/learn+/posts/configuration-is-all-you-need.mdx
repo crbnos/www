@@ -1,13 +1,15 @@
 ---
 meta:
-  title: "Configuration Is All You Need"
+  title: "In Manufacturing, Configuration Is All You Need"
   publishedAt: "2025-01-03"
   summary: "Configuration is the cornerstone of digital manufacturing. It's the foundation that enables manufacturers to create custom products and services that meet the unique needs of their customers."
   image: "/images/stone-arch.webp"
   author: "brad"
 ---
 
-Maybe that's just a bit of a stretch. You also need a good API, a good data model, a UI that doesn't suck, and a way to change things when you need to. But configuration is super important for making a general-purpose manufacturing software work for your business-specific needs. Let's dive in.
+OK, it's not _all_ you need. You also need good processes, a good API, a good data model, and a way to change things when you need to. But a configurator is super important for making a general-purpose manufacturing software work for your business-specific needs. Let's dive in.
+
+![Configuration Function](/images/configuration-function.webp)
 
 ## What is Configuration?
 
@@ -20,7 +22,7 @@ So we have two data models we need to support:
 1. The 20% which is unique to each business.
 2. The 80% which is the same for every business.
 
-A configurator is a tool that maps the unique 20% to the standard 80%.
+A configurator is a set of functions that map the unique 20% to the standard 80%.
 
 ## What the Cuss Does That Mean?
 
@@ -31,7 +33,7 @@ Let's say we're a door manufacturer. We need to ultimately arrive at a bill of m
 
 So we need a way to instantly create an accurate bill of material and routing (and cost estimate) for any possible door configuration. The bill of material and routing are the 80%. The parameters of what makes a door are the 20%. Configuration is the process for mapping the 20% to the 80%.
 
-Let's look at a few examples of how we might might "define" a door.
+Let's take a look at a few examples. Here's a simple example of how we might "define" a door to be manufactured:
 
 ### Example 1: Doors
 

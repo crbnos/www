@@ -98,12 +98,7 @@ function Document({
   const backgroundColor = useTransform(
     scrollY,
     [0, 50],
-    ["rgba(0,0,0,0)", "rgba(0,0,0,0.5)"]
-  );
-  const backdropFilter = useTransform(
-    scrollY,
-    [0, 50],
-    ["blur(0px)", "blur(10px)"]
+    ["rgba(0,0,0,0)", "rgba(0,0,0,1)"]
   );
 
   return (
@@ -120,7 +115,6 @@ function Document({
           className="flex select-none items-center pl-5 pr-2 h-[var(--header-height)] fixed top-0 left-0 right-0 z-50"
           style={{
             backgroundColor,
-            backdropFilter,
           }}
         >
           <div className="flex items-center justify-between gap-2 z-logo text-foreground w-full">

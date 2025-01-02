@@ -178,3 +178,7 @@
     transform: translateY(0);
   }
 }
+
+.prose img {
+  @apply rounded-lg;
+}
