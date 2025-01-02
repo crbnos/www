@@ -7,35 +7,32 @@ meta:
   author: "brad"
 ---
 
-OK, it's not _all_ you need. You also need good processes, a good API, a good data model, and a way to change things when you need to. But a configurator is super important for making a general-purpose manufacturing software work for your business-specific needs. Let's dive in.
+OK, it's not _all_ you need. You also need good people, good processes, etc. But **in order to do instant website-to-production for custom manufacturing, you need to be able to configure your bill of material and routing**.
 
-![Configuration Function](/images/configuration-function.webp)
+![Instant Website-to-Production](/images/instant-quoting-flow-1.webp)
 
 ## What is Configuration?
 
-In order to automate manufacturing and support data-driven decision making, we need to first create an accurate model of the manufacturing processes. The problem with manufacturing software is that any general-purpose data model does not often work for the specific needs of a manufacturer. Each business is basically unique.
+Configuration is the set of functions that map the business-specific data model to the standard data model of quoting, ordering, purchasing, etc.
 
-On the other hand, every business is ~80% the same. Quotes, orders, purchasing, invoicing, time tracking, nested bills of materials, etc. All of this is basically the same for every manufacturing business.
+![Configuration Function](/images/configuration-function.webp)
 
-So we have two data models we need to support:
+## Defining the Parameters
 
-1. The 20% which is unique to each business.
-2. The 80% which is the same for every business.
+Let's say we're a door manufacturer. In order to do instant quoting-to-production, we need to create at an accurate bill of material and bill of process (routing) for each door. But customers can choose the exact dimensions of their door, they can choose the material, the hinges, etc.
 
-A configurator is a set of functions that map the unique 20% to the standard 80%.
+It doesn't make sense for us to try to maintain a database of every possible door combination for two reasons.
 
-## What the Cuss Does That Mean?
+1. It's not scalable. Even with 3 or 4 variables, we can't possibly manually support every possible door configuration.
+2. It's impossible to maintain. Say we make a process improvement. We'd have to update the routing for every combination.
 
-Let's say we're a door manufacturer. We need to ultimately arrive at a bill of material and bill of process (routing) for each door. But customers can choose the exact dimensions of their door, they can choose the material, the hinges, etc. It doesn't make sense for us to try to maintain a database of every possible door configuration for two reasons.
+So we need a way to instantly create an accurate bill of material and routing (and cost estimate) for any possible door configuration from a constantly-evolving template.
 
-1. It's not scalable. Even with 3 or 4 variables, we can't possibly support every possible door configuration.
-2. It's impossible to maintain. Say we make a process improvement. We'd have to update the routing for every part.
-
-So we need a way to instantly create an accurate bill of material and routing (and cost estimate) for any possible door configuration. The bill of material and routing are the 80%. The parameters of what makes a door are the 20%. Configuration is the process for mapping the 20% to the 80%.
-
-Let's take a look at a few examples. Here's a simple example of how we might "define" a door to be manufactured:
+Let's take a look at a few examples.
 
 ### Example 1: Doors
+
+Here's a simple example of how we might "define" a door to be manufactured represented in TypeScript:
 
 ```tsx
 type Params = {
@@ -61,9 +58,9 @@ type Params = {
 };
 ```
 
-We might also add parameters like number of bends, number of holes, etc. But the gist is the same. We have a set of parameters that can determine the bill of material and routing.
+We might add parameters like number of bends, number of holes, etc. But the gist is the same. We have a set of parameters that can determine the bill of material and routing.
 
-It might seem like a big leap, but the same idea holds true for any manufacturing that is not mass-produced. Here's a slight oversimplified example of how a boat might be configured:
+It might seem like a big leap, but the same idea holds true for any discrete manufacturing that is not mass-produced. Here's a slight oversimplified example of how a boat might be configured:
 
 ### Example 3: Boat
 
@@ -79,8 +76,99 @@ type Params = {
 };
 ```
 
-The idea is that for any manufactured part, we can define a set of parameters that can determine the bill of material and routing.
+The idea is that for any made-to-order or made-to-print part, we can define a set of parameters that can determine the bill of material and routing.
 
-## And Then What?
+## Using the Configuration
 
-...WIP...
+OK, so now that we understand the problem, let's jump to the solution. The solution for instant website-to-production can be generalized into three steps:
+
+![Instant Website-to-Production](/images/instant-quoting-flow-2.webp)
+
+1. A customer-facing app allows the customer to select some options. This can basically be reduced to a set of dropdowns and checkboxes (and depending on the business, a CAD model and a drawing).
+2. Some proprietary system takes the inputs of step 1, and turns them into a set of parameters (like we defined above). In the sheet metal example, this might be an API that determines the cut length and number of bends from a CAD model. For a door and boat manufacturer, we might skip this step and just use the parameters from the customer-facing app.
+3. The system of record configures the BoM and routing by passing the parameters from step 2 and returns price back.
+
+Here's a simplified at how step 3 would look with the Carbon SDK:
+
+```tsx
+const carbon = getCarbon();
+
+// this comes from step 1 and step 2
+const configuration = {
+  material: "Oak",
+  width: 36,
+  height: 80,
+  hinges: "Left",
+  lock: "Single",
+};
+
+const quote = await upsertQuote(carbon, {
+  customerId,
+  customerLocationId,
+});
+
+const quoteLine = await upsertConfiguredQuoteLine(carbon, {
+  quoteId: quote.data.id,
+  itemId: "DOOR",
+  quantity: [1, 10, 100],
+  configuration,
+});
+
+const prices = await getQuotePrices(carbon, {
+  quoteLineId: quoteLine.data.id,
+  markup: 0.3,
+});
+
+return prices.data;
+```
+
+## Defining the Template
+
+The careful reader might have noticed that we've so far said nothing about the configuration itself. Now that we know what we're trying to do, let's take a look at how the sausage is made.
+
+A configuration is a function that takes the set of parameters and returns a value. It's like a little lambda function that you can use to define each aspect of the bill of material and routing.
+
+```tsx
+// Setup time
+
+/**
+ * Configure function that processes the provided params
+ * @returns an array of predefined values
+ * @param params.material: "Oak"
+ * @param params.width: number
+ * @param params.height: number
+ * @param params.hinges: "Left" | "Right"
+ * @param params.lock: "Single" | "Double"
+ **/
+
+function configure(params: Params) {
+  if (params.material === "Pine") {
+    return 10;
+  }
+  return 20;
+}
+```
+
+In this case, we're configuring setup time. Here's an example of how we might configure the material of the door.
+
+```tsx
+// Item ID
+
+function configure(params: Params): string {
+  const itemIds = {
+    Pine: "1234567890",
+    Oak: "1234567891",
+    Maple: "1234567892",
+  };
+
+  return itemIds[params.material];
+}
+```
+
+For any field in the bill of material or routing, we can define a configuration function that takes the set of parameters and returns the value. We can get more sophisticated to include more complex logic for adding and removing parts and operations, but the idea is the same.
+
+![Configuration Demo](/images/configurator-demo.gif)
+
+## Conclusion
+
+Configuration is the cornerstone of digital manufacturing. It's the foundation that allows made-to-order or made-to-print manufacturers to instantly create the bill of material and routing that drives production.

@@ -139,8 +139,8 @@ function Document({
                 </Button>
                 <Button variant="ghost" className="cursor-pointer" asChild>
                   <a href="https://app.carbonos.dev">
-                    <Fingerprint className="size-4" />
                     Login
+                    <Fingerprint className="size-4" />
                   </a>
                 </Button>
               </div>

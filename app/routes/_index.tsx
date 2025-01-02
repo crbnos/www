@@ -189,7 +189,7 @@ function FeatureDescription({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1 }}
       >
         {children}
       </motion.p>
@@ -204,7 +204,7 @@ const slides: Slide[] = [
       "It starts with a delightful customer experience. We help you create a custom solution to feed requests to the system or use the API for instant quoting.",
     link: "/learn/delightful-experience",
     start: 0.1,
-    end: 0.25,
+    end: 0.22,
   },
   {
     img: "https://placehold.co/1280x800",
@@ -212,14 +212,14 @@ const slides: Slide[] = [
       "Next, whatever you're making needs converted to a bill of materials and a routing. If you're not mass producing, our configurator will help you generate the perfect BoM and routing automatically.",
     link: "/learn/configuration-is-all-you-need",
     start: 0.25,
-    end: 0.433,
+    end: 0.41,
   },
   {
     img: "https://placehold.co/1280x800",
     description:
       "With an accurate account of what needs made, everything falls into place. Purchasing, production, scheduling, inventory, receiving, and resource management all benefit from an integrated system of record.",
     start: 0.433,
-    end: 0.617,
+    end: 0.6,
   },
   {
     img: "https://placehold.co/1280x800",
@@ -227,14 +227,14 @@ const slides: Slide[] = [
       "CarbonOS is built entirely with our self-documenting API. With access to the source code, our SDK, and our realtime API, you'll be able to build custom applications that drive your business.",
 
     start: 0.617,
-    end: 0.8,
+    end: 0.76,
   },
   {
     img: "https://placehold.co/1280x800",
     description:
       "In addition to our core application, we provide an MES app and a starter kit for building your own applications. This will save you years of development time, and allow you to avoid the pitfalls of off-the-shelf systems.",
-    start: 0.8,
-    end: 0.95,
+    start: 0.78,
+    end: 0.9,
   },
 ];
 
@@ -411,12 +411,12 @@ function Team() {
             />
           </div>
           <p className="text-sm lg:text-base text-muted-foreground">
-            Tom is a third-generation toolmaker and manufacturing engineer who
-            brings a unique blend of manufacturing expertise and product
-            management to CarbonOS. He has led software and operations teams at
-            Arrival, CloudNC, Fictiv, and Saeki Robotics. He was motivated to
-            build CarbonOS by the insight that no two manufacturers are
-            identical.
+            Tom is a third-generation toolmaker and manufacturing engineer with
+            18 years of industry expertise and a passion for innovation. He has
+            led operations and software teams at GE, Arrival, CloudNC, Fictiv,
+            and Saeki. Driven by the experience that no two manufacturers are
+            alike, he founded CarbonOS to create tailored solutions for the
+            industry that can generate growth.
           </p>
         </div>
       </div>
