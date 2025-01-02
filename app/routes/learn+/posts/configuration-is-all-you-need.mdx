@@ -7,13 +7,22 @@ meta:
   author: "brad"
 ---
 
-OK, it's not _all_ you need. You also need good people, good processes, etc. But **in order to do instant website-to-production for custom manufacturing, you need to be able to configure your bill of material and routing**.
+OK, it's not _all_ you need. You also need good people, good processes, etc. But in order to do instant website-to-production for custom manufacturing, you need to be able to **automatically** configure your bill of material and routing.
 
 ![Instant Website-to-Production](/images/instant-quoting-flow-1.webp)
 
+From a customer's perspective, the process looks something like this:
+
+1. A customer makes a request in a web portal
+2. The customer immediately receives a quote with the price and lead time for their request
+3. The customer places an order directly from the portal
+4. The order is automatically placed in the production queue
+
+In order to achieve points 2 and 4, you need to be able to automatically determine what materials will be required to make the product (bill of materials), and what production steps will be required to make the product (routing).
+
 ## What is Configuration?
 
-Configuration is the set of functions that map the business-specific data model to the standard data model of quoting, ordering, purchasing, etc.
+Configuration is the set of functions that map your unique manufacturing parameters to the standard bill of material and routing.
 
 ![Configuration Function](/images/configuration-function.webp)
 
@@ -88,7 +97,7 @@ OK, so now that we understand the problem, let's jump to the solution. The solut
 2. Some proprietary system takes the inputs of step 1, and turns them into a set of parameters (like we defined above). In the sheet metal example, this might be an API that determines the cut length and number of bends from a CAD model. For a door and boat manufacturer, we might skip this step and just use the parameters from the customer-facing app.
 3. The system of record configures the BoM and routing by passing the parameters from step 2 and returns price back.
 
-Here's a simplified at how step 3 would look with the Carbon SDK:
+Here's a simplified look at how step 3 would work with the Carbon SDK:
 
 ```tsx
 const carbon = getCarbon();
