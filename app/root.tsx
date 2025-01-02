@@ -12,8 +12,8 @@ import { Analytics } from "@vercel/analytics/react";
 import type { MetaFunction } from "@vercel/remix";
 import React from "react";
 
-import { motion } from "framer-motion";
-import { CodeXml, Fingerprint, Lightbulb, Play } from "lucide-react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { CodeXml, Fingerprint, Play } from "lucide-react";
 import Tailwind from "~/styles/tailwind.css?url";
 import { Button } from "./components/ui/button";
 import WizardForm from "./components/wizard-form";
@@ -94,6 +94,18 @@ function Document({
   mode?: "light" | "dark";
 }) {
   const { showWizard, setShowWizard } = useWizard();
+  const { scrollY } = useScroll();
+  const backgroundColor = useTransform(
+    scrollY,
+    [0, 50],
+    ["rgba(0,0,0,0)", "rgba(0,0,0,0.5)"]
+  );
+  const backdropFilter = useTransform(
+    scrollY,
+    [0, 50],
+    ["blur(0px)", "blur(10px)"]
+  );
+
   return (
     <html lang="en" className={`${mode} h-full overflow-x-hidden w-[100dvw]`}>
       <head>
@@ -104,7 +116,13 @@ function Document({
         <Links />
       </head>
       <body className="h-[100dvh] w-[100dvw] flex flex-col bg-background text-foreground antialiased selection:bg-[#00cc9937] selection:text-[#007763fd] dark:selection:bg-[#00fff61d] dark:selection:text-[#67ffded2]">
-        <header className="flex select-none items-center bg-transparent pl-5 pr-2 border-b h-[var(--header-height)] border-transparent fixed top-0 left-0 right-0 z-50">
+        <motion.header
+          className="flex select-none items-center pl-5 pr-2 h-[var(--header-height)] fixed top-0 left-0 right-0 z-50"
+          style={{
+            backgroundColor,
+            backdropFilter,
+          }}
+        >
           <div className="flex items-center justify-between gap-2 z-logo text-foreground w-full">
             <a href="/" className="cursor-pointer">
               <img
@@ -137,12 +155,12 @@ function Document({
                 className="cursor-pointer"
                 onClick={() => setShowWizard(true)}
               >
-                <Lightbulb className="size-4" />
                 Start your trial
+                <Play className="size-4" />
               </Button>
             </div>
           </div>
-        </header>
+        </motion.header>
 
         <div className="relative flex h-full w-full items-start justify-center">
           <LightRays />
