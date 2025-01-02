@@ -47,7 +47,7 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
     <div ref={targetRef} className={cn("relative z-0 h-[200vh]", className)}>
       <div
         className={
-          "sticky top-0 mx-auto flex h-[50%] max-w-4xl flex-col items-center bg-transparent py-[20dvh] w-form-sm md:w-form-md lg:w-form-lg px-4 text-xl md:text-2xl"
+          "sticky top-0 mx-auto flex h-[50%] max-w-4xl flex-col items-center bg-transparent py-[20dvh] w-form-sm md:w-form-md lg:w-form-lg px-4"
         }
       >
         {processedParagraphs.map((paragraph, pIndex) => {
@@ -59,7 +59,7 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
             <p
               key={pIndex}
               className={
-                "flex flex-wrap p-5 text-xl text-foreground/20  md:p-8 md:text-2xl lg:text-3xl tracking-tight text-balance"
+                "flex flex-wrap p-5 text-xl text-foreground/20  md:p-8 md:text-2xl lg:text-3xl xl:text-4xl tracking-tight text-balance"
               }
             >
               {paragraph.map(({ word, isBold }, i) => {

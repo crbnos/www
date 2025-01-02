@@ -183,19 +183,21 @@ function Document({
 function CTA() {
   const { setShowWizard } = useWizard();
   return (
-    <div className="border border-border rounded-lg max-w-5xl text-center px-10 py-14 mx-4 md:mx-auto md:px-24 md:py-20 mb-[20dvh] mt-24 flex items-center flex-col dark:bg-muted">
-      <span className="text-6xl md:text-8xl font-bold tracking-tighter text-foreground">
-        CarbonOS
-      </span>
-      <p className="text-muted-foreground mt-6">
-        The new standard for custom manufacturing systems
-      </p>
-      <div className="mt-10 md:mb-8">
-        <div className="flex items-center">
-          <Button onClick={() => setShowWizard(true)}>
-            Start your trial
-            <Play className="size-4" />
-          </Button>
+    <div className="flex min-h-[calc(100dvh-170px)] items-center justify-center">
+      <div className="border border-border rounded-lg max-w-5xl text-center px-10 py-14 mx-4 md:mx-auto md:px-24 flex items-center flex-col dark:bg-muted">
+        <span className="text-6xl md:text-8xl font-bold tracking-tighter text-foreground">
+          CarbonOS
+        </span>
+        <p className="text-muted-foreground mt-6">
+          The new standard for custom manufacturing systems
+        </p>
+        <div className="mt-10 md:mb-8">
+          <div className="flex items-center">
+            <Button onClick={() => setShowWizard(true)}>
+              Start your trial
+              <Play className="size-4" />
+            </Button>
+          </div>
         </div>
       </div>
     </div>
