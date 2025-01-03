@@ -13,8 +13,9 @@ import type { MetaFunction } from "@vercel/remix";
 import { ReactNode, useState } from "react";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { CodeXml, Fingerprint, Play } from "lucide-react";
+import { Fingerprint, Play } from "lucide-react";
 import Tailwind from "~/styles/tailwind.css?url";
+import { Footer } from "./components/footer";
 import { Button } from "./components/ui/button";
 import {
   defaultAnswers,
@@ -179,10 +180,10 @@ function Document({
   );
 }
 
-function CTA() {
+export function CTA() {
   const { setShowWizard } = useWizard();
   return (
-    <div className="flex min-h-[calc(100dvh-170px)] items-center justify-center">
+    <div className="flex min-h-[calc(100dvh-290px)] items-center justify-center">
       <div className="border border-border rounded-lg max-w-5xl text-center px-10 py-14 mx-4 md:mx-auto md:px-24 flex items-center flex-col dark:bg-muted">
         <span className="text-6xl md:text-8xl font-bold tracking-tighter text-foreground">
           CarbonOS
@@ -198,29 +199,6 @@ function CTA() {
             </Button>
           </div>
         </div>
-      </div>
-    </div>
-  );
-}
-
-function Footer() {
-  return (
-    <div className="flex flex-col items-center justify-center py-8 gap-3">
-      <a
-        href="https://github.com/crbnos"
-        className="mb-4 text-muted-foreground/50 hover:text-muted-foreground transition-colors"
-      >
-        <CodeXml className="size-8 rounded-full bg-foreground/10 text-foreground p-1.5" />
-      </a>
-      <p className="text-center text-sm text-muted-foreground/50">
-        Carbon Manufacturing Systems Corporation
-      </p>
-      <div className="flex items-center gap-2 text-xs text-muted-foreground/50">
-        <Link to="/privacy">Privacy</Link>
-        <span className="text-muted-foreground/50">|</span>
-        <Link to="/terms">Terms</Link>
-        <span className="text-muted-foreground/50">|</span>
-        <Link to="/license">License</Link>
       </div>
     </div>
   );
