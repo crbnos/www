@@ -1,7 +1,7 @@
 export default function Privacy() {
   return (
     <div className="flex flex-1 flex-col">
-      <div className="mx-auto flex w-full flex-col px-4 md:px-6 lg:px-8 3xl:py-32 4xl:py-36 max-w-4xl py-28">
+      <div className="mx-auto flex w-full flex-col px-4 md:px-6 lg:px-8 3xl:pt-32 4xl:pt-36 max-w-4xl pt-28">
         <div className="flex flex-col gap-4 lg:items-center lg:text-center mb-16">
           <h1 className="font-semibold text-6xl tracking-tight">
             Privacy Policy
@@ -11,7 +11,7 @@ export default function Privacy() {
           </h2>
         </div>
       </div>
-      <div className="mx-auto flex flex-col px-4 w-full lg:w-form-lg max-w-4xl">
+      <div className="mx-auto flex flex-col px-4 w-full lg:w-form-lg max-w-4xl mb-28">
         <div className="prose dark:prose-invert lg:prose-lg">
           <ol type="1">
             <li>

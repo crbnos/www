@@ -1,7 +1,6 @@
-import { steps } from "framer-motion";
 import { Check } from "lucide-react";
 import { Button } from "~/components/ui/button";
-import { useWizard } from "~/components/wizard-form";
+import { steps, useWizard } from "~/components/wizard-form";
 import { cn } from "~/lib/utils";
 
 const plans = [

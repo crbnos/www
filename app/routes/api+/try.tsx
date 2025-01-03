@@ -23,8 +23,6 @@ export async function action({ request }: ActionFunctionArgs) {
   const formData = await request.formData();
   const answersJson = formData.get("answers");
 
-  console.log({ answersJson });
-
   if (!answersJson || typeof answersJson !== "string") {
     return json(
       { success: false, message: "Invalid form submission" },

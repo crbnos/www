@@ -419,7 +419,7 @@ function FAQs() {
         </h2>
 
         <div className="space-y-4 text-base md:text-lg lg:text-xl">
-          <Accordion type="multiple">
+          <Accordion type="multiple" defaultValue={["item-6"]}>
             <AccordionItem value="item-1">
               <AccordionTrigger>
                 Is CarbonOS hosted on-prem or in the cloud?
@@ -596,6 +596,12 @@ function FAQs() {
                     <span className="font-medium text-foreground">React</span>{" "}
                     for interfaces. This stack makes it easy to build
                     customizations with LLMs.
+                  </p>
+
+                  <p className="text-muted-foreground">
+                    There are API clients available in TypesScript, Dart, Swift,
+                    Python, C#, Go, Kotlin, Ruby and Elixir for our functional
+                    friends.
                   </p>
                 </div>
               </AccordionContent>

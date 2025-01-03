@@ -60,13 +60,13 @@ let ActorContext = createContext<TFrame>({
 });
 
 ////////////////////////////////////////////////////////////////////////////////
-export function Stage({ frame, length, DEBUG, children }: TStageProps) {
+export function Stage({ frame, length, children }: TStageProps) {
   let progress = frame / length;
   let context = useMemo(() => {
     let context: TFrame = { frame, progress, length };
     return context;
   }, [frame, progress, length]);
-  if (DEBUG) console.log(context);
+
   return <StageContext.Provider value={context} children={children} />;
 }
 
