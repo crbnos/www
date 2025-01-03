@@ -46,6 +46,9 @@ export function Hero() {
     useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
     springConfig
   );
+
+  const paddingTop = useTransform(scrollYProgress, [0, 0.2], ["70vh", "0vh"]);
+
   return (
     <div
       ref={ref}
@@ -61,8 +64,8 @@ export function Hero() {
           rotateZ,
           translateY,
           opacity,
+          paddingTop,
         }}
-        className="pt-[70vh]"
       >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
           {firstRow.map((screenshot) => (
