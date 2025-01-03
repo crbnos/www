@@ -431,8 +431,8 @@ const plans = [
     name: "Rent-to-Own",
     description: "A monthly subscription with an option to buy the source code",
     features: [
-      "Core ERP/MES functionality",
-      "Cloud-hosted",
+      "Core ERP/MES/API functionality",
+      "Managed hosting",
       "Hands-on onboarding",
       "Ongoing support",
       "Ongoing improvements",
@@ -449,7 +449,7 @@ const plans = [
   {
     name: "Foundation",
     description:
-      "A foundation for factories with software engineers building custom systems",
+      "A starting point for factories with software engineers building custom systems",
     features: [
       "Full access to source code",
       "Self-hosted",
@@ -473,8 +473,8 @@ const plans = [
       "We'll build customized applications on top of CarbonOS for you",
     features: [
       "Custom application development",
-      "Core ERP/MES functionality",
-      "Cloud-hosted",
+      "Core ERP/MES/API functionality",
+      "Managed hosting",
       "Hands-on onboarding",
       "Feature prioritization",
     ],
@@ -592,7 +592,11 @@ function FAQs() {
                 CarbonOS's source code is available for purchase, but it is not
                 "open source". This is different than the traditional SaaS
                 model, which treats you as an renter of the interfaces, as
-                opposed to an owner of the entire system.
+                opposed to an owner of the entire system. Here is the{" "}
+                <Link className="text-foreground font-semibold" to="/license">
+                  License
+                </Link>
+                .
               </AccordionContent>
             </AccordionItem>
 

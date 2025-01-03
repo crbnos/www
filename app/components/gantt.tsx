@@ -70,7 +70,7 @@ export function Resource({
             (complete
               ? cancel
                 ? "bg-red-500"
-                : "bg-green-500"
+                : "bg-emerald-500"
               : "bg-blue-500")
           }
           style={{

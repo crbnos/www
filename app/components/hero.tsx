@@ -47,7 +47,7 @@ export function Hero() {
     springConfig
   );
 
-  const paddingTop = useTransform(scrollYProgress, [0, 0.2], ["70vh", "0vh"]);
+  const paddingTop = useTransform(scrollYProgress, [0, 0.2], ["80vh", "0vh"]);
 
   return (
     <div
@@ -103,7 +103,7 @@ export function Header({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "flex flex-col items-center justify-start gap-4 pt-[30dvh] px-8 z-logo",
+        "flex flex-col items-center justify-start gap-4 pt-[22dvh] px-8 z-logo",
         className
       )}
     >
@@ -165,60 +165,56 @@ export function ScreenshotCard({
 
 export const screenshots = [
   {
-    title: "Resources",
-    thumbnail: "/screenshots/permissions.webp",
-  },
-  {
-    title: "Bill of Materials",
-    thumbnail: "/screenshots/bom.webp",
-  },
-  {
-    title: "Work Instructions",
-    thumbnail: "/screenshots/bop.webp",
+    title: "MES 3D Viewer",
+    thumbnail: "/screenshots/mes-model.webp",
   },
   {
     title: "Quotes Table",
     thumbnail: "/screenshots/quotes-table.webp",
   },
   {
+    title: "Work Instructions",
+    thumbnail: "/screenshots/bop.webp",
+  },
+  {
     title: "Global Search",
     thumbnail: "/screenshots/search.webp",
+  },
+  {
+    title: "Resources",
+    thumbnail: "/screenshots/permissions.webp",
   },
   {
     title: "Documents",
     thumbnail: "/screenshots/documents.webp",
   },
   {
-    title: "MES Work Instructions",
-    thumbnail: "/screenshots/mes-instructions.webp",
+    title: "Kanban Schedule",
+    thumbnail: "/screenshots/kanban.webp",
   },
   {
     title: "Auto-generated API Documentation",
     thumbnail: "/screenshots/api-docs.webp",
   },
   {
-    title: "Kanban Schedule",
-    thumbnail: "/screenshots/kanban.webp",
+    title: "MES Work Instructions",
+    thumbnail: "/screenshots/mes-instructions.webp",
   },
   {
-    title: "MES 3D Viewer",
-    thumbnail: "/screenshots/mes-model.webp",
+    title: "Bill of Materials",
+    thumbnail: "/screenshots/bom.webp",
   },
   {
     title: "Customer Portal",
     thumbnail: "/screenshots/customer-portal-entry.webp",
   },
   {
-    title: "Resources",
-    thumbnail: "/screenshots/resources.webp",
+    title: "Configurator",
+    thumbnail: "/screenshots/configurator.webp",
   },
   {
     title: "Quote Pricing",
     thumbnail: "/screenshots/quote-pricing.webp",
-  },
-  {
-    title: "Configurator",
-    thumbnail: "/screenshots/configurator.webp",
   },
   {
     title: "Customer Portal",
@@ -227,5 +223,9 @@ export const screenshots = [
   {
     title: "MES Details",
     thumbnail: "/screenshots/mes-details.webp",
+  },
+  {
+    title: "Resources",
+    thumbnail: "/screenshots/resources.webp",
   },
 ];

@@ -205,16 +205,23 @@ function CTA() {
 
 function Footer() {
   return (
-    <div className="flex flex-col items-center justify-center py-8">
+    <div className="flex flex-col items-center justify-center py-8 gap-3">
       <a
         href="https://github.com/crbnos"
         className="mb-4 text-muted-foreground/50 hover:text-muted-foreground transition-colors"
       >
         <CodeXml className="size-8 rounded-full bg-foreground/10 text-foreground p-1.5" />
       </a>
-      <p className="text-center text-xs text-muted-foreground/50">
+      <p className="text-center text-sm text-muted-foreground/50">
         Carbon Manufacturing Systems Corporation
       </p>
+      <div className="flex items-center gap-2 text-xs text-muted-foreground/50">
+        <Link to="/privacy">Privacy</Link>
+        <span className="text-muted-foreground/50">|</span>
+        <Link to="/terms">Terms</Link>
+        <span className="text-muted-foreground/50">|</span>
+        <Link to="/license">License</Link>
+      </div>
     </div>
   );
 }
@@ -268,7 +275,7 @@ export function ErrorBoundary() {
   return (
     <Document title="Error!">
       <div className="dark">
-        <div className="flex flex-col w-[100dvw] h-screen bg-zinc-900 items-center justify-center space-y-4 ">
+        <div className="flex flex-col w-[100dvw] h-screen items-center justify-center space-y-4 ">
           <img
             src="/carbon-logo-light.png"
             alt="Carbon Logo"
