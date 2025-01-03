@@ -8,6 +8,8 @@ import { Label } from "~/components/ui/label";
 import { Textarea } from "~/components/ui/textarea";
 import { getSlackClient } from "~/lib/slack.server";
 
+export const config = { runtime: "nodejs" };
+
 export async function action({ request }: ActionFunctionArgs) {
   const formData = await request.formData();
   const name = String(formData.get("name"));
