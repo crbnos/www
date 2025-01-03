@@ -340,11 +340,10 @@ function Team() {
           </div>
           <p className="text-sm lg:text-base text-muted-foreground">
             Rob was a principal engineer and product manager at Paperless Parts,
-            where he led ERP integrations. He then started a manufacturing
-            consulting company to help clients transform their manufacturing
-            businesses with software. After talking to hundreds of manufacturers
-            and using the available options, he realized he had to build
-            CarbonOS.
+            where he led ERP integrations and architected custom software
+            systems for leading digital manufacturers. Prior to that, he worked
+            in the high-performance computing group at MIT Lincoln Laboratory,
+            and as an engineer at several early stage startups.
           </p>
         </div>
 
