@@ -28,6 +28,45 @@ import {
 } from "./ui/dialog";
 import { Progress } from "./ui/progress";
 
+import { createContext, Dispatch, SetStateAction, useContext } from "react";
+
+export const defaultAnswers: FormAnswers = {
+  ownership: "",
+  hosting: "",
+  tenancy: "",
+  support: "",
+  customDev: "",
+  contactInfo: {
+    name: "",
+    email: "",
+    company: "",
+  },
+};
+
+export const WizardContext = createContext<{
+  answers: FormAnswers;
+  setAnswers: Dispatch<SetStateAction<FormAnswers>>;
+  showWizard: boolean;
+  setShowWizard: Dispatch<SetStateAction<boolean>>;
+  currentStep: number;
+  setCurrentStep: Dispatch<SetStateAction<number>>;
+}>({
+  answers: defaultAnswers,
+  setAnswers: () => {},
+  showWizard: false,
+  setShowWizard: () => {},
+  currentStep: 0,
+  setCurrentStep: () => {},
+});
+
+export const useWizard = () => {
+  const context = useContext(WizardContext);
+  if (!context) {
+    throw new Error("useWizard must be used within a WizardProvider");
+  }
+  return context;
+};
+
 export const steps: Step[] = [
   {
     id: 1,
@@ -172,22 +211,10 @@ type WizardFormProps = {
   onClose: () => void;
 };
 
-export default function WizardForm({ open, onClose }: WizardFormProps) {
+export function WizardForm({ open, onClose }: WizardFormProps) {
+  const { answers, setAnswers, currentStep, setCurrentStep } = useWizard();
   const fetcher = useFetcher();
-  const [currentStep, setCurrentStep] = useState(0);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [answers, setAnswers] = useState<FormAnswers>({
-    ownership: "",
-    hosting: "",
-    tenancy: "",
-    support: "",
-    customDev: "",
-    contactInfo: {
-      name: "",
-      email: "",
-      company: "",
-    },
-  });
 
   useEffect(() => {
     if (fetcher.state === "submitting") {
@@ -299,7 +326,7 @@ export default function WizardForm({ open, onClose }: WizardFormProps) {
                   <Button
                     onClick={handleBack}
                     variant="ghost"
-                    className="flex items-center"
+                    className="flex items-center mr-auto"
                     type="button"
                   >
                     <ArrowLeft className="w-4 h-4 mr-2" />

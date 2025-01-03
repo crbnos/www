@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
 import { motion } from "framer-motion";
-import { Lightbulb, Play } from "lucide-react";
+import { Check, Lightbulb, Play } from "lucide-react";
 
 import {
   Gantt,
@@ -19,6 +19,7 @@ import { AnimatedShinyText } from "~/components/ui/animated-shiny-text";
 import { Button } from "~/components/ui/button";
 import { Actor, ScrollStage, useStage } from "~/components/ui/stage";
 import TextRevealByWord from "~/components/ui/text-reveal";
+import { steps, useWizard } from "~/components/wizard-form";
 import { useIsMobile } from "~/hooks/useIsMobile";
 import { cn } from "~/lib/utils";
 
@@ -30,10 +31,11 @@ export default function Route() {
 
       {isMobile ? <div className="h-[60vh]" /> : <Hero />}
       <WhatIsCarbonOS />
-      <Features isMobile={isMobile} />
+      <Benefits isMobile={isMobile} />
       <WhyNotOffTheShelf />
       <GanttComparison />
       <Team />
+      <Pricing />
       <FAQs />
     </>
   );
@@ -72,6 +74,194 @@ function Header() {
         CarbonOS is the new standard for custom manufacturing systems
       </motion.p>
     </div>
+  );
+}
+
+function WhatIsCarbonOS() {
+  return (
+    <TextRevealByWord
+      text={`CarbonOS is an __API-first__ operating system for manufacturing. It is an extensible foundation upon which digital manufacturers can build end-to-end, fully integrated software stacks. 
+Unlike traditional "software as a service" (SaaS) providers, we give you __full access to the source code,__ so you have complete control of your technology. That means you’re __never locked in__ and you can focus on building the things that make your business unique.`}
+    />
+  );
+}
+
+type Slide = {
+  img: string;
+  description: string;
+  link?: string;
+  start: number;
+  end: number;
+};
+
+function BenefitDescription({
+  start,
+  end,
+  children,
+}: {
+  start: number;
+  end: number;
+  children: React.ReactNode;
+}) {
+  return (
+    <Actor start={start} end={end}>
+      <motion.p
+        className="fixed left-10 bottom-[10dvh] md:left-10 md:top-5 flex flex-col  justify-center md:min-h-[100dvh] w-[calc(100%-5rem)] md:w-1/3 items-start px-6 font-medium text-lg text-muted-foreground text-balance "
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1 }}
+      >
+        {children}
+      </motion.p>
+    </Actor>
+  );
+}
+
+const slides: Slide[] = [
+  {
+    img: "https://placehold.co/1280x800",
+    description:
+      "It starts with a delightful customer experience. We help you create a custom solution to feed requests to the system or use the API for instant quoting.",
+    link: "/learn/delightful-experience",
+    start: 0.1,
+    end: 0.22,
+  },
+  {
+    img: "https://placehold.co/1280x800",
+    description:
+      "Next, whatever you're making needs converted to a bill of materials and a routing. If you're not mass producing, our configurator will help you generate the perfect BoM and routing automatically.",
+    link: "/learn/configuration-is-all-you-need",
+    start: 0.25,
+    end: 0.41,
+  },
+  {
+    img: "https://placehold.co/1280x800",
+    description:
+      "With an accurate account of what needs made, everything falls into place. Purchasing, production, scheduling, inventory, receiving, and resource management all benefit from an integrated system of record.",
+    start: 0.433,
+    end: 0.6,
+  },
+  {
+    img: "https://placehold.co/1280x800",
+    description:
+      "CarbonOS is built entirely with our self-documenting API. With access to the source code, our SDK, and our realtime API, you'll be able to build custom applications that drive your business.",
+
+    start: 0.617,
+    end: 0.76,
+  },
+  {
+    img: "https://placehold.co/1280x800",
+    description:
+      "In addition to our core application, we provide an MES app and a starter kit for building your own applications. This will save you years of development time, and allow you to avoid the pitfalls of off-the-shelf systems.",
+    start: 0.78,
+    end: 0.98,
+  },
+];
+
+function BenefitImages({ isMobile }: { isMobile: boolean }) {
+  const stage = useStage();
+
+  return (
+    <div className={cn(isMobile ? "flex flex-col gap-4" : "-mt-[100dvh]")}>
+      {slides.map((slide, index) => {
+        const slideProgress = stage.progress * 6 - index;
+
+        const opacity =
+          slideProgress < 1.3 || isMobile
+            ? 1
+            : Math.max(0, 1 - (slideProgress - 1.3) / 0.7);
+
+        return (
+          <div
+            key={index}
+            className={cn(
+              isMobile
+                ? "flex flex-col bg-muted rounded-lg border border-border gap-4 p-6"
+                : "flex items-center justify-center min-h-[100dvh]"
+            )}
+          >
+            <div className="relative w-full" style={{ opacity }}>
+              <img
+                src={slide.img}
+                alt={slide.description}
+                className="w-full h-auto rounded-lg invert"
+              />
+              <div
+                className="absolute inset-0 rounded-r-lg"
+                style={{
+                  content: "",
+                  background:
+                    "radial-gradient(97% 162% at -5% 6%, rgba(11, 11, 15, 0) 0%, rgba(11, 11, 15, 0) 60%, rgb(0, 0, 0) 100%)",
+                }}
+              />
+            </div>
+            {isMobile && (
+              <div className="flex flex-col items-start justify-center gap-4">
+                <p className="font-medium text-base text-muted-foreground text-balance">
+                  {slide.description}
+                </p>
+                {slide.link && (
+                  <Button className="mt-4" variant="outline" asChild>
+                    <Link to={slide.link}>
+                      Learn more <Lightbulb className="size-4" />
+                    </Link>
+                  </Button>
+                )}
+              </div>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function Benefits({ isMobile }: { isMobile: boolean }) {
+  return (
+    <ScrollStage
+      pages={isMobile ? 1 : 5.5}
+      fallbackLength={100}
+      fallbackFrame={25}
+    >
+      {!isMobile && (
+        <div className="md:flex relative">
+          <div className="sticky bottom-0 w-1/3 md:bottom-auto md:top-0 md:flex md:h-screen md:flex-1 md:items-center md:self-start">
+            {slides.map((slide, index) => (
+              <BenefitDescription
+                key={index}
+                start={slide.start}
+                end={slide.end}
+              >
+                {slide.description}
+                {slide.link && (
+                  <Button className="mt-4" variant="outline" asChild>
+                    <Link to={slide.link}>
+                      Learn more <Lightbulb className="size-4" />
+                    </Link>
+                  </Button>
+                )}
+              </BenefitDescription>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <div className={isMobile ? "flex-1" : "ml-[50%] flex-1"}>
+        <div className="w-full md:max-w-3xl px-3">
+          <BenefitImages isMobile={isMobile} />
+        </div>
+      </div>
+    </ScrollStage>
+  );
+}
+
+function WhyNotOffTheShelf() {
+  return (
+    <TextRevealByWord
+      text={`Off-the-shelf systems can __get you 80% of the way there.__ But the remaining 20%– everything that makes your business unique– becomes nearly impossible.
+__If you don't control the full stack__, you're at the mercy of a vendor's roadmap and fluctuating pricing. In essence, __you're a renter, not an owner.__`}
+    />
   );
 }
 
@@ -156,191 +346,17 @@ function WithCarbonOS() {
   );
 }
 
-function WhatIsCarbonOS() {
-  return (
-    <TextRevealByWord
-      text={`CarbonOS is an __API-first__ operating system for manufacturing. We give you __full access to the source code,__ so you have complete control.
-That means you're __never locked in__ and you can focus on building the things that makes your business unique.`}
-    />
-  );
-}
-
-type Slide = {
-  img: string;
-  description: string;
-  link?: string;
-  start: number;
-  end: number;
-};
-
-function FeatureDescription({
-  start,
-  end,
-  children,
-}: {
-  start: number;
-  end: number;
-  children: React.ReactNode;
-}) {
-  return (
-    <Actor start={start} end={end}>
-      <motion.p
-        className="fixed left-10 bottom-[10dvh] md:left-10 md:top-5 flex flex-col  justify-center md:min-h-[100dvh] w-[calc(100%-5rem)] md:w-1/3 items-start px-6 font-medium text-lg text-muted-foreground text-balance "
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 1 }}
-      >
-        {children}
-      </motion.p>
-    </Actor>
-  );
-}
-
-const slides: Slide[] = [
-  {
-    img: "https://placehold.co/1280x800",
-    description:
-      "It starts with a delightful customer experience. We help you create a custom solution to feed requests to the system or use the API for instant quoting.",
-    link: "/learn/delightful-experience",
-    start: 0.1,
-    end: 0.22,
-  },
-  {
-    img: "https://placehold.co/1280x800",
-    description:
-      "Next, whatever you're making needs converted to a bill of materials and a routing. If you're not mass producing, our configurator will help you generate the perfect BoM and routing automatically.",
-    link: "/learn/configuration-is-all-you-need",
-    start: 0.25,
-    end: 0.41,
-  },
-  {
-    img: "https://placehold.co/1280x800",
-    description:
-      "With an accurate account of what needs made, everything falls into place. Purchasing, production, scheduling, inventory, receiving, and resource management all benefit from an integrated system of record.",
-    start: 0.433,
-    end: 0.6,
-  },
-  {
-    img: "https://placehold.co/1280x800",
-    description:
-      "CarbonOS is built entirely with our self-documenting API. With access to the source code, our SDK, and our realtime API, you'll be able to build custom applications that drive your business.",
-
-    start: 0.617,
-    end: 0.76,
-  },
-  {
-    img: "https://placehold.co/1280x800",
-    description:
-      "In addition to our core application, we provide an MES app and a starter kit for building your own applications. This will save you years of development time, and allow you to avoid the pitfalls of off-the-shelf systems.",
-    start: 0.78,
-    end: 0.9,
-  },
-];
-
-function FeatureImages({ isMobile }: { isMobile: boolean }) {
-  const stage = useStage();
-
-  return (
-    <div className={cn(isMobile ? "flex flex-col gap-4" : "-mt-[100dvh]")}>
-      {slides.map((slide, index) => {
-        const slideProgress = stage.progress * 6 - index;
-
-        const opacity =
-          slideProgress < 1.3 || isMobile
-            ? 1
-            : Math.max(0, 1 - (slideProgress - 1.3) / 0.7);
-
-        return (
-          <div
-            key={index}
-            className={cn(
-              isMobile
-                ? "flex flex-col bg-muted rounded-lg border border-border gap-4 p-6"
-                : "flex items-center justify-center min-h-[100dvh]"
-            )}
-          >
-            <div className="relative w-full" style={{ opacity }}>
-              <img
-                src={slide.img}
-                alt={slide.description}
-                className="w-full h-auto rounded-lg invert"
-              />
-              <div
-                className="absolute inset-0 rounded-r-lg"
-                style={{
-                  content: "",
-                  background:
-                    "radial-gradient(97% 162% at -5% 6%, rgba(11, 11, 15, 0) 0%, rgba(11, 11, 15, 0) 60%, rgb(0, 0, 0) 100%)",
-                }}
-              />
-            </div>
-            {isMobile && (
-              <p className="font-medium text-base text-muted-foreground text-balance">
-                {slide.description}
-              </p>
-            )}
-          </div>
-        );
-      })}
-    </div>
-  );
-}
-
-function Features({ isMobile }: { isMobile: boolean }) {
-  return (
-    <ScrollStage
-      pages={isMobile ? 1 : 5.5}
-      fallbackLength={100}
-      fallbackFrame={25}
-    >
-      {!isMobile && (
-        <div className="md:flex relative">
-          <div className="sticky bottom-0 w-1/3 md:bottom-auto md:top-0 md:flex md:h-screen md:flex-1 md:items-center md:self-start">
-            {slides.map((slide, index) => (
-              <FeatureDescription
-                key={index}
-                start={slide.start}
-                end={slide.end}
-              >
-                {slide.description}
-                {slide.link && (
-                  <Button className="mt-4" variant="outline" asChild>
-                    <Link to={slide.link}>
-                      Learn more <Lightbulb className="size-4" />
-                    </Link>
-                  </Button>
-                )}
-              </FeatureDescription>
-            ))}
-          </div>
-        </div>
-      )}
-
-      <div className={isMobile ? "flex-1" : "ml-[50%] flex-1"}>
-        <div className="w-full md:max-w-3xl px-3">
-          <FeatureImages isMobile={isMobile} />
-        </div>
-      </div>
-    </ScrollStage>
-  );
-}
-
-function WhyNotOffTheShelf() {
-  return (
-    <TextRevealByWord
-      text={`Off-the-shelf systems can __get you 80% of the way there.__ But the remaining 20%– everything that makes your business unique– becomes nearly impossible.
-__If you don't control the full stack__, you're at the mercy of a vendor's roadmap and fluctuating pricing. In essence, __you're a renter, not an owner.__`}
-    />
-  );
-}
-
 function Team() {
   return (
     <div className="mx-auto w-screen max-w-6xl px-6 py-[40dvh] flex flex-col gap-8">
-      {/* <h3 className="text-center text-3xl lg:text-4xl xl:text-5xl font-semibold leading-none tracking-tight text-foreground">
-        We know manufacturing
-      </h3> */}
+      <div className="mx-auto text-center">
+        <h4 className="text-xl font-bold tracking-tight text-muted-foreground/80">
+          Team
+        </h4>
+        <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+          We know manufacturing
+        </h2>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="flex flex-col items-start gap-2">
           <img
@@ -348,7 +364,9 @@ function Team() {
             alt="Rob Carrington"
             className="w-full aspect-[3/4] rounded-lg object-cover mb-4 opacity-80"
           />
-          <h3 className="text-xl lg:text-2xl font-semibold">Rob Carrington</h3>
+          <h3 className="text-xl lg:text-2xl font-bold tracking-tight">
+            Rob Carrington
+          </h3>
           <p className="text-sm lg:text-base text-muted-foreground">
             CEO & Co-Founder
           </p>
@@ -374,7 +392,9 @@ function Team() {
             alt="Brad Barbin"
             className="w-full aspect-[3/4] rounded-lg object-cover mb-4 opacity-80"
           />
-          <h3 className="text-xl lg:text-2xl font-semibold">Brad Barbin</h3>
+          <h3 className="text-xl lg:text-2xl font-bold tracking-tight">
+            Brad Barbin
+          </h3>
           <p className="text-sm lg:text-base text-muted-foreground">
             CTO & Co-Founder
           </p>
@@ -400,7 +420,9 @@ function Team() {
             alt="Tom Smith"
             className="w-full aspect-[3/4] rounded-lg object-cover mb-4 opacity-80"
           />
-          <h3 className="text-xl lg:text-2xl font-semibold">Tom Smith</h3>
+          <h3 className="text-xl lg:text-2xl font-bold tracking-tight">
+            Tom Smith
+          </h3>
           <p className="text-sm lg:text-base text-muted-foreground">
             Co-Founder
           </p>
@@ -443,16 +465,155 @@ function SocialIcon({ type, href }: { type: "linkedin" | "x"; href: string }) {
   );
 }
 
+const plans = [
+  {
+    name: "Rent-to-Own",
+    description: "A monthly subscription with an option to buy the source code",
+    features: [
+      "Core ERP/MES functionality",
+      "Cloud-hosted",
+      "Hands-on onboarding",
+      "Ongoing support",
+      "Ongoing improvements",
+    ],
+    featured: false,
+    answers: {
+      ownership: "rent",
+      hosting: "managed-hosting",
+      tenancy: "multi-tenant",
+      support: "dedicated",
+      customDev: "none",
+    },
+  },
+  {
+    name: "Foundation",
+    description:
+      "A foundation for factories with software engineers building custom systems",
+    features: [
+      "Full access to source code",
+      "Self-hosted",
+      "Developer onboarding",
+      "Ongoing support",
+      "Ongoing improvements",
+      "Custom app template",
+    ],
+    featured: true,
+    answers: {
+      ownership: "buy",
+      hosting: "self-hosted",
+      tenancy: "single-tenant",
+      support: "dedicated",
+      customDev: "none",
+    },
+  },
+  {
+    name: "Full-Service",
+    description:
+      "We'll build customized applications on top of CarbonOS for you",
+    features: [
+      "Custom application development",
+      "Core ERP/MES functionality",
+      "Cloud-hosted",
+      "Hands-on onboarding",
+      "Feature prioritization",
+    ],
+    featured: false,
+    answers: {
+      ownership: "rent",
+      hosting: "managed-hosting",
+      tenancy: "multi-tenant",
+      support: "priority",
+      customDev: "portal",
+    },
+  },
+];
+
+function Pricing() {
+  const { answers, setShowWizard, setAnswers, setCurrentStep } = useWizard();
+
+  return (
+    <section
+      id="pricing"
+      className="mx-auto flex w-screen max-w-6xl px-6 flex-col gap-8 py-14 md:px-8 min-h-[100dvh] justify-center items-center"
+    >
+      <div className="mx-auto text-center">
+        <h4 className="text-xl font-bold tracking-tight text-muted-foreground/80">
+          Pricing
+        </h4>
+        <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+          A plan for every business
+        </h2>
+        <p className="mt-6 max-w-3xl text-base leading-6 text-muted-foreground mb-8">
+          Every business is unique, and so are their software needs. With
+          CarbonOS, you can choose whichever ownership model works best for you
+          to create your customized end-to-end software solution.
+        </p>
+      </div>
+
+      <div className="mx-auto grid w-full justify-center grid-cols-1 md:grid-cols-3 gap-8">
+        {plans.map((plan) => (
+          <div
+            key={plan.name}
+            className={cn(
+              "relative flex max-w-[400px] flex-col gap-8 rounded-lg bg-muted p-4 text-foreground overflow-hidden",
+              plan.featured
+                ? "border-4 border-emerald-400 -mt-4"
+                : "border border-border"
+            )}
+          >
+            <div className="flex items-center">
+              <div className="ml-4">
+                <h2 className="text-xl font-bold tracking-tight leading-7">
+                  {plan.name}
+                </h2>
+                <p className="h-12 text-sm leading-5 text-muted-foreground">
+                  {plan.description}
+                </p>
+              </div>
+            </div>
+
+            <hr className="m-0 h-px w-full border-none bg-gradient-to-r from-zinc-200/0 via-zinc-500/30 to-zinc-200/0" />
+
+            <ul className="flex flex-col gap-2 font-normal">
+              {plan.features.map((feature) => (
+                <li
+                  key={feature}
+                  className="flex items-center gap-3 text-base font-medium text-foreground"
+                >
+                  <Check className="size-5 shrink-0 rounded-full bg-emerald-400 p-[3px] text-foreground" />
+                  <span className="flex">{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            <hr className="m-0 h-px w-full border-none bg-gradient-to-r from-zinc-200/0 via-zinc-500/30 to-zinc-200/0" />
+
+            <Button
+              onClick={() => {
+                setShowWizard(true);
+                setAnswers({ ...answers, ...plan.answers });
+                setCurrentStep(steps.length - 1);
+              }}
+            >
+              Get Started
+            </Button>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function FAQs() {
   return (
-    <section className="w-full h-screen py-32 ">
-      <div className="mx-auto w-form-sm md:w-form-md lg:w-form-lg ">
-        <h2 className="mb-8 text-center text-xl md:text-2xl lg:text-3xl font-bold text-muted-foreground">
-          FAQs
+    <section className="w-full min-h-[100dvh] py-32 ">
+      <div className="mx-auto md:w-form-md lg:w-form-lg px-6">
+        <h2 className="mb-8 text-center text-xl md:text-2xl lg:text-3xl font-bold tracking-tight text-foreground">
+          Frequently Asked Questions
         </h2>
 
         <div className="space-y-4 text-base md:text-lg lg:text-xl">
-          <Accordion type="single" collapsible>
+          <Accordion type="multiple">
             <AccordionItem value="item-1">
               <AccordionTrigger>
                 Is CarbonOS hosted on-prem or in the cloud?

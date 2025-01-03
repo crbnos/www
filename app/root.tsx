@@ -10,14 +10,19 @@ import {
 } from "@remix-run/react";
 import { Analytics } from "@vercel/analytics/react";
 import type { MetaFunction } from "@vercel/remix";
-import React from "react";
+import { ReactNode, useState } from "react";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { CodeXml, Fingerprint, Play } from "lucide-react";
 import Tailwind from "~/styles/tailwind.css?url";
 import { Button } from "./components/ui/button";
-import WizardForm from "./components/wizard-form";
-import { useWizard, WizardContext } from "./hooks/useWizard";
+import {
+  defaultAnswers,
+  FormAnswers,
+  useWizard,
+  WizardContext,
+  WizardForm,
+} from "./components/wizard-form";
 
 export const config = { runtime: "edge" };
 
@@ -89,7 +94,7 @@ function Document({
   title = "CarbonOS",
   mode = "dark",
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   title?: string;
   mode?: "light" | "dark";
 }) {
@@ -229,10 +234,21 @@ function LightRays() {
 }
 
 export default function App() {
-  const [showWizard, setShowWizard] = React.useState(false);
+  const [showWizard, setShowWizard] = useState(false);
+  const [answers, setAnswers] = useState<FormAnswers>(defaultAnswers);
+  const [currentStep, setCurrentStep] = useState(0);
 
   return (
-    <WizardContext.Provider value={{ showWizard, setShowWizard }}>
+    <WizardContext.Provider
+      value={{
+        showWizard,
+        setShowWizard,
+        answers,
+        setAnswers,
+        currentStep,
+        setCurrentStep,
+      }}
+    >
       <Document mode="dark">
         <Outlet />
       </Document>
