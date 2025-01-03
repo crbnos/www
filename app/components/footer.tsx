@@ -61,6 +61,7 @@ export function Footer() {
               </p>
               <div className="col-span-2 -mx-1 flex flex-wrap gap-2 sm:flex-col">
                 {[
+                  { href: "/ownership", text: "Ownership Plans" },
                   { href: "/privacy", text: "Privacy" },
                   { href: "/terms", text: "Terms" },
                 ].map((link) => (

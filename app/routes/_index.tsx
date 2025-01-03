@@ -1,6 +1,7 @@
 import { Link } from "@remix-run/react";
 import { motion } from "framer-motion";
-import { Check, Lightbulb } from "lucide-react";
+import { Lightbulb } from "lucide-react";
+import { CTA } from "~/components/cta";
 
 import {
   Gantt,
@@ -19,7 +20,6 @@ import {
 import { Button } from "~/components/ui/button";
 import { Actor, ScrollStage, useStage } from "~/components/ui/stage";
 import TextRevealByWord from "~/components/ui/text-reveal";
-import { steps, useWizard } from "~/components/wizard-form";
 import { useIsMobile } from "~/hooks/useIsMobile";
 import { cn } from "~/lib/utils";
 
@@ -33,8 +33,8 @@ export default function Route() {
       <WhyNotOffTheShelf />
       <GanttComparison />
       <Team />
-      <Ownership />
       <FAQs />
+      <CTA />
     </>
   );
 }
@@ -42,8 +42,8 @@ export default function Route() {
 function WhatIsCarbonOS() {
   return (
     <TextRevealByWord
-      text={`CarbonOS is an __API-first__ operating system for manufacturing. It is an extensible foundation upon which digital manufacturers can build end-to-end, fully integrated software stacks. 
-Unlike traditional "software as a service" (SaaS) providers, we give you __full access to the source code,__ so you have complete control of your technology. That means you’re __never locked in__ and you can focus on building the things that make your business unique.`}
+      text={`CarbonOS is an API-first operating system for manufacturing – an extensible foundation for digital manufacturers building end-to-end, fully integrated software stacks. 
+Unlike  legacy systems, we give you __full access to the source code,__ so you have complete control of your technology. That means you’re __never locked in__ and you can focus on building the things that make your business unique.`}
     />
   );
 }
@@ -222,7 +222,7 @@ function WhyNotOffTheShelf() {
   return (
     <TextRevealByWord
       text={`Off-the-shelf systems can __get you 80% of the way there.__ But the remaining 20%– everything that makes your business unique– becomes nearly impossible.
-__If you don't control the full stack__, you're at the mercy of a vendor's roadmap and fluctuating pricing. In essence, __you're a renter, not an owner.__`}
+__If you don't control the full stack,__ you're at the mercy of a vendor's roadmap and fluctuating pricing. In essence, __you're a renter, not an owner.__`}
     />
   );
 }
@@ -310,7 +310,7 @@ function WithCarbonOS() {
 
 function Team() {
   return (
-    <div className="mx-auto w-screen max-w-6xl px-6 py-[40dvh] flex flex-col gap-8">
+    <div className="mx-auto w-screen max-w-6xl px-6 py-[30dvh] flex flex-col gap-8">
       <div className="mx-auto text-center">
         <h4 className="text-xl font-bold tracking-tight text-muted-foreground/80">
           Team
@@ -372,7 +372,9 @@ function Team() {
             nuclear reactors, and bio-pharmaceuticals. His 7 years of experience
             on shop floors drove him to build the missing piece of the
             manufacturing stack. Before manufacturing, he founded an NLP
-            startup, built a successful social media app.
+            startup, built a successful social media app. Before CarbonOS, he
+            was a principal engineer at Teamworks&ndash;the operating system for
+            sports.
           </p>
         </div>
 
@@ -408,148 +410,9 @@ function Team() {
   );
 }
 
-const plans = [
-  {
-    name: "Rent-to-Own",
-    description: "A monthly subscription with an option to buy the source code",
-    features: [
-      "Core ERP/MES/API functionality",
-      "Managed hosting",
-      "Hands-on onboarding",
-      "Ongoing support",
-      "Ongoing improvements",
-    ],
-    featured: false,
-    answers: {
-      ownership: "rent",
-      hosting: "managed-hosting",
-      tenancy: "multi-tenant",
-      support: "dedicated",
-      customDev: "none",
-    },
-  },
-  {
-    name: "Foundation",
-    description:
-      "A starting point for factories with software engineers building custom systems",
-    features: [
-      "Full access to source code",
-      "Self-hosted",
-      "Developer onboarding",
-      "Ongoing support",
-      "Ongoing improvements",
-      "Custom app template",
-    ],
-    featured: true,
-    answers: {
-      ownership: "buy",
-      hosting: "self-hosted",
-      tenancy: "single-tenant",
-      support: "dedicated",
-      customDev: "none",
-    },
-  },
-  {
-    name: "Full-Service",
-    description:
-      "We'll build customized applications on top of CarbonOS for you",
-    features: [
-      "Custom application development",
-      "Core ERP/MES/API functionality",
-      "Managed hosting",
-      "Hands-on onboarding",
-      "Feature prioritization",
-    ],
-    featured: false,
-    answers: {
-      ownership: "rent",
-      hosting: "managed-hosting",
-      tenancy: "multi-tenant",
-      support: "priority",
-      customDev: "portal",
-    },
-  },
-];
-
-function Ownership() {
-  const { answers, setShowWizard, setAnswers, setCurrentStep } = useWizard();
-
-  return (
-    <section
-      id="pricing"
-      className="mx-auto flex w-screen max-w-6xl px-6 flex-col gap-8 py-14 md:px-8 min-h-[100dvh] justify-center items-center"
-    >
-      <div className="mx-auto text-center">
-        <h4 className="text-xl font-bold tracking-tight text-muted-foreground/80">
-          Ownership
-        </h4>
-        <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-          A plan for every business
-        </h2>
-        <p className="mt-6 max-w-3xl text-base leading-6 text-muted-foreground mb-8">
-          Every business is unique, and so are their software needs. With
-          CarbonOS, you can choose whichever ownership model works best for you
-          to create your customized end-to-end software solution.
-        </p>
-      </div>
-
-      <div className="mx-auto grid w-full justify-center grid-cols-1 md:grid-cols-3 gap-8">
-        {plans.map((plan) => (
-          <div
-            key={plan.name}
-            className={cn(
-              "relative flex max-w-[400px] flex-col gap-8 rounded-lg bg-muted p-4 text-foreground overflow-hidden",
-              plan.featured
-                ? "border-4 border-emerald-400 -mt-4"
-                : "border border-border"
-            )}
-          >
-            <div className="flex items-center">
-              <div className="ml-4">
-                <h2 className="text-xl font-bold tracking-tight leading-7">
-                  {plan.name}
-                </h2>
-                <p className="h-12 text-sm leading-5 text-muted-foreground">
-                  {plan.description}
-                </p>
-              </div>
-            </div>
-
-            <hr className="m-0 h-px w-full border-none bg-gradient-to-r from-zinc-200/0 via-zinc-500/30 to-zinc-200/0" />
-
-            <ul className="flex flex-col gap-2 font-normal">
-              {plan.features.map((feature) => (
-                <li
-                  key={feature}
-                  className="flex items-center gap-3 text-base font-medium text-foreground"
-                >
-                  <Check className="size-5 shrink-0 rounded-full bg-emerald-400 p-[3px] text-foreground" />
-                  <span className="flex">{feature}</span>
-                </li>
-              ))}
-            </ul>
-
-            <hr className="m-0 h-px w-full border-none bg-gradient-to-r from-zinc-200/0 via-zinc-500/30 to-zinc-200/0" />
-
-            <Button
-              onClick={() => {
-                setShowWizard(true);
-                setAnswers({ ...answers, ...plan.answers });
-                setCurrentStep(steps.length - 1);
-              }}
-            >
-              Get Started
-            </Button>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 function FAQs() {
   return (
-    <section className="w-full min-h-[100dvh] py-32 ">
+    <section className="w-full min-h-[80dvh] py-32 ">
       <div className="mx-auto md:w-form-md lg:w-form-lg px-6">
         <h2 className="mb-8 text-center text-xl md:text-2xl lg:text-3xl font-bold tracking-tight text-foreground">
           Frequently Asked Questions
