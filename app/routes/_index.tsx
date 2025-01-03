@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
 import { motion } from "framer-motion";
-import { Check, Lightbulb, Play } from "lucide-react";
+import { Check, Lightbulb } from "lucide-react";
 
 import {
   Gantt,
@@ -8,14 +8,13 @@ import {
   GanttHeader,
   Resource,
 } from "~/components/gantt";
-import { Hero } from "~/components/hero";
+import { Header, Hero } from "~/components/hero";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "~/components/ui/accordion";
-import { AnimatedShinyText } from "~/components/ui/animated-shiny-text";
 import { Button } from "~/components/ui/button";
 import { Actor, ScrollStage, useStage } from "~/components/ui/stage";
 import TextRevealByWord from "~/components/ui/text-reveal";
@@ -27,9 +26,7 @@ export default function Route() {
   const isMobile = useIsMobile();
   return (
     <>
-      <Header />
-
-      {isMobile ? <div className="h-[60vh]" /> : <Hero />}
+      {isMobile ? <Header className="mb-[40vh]" /> : <Hero />}
       <WhatIsCarbonOS />
       <Benefits isMobile={isMobile} />
       <WhyNotOffTheShelf />
@@ -38,42 +35,6 @@ export default function Route() {
       <Pricing />
       <FAQs />
     </>
-  );
-}
-
-function Header() {
-  return (
-    <div className="flex flex-col items-center justify-start gap-4 pt-[30dvh] px-8">
-      <motion.div
-        className="w-[240px]"
-        initial={{ opacity: 0.3 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        <div className="z-logo flex items-center justify-center group rounded-full border border-black/5 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-zinc-200 dark:hover:bg-zinc-800/20 hover:filter-blur dark:border-white/5 ">
-          <AnimatedShinyText className="relative inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-zinc-600 hover:duration-300 hover:dark:text-zinc-400">
-            <span>Introducing CarbonOS</span>
-            <Play className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
-          </AnimatedShinyText>
-        </div>
-      </motion.div>
-      <motion.h2
-        className="text-balance mx-auto mt-4 max-w-4xl text-center text-3xl font-semibold tracking-tight text-zinc-700 dark:text-zinc-300 md:text-5xl"
-        initial={{ opacity: 0.3 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        The manufacturing software you own
-      </motion.h2>
-      <motion.p
-        className="text-balance mx-auto  max-w-4xl text-center text-zinc-500 font-medium text-lg"
-        initial={{ opacity: 0.3 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        CarbonOS is the new standard for custom manufacturing systems
-      </motion.p>
-    </div>
   );
 }
 

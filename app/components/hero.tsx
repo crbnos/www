@@ -5,7 +5,10 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
+import { Play } from "lucide-react";
 import { useRef } from "react";
+import { cn } from "~/lib/utils";
+import AnimatedShinyText from "./ui/animated-shiny-text";
 
 export function Hero() {
   const firstRow = screenshots.slice(0, 5);
@@ -46,9 +49,9 @@ export function Hero() {
   return (
     <div
       ref={ref}
-      className="h-[280vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[300vh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
-      <div className="h-[45vh]" />
+      <Header />
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.7 }}
@@ -59,7 +62,7 @@ export function Hero() {
           translateY,
           opacity,
         }}
-        className=""
+        className="pt-[70vh]"
       >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
           {firstRow.map((screenshot) => (
@@ -89,6 +92,32 @@ export function Hero() {
           ))}
         </motion.div>
       </motion.div>
+    </div>
+  );
+}
+
+export function Header({ className }: { className?: string }) {
+  return (
+    <div
+      className={cn(
+        "flex flex-col items-center justify-start gap-4 pt-[30dvh] px-8 z-logo",
+        className
+      )}
+    >
+      <div className="w-[240px]">
+        <div className="z-logo flex items-center justify-center group rounded-full border border-black/5 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-zinc-200 dark:hover:bg-zinc-800/20 hover:filter-blur dark:border-white/5 ">
+          <AnimatedShinyText className="relative inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-zinc-600 hover:duration-300 hover:dark:text-zinc-400">
+            <span>Introducing CarbonOS</span>
+            <Play className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+          </AnimatedShinyText>
+        </div>
+      </div>
+      <h2 className="text-balance mx-auto mt-4 max-w-4xl text-center text-3xl font-semibold tracking-tight text-zinc-700 dark:text-zinc-300 md:text-5xl">
+        The manufacturing software you own
+      </h2>
+      <p className="text-balance mx-auto  max-w-4xl text-center text-zinc-500 font-medium text-lg">
+        CarbonOS is the new standard for custom manufacturing systems
+      </p>
     </div>
   );
 }
