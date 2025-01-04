@@ -11,12 +11,12 @@ export function Footer() {
             <a className="text-primary select-none" href="/">
               <div className="flex items-center gap-1.5">
                 <img
-                  src="https://app.carbonos.dev/carbon-logo-dark.png"
+                  src="/brand/carbon-logo-dark.svg"
                   alt="CarbonOS"
                   className="size-5 block dark:hidden"
                 />
                 <img
-                  src="https://app.carbonos.dev/carbon-logo-light.png"
+                  src="/brand/carbon-logo-light.svg"
                   alt="CarbonOS"
                   className="size-5 hidden dark:block"
                 />
@@ -62,7 +62,7 @@ export function Footer() {
               <div className="col-span-2 -mx-1 flex flex-wrap gap-2 sm:flex-col">
                 {[
                   { href: "/contact", text: "Contact" },
-                  { href: "/ownership", text: "Ownership Plans" },
+                  { href: "/ownership", text: "Ownership" },
                   { href: "/privacy", text: "Privacy" },
                   { href: "/terms", text: "Terms" },
                 ].map((link) => (

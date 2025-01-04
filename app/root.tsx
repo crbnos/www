@@ -126,12 +126,12 @@ function Document({
           <div className="flex items-center justify-between gap-2 z-logo text-foreground w-full">
             <a href="/" className="cursor-pointer">
               <img
-                src="https://app.carbonos.dev/carbon-logo-dark.png"
+                src="/brand/carbon-logo-dark.svg"
                 alt="CarbonOS"
                 className="size-6 block dark:hidden"
               />
               <img
-                src="https://app.carbonos.dev/carbon-logo-light.png"
+                src="/brand/carbon-logo-light.svg"
                 alt="CarbonOS"
                 className="size-6 hidden dark:block"
               />

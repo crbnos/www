@@ -286,7 +286,7 @@ export default function Terms() {
             <li>
               <strong>Contact Us.</strong> If you have any questions about the
               Platform, please do not hesitate to contact us at
-              rob@carbonos.dev.
+              info@carbonos.dev.
             </li>
           </ol>
         </div>

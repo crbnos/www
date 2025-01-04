@@ -1,3 +1,4 @@
+import { Link } from "@remix-run/react";
 import { Check } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import { steps, useWizard } from "~/components/wizard-form";
@@ -14,6 +15,7 @@ const plans = [
       "Dedicated support",
     ],
     featured: false,
+    licensed: false,
     answers: {
       ownership: "rent",
       hosting: "managed-hosting",
@@ -32,6 +34,7 @@ const plans = [
       "Developer onboarding",
     ],
     featured: true,
+    licensed: true,
     answers: {
       ownership: "buy",
       hosting: "self-hosted",
@@ -50,6 +53,7 @@ const plans = [
       "Feature prioritization",
     ],
     featured: false,
+    licensed: false,
     answers: {
       ownership: "rent",
       hosting: "managed-hosting",
@@ -129,6 +133,14 @@ export default function Ownership() {
             >
               Get Started
             </Button>
+
+            {plan.licensed && (
+              <Link to="/license">
+                <p className="w-full text-center text-xs text-muted-foreground underline -mt-4">
+                  View License
+                </p>
+              </Link>
+            )}
           </div>
         ))}
       </div>
