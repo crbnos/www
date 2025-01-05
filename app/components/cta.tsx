@@ -1,15 +1,47 @@
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Play } from "lucide-react";
 import { Button } from "./ui/button";
 import { useWizard } from "./wizard-form";
 
 export function CTA({ isLearnPage = false }: { isLearnPage?: boolean }) {
   const { setShowWizard } = useWizard();
+  const { scrollYProgress } = useScroll();
+
+  const backgroundColor = useTransform(
+    scrollYProgress,
+    [0.96, 0.99],
+    ["rgb(24 24 27 / 1)", "rgb(24 24 27 / 0)"]
+  );
+
+  const borderColor = useTransform(
+    scrollYProgress,
+    [0.96, 0.99],
+    ["rgb(39 39 42 / 1)", "rgb(39 39 42 / 0)"]
+  );
+
+  const textColor = useTransform(
+    scrollYProgress,
+    [0.96, 0.99],
+    ["rgba(255, 255, 255, 1)", "rgba(255, 255, 255, 0.8)"]
+  );
+
   return (
     <div className="flex min-h-[calc(100dvh-290px)] items-center justify-center">
-      <div className="max-w-5xl text-center px-10 py-14 mx-4 md:mx-auto md:px-24 flex items-center flex-col border border-border rounded-lg  dark:bg-muted">
-        <span className="text-6xl md:text-8xl font-bold tracking-tighter text-foreground">
+      <motion.div
+        className="max-w-5xl text-center px-10 py-14 mx-4 md:mx-auto md:px-24 flex items-center flex-col rounded-lg"
+        style={{
+          backgroundColor,
+          borderWidth: "1px",
+          borderStyle: "solid",
+          borderColor,
+        }}
+      >
+        <motion.span
+          className="text-6xl md:text-8xl font-bold tracking-tighter"
+          style={{ color: textColor }}
+        >
           CarbonOS
-        </span>
+        </motion.span>
         <p className="text-muted-foreground mt-6">
           The new standard for custom manufacturing systems
         </p>
@@ -25,7 +57,7 @@ export function CTA({ isLearnPage = false }: { isLearnPage?: boolean }) {
             </Button>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

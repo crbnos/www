@@ -108,7 +108,7 @@ const slides: Slide[] = [
     end: 0.41,
   },
   {
-    img: "https://placehold.co/1280x800",
+    img: "/screenshots/features-schedule.webp",
     description: (
       <>
         Manage purchasing, production, scheduling, inventory, receiving, and
@@ -120,7 +120,7 @@ const slides: Slide[] = [
     end: 0.6,
   },
   {
-    img: "https://placehold.co/1280x800",
+    img: "/screenshots/features-mes.webp",
     description: (
       <>
         Connect your machines to your core system of record, and use our MES app
@@ -131,7 +131,7 @@ const slides: Slide[] = [
     end: 0.76,
   },
   {
-    img: "https://placehold.co/1280x800",
+    img: "/screenshots/features-api.webp",
     description: (
       <>
         Build custom applications that drive your business on top of our source
@@ -338,12 +338,12 @@ function Team() {
   return (
     <div className="mx-auto w-screen max-w-6xl px-6 py-[30dvh] flex flex-col gap-8">
       <div className="mx-auto text-center">
-        <h4 className="text-xl font-bold tracking-tight text-muted-foreground/80">
+        {/* <h4 className="text-xl font-bold tracking-tight text-muted-foreground/80">
           Team
         </h4>
         <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
           We know manufacturing
-        </h2>
+        </h2> */}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="flex flex-col items-start gap-2">

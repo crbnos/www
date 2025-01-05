@@ -9,7 +9,8 @@ import {
   useRouteError,
 } from "@remix-run/react";
 import { Analytics } from "@vercel/analytics/react";
-import type { MetaFunction } from "@vercel/remix";
+import type { LoaderFunctionArgs, MetaFunction } from "@vercel/remix";
+import { json } from "@vercel/remix";
 import { ReactNode, useState } from "react";
 
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -31,7 +32,26 @@ export function links() {
   return [{ rel: "stylesheet", href: Tailwind }];
 }
 
-export const meta: MetaFunction = () => {
+export async function loader({ request, params }: LoaderFunctionArgs) {
+  let requestUrl = new URL(request.url);
+  let siteUrl = requestUrl.protocol + "//" + requestUrl.host;
+
+  return json({ siteUrl });
+}
+
+export const meta: MetaFunction = ({ data }) => {
+  const { siteUrl } = data as { siteUrl: string };
+
+  if (!siteUrl) {
+    return [
+      { title: "404 Not Found | CarbonOS" },
+      {
+        name: "description",
+        content: "404 Not Found | CarbonOS",
+      },
+    ];
+  }
+
   return [
     {
       title: "CarbonOS | The operating system for manufacturing",
@@ -64,7 +84,7 @@ export const meta: MetaFunction = () => {
     },
     {
       property: "og:image",
-      content: "https://app.carbonos.dev/carbon-logo-dark.png",
+      content: `${siteUrl}/screenshots/features-configurator.webp`,
     },
     {
       name: "twitter:card",
@@ -85,7 +105,7 @@ export const meta: MetaFunction = () => {
     },
     {
       name: "twitter:image",
-      content: "https://app.carbonos.dev/carbon-logo-dark.png",
+      content: `${siteUrl}/screenshots/features-configurator.webp`,
     },
   ];
 };
