@@ -50,7 +50,7 @@ Unlike  legacy systems, we give you __full access to the source code,__ so you h
 
 type Slide = {
   img: string;
-  description: string;
+  description: React.ReactNode;
   link?: string;
   start: number;
   end: number;
@@ -82,40 +82,62 @@ function BenefitDescription({
 
 const slides: Slide[] = [
   {
-    img: "https://placehold.co/1280x800",
-    description:
-      "It starts with a delightful customer experience. We help you create a custom solution to feed requests to the system or use the API for instant quoting.",
+    img: "/screenshots/features-customer-experience.webp",
+    description: (
+      <>
+        <strong>Craft a delightful customer experience.</strong> CarbonOS makes
+        it easy to build customer-facing apps that securely interface with your
+        business and production data.
+      </>
+    ),
     link: "/learn/delightful-experience",
     start: 0.1,
     end: 0.22,
   },
   {
-    img: "https://placehold.co/1280x800",
-    description:
-      "Next, whatever you're making needs converted to a bill of materials and a routing. If you're not mass producing, our configurator will help you generate the perfect BoM and routing automatically.",
+    img: "/screenshots/features-configurator.webp",
+    description: (
+      <>
+        Automatically configure the bill of materials and router based on your
+        customers’ requests to drive instant quoting and efficient production
+        planning
+      </>
+    ),
     link: "/learn/configuration-is-all-you-need",
     start: 0.25,
     end: 0.41,
   },
   {
     img: "https://placehold.co/1280x800",
-    description:
-      "With an accurate account of what needs made, everything falls into place. Purchasing, production, scheduling, inventory, receiving, and resource management all benefit from an integrated system of record.",
+    description: (
+      <>
+        Manage purchasing, production, scheduling, inventory, receiving, and
+        factory resources within a{" "}
+        <strong>single, integrated system of record.</strong>
+      </>
+    ),
     start: 0.433,
     end: 0.6,
   },
   {
     img: "https://placehold.co/1280x800",
-    description:
-      "CarbonOS is built entirely with our self-documenting API. With access to the source code, our SDK, and our realtime API, you'll be able to build custom applications that drive your business.",
-
+    description: (
+      <>
+        Connect your machines to your core system of record, and use our MES app
+        to drive real-time production insights.
+      </>
+    ),
     start: 0.617,
     end: 0.76,
   },
   {
     img: "https://placehold.co/1280x800",
-    description:
-      "In addition to our core application, we provide an MES app and a starter kit for building your own applications. This will save you years of development time, and allow you to avoid the pitfalls of off-the-shelf systems.",
+    description: (
+      <>
+        Build custom applications that drive your business on top of our source
+        code, our SDK, and our self-documenting API.
+      </>
+    ),
     start: 0.78,
     end: 0.98,
   },
@@ -146,8 +168,12 @@ function BenefitImages({ isMobile }: { isMobile: boolean }) {
             <div className="relative w-full" style={{ opacity }}>
               <img
                 src={slide.img}
-                alt={slide.description}
-                className="w-full h-auto rounded-lg invert"
+                alt={
+                  typeof slide.description === "string"
+                    ? slide.description
+                    : "Slide image"
+                }
+                className="w-full h-auto rounded-lg"
               />
               <div
                 className="absolute inset-0 rounded-r-lg"
