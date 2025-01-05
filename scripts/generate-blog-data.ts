@@ -14,6 +14,18 @@ main().catch((error) => {
   process.exit(1);
 });
 
+function generateStaticDataFile(posts: any[]) {
+  const fileContent = `import type { BlogPost } from "./types";
+
+export const blogPosts: BlogPost[] = ${JSON.stringify(posts, null, 2)};
+`;
+
+  fs.writeFileSync(
+    path.join(process.cwd(), "app", "lib", "static-blog-data.ts"),
+    fileContent
+  );
+}
+
 function removeLocalBlogServer() {
   const newFile = `export async function getBlogPosts() {
   return [];

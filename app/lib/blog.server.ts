@@ -12,7 +12,8 @@ export async function getBlogPosts() {
   if (process.env.VERCEL_ENV === "production") {
     if (!staticPosts) {
       // @ts-ignore
-      const { blogData } = await import("./static-blog-data.json");
+      const { blogData } = await import("./static-blog-data.ts");
+      // @ts-ignore
       staticPosts = blogData;
     }
     return staticPosts;
