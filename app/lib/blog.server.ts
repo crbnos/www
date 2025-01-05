@@ -25,9 +25,19 @@ export async function getBlogPosts() {
 }
 
 export async function getBlogPost(slug: string) {
-  const cached = postsCache.get(slug);
-  if (cached) return cached;
+  if (process.env.VERCEL_ENV === "production") {
+    const cachedPost = postsCache.get(slug);
+    if (cachedPost) {
+      return cachedPost;
+    }
+  }
 
-  await getBlogPosts();
-  return postsCache.get(slug);
+  const posts = await getBlogPosts();
+  const post = posts?.find((post: BlogPost) => post.slug === slug);
+
+  if (post) {
+    postsCache.set(slug, post);
+  }
+
+  return post;
 }

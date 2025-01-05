@@ -77,8 +77,3 @@ export async function getBlogPosts() {
     path.join(process.cwd(), "app", "routes", "learn+", "posts")
   );
 }
-
-export async function getBlogPost(slug: string) {
-  const posts = await getBlogPosts();
-  return posts?.find((post) => post.slug === slug);
-}

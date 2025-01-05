@@ -4,6 +4,8 @@ import { Button } from "~/components/ui/button";
 import { steps, useWizard } from "~/components/wizard-form";
 import { cn } from "~/lib/utils";
 
+export const config = { runtime: "nodejs" };
+
 const plans = [
   {
     name: "Starter",

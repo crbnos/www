@@ -12,8 +12,3 @@ export async function getBlogPosts() {
   const fileContent = fs.readFileSync(filePath, "utf-8");
   return JSON.parse(fileContent) as BlogPost[];
 }
-
-export async function getBlogPost(slug: string) {
-  const posts = await getBlogPosts();
-  return posts?.find((post: BlogPost) => post.slug === slug);
-}
