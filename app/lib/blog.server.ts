@@ -9,13 +9,11 @@ const postsCache = new LRUCache<string, BlogPost>({
 let staticPosts: BlogPost[] | undefined;
 
 export async function getBlogPosts() {
-  console.log("getBlogPosts", process.env.NODE_ENV);
-  if (process.env.NODE_ENV !== "development") {
+  if (process.env.VERCEL_ENV === "production") {
     if (!staticPosts) {
-      // @ts-ignore
-      const { blogData } = await import("./static-blog-data.ts");
-      // @ts-ignore
-      staticPosts = blogData;
+      // Looking at static-blog-data.ts, the export is named blogPosts not blogData
+      const { blogPosts } = await import("./static-blog-data");
+      staticPosts = blogPosts;
     }
     console.log("getBlogPosts", staticPosts);
     return staticPosts;
