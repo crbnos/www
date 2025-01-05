@@ -58,7 +58,7 @@ export function Hero() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.7 }}
-        transition={{ delay: 1.0, duration: 2.0 }}
+        transition={{ delay: 1.2, duration: 2.0 }}
         style={{
           rotateX,
           rotateZ,
@@ -101,7 +101,10 @@ export function Hero() {
 
 export function Header({ className }: { className?: string }) {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.6, duration: 0.5 }}
       className={cn(
         "flex flex-col items-center justify-start gap-4 pt-[22dvh] px-8 z-logo",
         className
@@ -121,7 +124,7 @@ export function Header({ className }: { className?: string }) {
       <p className="text-balance mx-auto  max-w-4xl text-center text-zinc-500 font-medium text-lg">
         CarbonOS is the new standard for custom manufacturing systems
       </p>
-    </div>
+    </motion.div>
   );
 }
 

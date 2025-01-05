@@ -138,6 +138,9 @@ function Document({
       </head>
       <body className="h-[100dvh] w-[100dvw] flex flex-col bg-background text-foreground antialiased selection:bg-[#00cc9937] selection:text-[#007763fd] dark:selection:bg-[#00fff61d] dark:selection:text-[#67ffded2]">
         <motion.header
+          initial={{ y: -100 }}
+          animate={{ y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="flex select-none items-center pl-5 pr-2 h-[var(--header-height)] fixed top-0 left-0 right-0 z-header"
           style={{
             backgroundColor,
@@ -204,7 +207,7 @@ function LightRays() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 0.7 }}
-      transition={{ delay: 1.0, duration: 2.0 }}
+      transition={{ delay: 0.6, duration: 2.0 }}
       className="ray"
       data-theme="dark"
     >
