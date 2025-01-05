@@ -18,8 +18,8 @@ export async function getBlogPosts() {
     return staticPosts;
   } else {
     // We use require here instead of import to ensure this isn't bundled in production
-    const localServer = require("./blog.local.server");
-    return localServer.getBlogPosts();
+    const { getBlogPosts } = await import("./blog.local.server");
+    return getBlogPosts();
   }
 }
 
