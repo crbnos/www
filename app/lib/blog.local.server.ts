@@ -55,20 +55,18 @@ async function getMDXData(dir: string) {
 }
 
 export async function generateStaticBlogData() {
-  if (process.env.NODE_ENV === "production") {
-    const posts = await getMDXData(
-      path.join(process.cwd(), "app", "routes", "learn+", "posts")
-    );
+  const posts = await getMDXData(
+    path.join(process.cwd(), "app", "routes", "learn+", "posts")
+  );
 
-    // Write the static data to a JSON file
-    const outputPath = path.join(
-      process.cwd(),
-      "app",
-      "lib",
-      "static-blog-data.json"
-    );
-    fs.writeFileSync(outputPath, JSON.stringify(posts, null, 2));
-  }
+  // Write the static data to a JSON file
+  const outputPath = path.join(
+    process.cwd(),
+    "app",
+    "lib",
+    "static-blog-data.json"
+  );
+  fs.writeFileSync(outputPath, JSON.stringify(posts, null, 2));
 }
 
 export async function getBlogPosts() {

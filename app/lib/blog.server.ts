@@ -11,16 +11,15 @@ let staticPosts: BlogPost[] | undefined;
 export async function getBlogPosts() {
   if (process.env.VERCEL_ENV === "production") {
     if (!staticPosts) {
-      // In production, use static import
-      // @ts-ignore -- this is generated at build time
-      const { blogData } = await import("./blog.edge.server");
       // @ts-ignore
+      const { blogData } = await import("./static-blog-data.json");
       staticPosts = blogData;
     }
     return staticPosts;
   } else {
-    const { getBlogPosts } = await import("./blog.local.server");
-    return getBlogPosts();
+    // We use require here instead of import to ensure this isn't bundled in production
+    const localServer = require("./blog.local.server");
+    return localServer.getBlogPosts();
   }
 }
 
