@@ -464,7 +464,7 @@ function StepContent({ stepData, currentAnswer, onSelect }: StepContentProps) {
               </p>
             </div>
             {currentAnswer === option.value && (
-              <div className="text-primary">
+              <div className="text-emerald-500">
                 <Check className="w-5 h-5" />
               </div>
             )}

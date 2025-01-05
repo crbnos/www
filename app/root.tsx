@@ -123,7 +123,7 @@ function Document({
   const { scrollY } = useScroll();
   const backgroundColor = useTransform(
     scrollY,
-    [0, 50],
+    [300, 600],
     ["rgba(0,0,0,0)", "rgba(0,0,0,1)"]
   );
 
