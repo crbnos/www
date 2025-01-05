@@ -12,3 +12,4 @@ api/_assets*
 .env
 
 # Generated files
+app/lib/static-blog-data.ts

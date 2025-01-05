@@ -59,14 +59,19 @@ export async function generateStaticBlogData() {
     path.join(process.cwd(), "app", "routes", "learn+", "posts")
   );
 
+  const fileContent = `import type { BlogPost } from "./types";
+
+  export const blogPosts: BlogPost[] = ${JSON.stringify(posts, null, 2)};
+  `;
+
   // Write the static data to a JSON file
   const outputPath = path.join(
     process.cwd(),
     "app",
     "lib",
-    "static-blog-data.json"
+    "static-blog-data.ts"
   );
-  fs.writeFileSync(outputPath, JSON.stringify(posts, null, 2));
+  fs.writeFileSync(outputPath, fileContent);
 }
 
 export async function getBlogPosts() {
