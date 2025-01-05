@@ -9,13 +9,15 @@ const postsCache = new LRUCache<string, BlogPost>({
 let staticPosts: BlogPost[] | undefined;
 
 export async function getBlogPosts() {
-  if (process.env.VERCEL_ENV === "production") {
+  console.log("getBlogPosts", process.env.NODE_ENV);
+  if (process.env.NODE_ENV !== "development") {
     if (!staticPosts) {
       // @ts-ignore
       const { blogData } = await import("./static-blog-data.ts");
       // @ts-ignore
       staticPosts = blogData;
     }
+    console.log("getBlogPosts", staticPosts);
     return staticPosts;
   } else {
     // We use require here instead of import to ensure this isn't bundled in production
