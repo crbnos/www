@@ -5,7 +5,7 @@ import { Article } from "~/components/article";
 import { getBlogPost } from "~/lib/blog.server";
 
 export const config = {
-  runtime: "nodejs",
+  runtime: "edge",
 };
 
 export async function loader({ request, params }: LoaderFunctionArgs) {

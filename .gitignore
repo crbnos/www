@@ -10,3 +10,5 @@ api/index.js*
 api/_assets*
 
 .env
+
+# Generated files

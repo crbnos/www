@@ -16,6 +16,7 @@ export default defineConfig({
 
         defaultHandler(warning);
       },
+      external: ["./app/lib/blog.local.server"],
     },
   },
   define: {
