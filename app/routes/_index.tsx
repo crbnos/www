@@ -85,9 +85,11 @@ const slides: Slide[] = [
     img: "/screenshots/features-customer-experience.webp",
     description: (
       <>
-        <strong>Craft a delightful customer experience.</strong> CarbonOS makes
-        it easy to build customer-facing apps that securely interface with your
-        business and production data.
+        <strong className="font-semibold text-foreground">
+          Craft a delightful customer experience.
+        </strong>{" "}
+        CarbonOS makes it easy to build customer-facing apps that securely
+        interface with your business and production data.
       </>
     ),
     link: "/learn/delightful-experience",
@@ -113,7 +115,9 @@ const slides: Slide[] = [
       <>
         Manage purchasing, production, scheduling, inventory, receiving, and
         factory resources within a{" "}
-        <strong>single, integrated system of record.</strong>
+        <strong className="font-semibold text-foreground">
+          single, integrated system of record.
+        </strong>
       </>
     ),
     start: 0.433,

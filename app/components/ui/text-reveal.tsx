@@ -97,7 +97,7 @@ const Word: FC<WordProps> = ({ children, progress, range, isBold = false }) => {
   return (
     <span className="xl:lg-3 relative mx-0.5 lg:mx-1">
       <span className={"absolute opacity-30"}>
-        <span className={isBold ? "font-bold" : "font-semibold"}>
+        <span className={isBold ? "font-semibold" : "font-medium"}>
           {children}
         </span>
       </span>
@@ -105,8 +105,8 @@ const Word: FC<WordProps> = ({ children, progress, range, isBold = false }) => {
         style={{ opacity: opacity }}
         className={cn(
           isBold
-            ? "font-bold text-foreground"
-            : "font-semibold text-muted-foreground"
+            ? "font-semibold text-foreground"
+            : "font-medium text-muted-foreground"
         )}
       >
         {children}
