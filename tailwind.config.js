@@ -126,6 +126,7 @@ export default {
       },
       zIndex: {
         logo: 50,
+        header: 999,
       },
     },
   },

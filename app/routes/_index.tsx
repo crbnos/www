@@ -30,7 +30,7 @@ export default function Route() {
       {isMobile ? <Header className="mb-[40vh]" /> : <Hero />}
       <WhatIsCarbonOS />
       <Benefits isMobile={isMobile} />
-      <WhyNotOffTheShelf />
+      <BuyVsBuildIntro />
       <GanttComparison />
       <Team />
       <FAQs />
@@ -248,11 +248,12 @@ function Benefits({ isMobile }: { isMobile: boolean }) {
   );
 }
 
-function WhyNotOffTheShelf() {
+function BuyVsBuildIntro() {
   return (
     <TextRevealByWord
-      text={`Off-the-shelf systems can __get you 80% of the way there.__ But the remaining 20%– everything that makes your business unique– becomes nearly impossible.
-__If you don't control the full stack,__ you're at the mercy of a vendor's roadmap and fluctuating pricing. In essence, __you're a renter, not an owner.__`}
+      text={`We've built custom manufacturing systems, so we understand that it's critical to own the entire stack.
+__But owning the stack doesn't mean you have to write everything yourself.__
+CarbonOS let's you focus on building the things that make your business __unique.__`}
     />
   );
 }
