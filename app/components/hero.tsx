@@ -1,3 +1,4 @@
+// Start of Selection
 import {
   motion,
   MotionValue,
@@ -6,66 +7,84 @@ import {
   useTransform,
 } from "framer-motion";
 import { Play } from "lucide-react";
-import { useRef } from "react";
+import { memo, useMemo, useRef } from "react";
 import { cn } from "~/lib/utils";
 import AnimatedShinyText from "./ui/animated-shiny-text";
 
 export function Hero() {
-  const firstRow = screenshots.slice(0, 5);
-  const secondRow = screenshots.slice(5, 10);
-  const thirdRow = screenshots.slice(10, 15);
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
   });
 
-  const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
+  // Optimized spring configuration for better performance in Safari
+  const springConfig = useMemo(
+    () => ({
+      stiffness: 70, // Reduced stiffness for smoother animations
+      damping: 35, // Increased damping for better stability
+      bounce: 0, // Removed bounce to prevent overshooting
+      mass: 1.5, // Added mass to make movement more stable
+      restSpeed: 0.001, // Small rest speed threshold
+    }),
+    []
+  );
 
+  const firstRow = useMemo(() => screenshots.slice(0, 5), []);
+  const secondRow = useMemo(() => screenshots.slice(5, 10), []);
+  const thirdRow = useMemo(() => screenshots.slice(10, 15), []);
+
+  // Using useSpring with optimized springConfig
   const translateX = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, 1000]),
-    springConfig
+    { ...springConfig, restDelta: 0.01 }
   );
   const translateXReverse = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, -1000]),
-    springConfig
+    { ...springConfig, restDelta: 0.01 }
   );
-  const rotateX = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [15, 0]),
-    springConfig
-  );
-  const opacity = useSpring(
-    useTransform(scrollYProgress, [0, 0.7], [0.7, 1]),
-    springConfig
-  );
-  const rotateZ = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [20, 0]),
-    springConfig
-  );
+  const rotateX = useSpring(useTransform(scrollYProgress, [0, 0.2], [15, 0]), {
+    ...springConfig,
+    restDelta: 0.001,
+  });
+  const opacity = useSpring(useTransform(scrollYProgress, [0, 0.7], [0.7, 1]), {
+    ...springConfig,
+    restDelta: 0.001,
+  });
+  const rotateZ = useSpring(useTransform(scrollYProgress, [0, 0.2], [20, 0]), {
+    ...springConfig,
+    restDelta: 0.001,
+  });
   const translateY = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
-    springConfig
+    { ...springConfig, restDelta: 0.1 }
   );
 
   const paddingTop = useTransform(scrollYProgress, [0, 0.2], ["80vh", "0vh"]);
 
+  const motionStyles = useMemo(
+    () => ({
+      rotateX,
+      rotateZ,
+      translateY,
+      opacity,
+      paddingTop,
+      willChange: "transform", // Added for browser optimization hint
+    }),
+    [rotateX, rotateZ, translateY, opacity, paddingTop]
+  );
+
   return (
     <div
       ref={ref}
-      className="h-[300vh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[300vh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] will-change-transform"
     >
       <Header />
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.7 }}
-        transition={{ delay: 1.2, duration: 2.0 }}
-        style={{
-          rotateX,
-          rotateZ,
-          translateY,
-          opacity,
-          paddingTop,
-        }}
+        transition={{ delay: 1.2, duration: 2.0, ease: "easeInOut" }}
+        style={motionStyles}
       >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
           {firstRow.map((screenshot) => (
@@ -99,12 +118,12 @@ export function Hero() {
   );
 }
 
-export function Header({ className }: { className?: string }) {
+export const Header = memo(({ className }: { className?: string }) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 0.6, duration: 0.5 }}
+      transition={{ delay: 0.6, duration: 0.5, ease: "easeOut" }}
       className={cn(
         "flex flex-col items-center justify-start gap-4 pt-[22dvh] px-8 z-logo",
         className
@@ -126,45 +145,54 @@ export function Header({ className }: { className?: string }) {
       </p>
     </motion.div>
   );
-}
+});
 
-export function ScreenshotCard({
-  screenshot,
-  translate,
-}: {
-  screenshot: {
-    title: string;
-    thumbnail: string;
-  };
-  translate: MotionValue<number>;
-}) {
-  return (
-    <motion.div
-      style={{
-        x: translate,
-      }}
-      whileHover={{
-        y: -20,
-      }}
-      key={screenshot.title}
-      className="group/screenshot h-96 w-[30rem] relative flex-shrink-0"
-    >
-      <div className="block group-hover/screenshot:shadow-2xl ">
-        <img
-          src={screenshot.thumbnail}
-          height="400"
-          width="500"
-          className="object-cover object-left-top absolute h-full w-full inset-0"
-          alt={screenshot.title}
-        />
-      </div>
-      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/screenshot:opacity-80 bg-black pointer-events-none"></div>
-      <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/screenshot:opacity-100 text-white">
-        {screenshot.title}
-      </h2>
-    </motion.div>
-  );
-}
+Header.displayName = "Header";
+
+export const ScreenshotCard = memo(
+  ({
+    screenshot,
+    translate,
+  }: {
+    screenshot: {
+      title: string;
+      thumbnail: string;
+    };
+    translate: MotionValue<number>;
+  }) => {
+    return (
+      <motion.div
+        style={{
+          x: translate,
+          willChange: "transform",
+        }}
+        whileHover={{
+          y: -20,
+          transition: { duration: 0.3, ease: "easeOut" },
+        }}
+        key={screenshot.title}
+        className="group/screenshot h-96 w-[30rem] relative flex-shrink-0"
+      >
+        <div className="block group-hover/screenshot:shadow-2xl">
+          <img
+            src={screenshot.thumbnail}
+            height="400"
+            width="500"
+            className="object-cover object-left-top absolute h-full w-full inset-0"
+            alt={screenshot.title}
+            loading="lazy"
+          />
+        </div>
+        <div className="absolute inset-0 h-full w-full opacity-0 group-hover/screenshot:opacity-80 bg-black pointer-events-none"></div>
+        <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/screenshot:opacity-100 text-white">
+          {screenshot.title}
+        </h2>
+      </motion.div>
+    );
+  }
+);
+
+ScreenshotCard.displayName = "ScreenshotCard";
 
 export const screenshots = [
   {

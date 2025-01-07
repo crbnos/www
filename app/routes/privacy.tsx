@@ -7,7 +7,7 @@ export default function Privacy() {
             Privacy Policy
           </h1>
           <h2 className="font-medium text-xl text-muted-foreground max-w-5xl text-balance leading-relaxed tracking-tight">
-            Effective January 13, 2025
+            Effective January 1, 2025
           </h2>
         </div>
       </div>
