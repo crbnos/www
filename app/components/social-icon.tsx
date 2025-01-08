@@ -12,6 +12,7 @@ export function SocialIcon({
       rel="noopener noreferrer"
       className="text-muted-foreground hover:text-foreground"
     >
+      <span className="sr-only">{type}</span>
       <svg className="size-5" viewBox="0 0 24 24" fill="currentColor">
         {(() => {
           switch (type) {

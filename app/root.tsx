@@ -136,7 +136,10 @@ function Document({
         <title>{title}</title>
         <Links />
       </head>
-      <body className="h-[100dvh] w-[100dvw] flex flex-col bg-background text-foreground antialiased selection:bg-[#00cc9937] selection:text-[#007763fd] dark:selection:bg-[#00fff61d] dark:selection:text-[#67ffded2]">
+      <body
+        suppressHydrationWarning
+        className="h-[100dvh] w-[100dvw] flex flex-col bg-background text-foreground antialiased selection:bg-[#00cc9937] selection:text-[#007763fd] dark:selection:bg-[#00fff61d] dark:selection:text-[#67ffded2]"
+      >
         <motion.header
           initial={{ y: -100 }}
           animate={{ y: 0 }}
