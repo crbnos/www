@@ -84,7 +84,7 @@ export const meta: MetaFunction = ({ data }) => {
     },
     {
       property: "og:image",
-      content: `${siteUrl}/screenshots/features-configurator.webp`,
+      content: `${siteUrl}/screenshots/features-schedule.webp`,
     },
     {
       name: "twitter:card",
@@ -105,7 +105,7 @@ export const meta: MetaFunction = ({ data }) => {
     },
     {
       name: "twitter:image",
-      content: `${siteUrl}/screenshots/features-configurator.webp`,
+      content: `${siteUrl}/screenshots/features-schedule.webp`,
     },
   ];
 };
