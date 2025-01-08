@@ -100,9 +100,11 @@ const slides: Slide[] = [
     img: "/screenshots/features-configurator.webp",
     description: (
       <>
-        Automatically configure the bill of materials and router based on your
-        customers’ requests to drive instant quoting and efficient production
-        planning
+        <strong className="font-semibold text-foreground">
+          Automatically configure
+        </strong>{" "}
+        the bill of materials and router based on your customers’ requests to
+        drive instant quoting and efficient production planning
       </>
     ),
     link: "/learn/configuration-is-all-you-need",
@@ -127,8 +129,11 @@ const slides: Slide[] = [
     img: "/screenshots/features-mes.webp",
     description: (
       <>
-        Connect your machines to your core system of record, and use our MES app
-        to drive real-time production insights.
+        <strong className="font-semibold text-foreground">
+          Connect your machines
+        </strong>{" "}
+        to your core system of record, and use our MES app to drive real-time
+        production insights.
       </>
     ),
     start: 0.617,
@@ -138,8 +143,11 @@ const slides: Slide[] = [
     img: "/screenshots/features-api.webp",
     description: (
       <>
-        Build custom applications that drive your business on top of our source
-        code, our SDK, and our self-documenting API.
+        <strong className="font-semibold text-foreground">
+          Build custom applications
+        </strong>{" "}
+        that drive your business on top of our source code, our SDK, and our
+        self-documenting API.
       </>
     ),
     start: 0.78,
@@ -371,9 +379,11 @@ function Team() {
           <p className="text-sm lg:text-base text-muted-foreground">
             Rob was a principal engineer and product manager at Paperless Parts,
             where he led ERP integrations and architected custom software
-            systems for leading digital manufacturers. Prior to that, he worked
-            in the high-performance computing group at MIT Lincoln Laboratory,
-            and as an engineer at several early stage startups.
+            systems for leading digital manufacturers. Prior to that, he
+            researched high-performance computing systems at MIT Lincoln
+            Laboratory, built data infrastructure for a financial consulting
+            firm, and wrote zero-to-one code at an early stage consumer device
+            startup.
           </p>
         </div>
 
@@ -491,16 +501,7 @@ function FAQs() {
                 How can I get started with CarbonOS?
               </AccordionTrigger>
               <AccordionContent>
-                You can try CarbonOS for free.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-5">
-              <AccordionTrigger>How much does CarbonOS cost?</AccordionTrigger>
-              <AccordionContent>
-                The least expensive in the short-term is to have us host it for
-                you in the cloud. And the least expensive in the long-term is to
-                buy the source code and host it yourself.
+                You can try CarbonOS for free&mdash;reach out to learn more.
               </AccordionContent>
             </AccordionItem>
 
@@ -508,7 +509,7 @@ function FAQs() {
               <AccordionTrigger>What is the tech stack?</AccordionTrigger>
               <AccordionContent>
                 <div className="space-y-4">
-                  <p className="text-lg font-medium">
+                  <p className="text-muted-foreground">
                     CarbonOS is a TypeScript monorepo built with the some of the
                     best open-source tools:
                   </p>
