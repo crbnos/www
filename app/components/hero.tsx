@@ -37,27 +37,24 @@ export function Hero() {
   // Using useSpring with optimized springConfig
   const translateX = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, 1000]),
-    { ...springConfig, restDelta: 0.01 }
+    { ...springConfig }
   );
   const translateXReverse = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, -1000]),
-    { ...springConfig, restDelta: 0.01 }
+    { ...springConfig }
   );
   const rotateX = useSpring(useTransform(scrollYProgress, [0, 0.2], [15, 0]), {
     ...springConfig,
-    restDelta: 0.001,
   });
   const opacity = useSpring(useTransform(scrollYProgress, [0, 0.7], [0.7, 1]), {
     ...springConfig,
-    restDelta: 0.001,
   });
   const rotateZ = useSpring(useTransform(scrollYProgress, [0, 0.2], [20, 0]), {
     ...springConfig,
-    restDelta: 0.001,
   });
   const translateY = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
-    { ...springConfig, restDelta: 0.1 }
+    { ...springConfig }
   );
 
   const paddingTop = useTransform(scrollYProgress, [0, 0.2], ["80vh", "0vh"]);
@@ -248,8 +245,8 @@ export const screenshots = [
     thumbnail: "/screenshots/quote-pricing.webp",
   },
   {
-    title: "Customer Portal",
-    thumbnail: "/screenshots/customer-portal.webp",
+    title: "Analytics",
+    thumbnail: "/screenshots/analytics.webp",
   },
   {
     title: "MES Details",
