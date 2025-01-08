@@ -140,7 +140,7 @@ function Document({
         <motion.header
           initial={{ y: -100 }}
           animate={{ y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ delay: 2.0, duration: 0.6, ease: "easeOut" }}
           className="flex select-none items-center pl-5 pr-2 h-[var(--header-height)] fixed top-0 left-0 right-0 z-header"
           style={{
             backgroundColor,

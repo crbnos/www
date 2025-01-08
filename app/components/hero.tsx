@@ -83,7 +83,7 @@ export function Hero() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.7 }}
-        transition={{ delay: 1.2, duration: 2.0, ease: "easeInOut" }}
+        transition={{ delay: 0.8, duration: 2.0, ease: "easeInOut" }}
         style={motionStyles}
       >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
@@ -123,7 +123,7 @@ export const Header = memo(({ className }: { className?: string }) => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 0.6, duration: 0.5, ease: "easeOut" }}
+      transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
       className={cn(
         "flex flex-col items-center justify-start gap-4 pt-[22dvh] px-8 z-logo",
         className
