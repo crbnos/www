@@ -64,7 +64,6 @@ export function Hero() {
       translateY,
       opacity,
       paddingTop,
-      willChange: "transform", // Added for browser optimization hint
     }),
     [rotateX, rotateZ, translateY, opacity, paddingTop]
   );
