@@ -411,9 +411,8 @@ function Team() {
             nuclear reactors, and bio-pharmaceuticals. His 7 years of experience
             on shop floors drove him to build the missing piece of the
             manufacturing stack. Before manufacturing, he founded an NLP
-            startup, built a successful social media app. Before CarbonOS, he
-            was a principal engineer at Teamworks&ndash;the operating system for
-            sports.
+            startup, built a successful social media app. He worked as a
+            principal engineer at Teamworks while building CarbonOS at night.
           </p>
         </div>
 
