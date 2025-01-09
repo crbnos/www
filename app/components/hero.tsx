@@ -11,48 +11,41 @@ import { cn } from "~/lib/utils";
 
 export function Hero() {
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-
-  // Optimized spring configuration for better performance in Safari
-  const springConfig = useMemo(
-    () => ({
-      stiffness: 70, // Reduced stiffness for smoother animations
-      damping: 35, // Increased damping for better stability
-      bounce: 0, // Removed bounce to prevent overshooting
-      mass: 1.5, // Added mass to make movement more stable
-      restSpeed: 0.001, // Small rest speed threshold
-    }),
-    []
-  );
 
   const firstRow = useMemo(() => screenshots.slice(0, 5), []);
   const secondRow = useMemo(() => screenshots.slice(5, 10), []);
   const thirdRow = useMemo(() => screenshots.slice(10, 15), []);
 
-  // Using useSpring with optimized springConfig
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
+
   const translateX = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, 1000]),
-    { ...springConfig }
+    springConfig
   );
   const translateXReverse = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, -1000]),
-    { ...springConfig }
+    springConfig
   );
-  const rotateX = useSpring(useTransform(scrollYProgress, [0, 0.2], [15, 0]), {
-    ...springConfig,
-  });
-  const opacity = useSpring(useTransform(scrollYProgress, [0, 0.7], [0.7, 1]), {
-    ...springConfig,
-  });
-  const rotateZ = useSpring(useTransform(scrollYProgress, [0, 0.2], [20, 0]), {
-    ...springConfig,
-  });
+  const rotateX = useSpring(
+    useTransform(scrollYProgress, [0, 0.2], [15, 0]),
+    springConfig
+  );
+  const opacity = useSpring(
+    useTransform(scrollYProgress, [0, 0.2], [0.2, 1]),
+    springConfig
+  );
+  const rotateZ = useSpring(
+    useTransform(scrollYProgress, [0, 0.2], [20, 0]),
+    springConfig
+  );
   const translateY = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
-    { ...springConfig }
+    springConfig
   );
 
   const paddingTop = useTransform(scrollYProgress, [0, 0.2], ["80vh", "0vh"]);
