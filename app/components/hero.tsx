@@ -223,7 +223,7 @@ export const screenshots = [
   },
   {
     title: "Customer Portal",
-    thumbnail: "/screenshots/customer-portal-entry.webp",
+    thumbnail: "/screenshots/customer-portal.webp",
   },
   {
     title: "Configurator",
