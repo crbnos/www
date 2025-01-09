@@ -150,7 +150,7 @@ function Document({
           }}
         >
           <div className="flex items-center justify-between gap-2 z-logo text-foreground w-full">
-            <Link to="/" className="cursor-pointer">
+            <Link to="/" className="cursor-pointer flex-shrink-0">
               <img
                 src="/brand/carbon-logo-dark.svg"
                 alt="CarbonOS"
