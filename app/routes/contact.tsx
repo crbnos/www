@@ -52,6 +52,7 @@ export async function action({ request }: ActionFunctionArgs) {
 export default function Contact() {
   const fetcher = useFetcher<typeof action>();
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isBot, setIsBot] = useState(false);
 
   useEffect(() => {
     if (fetcher.data?.success) {
@@ -67,6 +68,20 @@ export default function Contact() {
         </div>
       </div>
       <div className="mx-auto flex flex-col px-4 w-full lg:w-form-lg max-w-4xl mb-28">
+        {/* Honeypot form - hidden from humans but visible to bots */}
+        <div className="sr-only">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              setIsBot(true);
+            }}
+          >
+            <input type="text" name="name" />
+            <input type="email" name="email" />
+            <input type="submit" />
+          </form>
+        </div>
+
         {isSubmitted ? (
           <div className="flex flex-col items-center justify-center min-h-[400px] space-y-4">
             <div className="animate-bounce">
@@ -80,7 +95,10 @@ export default function Contact() {
             </p>
           </div>
         ) : (
-          <fetcher.Form method="post" className="flex flex-col gap-5">
+          <fetcher.Form
+            method={isBot ? "get" : "post"}
+            className="flex flex-col gap-5"
+          >
             <div className="relative flex flex-col gap-2">
               <Label htmlFor="name">Name</Label>
               <div className="relative flex flex-1">
@@ -142,7 +160,10 @@ export default function Contact() {
             </div>
 
             <div>
-              <Button type="submit" disabled={fetcher.state !== "idle"}>
+              <Button
+                type="submit"
+                disabled={fetcher.state !== "idle" || isBot}
+              >
                 Submit
               </Button>
             </div>
