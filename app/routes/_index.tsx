@@ -259,8 +259,9 @@ function Benefits({ isMobile }: { isMobile: boolean }) {
 function BuyVsBuildIntro() {
   return (
     <TextRevealByWord
-      text={`Off-the-shelf systems can __get you 80% of the way there.__ But the remaining 20%– everything that makes your business unique– becomes nearly impossible.
-__If you don't control the full stack,__ you're at the mercy of a vendor's roadmap and fluctuating pricing. In essence, __you're a renter, not an owner.__`}
+      text={`Off-the-shelf systems can __get you 80% of the way there.__ But the things that makes your business unique becomes impossible.
+__If you don't control the full stack,__ you're at the mercy of the vendor. In essence, __you're a renter, not an owner.__
+Building on CarbonOS __reduces development time from years to months__ and saves hundreds of thousands in costs.`}
     />
   );
 }
@@ -288,7 +289,7 @@ function GanttComparison() {
           </div>
         </div>
         <Actor start={0} end={1}>
-          <div className="absolute bottom-0 w-full pb-4 text-center text-sm text-gray-300 md:text-base">
+          <div className="absolute bottom-0 w-full pb-4 text-center text-sm text-muted-foreground md:text-base">
             (Keep scrolling to compare)
           </div>
         </Actor>
