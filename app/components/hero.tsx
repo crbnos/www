@@ -116,7 +116,7 @@ export const Header = memo(({ className }: { className?: string }) => {
       <h2 className="text-balance mx-auto mt-4 max-w-4xl text-center text-3xl font-medium tracking-tight bg-gradient-to-b to-zinc-900 from-zinc-700 dark:to-zinc-400 dark:from-zinc-200 bg-clip-text text-transparent md:text-5xl">
         The Manufacturing Software You Own
       </h2>
-      <p className="text-balance mx-auto  max-w-4xl text-center text-zinc-500 font-medium text-lg">
+      <p className="text-balance mx-auto  max-w-4xl text-center text-muted-foreground font-medium text-lg">
         CarbonOS is the new standard for custom manufacturing systems
       </p>
     </div>
