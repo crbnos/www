@@ -122,6 +122,7 @@ const slides: Slide[] = [
         </strong>
       </>
     ),
+    link: "/learn/vertically-integrated-stack",
     start: 0.433,
     end: 0.6,
   },
@@ -136,6 +137,7 @@ const slides: Slide[] = [
         production insights.
       </>
     ),
+    link: "/learn/bridging-the-automation-gap",
     start: 0.617,
     end: 0.76,
   },
@@ -150,6 +152,7 @@ const slides: Slide[] = [
         self-documenting API.
       </>
     ),
+    link: "/learn/build-custom-applications",
     start: 0.78,
     end: 0.98,
   },

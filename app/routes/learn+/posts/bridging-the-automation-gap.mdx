@@ -1,0 +1,46 @@
+---
+meta:
+  title: "Bridging the Automation Gap Between Front Office and Factory Floor"
+  publishedAt: "2025-01-02"
+  summary: "Discover how to achieve true end-to-end automation by connecting your factory floor machines to your front office software. Learn about the key components needed: edge devices for machine communication and API-first ERP/MES systems for data integration. See how CarbonOS enables automated data collection for better business insights."
+  image: "/images/robot-arms-building-bridge.webp"
+  author: "rob"
+---
+
+Most manufacturers are familiar with physical automation: CNC machine tools, robotic pallet loaders, etc. And recent advancements in technology have made it easier than ever to [build custom software](/learn/build-custom-applications) to automate workflows in the front office.
+
+However, there’s a missing piece that most manufacturers haven’t yet figured out how to tackle: connecting their machines on the factory floor to their front office software systems to achieve true end-to-end automation.
+
+## The Value of End-to-End Automation
+
+Digital manufacturers recognize that collecting good data is a crucial part of running a successful business. The best way to collect good data is to have machines do it, automatically.
+
+A common question, especially in high-mix low-volume manufacturing, is “did I make money on that part?” Or more specifically, “was the actual cycle time close to my estimate?” If you have the data about what actually happened during the production run, these questions are easy to answer.
+
+The good news is that your machines capture a lot of data about each production run. In addition to cycle times, your machines also capture the parameters used for the run. Cycle times are great for answering questions about job profitability, while job parameters are important for questions about traceability and quality management.
+
+However, in order to answer these questions you need to close the loop by getting the data from your machines into the software system that houses the other relevant data – i.e., your [vertically integrated ERP/MES](/learn/vertically-integrated-stack). If you leave it to humans to perform this step, your data will inevitably be unreliable and it will be difficult to make decisions with high confidence. So, the goal is to automate the collection of “actuals” after each production run.
+
+## How to Connect Your Machines to Your Front Office Software
+
+In order to automatically collect useful data from your machines, you need two things:
+
+1. An edge device that “speaks” both with your physical devices and your core ERP/MES
+2. An API-first ERP/MES that is flexible enough to store the run data from each of your machines
+
+### Edge Devices
+
+Most machine tools provide some kind of protocol like MTConnect that allows users to communicate with the machine tool electronically. However, software applications typically operate on different protocols like HTTP. The primary purpose of the edge device is to serve as a translator between these two languages, allowing the device to route data from the machine tool to your software.
+
+The edge device will also determine what data is sent, and when. Machine tools can generate an incredible quantity of data, so there is often a filtering step required to distill the raw data into a more useful form before sending it to the ERP/MES.
+
+### API-First, Flexible ERP/MES
+
+In order to capture machine tool data in your ERP/MES, your system needs to have the ability to receive data via electronic messages – in other words, it must have a robust API. It also needs to be flexible enough to store the data it receives in a structured format, so the machine tool data can be used to compare against other structured data in the system like estimated cycle times.
+
+CarbonOS checks both of these boxes:
+
+- **CarbonOS is API-first**, meaning that everything that can be done in the user interface can also be done via the API. CarbonOS also supports real-time event publishing, which can be used to trigger the edge device to perform some logic when a specific event occurs in the ERP/MES.
+- **CarbonOS is flexible** enough to capture actuals from a production run either via submissions from human users, or via direct API upload from a machine tool. Regardless of how the data is collected, it can be used to monitor the progress of a job in real-time, or conduct analyses after a production run is complete.
+
+If you’re interested in learning more about how CarbonOS can help you automatically close the loop, gather better data, and make better business decisions, feel free to [reach out to us](/contact) and we’ll schedule a call.
