@@ -70,7 +70,7 @@ export function Hero() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.7 }}
-        transition={{ delay: 0.8, duration: 2.0, ease: "easeInOut" }}
+        transition={{ delay: 0.5, duration: 2.0, ease: "easeInOut" }}
         style={motionStyles}
       >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
