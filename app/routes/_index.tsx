@@ -122,6 +122,7 @@ const slides: Slide[] = [
         </strong>
       </>
     ),
+    link: "/learn/vertically-integrated-stack",
     start: 0.433,
     end: 0.6,
   },
@@ -150,6 +151,7 @@ const slides: Slide[] = [
         self-documenting API.
       </>
     ),
+    link: "/learn/build-custom-applications",
     start: 0.78,
     end: 0.98,
   },

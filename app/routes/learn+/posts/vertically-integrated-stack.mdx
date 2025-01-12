@@ -1,0 +1,92 @@
+---
+meta:
+  title: "Why Digital Manufacturers Should Have a Vertically Integrated Software Stack"
+  publishedAt: "2025-01-05"
+  summary: "."
+  image: "/images/glass-cabin.webp"
+  author: "rob"
+---
+
+Digital manufacturers set themselves apart from their competition through comprehensive automation, both in the front office and on the factory floor. Automation allows rote processes to happen with as little human intervention as possible, freeing up your team to focus on higher-level strategic tasks.
+
+In this article, we’ll explore why comprehensive automation is hard to achieve by piecing together off-the-shelf software solutions, and why digital manufacturers should instead strive to build a vertically integrated software stack.
+
+## Table of Contents
+
+- [The Challenges of Off-the-Shelf Software](#the-challenges-of-off-the-shelf-software)
+- [Why Manufacturing Software is Especially Hard](#why-manufacturing-software-is-especially-hard)
+- [The Digital Manufacturer’s Dilemma](#the-digital-manufacturers-dilemma)
+
+## The Challenges of Off-the-Shelf Software
+
+Off-the-shelf (OTS) software has several benefits when compared to custom software. Chief among them is that OTS software dramatically reduces the time it takes to see value, because you can start with a “finished” solution from day one.
+
+OTS software can be fantastic for self-contained problems, but problems start to arise when you try to stitch together multiple OTS tools to address a larger problem.
+
+### Data Loss in Integrations
+
+If you’ve ever tried to piece together a bunch of OTS solutions into a comprehensive stack, you’ve probably come to the realization that OTS tools don’t always “talk to each other” very well. The reason for this is a concept called “impedance mismatch”.
+
+Essentially, every software tool has a different way of modeling the world – its data model. Different systems were designed by different people with different assumptions. The result is that there is almost always information loss when trying to move data from one system to another, which usually requires human intervention to resolve – not what you want, if your goal is comprehensive automation.
+
+### Vendor Wrangling
+
+Every OTS tool you add to your arsenal adds another vendor into the mix, and every connection between tools adds another vendor relationship into the mix. If there’s an issue with an integration between tool A and tool B, who is responsible – vendor A or vendor B?
+
+It can take a long time to resolve these issues because vendor A is not an expert in vendor B’s software, and vice versa. And the responsibility for driving this conversation ultimately falls to you, the customer.
+
+## Why Manufacturing Software is Especially Hard
+
+All businesses sell goods and/or services to their customers. Enterprise Resource Planning (ERP) software was invented to track the data and processes required to run a business (invoices, quotes, orders, inventory, etc).
+
+Manufacturing businesses have an extra layer of complexity because of the need to track the production of the goods they sell, which can be very complicated. Manufacturing Execution Systems (MES) were invented to track the data and processes required to manufacture goods (inventory, bills of material, bills of process, production schedules, etc).
+
+The key insight is that all the data you need to run a manufacturing business is highly interrelated, and as such it’s important for it all to live in one system.
+
+### ERP and MES are Inextricably Linked
+
+Let’s consider a few examples to see why ERP and MES need to be integrated into a single system:
+
+#### Quoting
+
+If you are quoting a new job, you need access to your past quoting history (ERP), your costing data for inventory items (ERP), your production schedule for capacity planning and lead time estimates (MES), and your customer data for payment terms and other preferences (ERP).
+
+#### Scheduling
+
+If you are scheduling a job, you need to know which materials and work centers are required (MES), you need access to purchase orders and inventory to know when material will be available (ERP), employee shift schedules and holidays (ERP), work center maintenance schedules (MES), and more.
+
+Pretty much any question you would want to answer about your business requires both business and manufacturing data to answer:
+
+- **Which customers are the most profitable for me?** Determining margins accurately relies on having accurate estimates of the materials and activities required to manufacture products for that customer (MES), and accurate estimates of the costs of those materials and activities (ERP).
+- **Am I maximizing the revenue potential of my factory?** Answering this requires an accurate picture of machine capacity and throughput (MES), as well as quote and order data (ERP).
+
+Piecing together a patchwork quilt of OTS tools makes it very difficult to perform these tasks and answer these questions because every task or question requires two steps:
+
+1. Get the data from where it resides, convert it to the right format, and put it where it needs to be
+2. Perform the task or answer the question
+
+If your goal is to leverage automation to the highest degree, any software that touches any of the following data should live in a single purpose-built system:
+
+- Customers, RFQs, Quotes, Sales Orders
+- Jobs, Production Schedule
+- Part List, Bills of Material, Bills of Process
+- Inventory
+- Suppliers, Supplier Quotes, Purchase Orders, Purchase Invoices
+- Shifts, Work Centers, Equipment
+
+## The Digital Manufacturer’s Dilemma
+
+Digital manufacturers are faced with a dilemma:
+
+1. Piecing together a collection of off-the-shelf systems limits the potential for comprehensive automation due to impedance mismatches and vendor wrangling issues.
+2. Building a custom software stack from scratch can be optimal for automation, but it’s expensive, takes a long time, and if the people building the system don’t have deep domain expertise there’s substantial risk of making critical design mistakes early on that stymie the development of the system as it scales.
+
+There is a third option: [building on top of CarbonOS](/learn/build-vs-buy).
+
+CarbonOS is an API-first system of record for manufacturing that combines all of the ERP and MES functionality described above.
+
+Unlike legacy providers, CarbonOS provides full access to the source code. Building on top of CarbonOS gives you the ability to hit the ground running with a robust system from day one, and the flexibility to progressively modify that system to build the vertically integrated software stack of your dreams.
+
+The CarbonOS team has deep expertise in how business processes and data (ERP) and manufacturing processes and data (MES) should work in tandem. You can rest assured that you’re building on top of a solid foundation, both in terms of the functional design and the tech stack.
+
+If you’re interested in learning more about CarbonOS, fill out our [contact form](/contact) and we’ll reach out to schedule a call.
