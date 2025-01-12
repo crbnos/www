@@ -137,6 +137,7 @@ const slides: Slide[] = [
         production insights.
       </>
     ),
+    link: "/learn/bridging-the-automation-gap",
     start: 0.617,
     end: 0.76,
   },
