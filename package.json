@@ -19,6 +19,8 @@
     "@tailwindcss/typography": "^0.5.10",
     "@vercel/analytics": "^1.2.2",
     "@vercel/remix": "2.15.1",
+    "@upstash/ratelimit": "^2.0.5",
+    "@upstash/redis": "^1.34.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "escape-goat": "^4.0.0",
