@@ -64,7 +64,7 @@ export function Hero() {
   return (
     <div
       ref={ref}
-      className="h-[300vh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] will-change-transform"
+      className="h-[220vh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] will-change-transform"
     >
       <Header />
       <motion.div
