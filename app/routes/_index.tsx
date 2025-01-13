@@ -262,7 +262,7 @@ function Benefits({ isMobile }: { isMobile: boolean }) {
 function BuyVsBuildIntro() {
   return (
     <TextRevealByWord
-      text={`Off-the-shelf systems can __get you 80% of the way there.__ But the things that makes your business unique becomes impossible.
+      text={`Off-the-shelf systems can __get you 80% of the way there.__ But the things that makes your business unique become impossible.
 __If you don't control the full stack,__ you're at the mercy of the vendor. In essence, __you're a renter, not an owner.__
 Building on CarbonOS __reduces development time from years to months__ and saves hundreds of thousands in costs.`}
     />
