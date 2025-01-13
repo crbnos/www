@@ -1,4 +1,5 @@
 import { useFetcher } from "@remix-run/react";
+import { Ratelimit } from "@upstash/ratelimit";
 import { ActionFunctionArgs, json } from "@vercel/remix";
 import { Check } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -7,10 +8,26 @@ import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
 import { Textarea } from "~/components/ui/textarea";
 import { getSlackClient } from "~/lib/slack.server";
-
+import { redis } from "~/lib/upstash.server";
 export const config = { runtime: "nodejs" };
 
+const ratelimit = new Ratelimit({
+  redis,
+  limiter: Ratelimit.slidingWindow(2, "1 h"), // 2 submissions per hour
+  analytics: true,
+});
+
 export async function action({ request }: ActionFunctionArgs) {
+  const ip = request.headers.get("x-forwarded-for") ?? "127.0.0.1";
+  const { success, remaining } = await ratelimit.limit(ip);
+
+  if (!success) {
+    return json(
+      { success: false, message: "Too many submissions" },
+      { status: 429 }
+    );
+  }
+
   const formData = await request.formData();
   const name = String(formData.get("name"));
   const email = String(formData.get("email"));
