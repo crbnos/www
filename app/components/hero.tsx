@@ -48,7 +48,7 @@ export function Hero() {
     springConfig
   );
 
-  const paddingTop = useTransform(scrollYProgress, [0, 0.2], ["80vh", "0vh"]);
+  const paddingTop = useTransform(scrollYProgress, [0, 0.2], ["80dvh", "0dvh"]);
 
   const motionStyles = useMemo(
     () => ({
@@ -64,7 +64,7 @@ export function Hero() {
   return (
     <div
       ref={ref}
-      className="h-[220vh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] will-change-transform"
+      className="min-h-[2000px] h-[220dvh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] will-change-transform"
     >
       <Header />
       <motion.div

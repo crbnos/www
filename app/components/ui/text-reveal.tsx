@@ -44,7 +44,7 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
   const totalWords = processedParagraphs.flat().length;
 
   return (
-    <div ref={targetRef} className={cn("relative z-0 h-[200vh]", className)}>
+    <div ref={targetRef} className={cn("relative z-0 h-[200dvh]", className)}>
       <div
         className={
           "sticky top-0 mx-auto flex h-[50%] max-w-4xl flex-col items-center bg-transparent py-[20dvh] w-form-sm md:w-form-md lg:w-form-lg px-4 "
