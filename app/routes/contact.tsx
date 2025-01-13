@@ -13,7 +13,7 @@ export const config = { runtime: "nodejs" };
 
 const ratelimit = new Ratelimit({
   redis,
-  limiter: Ratelimit.slidingWindow(2, "1 h"), // 2 submissions per hour
+  limiter: Ratelimit.slidingWindow(2, "24 h"), // 2 submissions per day
   analytics: true,
 });
 
