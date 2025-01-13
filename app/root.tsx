@@ -8,7 +8,7 @@ import {
   ScrollRestoration,
   useRouteError,
 } from "@remix-run/react";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/remix";
 import type { LoaderFunctionArgs, MetaFunction } from "@vercel/remix";
 import { json } from "@vercel/remix";
 import { ReactNode, useState } from "react";
