@@ -2,6 +2,7 @@
 
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import { FC, ReactNode, useRef } from "react";
+import { useIsMobile } from "~/hooks/useIsMobile";
 
 import { cn } from "~/lib/utils";
 
@@ -14,6 +15,7 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
   text,
   className,
 }) => {
+  const isMobile = useIsMobile();
   const targetRef = useRef<HTMLDivElement | null>(null);
 
   const { scrollYProgress } = useScroll({
@@ -42,6 +44,35 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
   });
 
   const totalWords = processedParagraphs.flat().length;
+
+  if (isMobile) {
+    return (
+      <div className={cn("relative z-0 py-32", className)}>
+        <div className="mx-auto max-w-4xl w-form-sm px-4">
+          {processedParagraphs.map((paragraph, pIndex) => (
+            <p
+              key={pIndex}
+              className="flex flex-wrap p-5 text-xl tracking-tight"
+            >
+              {paragraph.map(({ word, isBold }, i) => (
+                <span key={i} className="relative mx-0.5">
+                  <span
+                    className={cn(
+                      isBold
+                        ? "font-semibold text-foreground"
+                        : "font-medium text-muted-foreground"
+                    )}
+                  >
+                    {word}
+                  </span>
+                </span>
+              ))}
+            </p>
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div ref={targetRef} className={cn("relative z-0 h-[200dvh]", className)}>
