@@ -107,7 +107,10 @@ export function Hero() {
 
 export const Header = memo(({ className }: { className?: string }) => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.2, duration: 1.0, ease: "easeInOut" }}
       className={cn(
         "flex flex-col items-center justify-start gap-4 pt-[22dvh] px-8 z-logo",
         className
@@ -119,7 +122,7 @@ export const Header = memo(({ className }: { className?: string }) => {
       <p className="text-balance mx-auto  max-w-4xl text-center text-muted-foreground font-medium text-lg">
         CarbonOS is the new standard for custom manufacturing systems
       </p>
-    </div>
+    </motion.div>
   );
 });
 
