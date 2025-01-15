@@ -38,10 +38,7 @@ export function Hero() {
     useTransform(scrollYProgress, [0, 0.2], [15, 0]),
     springConfig
   );
-  const opacity = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [0.2, 1]),
-    springConfig
-  );
+
   const rotateZ = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [20, 0]),
     springConfig
@@ -58,10 +55,9 @@ export function Hero() {
       rotateX,
       rotateZ,
       translateY,
-      opacity,
       paddingTop,
     }),
-    [rotateX, rotateZ, translateY, opacity, paddingTop]
+    [scrollYProgress]
   );
 
   return (
@@ -121,7 +117,7 @@ export const Header = memo(({ className }: { className?: string }) => {
         className
       )}
     >
-      <h2 className="text-balance mx-auto mt-4 max-w-4xl text-center text-4xl font-semibold tracking-tighter bg-gradient-to-br to-zinc-900 from-zinc-700 dark:to-zinc-400 dark:from-zinc-200 bg-clip-text text-transparent sm:text-5xl md:text-6xl lg:text-7xl xl:text-[4.5rem]">
+      <h2 className="text-balance mx-auto mt-4 max-w-4xl text-center text-4xl font-semibold tracking-tighter bg-[radial-gradient(at_top_left,_var(--tw-gradient-stops))] from-zinc-700 to-zinc-900 dark:from-zinc-200 dark:to-zinc-400 bg-clip-text text-transparent sm:text-5xl md:text-6xl lg:text-7xl xl:text-[4.5rem]">
         The Manufacturing Software You Own
       </h2>
       <p className="text-balance mx-auto max-w-4xl text-center text-muted-foreground font-medium text-lg">
