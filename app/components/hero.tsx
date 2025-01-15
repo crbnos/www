@@ -6,8 +6,11 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
+import { Play } from "lucide-react";
 import { memo, useMemo, useRef } from "react";
 import { cn } from "~/lib/utils";
+import { Button } from "./ui/button";
+import { useWizard } from "./wizard-form";
 
 export function Hero() {
   const ref = useRef(null);
@@ -64,7 +67,7 @@ export function Hero() {
   return (
     <div
       ref={ref}
-      className="min-h-[2000px] h-[220dvh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] will-change-transform"
+      className="min-h-[2300px] h-[250dvh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] will-change-transform"
     >
       <Header />
       <motion.div
@@ -106,22 +109,33 @@ export function Hero() {
 }
 
 export const Header = memo(({ className }: { className?: string }) => {
+  const { setShowWizard } = useWizard();
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.2, duration: 1.0, ease: "easeInOut" }}
       className={cn(
-        "flex flex-col items-center justify-start gap-4 pt-[22dvh] px-8 z-logo",
+        "flex flex-col items-center justify-start gap-8 pt-[22dvh] px-8 z-logo",
         className
       )}
     >
-      <h2 className="text-balance mx-auto mt-4 max-w-4xl text-center text-3xl font-medium tracking-tight bg-gradient-to-b to-zinc-900 from-zinc-700 dark:to-zinc-400 dark:from-zinc-200 bg-clip-text text-transparent md:text-5xl">
+      <h2 className="text-balance mx-auto mt-4 max-w-4xl text-center text-4xl font-semibold tracking-tighter bg-gradient-to-br to-zinc-900 from-zinc-700 dark:to-zinc-400 dark:from-zinc-200 bg-clip-text text-transparent sm:text-5xl md:text-6xl lg:text-7xl xl:text-[4.5rem]">
         The Manufacturing Software You Own
       </h2>
-      <p className="text-balance mx-auto  max-w-4xl text-center text-muted-foreground font-medium text-lg">
+      <p className="text-balance mx-auto max-w-4xl text-center text-muted-foreground font-medium text-lg">
         CarbonOS is the new standard for custom manufacturing systems
       </p>
+      <Button
+        onClick={() => setShowWizard(true)}
+        size="lg"
+        variant="outline"
+        className="text-lg rounded-full"
+      >
+        Start your trial
+        <Play className="size-5" />
+      </Button>
     </motion.div>
   );
 });
