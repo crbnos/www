@@ -56,6 +56,18 @@ type Slide = {
   end: number;
 };
 
+function OurApproach() {
+  return (
+    <Actor start={0.1} end={0.99}>
+      <div className="fixed left-10 top-[10dvh] px-6">
+        <h2 className="text-base font-medium tracking-tight text-muted-foreground font-mono uppercase">
+          / Our Approach
+        </h2>
+      </div>
+    </Actor>
+  );
+}
+
 function BenefitDescription({
   start,
   end,
@@ -68,7 +80,7 @@ function BenefitDescription({
   return (
     <Actor start={start} end={end}>
       <motion.p
-        className="fixed left-10 bottom-[10dvh] md:left-10 md:top-5 flex flex-col  justify-center md:min-h-[100dvh] w-[calc(100%-5rem)] md:w-1/3 items-start px-6 font-medium text-lg text-muted-foreground text-balance "
+        className="fixed left-10 bottom-[10dvh] md:left-10 md:top-5 flex flex-col justify-center md:min-h-[100dvh] w-[calc(100%-5rem)] md:w-1/3 items-start px-6 font-medium text-lg text-muted-foreground text-balance "
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -229,6 +241,7 @@ function Benefits({ isMobile }: { isMobile: boolean }) {
     >
       {!isMobile && (
         <div className="md:flex relative">
+          <OurApproach />
           <div className="sticky bottom-0 w-1/3 md:bottom-auto md:top-0 md:flex md:h-screen md:flex-1 md:items-center md:self-start">
             {slides.map((slide, index) => (
               <BenefitDescription
@@ -251,6 +264,11 @@ function Benefits({ isMobile }: { isMobile: boolean }) {
       )}
 
       <div className={isMobile ? "flex-1" : "ml-[50%] flex-1"}>
+        {isMobile && (
+          <p className="text-foreground text-3xl font-bold tracking-tight text-center w-full mb-8">
+            Our Approach
+          </p>
+        )}
         <div className="w-full md:max-w-3xl px-3">
           <BenefitImages isMobile={isMobile} />
         </div>
