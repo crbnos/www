@@ -361,7 +361,7 @@ export function WizardForm({ open, onClose }: WizardFormProps) {
                 Thank you for your interest!
               </h2>
               <p className="text-center text-muted-foreground animate-fade-in-delayed">
-                We'll be in touch with you shortly to get you started.
+                We'll be in touch with you shortly to setup a demo.
               </p>
             </div>
           )}
