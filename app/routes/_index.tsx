@@ -58,11 +58,16 @@ type Slide = {
 
 function OurApproach() {
   return (
-    <Actor start={0.1} end={0.99}>
+    <Actor start={0.02} end={0.99}>
       <div className="fixed left-10 top-[10dvh] px-6">
-        <h2 className="text-base font-medium tracking-tight text-muted-foreground font-mono uppercase">
+        <motion.h2
+          className="text-base font-medium tracking-tight text-muted-foreground font-mono uppercase"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+        >
           / Our Approach
-        </h2>
+        </motion.h2>
       </div>
     </Actor>
   );
