@@ -147,7 +147,10 @@ function Document({
           }}
         >
           <div className="flex items-center justify-between gap-2 z-logo text-foreground w-full">
-            <Link to="/" className="cursor-pointer flex-shrink-0">
+            <Link
+              to="/"
+              className="cursor-pointer flex flex-row items-center gap-2 flex-shrink-0"
+            >
               <img
                 src="/brand/carbon-logo-dark.svg"
                 alt="CarbonOS"
@@ -158,6 +161,9 @@ function Document({
                 alt="CarbonOS"
                 className="size-6 hidden dark:block"
               />
+              <span className="hidden md:block text-2xl font-semibold tracking-tighter">
+                CarbonOS
+              </span>
             </Link>
             <div className="flex items-center gap-2">
               <div className="flex items-center gap-0">
