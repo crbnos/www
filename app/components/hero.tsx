@@ -185,16 +185,16 @@ ScreenshotCard.displayName = "ScreenshotCard";
 
 export const screenshots = [
   {
-    title: "MES 3D Viewer",
-    thumbnail: "/screenshots/mes-model.webp",
+    title: "Work Instructions",
+    thumbnail: "/screenshots/bop.webp",
   },
   {
     title: "Quotes Table",
     thumbnail: "/screenshots/quotes-table.webp",
   },
   {
-    title: "Work Instructions",
-    thumbnail: "/screenshots/bop.webp",
+    title: "MES 3D Viewer",
+    thumbnail: "/screenshots/mes-model.webp",
   },
   {
     title: "Global Search",
