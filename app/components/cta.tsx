@@ -21,7 +21,7 @@ export function CTA({ isLearnPage = false }: { isLearnPage?: boolean }) {
               size="lg"
               className="text-lg rounded-full"
             >
-              {isLearnPage ? "Get in touch" : "Start your trial"}
+              {isLearnPage ? "Get in touch" : "Book a demo"}
               <Play className="size-5" />
             </Button>
           </div>

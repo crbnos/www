@@ -129,7 +129,7 @@ export const Header = memo(({ className }: { className?: string }) => {
         variant="outline"
         className="text-lg rounded-full"
       >
-        Start your trial
+        Book a demo
         <Play className="size-5" />
       </Button>
     </motion.div>

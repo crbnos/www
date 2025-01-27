@@ -184,7 +184,7 @@ function Document({
                 className="cursor-pointer"
                 onClick={() => setShowWizard(true)}
               >
-                Start your trial
+                Book a demo
                 <Play className="size-4" />
               </Button>
             </div>
