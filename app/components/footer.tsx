@@ -11,12 +11,12 @@ export function Footer() {
             <a className="text-primary select-none" href="/">
               <div className="flex items-center gap-1.5">
                 <img
-                  src="/brand/carbon-dark-word.svg"
+                  src="/brand/carbon-logo-dark.svg"
                   alt="CarbonOS Logo Dark"
                   className="size-5 block dark:hidden"
                 />
                 <img
-                  src="/brand/carbon-light-word.svg"
+                  src="/brand/carbon-logo-light.svg"
                   alt="CarbonOS Logo Light"
                   className="size-5 hidden dark:block"
                 />
