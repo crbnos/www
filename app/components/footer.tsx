@@ -11,12 +11,12 @@ export function Footer() {
             <a className="text-primary select-none" href="/">
               <div className="flex items-center gap-1.5">
                 <img
-                  src="/brand/carbon-logo-dark.svg"
+                  src="/brand/carbon-dark-word.svg"
                   alt="CarbonOS Logo Dark"
                   className="size-5 block dark:hidden"
                 />
                 <img
-                  src="/brand/carbon-logo-light.svg"
+                  src="/brand/carbon-light-word.svg"
                   alt="CarbonOS Logo Light"
                   className="size-5 hidden dark:block"
                 />
@@ -61,6 +61,7 @@ export function Footer() {
               </p>
               <div className="col-span-2 -mx-1 flex flex-wrap gap-2 sm:flex-col">
                 {[
+                  { href: "/brand", text: "Brand Assets" },
                   { href: "/contact", text: "Contact" },
                   { href: "/ownership", text: "Ownership" },
                   { href: "/privacy", text: "Privacy" },
