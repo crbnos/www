@@ -13,7 +13,7 @@ import type { LoaderFunctionArgs, MetaFunction } from "@vercel/remix";
 import { json } from "@vercel/remix";
 import { ReactNode, useState } from "react";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { Fingerprint, Play } from "lucide-react";
 import Tailwind from "~/styles/tailwind.css?url";
 import { Footer } from "./components/footer";
@@ -120,12 +120,6 @@ function Document({
   mode?: "light" | "dark";
 }) {
   const { showWizard, setShowWizard } = useWizard();
-  const { scrollY } = useScroll();
-  const backgroundColor = useTransform(
-    scrollY,
-    [300, 600],
-    ["rgba(0,0,0,0)", "rgba(0,0,0,1)"]
-  );
 
   return (
     <html lang="en" className={`${mode} h-full overflow-x-hidden w-[100dvw]`}>
@@ -140,12 +134,7 @@ function Document({
         suppressHydrationWarning
         className="h-[100dvh] w-[100dvw] flex flex-col bg-background text-foreground antialiased selection:bg-[#00cc9937] selection:text-[#007763fd] dark:selection:bg-[#00fff61d] dark:selection:text-[#67ffded2]"
       >
-        <motion.header
-          className="flex select-none items-center pl-5 pr-2 h-[var(--header-height)] fixed top-0 left-0 right-0 z-header"
-          style={{
-            backgroundColor,
-          }}
-        >
+        <header className="flex select-none items-center pl-5 pr-2 h-[var(--header-height)] fixed top-0 left-0 right-0 z-header">
           <div className="flex items-center justify-between gap-2 z-logo text-foreground w-full">
             <Link
               to="/"
@@ -189,10 +178,10 @@ function Document({
               </Button>
             </div>
           </div>
-        </motion.header>
+        </header>
 
         <div className="relative flex h-full w-full items-start justify-center">
-          <LightRays />
+          {/* <LightRays /> */}
           <main className="flex flex-col w-full">
             {children}
             <Footer />
