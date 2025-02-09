@@ -134,7 +134,7 @@ function Document({
         suppressHydrationWarning
         className="h-[100dvh] w-[100dvw] flex flex-col bg-background text-foreground antialiased selection:bg-[#00cc9937] selection:text-[#007763fd] dark:selection:bg-[#00fff61d] dark:selection:text-[#67ffded2]"
       >
-        <header className="flex select-none items-center pl-5 pr-2 h-[var(--header-height)] fixed top-0 left-0 right-0 z-header">
+        <header className="flex select-none items-center pl-5 pr-2 h-[var(--header-height)] fixed top-0 left-0 right-0 z-header backdrop-filter backdrop-blur-xl bg-opacity-5">
           <div className="flex items-center justify-between gap-2 z-logo text-foreground w-full">
             <Link
               to="/"
