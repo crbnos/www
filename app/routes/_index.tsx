@@ -460,6 +460,7 @@ function Team() {
               type="linkedin"
               href="https://www.linkedin.com/in/smithy2425/"
             />
+            <SocialIcon type="x" href="https://x.com/TomSmithMFG" />
           </div>
           <p className="text-sm lg:text-base text-muted-foreground">
             Tom is a third-generation toolmaker and manufacturing engineer with
