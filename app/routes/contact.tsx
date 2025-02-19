@@ -17,8 +17,6 @@ const ratelimit = new Ratelimit({
   analytics: true,
 });
 
-const NAMES_OF_MFS_WHO_SPAM_THIS_FORM = ["Robertpem"];
-
 export async function action({ request }: ActionFunctionArgs) {
   const ip = request.headers.get("x-forwarded-for") ?? "127.0.0.1";
   const { success, remaining } = await ratelimit.limit(ip);
@@ -41,10 +39,6 @@ export async function action({ request }: ActionFunctionArgs) {
       { success: false, message: "Invalid form submission" },
       { status: 400 }
     );
-  }
-
-  if (NAMES_OF_MFS_WHO_SPAM_THIS_FORM.includes(name)) {
-    return json({ success: true, message: "Have a nice day!" });
   }
 
   const slackClient = getSlackClient();
