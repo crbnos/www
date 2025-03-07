@@ -375,7 +375,7 @@ function WithCarbonOS() {
 
 function Team() {
   return (
-    <div className="mx-auto w-screen max-w-6xl px-6 py-[30dvh] flex flex-col gap-8">
+    <div className="mx-auto w-screen max-w-3xl px-6 py-[30dvh] flex flex-col gap-8">
       <div className="mx-auto text-center">
         {/* <h4 className="text-xl font-bold tracking-tight text-muted-foreground/80">
           Team
@@ -384,7 +384,7 @@ function Team() {
           We know manufacturing
         </h2> */}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="flex flex-col items-start gap-2">
           <img
             src="/faces/rob.webp"
@@ -440,35 +440,6 @@ function Team() {
             manufacturing stack. Before manufacturing, he founded an NLP
             startup, built a successful social media app. He worked as a
             principal engineer at Teamworks while building CarbonOS at night.
-          </p>
-        </div>
-
-        <div className="flex flex-col items-start gap-2">
-          <img
-            src="/faces/tom.webp"
-            alt="Tom Smith"
-            className="w-full aspect-[3/4] rounded-lg object-cover mb-4 opacity-80"
-          />
-          <h3 className="text-xl lg:text-2xl font-bold tracking-tight">
-            Tom Smith
-          </h3>
-          <p className="text-sm lg:text-base text-muted-foreground">
-            Co-Founder
-          </p>
-          <div className="flex gap-2 mb-2">
-            <SocialIcon
-              type="linkedin"
-              href="https://www.linkedin.com/in/smithy2425/"
-            />
-            <SocialIcon type="x" href="https://x.com/TomSmithMFG" />
-          </div>
-          <p className="text-sm lg:text-base text-muted-foreground">
-            Tom is a third-generation toolmaker and manufacturing engineer with
-            18 years of industry expertise and a passion for innovation. He has
-            led operations and software teams at GE, Arrival, CloudNC, Fictiv,
-            and Saeki. Driven by the experience that no two manufacturers are
-            alike, he founded CarbonOS to create tailored solutions for the
-            industry that can generate growth.
           </p>
         </div>
       </div>
