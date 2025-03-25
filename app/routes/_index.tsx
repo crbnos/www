@@ -32,7 +32,6 @@ export default function Route() {
       <Benefits isMobile={isMobile} />
       <BuyVsBuildIntro />
       <GanttComparison />
-      <Team />
       <FAQs />
       <CTA />
     </>
@@ -373,79 +372,6 @@ function WithCarbonOS() {
   );
 }
 
-function Team() {
-  return (
-    <div className="mx-auto w-screen max-w-3xl px-6 py-[30dvh] flex flex-col gap-8">
-      <div className="mx-auto text-center">
-        {/* <h4 className="text-xl font-bold tracking-tight text-muted-foreground/80">
-          Team
-        </h4>
-        <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-          We know manufacturing
-        </h2> */}
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="flex flex-col items-start gap-2">
-          <img
-            src="/faces/rob.webp"
-            alt="Rob Carrington"
-            className="w-full aspect-[3/4] rounded-lg object-cover mb-4 opacity-80"
-          />
-          <h3 className="text-xl lg:text-2xl font-bold tracking-tight">
-            Rob Carrington
-          </h3>
-          <p className="text-sm lg:text-base text-muted-foreground">
-            CEO & Co-Founder
-          </p>
-          <div className="flex gap-2 mb-2">
-            <SocialIcon
-              type="linkedin"
-              href="https://www.linkedin.com/in/robcarrington/"
-            />
-          </div>
-          <p className="text-sm lg:text-base text-muted-foreground">
-            Rob was a principal engineer and product manager at Paperless Parts,
-            where he led ERP integrations and architected custom software
-            systems for leading digital manufacturers. Prior to that, he
-            researched high-performance computing systems at MIT Lincoln
-            Laboratory, built data infrastructure for a financial consulting
-            firm, and wrote zero-to-one code at an early stage consumer device
-            startup.
-          </p>
-        </div>
-
-        <div className="flex flex-col items-start gap-2">
-          <img
-            src="/faces/brad.webp"
-            alt="Brad Barbin"
-            className="w-full aspect-[3/4] rounded-lg object-cover mb-4 opacity-80"
-          />
-          <h3 className="text-xl lg:text-2xl font-bold tracking-tight">
-            Brad Barbin
-          </h3>
-          <p className="text-sm lg:text-base text-muted-foreground">
-            CTO & Co-Founder
-          </p>
-          <div className="flex gap-2 mb-2">
-            <SocialIcon
-              type="linkedin"
-              href="https://www.linkedin.com/in/brad-barbin-399815292/"
-            />
-            <SocialIcon type="x" href="https://x.com/barbinbrad" />
-          </div>
-          <p className="text-sm lg:text-base text-muted-foreground">
-            Brad has built custom manufacturing systems for heavy equipment,
-            nuclear reactors, and bio-pharmaceuticals. His 7 years of experience
-            on shop floors drove him to build the missing piece of the
-            manufacturing stack. Before manufacturing, he founded an NLP
-            startup, built a successful social media app. He worked as a
-            principal engineer at Teamworks while building CarbonOS at night.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 function FAQs() {
   return (
