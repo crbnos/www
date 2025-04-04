@@ -2,21 +2,7 @@ import { Link } from "@remix-run/react";
 import { motion } from "framer-motion";
 import { Lightbulb } from "lucide-react";
 import { CTA } from "~/components/cta";
-
-import {
-  Gantt,
-  GanttContainer,
-  GanttHeader,
-  Resource,
-} from "~/components/gantt";
 import { Header, Hero } from "~/components/hero";
-import { SocialIcon } from "~/components/social-icon";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "~/components/ui/accordion";
 import { Button } from "~/components/ui/button";
 import { Actor, ScrollStage, useStage } from "~/components/ui/stage";
 import TextRevealByWord from "~/components/ui/text-reveal";
@@ -30,9 +16,6 @@ export default function Route() {
       {isMobile ? <Header className="mb-[40vh]" /> : <Hero />}
       <WhatIsCarbonOS />
       <Benefits isMobile={isMobile} />
-      <BuyVsBuildIntro />
-      <GanttComparison />
-      <FAQs />
       <CTA />
     </>
   );
@@ -41,8 +24,8 @@ export default function Route() {
 function WhatIsCarbonOS() {
   return (
     <TextRevealByWord
-      text={`CarbonOS is an API-first operating system for manufacturing – an extensible foundation for digital manufacturers building end-to-end, fully integrated software stacks. 
-Unlike  legacy systems, we give you __full access to the source code,__ so you have complete control of your technology. That means you’re __never locked in__ and you can focus on building the things that make your business unique.`}
+      text={`CarbonOS is a simple, flexible, and powerful manufacturing software. It is designed to be easy to use and easy to understand.
+We've taken the best parts of the most popular manufacturing software and combined them into a single, unified system, powered by the best technology available.`}
     />
   );
 }
@@ -54,23 +37,6 @@ type Slide = {
   start: number;
   end: number;
 };
-
-function OurApproach() {
-  return (
-    <Actor start={0.02} end={0.99}>
-      <div className="fixed left-10 top-[10dvh] px-6">
-        <motion.h2
-          className="text-base font-medium tracking-tight text-muted-foreground font-mono uppercase"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-        >
-          / Our Approach
-        </motion.h2>
-      </div>
-    </Actor>
-  );
-}
 
 function BenefitDescription({
   start,
@@ -98,34 +64,19 @@ function BenefitDescription({
 
 const slides: Slide[] = [
   {
-    img: "/screenshots/features-customer-experience.webp",
+    img: "/screenshots/sales-funnel.webp",
     description: (
       <>
         <strong className="font-semibold text-foreground">
-          Craft a delightful customer experience.
+          Manage your sales pipeline.
         </strong>{" "}
-        CarbonOS makes it easy to build customer-facing apps that securely
-        interface with your business and production data.
+        CarbonOS makes it easy for make-to-print and configure-to-order
+        manufacturers to quickly and accurately quote based on multi-level
+        bill-of-materials and routing.
       </>
     ),
-    link: "/learn/delightful-experience",
     start: 0.1,
     end: 0.22,
-  },
-  {
-    img: "/screenshots/features-configurator.webp",
-    description: (
-      <>
-        <strong className="font-semibold text-foreground">
-          Automatically configure
-        </strong>{" "}
-        the bill of materials and router based on your customers’ requests to
-        drive instant quoting and efficient production planning
-      </>
-    ),
-    link: "/learn/configuration-is-all-you-need",
-    start: 0.25,
-    end: 0.41,
   },
   {
     img: "/screenshots/features-schedule.webp",
@@ -139,21 +90,37 @@ const slides: Slide[] = [
       </>
     ),
     link: "/learn/vertically-integrated-stack",
-    start: 0.433,
-    end: 0.6,
+    start: 0.25,
+    end: 0.41,
   },
   {
     img: "/screenshots/features-mes.webp",
     description: (
       <>
         <strong className="font-semibold text-foreground">
-          Connect your machines
+          Run your shop-floor operations.
         </strong>{" "}
-        to your core system of record, and use our MES app to drive real-time
-        production insights.
+        CarbonOS's MES app is a powerful tool for managing your shop-floor
+        operations. It allows you to track production progress, manage
+        resources, and more.
       </>
     ),
-    link: "/learn/bridging-the-automation-gap",
+    link: "/learn/vertically-integrated-stack",
+    start: 0.433,
+    end: 0.6,
+  },
+  {
+    img: "/screenshots/traceability.webp",
+    description: (
+      <>
+        <strong className="font-semibold text-foreground">
+          End-to-end traceability
+        </strong>{" "}
+        from raw materials to finished products, you'll have complete visibility
+        into your supply chain.
+      </>
+    ),
+
     start: 0.617,
     end: 0.76,
   },
@@ -162,10 +129,10 @@ const slides: Slide[] = [
     description: (
       <>
         <strong className="font-semibold text-foreground">
-          Build custom applications
+          API-first design
         </strong>{" "}
-        that drive your business on top of our source code, our SDK, and our
-        self-documenting API.
+        that allows you to build custom applications on top of our source code,
+        our SDK, and our self-documenting API.
       </>
     ),
     link: "/learn/build-custom-applications",
@@ -245,7 +212,6 @@ function Benefits({ isMobile }: { isMobile: boolean }) {
     >
       {!isMobile && (
         <div className="md:flex relative">
-          <OurApproach />
           <div className="sticky bottom-0 w-1/3 md:bottom-auto md:top-0 md:flex md:h-screen md:flex-1 md:items-center md:self-start">
             {slides.map((slide, index) => (
               <BenefitDescription
@@ -278,291 +244,5 @@ function Benefits({ isMobile }: { isMobile: boolean }) {
         </div>
       </div>
     </ScrollStage>
-  );
-}
-
-function BuyVsBuildIntro() {
-  return (
-    <TextRevealByWord
-      text={`Off-the-shelf systems can __get you 80% of the way there today.__ But the things that make your business unique become impossible.
-__If you don't control the full stack,__ you're at the mercy of the vendor. In essence, __you're a renter, not an owner.__
-Building on CarbonOS __reduces development time from years to months__ and allows you to grow on a strong foundation.`}
-    />
-  );
-}
-
-function GanttComparison() {
-  return (
-    <ScrollStage pages={4} fallbackLength={800} fallbackFrame={560}>
-      <div
-        className="sticky top-0 flex h-screen w-screen mx-auto flex-col justify-center pb-4 xl:pb-56"
-        aria-hidden
-      >
-        <div className="xl:flex">
-          <div className="relative xl:-right-10 lg:mt-[18rem] ">
-            <GanttHeader>Build from Scratch</GanttHeader>
-            <GanttContainer>
-              <WithBuildItFromScratch />
-            </GanttContainer>
-          </div>
-
-          <div className="relative xl:-left-10 lg:mt-[18rem] ">
-            <GanttHeader>Build on CarbonOS</GanttHeader>
-            <GanttContainer>
-              <WithCarbonOS />
-            </GanttContainer>
-          </div>
-        </div>
-        <Actor start={0} end={1}>
-          <div className="absolute bottom-0 w-full pb-4 text-center text-sm text-muted-foreground md:text-base">
-            (Keep scrolling to compare)
-          </div>
-        </Actor>
-      </div>
-    </ScrollStage>
-  );
-}
-
-function WithBuildItFromScratch() {
-  let resources: [string, number, number][] = [
-    ["Online Ordering", 0, 10],
-    ["Routing", 10, 10],
-    ["Bill of Materials", 20, 10],
-    ["MES", 30, 10],
-    ["Inventory", 40, 10],
-    ["Estimating", 50, 10],
-    ["Purchasing", 60, 10],
-    ["Resources", 70, 10],
-    ["Refactor", 80, 20],
-  ];
-
-  return (
-    <Gantt>
-      {resources.map(([name, start, size]) => (
-        <Resource key={name} name={name} start={start} size={size} />
-      ))}
-    </Gantt>
-  );
-}
-
-function WithCarbonOS() {
-  let resources: [string, number, number][] = [
-    ["Online Ordering", 0, 10],
-    ["Routing", 0, 10],
-    ["Bill of Materials", 0, 10],
-    ["MES", 0, 10],
-    ["Inventory", 0, 10],
-    ["Estimating", 0, 10],
-    ["Purchasing", 0, 10],
-    ["Resources", 0, 10],
-    ["Sales", 0, 10],
-    ["Reporting", 0, 10],
-    ["Scheduling", 0, 10],
-    ["Automation", 10, 10],
-    ["Process", 20, 10],
-    ["Customizations", 30, 58],
-  ];
-
-  return (
-    <Gantt>
-      {resources.map(([name, start, size]) => (
-        <Resource key={name} name={name} start={start} size={size} />
-      ))}
-    </Gantt>
-  );
-}
-
-
-function FAQs() {
-  return (
-    <section className="w-full min-h-[80dvh] py-32 ">
-      <div className="mx-auto md:w-form-md lg:w-form-lg px-6">
-        <h2 className="mb-8 text-center text-xl md:text-2xl lg:text-3xl font-bold tracking-tight text-foreground">
-          Frequently Asked Questions
-        </h2>
-
-        <div className="space-y-4 text-base md:text-lg lg:text-xl">
-          <Accordion type="multiple" defaultValue={["item-6"]}>
-            <AccordionItem value="item-1">
-              <AccordionTrigger>
-                Is CarbonOS hosted on-prem or in the cloud?
-              </AccordionTrigger>
-              <AccordionContent>
-                You can host it yourself on-prem or in the cloud, or we can host
-                it for you in the cloud. If you want to host it yourself, we'll
-                help you get setup.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-2">
-              <AccordionTrigger>Is CarbonOS open source?</AccordionTrigger>
-              <AccordionContent>
-                CarbonOS's source code is available for purchase, but it is not
-                "open source". This is different than the traditional SaaS
-                model, which treats you as an renter of the interfaces, as
-                opposed to an owner of the entire system. Here is the{" "}
-                <Link className="text-foreground font-semibold" to="/license">
-                  License
-                </Link>
-                .
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-3">
-              <AccordionTrigger>Do I need to be able to code?</AccordionTrigger>
-              <AccordionContent>
-                No, CarbonOS works great out of the box. However, having access
-                to the source code means your development team can customize and
-                extend it as needed. We can do customizations for you or you can
-                just ask an LLM. We've found that LLMs are great at adding
-                small-to-medium-sized features but aren't capable of designing
-                full systems like an ERP (we keep trying).
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-4">
-              <AccordionTrigger>
-                How can I get started with CarbonOS?
-              </AccordionTrigger>
-              <AccordionContent>
-                You can try CarbonOS for free&mdash;reach out to learn more.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-6">
-              <AccordionTrigger>What is the tech stack?</AccordionTrigger>
-              <AccordionContent>
-                <div className="space-y-4">
-                  <p className="text-muted-foreground">
-                    CarbonOS is a TypeScript monorepo built with the some of the
-                    best open-source tools:
-                  </p>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                    <div className="flex flex-col items-center space-x-2 rounded-lg border p-3 text-sm bg-zinc-900">
-                      <a href="https://remix.run">
-                        <img
-                          src="/logos/remix.svg"
-                          alt="Remix"
-                          className="w-full h-auto"
-                        />
-                      </a>
-                    </div>
-                    <div className="flex items-center space-x-2 rounded-lg border p-3 text-sm bg-zinc-900">
-                      <a href="https://supabase.com">
-                        <img
-                          src="/logos/supabase.svg"
-                          alt="Supabase"
-                          className="w-full h-auto"
-                        />
-                      </a>
-                    </div>
-                    <div className=" rounded-lg border p-3 text-sm text-white bg-zinc-900">
-                      <a
-                        href="https://ui.shadcn.com"
-                        className="inline-flex items-center space-x-2"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 256 256"
-                          className="size-6"
-                        >
-                          <rect width="256" height="256" fill="none"></rect>
-                          <line
-                            x1="208"
-                            y1="128"
-                            x2="128"
-                            y2="208"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="32"
-                          ></line>
-                          <line
-                            x1="192"
-                            y1="40"
-                            x2="40"
-                            y2="192"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="32"
-                          ></line>
-                        </svg>
-                        <span className="font-bold text-xl">shadcn</span>
-                      </a>
-                    </div>
-                    <div className="flex items-center space-x-2 rounded-lg border p-3 text-sm bg-zinc-900">
-                      <a href="https://tailwindcss.com">
-                        <img
-                          src="/logos/tailwind.svg"
-                          alt="Tailwind"
-                          className="w-full h-auto"
-                        />
-                      </a>
-                    </div>
-
-                    <div className="flex items-center space-x-2 rounded-lg border p-3 text-sm bg-zinc-900">
-                      <a href="https://trigger.dev">
-                        <img
-                          src="/logos/trigger.svg"
-                          alt="Trigger.dev"
-                          className="w-full h-auto"
-                        />
-                      </a>
-                    </div>
-                    <div className="flex items-center space-x-2 rounded-lg border p-3 text-sm bg-zinc-900">
-                      <a href="https://novu.co">
-                        <img
-                          src="/logos/novu.svg"
-                          alt="Novu"
-                          className="w-full h-auto"
-                        />
-                      </a>
-                    </div>
-                    <div className="flex items-center space-x-2 rounded-lg border p-3 text-sm bg-zinc-900">
-                      <a href="https://vercel.com">
-                        <img
-                          src="/logos/vercel.svg"
-                          alt="Vercel"
-                          className="w-full h-auto"
-                        />
-                      </a>
-                    </div>
-                    <div className="flex items-center space-x-2 rounded-lg border p-3 text-sm bg-zinc-900">
-                      <a href="https://resend.com">
-                        <img
-                          src="/logos/resend.svg"
-                          alt="Resend"
-                          className="w-full h-auto"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <p className="text-muted-foreground">
-                    The languages we use are{" "}
-                    <span className="font-medium text-foreground">
-                      TypeScript
-                    </span>{" "}
-                    and <span className="font-medium text-foreground">SQL</span>
-                    . We also use{" "}
-                    <span className="font-medium text-foreground">React</span>{" "}
-                    for interfaces. This stack makes it easy to build
-                    customizations with LLMs.
-                  </p>
-
-                  <p className="text-muted-foreground">
-                    There are API clients available in TypesScript, Dart, Swift,
-                    Python, C#, Go, Kotlin, Ruby and Elixir for our functional
-                    friends.
-                  </p>
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </div>
-      </div>
-    </section>
   );
 }
