@@ -121,7 +121,7 @@ export const Header = memo(({ className }: { className?: string }) => {
         The AI-Powered Manufacturing Stack
       </h2>
       <p className="text-balance mx-auto max-w-4xl text-center text-muted-foreground font-medium text-lg">
-        CarbonOS is the new standard for custom manufacturing software
+        CarbonOS is the new standard for tech-enabled manufacturing
       </p>
       <Button
         onClick={() => setShowWizard(true)}

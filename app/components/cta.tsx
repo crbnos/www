@@ -12,7 +12,7 @@ export function CTA({ isLearnPage = false }: { isLearnPage?: boolean }) {
           CarbonOS
         </span>
         <p className="text-muted-foreground mt-6">
-          The new standard for custom manufacturing systems
+          The new standard for tech-enabled manufacturing
         </p>
         <div className="mt-10 md:mb-8">
           <div className="flex flex-col items-center gap-4">
