@@ -68,7 +68,7 @@ const slides: Slide[] = [
     description: (
       <>
         <strong className="font-semibold text-foreground">
-          Manage your sales pipeline.
+          Fast and accurate quoting
         </strong>{" "}
         CarbonOS makes it easy for make-to-print and configure-to-order
         manufacturers to quickly and accurately quote based on multi-level
@@ -76,7 +76,7 @@ const slides: Slide[] = [
       </>
     ),
     start: 0.1,
-    end: 0.22,
+    end: 0.2,
   },
   {
     img: "/screenshots/features-schedule.webp",
@@ -90,8 +90,8 @@ const slides: Slide[] = [
       </>
     ),
     link: "/learn/vertically-integrated-stack",
-    start: 0.25,
-    end: 0.41,
+    start: 0.22,
+    end: 0.35,
   },
   {
     img: "/screenshots/features-mes.webp",
@@ -106,8 +106,8 @@ const slides: Slide[] = [
       </>
     ),
     link: "/learn/vertically-integrated-stack",
-    start: 0.433,
-    end: 0.6,
+    start: 0.37,
+    end: 0.5,
   },
   {
     img: "/screenshots/traceability.webp",
@@ -120,9 +120,8 @@ const slides: Slide[] = [
         into your supply chain.
       </>
     ),
-
-    start: 0.617,
-    end: 0.76,
+    start: 0.52,
+    end: 0.65,
   },
   {
     img: "/screenshots/features-api.webp",
@@ -136,8 +135,23 @@ const slides: Slide[] = [
       </>
     ),
     link: "/learn/build-custom-applications",
-    start: 0.78,
-    end: 0.98,
+    start: 0.67,
+    end: 0.8,
+  },
+  {
+    img: "/screenshots/agent.webp",
+    description: (
+      <>
+        <strong className="font-semibold text-foreground">
+          Integrated AI-powered agents
+        </strong>{" "}
+        can do the rote tasks that take up your time, so you can focus on the
+        things that matter most.
+      </>
+    ),
+
+    start: 0.82,
+    end: 0.95,
   },
 ];
 
@@ -206,7 +220,7 @@ function BenefitImages({ isMobile }: { isMobile: boolean }) {
 function Benefits({ isMobile }: { isMobile: boolean }) {
   return (
     <ScrollStage
-      pages={isMobile ? 1 : 5.5}
+      pages={isMobile ? 1 : 6.5}
       fallbackLength={100}
       fallbackFrame={25}
     >
