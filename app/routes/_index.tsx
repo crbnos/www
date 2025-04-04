@@ -234,11 +234,6 @@ function Benefits({ isMobile }: { isMobile: boolean }) {
       )}
 
       <div className={isMobile ? "flex-1" : "ml-[50%] flex-1"}>
-        {isMobile && (
-          <p className="text-foreground text-3xl font-bold tracking-tight text-center w-full mb-8">
-            Our Approach
-          </p>
-        )}
         <div className="w-full md:max-w-3xl px-3">
           <BenefitImages isMobile={isMobile} />
         </div>
