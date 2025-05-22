@@ -121,7 +121,8 @@ export const Header = memo(({ className }: { className?: string }) => {
         The Modern Manufacturing Stack
       </h2>
       <p className="text-balance mx-auto max-w-4xl text-center text-muted-foreground font-medium text-lg">
-        CarbonOS combines ERP, MES, and QMS into a single, unified system.
+        CarbonOS combines ERP, MES, and QMS into a single, unified and open
+        system.
       </p>
       <Button
         asChild
@@ -130,7 +131,7 @@ export const Header = memo(({ className }: { className?: string }) => {
         className="text-lg rounded-full"
       >
         <Link prefetch="intent" to="/contact">
-          Contact
+          Get in Touch
         </Link>
       </Button>
     </motion.div>
