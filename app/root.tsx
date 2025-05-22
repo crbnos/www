@@ -14,7 +14,7 @@ import { json } from "@vercel/remix";
 import { ReactNode, useState } from "react";
 
 import { motion } from "framer-motion";
-import { Fingerprint, Play } from "lucide-react";
+import { Fingerprint } from "lucide-react";
 import Tailwind from "~/styles/tailwind.css?url";
 import { Footer } from "./components/footer";
 import { Button } from "./components/ui/button";
@@ -158,23 +158,24 @@ function Document({
               <div className="flex items-center gap-0">
                 <Button variant="ghost" asChild className="cursor-pointer">
                   <Link prefetch="intent" to="/learn">
-                    Learn
+                    Blog
                   </Link>
                 </Button>
                 <Button variant="ghost" className="cursor-pointer" asChild>
-                  <a href="https://app.carbonos.dev">
-                    Login
-                    <Fingerprint className="size-4" />
-                  </a>
+                  <a href="https://github.com/crbnos/carbon">Code</a>
+                </Button>
+
+                <Button variant="ghost" asChild className="cursor-pointer">
+                  <Link prefetch="intent" to="/contact">
+                    Contact
+                  </Link>
                 </Button>
               </div>
-              <Button
-                variant="default"
-                className="cursor-pointer"
-                onClick={() => setShowWizard(true)}
-              >
-                Book a demo
-                <Play className="size-4" />
+              <Button variant="default" className="cursor-pointer" asChild>
+                <a href="https://app.carbonos.dev">
+                  Login
+                  <Fingerprint className="size-4" />
+                </a>
               </Button>
             </div>
           </div>

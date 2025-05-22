@@ -14,9 +14,9 @@ export default function License() {
           <p>Copyright © 2024 Carbon Manufacturing Systems Corporation</p>
 
           <p>
-            Permission is hereby granted to any person purchasing or receiving a
-            copy of CarbonOS, its source code and associated documentation files
-            (the “Software”), to install and use a single instance and modify a
+            Permission is hereby granted to any person receiving a copy of
+            CarbonOS, its source code and associated documentation files (the
+            “Software”), to install and use a single instance and modify a
             single version of the Software as provided. This does not include
             the rights to publish, distribute, sublicense, and/or sell copies of
             the Software, source code or products derived from it.

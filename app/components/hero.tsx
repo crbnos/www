@@ -1,4 +1,5 @@
 // Start of Selection
+import { Link } from "@remix-run/react";
 import {
   motion,
   MotionValue,
@@ -6,7 +7,6 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import { Play } from "lucide-react";
 import { memo, useMemo, useRef } from "react";
 import { cn } from "~/lib/utils";
 import { Button } from "./ui/button";
@@ -124,13 +124,14 @@ export const Header = memo(({ className }: { className?: string }) => {
         CarbonOS combines ERP, MES, and QMS into a single, unified system.
       </p>
       <Button
-        onClick={() => setShowWizard(true)}
+        asChild
         size="lg"
         variant="outline"
         className="text-lg rounded-full"
       >
-        Book a demo
-        <Play className="size-5" />
+        <Link prefetch="intent" to="/contact">
+          Contact
+        </Link>
       </Button>
     </motion.div>
   );

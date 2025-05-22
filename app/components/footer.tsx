@@ -63,7 +63,6 @@ export function Footer() {
                 {[
                   { href: "/brand", text: "Brand Assets" },
                   { href: "/contact", text: "Contact" },
-                  { href: "/ownership", text: "Ownership" },
                   { href: "/privacy", text: "Privacy" },
                   { href: "/terms", text: "Terms" },
                 ].map((link) => (
