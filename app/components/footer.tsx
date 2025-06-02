@@ -12,16 +12,16 @@ export function Footer() {
               <div className="flex items-center gap-1.5">
                 <img
                   src="/brand/carbon-logo-dark.svg"
-                  alt="CarbonOS Logo Dark"
+                  alt="Carbon Logo Dark"
                   className="size-5 block dark:hidden"
                 />
                 <img
                   src="/brand/carbon-logo-light.svg"
-                  alt="CarbonOS Logo Light"
+                  alt="Carbon Logo Light"
                   className="size-5 hidden dark:block"
                 />
                 <span className="text-primary text-lg font-semibold tracking-tight">
-                  CarbonOS
+                  Carbon
                 </span>
               </div>
             </a>

@@ -10,10 +10,10 @@ export const config = {
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Blog | CarbonOS" },
+    { title: "Blog | Carbon" },
     {
       name: "description",
-      content: "Latest articles and updates from CarbonOS",
+      content: "Latest articles and updates from Carbon",
     },
   ];
 };

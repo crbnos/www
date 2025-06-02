@@ -41,10 +41,10 @@ export const meta: MetaFunction = ({ data, params }) => {
 
   if (!post) {
     return [
-      { title: "404 Not Found | CarbonOS" },
+      { title: "404 Not Found | Carbon" },
       {
         name: "description",
-        content: "404 Not Found | CarbonOS",
+        content: "404 Not Found | Carbon",
       },
     ];
   }

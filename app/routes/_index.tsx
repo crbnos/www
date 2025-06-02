@@ -14,17 +14,17 @@ export default function Route() {
   return (
     <>
       {isMobile ? <Header className="mb-[40vh]" /> : <Hero />}
-      <WhatIsCarbonOS />
+      <WhatIsCarbon />
       <Benefits isMobile={isMobile} />
       <CTA />
     </>
   );
 }
 
-function WhatIsCarbonOS() {
+function WhatIsCarbon() {
   return (
     <TextRevealByWord
-      text={`CarbonOS is a simple, flexible, and powerful manufacturing software. It is designed to be easy to use and easy to understand.
+      text={`Carbon is a simple, flexible, and powerful manufacturing software. It is designed to be easy to use and easy to understand.
 We've taken the best parts of the most popular manufacturing software and combined them into a single, unified system, powered by the best technology available.`}
     />
   );
@@ -70,7 +70,7 @@ const slides: Slide[] = [
         <strong className="font-semibold text-foreground">
           Fast and accurate quoting
         </strong>{" "}
-        CarbonOS makes it easy for make-to-print and configure-to-order
+        Carbon makes it easy for make-to-print and configure-to-order
         manufacturers to quickly and accurately quote based on multi-level
         bill-of-materials and routing.
       </>
@@ -100,7 +100,7 @@ const slides: Slide[] = [
         <strong className="font-semibold text-foreground">
           Run your shop-floor operations.
         </strong>{" "}
-        CarbonOS's MES app is a powerful tool for managing your shop-floor
+        Carbon's MES app is a powerful tool for managing your shop-floor
         operations. It allows you to track production progress, manage
         resources, and more.
       </>

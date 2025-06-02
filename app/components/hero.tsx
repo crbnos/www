@@ -121,7 +121,7 @@ export const Header = memo(({ className }: { className?: string }) => {
         The Modern Manufacturing Stack
       </h2>
       <p className="text-balance mx-auto max-w-4xl text-center text-muted-foreground font-medium text-lg">
-        CarbonOS combines ERP, MES, and QMS into a single, unified system.
+        Carbon combines ERP, MES, and QMS into a single, unified system.
       </p>
       <Button
         onClick={() => setShowWizard(true)}

@@ -45,8 +45,7 @@ const plans = [
   },
   {
     name: "Full-Service",
-    description:
-      "We'll build customized applications on top of CarbonOS for you",
+    description: "We'll build customized applications on top of Carbon for you",
     features: [
       "Custom application development",
       "Core ERP/MES/API functionality",
@@ -81,8 +80,8 @@ export default function Ownership() {
         </h2>
         <p className="mt-6 max-w-3xl text-base leading-6 text-muted-foreground mb-8">
           Every business is unique, and so are their software needs. With
-          CarbonOS, you can choose whichever ownership model works best for you
-          to create your customized end-to-end software solution.
+          Carbon, you can choose whichever ownership model works best for you to
+          create your customized end-to-end software solution.
         </p>
       </div>
 

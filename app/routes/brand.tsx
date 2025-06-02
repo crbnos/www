@@ -4,10 +4,10 @@ import { Button } from "~/components/ui/button";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "CarbonOS | Brand Assets" },
+    { title: "Carbon | Brand Assets" },
     {
       name: "description",
-      content: "CarbonOS Brand Assets",
+      content: "Carbon Brand Assets",
     },
   ];
 };
@@ -21,7 +21,7 @@ export default function Brand() {
             Brand Assets
           </h1>
           <h2 className="font-medium text-xl text-muted-foreground max-w-5xl text-balance leading-relaxed tracking-tight">
-            All CarbonOS trademarks, logos, or other brand elements can never be
+            All Carbon trademarks, logos, or other brand elements can never be
             modified or used for any other purpose other than to represent
             Carbon Manufacturing Systems Corporation.
           </h2>

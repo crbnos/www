@@ -44,22 +44,22 @@ export const meta: MetaFunction = ({ data }) => {
 
   if (!siteUrl) {
     return [
-      { title: "404 Not Found | CarbonOS" },
+      { title: "404 Not Found | Carbon" },
       {
         name: "description",
-        content: "404 Not Found | CarbonOS",
+        content: "404 Not Found | Carbon",
       },
     ];
   }
 
   return [
     {
-      title: "CarbonOS | The operating system for manufacturing",
+      title: "Carbon | The operating system for manufacturing",
     },
     {
       name: "description",
       content:
-        "CarbonOS is an API-first operating system for manufacturing that gives you full access to the source code, so you have complete control.",
+        "Carbon is an API-first operating system for manufacturing that gives you full access to the source code, so you have complete control.",
     },
     {
       name: "robots",
@@ -71,16 +71,16 @@ export const meta: MetaFunction = ({ data }) => {
     },
     {
       property: "og:site_name",
-      content: "CarbonOS",
+      content: "Carbon",
     },
     {
       property: "og:title",
-      content: "CarbonOS | The operating system for manufacturing",
+      content: "Carbon | The operating system for manufacturing",
     },
     {
       property: "og:description",
       content:
-        "CarbonOS is an API-first operating system for manufacturing that gives you full access to the source code, so you have complete control.",
+        "Carbon is an API-first operating system for manufacturing that gives you full access to the source code, so you have complete control.",
     },
     {
       property: "og:image",
@@ -96,12 +96,12 @@ export const meta: MetaFunction = ({ data }) => {
     },
     {
       name: "twitter:title",
-      content: "CarbonOS | The operating system for manufacturing",
+      content: "Carbon | The operating system for manufacturing",
     },
     {
       name: "twitter:description",
       content:
-        "CarbonOS is an API-first operating system for manufacturing that gives you full access to the source code, so you have complete control.",
+        "Carbon is an API-first operating system for manufacturing that gives you full access to the source code, so you have complete control.",
     },
     {
       name: "twitter:image",
@@ -112,7 +112,7 @@ export const meta: MetaFunction = ({ data }) => {
 
 function Document({
   children,
-  title = "CarbonOS",
+  title = "Carbon",
   mode = "dark",
 }: {
   children: ReactNode;
@@ -142,16 +142,16 @@ function Document({
             >
               <img
                 src="/brand/carbon-logo-dark.svg"
-                alt="CarbonOS"
+                alt="Carbon"
                 className="size-6 block dark:hidden"
               />
               <img
                 src="/brand/carbon-logo-light.svg"
-                alt="CarbonOS"
+                alt="Carbon"
                 className="size-6 hidden dark:block"
               />
               <span className="hidden md:block text-2xl font-semibold tracking-tighter">
-                CarbonOS
+                Carbon
               </span>
             </Link>
             <div className="flex items-center gap-2">
