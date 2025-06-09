@@ -1,5 +1,4 @@
 import { Link, Outlet } from "@remix-run/react";
-import { CTA } from "~/components/cta";
 import AnimatedShinyText from "~/components/ui/animated-shiny-text";
 
 export const config = {
@@ -21,7 +20,6 @@ export default function Layout() {
           <Outlet />
         </div>
       </div>
-      <CTA isLearnPage />
     </>
   );
 }

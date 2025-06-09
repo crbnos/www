@@ -1,20 +1,24 @@
 import {
   isRouteErrorResponse,
+  json,
   Link,
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
+  useFetcher,
   useRouteError,
 } from "@remix-run/react";
 import { Analytics } from "@vercel/analytics/remix";
-import type { LoaderFunctionArgs, MetaFunction } from "@vercel/remix";
-import { json } from "@vercel/remix";
+import type {
+  ActionFunctionArgs,
+  LoaderFunctionArgs,
+  MetaFunction,
+} from "@vercel/remix";
 import { ReactNode, useState } from "react";
 
-import { motion } from "framer-motion";
-import { Fingerprint, Play } from "lucide-react";
+import { Fingerprint, Moon, Play, Sun } from "lucide-react";
 import Tailwind from "~/styles/tailwind.css?url";
 import { Footer } from "./components/footer";
 import { Button } from "./components/ui/button";
@@ -25,6 +29,9 @@ import {
   WizardContext,
   WizardForm,
 } from "./components/wizard-form";
+import { useMode } from "./hooks/useMode";
+import { getMode, setMode } from "./services/mode.server";
+import { path } from "./utils/path";
 
 export const config = { runtime: "edge" };
 
@@ -36,7 +43,30 @@ export async function loader({ request, params }: LoaderFunctionArgs) {
   let requestUrl = new URL(request.url);
   let siteUrl = requestUrl.protocol + "//" + requestUrl.host;
 
-  return json({ siteUrl });
+  return { siteUrl, mode: getMode(request) };
+}
+
+export async function action({ request }: ActionFunctionArgs) {
+  const formData = await request.formData();
+  const mode = String(formData.get("mode"));
+
+  console.log(mode);
+
+  if (!["light", "dark"].includes(mode)) {
+    return json(
+      { error: "Invalid mode" },
+      {
+        status: 400,
+      }
+    );
+  }
+
+  return json(
+    {},
+    {
+      headers: { "Set-Cookie": setMode(mode as "light" | "dark") },
+    }
+  );
 }
 
 export const meta: MetaFunction = ({ data }) => {
@@ -54,7 +84,7 @@ export const meta: MetaFunction = ({ data }) => {
 
   return [
     {
-      title: "Carbon | The operating system for manufacturing",
+      title: "Carbon Manufacturing Systems",
     },
     {
       name: "description",
@@ -75,7 +105,7 @@ export const meta: MetaFunction = ({ data }) => {
     },
     {
       property: "og:title",
-      content: "Carbon | The operating system for manufacturing",
+      content: "Carbon Manufacturing Systems",
     },
     {
       property: "og:description",
@@ -96,7 +126,7 @@ export const meta: MetaFunction = ({ data }) => {
     },
     {
       name: "twitter:title",
-      content: "Carbon | The operating system for manufacturing",
+      content: "Carbon Manufacturing Systems",
     },
     {
       name: "twitter:description",
@@ -113,13 +143,14 @@ export const meta: MetaFunction = ({ data }) => {
 function Document({
   children,
   title = "Carbon",
-  mode = "dark",
+  mode = "light",
 }: {
   children: ReactNode;
   title?: string;
   mode?: "light" | "dark";
 }) {
   const { showWizard, setShowWizard } = useWizard();
+  const fetcher = useFetcher<typeof action>();
 
   return (
     <html lang="en" className={`${mode} h-full overflow-x-hidden w-[100dvw]`}>
@@ -132,33 +163,33 @@ function Document({
       </head>
       <body
         suppressHydrationWarning
-        className="h-[100dvh] w-[100dvw] flex flex-col bg-background text-foreground antialiased selection:bg-[#fdffa1] selection:text-[#000000] "
+        className="h-[100dvh] w-[100dvw] flex flex-col bg-background text-foreground antialiased selection:bg-[#60ffd3] selection:text-[#000000] "
       >
-        <header className="flex select-none items-center pl-5 pr-2 h-[var(--header-height)] fixed top-0 left-0 right-0 z-header backdrop-filter backdrop-blur-xl bg-opacity-5">
-          <div className="flex items-center justify-between gap-2 z-logo text-foreground w-full">
+        <header className="flex select-none items-center py-4 pl-5 pr-2 h-[var(--header-height)]">
+          <div className="container mx-auto px-4 flex items-center justify-between gap-2 z-logo text-foreground w-full">
             <Link
               to="/"
-              className="cursor-pointer flex flex-row items-center gap-2 flex-shrink-0"
+              className="cursor-pointer flex flex-row items-end gap-2 flex-shrink-0 font-display"
             >
               <img
-                src="/brand/carbon-logo-dark.svg"
+                src="/brand/carbon-word-light.svg"
                 alt="Carbon"
-                className="size-6 block dark:hidden"
+                className="h-7 w-auto block dark:hidden"
               />
               <img
-                src="/brand/carbon-logo-light.svg"
+                src="/brand/carbon-word-dark.svg"
                 alt="Carbon"
-                className="size-6 hidden dark:block"
+                className="h-7 w-auto block hidden dark:block"
               />
-              <span className="hidden md:block text-2xl font-semibold tracking-tighter">
-                Carbon
-              </span>
             </Link>
             <div className="flex items-center gap-2">
               <div className="flex items-center gap-0">
+                <Button variant="ghost" className="cursor-pointer">
+                  <a href="https://github.com/crbnos/carbon">Developers</a>
+                </Button>
                 <Button variant="ghost" asChild className="cursor-pointer">
-                  <Link prefetch="intent" to="/learn">
-                    Learn
+                  <Link prefetch="intent" to="/pricing">
+                    Pricing
                   </Link>
                 </Button>
                 <Button variant="ghost" className="cursor-pointer" asChild>
@@ -168,12 +199,23 @@ function Document({
                   </a>
                 </Button>
               </div>
-              <Button
-                variant="default"
-                className="cursor-pointer"
-                onClick={() => setShowWizard(true)}
-              >
-                Book a demo
+              <fetcher.Form action={path.to.root} method="post">
+                <input
+                  type="hidden"
+                  name="mode"
+                  value={mode === "light" ? "dark" : "light"}
+                />
+                <Button
+                  type="submit"
+                  variant="outline"
+                  size="icon"
+                  className="cursor-pointer"
+                >
+                  {mode === "light" ? <Moon /> : <Sun />}
+                </Button>
+              </fetcher.Form>
+              <Button variant="default" className="cursor-pointer">
+                Start Now
                 <Play className="size-4" />
               </Button>
             </div>
@@ -197,24 +239,11 @@ function Document({
   );
 }
 
-function LightRays() {
-  return ["one", "two", "three", "four", "five"].map((ray) => (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 0.7 }}
-      transition={{ delay: 0.3, duration: 2.0 }}
-      className="ray"
-      data-theme="dark"
-    >
-      <div className={`light-ray ray-${ray}`} />
-    </motion.div>
-  ));
-}
-
 export default function App() {
   const [showWizard, setShowWizard] = useState(false);
   const [answers, setAnswers] = useState<FormAnswers>(defaultAnswers);
   const [currentStep, setCurrentStep] = useState(0);
+  const mode = useMode();
 
   return (
     <WizardContext.Provider
@@ -227,7 +256,7 @@ export default function App() {
         setCurrentStep,
       }}
     >
-      <Document mode="dark">
+      <Document mode={mode}>
         <Outlet />
       </Document>
     </WizardContext.Provider>
@@ -245,7 +274,7 @@ export function ErrorBoundary() {
 
   return (
     <Document title="Error!">
-      <div className="dark">
+      <div className="light">
         <div className="flex flex-col w-[100dvw] h-screen items-center justify-center space-y-4 ">
           <img
             src="/carbon-logo-light.png"

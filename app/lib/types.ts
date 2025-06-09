@@ -21,14 +21,9 @@ export type BlogPost = {
 };
 
 export const authors: Record<string, Author> = {
-  rob: {
-    name: "Rob Carrington",
-    avatar: "/faces/rob.webp",
-    title: "CEO & Co-Founder",
-  },
   brad: {
     name: "Brad Barbin",
     avatar: "/faces/brad.webp",
-    title: "CTO & Co-Founder",
+    title: "Co-Founder",
   },
 } as const;
