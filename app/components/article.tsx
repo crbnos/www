@@ -38,7 +38,7 @@ export function Article({ data, preview = false }: ArticleProps) {
         )}
         {!preview && (
           <div
-            className="prose prose-md prose-invert max-w-none mt-12"
+            className="prose prose-md dark:prose-invert max-w-none mt-12"
             dangerouslySetInnerHTML={{ __html: data.html }}
           />
         )}

@@ -76,6 +76,7 @@ export default {
       fontFamily: {
         sans: ["Geist Variable", ...fontFamily.sans],
         mono: ["Geist Mono Variable", ...fontFamily.mono],
+        display: ["Barlow Semi Condensed", ...fontFamily.sans],
       },
       width: {
         "form-sm": "360px",
