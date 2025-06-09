@@ -125,11 +125,11 @@ export const Header = memo(({ className }: { className?: string }) => {
       </p>
       <Button
         onClick={() => setShowWizard(true)}
-        size="lg"
+        size="xl"
         variant="outline"
         className="text-lg rounded-full"
       >
-        Book a demo
+        Get Started
         <Play className="size-5" />
       </Button>
     </motion.div>
