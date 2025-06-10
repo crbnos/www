@@ -20,6 +20,7 @@ export default function Route() {
       <Features />
       <Manufacturing />
       <Reviews />
+      <Quality />
       <CTA />
     </>
   );
@@ -96,7 +97,7 @@ function Hero() {
               </p>
             </div>
 
-            <div className="flex dark:hidden items-center justify-center gap-8">
+            <div className="flex flex-col md:flex-row dark:hidden items-center justify-center gap-8">
               {reviews.map((review) => (
                 <img
                   src={`https://cdn.prod.website-files.com/66da014bfb6cdbedcafef616/${review.light}`}
@@ -104,7 +105,7 @@ function Hero() {
               ))}
             </div>
 
-            <div className="hidden dark:flex items-center justify-center gap-8">
+            <div className="hidden dark:flex flex-col md:flex-row items-center justify-center gap-8">
               {reviews.map((review) => (
                 <img
                   src={`https://cdn.prod.website-files.com/66da014bfb6cdbedcafef616/${review.dark}`}
@@ -122,14 +123,14 @@ function Features() {
   return (
     <section className="mt-[-105px] pb-[140px]">
       <div className="flex gap-8 container max-w-5xl mx-auto px-4">
-        <div className="flex flex-col gap-8 mt-[205px] flex-grow">
+        <div className="flex flex-col gap-8 mt-[205px] flex-grow max-w-4xl mx-auto pl-8 lg:pl-0">
           <h3 className="text-muted-foreground uppercase text-sm leading-[140%] tracking-tighter">
             Features
           </h3>
-          <h4 className="text-foreground text-balance mx-auto  max-w-4xl text-left font-medium tracking-tighter leading-[115%] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl -mt-4">
+          <h4 className="text-foreground text-balance text-left font-medium tracking-tighter leading-[115%] text-4xl lg:text-5xl xl:text-6xl -mt-4">
             The modern ERP and MES alternative
           </h4>
-          <p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-4xl text-left font-medium tracking-tighter text-lg">
+          <p className="text-muted-foreground dark:text-foreground text-balance text-left font-medium tracking-tighter text-lg">
             Escape legacy software with a flexible, AI-powered platform designed
             for the speed and agility of today's manufacturing challenges.
           </p>
@@ -171,7 +172,7 @@ function Features() {
             </Button>
           </div>
         </div>
-        <div className="flex max-w-[416px]">
+        <div className="max-w-[416px] hidden lg:flex">
           <img
             className="feature-v2-image"
             src="https://cdn.prod.website-files.com/66da014bfb6cdbedcafef616/672203cd9790abdc56c3477b_iPhone-top.png"
@@ -190,8 +191,8 @@ function Manufacturing() {
       <div className="mx-auto px-4 bg-muted rounded-xl max-w-[1380px] w-full py-24">
         <div className="container">
           <div className="flex flex-col gap-8">
-            <h2 className="text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter leading-[115%] text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
-              Drive Growth and Efficiency with Carbon
+            <h2 className="text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter leading-[115%] text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+              Drive growth and efficiency with Carbon
             </h2>
 
             <p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter text-base">
@@ -204,74 +205,99 @@ function Manufacturing() {
             <div className="flex flex-col">
               <div className="grid lg:grid-cols-2 grid-cols-1 border border-b-0">
                 <div className="flex flex-col border-r border-border bg-background lg:border-b-0 border-b justify-center manufacturing-bg">
-                  {/* <div className="flex justify-center items-center mt-10 mb-[70px] pt-10 pb-[22px]"></div> */}
-                  <div className="flex flex-col gap-4 pl-10 py-10 pr-20">
-                    <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl">
-                      End-to-End Traceability
-                    </h4>
-                    <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
-                      Achieve granular, end-to-end tracking of materials,
-                      components, and processes, ensuring compliance,
-                      simplifying audits, and enabling rapid root cause analysis
-                      without the complexity and cost of traditional high-end
-                      systems.
-                    </p>
+                  <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
+                    <div className="flex flex-col gap-4">
+                      <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl">
+                        End-to-End Traceability
+                      </h4>
+                      <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
+                        Achieve granular, end-to-end tracking of materials,
+                        components, and processes, ensuring compliance,
+                        simplifying audits, and enabling rapid root cause
+                        analysis without the complexity and cost of traditional
+                        high-end systems.
+                      </p>
+                    </div>
+                    <div>
+                      <Button variant="outline">Learn More</Button>
+                    </div>
                   </div>
                 </div>
                 <div className="flex bg-background manufacturing-bg">
                   {/* <div className="flex justify-center items-center mt-10 mb-[70px] pt-10 pb-[22px]"></div> */}
-                  <div className="flex flex-col gap-4 pl-10 py-10 pr-20">
-                    <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl">
-                      Integrated Agents
-                    </h4>
-                    <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
-                      Our ever-expanding catalog of agents allow you to save
-                      time and money by automating repetitive tasks. For
-                      example, our purchasing agent can create purchase orders
-                      and automatically get quotes from suppliers.
-                    </p>
+                  <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
+                    <div className="flex flex-col gap-4">
+                      <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl">
+                        Integrated Agents
+                      </h4>
+                      <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
+                        Our ever-expanding catalog of agents allow you to save
+                        time and money by automating repetitive tasks. For
+                        example, our purchasing agent can create purchase orders
+                        and get quotes from suppliers automatically.
+                      </p>
+                    </div>
+                    <div>
+                      <Button variant="outline">Learn More</Button>
+                    </div>
                   </div>
                 </div>
               </div>
               <div className="grid lg:grid-cols-3 grid-cols-1 bg-background border">
                 <div className="flex border-r border-border lg:border-b-0 border-b manufacturing-bg">
                   {/* <div className="flex justify-center items-center mt-10 mb-[70px] pt-10 pb-[22px]"></div> */}
-                  <div className="flex flex-col gap-4 pl-10 py-10 pr-20">
-                    <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl">
-                      Product Configurator
-                    </h4>
-                    <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
-                      Quickly and accurately configure complex products with a
-                      powerful and user-friendly tool, reducing errors in orders
-                      and bills of materials, and speeding up the sales process.
-                    </p>
+                  <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
+                    <div className="flex flex-col gap-4">
+                      <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl">
+                        Custom Fields
+                      </h4>
+                      <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
+                        Add custom fields with a few clicks to any table to
+                        track additional information. Then create custom views
+                        to track the data you need. Then use the configurator to
+                        generate Bill of Materials.
+                      </p>
+                    </div>
+                    <div>
+                      <Button variant="outline">Learn More</Button>
+                    </div>
                   </div>
                 </div>
                 <div className="flex border-r border-border lg:border-b-0 border-b manufacturing-bg">
                   {/* <div className="flex justify-center items-center mt-10 mb-[70px] pt-10 pb-[22px]"></div> */}
-                  <div className="flex flex-col gap-4 pl-10 py-10 pr-20">
-                    <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl">
-                      Simplified Scheduling
-                    </h4>
-                    <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
-                      Optimize your shop floor schedule with flexible sorting
-                      capabilities, maximizing throughput, improving on-time
-                      delivery, and easily adapting to priority changes.
-                    </p>
+                  <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
+                    <div className="flex flex-col gap-4">
+                      <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl">
+                        Simplified Scheduling
+                      </h4>
+                      <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
+                        Optimize your shop floor schedule with flexible sorting
+                        capabilities, maximizing throughput, improving on-time
+                        delivery, and easily adapting to priority changes.
+                      </p>
+                    </div>
+                    <div>
+                      <Button variant="outline">Learn More</Button>
+                    </div>
                   </div>
                 </div>
                 <div className="flex lg:border-b-0 border-b manufacturing-bg">
                   {/* <div className="flex justify-center items-center mt-10 mb-[70px] pt-10 pb-[22px]"></div> */}
-                  <div className="flex flex-col gap-4 pl-10 py-10 pr-20">
-                    <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl">
-                      API-First Architecture
-                    </h4>
-                    <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
-                      Carbon is built with an “API-First Architecture,” which
-                      gives you unparalleled flexibility to seamlessly connect
-                      Carbon with your other business systems. This allows you
-                      to automate workflows across all applications.
-                    </p>
+                  <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
+                    <div className="flex flex-col gap-4">
+                      <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl">
+                        API-First Architecture
+                      </h4>
+                      <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
+                        Carbon is built with an "API-First Architecture," which
+                        gives you unparalleled flexibility to seamlessly connect
+                        Carbon with your other business systems. This allows you
+                        to automate workflows across all applications.
+                      </p>
+                    </div>
+                    <div>
+                      <Button variant="outline">Learn More</Button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -279,7 +305,7 @@ function Manufacturing() {
           </div>
         </div>
         <div className="flex container items-center justify-center gap-4">
-          <Button variant="default" size="xl">
+          <Button variant="secondary" size="xl">
             Start Now
             <LucidePlay />
           </Button>
@@ -307,14 +333,14 @@ function Reviews() {
   return (
     <section className="bg-secondary text-secondary-foreground bg-[url('/reviews.webp')] bg-[0_0] bg-no-repeat bg-cover py-20">
       <div className="container flex flex-col gap-12 mx-auto px-4">
-        <h2 className="text-balance mx-auto max-w-4xl text-center font-medium tracking-tighter leading-[115%] text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+        <h2 className="text-balance mx-auto max-w-4xl text-center font-medium tracking-tighter leading-[115%] text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
           Reviews from our customers
         </h2>
         <div className="max-w-5xl mx-auto overflow-hidden p-4">
           <div className="flex flex-row items-center justify-center gap-4">
             <button
               onClick={onPrev}
-              className="flex items-center justify-center bg-background/90 hover:bg-background text-foreground text-3xl font-bold size-12 rounded-xl px-3"
+              className="hidden lg:flex items-center justify-center bg-background/90 hover:bg-background text-foreground text-3xl font-bold size-12 rounded-xl px-3"
             >
               <LucideArrowLeft />
             </button>
@@ -353,14 +379,28 @@ function Reviews() {
             </div>
             <button
               onClick={onNext}
-              className="flex items-center justify-center bg-background/90 hover:bg-background text-foreground text-3xl font-bold size-12 rounded-xl px-3"
+              className="hidden lg:flex items-center justify-center bg-background/90 hover:bg-background text-foreground text-3xl font-bold size-12 rounded-xl px-3"
             >
               <LucideArrowRight />
             </button>
           </div>
         </div>
-        <div className="flex max-w-[864px] mx-auto w-full">
-          <div className="flex dark:hidden w-full items-center justify-center">
+        <div className="flex flex-col max-w-[864px] mx-auto w-full">
+          <div className="w-full flex justify-center items-center gap-8 lg:hidden">
+            <button
+              onClick={onPrev}
+              className="flex items-center justify-center bg-background/90 hover:bg-background text-foreground text-3xl font-bold size-12 rounded-xl px-3"
+            >
+              <LucideArrowLeft />
+            </button>
+            <button
+              onClick={onNext}
+              className="flex items-center justify-center bg-background/90 hover:bg-background text-foreground text-3xl font-bold size-12 rounded-xl px-3"
+            >
+              <LucideArrowRight />
+            </button>
+          </div>
+          <div className="hidden lg:flex dark:hidden w-full items-center justify-center">
             {reviews.map((image, index) => (
               <div
                 key={image.dark}
@@ -379,7 +419,7 @@ function Reviews() {
               </div>
             ))}
           </div>
-          <div className="hidden dark:flex w-full items-center justify-center">
+          <div className="hidden lg:dark:flex w-full items-center justify-center">
             {reviews.map((image, index) => (
               <div
                 key={image.light}
@@ -404,20 +444,35 @@ function Reviews() {
   );
 }
 
+function Quality() {
+  return (
+    <section className="py-36">
+      <div className="container mx-auto px-4">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter leading-[115%] text-3xl md:text-4xl lg:text-5xl pt-20">
+            ISO 9001 and AS9100{" "}
+            <span className="text-muted-foreground">compliance</span>
+          </h2>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function CTA() {
   return (
     <section className="py-24">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col gap-8 bg-muted rounded-xl py-24 justify-center items-center">
-          <h2 className="text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter leading-[115%] text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+        <div className="flex flex-col gap-8 bg-muted dark:bg-muted bg-[url('/cta.webp')] dark:bg-none bg-[0_0] bg-no-repeat bg-cover rounded-xl py-24 justify-center items-center">
+          <h2 className="text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter leading-[115%] text-3xl md:text-4xl lg:text-5xl ">
             The only platform that unifies your entire business
           </h2>
           <p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter text-base">
             From the front office to the shop floor, to custom applications,
-            Carbon provides a single source of truth.
+            Carbon provides a single, extensible source of truth.
           </p>
           <div className="flex justify-center gap-4">
-            <Button variant="secondary" size="xl">
+            <Button variant="default" size="xl">
               Start Now
               <LucidePlay />
             </Button>

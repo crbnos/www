@@ -179,15 +179,15 @@ function Document({
               <img
                 src="/brand/carbon-word-dark.svg"
                 alt="Carbon"
-                className="h-7 w-auto block hidden dark:block"
+                className="h-7 w-auto hidden dark:block"
               />
             </Link>
             <div className="flex items-center gap-2">
-              <div className="flex items-center gap-0">
+              <div className="items-center gap-0 hidden md:flex">
                 <Button variant="ghost" className="cursor-pointer">
                   <a href="https://github.com/crbnos/carbon">Developers</a>
                 </Button>
-                <Button variant="ghost" asChild className="cursor-pointer">
+                <Button variant="ghost" asChild className="cursor-pointer ">
                   <Link prefetch="intent" to="/pricing">
                     Pricing
                   </Link>
@@ -214,7 +214,10 @@ function Document({
                   {mode === "light" ? <Moon /> : <Sun />}
                 </Button>
               </fetcher.Form>
-              <Button variant="default" className="cursor-pointer">
+              <Button
+                variant="default"
+                className="cursor-pointer hidden sm:flex"
+              >
                 Start Now
                 <Play className="size-4" />
               </Button>
@@ -277,9 +280,9 @@ export function ErrorBoundary() {
       <div className="light">
         <div className="flex flex-col w-[100dvw] h-screen items-center justify-center space-y-4 ">
           <img
-            src="/carbon-logo-light.png"
+            src="/brand/carbon-mark.svg"
             alt="Carbon Logo"
-            className="block max-w-[60px]"
+            className="block max-w-24"
           />
           <h1 className="text-2xl font-bold">Something went wrong</h1>
           <p className="text-muted-foreground max-w-2xl">{message}</p>
