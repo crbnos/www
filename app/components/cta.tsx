@@ -8,7 +8,7 @@ export function CTA({ isLearnPage = false }: { isLearnPage?: boolean }) {
   return (
     <div className="flex min-h-[calc(100dvh-290px)] items-center justify-center">
       <div className="max-w-5xl text-center px-10 py-14 mx-4 md:mx-auto md:px-24 flex items-center flex-col rounded-lg">
-        <span className="text-6xl md:text-8xl font-bold tracking-tighter">
+        <span className="text-6xl md:text-8xl font-semibold tracking-tighter">
           Carbon
         </span>
         <p className="text-muted-foreground mt-6">
