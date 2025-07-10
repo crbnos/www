@@ -184,13 +184,16 @@ function Document({
             </Link>
             <div className="flex items-center gap-2">
               <div className="items-center gap-0 hidden md:flex">
-                <Button variant="ghost" className="cursor-pointer">
-                  <a href="https://github.com/crbnos/carbon">Developers</a>
-                </Button>
                 <Button variant="ghost" asChild className="cursor-pointer ">
                   <Link prefetch="intent" to="/pricing">
                     Pricing
                   </Link>
+                </Button>
+                <Button variant="ghost" className="cursor-pointer" asChild>
+                  <a href="https://github.com/crbnos/carbon">Developers</a>
+                </Button>
+                <Button variant="ghost" asChild className="cursor-pointer ">
+                  <Link to="/sales">Enterprise</Link>
                 </Button>
                 <Button variant="ghost" className="cursor-pointer" asChild>
                   <a href="https://app.carbonos.dev">

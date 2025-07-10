@@ -1,3 +1,4 @@
+import { Link } from "@remix-run/react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   LucideArrowLeft,
@@ -72,11 +73,11 @@ function Hero() {
               Join our Discord community{" "}
               <LucideChevronRight className="text-muted-foreground size-3" />
             </Button>
-            <h2 className="text-foreground text-balance mx-auto  max-w-7xl text-center font-medium tracking-tighter leading-[115%] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[4.5rem]">
-              Simplify complex manufacturing with{" "}
-              <span className="text-secondary">intelligent automation</span>
+            <h2 className="font-display text-foreground text-balance mx-auto  max-w-3xl text-center font-medium tracking-tight leading-[125%] text-5xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-[4.5rem]">
+              The open source{" "}
+              <span className="text-secondary">manufacturing ERP</span>
             </h2>
-            <p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-4xl text-center font-medium tracking-tighter text-base">
+            <p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-[780px] text-center font-medium tracking-tighter text-base md:text-lg lg:text-xl">
               Carbon is an open manufacturing platform that combines ERP, MES,
               and QMS into a single, unified, API-first system.
             </p>
@@ -85,9 +86,11 @@ function Hero() {
                 Start Now
                 <LucidePlay />
               </Button>
-              <Button variant="ghost" size="xl">
-                <LucideBookOpen />
-                Book a Demo
+              <Button variant="ghost" size="xl" asChild>
+                <Link to="/sales">
+                  <LucideBookOpen />
+                  Book a Demo
+                </Link>
               </Button>
             </div>
 
@@ -127,7 +130,7 @@ function Features() {
           <h3 className="text-muted-foreground uppercase text-sm leading-[140%] tracking-tighter">
             Features
           </h3>
-          <h4 className="text-foreground text-balance text-left font-medium tracking-tighter leading-[115%] text-4xl lg:text-5xl xl:text-6xl -mt-4">
+          <h4 className="font-display text-foreground text-balance text-left font-medium tracking-tight leading-[115%] text-4xl lg:text-5xl xl:text-6xl -mt-4">
             The modern ERP and MES alternative
           </h4>
           <p className="text-muted-foreground dark:text-foreground text-balance text-left font-medium tracking-tighter text-lg">
@@ -138,7 +141,7 @@ function Features() {
             <div className="flex justify-start items-center gap-2">
               <LucideCheckCircle className="size-6 text-secondary" />
               <p className="text-foreground text-left font-bold tracking-tighter text-lg">
-                Live Job Costing and Advanced Scheduling
+                Live Job Costing and Simplified Scheduling
               </p>
             </div>
             <div className="flex justify-start items-center gap-2">
@@ -166,9 +169,11 @@ function Features() {
               <LucidePlay />
             </Button>
 
-            <Button variant="outline" size="xl">
-              <LucideBookOpen />
-              Book a Demo
+            <Button variant="outline" size="xl" asChild>
+              <Link to="/sales">
+                <LucideBookOpen />
+                Book a Demo
+              </Link>
             </Button>
           </div>
         </div>
@@ -191,7 +196,7 @@ function Manufacturing() {
       <div className="mx-auto px-4 bg-muted rounded-xl max-w-[1380px] w-full py-24">
         <div className="container">
           <div className="flex flex-col gap-8">
-            <h2 className="text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter leading-[115%] text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+            <h2 className="font-display text-balance mx-auto max-w-2xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
               Drive growth and efficiency with Carbon
             </h2>
 
@@ -309,9 +314,11 @@ function Manufacturing() {
             Start Now
             <LucidePlay />
           </Button>
-          <Button variant="outline" size="xl">
-            <LucideBookOpen />
-            Book a Demo
+          <Button variant="outline" size="xl" asChild>
+            <Link to="/sales">
+              <LucideBookOpen />
+              Book a Demo
+            </Link>
           </Button>
         </div>
       </div>
@@ -333,7 +340,7 @@ function Reviews() {
   return (
     <section className="bg-secondary text-secondary-foreground bg-[url('/reviews.webp')] bg-[0_0] bg-no-repeat bg-cover py-20">
       <div className="container flex flex-col gap-12 mx-auto px-4">
-        <h2 className="text-balance mx-auto max-w-4xl text-center font-medium tracking-tighter leading-[115%] text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+        <h2 className="font-display text-balance mx-auto max-w-4xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
           Reviews from our customers
         </h2>
         <div className="max-w-5xl mx-auto overflow-hidden p-4">
@@ -449,7 +456,7 @@ function Quality() {
     <section className="py-36">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter leading-[115%] text-3xl md:text-4xl lg:text-5xl pt-20">
+          <h2 className="font-display text-balance mx-auto max-w-2xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl pt-20">
             ISO 9001 and AS9100{" "}
             <span className="text-muted-foreground">compliance</span>
           </h2>
@@ -464,7 +471,7 @@ function CTA() {
     <section className="py-24">
       <div className="container mx-auto px-4">
         <div className="flex flex-col gap-8 bg-muted dark:bg-muted bg-[url('/cta.webp')] dark:bg-none bg-[0_0] bg-no-repeat bg-cover rounded-xl py-24 justify-center items-center">
-          <h2 className="text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter leading-[115%] text-3xl md:text-4xl lg:text-5xl ">
+          <h2 className="font-display text-balance mx-auto max-w-2xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl ">
             The only platform that unifies your entire business
           </h2>
           <p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter text-base">
@@ -476,9 +483,11 @@ function CTA() {
               Start Now
               <LucidePlay />
             </Button>
-            <Button variant="outline" size="xl">
-              <LucideBookOpen />
-              Book a Demo
+            <Button variant="outline" size="xl" asChild>
+              <Link to="/sales">
+                <LucideBookOpen />
+                Book a Demo
+              </Link>
             </Button>
           </div>
         </div>
