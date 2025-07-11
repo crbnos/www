@@ -7,288 +7,598 @@ export default function Terms() {
             Terms of Service
           </h1>
           <h2 className="font-medium text-xl text-muted-foreground max-w-5xl text-balance leading-relaxed tracking-tight">
-            Effective January 1, 2025
+            Effective July 10, 2025
           </h2>
         </div>
       </div>
       <div className="mx-auto flex flex-col px-4 w-full lg:w-form-lg max-w-4xl mb-28">
         <div className="prose dark:prose-invert lg:prose-lg">
-          <ol type="1">
+          <p>
+            Welcome to Carbon Manufacturing Systems Corporation ("Company",
+            "we", "our", "us")! As you have just clicked our Terms of Service,
+            please pause, grab a cup of coffee and carefully read the following
+            pages. It will take you approximately 20 minutes.
+          </p>
+
+          <p>
+            These Terms of Service ("Terms", "Terms of Service") govern your use
+            of our web pages operated by Carbon Manufacturing Systems
+            Corporation.
+          </p>
+
+          <p>
+            Our Privacy Policy also governs your use of our Service and explains
+            how we collect, safeguard and disclose information that results from
+            your use of our web pages. Please read it at{" "}
+            <a href="/privacy">our Privacy Policy</a>.
+          </p>
+
+          <p>
+            Your agreement with us includes these Terms and our Privacy Policy
+            ("Agreements"). You acknowledge that you have read and understood
+            Agreements, and agree to be bound by them.
+          </p>
+
+          <p>
+            If you do not agree with (or cannot comply with) Agreements, then
+            you may not use the Service, but please let us know by emailing at
+            brad@carbonos.dev so we can try to find a solution. These Terms
+            apply to all visitors, users and others who wish to access or use
+            Service.
+          </p>
+
+          <p>Thank you for being responsible.</p>
+
+          <h3>Communications</h3>
+          <p>
+            By creating an Account on our Service, you agree to subscribe to
+            newsletters, marketing or promotional materials and other
+            information we may send. However, you may opt out of receiving any,
+            or all, of these communications from us by following the unsubscribe
+            link or by emailing us.
+          </p>
+
+          <h3>Purchases</h3>
+          <p>
+            If you wish to purchase any product or service made available
+            through Service ("Purchase"), you may be asked to supply certain
+            information relevant to your Purchase including, without limitation,
+            your credit card number, the expiration date of your credit card,
+            your billing address, and your shipping information.
+          </p>
+
+          <p>
+            You represent and warrant that: (i) you have the legal right to use
+            any credit card(s) or other payment method(s) in connection with any
+            Purchase; and that (ii) the information you supply to us is true,
+            correct and complete.
+          </p>
+
+          <p>
+            We may employ the use of third party services for the purpose of
+            facilitating payment and the completion of Purchases. By submitting
+            your information, you grant us the right to provide the information
+            to these third parties subject to our Privacy Policy.
+          </p>
+
+          <p>
+            We reserve the right to refuse or cancel your order at any time for
+            reasons including but not limited to: product or service
+            availability, errors in the description or price of the product or
+            service, error in your order or other reasons.
+          </p>
+
+          <p>
+            We reserve the right to refuse or cancel your order if fraud or an
+            unauthorized or illegal transaction is suspected.
+          </p>
+
+          <h3>Contests, Sweepstakes and Promotions</h3>
+          <p>
+            Any contests, sweepstakes or other promotions (collectively,
+            "Promotions") made available through Service may be governed by
+            rules that are separate from these Terms of Service. If you
+            participate in any Promotions, please review the applicable rules as
+            well as our Privacy Policy. If the rules for a Promotion conflict
+            with these Terms of Service, Promotion rules will apply.
+          </p>
+
+          <h3>Subscriptions</h3>
+          <p>
+            Some parts of Service are billed on a subscription basis
+            ("Subscription(s)"). You will be billed in advance on a recurring
+            and periodic basis ("Billing Cycle"). Billing cycles are set either
+            on a monthly or annual basis, depending on the type of subscription
+            plan you select when purchasing a Subscription.
+          </p>
+
+          <p>
+            At the end of each Billing Cycle, your Subscription will
+            automatically renew under the exact same conditions unless you
+            cancel it or Carbon Manufacturing Systems Corporation cancels it.
+            You may cancel your Subscription renewal either through your online
+            account management page or by contacting our customer support team.
+          </p>
+
+          <p>
+            A valid payment method, including credit card or PayPal, is required
+            to process the payment for your subscription. You shall provide us
+            with accurate and complete billing information including full name,
+            address, state, zip code, telephone number, and a valid payment
+            method information. By submitting such payment information, you
+            automatically authorize us to charge all Subscription fees incurred
+            through your account to any such payment instruments.
+          </p>
+
+          <p>
+            Should automatic billing fail to occur for any reason, we will issue
+            an electronic invoice indicating that you must proceed manually,
+            within a certain deadline date, with the full payment corresponding
+            to the billing period as indicated on the invoice.
+          </p>
+
+          <h3>Free Trial</h3>
+          <p>
+            We may, at our sole discretion, offer a Subscription with a free
+            trial for a limited period of time ("Free Trial").
+          </p>
+
+          <p>
+            You may be required to enter your billing information in order to
+            sign up for Free Trial.
+          </p>
+
+          <p>
+            If you do enter your billing information when signing up for Free
+            Trial, you will not be charged until Free Trial has expired. On the
+            last day of Free Trial period, unless you cancelled your
+            Subscription, you will be automatically charged the applicable
+            Subscription fees for the type of Subscription you have selected.
+          </p>
+
+          <p>
+            At any time and without notice, we reserve the right to (i) modify
+            Terms of Service of Free Trial offer, or (ii) cancel such Free Trial
+            offer.
+          </p>
+
+          <h3>Fee Changes</h3>
+          <p>
+            We, in our sole discretion and at any time, may modify Subscription
+            fees for the Subscriptions. Any Subscription fee change will become
+            effective at the end of the then-current Billing Cycle.
+          </p>
+
+          <p>
+            We will provide you with reasonable prior notice of any change in
+            Subscription fees to give you an opportunity to terminate your
+            Subscription before such change becomes effective.
+          </p>
+
+          <p>
+            Your continued use of Service after Subscription fee change comes
+            into effect constitutes your agreement to pay the modified
+            Subscription fee amount.
+          </p>
+
+          <h3>Refunds</h3>
+          <p>
+            Except when required by law, paid Subscription fees are
+            non-refundable.
+          </p>
+
+          <h3>Content</h3>
+          <p>
+            Our Service allows you to post, link, store, share and otherwise
+            make available certain information, text, graphics, videos, or other
+            material ("Content"). You are responsible for Content that you post
+            on or through Service, including its legality, reliability, and
+            appropriateness.
+          </p>
+
+          <p>
+            By posting Content on or through Service, You represent and warrant
+            that: (i) Content is yours (you own it) and/or you have the right to
+            use it and the right to grant us the rights and license as provided
+            in these Terms, and (ii) that the posting of your Content on or
+            through Service does not violate the privacy rights, publicity
+            rights, copyrights, contract rights or any other rights of any
+            person or entity. We reserve the right to terminate the account of
+            anyone found to be infringing on a copyright.
+          </p>
+
+          <p>
+            You retain any and all of your rights to any Content you submit,
+            post or display on or through Service and you are responsible for
+            protecting those rights. We take no responsibility and assume no
+            liability for Content you or any third party posts on or through
+            Service. However, by posting Content using Service you grant us the
+            right and license to use, modify, publicly perform, publicly
+            display, reproduce, and distribute such Content on and through
+            Service. You agree that this license includes the right for us to
+            make your Content available to other users of Service, who may also
+            use your Content subject to these Terms.
+          </p>
+
+          <p>
+            Carbon Manufacturing Systems Corporation has the right but not the
+            obligation to monitor and edit all Content provided by users. In
+            addition, Content found on or through this Service are the property
+            of Carbon Manufacturing Systems Corporation or used with permission.
+            You may not distribute, modify, transmit, reuse, download, repost,
+            copy, or use said Content, whether in whole or in part, for
+            commercial purposes or for personal gain, without express advance
+            written permission from us.
+          </p>
+
+          <h3>Prohibited Uses</h3>
+          <p>
+            You may use Service only for lawful purposes and in accordance with
+            Terms. You agree not to use Service:
+          </p>
+
+          <ul>
             <li>
-              <p>
-                <strong>Agreement.</strong> The following Terms of Service (the{" "}
-                <strong>"Terms"</strong>) constitute a binding agreement between
-                you and Carbon Manufacturing Systems Corporation. (
-                <strong>"Carbon,"</strong> <strong>"we,"</strong>{" "}
-                <strong>"our,"</strong> and <strong>"us"</strong>), the operator
-                of the Carbon platform (the <strong>"Platform"</strong>
-                ). These Terms set forth conditions regarding your access to and
-                use of the Platform.
-              </p>
-              <p>
-                By accessing or using the Platform in any manner, you agree to
-                be bound by these Terms.
-              </p>
-              <p>
-                Your access to and use of the Platform is on behalf of one or
-                more organizations that you are affiliated with (each, an{" "}
-                <strong>"Organization"</strong>). Carbon and each of the
-                Organizations have entered into a separate agreement (the{" "}
-                <strong>"Organization Agreement"</strong>) governing Carbon's
-                provision of services to that Organization. These Terms do not
-                alter in any way the terms of the Organization Agreements. To
-                the extent these Terms conflict with the Organization
-                Agreements, the terms of the Organization Agreements shall
-                control.
-              </p>
+              In any way that violates any applicable national or international
+              law or regulation.
             </li>
             <li>
-              <strong>Modification.</strong> Carbon reserves the right, at its
-              sole discretion, to modify these Terms at any time and without
-              prior notice. The date of the last modification to the Terms will
-              be posted at the beginning of these Terms. It is your
-              responsibility to check from time to time for updates. By
-              continuing to access or use the Platform, you are indicating that
-              you agree to be bound by any modified Terms.
+              For the purpose of exploiting, harming, or attempting to exploit
+              or harm minors in any way by exposing them to inappropriate
+              content or otherwise.
             </li>
             <li>
-              <strong>Privacy.</strong> These Terms include the provisions in
-              this document, as well as those in our{" "}
-              <a href="/privacy">Privacy Policy</a>.
+              To transmit, or procure the sending of, any advertising or
+              promotional material, including any "junk mail", "chain letter,"
+              "spam," or any other similar solicitation.
             </li>
             <li>
-              <strong>Acceptable Use.</strong> Carbon hereby grants you
-              permission to access and use the Platform, provided such use is in
-              compliance with these Terms, and you further specifically agree
-              that your use will adhere to the following restrictions and
-              obligations:
-              <ul>
-                <li>
-                  You may only use the Platform on behalf of the Organizations
-                  and only as permitted in the Organization Agreements.
-                </li>
-                <li>
-                  You may not transfer your access to others or allow others to
-                  access the Platform through your own access.
-                </li>
-                <li>
-                  You may only use the Platform for lawful activity. It is your
-                  responsibility to comply with all applicable local, state, and
-                  federal laws and regulations.
-                </li>
-                <li>
-                  You may not decompile, reverse engineer, or otherwise attempt
-                  to obtain the source code or underlying ideas or information
-                  of or relating to the Platform.
-                </li>
-                <li>
-                  You may not enter, store or transmit viruses, worms or other
-                  malicious code within, through, to or using the Platform.
-                </li>
-                <li>
-                  You may not defeat, avoid, bypass, remove, deactivate or
-                  otherwise circumvent any software protection mechanisms in the
-                  Platform.
-                </li>
-                <li>
-                  You may not remove or obfuscate any product identification,
-                  copyright or other proprietary notice from any element of the
-                  Platform or associated documentation.
-                </li>
-              </ul>
+              To impersonate or attempt to impersonate Company, a Company
+              employee, another user, or any other person or entity.
             </li>
             <li>
-              <p>
-                <strong>User Accounts.</strong> Your Organization can create an
-                account for you and will determine what information you will be
-                able to access and use. Your Carbon account will be created for
-                your use of the Platform based on the personal information you
-                provide us or that we obtain via the Third Party Authenticator.
-              </p>
-              <p>
-                You and the Organizations are responsible for maintaining the
-                confidentiality of your password and account, and are fully
-                responsible for any and all activities that occur under your
-                password or account. You agree to (a) immediately notify Carbon
-                of any unauthorized use of your password or account or any other
-                breach of security, and (b) ensure that you exit from your
-                account at the end of each session when accessing the Platform.
-                Carbon will not be liable for any loss or damage arising from
-                your failure to comply with this section.
-              </p>
-              <p>
-                If you would like us to terminate your account, please follow
-                the procedures set forth in our{" "}
-                <a href="/privacy">Privacy Policy.</a>
-              </p>
-              <p>
-                You may not transfer your account to anyone else without our
-                prior written permission.
-              </p>
+              In any way that infringes upon the rights of others, or in any way
+              is illegal, threatening, fraudulent, or harmful, or in connection
+              with any unlawful, illegal, fraudulent, or harmful purpose or
+              activity.
             </li>
             <li>
-              <p>
-                <strong>Content.</strong> Each Organization owns all of the
-                content that it submits through the Platform, including any
-                content that you or other representatives of the Organization
-                submit through the Platform (collectively, the{" "}
-                <strong>"Organization Content"</strong>). Other than the
-                Organization Content, Carbon owns all right, title and interest
-                in and to the materials available through the Platform,
-                including, but not limited to, text, graphics, data, articles,
-                photos, images, videos, and illustrations (all of the foregoing
-                except Organization Content, the{" "}
-                <strong>"Carbon Content"</strong>).
-              </p>
-              <p>
-                You may not use, copy, adapt, modify, prepare derivative works
-                based upon, distribute, license, sell, transfer, publicly
-                display, transmit, broadcast, or otherwise exploit the Carbon
-                Content, except as necessary to access and use the Platform on
-                behalf of the Organizations in accordance with these Terms and
-                the Organization Agreements.
-              </p>
+              To engage in any other conduct that restricts or inhibits anyone's
+              use or enjoyment of Service, or which, as determined by us, may
+              harm or offend Company or users of Service or expose them to
+              liability.
+            </li>
+          </ul>
+
+          <p>Additionally, you agree not to:</p>
+
+          <ul>
+            <li>
+              Use Service in any manner that could disable, overburden, damage,
+              or impair Service or interfere with any other party's use of
+              Service, including their ability to engage in real time activities
+              through Service.
             </li>
             <li>
-              <strong>Third Party Apps.</strong> You or the Organizations may
-              choose to use certain third party products or services in
-              connection with Platform (the <strong>"Third Party Apps"</strong>
-              ). Your use of any Third Party App is subject to a separate
-              agreement either between the applicable Organization and the
-              provider of that Third Party App (the{" "}
-              <strong>"Third Party Provider"</strong>) or you and the Third
-              Party Provider. You hereby acknowledge that Carbon does not
-              control such Third Party Providers or Third Party Apps, and cannot
-              be held responsible for their content, operation, or use. Carbon
-              does not make any representation, warranty, or endorsement,
-              express or implied, with respect to the legality, accuracy,
-              quality, or authenticity of content, information, or services
-              provided by Third Party Apps. CARBON HEREBY DISCLAIMS ALL
-              LIABILITY AND RESPONSIBILITY FOR ANY THIRD PARTY APPS AND FOR THE
-              ACTS OR OMISSIONS OF ANY THIRD PARTY PROVIDERS, and you hereby
-              irrevocably waive any claim against Carbon with respect to the
-              content or operation of any Third Party Apps.
+              Use any robot, spider, or other automatic device, process, or
+              means to access Service for any purpose, including monitoring or
+              copying any of the material on Service.
             </li>
             <li>
-              <strong>Feedback.</strong> We welcome and encourage you to provide
-              feedback, comments and suggestions for improvements to the
-              Platform (<strong>"Feedback"</strong>). You agree that Carbon has
-              the right, but not the obligation, to use such Feedback without
-              any obligation to provide you credit, royalty payment, or
-              ownership interest in the changes to the Platform.
+              Use any manual process to monitor or copy any of the material on
+              Service or for any other unauthorized purpose without our prior
+              written consent.
             </li>
             <li>
-              <p>
-                <strong>Termination.</strong> Carbon may immediately and without
-                notice terminate these Terms and disable your access to the
-                Platform if Carbon determines, in its sole discretion, that (a)
-                you have breached these Terms, or (b) you have violated
-                applicable laws, regulations or third party rights. In addition,
-                if all of the Organization Agreements expire or are terminated
-                for any reason, Carbon will immediately terminate these Terms
-                and your access to the Platform. Carbon may temporarily suspend
-                your access to the Platform under certain circumstances set
-                forth in the Organization Agreements.
-              </p>
-              <p>
-                Provisions that, by their nature, should survive termination of
-                these Terms shall survive termination. By way of example, all of
-                the following will survive termination: any limitations on our
-                liability, any terms regarding ownership or intellectual
-                property rights, and terms regarding disputes between us.
-              </p>
+              Use any device, software, or routine that interferes with the
+              proper working of Service.
             </li>
             <li>
-              <p>
-                <strong>Disclaimer of Warranties.</strong> YOU HEREBY
-                ACKNOWLEDGE THAT YOU ARE USING THE PLATFORM AT YOUR OWN RISK.
-                THE PLATFORM AND CARBON CONTENT ARE PROVIDED "AS IS," AND
-                CARBON, ITS AFFILIATES AND ITS THIRD PARTY SERVICE PROVIDERS
-                HEREBY DISCLAIM ANY AND ALL WARRANTIES, EXPRESS AND IMPLIED,
-                INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF ACCURACY,
-                RELIABILITY, MERCHANTABILITY, NON-INFRINGEMENT, FITNESS FOR A
-                PARTICULAR PURPOSE, AND ANY OTHER WARRANTY, CONDITION, GUARANTEE
-                OR REPRESENTATION, WHETHER ORAL, IN WRITING OR IN ELECTRONIC
-                FORM. CARBON, ITS AFFILIATES, AND ITS THIRD PARTY SERVICE
-                PROVIDERS DO NOT REPRESENT OR WARRANT THAT ACCESS TO THE
-                PLATFORM WILL BE UNINTERRUPTED OR THAT THERE WILL BE NO
-                FAILURES, ERRORS OR OMISSIONS OR LOSS OF TRANSMITTED
-                INFORMATION, OR THAT NO VIRUSES WILL BE TRANSMITTED THROUGH THE
-                PLATFORM.
-              </p>
-              <p>
-                Because some states do not permit disclaimer of implied
-                warranties, you may have additional rights under your local
-                laws.
-              </p>
+              Introduce any viruses, trojan horses, worms, logic bombs, or other
+              material which is malicious or technologically harmful.
             </li>
             <li>
-              <strong>Limitation of Liability.</strong> YOUR ACCESS TO AND USE
-              OF THE PLATFORM IS ON BEHALF OF ONE OR MORE ORGANIZATIONS.
-              ACCORDINGLY, TO THE FULLEST EXTENT ALLOWED BY APPLICABLE LAW,
-              UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY (INCLUDING,
-              WITHOUT LIMITATION, TORT, CONTRACT, STRICT LIABILITY, OR
-              OTHERWISE) SHALL CARBON (OR ITS LICENSORS OR SUPPLIERS) BE LIABLE
-              TO YOU FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR
-              CONSEQUENTIAL DAMAGES OF ANY KIND, INCLUDING DAMAGES FOR LOST
-              PROFITS, LOSS OF GOODWILL, WORK STOPPAGE, ACCURACY OF RESULTS, OR
-              COMPUTER FAILURE OR MALFUNCTION.
+              Attempt to gain unauthorized access to, interfere with, damage, or
+              disrupt any parts of Service, the server on which Service is
+              stored, or any server, computer, or database connected to Service.
             </li>
             <li>
-              <strong>Notices.</strong> Any notices or other communications
-              permitted or required hereunder will be in writing and given by
-              Carbon (a) via email (in each case to the address that you
-              provide) or (b) by posting to the website.
+              Attack Service via a denial-of-service attack or a distributed
+              denial-of-service attack.
             </li>
+            <li>Take any action that may damage or falsify Company rating.</li>
             <li>
-              <strong>No Waiver.</strong> The failure of Carbon to enforce any
-              right or provision of these Terms will not constitute a waiver of
-              future enforcement of that right or provision.
+              Otherwise attempt to interfere with the proper working of Service.
             </li>
-            <li>
-              <strong>Assignment.</strong> You may not assign or transfer these
-              Terms, by operation of law or otherwise, without Carbon's prior
-              written consent. Any attempt by you to assign or transfer these
-              Terms without such consent will be null and of no effect. Carbon
-              may assign or transfer these Terms, at its sole discretion,
-              without restriction. Subject to the foregoing, these Terms will
-              bind and inure to the benefit of the parties, their successors and
-              permitted assigns. Unless a person or entity is explicitly
-              identified as a third party beneficiary to these Terms, these
-              Terms do not and are not intended to confer any rights or remedies
-              upon any person or entity other than the parties.
-            </li>
-            <li>
-              <strong>Severability.</strong> If for any reason an arbitrator or
-              a court of competent jurisdiction finds any provision of these
-              Terms invalid or unenforceable, that provision will be enforced to
-              the maximum extent permissible and the other provisions of these
-              Terms will remain in full force and effect.
-            </li>
-            <li>
-              <strong>Governing Law; Venue.</strong> The laws of the State of
-              Delaware, without reference to its choice or law or conflict of
-              law rules or principles, shall govern these Terms and any dispute
-              of any sort that might arise between you and Carbon with respect
-              to these Terms. Notwithstanding the foregoing, you acknowledge
-              that since your access and use of the Platform is on behalf of one
-              or more Organizations and subject to the Organization Agreements,
-              any dispute arising out of your use of the Platform shall be
-              handled in accordance with the dispute resolution process set
-              forth in the applicable Organization Agreements.
-            </li>
-            <li>
-              <strong>Entire Agreement.</strong> These Terms constitute the
-              entire agreement between you and Carbon regarding your use of the
-              Platform, and supersede all prior written or oral agreements other
-              than the Organization Agreements.
-            </li>
-            <li>
-              <strong>Contact Us.</strong> If you have any questions about the
-              Platform, please do not hesitate to contact us at
-              info@carbonos.dev.
-            </li>
-          </ol>
+          </ul>
+
+          <h3>Analytics</h3>
+          <p>
+            We may use third-party Service Providers to monitor and analyze the
+            use of our Service.
+          </p>
+
+          <h3>No Use By Minors</h3>
+          <p>
+            Service is intended only for access and use by individuals at least
+            eighteen (18) years old. By accessing or using any of Company, you
+            warrant and represent that you are at least eighteen (18) years of
+            age and with the full authority, right, and capacity to enter into
+            this agreement and abide by all of the terms and conditions of
+            Terms. If you are not at least eighteen (18) years old, you are
+            prohibited from both the access and usage of Service.
+          </p>
+
+          <h3>Accounts</h3>
+          <p>
+            When you create an account with us, you guarantee that you are above
+            the age of 18, and that the information you provide us is accurate,
+            complete, and current at all times. Inaccurate, incomplete, or
+            obsolete information may result in the immediate termination of your
+            account on Service.
+          </p>
+
+          <p>
+            You are responsible for maintaining the confidentiality of your
+            account and password, including but not limited to the restriction
+            of access to your computer and/or account. You agree to accept
+            responsibility for any and all activities or actions that occur
+            under your account and/or password, whether your password is with
+            our Service or a third-party service. You must notify us immediately
+            upon becoming aware of any breach of security or unauthorized use of
+            your account.
+          </p>
+
+          <p>
+            You may not use as a username the name of another person or entity
+            or that is not lawfully available for use, a name or trademark that
+            is subject to any rights of another person or entity other than you,
+            without appropriate authorization. You may not use as a username any
+            name that is offensive, vulgar or obscene.
+          </p>
+
+          <p>
+            We reserve the right to refuse service, terminate accounts, remove
+            or edit content, or cancel orders in our sole discretion.
+          </p>
+
+          <h3>Intellectual Property</h3>
+          <p>
+            Service and its original content (excluding Content provided by
+            users), features and functionality are and will remain the exclusive
+            property of Carbon Manufacturing Systems Corporation and its
+            licensors. Service is protected by copyright, trademark, and other
+            laws of foreign countries. Our trademarks and trade dress may not be
+            used in connection with any product or service without the prior
+            written consent of Carbon Manufacturing Systems Corporation.
+          </p>
+
+          <h3>Copyright Policy</h3>
+          <p>
+            We respect the intellectual property rights of others. It is our
+            policy to respond to any claim that Content posted on Service
+            infringes on the copyright or other intellectual property rights
+            ("Infringement") of any person or entity.
+          </p>
+
+          <p>
+            If you are a copyright owner, or authorized on behalf of one, and
+            you believe that the copyrighted work has been copied in a way that
+            constitutes copyright infringement, please submit your claim via
+            email to brad@carbonos.dev, with the subject line: "Copyright
+            Infringement" and include in your claim a detailed description of
+            the alleged Infringement.
+          </p>
+
+          <p>
+            You may be held accountable for damages (including costs and
+            attorneys' fees) for misrepresentation or bad-faith claims on the
+            infringement of any Content found on and/or through Service on your
+            copyright.
+          </p>
+
+          <h3>Error Reporting & Feedback</h3>
+          <p>
+            You may provide us directly at brad@carbonos.dev with information
+            and feedback concerning errors, suggestions for improvements, ideas,
+            problems, complaints, and other matters related to our Service
+            ("Feedback"). You acknowledge and agree that: (i) you shall not
+            retain, acquire or assert any intellectual property right or other
+            right, title or interest in or to the Feedback; (ii) Company may
+            have development ideas similar to the Feedback; (iii) Feedback does
+            not contain confidential information or proprietary information from
+            you or any third party; and (iv) Company is not under any obligation
+            of confidentiality with respect to the Feedback. In the event the
+            transfer of the ownership to the Feedback is not possible due to
+            applicable mandatory laws, you grant Company and its affiliates an
+            exclusive, transferable, irrevocable, free-of-charge,
+            sub-licensable, unlimited and perpetual right to use (including
+            copy, modify, create derivative works, publish, distribute and
+            commercialize) Feedback in any manner and for any purpose.
+          </p>
+
+          <h3>Links To Other Web Sites</h3>
+          <p>
+            Our Service may contain links to third party web sites or services
+            that are not owned or controlled by Carbon Manufacturing Systems
+            Corporation.
+          </p>
+
+          <p>
+            Carbon Manufacturing Systems Corporation has no control over, and
+            assumes no responsibility for the content, privacy policies, or
+            practices of any third party web sites or services. We do not
+            warrant the offerings of any of these entities/individuals or their
+            websites.
+          </p>
+
+          <p>
+            YOU ACKNOWLEDGE AND AGREE THAT CARBON MANUFACTURING SYSTEMS
+            CORPORATION SHALL NOT BE RESPONSIBLE OR LIABLE, DIRECTLY OR
+            INDIRECTLY, FOR ANY DAMAGE OR LOSS CAUSED OR ALLEGED TO BE CAUSED BY
+            OR IN CONNECTION WITH USE OF OR RELIANCE ON ANY SUCH CONTENT, GOODS
+            OR SERVICES AVAILABLE ON OR THROUGH ANY SUCH THIRD PARTY WEB SITES
+            OR SERVICES.
+          </p>
+
+          <p>
+            WE STRONGLY ADVISE YOU TO READ THE TERMS OF SERVICE AND PRIVACY
+            POLICIES OF ANY THIRD PARTY WEB SITES OR SERVICES THAT YOU VISIT.
+          </p>
+
+          <h3>Disclaimer of Warranty</h3>
+          <p>
+            THESE SERVICES ARE PROVIDED BY COMPANY ON AN "AS IS" AND "AS
+            AVAILABLE" BASIS. COMPANY MAKES NO REPRESENTATIONS OR WARRANTIES OF
+            ANY KIND, EXPRESS OR IMPLIED, AS TO THE OPERATION OF THEIR SERVICES,
+            OR THE INFORMATION, CONTENT OR MATERIALS INCLUDED THEREIN. YOU
+            EXPRESSLY AGREE THAT YOUR USE OF THESE SERVICES, THEIR CONTENT, AND
+            ANY SERVICES OR ITEMS OBTAINED FROM US IS AT YOUR SOLE RISK.
+          </p>
+
+          <p>
+            NEITHER COMPANY NOR ANY PERSON ASSOCIATED WITH COMPANY MAKES ANY
+            WARRANTY OR REPRESENTATION WITH RESPECT TO THE COMPLETENESS,
+            SECURITY, RELIABILITY, QUALITY, ACCURACY, OR AVAILABILITY OF THE
+            SERVICES. WITHOUT LIMITING THE FOREGOING, NEITHER COMPANY NOR ANYONE
+            ASSOCIATED WITH COMPANY REPRESENTS OR WARRANTS THAT THE SERVICES,
+            THEIR CONTENT, OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE
+            SERVICES WILL BE ACCURATE, RELIABLE, ERROR-FREE, OR UNINTERRUPTED,
+            THAT DEFECTS WILL BE CORRECTED, THAT THE SERVICES OR THE SERVER THAT
+            MAKES IT AVAILABLE ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS
+            OR THAT THE SERVICES OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE
+            SERVICES WILL OTHERWISE MEET YOUR NEEDS OR EXPECTATIONS.
+          </p>
+
+          <p>
+            COMPANY HEREBY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS
+            OR IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING BUT NOT LIMITED TO
+            ANY WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT, AND FITNESS FOR
+            PARTICULAR PURPOSE.
+          </p>
+
+          <p>
+            THE FOREGOING DOES NOT AFFECT ANY WARRANTIES WHICH CANNOT BE
+            EXCLUDED OR LIMITED UNDER APPLICABLE LAW.
+          </p>
+
+          <h3>Limitation of Liability</h3>
+          <p>
+            EXCEPT AS PROHIBITED BY LAW, YOU WILL HOLD US AND OUR OFFICERS,
+            DIRECTORS, EMPLOYEES, AND AGENTS HARMLESS FOR ANY INDIRECT,
+            PUNITIVE, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGE, HOWEVER IT
+            ARISES (INCLUDING ATTORNEYS' FEES AND ALL RELATED COSTS AND EXPENSES
+            OF LITIGATION AND ARBITRATION, OR AT TRIAL OR ON APPEAL, IF ANY,
+            WHETHER OR NOT LITIGATION OR ARBITRATION IS INSTITUTED), WHETHER IN
+            AN ACTION OF CONTRACT, NEGLIGENCE, OR OTHER TORTIOUS ACTION, OR
+            ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT, INCLUDING
+            WITHOUT LIMITATION ANY CLAIM FOR PERSONAL INJURY OR PROPERTY DAMAGE,
+            ARISING FROM THIS AGREEMENT AND ANY VIOLATION BY YOU OF ANY FEDERAL,
+            STATE, OR LOCAL LAWS, STATUTES, RULES, OR REGULATIONS, EVEN IF
+            COMPANY HAS BEEN PREVIOUSLY ADVISED OF THE POSSIBILITY OF SUCH
+            DAMAGE. EXCEPT AS PROHIBITED BY LAW, IF THERE IS LIABILITY FOUND ON
+            THE PART OF COMPANY, IT WILL BE LIMITED TO THE AMOUNT PAID FOR THE
+            PRODUCTS AND/OR SERVICES, AND UNDER NO CIRCUMSTANCES WILL THERE BE
+            CONSEQUENTIAL OR PUNITIVE DAMAGES. SOME STATES DO NOT ALLOW THE
+            EXCLUSION OR LIMITATION OF PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
+            DAMAGES, SO THE PRIOR LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.
+          </p>
+
+          <h3>Termination</h3>
+          <p>
+            We may terminate or suspend your account and bar access to Service
+            immediately, without prior notice or liability, under our sole
+            discretion, for any reason whatsoever and without limitation,
+            including but not limited to a breach of Terms.
+          </p>
+
+          <p>
+            If you wish to terminate your account, you may simply discontinue
+            using Service.
+          </p>
+
+          <p>
+            All provisions of Terms which by their nature should survive
+            termination shall survive termination, including, without
+            limitation, ownership provisions, warranty disclaimers, indemnity
+            and limitations of liability.
+          </p>
+
+          <h3>Governing Law</h3>
+          <p>
+            These Terms shall be governed and construed in accordance with the
+            laws of Delaware without regard to its conflict of law provisions.
+          </p>
+
+          <p>
+            Our failure to enforce any right or provision of these Terms will
+            not be considered a waiver of those rights. If any provision of
+            these Terms is held to be invalid or unenforceable by a court, the
+            remaining provisions of these Terms will remain in effect. These
+            Terms constitute the entire agreement between us regarding our
+            Service and supersede and replace any prior agreements we might have
+            had between us regarding Service.
+          </p>
+
+          <h3>Changes To Service</h3>
+          <p>
+            We reserve the right to withdraw or amend our Service, and any
+            service or material we provide via Service, in our sole discretion
+            without notice. We will not be liable if for any reason all or any
+            part of Service is unavailable at any time or for any period. From
+            time to time, we may restrict access to some parts of Service, or
+            the entire Service, to users, including registered users.
+          </p>
+
+          <h3>Amendments To Terms</h3>
+          <p>
+            We may amend Terms at any time by posting the amended terms on this
+            site. It is your responsibility to review these Terms periodically.
+          </p>
+
+          <p>
+            Your continued use of the Platform following the posting of revised
+            Terms means that you accept and agree to the changes. You are
+            expected to check this page frequently so you are aware of any
+            changes, as they are binding on you.
+          </p>
+
+          <p>
+            By continuing to access or use our Service after any revisions
+            become effective, you agree to be bound by the revised terms. If you
+            do not agree to the new terms, you are no longer authorized to use
+            Service.
+          </p>
+
+          <h3>Waiver And Severability</h3>
+          <p>
+            No waiver by Company of any term or condition set forth in Terms
+            shall be deemed a further or continuing waiver of such term or
+            condition or a waiver of any other term or condition, and any
+            failure of Company to assert a right or provision under Terms shall
+            not constitute a waiver of such right or provision.
+          </p>
+
+          <p>
+            If any provision of Terms is held by a court or other tribunal of
+            competent jurisdiction to be invalid, illegal or unenforceable for
+            any reason, such provision shall be eliminated or limited to the
+            minimum extent such that the remaining provisions of Terms will
+            continue in full force and effect.
+          </p>
+
+          <h3>Acknowledgement</h3>
+          <p>
+            BY USING SERVICE OR OTHER SERVICES PROVIDED BY US, YOU ACKNOWLEDGE
+            THAT YOU HAVE READ THESE TERMS OF SERVICE AND AGREE TO BE BOUND BY
+            THEM.
+          </p>
+
+          <h3>Contact Us</h3>
+          <p>
+            If you have any questions about these terms of service, please
+            contact us by email at brad@carbonos.dev.
+          </p>
         </div>
       </div>
     </div>
