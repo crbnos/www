@@ -206,7 +206,7 @@ function Features() {
 
 function Manufacturing() {
   return (
-    <section className="pb-24">
+    <section className="lg:pb-24">
       <div className="mx-auto px-4 bg-muted rounded-xl max-w-[1380px] w-full py-24">
         <div className="container">
           <div className="flex flex-col gap-8">
@@ -449,20 +449,21 @@ function Reviews() {
 
 function Memo() {
   return (
-    <section className="pt-36 pb-24 px-4">
-      <div className="max-w-4xl mx-auto flex flex-col gap-4 rounded-lg border-[0.5px] bg-card p-4 shadow md:p-8 lg:p-12">
+    <section className="md:py-8 lg:pt-36 lg:pb-24 md:px-4">
+      <div className="max-w-4xl mx-auto flex flex-col gap-4 rounded-lg border-[0.5px] bg-card px-8 shadow py-12 lg:px-12 lg:py-12">
         <div className="mb-4 flex flex-col gap-1.5 md:mb-6 lg:mb-8 tracking-tight">
           <p className="dark:text-muted-foreground font-mono uppercase text-xs font-light">
             Founder memo
           </p>
-          <p className="dark:text-muted-foreground font-medium">
+          <p className="font-semibold tracking-tight">
             Carbon Manufacturing Systems Corp.
           </p>
         </div>
 
         <p className="leading-[1.8] text-foreground">
           We built Carbon after nearly a decade of building end-to-end
-          manufacturing systems with off-the-shelf software. We realized that:
+          manufacturing systems with off-the-shelf software. Over the years, we
+          noticed a few things:
         </p>
 
         <ul className="ml-4 list-disc">
@@ -478,13 +479,15 @@ function Memo() {
         </ul>
 
         <p className="leading-[1.8] text-foreground">
-          As technical people move back to manufacturing, we feel like Carbon is
-          the perfect foundation for tech-native manufacturers. And ERP is just
-          the beginning. Our goal is to build the community-powered
-          orchestration layer for automated manufacturing.
+          As technical people move back to manufacturing, we believe Carbon will
+          be the perfect foundation for tech-native manufacturers building
+          end-to-end systems. We're throwing out all the bullsh*t, and building
+          the system we would have wanted.
         </p>
         <p className="leading-[1.8] text-foreground">
-          So if you're ready for a better way to work, we'd love for you to join
+          And ERP is just the beginning. Our goal is to build the
+          community-powered orchestration layer for automated manufacturing. So
+          if you're ready for a better way to build, we'd love for you to join
           us.
         </p>
 
@@ -497,7 +500,7 @@ function Memo() {
             <img
               alt="Brad Barbin"
               loading="lazy"
-              className="size-14 rounded-full"
+              className="size-14 rounded-lg"
               src="https://avatars.githubusercontent.com/u/64510427?v=4"
             />
             <div className="flex flex-col">

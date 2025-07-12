@@ -40,7 +40,9 @@ export function Footer() {
             <div className="col-span-2 -mx-1 flex flex-wrap gap-2 sm:flex-col">
               {[
                 { href: "/brand", text: "Brand Assets" },
+                { href: "/learn", text: "Blog" },
                 { href: "/contact", text: "Contact" },
+                { href: "/sales", text: "Sales" },
               ].map((link) => (
                 <Link
                   key={link.href}
@@ -58,12 +60,15 @@ export function Footer() {
             </p>
             <div className="col-span-2 -mx-1 flex flex-wrap gap-2 sm:flex-col">
               {[
-                { href: "/learn", text: "Learn" },
                 {
                   href: "https://github.com/crbnos/carbon/blob/main/LICENSE",
                   text: "License",
                 },
                 { href: "/pricing", text: "Pricing" },
+                {
+                  href: "https://github.com/crbnos/carbon",
+                  text: "Source Code",
+                },
               ].map((link) => (
                 <Link
                   key={link.href}
