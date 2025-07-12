@@ -18,10 +18,17 @@ import type {
 } from "@vercel/remix";
 import { ReactNode, useState } from "react";
 
-import { Fingerprint, Moon, Play, Sun } from "lucide-react";
+import { Github, Moon, Play, Sun } from "lucide-react";
 import Tailwind from "~/styles/tailwind.css?url";
 import { Footer } from "./components/footer";
 import { Button } from "./components/ui/button";
+import { DiscordLogo } from "./components/ui/discord-logo";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "./components/ui/dropdown-menu";
 import {
   defaultAnswers,
   FormAnswers,
@@ -189,17 +196,35 @@ function Document({
                     Pricing
                   </Link>
                 </Button>
-                <Button variant="ghost" className="cursor-pointer" asChild>
-                  <a href="https://github.com/crbnos/carbon">Developers</a>
-                </Button>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="ghost" className="cursor-pointer">
+                      Developers
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent>
+                    <DropdownMenuItem asChild>
+                      <a
+                        href="https://github.com/crbnos/carbon"
+                        className="flex items-center gap-2"
+                      >
+                        <Github className="size-4" />
+                        GitHub
+                      </a>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                      <a
+                        href="https://discord.gg/yGUJWhNqzy"
+                        className="flex items-center gap-2"
+                      >
+                        <DiscordLogo />
+                        Discord
+                      </a>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
                 <Button variant="ghost" asChild className="cursor-pointer ">
                   <Link to="/sales">Enterprise</Link>
-                </Button>
-                <Button variant="ghost" className="cursor-pointer" asChild>
-                  <a href="https://app.carbonos.dev">
-                    Login
-                    <Fingerprint className="size-4" />
-                  </a>
                 </Button>
               </div>
               <fetcher.Form action={path.to.root} method="post">
@@ -220,9 +245,12 @@ function Document({
               <Button
                 variant="default"
                 className="cursor-pointer hidden sm:flex"
+                asChild
               >
-                Start Now
-                <Play className="size-4" />
+                <a href="https://app.carbonos.dev">
+                  Start Now
+                  <Play className="size-4" />
+                </a>
               </Button>
             </div>
           </div>

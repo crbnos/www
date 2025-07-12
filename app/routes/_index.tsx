@@ -1,95 +1,108 @@
 import { Link } from "@remix-run/react";
+import { Safari } from "components/magicui/safari";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   LucideArrowLeft,
   LucideArrowRight,
-  LucideBookOpen,
   LucideCheckCircle,
   LucideChevronRight,
+  LucidePhone,
   LucidePlay,
 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "~/components/ui/button";
-import { useIsMobile } from "~/hooks/useIsMobile";
+import { DiscordLogo } from "~/components/ui/discord-logo";
 import { cn } from "~/lib/utils";
 
 export default function Route() {
-  const isMobile = useIsMobile();
   return (
     <>
       <Hero />
       <Features />
       <Manufacturing />
       <Reviews />
-      <Quality />
+      <Memo />
       <CTA />
     </>
   );
 }
 
+const customers = [
+  {
+    name: "Black Cat Labs",
+    logo: "/logos/black-cat-labs.png",
+    url: "https://blackcatlabs.xyz",
+  },
+  {
+    name: "Harp Engineering",
+    logo: "/logos/harp.png",
+    url: "https://www.headco.net/",
+  },
+  {
+    name: "Northwest Production Source",
+    logo: "/logos/northwest.png",
+    url: "https://nwprosource.com",
+  },
+  {
+    name: "Minimal",
+    logo: "/logos/minimal.svg",
+    url: "https://minimalx.com",
+  },
+];
+
 const reviews = [
   {
-    light: "66f2484c3bc5dc31462dfeed_Sponsor%20Image%2001.svg",
-    dark: "6722099eb6b0484ea2a3b94a_Group%20284.svg",
+    logo: "/logos/minimal.svg",
+    face: "/faces/liam.jpeg",
     review:
-      "Connecting my bank accounts was a breeze, allowing me to see all my financial data in a single view. The budgeting tools are solid, and the real-time updates help me monitor my expenses with ease. The support team is exceptional—prompt and extremely helpful. I can’t imagine managing my finances without it now",
-    author: "John Doe",
-    authorTitle: "CEO, Company",
+      "As an engineering start-up pushing the boundaries in manufacturing assembly, we needed more than just another MRP/MES system. Carbon delivered - combining deep functionality with a refreshingly open, API-first design. It integrates seamlessly with our CAD tools, scales effortlessly, has fantastic UX and offers exceptional value.",
+    author: "Liam Sill",
+    authorTitle: "CTO, Minimal",
   },
   {
-    light: "66f2484c6b8fac1b7be52a7e_Sponsor%20Image%2002.svg",
-    dark: "6722099fa63e6899c0672211_relax.co.svg",
+    logo: "/logos/black-cat-mark.png",
+    face: "/faces/anthan.jpg",
     review:
-      "Connecting my bank accounts was a breeze, allowing me to see all my financial data in a single view. The budgeting tools are solid, and the real-time updates help me monitor my expenses with ease. The support team is exceptional—prompt and extremely helpful. I can’t imagine managing my finances without it now",
-    author: "John Doe",
-    authorTitle: "CEO, Company",
+      "We've been using Carbon for the last 6 months to grow our sheet metal and fabrication business, and I feel like it's a platform that will be able to grow with us over the next 10-15 years. If you're growing a job shop, I highly recommend it. The customer support is super responsive, the platform is easy to use, and the value far outweighs the cost.",
+    author: "Anthan Rajaratnam",
+    authorTitle: "CEO, Black Cat Labs, AS9100D",
   },
   {
-    light: "66f2484ca36d00d0a86f6245_Sponsor%20Image%2003.svg",
-    dark: "672209af4f48678fa4f439f6_Group%20280.svg",
+    logo: "/logos/fabworks.svg",
+    face: "/faces/jonathan.jpeg",
     review:
-      "Connecting my bank accounts was a breeze, allowing me to see all my financial data in a single view. The budgeting tools are solid, and the real-time updates help me monitor my expenses with ease. The support team is exceptional—prompt and extremely helpful. I can’t imagine managing my finances without it now",
-    author: "John Doe",
-    authorTitle: "CEO, Company",
-  },
-  {
-    light: "66f2484c82c6e20bbc6c80df_Sponsor%20Image%2006.svg",
-    dark: "6722099ffc6cc308200f7947_Group%20278.svg",
-    review:
-      "Connecting my bank accounts was a breeze, allowing me to see all my financial data in a single view. The budgeting tools are solid, and the real-time updates help me monitor my expenses with ease. The support team is exceptional—prompt and extremely helpful. I can’t imagine managing my finances without it now",
-    author: "John Doe",
-    authorTitle: "CEO, Company",
+      "Beautiful piece of software. I think if this was around 2 years ago when we built fabworks.com I would have heavily considered building our custom ERP/quoting site as a thin layer on top of this. All these other ERPs like Fulcrum do not do a good job of letting you extend them, and I think with more and more shops looking to copy what we/SendCutSend/OSH do, they will be looking for solutions like this.",
+    author: "Johnathan Sessa",
+    authorTitle: "CEO, Fabworks",
   },
 ];
 
 function Hero() {
   return (
     <section className="py-0">
-      <div className="bg-[linear-gradient(#f7f5ff_35.67%,#c9fff8_88.95%)] dark:bg-[linear-gradient(to_bottom_right,#0e0338_35.67%,#1b433e_88.95%)] xl:rounded-xl max-w-[1380px] mx-auto pt-20 pb-[204px]">
+      <div className="bg-[linear-gradient(to_bottom_right,#f7f5ff_35.67%,#c9fff8_88.95%)] dark:bg-[linear-gradient(to_bottom_right,#0e0338_35.67%,#1b433e_88.95%)] xl:rounded-xl max-w-[1380px] mx-auto py-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col justify-start items-center gap-8">
-            <Button variant="outline">
-              <DiscordLogo />
-              Join our Discord community{" "}
-              <LucideChevronRight className="text-muted-foreground size-3" />
-            </Button>
-            <h2 className="font-display text-foreground text-balance mx-auto  max-w-3xl text-center font-medium tracking-tight leading-[125%] text-5xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-[4.5rem]">
-              The open source{" "}
+            <DiscordButton />
+            <h2 className="font-display text-foreground text-balance mx-auto  max-w-3xl text-center font-medium tracking-tight leading-[115%] text-5xl sm:text-7xl lg:text-[5rem] xl:text-[6rem]">
+              The open-source{" "}
               <span className="text-secondary">manufacturing ERP</span>
             </h2>
             <p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-[780px] text-center font-medium tracking-tighter text-base md:text-lg lg:text-xl">
-              Carbon is an open manufacturing platform that combines ERP, MES,
+              Carbon is a modern manufacturing platform that combines ERP, MES,
               and QMS into a single, unified, API-first system.
             </p>
             <div className="flex gap-2">
-              <Button variant="secondary" size="xl">
-                Start Now
-                <LucidePlay />
+              <Button variant="secondary" size="xl" asChild>
+                <a href="https://app.carbonos.dev">
+                  Start Now
+                  <LucidePlay />
+                </a>
               </Button>
               <Button variant="ghost" size="xl" asChild>
                 <Link to="/sales">
-                  <LucideBookOpen />
-                  Book a Demo
+                  <LucidePhone />
+                  Talk to Us
                 </Link>
               </Button>
             </div>
@@ -100,19 +113,14 @@ function Hero() {
               </p>
             </div>
 
-            <div className="flex flex-col md:flex-row dark:hidden items-center justify-center gap-8">
-              {reviews.map((review) => (
-                <img
-                  src={`https://cdn.prod.website-files.com/66da014bfb6cdbedcafef616/${review.light}`}
-                />
-              ))}
-            </div>
-
-            <div className="hidden dark:flex flex-col md:flex-row items-center justify-center gap-8">
-              {reviews.map((review) => (
-                <img
-                  src={`https://cdn.prod.website-files.com/66da014bfb6cdbedcafef616/${review.dark}`}
-                />
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+              {customers.map((customer) => (
+                <a href={customer.url} target="_blank">
+                  <img
+                    src={customer.logo}
+                    className="w-24 h-auto dark:invert"
+                  />
+                </a>
               ))}
             </div>
           </div>
@@ -125,13 +133,13 @@ function Hero() {
 function Features() {
   return (
     <section className="mt-[-105px] pb-[140px]">
-      <div className="flex gap-8 container max-w-5xl mx-auto px-4">
-        <div className="flex flex-col gap-8 mt-[205px] flex-grow max-w-4xl mx-auto pl-8 lg:pl-0">
+      <div className="flex gap-8 container max-w-[1380px] mx-auto px-4">
+        <div className="flex flex-col gap-8 mt-[205px] flex-grow max-w-[1380px] mx-auto pl-8">
           <h3 className="text-muted-foreground uppercase text-sm leading-[140%] tracking-tighter">
             Features
           </h3>
           <h4 className="font-display text-foreground text-balance text-left font-medium tracking-tight leading-[115%] text-4xl lg:text-5xl xl:text-6xl -mt-4">
-            The modern ERP and MES alternative
+            Simplify complex manufacturing
           </h4>
           <p className="text-muted-foreground dark:text-foreground text-balance text-left font-medium tracking-tighter text-lg">
             Escape legacy software with a flexible, AI-powered platform designed
@@ -164,25 +172,31 @@ function Features() {
             </div>
           </div>
           <div className="flex gap-4">
-            <Button variant="secondary" size="xl">
-              Start Now
-              <LucidePlay />
+            <Button variant="secondary" size="xl" asChild>
+              <a href="https://app.carbonos.dev">
+                Start Now
+                <LucidePlay />
+              </a>
             </Button>
 
             <Button variant="outline" size="xl" asChild>
               <Link to="/sales">
-                <LucideBookOpen />
-                Book a Demo
+                <LucidePhone />
+                Talk to Us
               </Link>
             </Button>
           </div>
         </div>
-        <div className="max-w-[416px] hidden lg:flex">
-          <img
-            className="feature-v2-image"
-            src="https://cdn.prod.website-files.com/66da014bfb6cdbedcafef616/672203cd9790abdc56c3477b_iPhone-top.png"
-            alt="Feature Image"
-            srcSet="https://cdn.prod.website-files.com/66da014bfb6cdbedcafef616/672203cd9790abdc56c3477b_iPhone-top-p-500.png 500w, https://cdn.prod.website-files.com/66da014bfb6cdbedcafef616/672203cd9790abdc56c3477b_iPhone-top-p-800.png 800w, https://cdn.prod.website-files.com/66da014bfb6cdbedcafef616/672203cd9790abdc56c3477b_iPhone-top-p-1080.png 1080w, https://cdn.prod.website-files.com/66da014bfb6cdbedcafef616/672203cd9790abdc56c3477b_iPhone-top.png 1664w"
+        <div className="hidden lg:flex mt-[225px] pr-8 hover:scale-110 transition-all duration-300">
+          <Safari
+            url="https://app.carbonos.dev"
+            className="size-full dark:hidden"
+            imageSrc="/screenshots/sales-orders-light.jpeg"
+          />
+          <Safari
+            url="https://app.carbonos.dev"
+            className="size-full hidden dark:block"
+            imageSrc="/screenshots/sales-orders-dark.jpeg"
           />
         </div>
       </div>
@@ -197,13 +211,12 @@ function Manufacturing() {
         <div className="container">
           <div className="flex flex-col gap-8">
             <h2 className="font-display text-balance mx-auto max-w-2xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-              Drive growth and efficiency with Carbon
+              Drive growth and efficiency
             </h2>
 
             <p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter text-base">
-              Leave the spreadsheets and outdated software behind. The Carbon
-              platform gives you the control and clarity you need to run a
-              better business.
+              Leave the spreadsheets and outdated software behind. Carbon gives
+              you the control and clarity you need to run a better business.
             </p>
           </div>
           <div className="flex flex-col gap-8 mt-14 mb-12">
@@ -310,14 +323,16 @@ function Manufacturing() {
           </div>
         </div>
         <div className="flex container items-center justify-center gap-4">
-          <Button variant="secondary" size="xl">
-            Start Now
-            <LucidePlay />
+          <Button variant="secondary" size="xl" asChild>
+            <a href="https://app.carbonos.dev">
+              Start Now
+              <LucidePlay />
+            </a>
           </Button>
           <Button variant="outline" size="xl" asChild>
             <Link to="/sales">
-              <LucideBookOpen />
-              Book a Demo
+              <LucidePhone />
+              Talk to Us
             </Link>
           </Button>
         </div>
@@ -327,7 +342,7 @@ function Manufacturing() {
 }
 
 function Reviews() {
-  const [currentReview, setCurrentReview] = useState(2);
+  const [currentReview, setCurrentReview] = useState(0);
 
   const onPrev = () => {
     setCurrentReview((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
@@ -340,8 +355,8 @@ function Reviews() {
   return (
     <section className="bg-secondary text-secondary-foreground bg-[url('/reviews.webp')] bg-[0_0] bg-no-repeat bg-cover py-20">
       <div className="container flex flex-col gap-12 mx-auto px-4">
-        <h2 className="font-display text-balance mx-auto max-w-4xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-          Reviews from our customers
+        <h2 className="font-display text-balance mx-auto max-w-4xl text-center font-medium tracking-tight leading-[115%] text-5xl lg:text-7xl">
+          Builders ❤️ Carbon
         </h2>
         <div className="max-w-5xl mx-auto overflow-hidden p-4">
           <div className="flex flex-row items-center justify-center gap-4">
@@ -359,15 +374,15 @@ function Reviews() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.3 }}
-                  className="flex flex-col gap-12 justify-start items-center p-12 w-full"
+                  className="flex flex-col flex-grow gap-12 justify-between h-full items-center p-12 w-full"
                 >
-                  <p className="text-balance text-left font-medium tracking-tighter text-xl md:text-2xl">
+                  <p className="text-balance text-left flex-grow font-medium tracking-tight text-xl md:text-2xl">
                     {reviews[currentReview].review}
                   </p>
                   <div className="flex justify-start w-full">
                     <div className="flex items-center gap-2">
                       <img
-                        src={`https://cdn.prod.website-files.com/66da014bfb6cdbedcafef616/670e25752ad7e046f4fadaaf_image-2.jpg`}
+                        src={reviews[currentReview].face}
                         alt="Avatar"
                         className="size-16 rounded-full"
                       />
@@ -407,10 +422,10 @@ function Reviews() {
               <LucideArrowRight />
             </button>
           </div>
-          <div className="hidden lg:flex dark:hidden w-full items-center justify-center">
+          <div className="hidden lg:flex w-full items-center justify-center">
             {reviews.map((image, index) => (
               <div
-                key={image.dark}
+                key={image.logo}
                 role="button"
                 onClick={() => setCurrentReview(index)}
                 className={cn(
@@ -419,27 +434,8 @@ function Reviews() {
                 )}
               >
                 <img
-                  className="h-6 w-auto"
-                  src={`https://cdn.prod.website-files.com/66da014bfb6cdbedcafef616/${image.dark}`}
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-          <div className="hidden lg:dark:flex w-full items-center justify-center">
-            {reviews.map((image, index) => (
-              <div
-                key={image.light}
-                role="button"
-                onClick={() => setCurrentReview(index)}
-                className={cn(
-                  "cursor-pointer flex-1 flex items-center justify-center pb-8 border-b border-secondary-foreground opacity-50 hover:opacity-80 transition-opacity duration-200",
-                  index === currentReview && "opacity-100"
-                )}
-              >
-                <img
-                  className="h-6 w-auto"
-                  src={`https://cdn.prod.website-files.com/66da014bfb6cdbedcafef616/${image.light}`}
+                  className="h-6 w-auto invert dark:invert-0"
+                  src={image.logo}
                   loading="lazy"
                 />
               </div>
@@ -451,15 +447,67 @@ function Reviews() {
   );
 }
 
-function Quality() {
+function Memo() {
   return (
-    <section className="py-36">
-      <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-display text-balance mx-auto max-w-2xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl pt-20">
-            ISO 9001 and AS9100{" "}
-            <span className="text-muted-foreground">compliance</span>
-          </h2>
+    <section className="pt-36 pb-24 px-4">
+      <div className="max-w-4xl mx-auto flex flex-col gap-4 rounded-lg border-[0.5px] bg-card p-4 shadow md:p-8 lg:p-12">
+        <div className="mb-4 flex flex-col gap-1.5 md:mb-6 lg:mb-8 tracking-tight">
+          <p className="dark:text-muted-foreground font-mono uppercase text-xs font-light">
+            Founder memo
+          </p>
+          <p className="dark:text-muted-foreground font-medium">
+            Carbon Manufacturing Systems Corp.
+          </p>
+        </div>
+
+        <p className="leading-[1.8] text-foreground">
+          We built Carbon after nearly a decade of building end-to-end
+          manufacturing systems with off-the-shelf software. We realized that:
+        </p>
+
+        <ul className="ml-4 list-disc">
+          <li className="pl-2 leading-[1.8] text-foreground">
+            There is no "perfect ERP" because each company is unique
+          </li>
+          <li className="pl-2 leading-[1.8] text-foreground">
+            People need to be able to extend the platform to fit their needs
+          </li>
+          <li className="pl-2 leading-[1.8] text-foreground">
+            Great systems are built on open-source foundations
+          </li>
+        </ul>
+
+        <p className="leading-[1.8] text-foreground">
+          As technical people move back to manufacturing, we feel like Carbon is
+          the perfect foundation for tech-native manufacturers. And ERP is just
+          the beginning. Our goal is to build the community-powered
+          orchestration layer for automated manufacturing.
+        </p>
+        <p className="leading-[1.8] text-foreground">
+          So if you're ready for a better way to work, we'd love for you to join
+          us.
+        </p>
+
+        <div className="mt-8 flex flex-col gap-4">
+          <a
+            target="_blank"
+            className="mt-4 flex items-center gap-4 md:mt-6 lg:mt-8"
+            href="https://x.com/barbinbrad"
+          >
+            <img
+              alt="Brad Barbin"
+              loading="lazy"
+              className="size-14 rounded-full"
+              src="https://avatars.githubusercontent.com/u/64510427?v=4"
+            />
+            <div className="flex flex-col">
+              <p className="dark:text-tertiary text-foreground">Brad Barbin</p>
+              <p className="dark:text-tertiary text-foreground">
+                Co-founder &amp; CEO
+              </p>
+            </div>
+          </a>
+          <DiscordButton />
         </div>
       </div>
     </section>
@@ -469,24 +517,25 @@ function Quality() {
 function CTA() {
   return (
     <section className="py-24">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col gap-8 bg-muted dark:bg-muted bg-[url('/cta.webp')] dark:bg-none bg-[0_0] bg-no-repeat bg-cover rounded-xl py-24 justify-center items-center">
+      <div className="container max-w-4xl mx-auto px-4">
+        <div className="flex flex-col gap-4 bg-muted dark:bg-muted bg-[url('/cta.webp')] dark:bg-none bg-[0_0] bg-no-repeat bg-cover rounded-xl py-24 justify-center items-center">
           <h2 className="font-display text-balance mx-auto max-w-2xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl ">
-            The only platform that unifies your entire business
+            Build something with Carbon
           </h2>
-          <p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter text-base">
-            From the front office to the shop floor, to custom applications,
-            Carbon provides a single, extensible source of truth.
+          <p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter text-lg">
+            Start your 30-day free trial today
           </p>
-          <div className="flex justify-center gap-4">
-            <Button variant="default" size="xl">
-              Start Now
-              <LucidePlay />
+          <div className="flex justify-center gap-4 mt-8">
+            <Button variant="default" size="xl" asChild>
+              <a href="https://app.carbonos.dev">
+                Start Now
+                <LucidePlay />
+              </a>
             </Button>
             <Button variant="outline" size="xl" asChild>
               <Link to="/sales">
-                <LucideBookOpen />
-                Book a Demo
+                <LucidePhone />
+                Talk to Us
               </Link>
             </Button>
           </div>
@@ -496,13 +545,16 @@ function CTA() {
   );
 }
 
-function DiscordLogo() {
+function DiscordButton() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 12">
-      <path
-        d="M 12.708 0.993 C 11.74 0.538 10.719 0.214 9.669 0.028 C 9.649 0.024 9.629 0.034 9.62 0.052 C 9.481 0.31 9.354 0.576 9.241 0.848 C 8.094 0.672 6.952 0.672 5.828 0.848 C 5.726 0.597 5.575 0.291 5.443 0.052 C 5.433 0.034 5.414 0.025 5.394 0.028 C 4.344 0.213 3.323 0.538 2.355 0.993 C 2.346 0.997 2.339 1.003 2.335 1.011 C 0.399 3.973 -0.132 6.862 0.128 9.715 C 0.13 9.729 0.137 9.742 0.148 9.751 C 1.425 10.711 2.662 11.294 3.877 11.681 C 3.896 11.687 3.917 11.68 3.929 11.663 C 4.217 11.262 4.472 10.837 4.692 10.393 C 4.698 10.38 4.699 10.366 4.694 10.353 C 4.689 10.34 4.679 10.33 4.666 10.325 C 4.264 10.168 3.874 9.978 3.501 9.757 C 3.487 9.748 3.479 9.734 3.478 9.717 C 3.477 9.701 3.484 9.685 3.496 9.675 C 3.575 9.615 3.652 9.553 3.728 9.49 C 3.741 9.478 3.76 9.476 3.776 9.483 C 6.22 10.626 8.866 10.626 11.281 9.483 C 11.297 9.475 11.316 9.478 11.33 9.489 C 11.405 9.552 11.483 9.615 11.562 9.675 C 11.575 9.685 11.582 9.701 11.581 9.717 C 11.58 9.734 11.571 9.748 11.558 9.757 C 11.185 9.979 10.796 10.169 10.392 10.325 C 10.38 10.33 10.37 10.34 10.365 10.353 C 10.36 10.366 10.361 10.38 10.367 10.393 C 10.59 10.834 10.845 11.259 11.129 11.663 C 11.141 11.68 11.162 11.687 11.181 11.681 C 12.402 11.294 13.639 10.711 14.916 9.751 C 14.927 9.742 14.934 9.729 14.936 9.715 C 15.247 6.417 14.414 3.552 12.728 1.011 C 12.724 1.003 12.717 0.997 12.708 0.993 Z M 5.057 7.978 C 4.321 7.978 3.715 7.286 3.715 6.436 C 3.715 5.587 4.309 4.895 5.057 4.895 C 5.81 4.895 6.411 5.593 6.399 6.436 C 6.399 7.286 5.804 7.978 5.057 7.978 Z M 10.019 7.978 C 9.283 7.978 8.677 7.286 8.677 6.436 C 8.677 5.587 9.271 4.895 10.019 4.895 C 10.772 4.895 11.373 5.593 11.361 6.436 C 11.361 7.286 10.772 7.978 10.019 7.978 Z"
-        fill="rgb(88,101,242)"
-      ></path>
-    </svg>
+    <div>
+      <Button variant="outline" asChild>
+        <a href="https://discord.gg/yGUJWhNqzy" target="_blank">
+          <DiscordLogo className="text-[#5865f2]" />
+          Join our Discord community{" "}
+          <LucideChevronRight className="text-muted-foreground size-3" />
+        </a>
+      </Button>
+    </div>
   );
 }
