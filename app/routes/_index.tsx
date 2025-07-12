@@ -206,7 +206,7 @@ function Features() {
 
 function Manufacturing() {
   return (
-    <section className="lg:pb-24">
+    <section className="xl:pb-24">
       <div className="mx-auto px-4 bg-muted rounded-xl max-w-[1380px] w-full py-24">
         <div className="container">
           <div className="flex flex-col gap-8">
@@ -480,9 +480,9 @@ function Memo() {
 
         <p className="leading-[1.8] text-foreground">
           As technical people move back to manufacturing, we believe Carbon will
-          be the perfect foundation for tech-native manufacturers building
-          end-to-end systems. We're throwing out all the bullsh*t, and building
-          the system we would have wanted.
+          be the perfect foundation for tech-native manufacturers. We're
+          throwing out all the bullsh*t, and building the system we would have
+          wanted.
         </p>
         <p className="leading-[1.8] text-foreground">
           And ERP is just the beginning. Our goal is to build the
@@ -506,7 +506,7 @@ function Memo() {
             <div className="flex flex-col">
               <p className="dark:text-tertiary text-foreground">Brad Barbin</p>
               <p className="dark:text-tertiary text-foreground">
-                Co-founder &amp; CEO
+                Co-founder &amp; CEO 🇺🇸
               </p>
             </div>
           </a>

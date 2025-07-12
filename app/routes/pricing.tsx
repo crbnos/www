@@ -80,7 +80,7 @@ export default function Pricing() {
   return (
     <section
       id="pricing"
-      className="mx-auto flex w-screen max-w-6xl px-6 flex-col gap-8 py-14 md:px-8 min-h-[calc(100dvh-100px)] justify-center items-center"
+      className="mx-auto flex w-screen max-w-7xl px-6 flex-col gap-8 py-14 md:px-8 min-h-[calc(100dvh-100px)] justify-center items-center"
     >
       <div className="flex flex-col gap-4 mx-auto text-center">
         <div>

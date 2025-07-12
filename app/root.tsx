@@ -24,11 +24,14 @@ import { Footer } from "./components/footer";
 import { Button } from "./components/ui/button";
 import { DiscordLogo } from "./components/ui/discord-logo";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "./components/ui/dropdown-menu";
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "./components/ui/navigation-menu";
 import {
   defaultAnswers,
   FormAnswers,
@@ -37,6 +40,7 @@ import {
   WizardForm,
 } from "./components/wizard-form";
 import { useMode } from "./hooks/useMode";
+import { cn } from "./lib/utils";
 import { getMode, setMode } from "./services/mode.server";
 import { path } from "./utils/path";
 
@@ -56,8 +60,6 @@ export async function loader({ request, params }: LoaderFunctionArgs) {
 export async function action({ request }: ActionFunctionArgs) {
   const formData = await request.formData();
   const mode = String(formData.get("mode"));
-
-  console.log(mode);
 
   if (!["light", "dark"].includes(mode)) {
     return json(
@@ -190,43 +192,65 @@ function Document({
               />
             </Link>
             <div className="flex items-center gap-2">
-              <div className="items-center gap-0 hidden md:flex">
-                <Button variant="ghost" asChild className="cursor-pointer ">
-                  <Link prefetch="intent" to="/pricing">
-                    Pricing
-                  </Link>
-                </Button>
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" className="cursor-pointer">
-                      Developers
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent>
-                    <DropdownMenuItem asChild>
-                      <a
-                        href="https://github.com/crbnos/carbon"
-                        className="flex items-center gap-2"
-                      >
-                        <Github className="size-4" />
-                        GitHub
-                      </a>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                      <a
-                        href="https://discord.gg/yGUJWhNqzy"
-                        className="flex items-center gap-2"
-                      >
-                        <DiscordLogo />
-                        Discord
-                      </a>
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-                <Button variant="ghost" asChild className="cursor-pointer ">
-                  <Link to="/sales">Enterprise</Link>
-                </Button>
-              </div>
+              <NavigationMenu className="hidden md:flex">
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle()}
+                      asChild
+                    >
+                      <Link prefetch="intent" to="/pricing">
+                        Pricing
+                      </Link>
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger>Developers</NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <div className="flex flex-col p-3 w-[325px]">
+                        <NavigationMenuLink asChild>
+                          <a
+                            href="https://github.com/crbnos/carbon"
+                            className="flex items-center gap-3 p-3 hover:bg-accent rounded-md"
+                          >
+                            <Github className="size-12 bg-[#333333] text-white dark:bg-white dark:text-[#333333] rounded-lg p-2" />
+                            <div className="flex flex-col gap-0">
+                              <span>GitHub</span>
+                              <span className="text-xs text-muted-foreground">
+                                View our source code and contribute
+                              </span>
+                            </div>
+                          </a>
+                        </NavigationMenuLink>
+                        <NavigationMenuLink asChild>
+                          <a
+                            href="https://discord.gg/yGUJWhNqzy"
+                            className="flex items-center gap-3 p-3 hover:bg-accent rounded-md"
+                          >
+                            <DiscordLogo className="size-12 bg-[#5865F2] text-white rounded-lg p-2" />
+                            <div className="flex flex-col gap-0">
+                              <span>Discord</span>
+                              <span className="text-xs text-muted-foreground">
+                                Join our community chat
+                              </span>
+                            </div>
+                          </a>
+                        </NavigationMenuLink>
+                      </div>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+
+                  <NavigationMenuItem>
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle()}
+                      asChild
+                    >
+                      <Link to="/sales">Enterprise</Link>
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
               <fetcher.Form action={path.to.root} method="post">
                 <input
                   type="hidden"
@@ -237,7 +261,10 @@ function Document({
                   type="submit"
                   variant="outline"
                   size="icon"
-                  className="cursor-pointer"
+                  className={cn(
+                    "cursor-pointer",
+                    mode === "dark" && "hover:rotate-180 transition-all"
+                  )}
                 >
                   {mode === "light" ? <Moon /> : <Sun />}
                 </Button>
