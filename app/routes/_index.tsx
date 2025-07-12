@@ -450,7 +450,7 @@ function Reviews() {
 function Memo() {
   return (
     <section className="md:py-8 lg:pt-36 lg:pb-24 md:px-4">
-      <div className="max-w-4xl mx-auto flex flex-col gap-4 rounded-lg border-[0.5px] bg-card px-8 shadow py-12 lg:px-12 lg:py-12">
+      <div className="max-w-4xl mx-auto flex flex-col gap-4 border-[0.5px] bg-card px-8 shadow py-12 lg:px-12 lg:py-12">
         <div className="mb-4 flex flex-col gap-1.5 md:mb-6 lg:mb-8 tracking-tight">
           <p className="dark:text-muted-foreground font-mono uppercase text-xs font-light">
             Founder memo
