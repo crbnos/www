@@ -22,6 +22,7 @@ import { Github, Moon, Play, Sun } from "lucide-react";
 import Tailwind from "~/styles/tailwind.css?url";
 import { Footer } from "./components/footer";
 import { Button } from "./components/ui/button";
+import { ClientHintCheck, getHints } from "./components/ui/client-hints";
 import { DiscordLogo } from "./components/ui/discord-logo";
 import {
   NavigationMenu,
@@ -53,8 +54,9 @@ export function links() {
 export async function loader({ request, params }: LoaderFunctionArgs) {
   let requestUrl = new URL(request.url);
   let siteUrl = requestUrl.protocol + "//" + requestUrl.host;
+  const hints = getHints(request);
 
-  return { siteUrl, mode: getMode(request) };
+  return { siteUrl, mode: getMode(request, hints.theme), hints };
 }
 
 export async function action({ request }: ActionFunctionArgs) {
@@ -164,6 +166,7 @@ function Document({
   return (
     <html lang="en" className={`${mode} h-full overflow-x-hidden w-[100dvw]`}>
       <head>
+        <ClientHintCheck />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />

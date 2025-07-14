@@ -19,7 +19,7 @@ export default function Route() {
     <>
       <Hero />
       <Features />
-      <Manufacturing />
+      <Grid />
       <Reviews />
       <Memo />
       <CTA />
@@ -204,7 +204,7 @@ function Features() {
   );
 }
 
-function Manufacturing() {
+function Grid() {
   return (
     <section className="xl:pb-24">
       <div className="mx-auto px-4 bg-muted rounded-xl max-w-[1380px] w-full py-24">
@@ -450,45 +450,47 @@ function Reviews() {
 function Memo() {
   return (
     <section className="md:py-8 lg:pt-36 lg:pb-24 md:px-4">
-      <div className="max-w-4xl mx-auto flex flex-col gap-4 border-[0.5px] bg-card px-8 shadow py-12 lg:px-12 lg:py-12">
+      <div className="max-w-4xl mx-auto flex flex-col gap-4 border-[0.5px] bg-card px-8 shadow py-12 lg:px-12 lg:py-12 text-lg">
         <div className="mb-4 flex flex-col gap-1.5 md:mb-6 lg:mb-8 tracking-tight">
-          <p className="dark:text-muted-foreground font-mono uppercase text-xs font-light">
+          <p className="dark:text-muted-foreground font-mono uppercase text-base font-light">
             Founder memo
           </p>
-          <p className="font-semibold tracking-tight">
+          <p className="font-mono uppercase font-medium">
             Carbon Manufacturing Systems Corp.
           </p>
         </div>
 
         <p className="leading-[1.8] text-foreground">
-          We built Carbon after nearly a decade of building end-to-end
-          manufacturing systems with off-the-shelf software. Over the years, we
-          noticed a few things:
+          After spending nearly a decade building end-to-end systems for
+          manufacturing, I had a pretty good idea of what an "ideal" solution
+          looked like from a technical perspective:
         </p>
 
-        <ul className="ml-4 list-disc">
-          <li className="pl-2 leading-[1.8] text-foreground">
-            There is no "perfect ERP" because each company is unique
-          </li>
-          <li className="pl-2 leading-[1.8] text-foreground">
-            People need to be able to extend the platform to fit their needs
-          </li>
-          <li className="pl-2 leading-[1.8] text-foreground">
-            Great systems are built on open-source foundations
-          </li>
-        </ul>
-
         <p className="leading-[1.8] text-foreground">
-          As technical people move back to manufacturing, we believe Carbon will
-          be the perfect foundation for tech-native manufacturers. We're
-          throwing out all the bullsh*t, and building the system we would have
-          wanted.
+          API-first, realtime subscriptions, simple scheduling, and 1,000 little
+          details to make the juice of using an ERP worth the squeeze.
         </p>
         <p className="leading-[1.8] text-foreground">
-          And ERP is just the beginning. Our goal is to build the
-          community-powered orchestration layer for automated manufacturing. So
-          if you're ready for a better way to build, we'd love for you to join
-          us.
+          But even as we work with our customers to become the best
+          off-the-shelf ERP/MES for many types of discrete manufacturing, we are
+          faced with the reality that there is no "perfect" off-the-shelf
+          solution, because each manufacturing business is unique.
+        </p>
+
+        <p className="leading-[1.8] text-foreground">
+          We open-sourced Carbon not because it's a great business plan, but
+          because that's the system I would have wanted when I was in your
+          shoes.
+        </p>
+
+        <p className="leading-[1.8] text-foreground">
+          I believe open-source has incredible potential because it's not just a
+          product&ndash;it's a community of like-minded people working to build
+          the future of manufacturing in the age of AI and robotics.
+        </p>
+
+        <p className="leading-[1.8] text-foreground">
+          We're glad you're here for it.
         </p>
 
         <div className="mt-8 flex flex-col gap-4">
@@ -500,13 +502,13 @@ function Memo() {
             <img
               alt="Brad Barbin"
               loading="lazy"
-              className="size-14 rounded-lg"
-              src="https://avatars.githubusercontent.com/u/64510427?v=4"
+              className="w-14 h-auto rounded-lg"
+              src="/faces/brad.webp"
             />
             <div className="flex flex-col">
               <p className="dark:text-tertiary text-foreground">Brad Barbin</p>
               <p className="dark:text-tertiary text-foreground">
-                Co-founder &amp; CEO 🇺🇸
+                Co-founder &amp; CEO
               </p>
             </div>
           </a>

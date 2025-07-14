@@ -32,7 +32,7 @@ export default function Brand() {
             <img
               src="/brand/carbon-mark.svg"
               alt="Carbon Mark"
-              className="h-24"
+              className="h-36"
             />
           </div>
           <div className="flex gap-4 justify-center">
