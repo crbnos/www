@@ -64,6 +64,10 @@ export function Footer() {
                   href: "https://github.com/crbnos/carbon/blob/main/LICENSE",
                   text: "License",
                 },
+                {
+                  href: "https://learn.carbonos.dev",
+                  text: "Onboarding",
+                },
                 { href: "/pricing", text: "Pricing" },
                 {
                   href: "https://github.com/crbnos/carbon",

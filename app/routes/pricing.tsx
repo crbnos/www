@@ -32,7 +32,6 @@ const plans = [
     features: [
       "ERP, MES, QMS",
       "Unlimited records",
-      "API and webhooks",
       "Managed hosting",
       "Self-onboarding",
       "Community support",
@@ -51,6 +50,7 @@ const plans = [
       "Everything from Starter",
       "Implementation support",
       "Unlimited functional support",
+      "API and webhooks",
       "AI-powered workflows",
       "Integrations",
     ],
@@ -84,7 +84,7 @@ export default function Pricing() {
     >
       <div className="flex flex-col gap-4 mx-auto text-center">
         <div>
-          <Button variant="outline">
+          <Button variant="outline" className="cursor-default">
             <LucideHandCoins />
             Pricing
           </Button>

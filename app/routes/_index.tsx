@@ -29,6 +29,11 @@ export default function Route() {
 
 const customers = [
   {
+    name: "Minimal",
+    logo: "/logos/minimal.svg",
+    url: "https://minimalx.com",
+  },
+  {
     name: "Black Cat Labs",
     logo: "/logos/black-cat-labs.png",
     url: "https://blackcatlabs.xyz",
@@ -44,9 +49,9 @@ const customers = [
     url: "https://nwprosource.com",
   },
   {
-    name: "Minimal",
-    logo: "/logos/minimal.svg",
-    url: "https://minimalx.com",
+    name: "Allinol Technologies",
+    logo: "/logos/allinol.png",
+    url: "https://allinoltec.com",
   },
 ];
 
@@ -493,6 +498,8 @@ function Memo() {
           We're glad you're here for it.
         </p>
 
+        <DiscordButton />
+
         <div className="mt-8 flex flex-col gap-4">
           <a
             target="_blank"
@@ -512,7 +519,6 @@ function Memo() {
               </p>
             </div>
           </a>
-          <DiscordButton />
         </div>
       </div>
     </section>
