@@ -18,12 +18,13 @@ import type {
 } from "@vercel/remix";
 import { ReactNode, useState } from "react";
 
-import { Github, Moon, Play, Sun } from "lucide-react";
+import { Moon, Play, Sun } from "lucide-react";
 import Tailwind from "~/styles/tailwind.css?url";
 import { Footer } from "./components/footer";
 import { Button } from "./components/ui/button";
 import { ClientHintCheck, getHints } from "./components/ui/client-hints";
 import { DiscordLogo } from "./components/ui/discord-logo";
+import { GithubLogo } from "./components/ui/github-logo";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -217,7 +218,7 @@ function Document({
                             href="https://github.com/crbnos/carbon"
                             className="flex items-center gap-3 p-3 hover:bg-accent rounded-md"
                           >
-                            <Github className="size-12 bg-[#333333] text-white dark:bg-white dark:text-[#333333] rounded-lg p-2" />
+                            <GithubLogo className="size-12 bg-[#333333] text-white dark:bg-white dark:text-[#333333] rounded-lg p-2" />
                             <div className="flex flex-col gap-0">
                               <span>GitHub</span>
                               <span className="text-xs text-muted-foreground">

@@ -13,10 +13,10 @@ const plans = [
     url: "https://github.com/crbnos/carbon",
     featured: false,
     features: [
+      "Self-hosted",
       "ERP, MES, QMS",
       "Unlimited records",
       "API and webhooks",
-      "Self-hosted",
       "Self-onboarding",
       "Community support",
     ],
@@ -27,19 +27,21 @@ const plans = [
     priceSubtext: "/user/month",
     action: "Start 30-day free trial",
     url: "https://app.carbonos.dev",
-    description: "Managed hosting with no support",
+    description:
+      "Managed hosting without support, or self-hosted with commercial license",
     featured: false,
     features: [
+      "Managed hosting",
       "ERP, MES, QMS",
       "Unlimited records",
-      "Managed hosting",
       "Self-onboarding",
       "Community support",
     ],
   },
   {
     name: "Business",
-    description: "Managed hosting with dedicated support",
+    description:
+      "Managed hosting with support, or self-hosted with commercial license",
     priceHeadline: "$90",
     priceSubtext: "/user/month",
     action: "Start 30-day free trial",
@@ -47,6 +49,7 @@ const plans = [
     featured: true,
     features: [
       "5 user minimum",
+      "Managed hosting",
       "Everything from Starter",
       "Implementation support",
       "Unlimited functional support",
@@ -92,8 +95,9 @@ export default function Pricing() {
         <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
           Simple pricing based on your needs
         </h2>
-        <p className="mt-6 max-w-3xl text-base leading-6 text-muted-foreground mb-8">
-          Host your own instance of Carbon, or rent a managed instance.
+        <p className="max-w-3xl text-base leading-6 text-muted-foreground mb-8">
+          Host your own instance of Carbon, or have us host it for you. The
+          price is the same.
         </p>
       </div>
 

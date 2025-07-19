@@ -4,15 +4,18 @@ import { AnimatePresence, motion } from "framer-motion";
 import {
   LucideArrowLeft,
   LucideArrowRight,
+  LucideCable,
+  LucideCalendarDays,
   LucideCheckCircle,
   LucideChevronRight,
+  LucideLayoutDashboard,
   LucidePhone,
   LucidePlay,
+  LucideWaypoints,
 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "~/components/ui/button";
 import { DiscordLogo } from "~/components/ui/discord-logo";
-import { cn } from "~/lib/utils";
 
 export default function Route() {
   return (
@@ -73,12 +76,57 @@ const reviews = [
     authorTitle: "CEO, Black Cat Labs, AS9100D",
   },
   {
-    logo: "/logos/fabworks.svg",
-    face: "/faces/jonathan.jpeg",
-    review:
-      "Beautiful piece of software. I think if this was around 2 years ago when we built fabworks.com I would have heavily considered building our custom ERP/quoting site as a thin layer on top of this. All these other ERPs like Fulcrum do not do a good job of letting you extend them, and I think with more and more shops looking to copy what we/SendCutSend/OSH do, they will be looking for solutions like this.",
-    author: "Johnathan Sessa",
-    authorTitle: "CEO, Fabworks",
+    logo: "/logos/67.jpg",
+    face: "/logos/67.jpg",
+    review: (
+      <>
+        <p>All we ever really want to know from our vendors:</p>
+        <ol className="space-y-4 my-4 ml-4 list-decimal">
+          <li>How real is the delivery date on the quote?</li>
+          <li>
+            If you run into material, tool, or labor issues, will you notify us
+            proactively and immediately electronically when your new dynamic
+            bottle neck alters the committed order shipment date?
+          </li>
+          <li>
+            Will you alert us to any slippage and the revised ship date without
+            you making us chase and chase for updates?
+          </li>
+          <li>
+            Will you provide QA reports from Keyence optical comparators (if
+            size of component fits) for conformance to print specifications and
+            quantity prior to shipping and pass that result set as a JSON file?
+          </li>
+          <li>
+            Will you provide a portal to see the status of our order through
+            your ERP/MES system just see we can see progress through the sausage
+            machine?
+          </li>
+          <li>
+            Will you produce an invoice in a JSON or other ingestible format
+            that does not require 1990's OCR or humans?
+          </li>
+        </ol>
+        <p>
+          Doing these 6 things honestly and repeatably changes everything in
+          supply-chains and drives out uncertainty and cost for all.
+        </p>
+
+        <p>
+          Today, every single ingredient is ready. Convinced{" "}
+          <a
+            href="https://x.com/barbinbrad"
+            target="_blank"
+            className="text-secondary"
+          >
+            @barbinbrad
+          </a>{" "}
+          will be a great guy to solve this.
+        </p>
+      </>
+    ),
+    author: "Gavin Stener",
+    authorTitle: "CEO, 67 Designs",
   },
 ];
 
@@ -123,7 +171,7 @@ function Hero() {
                 <a href={customer.url} target="_blank">
                   <img
                     src={customer.logo}
-                    className="w-24 h-auto dark:invert"
+                    className="w-28 h-auto dark:invert"
                   />
                 </a>
               ))}
@@ -230,8 +278,8 @@ function Grid() {
                 <div className="flex flex-col border-r border-border bg-background lg:border-b-0 border-b justify-center manufacturing-bg">
                   <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
                     <div className="flex flex-col gap-4">
-                      <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl">
-                        End-to-End Traceability
+                      <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl flex items-center gap-2">
+                        <LucideWaypoints /> End-to-End Traceability
                       </h4>
                       <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
                         Achieve granular, end-to-end tracking of materials,
@@ -241,17 +289,17 @@ function Grid() {
                         high-end systems.
                       </p>
                     </div>
-                    <div>
+                    {/* <div>
                       <Button variant="outline">Learn More</Button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className="flex bg-background manufacturing-bg">
                   {/* <div className="flex justify-center items-center mt-10 mb-[70px] pt-10 pb-[22px]"></div> */}
                   <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
                     <div className="flex flex-col gap-4">
-                      <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl">
-                        Integrated Agents
+                      <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl flex items-center gap-2">
+                        <LucideCheckCircle /> Integrated Agents
                       </h4>
                       <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
                         Our ever-expanding catalog of agents allow you to save
@@ -260,9 +308,9 @@ function Grid() {
                         and get quotes from suppliers automatically.
                       </p>
                     </div>
-                    <div>
+                    {/* <div>
                       <Button variant="outline">Learn More</Button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -271,8 +319,8 @@ function Grid() {
                   {/* <div className="flex justify-center items-center mt-10 mb-[70px] pt-10 pb-[22px]"></div> */}
                   <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
                     <div className="flex flex-col gap-4">
-                      <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl">
-                        Custom Fields
+                      <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl flex items-center gap-2">
+                        <LucideLayoutDashboard /> Custom Fields
                       </h4>
                       <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
                         Add custom fields with a few clicks to any table to
@@ -281,17 +329,17 @@ function Grid() {
                         generate Bill of Materials.
                       </p>
                     </div>
-                    <div>
+                    {/* <div>
                       <Button variant="outline">Learn More</Button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className="flex border-r border-border lg:border-b-0 border-b manufacturing-bg">
                   {/* <div className="flex justify-center items-center mt-10 mb-[70px] pt-10 pb-[22px]"></div> */}
                   <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
                     <div className="flex flex-col gap-4">
-                      <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl">
-                        Simplified Scheduling
+                      <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl flex items-center gap-2">
+                        <LucideCalendarDays /> Simplified Scheduling
                       </h4>
                       <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
                         Optimize your shop floor schedule with flexible sorting
@@ -299,17 +347,17 @@ function Grid() {
                         delivery, and easily adapting to priority changes.
                       </p>
                     </div>
-                    <div>
+                    {/* <div>
                       <Button variant="outline">Learn More</Button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className="flex lg:border-b-0 border-b manufacturing-bg">
                   {/* <div className="flex justify-center items-center mt-10 mb-[70px] pt-10 pb-[22px]"></div> */}
                   <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
                     <div className="flex flex-col gap-4">
-                      <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl">
-                        API-First Architecture
+                      <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl flex items-center gap-2">
+                        <LucideCable /> API-First Architecture
                       </h4>
                       <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
                         Carbon is built with an "API-First Architecture," which
@@ -318,9 +366,9 @@ function Grid() {
                         to automate workflows across all applications.
                       </p>
                     </div>
-                    <div>
+                    {/* <div>
                       <Button variant="outline">Learn More</Button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -358,7 +406,7 @@ function Reviews() {
   };
 
   return (
-    <section className="bg-secondary text-secondary-foreground bg-[url('/reviews.webp')] bg-[0_0] bg-no-repeat bg-cover py-20">
+    <section className="bg-secondary text-secondary-foreground bg-[url('/reviews.webp')] bg-[0_0] bg-no-repeat bg-cover py-20 dark:bg-gradient-to-br dark:from-secondary dark:to-secondary-foreground">
       <div className="container flex flex-col gap-12 mx-auto px-4">
         <h2 className="font-display text-balance mx-auto max-w-4xl text-center font-medium tracking-tight leading-[115%] text-5xl lg:text-7xl">
           Builders ❤️ Carbon
@@ -427,14 +475,14 @@ function Reviews() {
               <LucideArrowRight />
             </button>
           </div>
-          <div className="hidden lg:flex w-full items-center justify-center">
+          {/* <div className="hidden lg:flex w-full items-center justify-center">
             {reviews.map((image, index) => (
               <div
                 key={image.logo}
                 role="button"
                 onClick={() => setCurrentReview(index)}
                 className={cn(
-                  "cursor-pointer flex-1 flex items-center justify-center pb-8 border-b border-secondary-foreground opacity-50 transition-opacity duration-200",
+                  "cursor-pointer flex-1 flex items-center justify-center pb-8 border-b border-secondary-foreground opacity-30 transition-opacity duration-200",
                   index === currentReview && "opacity-100"
                 )}
               >
@@ -445,7 +493,7 @@ function Reviews() {
                 />
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
@@ -455,7 +503,7 @@ function Reviews() {
 function Memo() {
   return (
     <section className="md:py-8 lg:pt-36 lg:pb-24 md:px-4">
-      <div className="max-w-4xl mx-auto flex flex-col gap-4 border-[0.5px] bg-card px-8 shadow py-12 lg:px-12 lg:py-12 text-lg">
+      <div className="max-w-4xl mx-auto flex flex-col gap-4 border-[0.5px] bg-card px-8 shadow py-12 lg:p-14 text-lg xl-p-16">
         <div className="mb-4 flex flex-col gap-1.5 md:mb-6 lg:mb-8 tracking-tight">
           <p className="dark:text-muted-foreground font-mono uppercase text-base font-light">
             Founder memo
