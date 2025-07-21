@@ -55,7 +55,6 @@ const plans = [
       "Unlimited functional support",
       "API and webhooks",
       "AI-powered workflows",
-      "Integrations",
     ],
   },
   {
@@ -71,7 +70,7 @@ const plans = [
       "SSO/SAML",
       "Commercial license",
       "Custom integrations",
-      "Development",
+      "Custom development",
       "Support",
       "Training",
       "Migrations",
