@@ -133,7 +133,7 @@ const reviews = [
 function Hero() {
   return (
     <section className="py-0">
-      <div className="bg-[linear-gradient(to_bottom_right,#f7f5ff_35.67%,#c9fff8_88.95%)] dark:bg-[linear-gradient(to_bottom_right,#0e0338_35.67%,#1b433e_88.95%)] xl:rounded-xl max-w-[1380px] mx-auto py-20">
+      <div className="bg-[linear-gradient(to_bottom_right,#f7f5ff_35.67%,#c9fff8_88.95%)] dark:bg-[linear-gradient(to_bottom_right,#0e0338_35.67%,#1b433e_88.95%)]  w-full mx-auto py-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col justify-start items-center gap-8">
             <DiscordButton />
