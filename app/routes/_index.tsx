@@ -75,59 +75,59 @@ const reviews = [
     author: "Anthan Rajaratnam",
     authorTitle: "CEO, Black Cat Labs, AS9100D",
   },
-  {
-    logo: "/logos/67.jpg",
-    face: "/logos/67.jpg",
-    review: (
-      <>
-        <p>All we ever really want to know from our vendors:</p>
-        <ol className="space-y-4 my-4 ml-4 list-decimal">
-          <li>How real is the delivery date on the quote?</li>
-          <li>
-            If you run into material, tool, or labor issues, will you notify us
-            proactively and immediately electronically when your new dynamic
-            bottle neck alters the committed order shipment date?
-          </li>
-          <li>
-            Will you alert us to any slippage and the revised ship date without
-            you making us chase and chase for updates?
-          </li>
-          <li>
-            Will you provide QA reports from Keyence optical comparators (if
-            size of component fits) for conformance to print specifications and
-            quantity prior to shipping and pass that result set as a JSON file?
-          </li>
-          <li>
-            Will you provide a portal to see the status of our order through
-            your ERP/MES system just see we can see progress through the sausage
-            machine?
-          </li>
-          <li>
-            Will you produce an invoice in a JSON or other ingestible format
-            that does not require 1990's OCR or humans?
-          </li>
-        </ol>
-        <p>
-          Doing these 6 things honestly and repeatably changes everything in
-          supply-chains and drives out uncertainty and cost for all.
-        </p>
+  // {
+  //   logo: "/logos/67.jpg",
+  //   face: "/logos/67.jpg",
+  //   review: (
+  //     <>
+  //       <p>All we ever really want to know from our vendors:</p>
+  //       <ol className="space-y-4 my-4 ml-4 list-decimal">
+  //         <li>How real is the delivery date on the quote?</li>
+  //         <li>
+  //           If you run into material, tool, or labor issues, will you notify us
+  //           proactively and immediately electronically when your new dynamic
+  //           bottle neck alters the committed order shipment date?
+  //         </li>
+  //         <li>
+  //           Will you alert us to any slippage and the revised ship date without
+  //           you making us chase and chase for updates?
+  //         </li>
+  //         <li>
+  //           Will you provide QA reports from Keyence optical comparators (if
+  //           size of component fits) for conformance to print specifications and
+  //           quantity prior to shipping and pass that result set as a JSON file?
+  //         </li>
+  //         <li>
+  //           Will you provide a portal to see the status of our order through
+  //           your ERP/MES system just see we can see progress through the sausage
+  //           machine?
+  //         </li>
+  //         <li>
+  //           Will you produce an invoice in a JSON or other ingestible format
+  //           that does not require 1990's OCR or humans?
+  //         </li>
+  //       </ol>
+  //       <p>
+  //         Doing these 6 things honestly and repeatably changes everything in
+  //         supply-chains and drives out uncertainty and cost for all.
+  //       </p>
 
-        <p>
-          Today, every single ingredient is ready. Convinced{" "}
-          <a
-            href="https://x.com/barbinbrad"
-            target="_blank"
-            className="text-secondary"
-          >
-            @barbinbrad
-          </a>{" "}
-          will be a great guy to solve this.
-        </p>
-      </>
-    ),
-    author: "Gavin Stener",
-    authorTitle: "CEO, 67 Designs",
-  },
+  //       <p>
+  //         Today, every single ingredient is ready. Convinced{" "}
+  //         <a
+  //           href="https://x.com/barbinbrad"
+  //           target="_blank"
+  //           className="text-secondary"
+  //         >
+  //           @barbinbrad
+  //         </a>{" "}
+  //         will be a great guy to solve this.
+  //       </p>
+  //     </>
+  //   ),
+  //   author: "Gavin Stener",
+  //   authorTitle: "CEO, 67 Designs",
+  // },
 ];
 
 function Hero() {

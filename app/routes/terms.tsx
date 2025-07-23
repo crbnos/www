@@ -7,7 +7,7 @@ export default function Terms() {
             Terms of Service
           </h1>
           <h2 className="font-medium text-xl text-muted-foreground max-w-5xl text-balance leading-relaxed tracking-tight">
-            Effective July 10, 2025
+            Effective July 23, 2025
           </h2>
         </div>
       </div>
@@ -278,6 +278,12 @@ export default function Terms() {
               or impair Service or interfere with any other party's use of
               Service, including their ability to engage in real time activities
               through Service.
+            </li>
+            <li>
+              Use the API in a manner that creates an unreasonable load on
+              Carbon’s infrastructure, interferes with the proper functioning of
+              the API, or disproportionately consumes our resources, as
+              determined by Carbon in its sole discretion.
             </li>
             <li>
               Use any robot, spider, or other automatic device, process, or
