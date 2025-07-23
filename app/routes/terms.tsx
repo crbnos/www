@@ -7,7 +7,7 @@ export default function Terms() {
             Terms of Service
           </h1>
           <h2 className="font-medium text-xl text-muted-foreground max-w-5xl text-balance leading-relaxed tracking-tight">
-            Effective July 10, 2025
+            Effective July 23, 2025
           </h2>
         </div>
       </div>
@@ -42,7 +42,7 @@ export default function Terms() {
           <p>
             If you do not agree with (or cannot comply with) Agreements, then
             you may not use the Service, but please let us know by emailing at
-            brad@carbonos.dev so we can try to find a solution. These Terms
+            support@carbonos.dev so we can try to find a solution. These Terms
             apply to all visitors, users and others who wish to access or use
             Service.
           </p>
@@ -280,6 +280,12 @@ export default function Terms() {
               through Service.
             </li>
             <li>
+              Use the API in a manner that creates an unreasonable load on
+              Carbon’s infrastructure, interferes with the proper functioning of
+              the API, or disproportionately consumes our resources, as
+              determined by Carbon in its sole discretion.
+            </li>
+            <li>
               Use any robot, spider, or other automatic device, process, or
               means to access Service for any purpose, including monitoring or
               copying any of the material on Service.
@@ -385,7 +391,7 @@ export default function Terms() {
             If you are a copyright owner, or authorized on behalf of one, and
             you believe that the copyrighted work has been copied in a way that
             constitutes copyright infringement, please submit your claim via
-            email to brad@carbonos.dev, with the subject line: "Copyright
+            email to support@carbonos.dev, with the subject line: "Copyright
             Infringement" and include in your claim a detailed description of
             the alleged Infringement.
           </p>
@@ -399,7 +405,7 @@ export default function Terms() {
 
           <h3>Error Reporting & Feedback</h3>
           <p>
-            You may provide us directly at brad@carbonos.dev with information
+            You may provide us directly at support@carbonos.dev with information
             and feedback concerning errors, suggestions for improvements, ideas,
             problems, complaints, and other matters related to our Service
             ("Feedback"). You acknowledge and agree that: (i) you shall not
@@ -597,7 +603,7 @@ export default function Terms() {
           <h3>Contact Us</h3>
           <p>
             If you have any questions about these terms of service, please
-            contact us by email at brad@carbonos.dev.
+            contact us by email at support@carbonos.dev.
           </p>
         </div>
       </div>
