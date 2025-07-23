@@ -145,7 +145,7 @@ function Hero() {
               Carbon is a modern manufacturing platform that combines ERP, MES,
               and QMS into a single, unified, API-first system.
             </p>
-            <div className="flex gap-2">
+            <div className="flex flex-col md:flex-row gap-2">
               <Button variant="secondary" size="xl" asChild>
                 <a href="https://app.carbonos.dev">
                   Start Now
@@ -224,7 +224,7 @@ function Features() {
               </p>
             </div>
           </div>
-          <div className="flex gap-4">
+          <div className="flex flex-col md:flex-row gap-4">
             <Button variant="secondary" size="xl" asChild>
               <a href="https://app.carbonos.dev">
                 Start Now
@@ -260,7 +260,7 @@ function Features() {
 function Grid() {
   return (
     <section className="xl:pb-24">
-      <div className="mx-auto px-4 bg-muted rounded-xl max-w-[1380px] w-full py-24">
+      <div className="mx-auto bg-muted rounded-xl max-w-[1380px] w-full py-24">
         <div className="container">
           <div className="flex flex-col gap-8">
             <h2 className="font-display text-balance mx-auto max-w-2xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
@@ -279,7 +279,8 @@ function Grid() {
                   <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
                     <div className="flex flex-col gap-4">
                       <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl flex items-center gap-2">
-                        <LucideWaypoints /> End-to-End Traceability
+                        <LucideWaypoints className="size-6 flex-shrink-0" />{" "}
+                        End-to-End Traceability
                       </h4>
                       <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
                         Achieve granular, end-to-end tracking of materials,
@@ -299,7 +300,8 @@ function Grid() {
                   <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
                     <div className="flex flex-col gap-4">
                       <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl flex items-center gap-2">
-                        <LucideCheckCircle /> Integrated Agents
+                        <LucideCheckCircle className="size-6 flex-shrink-0" />{" "}
+                        Integrated Agents
                       </h4>
                       <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
                         Our ever-expanding catalog of agents allow you to save
@@ -320,7 +322,8 @@ function Grid() {
                   <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
                     <div className="flex flex-col gap-4">
                       <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl flex items-center gap-2">
-                        <LucideLayoutDashboard /> Custom Fields
+                        <LucideLayoutDashboard className="size-6 flex-shrink-0" />{" "}
+                        Custom Fields
                       </h4>
                       <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
                         Add custom fields with a few clicks to any table to
@@ -339,7 +342,8 @@ function Grid() {
                   <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
                     <div className="flex flex-col gap-4">
                       <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl flex items-center gap-2">
-                        <LucideCalendarDays /> Simplified Scheduling
+                        <LucideCalendarDays className="size-6 flex-shrink-0" />{" "}
+                        Simplified Scheduling
                       </h4>
                       <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
                         Optimize your shop floor schedule with flexible sorting
@@ -357,7 +361,8 @@ function Grid() {
                   <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
                     <div className="flex flex-col gap-4">
                       <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl flex items-center gap-2">
-                        <LucideCable /> API-First Architecture
+                        <LucideCable className="size-6 flex-shrink-0" />{" "}
+                        API-First Architecture
                       </h4>
                       <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
                         Carbon is built with an "API-First Architecture," which
@@ -375,7 +380,7 @@ function Grid() {
             </div>
           </div>
         </div>
-        <div className="flex container items-center justify-center gap-4">
+        <div className="flex flex-col md:flex-row container items-center justify-center gap-4">
           <Button variant="secondary" size="xl" asChild>
             <a href="https://app.carbonos.dev">
               Start Now
@@ -577,14 +582,14 @@ function CTA() {
   return (
     <section className="py-24">
       <div className="container max-w-4xl mx-auto px-4">
-        <div className="flex flex-col gap-4 bg-muted dark:bg-muted bg-[url('/cta.webp')] dark:bg-none bg-[0_0] bg-no-repeat bg-cover rounded-xl py-24 justify-center items-center">
+        <div className="flex flex-col gap-4 bg-muted dark:bg-muted bg-[url('/cta.webp')] dark:bg-none bg-[0_0] bg-no-repeat bg-cover rounded-xl py-24 justify-center items-center px-4">
           <h2 className="font-display text-balance mx-auto max-w-2xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl ">
             Build something with Carbon
           </h2>
           <p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter text-lg">
             Start your 30-day free trial today
           </p>
-          <div className="flex justify-center gap-4 mt-8">
+          <div className="flex flex-col md:flex-row justify-center gap-4 mt-8">
             <Button variant="default" size="xl" asChild>
               <a href="https://app.carbonos.dev">
                 Start Now
