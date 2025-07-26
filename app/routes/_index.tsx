@@ -220,7 +220,7 @@ function Features() {
             <div className="flex justify-start items-center gap-2">
               <LucideCheckCircle className="size-6 text-secondary" />
               <p className="text-foreground text-left font-bold tracking-tighter text-lg">
-                End-to-end traceability and compliance
+                Multi-location Planning and Inventory
               </p>
             </div>
           </div>
