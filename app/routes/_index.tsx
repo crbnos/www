@@ -214,7 +214,7 @@ function Features() {
             <div className="flex justify-start items-center gap-2">
               <LucideCheckCircle className="size-6 text-secondary" />
               <p className="text-foreground text-left font-bold tracking-tighter text-lg">
-                Automated Purchasing by Digital Workers
+                Job Shop and Assembly Workflows
               </p>
             </div>
             <div className="flex justify-start items-center gap-2">
