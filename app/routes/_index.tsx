@@ -58,78 +58,6 @@ const customers = [
   },
 ];
 
-const reviews = [
-  {
-    logo: "/logos/minimal.svg",
-    face: "/faces/liam.jpeg",
-    review:
-      "As an engineering start-up pushing the boundaries in manufacturing assembly, we needed more than just another MRP/MES system. Carbon delivered - combining deep functionality with a refreshingly open, API-first design. It integrates seamlessly with our CAD tools, scales effortlessly, has fantastic UX and offers exceptional value.",
-    author: "Liam Sill",
-    authorTitle: "CTO, Minimal",
-  },
-  {
-    logo: "/logos/black-cat-mark.png",
-    face: "/faces/anthan.jpg",
-    review:
-      "We've been using Carbon for the last 6 months to grow our sheet metal and fabrication business, and I feel like it's a platform that will be able to grow with us over the next 10-15 years. If you're growing a job shop, I highly recommend it. The customer support is super responsive, the platform is easy to use, and the value far outweighs the cost.",
-    author: "Anthan Rajaratnam",
-    authorTitle: "CEO, Black Cat Labs, AS9100D",
-  },
-  // {
-  //   logo: "/logos/67.jpg",
-  //   face: "/logos/67.jpg",
-  //   review: (
-  //     <>
-  //       <p>All we ever really want to know from our vendors:</p>
-  //       <ol className="space-y-4 my-4 ml-4 list-decimal">
-  //         <li>How real is the delivery date on the quote?</li>
-  //         <li>
-  //           If you run into material, tool, or labor issues, will you notify us
-  //           proactively and immediately electronically when your new dynamic
-  //           bottle neck alters the committed order shipment date?
-  //         </li>
-  //         <li>
-  //           Will you alert us to any slippage and the revised ship date without
-  //           you making us chase and chase for updates?
-  //         </li>
-  //         <li>
-  //           Will you provide QA reports from Keyence optical comparators (if
-  //           size of component fits) for conformance to print specifications and
-  //           quantity prior to shipping and pass that result set as a JSON file?
-  //         </li>
-  //         <li>
-  //           Will you provide a portal to see the status of our order through
-  //           your ERP/MES system just see we can see progress through the sausage
-  //           machine?
-  //         </li>
-  //         <li>
-  //           Will you produce an invoice in a JSON or other ingestible format
-  //           that does not require 1990's OCR or humans?
-  //         </li>
-  //       </ol>
-  //       <p>
-  //         Doing these 6 things honestly and repeatably changes everything in
-  //         supply-chains and drives out uncertainty and cost for all.
-  //       </p>
-
-  //       <p>
-  //         Today, every single ingredient is ready. Convinced{" "}
-  //         <a
-  //           href="https://x.com/barbinbrad"
-  //           target="_blank"
-  //           className="text-secondary"
-  //         >
-  //           @barbinbrad
-  //         </a>{" "}
-  //         will be a great guy to solve this.
-  //       </p>
-  //     </>
-  //   ),
-  //   author: "Gavin Stener",
-  //   authorTitle: "CEO, 67 Designs",
-  // },
-];
-
 function Hero() {
   return (
     <section className="py-0">
@@ -137,13 +65,14 @@ function Hero() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col justify-start items-center gap-8">
             <DiscordButton />
-            <h2 className="font-display text-foreground text-balance mx-auto  max-w-3xl text-center font-medium tracking-tight leading-[115%] text-5xl sm:text-7xl lg:text-[5rem] xl:text-[6rem]">
+            <h2 className="font-display text-foreground text-balance mx-auto  max-w-3xl text-center font-medium tracking-tight leading-[115%] text-[2.7rem] sm:text-7xl lg:text-[5rem] xl:text-[6rem]">
               The open-source{" "}
               <span className="text-secondary">manufacturing ERP</span>
             </h2>
             <p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-[780px] text-center font-medium tracking-tighter text-base md:text-lg lg:text-xl">
               Carbon is a modern manufacturing system that combines ERP, MES,
-              and QMS into a single, unified, API-first system.
+              and QMS into a single, unified, API-first system that's perfect
+              for complex manufacturing.
             </p>
             <div className="flex flex-col md:flex-row gap-2">
               <Button variant="secondary" size="xl" asChild>
@@ -398,6 +327,25 @@ function Grid() {
     </section>
   );
 }
+
+const reviews = [
+  {
+    logo: "/logos/minimal.svg",
+    face: "/faces/liam.jpeg",
+    review:
+      "As an engineering start-up pushing the boundaries in manufacturing assembly, we needed more than just another MRP/MES system. Carbon delivered - combining deep functionality with a refreshingly open, API-first design. It integrates seamlessly with our CAD tools, scales effortlessly, has fantastic UX and offers exceptional value.",
+    author: "Liam Sill",
+    authorTitle: "CTO, Minimal",
+  },
+  {
+    logo: "/logos/black-cat-mark.png",
+    face: "/faces/anthan.jpg",
+    review:
+      "We've been using Carbon for the last 6 months to grow our sheet metal and fabrication business, and I feel like it's a platform that will be able to grow with us over the next 10-15 years. If you're growing a job shop, I highly recommend it. The customer support is super responsive, the platform is easy to use, and the value far outweighs the cost.",
+    author: "Anthan Rajaratnam",
+    authorTitle: "CEO, Black Cat Labs, AS9100D",
+  },
+];
 
 function Reviews() {
   const [currentReview, setCurrentReview] = useState(0);

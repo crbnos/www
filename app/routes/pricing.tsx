@@ -28,7 +28,7 @@ const plans = [
     action: "Start 30-day free trial",
     url: "https://app.carbonos.dev",
     description:
-      "Managed hosting without support, or self-hosted with commercial license",
+      "Managed hosting without support, or self-hosted with commercial license.",
     featured: false,
     features: [
       "Managed hosting",
@@ -41,7 +41,7 @@ const plans = [
   {
     name: "Business",
     description:
-      "Managed hosting with support, or self-hosted with commercial license",
+      "Managed hosting with support, or self-hosted with commercial license.",
     priceHeadline: "$90",
     priceSubtext: "/user/month",
     action: "Start 30-day free trial",
