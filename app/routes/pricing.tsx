@@ -49,7 +49,6 @@ const plans = [
     featured: true,
     features: [
       "5 user minimum",
-      "Managed hosting",
       "Everything from Starter",
       "Implementation support",
       "Unlimited functional support",
