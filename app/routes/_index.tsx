@@ -335,8 +335,9 @@ function CarbonUniversity() {
           </h2>
 
           <p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter text-base">
-            We're not fans of the $15K onboarding fee, so we built an automated,
-            self-paced learning platform to get you and your team up to speed.
+            Why pay $15K just to get started? We ditched the onboarding fee and
+            built an automated self-paced learning platform to get you and your
+            team up to speed.
           </p>
 
           <div className="flex justify-center mt-8 gap-4">
