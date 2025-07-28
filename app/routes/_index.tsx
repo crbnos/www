@@ -1,13 +1,16 @@
 import { Link } from "@remix-run/react";
+import { DotPattern } from "components/magicui/dot-pattern";
 import { Safari } from "components/magicui/safari";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   LucideArrowLeft,
   LucideArrowRight,
+  LucideBookOpen,
   LucideCable,
   LucideCalendarDays,
   LucideCheckCircle,
   LucideChevronRight,
+  LucideGraduationCap,
   LucideLayoutDashboard,
   LucidePhone,
   LucidePlay,
@@ -16,6 +19,7 @@ import {
 import { useState } from "react";
 import { Button } from "~/components/ui/button";
 import { DiscordLogo } from "~/components/ui/discord-logo";
+import { cn } from "~/lib/utils";
 
 export default function Route() {
   return (
@@ -23,6 +27,7 @@ export default function Route() {
       <Hero />
       <Features />
       <Grid />
+      <CarbonUniversity />
       <Reviews />
       <Memo />
       <CTA />
@@ -155,9 +160,9 @@ function Features() {
           </div>
           <div className="flex flex-col md:flex-row gap-4">
             <Button variant="secondary" size="xl" asChild>
-              <a href="https://app.carbonos.dev">
-                Start Now
-                <LucidePlay />
+              <a href="https://learn.carbonos.dev">
+                Carbon University
+                <LucideGraduationCap />
               </a>
             </Button>
 
@@ -188,7 +193,7 @@ function Features() {
 
 function Grid() {
   return (
-    <section className="xl:pb-24">
+    <section>
       <div className="mx-auto bg-muted rounded-xl max-w-[1380px] w-full py-24">
         <div className="container">
           <div className="flex flex-col gap-8">
@@ -309,19 +314,45 @@ function Grid() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row container items-center justify-center gap-4">
-          <Button variant="secondary" size="xl" asChild>
-            <a href="https://app.carbonos.dev">
-              Start Now
-              <LucidePlay />
-            </a>
-          </Button>
-          <Button variant="outline" size="xl" asChild>
-            <Link to="/sales">
-              <LucidePhone />
-              Talk to Us
-            </Link>
-          </Button>
+      </div>
+    </section>
+  );
+}
+
+function CarbonUniversity() {
+  return (
+    <section className="relative flex h-[800px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background">
+      <DotPattern
+        glow
+        className={cn(
+          "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)] h-full w-full"
+        )}
+      />
+      <div className="container z-50 ">
+        <div className="flex flex-col gap-4">
+          <h2 className="font-display text-balance mx-auto max-w-4xl text-center font-medium tracking-tight leading-[115%] text-5xl lg:text-7xl">
+            Free onboarding
+          </h2>
+
+          <p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter text-base">
+            We're not fans of the $15K onboarding fee, so we built an automated,
+            self-paced learning platform to get you and your team up to speed.
+          </p>
+
+          <div className="flex justify-center mt-8 gap-4">
+            <Button variant="secondary" size="xl" asChild>
+              <a href="https://learn.carbonos.dev" target="_blank">
+                Start Learning
+                <LucideGraduationCap />
+              </a>
+            </Button>
+            <Button variant="outline" size="xl" asChild>
+              <a href="https://learn.carbonos.dev/about" target="_blank">
+                <LucideBookOpen />
+                How it works
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
