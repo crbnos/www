@@ -161,7 +161,7 @@ function Features() {
           <div className="flex flex-col md:flex-row gap-4">
             <Button variant="secondary" size="xl" asChild>
               <a href="https://learn.carbonos.dev">
-                Carbon University
+                Start Learning
                 <LucideGraduationCap />
               </a>
             </Button>
