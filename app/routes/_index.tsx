@@ -340,7 +340,7 @@ function CarbonUniversity() {
             team up to speed.
           </p>
 
-          <div className="flex justify-center mt-8 gap-4">
+          <div className="flex flex-col md:flex-row justify-center mt-8 gap-4">
             <Button variant="secondary" size="xl" asChild>
               <a href="https://learn.carbonos.dev" target="_blank">
                 Start Learning
