@@ -203,6 +203,16 @@ function Document({
                       className={navigationMenuTriggerStyle()}
                       asChild
                     >
+                      <a href="https://learn.carbonos.dev" target="_blank">
+                        Product
+                      </a>
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle()}
+                      asChild
+                    >
                       <Link prefetch="intent" to="/pricing">
                         Pricing
                       </Link>

@@ -61,12 +61,12 @@ export function Footer() {
             <div className="col-span-2 -mx-1 flex flex-wrap gap-2 sm:flex-col">
               {[
                 {
-                  href: "https://github.com/crbnos/carbon/blob/main/LICENSE",
-                  text: "License",
+                  href: "https://learn.carbonos.dev",
+                  text: "Learning",
                 },
                 {
-                  href: "https://learn.carbonos.dev",
-                  text: "Onboarding",
+                  href: "https://github.com/crbnos/carbon/blob/main/LICENSE",
+                  text: "License",
                 },
                 { href: "/pricing", text: "Pricing" },
                 {
