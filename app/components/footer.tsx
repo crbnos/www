@@ -25,7 +25,7 @@ export function Footer() {
             </Link>
 
             <div className="flex items-center gap-4">
-              <SocialIcon type="x" href="https://x.com/therealcarbonos" />
+              <SocialIcon type="x" href="https://x.com/carbon_ms" />
               <SocialIcon
                 type="linkedin"
                 href="https://www.linkedin.com/company/carbonos"
