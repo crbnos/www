@@ -61,7 +61,7 @@ export function Footer() {
             <div className="col-span-2 -mx-1 flex flex-wrap gap-2 sm:flex-col">
               {[
                 {
-                  href: "https://learn.carbonos.dev",
+                  href: "https://learn.carbon.ms",
                   text: "Learning",
                 },
                 {

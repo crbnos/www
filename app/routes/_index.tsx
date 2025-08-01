@@ -81,7 +81,7 @@ function Hero() {
             </p>
             <div className="flex flex-col md:flex-row gap-2">
               <Button variant="secondary" size="xl" asChild>
-                <a href="https://app.carbonos.dev">
+                <a href="https://app.carbon.ms">
                   Start Now
                   <LucidePlay />
                 </a>
@@ -160,7 +160,7 @@ function Features() {
           </div>
           <div className="flex flex-col md:flex-row gap-4">
             <Button variant="secondary" size="xl" asChild>
-              <a href="https://learn.carbonos.dev">
+              <a href="https://learn.carbon.ms">
                 Start Learning
                 <LucideGraduationCap />
               </a>
@@ -176,12 +176,12 @@ function Features() {
         </div>
         <div className="hidden lg:flex mt-[225px] pr-8 hover:scale-110 transition-all duration-300">
           <Safari
-            url="https://app.carbonos.dev"
+            url="https://app.carbon.ms"
             className="size-full dark:hidden"
             imageSrc="/screenshots/sales-orders-light.jpeg"
           />
           <Safari
-            url="https://app.carbonos.dev"
+            url="https://app.carbon.ms"
             className="size-full hidden dark:block"
             imageSrc="/screenshots/sales-orders-dark.jpeg"
           />
@@ -342,13 +342,13 @@ function CarbonUniversity() {
 
           <div className="flex flex-col md:flex-row justify-center mt-8 gap-4">
             <Button variant="secondary" size="xl" asChild>
-              <a href="https://learn.carbonos.dev" target="_blank">
+              <a href="https://learn.carbon.ms" target="_blank">
                 Start Learning
                 <LucideGraduationCap />
               </a>
             </Button>
             <Button variant="outline" size="xl" asChild>
-              <a href="https://learn.carbonos.dev/about" target="_blank">
+              <a href="https://learn.carbon.ms/about" target="_blank">
                 <LucideBookOpen />
                 How it works
               </a>
@@ -571,7 +571,7 @@ function CTA() {
           </p>
           <div className="flex flex-col md:flex-row justify-center gap-4 mt-8">
             <Button variant="default" size="xl" asChild>
-              <a href="https://app.carbonos.dev">
+              <a href="https://app.carbon.ms">
                 Start Now
                 <LucidePlay />
               </a>

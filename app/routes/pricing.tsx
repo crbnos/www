@@ -26,7 +26,7 @@ const plans = [
     priceHeadline: "$30",
     priceSubtext: "/user/month",
     action: "Start 30-day free trial",
-    url: "https://app.carbonos.dev",
+    url: "https://app.carbon.ms",
     description:
       "Managed hosting without support, or self-hosted with commercial license.",
     featured: false,
@@ -45,7 +45,7 @@ const plans = [
     priceHeadline: "$90",
     priceSubtext: "/user/month",
     action: "Start 30-day free trial",
-    url: "https://app.carbonos.dev",
+    url: "https://app.carbon.ms",
     featured: true,
     features: [
       "5 user minimum",

@@ -203,7 +203,7 @@ function Document({
                       className={navigationMenuTriggerStyle()}
                       asChild
                     >
-                      <a href="https://learn.carbonos.dev" target="_blank">
+                      <a href="https://learn.carbon.ms" target="_blank">
                         Product
                       </a>
                     </NavigationMenuLink>
@@ -288,7 +288,7 @@ function Document({
                 className="cursor-pointer hidden sm:flex"
                 asChild
               >
-                <a href="https://app.carbonos.dev">
+                <a href="https://app.carbon.ms">
                   Start Now
                   <Play className="size-4" />
                 </a>

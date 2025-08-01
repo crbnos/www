@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://carbonos.dev/sitemap.xml 
+Sitemap: https://carbon.ms/sitemap.xml 
