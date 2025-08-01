@@ -186,7 +186,7 @@ export default function Privacy() {
               </p>
               <p>
                 If you have any questions about your rights, please contact us
-                at <a href="mailto:info@carbonos.dev">info@carbonos.dev</a>.
+                at <a href="mailto:info@carbon.ms">info@carbon.ms</a>.
               </p>
             </li>
             <li>
@@ -209,8 +209,8 @@ export default function Privacy() {
             <li>
               <strong>Contact us.</strong> If you have any questions or concerns
               regarding this Policy, please send us a detailed message to{" "}
-              <a href="mailto:info@carbonos.dev">info@carbonos.dev</a>, and we
-              will try to resolve your concerns.
+              <a href="mailto:info@carbon.ms">info@carbon.ms</a>, and we will
+              try to resolve your concerns.
             </li>
           </ol>
         </div>
