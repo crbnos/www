@@ -8,6 +8,7 @@ import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
 import { Textarea } from "~/components/ui/textarea";
+import { useMode } from "~/hooks/useMode";
 import { getSlackClient } from "~/lib/slack.server";
 import { redis } from "~/lib/upstash.server";
 export const config = { runtime: "nodejs" };
@@ -17,8 +18,6 @@ const ratelimit = new Ratelimit({
   limiter: Ratelimit.slidingWindow(2, "24 h"), // 2 submissions per day
   analytics: true,
 });
-
-const NAMES_OF_MFS_WHO_SPAM_THIS_FORM = ["Robertpem"];
 
 export async function loader({ request }: LoaderFunctionArgs) {
   return json({
@@ -93,10 +92,6 @@ export async function action({ request }: ActionFunctionArgs) {
     }
   }
 
-  if (NAMES_OF_MFS_WHO_SPAM_THIS_FORM.includes(name)) {
-    return json({ success: true, message: "Have a nice day!" });
-  }
-
   const slackClient = getSlackClient();
   await slackClient.sendMessage({
     channel: "#leads",
@@ -131,6 +126,7 @@ export default function Contact() {
 
   // Get Turnstile site key from environment
   const CLOUDFLARE_TURNSTILE_SITE_KEY = ENV?.CLOUDFLARE_TURNSTILE_SITE_KEY;
+  const mode = useMode();
 
   useEffect(() => {
     if (fetcher.data?.success) {
@@ -229,18 +225,17 @@ export default function Contact() {
                 Submit
               </Button>
               <div>
-                {CLOUDFLARE_TURNSTILE_SITE_KEY &&
-                  "1x00000000000000000000AA" && (
-                    <Turnstile
-                      siteKey={CLOUDFLARE_TURNSTILE_SITE_KEY}
-                      onSuccess={(token) => setTurnstileToken(token)}
-                      onError={() => setTurnstileToken("")}
-                      onExpire={() => setTurnstileToken("")}
-                      options={{
-                        theme: "auto",
-                      }}
-                    />
-                  )}
+                {CLOUDFLARE_TURNSTILE_SITE_KEY && (
+                  <Turnstile
+                    siteKey={CLOUDFLARE_TURNSTILE_SITE_KEY}
+                    onSuccess={(token) => setTurnstileToken(token)}
+                    onError={() => setTurnstileToken("")}
+                    onExpire={() => setTurnstileToken("")}
+                    options={{
+                      theme: mode === "dark" ? "dark" : "light",
+                    }}
+                  />
+                )}
               </div>
             </div>
           </fetcher.Form>
