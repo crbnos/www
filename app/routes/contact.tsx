@@ -1,6 +1,7 @@
-import { useFetcher } from "@remix-run/react";
+import { Turnstile } from "@marsidev/react-turnstile";
+import { useFetcher, useLoaderData } from "@remix-run/react";
 import { Ratelimit } from "@upstash/ratelimit";
-import { ActionFunctionArgs, json } from "@vercel/remix";
+import { ActionFunctionArgs, LoaderFunctionArgs, json } from "@vercel/remix";
 import { Check } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "~/components/ui/button";
@@ -19,6 +20,15 @@ const ratelimit = new Ratelimit({
 
 const NAMES_OF_MFS_WHO_SPAM_THIS_FORM = ["Robertpem"];
 
+export async function loader({ request }: LoaderFunctionArgs) {
+  return json({
+    ENV: {
+      CLOUDFLARE_TURNSTILE_SITE_KEY:
+        process.env.CLOUDFLARE_TURNSTILE_SITE_KEY || "",
+    },
+  });
+}
+
 export async function action({ request }: ActionFunctionArgs) {
   const ip = request.headers.get("x-forwarded-for") ?? "127.0.0.1";
   const { success, remaining } = await ratelimit.limit(ip);
@@ -35,12 +45,52 @@ export async function action({ request }: ActionFunctionArgs) {
   const email = String(formData.get("email"));
   const company = String(formData.get("companyName"));
   const message = String(formData.get("message"));
+  const turnstileToken = String(formData.get("turnstileToken") ?? "");
 
   if (!name || !email || !company || !message) {
     return json(
       { success: false, message: "Invalid form submission" },
       { status: 400 }
     );
+  }
+
+  // Verify Turnstile token if configured
+  const CLOUDFLARE_TURNSTILE_SITE_KEY =
+    process.env.CLOUDFLARE_TURNSTILE_SITE_KEY;
+  const CLOUDFLARE_TURNSTILE_SECRET_KEY =
+    process.env.CLOUDFLARE_TURNSTILE_SECRET_KEY;
+
+  if (
+    CLOUDFLARE_TURNSTILE_SITE_KEY &&
+    CLOUDFLARE_TURNSTILE_SITE_KEY !== "1x00000000000000000000AA" &&
+    CLOUDFLARE_TURNSTILE_SECRET_KEY
+  ) {
+    const verifyResponse = await fetch(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({
+          secret: CLOUDFLARE_TURNSTILE_SECRET_KEY,
+          response: turnstileToken,
+          remoteip: ip,
+        }),
+      }
+    );
+
+    const verifyData = await verifyResponse.json();
+
+    if (!verifyData.success) {
+      return json(
+        {
+          success: false,
+          message: "Bot verification failed. Please try again.",
+        },
+        { status: 400 }
+      );
+    }
   }
 
   if (NAMES_OF_MFS_WHO_SPAM_THIS_FORM.includes(name)) {
@@ -74,8 +124,13 @@ export async function action({ request }: ActionFunctionArgs) {
 
 export default function Contact() {
   const fetcher = useFetcher<typeof action>();
+  const { ENV } = useLoaderData<typeof loader>();
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isBot, setIsBot] = useState(false);
+
+  const [turnstileToken, setTurnstileToken] = useState("");
+
+  // Get Turnstile site key from environment
+  const CLOUDFLARE_TURNSTILE_SITE_KEY = ENV?.CLOUDFLARE_TURNSTILE_SITE_KEY;
 
   useEffect(() => {
     if (fetcher.data?.success) {
@@ -91,20 +146,6 @@ export default function Contact() {
         </div>
       </div>
       <div className="mx-auto flex flex-col px-4 w-full lg:w-form-lg max-w-4xl mb-28">
-        {/* Honeypot form - hidden from humans but visible to bots */}
-        <div className="sr-only">
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              setIsBot(true);
-            }}
-          >
-            <input type="text" name="name" />
-            <input type="email" name="email" />
-            <input type="submit" />
-          </form>
-        </div>
-
         {isSubmitted ? (
           <div className="flex flex-col items-center justify-center min-h-[400px] space-y-4">
             <div className="animate-bounce">
@@ -118,10 +159,8 @@ export default function Contact() {
             </p>
           </div>
         ) : (
-          <fetcher.Form
-            method={isBot ? "get" : "post"}
-            className="flex flex-col gap-5"
-          >
+          <fetcher.Form method="post" className="flex flex-col gap-5">
+            <input type="hidden" name="turnstileToken" value={turnstileToken} />
             <div className="relative flex flex-col gap-2">
               <Label htmlFor="name">Name</Label>
               <div className="relative flex flex-1">
@@ -182,13 +221,27 @@ export default function Contact() {
               </div>
             </div>
 
-            <div>
+            <div className="flex justify-between w-full items-start gap-4">
               <Button
                 type="submit"
-                disabled={fetcher.state !== "idle" || isBot}
+                disabled={fetcher.state !== "idle" || !turnstileToken}
               >
                 Submit
               </Button>
+              <div>
+                {CLOUDFLARE_TURNSTILE_SITE_KEY &&
+                  "1x00000000000000000000AA" && (
+                    <Turnstile
+                      siteKey={CLOUDFLARE_TURNSTILE_SITE_KEY}
+                      onSuccess={(token) => setTurnstileToken(token)}
+                      onError={() => setTurnstileToken("")}
+                      onExpire={() => setTurnstileToken("")}
+                      options={{
+                        theme: "auto",
+                      }}
+                    />
+                  )}
+              </div>
             </div>
           </fetcher.Form>
         )}

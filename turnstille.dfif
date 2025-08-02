@@ -1,0 +1,248 @@
+commit 0a6121926c5035827c341ac9e141b1ccbf71d60d
+Author: Brad Barbin <bradbarbin@protonmail.com>
+Date:   Fri Aug 1 10:51:57 2025 -0400
+
+    feat: add cloudflare turnstile protection
+
+diff --git a/.env.example b/.env.example
+index f742fc553..97e5e55d5 100644
+--- a/.env.example
++++ b/.env.example
+@@ -1,5 +1,9 @@
+ CARBON_EDITION="community" # "community" | "cloud" | "enterprise"
+ 
++CLOUDFLARE_TURNSTILE_SITE_KEY="1x00000000000000000000AA"
++CLOUDFLARE_TURNSTILE_SECRET_KEY="********************"
++
++
+ NOVU_APPLICATION_ID="********************"
+ NOVU_SECRET_KEY="********************"
+ 
+diff --git a/apps/erp/app/root.tsx b/apps/erp/app/root.tsx
+index 8c5bde070..b8b8a125e 100644
+--- a/apps/erp/app/root.tsx
++++ b/apps/erp/app/root.tsx
+@@ -52,6 +52,7 @@ export const meta: MetaFunction = () => {
+ export async function loader({ request }: LoaderFunctionArgs) {
+   const {
+     CARBON_EDITION,
++    CLOUDFLARE_TURNSTILE_SITE_KEY,
+     POSTHOG_API_HOST,
+     POSTHOG_PROJECT_PUBLIC_KEY,
+     SUPABASE_URL,
+@@ -65,6 +66,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
+     {
+       env: {
+         CARBON_EDITION,
++        CLOUDFLARE_TURNSTILE_SITE_KEY,
+         POSTHOG_API_HOST,
+         POSTHOG_PROJECT_PUBLIC_KEY,
+         SUPABASE_URL,
+diff --git a/apps/erp/app/routes/_public+/login.tsx b/apps/erp/app/routes/_public+/login.tsx
+index 13226b43f..e4e9e0698 100644
+--- a/apps/erp/app/routes/_public+/login.tsx
++++ b/apps/erp/app/routes/_public+/login.tsx
+@@ -1,6 +1,9 @@
+ import {
+   assertIsPost,
+   carbonClient,
++  CarbonEdition,
++  CLOUDFLARE_TURNSTILE_SECRET_KEY,
++  CLOUDFLARE_TURNSTILE_SITE_KEY,
+   error,
+   magicLinkValidator,
+ } from "@carbon/auth";
+@@ -20,6 +23,9 @@ import {
+   toast,
+   VStack,
+ } from "@carbon/react";
++import { useMode } from "@carbon/remix";
++import { Edition } from "@carbon/utils";
++import { Turnstile } from "@marsidev/react-turnstile";
+ import { useFetcher, useSearchParams } from "@remix-run/react";
+ import { Ratelimit } from "@upstash/ratelimit";
+ import type {
+@@ -77,7 +83,40 @@ export async function action({ request }: ActionFunctionArgs): FormActionData {
+     return json(error(validation.error, "Invalid email address"));
+   }
+ 
+-  const { email } = validation.data;
++  const { email, turnstileToken } = validation.data;
++
++  if (
++    CarbonEdition === Edition.Cloud &&
++    CLOUDFLARE_TURNSTILE_SITE_KEY !== "1x00000000000000000000AA"
++  ) {
++    const verifyResponse = await fetch(
++      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
++      {
++        method: "POST",
++        headers: {
++          "Content-Type": "application/x-www-form-urlencoded",
++        },
++        body: new URLSearchParams({
++          secret: CLOUDFLARE_TURNSTILE_SECRET_KEY,
++          response: turnstileToken ?? "",
++          remoteip: ip,
++        }),
++      }
++    );
++
++    const verifyData = await verifyResponse.json();
++
++    if (!verifyData.success) {
++      return json(
++        error(null, "Bot verification failed. Please try again."),
++        await flash(
++          request,
++          error(null, "Bot verification failed. Please try again.")
++        )
++      );
++    }
++  }
++
+   const user = await getUserByEmail(email);
+ 
+   if (user.data && user.data.active) {
+@@ -110,8 +149,10 @@ export default function LoginRoute() {
+   const redirectTo = searchParams.get("redirectTo") ?? undefined;
+   const [mode, setMode] = useState<"login" | "signup" | "verify">("login");
+   const [signupEmail, setSignupEmail] = useState<string>("");
++  const [turnstileToken, setTurnstileToken] = useState<string>("");
+ 
+   const fetcher = useFetcher<Result & { mode?: string; email?: string }>();
++  const theme = useMode();
+ 
+   useEffect(() => {
+     if (fetcher.data?.success && fetcher.data.mode) {
+@@ -193,6 +234,7 @@ export default function LoginRoute() {
+             action="/login"
+           >
+             <Hidden name="redirectTo" value={redirectTo} type="hidden" />
++            <Hidden name="turnstileToken" value={turnstileToken} />
+             <VStack spacing={4}>
+               {fetcher.data?.success === false && fetcher.data?.message && (
+                 <Alert variant="destructive">
+@@ -203,9 +245,25 @@ export default function LoginRoute() {
+               )}
+ 
+               <Input name="email" label="" placeholder="Email Address" />
++              {CarbonEdition === Edition.Cloud && (
++                <div className="w-full flex justify-center">
++                  <Turnstile
++                    siteKey={CLOUDFLARE_TURNSTILE_SITE_KEY}
++                    onSuccess={(token) => setTurnstileToken(token)}
++                    onError={() => setTurnstileToken("")}
++                    onExpire={() => setTurnstileToken("")}
++                    options={{
++                      theme: theme === "dark" ? "dark" : "light",
++                    }}
++                  />
++                </div>
++              )}
+ 
+               <Submit
+-                isDisabled={fetcher.state !== "idle"}
++                isDisabled={
++                  fetcher.state !== "idle" ||
++                  (CarbonEdition === Edition.Cloud && !turnstileToken)
++                }
+                 isLoading={fetcher.state === "submitting"}
+                 size="lg"
+                 className="w-full"
+diff --git a/apps/erp/package.json b/apps/erp/package.json
+index 21878fcc9..ac831849c 100644
+--- a/apps/erp/package.json
++++ b/apps/erp/package.json
+@@ -18,6 +18,7 @@
+     "@dnd-kit/sortable": "^8.0.0",
+     "@epic-web/remember": "^1.1.0",
+     "@internationalized/date": "^3.5.2",
++    "@marsidev/react-turnstile": "^1.1.0",
+     "@modelcontextprotocol/sdk": "1.7.0",
+     "@monaco-editor/react": "^4.6.0",
+     "@nanostores/react": "^0.7.1",
+diff --git a/package-lock.json b/package-lock.json
+index 9fe7993cd..ff5ce9d1f 100644
+--- a/package-lock.json
++++ b/package-lock.json
+@@ -45,6 +45,7 @@
+         "@dnd-kit/sortable": "^8.0.0",
+         "@epic-web/remember": "^1.1.0",
+         "@internationalized/date": "^3.5.2",
++        "@marsidev/react-turnstile": "^1.1.0",
+         "@modelcontextprotocol/sdk": "1.7.0",
+         "@monaco-editor/react": "^4.6.0",
+         "@nanostores/react": "^0.7.1",
+@@ -3602,6 +3603,15 @@
+       "integrity": "sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==",
+       "optional": true
+     },
++    "node_modules/@marsidev/react-turnstile": {
++      "version": "1.1.0",
++      "resolved": "https://registry.npmjs.org/@marsidev/react-turnstile/-/react-turnstile-1.1.0.tgz",
++      "integrity": "sha512-X7bP9ZYutDd+E+klPYF+/BJHqEyyVkN4KKmZcNRr84zs3DcMoftlMAuoKqNSnqg0HE7NQ1844+TLFSJoztCdSA==",
++      "peerDependencies": {
++        "react": "^17.0.2 || ^18.0.0 || ^19.0",
++        "react-dom": "^17.0.2 || ^18.0.0 || ^19.0"
++      }
++    },
+     "node_modules/@mdx-js/mdx": {
+       "version": "2.3.0",
+       "resolved": "https://registry.npmjs.org/@mdx-js/mdx/-/mdx-2.3.0.tgz",
+diff --git a/packages/auth/src/config/env.ts b/packages/auth/src/config/env.ts
+index 538e3dd9a..27cb90211 100644
+--- a/packages/auth/src/config/env.ts
++++ b/packages/auth/src/config/env.ts
+@@ -10,6 +10,7 @@ declare global {
+       POSTHOG_PROJECT_PUBLIC_KEY: string;
+       VERCEL_URL: string;
+       VERCEL_ENV: string;
++      CLOUDFLARE_TURNSTILE_SITE_KEY: string;
+     };
+   }
+ }
+@@ -35,6 +36,8 @@ declare global {
+       UPSTASH_REDIS_REST_TOKEN: string;
+       VERCEL_URL: string;
+       VERCEL_ENV: string;
++      CLOUDFLARE_TURNSTILE_SITE_KEY: string;
++      CLOUDFLARE_TURNSTILE_SECRET_KEY: string;
+     }
+   }
+ }
+@@ -149,6 +152,14 @@ export const SUPABASE_URL = getEnv("SUPABASE_URL", { isSecret: false });
+ export const SUPABASE_ANON_KEY = getEnv("SUPABASE_ANON_KEY", {
+   isSecret: false,
+ });
++export const CLOUDFLARE_TURNSTILE_SITE_KEY = getEnv(
++  "CLOUDFLARE_TURNSTILE_SITE_KEY",
++  { isSecret: false, isRequired: false }
++);
++export const CLOUDFLARE_TURNSTILE_SECRET_KEY = getEnv(
++  "CLOUDFLARE_TURNSTILE_SECRET_KEY",
++  { isRequired: false }
++);
+ 
+ export function getAppUrl() {
+   if (VERCEL_ENV === "production" || NODE_ENV === "production") {
+@@ -173,6 +184,7 @@ export function getBrowserEnv() {
+     VERCEL_ENV,
+     VERCEL_URL,
+     NODE_ENV,
++    CLOUDFLARE_TURNSTILE_SITE_KEY,
+   };
+ }
+ 
+diff --git a/packages/auth/src/validators.ts b/packages/auth/src/validators.ts
+index 65a6c2fcc..caf8ae4ed 100644
+--- a/packages/auth/src/validators.ts
++++ b/packages/auth/src/validators.ts
+@@ -30,6 +30,7 @@ export const magicLinkValidator = z.object({
+     .min(1, { message: "Email is required" })
+     .email("Must be a valid email"),
+   redirectTo: zfd.text(z.string().optional()),
++  turnstileToken: zfd.text(z.string().optional()),
+ });
+ 
+ export const resetPasswordValidator = z.object({
