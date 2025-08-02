@@ -391,10 +391,10 @@ function Reviews() {
   };
 
   return (
-    <section className="bg-secondary text-secondary-foreground bg-[url('/reviews.webp')] bg-[0_0] bg-no-repeat bg-cover py-20 dark:bg-gradient-to-br dark:from-secondary dark:to-secondary-foreground">
+    <section className="bg-primary text-primary-foreground bg-[url('/reviews.webp')] bg-[0_0] bg-no-repeat bg-cover py-20 dark:bg-gradient-to-br dark:from-secondary dark:to-secondary-foreground">
       <div className="container flex flex-col gap-12 mx-auto px-4">
-        <h2 className="font-display text-balance mx-auto max-w-4xl text-center font-medium tracking-tight leading-[115%] text-5xl lg:text-7xl">
-          Builders ❤️ Carbon
+        <h2 className="font-display font-semibold text-balance mx-auto max-w-4xl text-center tracking-tight leading-[115%] text-3xl lg:text-5xl">
+          What our customers say:
         </h2>
         <div className="max-w-5xl mx-auto overflow-hidden p-4">
           <div className="flex flex-row items-center justify-center gap-4">
