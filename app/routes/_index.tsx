@@ -27,7 +27,7 @@ export default function Route() {
       <Hero />
       <Features />
       <Grid />
-      <CarbonUniversity />
+      <CarbonAcademy />
       <Reviews />
       <Memo />
       <CTA />
@@ -319,7 +319,7 @@ function Grid() {
   );
 }
 
-function CarbonUniversity() {
+function CarbonAcademy() {
   return (
     <section className="relative flex h-[800px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background">
       <DotPattern
