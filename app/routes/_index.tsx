@@ -542,12 +542,12 @@ function Memo() {
             <img
               alt="Brad Barbin"
               loading="lazy"
-              className="w-14 h-auto rounded-lg"
+              className="w-14 h-auto rounded-full"
               src="/faces/brad.webp"
             />
             <div className="flex flex-col">
               <p className="dark:text-tertiary text-foreground">Brad Barbin</p>
-              <p className="dark:text-tertiary text-foreground">
+              <p className="dark:text-tertiary text-muted-foreground text-sm">
                 Co-founder &amp; CEO
               </p>
             </div>
