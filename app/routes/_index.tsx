@@ -381,7 +381,7 @@ const reviews = [
     logo: "/logos/stealth.jpeg",
     face: "/faces/avnish.jpg",
     review:
-      "Been diving deep into Carbon over the last few weeks. Incredibly impressed by how clean, modular, and extensible the codebase is. This is exactly the kind of open infrastructure the manufacturing world needs. Excited to keep building on top of it",
+      "Been diving deep into Carbon over the last few weeks. Incredibly impressed by how clean, modular, and extensible the codebase is. This is exactly the kind of open infrastructure the manufacturing world needs. Excited to keep building on top of it!",
     author: "Avnish Sachar",
     authorTitle: "Co-founder, Stealth",
   },
