@@ -28,7 +28,7 @@ export function Footer() {
               <SocialIcon type="x" href="https://x.com/carbon_ms" />
               <SocialIcon
                 type="linkedin"
-                href="https://www.linkedin.com/company/carbonos"
+                href="https://www.linkedin.com/company/carbon-manufacturing-systems"
               />
               <SocialIcon type="github" href="https://github.com/crbnos" />
             </div>
