@@ -23,7 +23,7 @@ export default function Terms() {
           <p>
             These Terms of Service ("Terms", "Terms of Service") govern your use
             of our web pages operated by Carbon Manufacturing Systems
-            Corporation.
+            Corporation!
           </p>
 
           <p>
