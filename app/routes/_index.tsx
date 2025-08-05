@@ -1,7 +1,6 @@
 import { Link } from "@remix-run/react";
 import { DotPattern } from "components/magicui/dot-pattern";
 import { Safari } from "components/magicui/safari";
-import { AnimatePresence, motion } from "framer-motion";
 import {
   LucideArrowLeft,
   LucideArrowRight,
@@ -419,37 +418,28 @@ function Reviews() {
               <LucideArrowLeft />
             </button>
             <div className="flex flex-grow dark:bg-background/90 bg-background text-foreground rounded-xl w-full h-full min-h-[420px]">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentReview}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3 }}
-                  className="flex flex-col flex-grow gap-12 justify-between h-full items-center p-12 w-full"
-                >
-                  <p className="text-balance text-left flex-grow font-medium tracking-tight text-xl md:text-2xl">
-                    {reviews[currentReview].review}
-                  </p>
-                  <div className="flex justify-start w-full">
-                    <div className="flex items-center gap-2">
-                      <img
-                        src={reviews[currentReview].face}
-                        alt="Avatar"
-                        className="size-16 rounded-full"
-                      />
-                      <div className="flex flex-col">
-                        <p className="text-xl font-bold">
-                          {reviews[currentReview].author}
-                        </p>
-                        <p className="text-base text-muted-foreground font-medium">
-                          {reviews[currentReview].authorTitle}
-                        </p>
-                      </div>
+              <div className="flex flex-col flex-grow gap-12 justify-between h-full items-center p-12 w-full">
+                <p className="text-balance text-left flex-grow font-medium tracking-tight text-xl md:text-2xl">
+                  {reviews[currentReview].review}
+                </p>
+                <div className="flex justify-start w-full">
+                  <div className="flex items-center gap-2">
+                    <img
+                      src={reviews[currentReview].face}
+                      alt="Avatar"
+                      className="size-16 rounded-full"
+                    />
+                    <div className="flex flex-col">
+                      <p className="text-xl font-bold">
+                        {reviews[currentReview].author}
+                      </p>
+                      <p className="text-base text-muted-foreground font-medium">
+                        {reviews[currentReview].authorTitle}
+                      </p>
                     </div>
                   </div>
-                </motion.div>
-              </AnimatePresence>
+                </div>
+              </div>
             </div>
             <button
               onClick={onNext}
