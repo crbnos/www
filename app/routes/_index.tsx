@@ -65,7 +65,7 @@ const customers = [
 
 function Hero() {
   return (
-    <section className="py-0">
+    <section id="hero" className="py-0">
       <div className="bg-[linear-gradient(to_bottom_right,#f7f5ff_35.67%,#c9fff8_88.95%)] dark:bg-[linear-gradient(to_bottom_right,#0e0338_35.67%,#1b433e_88.95%)]  w-full mx-auto py-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col justify-start items-center gap-8">
@@ -119,7 +119,7 @@ function Hero() {
 
 function Features() {
   return (
-    <section className="mt-[-105px] pb-[140px]">
+    <section id="features" className="mt-[-105px] pb-[140px]">
       <div className="flex gap-8 container max-w-[1380px] mx-auto px-4">
         <div className="flex flex-col gap-8 mt-[205px] flex-grow max-w-[1380px] mx-auto pl-8">
           <h3 className="text-muted-foreground uppercase text-sm leading-[140%] tracking-tighter">
@@ -193,7 +193,7 @@ function Features() {
 
 function Grid() {
   return (
-    <section>
+    <section id="grid">
       <div className="mx-auto bg-muted rounded-xl max-w-[1380px] w-full py-24">
         <div className="container">
           <div className="flex flex-col gap-8">
@@ -321,7 +321,10 @@ function Grid() {
 
 function CarbonAcademy() {
   return (
-    <section className="relative flex h-[800px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background">
+    <section
+      id="academy"
+      className="relative flex h-[800px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background"
+    >
       <DotPattern
         glow
         className={cn(
@@ -399,7 +402,10 @@ function Reviews() {
   };
 
   return (
-    <section className="bg-primary text-primary-foreground bg-[url('/reviews.webp')] bg-[0_0] bg-no-repeat bg-cover py-20 dark:bg-gradient-to-br dark:from-secondary dark:to-secondary-foreground">
+    <section
+      id="reviews"
+      className="bg-primary text-primary-foreground bg-[url('/reviews.webp')] bg-[0_0] bg-no-repeat bg-cover py-20 dark:bg-gradient-to-br dark:from-secondary dark:to-secondary-foreground"
+    >
       <div className="container flex flex-col gap-12 mx-auto px-4">
         <h2 className="font-display font-semibold text-balance mx-auto max-w-4xl text-center tracking-tight leading-[115%] text-3xl lg:text-5xl">
           What our customers say:
@@ -495,7 +501,7 @@ function Reviews() {
 
 function Memo() {
   return (
-    <section className="md:py-8 lg:pt-36 lg:pb-24 md:px-4">
+    <section id="memo" className="md:py-8 lg:pt-36 lg:pb-24 md:px-4">
       <div className="max-w-4xl mx-auto flex flex-col gap-4 border-[0.5px] bg-card px-8 shadow py-12 lg:p-14 text-lg xl-p-16">
         <div className="mb-4 flex flex-col gap-1.5 md:mb-6 lg:mb-8 tracking-tight">
           <p className="dark:text-muted-foreground font-mono uppercase text-base font-light">
@@ -568,7 +574,7 @@ function Memo() {
 
 function CTA() {
   return (
-    <section className="py-24">
+    <section id="cta" className="py-24">
       <div className="container max-w-4xl mx-auto px-4">
         <div className="flex flex-col gap-4 bg-muted dark:bg-muted bg-[url('/cta.webp')] dark:bg-none bg-[0_0] bg-no-repeat bg-cover rounded-xl py-24 justify-center items-center px-4">
           <h2 className="font-display text-balance mx-auto max-w-2xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl ">
