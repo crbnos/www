@@ -524,52 +524,43 @@ export default function Terms() {
 
           <h3>Amendments To Terms</h3>
           <p>
-            We may amend Terms at any time by posting the amended terms on this
-            site. It is your responsibility to review these Terms periodically.
+            Carbon may revise or update these Terms from time to time without prior notice. The most current version of the Terms will 
+            always be posted and dated at the top of the page.
           </p>
 
           <p>
-            Your continued use of the Platform following the posting of revised
-            Terms means that you accept and agree to the changes. You are
-            expected to check this page frequently so you are aware of any
-            changes, as they are binding on you.
+            Your continued use of the Service after the effective date of any changes constitutes your acceptance of the revised Terms. 
+            If you do not agree to the updated Terms, you must discontinue use of the Service.
           </p>
 
           <p>
-            By continuing to access or use our Service after any revisions
-            become effective, you agree to be bound by the revised terms. If you
-            do not agree to the new terms, you are no longer authorized to use
-            Service.
+            It is your responsibility to review these Terms periodically. The date of the most recent revision will appear at the top 
+            of the document.
           </p>
 
           <h3>Waiver And Severability</h3>
           <p>
-            No waiver by Company of any term or condition set forth in Terms
-            shall be deemed a further or continuing waiver of such term or
-            condition or a waiver of any other term or condition, and any
-            failure of Company to assert a right or provision under Terms shall
-            not constitute a waiver of such right or provision.
+            No waiver by Carbon of any term or condition set forth in these Terms shall be deemed a continuing waiver of such term or 
+            condition or a waiver of any other term or condition. Any failure by Carbon to assert a right or enforce a provision under 
+            these Terms shall not constitute a waiver of such right or provision.
           </p>
 
           <p>
-            If any provision of Terms is held by a court or other tribunal of
-            competent jurisdiction to be invalid, illegal or unenforceable for
-            any reason, such provision shall be eliminated or limited to the
-            minimum extent such that the remaining provisions of Terms will
-            continue in full force and effect.
+            If any provision of these Terms is held to be invalid, illegal, or unenforceable by a court of competent jurisdiction, such 
+            provision shall be modified or limited to the minimum extent necessary to make it enforceable, and the remaining provisions 
+            shall continue in full force and effect.
           </p>
 
           <h3>Acknowledgement</h3>
           <p>
-            BY USING SERVICE OR OTHER SERVICES PROVIDED BY US, YOU ACKNOWLEDGE
-            THAT YOU HAVE READ THESE TERMS OF SERVICE AND AGREE TO BE BOUND BY
-            THEM.
+            BY ACCESSING OR USING THE SERVICE, YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTOOD, AND AGREE TO BE BOUND BY THESE TERMS, 
+            INCLUDING ANY DOCUMENTS INCORPORATED BY REFERENCE.  IF YOU DO NOT AGREE TO THESE TERMS, YOU ARE NOT AUTHORIZED TO ACCESS 
+            OR USE THE SERVICE.
           </p>
 
           <h3>Contact Us</h3>
           <p>
-            If you have any questions about these terms of service, please
-            contact us by email at support@carbon.ms.
+            If you have any questions about these terms of service, please contact us by email at <a href="mailto:support@carbon.ms">support@carbon.ms</a>.
           </p>
         </div>
       </div>
