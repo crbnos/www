@@ -519,6 +519,14 @@ export default function Terms() {
             all prior or contemporaneous understandings, communications, and agreements, whether written or oral.
           </p>
 
+          <h3>Dispute Resolution and Arbitration</h3>
+          <p>
+            Any dispute, claim, or controversy arising out of or relating to these Terms or the breach, termination, enforcement, 
+            interpretation, or validity thereof shall be resolved by binding arbitration conducted in the State of Delaware, in 
+            accordance with the rules of the American Arbitration Association. You agree to waive any right to a jury trial or to 
+            participate in a class action. Nothing in this clause shall prevent either party from seeking injunctive or equitable 
+            relief in a court of competent jurisdiction.
+          </p>
           <h3>Changes To Service</h3>
           <p>
             Carbon reserves the right to modify, suspend, or discontinue the Service, or any part thereof, at any time, with or without 
