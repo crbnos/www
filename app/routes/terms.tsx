@@ -41,11 +41,18 @@ export default function Terms() {
           </p>
           <h3>Communications</h3>
           <p>
-            By creating an Account on our Service, you agree to subscribe to
-            newsletters, marketing or promotional materials and other
-            information we may send. However, you may opt out of receiving any,
-            or all, of these communications from us by following the unsubscribe
-            link or by emailing us.
+            By creating an account or otherwise using the Service, you consent to receive 
+            electronic communications from Carbon, which may include newsletters, marketing 
+            materials, promotional content, product updates, transactional notices, and 
+            other information related to your use of the Service. These communications 
+            may be sent via email or through in-app notifications.
+          </p>
+          <p>
+          You may opt out of receiving non-essential communications at any time by following 
+          the unsubscribe instructions included in the communication or by contacting us at 
+          support@carbonos.dev. Please note that certain communications, such as those 
+          related to your account, transactions, or legal notices, are necessary for the 
+          operation of the Service and you may not opt out of receiving them.
           </p>
 
           <h3>Purchases</h3>
