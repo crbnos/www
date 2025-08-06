@@ -59,8 +59,8 @@ export default function Privacy() {
                 <li>
                   <strong>Account Creation:</strong> To create an account on 
                   the Platform, your Organization will be required to provide 
-                  certain information, including your <strong>name, email address</strong>, 
-                  company,address, location, and, optionally, a <strong>profile photo</strong>. 
+                  certain information, including your <strong>name, email address, 
+                  company, address, location,</strong> and, optionally, a <strong>profile photo</strong>. 
                   We use this information to:
                   <p>
                   <ul>
@@ -367,7 +367,7 @@ export default function Privacy() {
           </p>
           <p>
             <li>
-              <strong>Changes to This Privacy Policy.</strong> 
+              <strong>Changes to This Privacy Policy</strong> 
           </p>
           <p>
               We may revise this Privacy Policy from time to time to reflect changes in our 
@@ -385,7 +385,7 @@ export default function Privacy() {
             </li>
           <p>
             <li>
-              <strong>Contact us.</strong> 
+              <strong>Contact us</strong> 
           </p>
           <p>
               If you have any questions or concerns
