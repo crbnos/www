@@ -35,8 +35,7 @@ export default function Terms() {
           <p>
             These Terms apply to all visitors, users, and others who wish to access or use
             the Service. If you do not agree to these Terms or our Privacy Policy, then you 
-            must not access or use the Service. However, if you do not agree, please email 
-            us so we can try to find a solution.  If you have questions about this 
+            must not access or use the Service.  If you have questions about this 
             Agreement, please contact <a href="mailto:support@carbon.ms">support@carbon.ms</a>.
           </p>
           <h3>Communications</h3>
