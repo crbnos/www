@@ -85,17 +85,17 @@ export default function Terms() {
           </ul>
           </p>
           <p>
-            You represent and warrant that: (i) you have the legal right to use
-            any credit card(s) or other payment method(s) in connection with any
-            Purchase; and that (ii) the information you supply to us is true,
-            correct and complete.
+            A valid and current payment method (such as a credit card) is required to process 
+            payments. You agree to provide accurate and complete billing information, including 
+            your full name, billing address, telephone number, and payment details. By providing 
+            such information, you authorize Carbon to automatically charge the applicable 
+            Subscription fees and any applicable taxes using your designated payment method.
           </p>
 
           <p>
-            We may employ the use of third party services for the purpose of
-            facilitating payment and the completion of Purchases. By submitting
-            your information, you grant us the right to provide the information
-            to these third parties subject to our Privacy Policy.
+            In the event automatic billing is unsuccessful, Carbon may issue an electronic invoice. 
+            You agree to remit full payment by the deadline stated on the invoice. Failure to pay 
+            may result in the suspension or termination of access to the Service.
           </p>
 
           <p>
@@ -110,98 +110,72 @@ export default function Terms() {
             unauthorized or illegal transaction is suspected.
           </p>
 
-          <h3>Contests, Sweepstakes and Promotions</h3>
+          <h3><strong>Customer and End User Roles</strong></h3>
           <p>
-            Any contests, sweepstakes or other promotions (collectively,
-            "Promotions") made available through Service may be governed by
-            rules that are separate from these Terms of Service. If you
-            participate in any Promotions, please review the applicable rules as
-            well as our Privacy Policy. If the rules for a Promotion conflict
-            with these Terms of Service, Promotion rules will apply.
-          </p>
-
-          <h3>Subscriptions</h3>
-          <p>
-            Some parts of Service are billed on a subscription basis
-            ("Subscription(s)"). You will be billed in advance on a recurring
-            and periodic basis ("Billing Cycle"). Billing cycles are set either
-            on a monthly or annual basis, depending on the type of subscription
-            plan you select when purchasing a Subscription.
+            A <strong>"Customer"</strong> is the individual or legal entity that enters into a 
+            subscription or service agreement with Carbon to access and use the Service. If the 
+            Customer represents an organization, the individual accepting these Terms represents 
+            and warrants that they have the authority to bind that organization and its authorized 
+            users to these Terms.
           </p>
 
           <p>
-            At the end of each Billing Cycle, your Subscription will
-            automatically renew under the exact same conditions unless you
-            cancel it or Carbon Manufacturing Systems Corporation cancels it.
-            You may cancel your Subscription renewal either through your online
-            account management page or by contacting our customer support team.
+            An <strong>"End User"</strong> is any individual who accesses or uses the Service under 
+            the Customer’s account, whether as an employee, contractor, or other representative of the 
+            Customer. End Users are granted access by the discretion of the customer or by virtue of the 
+            Customer’s agreement with Carbon.
           </p>
 
           <p>
-            A valid payment method, including credit card or PayPal, is required
-            to process the payment for your subscription. You shall provide us
-            with accurate and complete billing information including full name,
-            address, state, zip code, telephone number, and a valid payment
-            method information. By submitting such payment information, you
-            automatically authorize us to charge all Subscription fees incurred
-            through your account to any such payment instruments.
-          </p>
-
-          <p>
-            Should automatic billing fail to occur for any reason, we will issue
-            an electronic invoice indicating that you must proceed manually,
-            within a certain deadline date, with the full payment corresponding
-            to the billing period as indicated on the invoice.
+            The Customer is responsible for all activity occurring under its account, including actions 
+            taken by End Users. The Customer shall ensure that all End Users comply with this Agreement 
+            and shall be liable for any breach of these Terms by its End Users.
           </p>
 
           <h3>Free Trial</h3>
           <p>
-            We may, at our sole discretion, offer a Subscription with a free
-            trial for a limited period of time ("Free Trial").
+            Carbon may, at its sole discretion, offer access to certain features of the Service on a trial 
+            basis at no charge for a limited time (“Free Trial”). The specific terms of any Free Trial, 
+            including duration and access scope, will be described at the time of the offer.
           </p>
 
           <p>
-            You may be required to enter your billing information in order to
-            sign up for Free Trial.
+            To activate a Free Trial, you may be required to provide valid billing information. If billing 
+            information is provided, you will not be charged until the Free Trial period expires. Unless you 
+            cancel your Subscription prior to the end of the Free Trial, the applicable Subscription fees 
+            will be automatically charged to your designated payment method on the first day following the 
+            Free Trial period.
           </p>
 
           <p>
-            If you do enter your billing information when signing up for Free
-            Trial, you will not be charged until Free Trial has expired. On the
-            last day of Free Trial period, unless you cancelled your
-            Subscription, you will be automatically charged the applicable
-            Subscription fees for the type of Subscription you have selected.
-          </p>
-
-          <p>
-            At any time and without notice, we reserve the right to (i) modify
-            Terms of Service of Free Trial offer, or (ii) cancel such Free Trial
-            offer.
+            Free Trials are intended for evaluation purposes only and may not be used to create or process data 
+            for commercial use unless explicitly permitted by Carbon. Carbon reserves the right to (i) modify 
+            or terminate any Free Trial offer at any time without prior notice, and (ii) determine your 
+            eligibility for a Free Trial at its sole discretion.
           </p>
 
           <h3>Fee Changes</h3>
           <p>
-            We, in our sole discretion and at any time, may modify Subscription
-            fees for the Subscriptions. Any Subscription fee change will become
-            effective at the end of the then-current Billing Cycle.
+            Carbon may adjust Subscription fees at its sole discretion. Any such changes will take effect at the 
+            start of the next applicable Billing Cycle.
           </p>
 
           <p>
-            We will provide you with reasonable prior notice of any change in
-            Subscription fees to give you an opportunity to terminate your
-            Subscription before such change becomes effective.
+            The Customer will be notified of fee changes via email or through the Service. Continued use of the 
+            Service after the effective date of the revised fees constitutes the Customer’s acceptance of the new 
+            pricing.
+          </p>
+
+          <h3>Refund Policy</h3>
+          <p>
+            All payments made in connection with the Service are non-refundable, except as expressly required by 
+            applicable law.
           </p>
 
           <p>
-            Your continued use of Service after Subscription fee change comes
-            into effect constitutes your agreement to pay the modified
-            Subscription fee amount.
-          </p>
-
-          <h3>Refunds</h3>
-          <p>
-            Except when required by law, paid Subscription fees are
-            non-refundable.
+            No credits or refunds will be provided for partial use, unused periods, downgrades, or cancellations 
+            within an active Billing Cycle. Customers are responsible for reviewing the Service and Subscription 
+            details before purchase.
           </p>
 
           <h3>Content</h3>
