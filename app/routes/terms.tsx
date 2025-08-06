@@ -379,7 +379,7 @@ export default function Terms() {
           </p>
           <p>
             By submitting Feedback, you acknowledge and agree that:
-          <ol>
+          <ol type="i">
             <li>You will not retain, acquire, or assert any intellectual property or other rights in or to the Feedback;</li>
             <li>Carbon may already be independently developing ideas or technologies similar to the Feedback;</li>
             <li>The Feedback does not contain any confidential or proprietary information of any third party; and</li>
