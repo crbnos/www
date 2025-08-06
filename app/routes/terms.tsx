@@ -180,46 +180,29 @@ export default function Terms() {
 
           <h3>Content</h3>
           <p>
-            Our Service allows you to post, link, store, share and otherwise
-            make available certain information, text, graphics, videos, or other
-            material ("Content"). You are responsible for Content that you post
-            on or through Service, including its legality, reliability, and
-            appropriateness.
+            The Customer retains all ownership rights to its Content. By submitting or uploading Content to the 
+            Service, the Customer represents and warrants that it has all necessary rights, licenses, and 
+            permissions to do so. Carbon personnel may access Content only to (a) provide technical support, 
+            (b) maintain or improve the Service, or (c) comply with applicable law.
           </p>
 
           <p>
-            By posting Content on or through Service, You represent and warrant
-            that: (i) Content is yours (you own it) and/or you have the right to
-            use it and the right to grant us the rights and license as provided
-            in these Terms, and (ii) that the posting of your Content on or
-            through Service does not violate the privacy rights, publicity
-            rights, copyrights, contract rights or any other rights of any
-            person or entity. We reserve the right to terminate the account of
-            anyone found to be infringing on a copyright.
+            Carbon shall treat all Content as confidential and apply industry-standard safeguards to protect it. 
+            By uploading or transmitting Content to the Service, the Customer grants Carbon a non-exclusive, 
+            worldwide, royalty-free license to host, store, reproduce, and display such Content solely for the 
+            purpose of operating and providing the Service. This license includes the right to transmit Content 
+            to and from third-party infrastructure providers used by Carbon in delivering the Service.
           </p>
 
           <p>
-            You retain any and all of your rights to any Content you submit,
-            post or display on or through Service and you are responsible for
-            protecting those rights. We take no responsibility and assume no
-            liability for Content you or any third party posts on or through
-            Service. However, by posting Content using Service you grant us the
-            right and license to use, modify, publicly perform, publicly
-            display, reproduce, and distribute such Content on and through
-            Service. You agree that this license includes the right for us to
-            make your Content available to other users of Service, who may also
-            use your Content subject to these Terms.
+            The Customer is solely responsible for all Content submitted through its account, including the 
+            legality, reliability, and appropriateness of such Content. Carbon assumes no liability for any 
+            Content uploaded by the Customer or its End Users.
           </p>
 
           <p>
-            Carbon Manufacturing Systems Corporation has the right but not the
-            obligation to monitor and edit all Content provided by users. In
-            addition, Content found on or through this Service are the property
-            of Carbon Manufacturing Systems Corporation or used with permission.
-            You may not distribute, modify, transmit, reuse, download, repost,
-            copy, or use said Content, whether in whole or in part, for
-            commercial purposes or for personal gain, without express advance
-            written permission from us.
+            Upon termination, Carbon may delete all Content within a commercially reasonable timeframe. The 
+            Customer is responsible for exporting any necessary data prior to cancellation.
           </p>
 
           <h3>Prohibited Uses</h3>
