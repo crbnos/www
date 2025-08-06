@@ -50,7 +50,7 @@ export default function Privacy() {
                 personal information we collect and how we use that information.
               </p>
             </li>
-            <ol type="a">
+            <ol type="A">
               <li>
                 <strong>Voluntarily Provided Information</strong>
                 <p>
@@ -105,7 +105,7 @@ export default function Privacy() {
               </ol>
             </ol>
               </p>
-            <ol type="a">
+            <ol type="B">
               <li>
                 <strong>Automatically Collected Information</strong>
                 <p></p>
@@ -139,6 +139,7 @@ export default function Privacy() {
                   we may receive an <strong>automatic confirmation. We 
                   use this data to understand engagement and improve our 
                   communications.</strong>
+                  <p></p>
                 </li>
                 <li>
                   <strong>Cookies and Analytics:</strong>We use cookies and 
@@ -156,6 +157,7 @@ export default function Privacy() {
                   different devices and sessions. These services may collect device 
                   identifiers, IP addresses, and usage patterns.
                   </p>
+                  <p>
                 </li>
                 <li>
                   <strong>Information from Other Sources:</strong>We may supplement the 
@@ -165,6 +167,7 @@ export default function Privacy() {
                   We will only obtain this information to the extent permitted by applicable
                   law.
                 </li>
+                  </p>
               </ol>
             </ol>
             <li>
