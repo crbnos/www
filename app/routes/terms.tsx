@@ -50,7 +50,7 @@ export default function Terms() {
           <p>
             You may opt out of receiving non-essential communications at any time by following 
             the unsubscribe instructions included in the communication or by contacting us at 
-            support@carbonos.dev. Please note that certain communications, such as those 
+            support@carbon.ms. Please note that certain communications, such as those 
             related to your account, transactions, or legal notices, are necessary for the 
             operation of the Service and you may not opt out of receiving them.
           </p>
@@ -348,7 +348,7 @@ export default function Terms() {
 
           <p>
             If you believe that any Content hosted on or through the Service infringes upon your copyright or other 
-            intellectual property rights, please send a written notice to support@carbonos.dev with the subject line 
+            intellectual property rights, please send a written notice to support@carbon.ms with the subject line 
             “Copyright Infringement.” The notice must include the following information:
           </p>
           <ol>
@@ -373,7 +373,7 @@ export default function Terms() {
           <h3>Error Reporting & Feedback</h3>
           <p>
             You may provide Carbon with feedback, suggestions, feature requests, bug reports, or other information 
-            related to the Service (collectively, “Feedback”) by contacting support@carbonos.dev or through other 
+            related to the Service (collectively, “Feedback”) by contacting support@carbon.ms or through other 
             designated support channels. All Feedback is provided voluntarily and shall not be considered 
             confidential or proprietary to you.
           </p>
@@ -491,7 +491,7 @@ export default function Terms() {
           
           <p>
             If you wish to terminate your account, you may do so by discontinuing use of the Service or by contacting Carbon 
-            at support@carbonos.dev. Termination will not relieve you of any outstanding payment obligations as of the termination 
+            at support@carbon.ms. Termination will not relieve you of any outstanding payment obligations as of the termination 
             date.
           </p>
 
