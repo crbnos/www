@@ -395,17 +395,15 @@ export default function Terms() {
           
           <h3>Third-Party Links</h3>
           <p>
-            Our Service may contain links to third party web sites or services
-            that are not owned or controlled by Carbon Manufacturing Systems
-            Corporation.
+            The Service may contain links to third-party websites or services that are not owned or controlled by Carbon 
+            Manufacturing Systems Corporation. These links are provided for convenience only and do not imply any 
+            endorsement, sponsorship, or affiliation.
           </p>
 
           <p>
-            Carbon Manufacturing Systems Corporation has no control over, and
-            assumes no responsibility for the content, privacy policies, or
-            practices of any third party web sites or services. We do not
-            warrant the offerings of any of these entities/individuals or their
-            websites.
+            Carbon has no control over, and assumes no responsibility for, the content, privacy policies, terms, or 
+            practices of any third-party websites or services. We make no warranties or representations regarding the 
+            accuracy, completeness, or legality of third-party content or offerings.
           </p>
 
           <p>
