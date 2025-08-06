@@ -15,56 +15,79 @@ export default function Privacy() {
         <div className="prose dark:prose-invert lg:prose-lg">
           <ol type="1">
             <li>
-              <strong>Introduction.</strong> This Privacy Policy (the{" "}
-              <strong>“Policy”</strong>) explains how Carbon Manufacturing
-              Systems Corporation. (“Carbon”) collects, uses, and discloses
-              personal information through its online platform (the “Platform”).
-              By using or accessing the Platform in any manner, you acknowledge
-              that you accept the practices and policies outlined in this
-              Policy, and you hereby consent that we will collect, use, and
-              share your personal information in the following ways. Any
-              capitalized terms that are not defined in this Policy are defined
-              in our <a href="/terms">Terms of Service</a>.
+              <strong>Introduction</strong> 
+              <p>
+              This Privacy Policy (this{" "}
+              <strong>“Privacy Policy”</strong>) explains how <strong>Carbon Manufacturing
+              Systems Corporation. (“Carbon," "we,” "us," or "our")</strong> collects, uses, 
+              and discloses <strong>Personal Information</strong> through its online platform,
+              services, and website (collectivey, the <strong>"Platform"</strong>).
+              </p>
+              <p>
+              By accessing or using the Platform, you acknowledge and agree to 
+              the data practices described in this Privacy Policy and consent 
+              to the collection, use, processing, and disclosure of your Personal
+              Information as described herein. If you do not agree with this 
+              Privacy Policy, please do not access or use the Platform.
+              </p>
+              <p>
+                Any capitalized terms used but not defined in this Privacy Policy
+                shall have the meanings given to them in our <a href="/terms">
+                Terms of Service</a>.
+              </p>
             </li>
             <li>
-              <strong>Information collected and how we use it.</strong> As
-              explained further in this section, you will have the opportunity
-              to provide us with certain personal information. In addition, we
-              may collect certain information automatically through your use of
-              the Platform. We will use this information to provide you and your
-              Organizations with the functionality of our Platform, to improve
-              our Platform, and to provide you with information about our
-              Platform. The rest of this section provides a more detailed
-              explanation of the personal information we collect and how we use
-              that information.
+              <strong>Information collected and how we use it</strong> 
+              <p>
+                As explained further in this section, you will have the 
+                opportunity to provide us with certain personal information. 
+                In addition, we may collect certain information automatically 
+                through your use of the Platform. We will use this 
+                information to provide you and your Organizations with the 
+                functionality of our Platform, to improve our Platform, and
+                to provide you with information about our Platform. The rest
+                of this section provides a more detailed explanation of the 
+                personal information we collect and how we use that information.
+              </p>
             </li>
             <ol type="a">
               <li>
-                <strong>Voluntarily Disclosed Information.</strong>
+                <strong>Voluntarily Provided Information</strong>
               </li>
               <ol type="i">
                 <li>
-                  <strong>Account Creation.</strong> In order to create your
-                  account on the Platform, your organization will need to
-                  provide information. This information will include, at a
-                  minimum, your name, email address, and you may provide a photo
-                  if you choose. We use this information so that we can provide
-                  you with access to the Platform, perform our contract with
-                  you, and communicate with you about your account and the
-                  accounts for Organizations that you are affiliated with on the
-                  Platform. In addition, we may use your email address to send
-                  you promotional emails about the Platform and Carbon’s
-                  services. You hereby consent to receipt of these promotional
-                  emails.
+                  <strong>Account Creation:</strong> To create an account on 
+                  the Platform, your Organization will be required to provide 
+                  certain information, including your <strong>name, email address</strong>, and, 
+                  optionally, a <strong>profile photo</strong>. We use this information to:
+                  <ul>
+                    <li>
+                    Enable your access to and use of the Platform
+                    </li>
+                    <li>
+                    Perform our contractual obligations
+                    </li>
+                    <li>
+                    Communicate with you regarding your account and any Organizations 
+                    you are associated with
+                    </li>
+                  </ul>
+                 <p>
+                   We may also use your email address to send you product updates, 
+                   newsletters, or promotional communications related to Carbon’s 
+                   services. By providing your email, you consent to receiving 
+                   these communications, although you may opt out at any time.
+                 </p>
                 </li>
                 <li>
-                  <strong>Work Activity.</strong> You will have the option to
-                  log work activity to the Platform, and to modify the work
-                  activity of others within the Organizations when they log work
-                  activity Platform (collectively, “User Content”). If you or
-                  the Organizations choose to use Third Party Apps in connection
-                  with the Platform, you will be able to log User Content to the
-                  Platform from those Third Party Apps.
+                  <strong>Work Activity:</strong> You may choose to log work-
+                  related activities into the Platform and, depending on your 
+                  permissions, <strong>modify or manage entries made by other users</strong>
+                  within your Organization (collectively, “<strong>User Content</strong>”). 
+                  Additionally, if you or your Organization choose to integrate
+                  <strong>Third-Party Applications</strong> (“Third Party Apps”) with the Platform,
+                  you may also log or sync User Content from those services into 
+                  the Platform. 
                 </li>
               </ol>
             </ol>
@@ -72,25 +95,31 @@ export default function Privacy() {
               <li>
                 <strong>Automatically Collected Information.</strong>
               </li>
-              <ol>
+              <ol type="I">
                 <li>
                   <strong>Browser &amp; Device Information.</strong> Whenever
                   you interact with the Platform, we automatically receive and
                   record information on our server logs from your browser or
-                  device, which may include your IP address, geolocation data,
-                  device identification, “cookie” information, the type of
-                  device you’re using to access the Platform, the amount of time
-                  spent on the Platform, and the page or feature you requested.
-                  We use the data we automatically collect to diagnose and fix
-                  issues with the Platform, and to improve the Platform – for
-                  example, this data can tell us how often users use a
-                  particular feature of the Platform, and we can use that
-                  knowledge to make the Platform interesting to as many users as
-                  possible.
+                  device, which may include:
+              <ul>
+                <li><strong>IP address</strong></li>
+                <li><strong>Geolocation data</strong></li>
+                <li><strong>Device type and identifiers</strong></li>
+                <li><strong>Cookie data</strong></li>
+                <li><strong>Time spend on Platform</strong></li>
+                <li><strong>Pages or features accessed</strong></li>
+              </ul> 
+                   
+                  We use this data to <strong>troubleshoot issues, enhance 
+                    performance, </strong> and <strong>optimize user 
+                      experience</strong>-- for example, by understanding 
+                  which features are most frequently used, we can better 
+                  tailor improvements. 
                 </li>
                 <li>
-                  <strong>Emails.</strong> We may receive a confirmation when
-                  you open an email from us.
+                  <strong>Emails:</strong> If you open an email from us, we may receive an
+                  <strong>automatic confirmation. We use this data to understand engagement 
+                  and improve our communications.</strong>
                 </li>
               </ol>
             </ol>
