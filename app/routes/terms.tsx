@@ -48,22 +48,42 @@ export default function Terms() {
             may be sent via email or through in-app notifications.
           </p>
           <p>
-          You may opt out of receiving non-essential communications at any time by following 
-          the unsubscribe instructions included in the communication or by contacting us at 
-          support@carbonos.dev. Please note that certain communications, such as those 
-          related to your account, transactions, or legal notices, are necessary for the 
-          operation of the Service and you may not opt out of receiving them.
+            You may opt out of receiving non-essential communications at any time by following 
+            the unsubscribe instructions included in the communication or by contacting us at 
+            support@carbonos.dev. Please note that certain communications, such as those 
+            related to your account, transactions, or legal notices, are necessary for the 
+            operation of the Service and you may not opt out of receiving them.
           </p>
 
-          <h3>Purchases</h3>
+          <h3>Subscription Terms and Billing</h3>
           <p>
-            If you wish to purchase any product or service made available
-            through Service ("Purchase"), you may be asked to supply certain
-            information relevant to your Purchase including, without limitation,
-            your credit card number, the expiration date of your credit card,
-            your billing address, and your shipping information.
+            Certain features of the Service are made available to Customers on a subscription 
+            basis (“Subscription”). Subscription fees are billed in advance on a recurring 
+            and periodic basis (“Billing Cycle”), which may be monthly, annually, or as 
+            otherwise agreed at the time of purchase.
           </p>
-
+          <p>
+            Unless otherwise stated, each Subscription will automatically renew at the end of 
+            the applicable Billing Cycle for a successive period of equal length and under the 
+            same terms, unless the Customer provides written notice of non-renewal at least 
+            thirty (30) days prior to the end of the current term.
+          </p>
+          <p>
+            This renewal policy applies to both of the following subscription types:
+          </p>
+          <p>
+          <ul>
+              <li><strong>Subscription via Self-Signup on Website:</strong></li>
+              Customers who subscribed through Carbon’s website must submit cancellation through 
+              their <strong>account settings</strong> or by <strong>emailing support@carbon.ms</strong> 
+              at least thirty (30) days before the current term ends to avoid automatic renewal.
+              <p></p>
+              <li><strong>Subscription via Subscription Agreement (SA) or Order Form:</strong></li>
+              Customers who subscribe through a negotiated agreement must submit written notice of 
+              non-renewal (email or formal letter) at least thirty (30) days prior to the end of 
+              the current term to avoid renewal.
+          </ul>
+          </p>
           <p>
             You represent and warrant that: (i) you have the legal right to use
             any credit card(s) or other payment method(s) in connection with any
