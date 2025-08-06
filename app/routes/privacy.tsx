@@ -89,18 +89,28 @@ export default function Privacy() {
                   you may also log or sync User Content from those services into 
                   the Platform. 
                 </li>
+                <li>
+                  <strong>Customer Support Communications:</strong>If you 
+                  contact us for support, report a bug, or submit feedback, 
+                  we may collect and store the information you provide, 
+                  including messages, attachments, and metadata. We use this
+                  information to troubleshoot issues, respond to your 
+                  inquiries, and improve the functionality of our Platform. 
+                  We may also use anonymized or aggregated feedback for 
+                  internal training or marketing purposes.               
+                </li>
               </ol>
             </ol>
             <ol type="a">
               <li>
-                <strong>Automatically Collected Information.</strong>
+                <strong>Automatically Collected Information</strong>
               </li>
               <ol type="I">
                 <li>
-                  <strong>Browser &amp; Device Information.</strong> Whenever
-                  you interact with the Platform, we automatically receive and
-                  record information on our server logs from your browser or
-                  device, which may include:
+                  <strong>Browser &amp; Device Information:</strong> When 
+                  you use the Platform, our servers automatically collect 
+                  technical information from your browser or device. This 
+                  may include:
               <ul>
                 <li><strong>IP address</strong></li>
                 <li><strong>Geolocation data</strong></li>
@@ -109,86 +119,165 @@ export default function Privacy() {
                 <li><strong>Time spend on Platform</strong></li>
                 <li><strong>Pages or features accessed</strong></li>
               </ul> 
-                   
-                  We use this data to <strong>troubleshoot issues, enhance 
-                    performance, </strong> and <strong>optimize user 
-                      experience</strong>-- for example, by understanding 
-                  which features are most frequently used, we can better 
-                  tailor improvements. 
+              <p> 
+                We use this data to <strong>troubleshoot issues, enhance 
+                performance, </strong> and <strong>optimize user 
+                experience</strong>-- for example, by understanding 
+                which features are most frequently used, we can better 
+                tailor improvements.
+              </p> 
                 </li>
                 <li>
-                  <strong>Emails:</strong> If you open an email from us, we may receive an
-                  <strong>automatic confirmation. We use this data to understand engagement 
-                  and improve our communications.</strong>
+                  <strong>Emails:</strong> If you open an email from us, 
+                  we may receive an <strong>automatic confirmation. We 
+                  use this data to understand engagement and improve our 
+                  communications.</strong>
+                </li>
+                <li>
+                  <strong>Cookies and Analytics:</strong>We use cookies and 
+                  other tracking technologies (such as web beacons, pixels, 
+                  and analytics tools) to recognize your browser or device, 
+                  remember your preferences, and track usage trends. Some 
+                  cookies are essential for the operation of the Platform, 
+                  while others help us improve functionality and performance. 
+                  You can control cookie preferences through your browser settings, 
+                  though disabling cookies may impact your ability to use certain
+                  features.
+                  <p>
+                  We may also use third-party analytics services to gather 
+                  information about how users interact with the Platform across
+                  different devices and sessions. These services may collect device 
+                  identifiers, IP addresses, and usage patterns.
+                  </p>
+                </li>
+                <li>
+                  <strong>Information from Other Sources:</strong>We may supplement the 
+                  information we collect directly from you with information obtained from
+                  third-party sources, such as public databases or trusted service 
+                  providers (e.g., to verify contact details or business credentials). 
+                  We will only obtain this information to the extent permitted by applicable
+                  law.
                 </li>
               </ol>
             </ol>
             <li>
-              <strong>Disclosure of information.</strong> We may disclose your
-              personal information to the categories of third parties identified
-              in this section.
+              <strong>Disclosure of information</strong> 
+                <p> We may disclose your personal information to the categories
+                  of third parties identified in this section.
+                </p>
             </li>
             <ol type="a">
               <li>
-                <strong>Personnel and Third Party Service Providers.</strong> We
-                employ personnel and engage other companies and people to
-                perform tasks on our behalf and need to share your personal
-                information with them to provide products or services to you.
-                For example, we use Amazon Web Services to store files and
-                images that users post to the Platform.
+                <strong>Personnel and Third Party Service Providers.</strong> We 
+                may share your Personal Information with our employees, contractors, 
+                and trusted third-party service providers who assist us in operating
+                the Platform and delivering services to you. For example, we use 
+                <strong>Amazon Web Services (AWS)</strong> to store files and images 
+                uploaded to the Platform.
+                <p>
+                  These service providers are authorized to access your information only
+                  as needed to perform their services and are contractually obligated 
+                  to maintain its confidentiality and security.
+                </p>
               </li>
               <li>
-                <strong>Organization Access.</strong> Please note that if you
-                submit any personal information or User Content to a portion of
-                the Platform that is accessible by other users within an
-                Organization, other users affiliated with the Organization will
-                be able to see that personal information and User Content.
-                Accordingly, only include personal information in such
-                submissions that you are comfortable sharing with other users
-                affiliated with the Organization.
+                <strong>Organization Access:</strong> If you submit any Personal 
+                Information or User Content to areas of the Platform that are visible 
+                to members of your Organization, other authorized users within that 
+                Organization will have access to it. You should only share information 
+                that you are comfortable disclosing to other users affiliated with your 
+                Organization.
               </li>
               <li>
-                <strong>Third Party Apps.</strong> If you or an Organization use
-                Third Party Apps within the Platform, Carbon will allow the
-                Third Party Providers to access or use your personal information
-                and User Content as required for the interoperation of the Third
-                Party Apps and the Platform. Any Third Party Provider’s use of
-                your personal information and User Content is subject to the
-                applicable agreement between either (i) the applicable
-                Organization and such Third Party Provider, or (ii) you and the
-                Third Party Provider. Carbon is not responsible for any access
-                to or use of your personal information or User Content by Third
-                Party Providers. You and the Organizations are solely
-                responsible for the decision to permit any Third Party Provider
-                to use your personal information or User Content.
+                <strong>Third Party Applications:</strong> If you or your Organization 
+                integrate Third-Party Applications (“Third Party Apps”) with the Platform,
+                Carbon may allow the Third Party App to access or process your Personal 
+                Information and User Content to enable the integration. Such access is 
+                governed by the agreement between either (i) your Organization and the 
+                Third Party Provider, or (ii) you and the Third Party Provider. Carbon 
+                is not responsible for any use, access, or misuse of your data by Third 
+                Party Providers. It is your and your Organization’s responsibility to 
+                evaluate the risks and permissions associated with any Third Party Apps used.
               </li>
               <li>
-                <strong>Business Transfers.</strong> If we (or our assets) are
-                acquired, or if we go out of business, enter bankruptcy, or go
-                through some other change of control, personal information could
-                be one of the assets transferred to or acquired by a third
-                party.
+                <strong>Business Transfers:</strong> If Carbon is involved in a merger,
+                acquisition, financing, reorganization, bankruptcy, receivership, sale 
+                of assets, or transition of service to another provider, your Personal 
+                Information may be transferred as part of that transaction. We will 
+                notify you, as required by law, if your information is subject to a new 
+                privacy policy as a result of any such business transaction.
               </li>
               <li>
-                <strong>Legal Compliance.</strong> We reserve the right to
-                access, read, preserve, and disclose any information that we
-                believe is necessary to comply with governmental requests, law
-                or court order, or enforce or apply our Terms of Service and
-                other agreements.
+                <strong>Legal Compliance and Protection of Rights:</strong> We may access,
+                preserve, or disclose your Personal Information if we have a good faith 
+                belief that doing so is necessary to:
+                <ul>
+                  <li>
+                    Comply with a legal obligation, including subpoenas, court orders, or 
+                    other valid governmental requests
+                  </li>
+                  <li>
+                    Enforce our Terms of Service or investigate violations
+                  </li>
+                  <li>
+                    Prevent, detect, or address fraud, security, or technical issues
+                  </li>
+                  <li>
+                    Protect the rights, property, or safety of Carbon, our users, or the 
+                    public, as required or permitted by law
+                  </li>
+                </ul>
+               <li>
+                 <strong>International Tranfers:</strong> We may store and process your 
+                 Personal Information in countries outside your country of residence, 
+                 including the United States, where data protection laws may differ. By 
+                 using the Platform, you consent to such transfers, as permitted by 
+                 applicable law.
+               </li>
               </li>
             </ol>
             <li>
-              <strong>Security.</strong> We use commercially reasonable
-              physical, managerial, and technical safeguards to preserve the
-              integrity and security of your personal information. In addition,
-              we rely on the technical safeguards provided by the third party
-              service providers we use to host, store, and process your personal
-              information. We cannot, however, ensure or warrant that your
-              personal information on the Platform may not be accessed,
-              disclosed, altered, or destroyed by breach of any of our physical,
-              technical, or managerial safeguards. We are not responsible to our
-              users or to any third party due to any such loss, misuse, or
-              alteration.
+              <strong>Security of Personal Information</strong> 
+                <p>
+                  We take the security of your Personal Information seriously
+                  and implement commercially reasonable physical, technical, 
+                  and administrative safeguards to protect it from unauthorized 
+                  access, use, or disclosure.
+                </p>
+                <p>
+                  We also rely on the technical infrastructure and security 
+                  practices of third-party service providers who host, store,
+                  or process data on our behalf. For example, we use Amazon Web Services 
+                  (AWS) for secure data storage and transmission.
+                </p>
+                <p>
+                  These safeguards include access controls, encryption in transit and 
+                  at rest where appropriate, routine monitoring, and periodic security 
+                  assessments.
+                </p>
+                <p>
+                  However, no method of transmission over the internet or method of 
+                  electronic storage is completely secure. Therefore, we cannot 
+                  guarantee the absolute security of your Personal Information, 
+                  and we make no warranties or guarantees regarding its protection.
+                </p>
+                <p>
+                  You are responsible for maintaining the confidentiality of 
+                  your account credentials and for any activity occurring under your
+                  account. Please notify us immediately if you suspect unauthorized 
+                  use of your account or a potential breach.
+                </p>
+                <p>
+                  Despite our efforts, we are not liable to you or any third party for 
+                  any unauthorized access to, misuse of, or alteration of your Personal 
+                  Information that occurs due to a breach of our safeguards or those of our 
+                  third-party providers, unless otherwise required by applicable law.
+                </p>
+                <p> 
+                  In the event of a security breach that affects your Personal Information,
+                  we will take commercially reasonable steps to investigate, mitigate, 
+                  and notify you of the breach as required by applicable laws.
+                </p>
             </li>
             <li>
               <p>
