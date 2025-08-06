@@ -103,13 +103,12 @@ export default function Privacy() {
                   internal training or marketing purposes.               
                 </li>
               </ol>
-            </ol>
               </p>
-            <ol type="B">
               <li>
                 <strong>Automatically Collected Information</strong>
                 <p></p>
               </li>
+                </ol>
               <ol type="I">
                 <li>
                   <strong>Browser &amp; Device Information:</strong> When 
@@ -169,16 +168,15 @@ export default function Privacy() {
                 </li>
                   </p>
               </ol>
-            </ol>
             <li>
-              <strong>Disclosure of information</strong> 
+              <strong>Disclosure of Personal Information</strong> 
                 <p> We may disclose your personal information to the categories
                   of third parties identified in this section.
                 </p>
             </li>
             <ol type="a">
               <li>
-                <strong>Personnel and Third Party Service Providers.</strong> We 
+                <strong>Personnel and Third Party Service Providers.</strong> <br>We 
                 may share your Personal Information with our employees, contractors, 
                 and trusted third-party service providers who assist us in operating
                 the Platform and delivering services to you. For example, we use 
@@ -190,16 +188,19 @@ export default function Privacy() {
                   to maintain its confidentiality and security.
                 </p>
               </li>
+             <p>
               <li>
-                <strong>Organization Access:</strong> If you submit any Personal 
+                <strong>Organization Access:</strong> <br>If you submit any Personal 
                 Information or User Content to areas of the Platform that are visible 
                 to members of your Organization, other authorized users within that 
                 Organization will have access to it. You should only share information 
                 that you are comfortable disclosing to other users affiliated with your 
                 Organization.
               </li>
+             </p>
+            <p>
               <li>
-                <strong>Third Party Applications:</strong> If you or your Organization 
+                <strong>Third Party Applications:</strong> <br>If you or your Organization 
                 integrate Third-Party Applications (“Third Party Apps”) with the Platform,
                 Carbon may allow the Third Party App to access or process your Personal 
                 Information and User Content to enable the integration. Such access is 
@@ -209,18 +210,22 @@ export default function Privacy() {
                 Party Providers. It is your and your Organization’s responsibility to 
                 evaluate the risks and permissions associated with any Third Party Apps used.
               </li>
+            </p>
+            <p>
               <li>
-                <strong>Business Transfers:</strong> If Carbon is involved in a merger,
+                <strong>Business Transfers:</strong> <br>If Carbon is involved in a merger,
                 acquisition, financing, reorganization, bankruptcy, receivership, sale 
                 of assets, or transition of service to another provider, your Personal 
                 Information may be transferred as part of that transaction. We will 
                 notify you, as required by law, if your information is subject to a new 
                 privacy policy as a result of any such business transaction.
               </li>
+            </p>
               <li>
-                <strong>Legal Compliance and Protection of Rights:</strong> We may access,
+                <strong>Legal Compliance and Protection of Rights:</strong> <br>We may access,
                 preserve, or disclose your Personal Information if we have a good faith 
                 belief that doing so is necessary to:
+              <p>
                 <ul>
                   <li>
                     Comply with a legal obligation, including subpoenas, court orders, or 
@@ -237,6 +242,8 @@ export default function Privacy() {
                     public, as required or permitted by law
                   </li>
                 </ul>
+              </p>
+              <p>
                <li>
                  <strong>International Tranfers:</strong> We may store and process your 
                  Personal Information in countries outside your country of residence, 
@@ -246,6 +253,7 @@ export default function Privacy() {
                </li>
               </li>
             </ol>
+              </p>
             <li>
               <strong>Security of Personal Information</strong> 
                 <p>
