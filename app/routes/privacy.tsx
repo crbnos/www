@@ -385,7 +385,7 @@ export default function Privacy() {
             </li>
           <p>
             <li>
-              <strong>Contact us</strong> 
+              <strong>Contact Us</strong> 
           </p>
           <p>
               If you have any questions or concerns
