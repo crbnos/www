@@ -14,7 +14,7 @@ export default function Terms() {
       <div className="mx-auto flex flex-col px-4 w-full lg:w-form-lg max-w-4xl mb-28">
         <div className="prose dark:prose-invert lg:prose-lg">
           <p>
-            Welcome to Carbon Manufacturing Systems Corporation ("Company",
+            Welcome to Carbon Manufacturing Systems Corporation ("Company", "Carbon", 
             "we", "our", "us"). As you have just clicked our Terms of Service,
             please pause, grab a cup of coffee and carefully read the following
             pages. It will take you approximately 20 minutes.
@@ -407,121 +407,119 @@ export default function Terms() {
           </p>
 
           <p>
-            YOU ACKNOWLEDGE AND AGREE THAT CARBON MANUFACTURING SYSTEMS
-            CORPORATION SHALL NOT BE RESPONSIBLE OR LIABLE, DIRECTLY OR
-            INDIRECTLY, FOR ANY DAMAGE OR LOSS CAUSED OR ALLEGED TO BE CAUSED BY
-            OR IN CONNECTION WITH USE OF OR RELIANCE ON ANY SUCH CONTENT, GOODS
-            OR SERVICES AVAILABLE ON OR THROUGH ANY SUCH THIRD PARTY WEB SITES
-            OR SERVICES.
+            YOU ACKNOWLEDGE AND AGREE THAT CARBON SHALL NOT BE LIABLE, DIRECTLY OR INDIRECTLY, FOR ANY DAMAGE OR LOSS 
+            CAUSED OR ALLEGED TO BE CAUSED BY YOUR USE OF OR RELIANCE ON ANY CONTENT, GOODS, OR SERVICES AVAILABLE ON 
+            OR THROUGH ANY SUCH THIRD-PARTY WEBSITES OR SERVICES.
           </p>
 
           <p>
+            YOU ARE SOLELY RESPONSIBLE FOR REVIEWING THE TERMS AND PRIVACY POLICIES OF ANY THIRD-PARTY WEBSITES YOU VISIT.
+          </p>
+          
+          <p>
             WE STRONGLY ADVISE YOU TO READ THE TERMS OF SERVICE AND PRIVACY
-            POLICIES OF ANY THIRD PARTY WEB SITES OR SERVICES THAT YOU VISIT.
+            POLICIES OF ANY THIRD PARTY WEBSITES OR SERVICES THAT YOU VISIT.
           </p>
 
           <h3>Disclaimer of Warranty</h3>
           <p>
-            THESE SERVICES ARE PROVIDED BY COMPANY ON AN "AS IS" AND "AS
-            AVAILABLE" BASIS. COMPANY MAKES NO REPRESENTATIONS OR WARRANTIES OF
-            ANY KIND, EXPRESS OR IMPLIED, AS TO THE OPERATION OF THEIR SERVICES,
-            OR THE INFORMATION, CONTENT OR MATERIALS INCLUDED THEREIN. YOU
-            EXPRESSLY AGREE THAT YOUR USE OF THESE SERVICES, THEIR CONTENT, AND
+            THESE SERVICES ARE PROVIDED BY COMPANY ON AN "AS IS" AND "AS AVAILABLE" BASIS. COMPANY MAKES NO REPRESENTATIONS 
+            OR WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, AS TO THE OPERATION OF THEIR SERVICES, OR THE INFORMATION, 
+            CONTENT OR MATERIALS INCLUDED THEREIN. YOU EXPRESSLY AGREE THAT YOUR USE OF THESE SERVICES, THEIR CONTENT, AND 
             ANY SERVICES OR ITEMS OBTAINED FROM US IS AT YOUR SOLE RISK.
           </p>
 
           <p>
-            NEITHER COMPANY NOR ANY PERSON ASSOCIATED WITH COMPANY MAKES ANY
-            WARRANTY OR REPRESENTATION WITH RESPECT TO THE COMPLETENESS,
-            SECURITY, RELIABILITY, QUALITY, ACCURACY, OR AVAILABILITY OF THE
-            SERVICES. WITHOUT LIMITING THE FOREGOING, NEITHER COMPANY NOR ANYONE
-            ASSOCIATED WITH COMPANY REPRESENTS OR WARRANTS THAT THE SERVICES,
-            THEIR CONTENT, OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE
-            SERVICES WILL BE ACCURATE, RELIABLE, ERROR-FREE, OR UNINTERRUPTED,
-            THAT DEFECTS WILL BE CORRECTED, THAT THE SERVICES OR THE SERVER THAT
-            MAKES IT AVAILABLE ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS
-            OR THAT THE SERVICES OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE
+            NEITHER COMPANY NOR ANY PERSON ASSOCIATED WITH COMPANY MAKES ANY WARRANTY OR REPRESENTATION WITH RESPECT TO THE 
+            COMPLETENESS, SECURITY, RELIABILITY, QUALITY, ACCURACY, OR AVAILABILITY OF THE SERVICES. WITHOUT LIMITING THE 
+            FOREGOING, NEITHER COMPANY NOR ANYONE ASSOCIATED WITH COMPANY REPRESENTS OR WARRANTS THAT THE SERVICES, THEIR 
+            CONTENT, OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE SERVICES WILL BE ACCURATE, RELIABLE, ERROR-FREE, OR 
+            UNINTERRUPTED, THAT DEFECTS WILL BE CORRECTED, THAT THE SERVICES OR THE SERVER THAT MAKES IT AVAILABLE ARE FREE 
+            OF VIRUSES OR OTHER HARMFUL COMPONENTS OR THAT THE SERVICES OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE 
             SERVICES WILL OTHERWISE MEET YOUR NEEDS OR EXPECTATIONS.
           </p>
 
           <p>
-            COMPANY HEREBY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS
-            OR IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING BUT NOT LIMITED TO
-            ANY WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT, AND FITNESS FOR
-            PARTICULAR PURPOSE.
+            COMPANY HEREBY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, STATUTORY, OR OTHERWISE, 
+            INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT, AND FITNESS FOR PARTICULAR 
+            PURPOSE.
           </p>
 
           <p>
-            THE FOREGOING DOES NOT AFFECT ANY WARRANTIES WHICH CANNOT BE
-            EXCLUDED OR LIMITED UNDER APPLICABLE LAW.
+            THE FOREGOING DOES NOT AFFECT ANY WARRANTIES WHICH CANNOT BE EXCLUDED OR LIMITED UNDER APPLICABLE LAW.
           </p>
 
           <h3>Limitation of Liability</h3>
           <p>
-            EXCEPT AS PROHIBITED BY LAW, YOU WILL HOLD US AND OUR OFFICERS,
-            DIRECTORS, EMPLOYEES, AND AGENTS HARMLESS FOR ANY INDIRECT,
-            PUNITIVE, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGE, HOWEVER IT
-            ARISES (INCLUDING ATTORNEYS' FEES AND ALL RELATED COSTS AND EXPENSES
-            OF LITIGATION AND ARBITRATION, OR AT TRIAL OR ON APPEAL, IF ANY,
-            WHETHER OR NOT LITIGATION OR ARBITRATION IS INSTITUTED), WHETHER IN
-            AN ACTION OF CONTRACT, NEGLIGENCE, OR OTHER TORTIOUS ACTION, OR
-            ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT, INCLUDING
-            WITHOUT LIMITATION ANY CLAIM FOR PERSONAL INJURY OR PROPERTY DAMAGE,
-            ARISING FROM THIS AGREEMENT AND ANY VIOLATION BY YOU OF ANY FEDERAL,
-            STATE, OR LOCAL LAWS, STATUTES, RULES, OR REGULATIONS, EVEN IF
-            COMPANY HAS BEEN PREVIOUSLY ADVISED OF THE POSSIBILITY OF SUCH
-            DAMAGE. EXCEPT AS PROHIBITED BY LAW, IF THERE IS LIABILITY FOUND ON
-            THE PART OF COMPANY, IT WILL BE LIMITED TO THE AMOUNT PAID FOR THE
-            PRODUCTS AND/OR SERVICES, AND UNDER NO CIRCUMSTANCES WILL THERE BE
-            CONSEQUENTIAL OR PUNITIVE DAMAGES. SOME STATES DO NOT ALLOW THE
-            EXCLUSION OR LIMITATION OF PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
-            DAMAGES, SO THE PRIOR LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.
+            EXCEPT AS PROHIBITED BY LAW, YOU WILL HOLD US AND OUR OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS HARMLESS FOR ANY 
+            INDIRECT, PUNITIVE, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGE, HOWEVER IT ARISES (INCLUDING ATTORNEYS' FEES 
+            AND ALL RELATED COSTS AND EXPENSES OF LITIGATION AND ARBITRATION, OR AT TRIAL OR ON APPEAL, IF ANY, WHETHER OR 
+            NOT LITIGATION OR ARBITRATION IS INSTITUTED), WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE, OR OTHER TORTIOUS 
+            ACTION, OR ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT, INCLUDING WITHOUT LIMITATION ANY CLAIM FOR 
+            PERSONAL INJURY OR PROPERTY DAMAGE, ARISING FROM THIS AGREEMENT AND ANY VIOLATION BY YOU OF ANY FEDERAL, STATE, 
+            OR LOCAL LAWS, STATUTES, RULES, OR REGULATIONS, EVEN IF COMPANY HAS BEEN PREVIOUSLY ADVISED OF THE POSSIBILITY 
+            OF SUCH DAMAGE. EXCEPT AS PROHIBITED BY LAW, IF THERE IS LIABILITY FOUND ON THE PART OF COMPANY, IT WILL BE 
+            LIMITED TO THE AMOUNT PAID FOR THE PRODUCTS AND/OR SERVICES, AND UNDER NO CIRCUMSTANCES WILL THERE BE 
+            CONSEQUENTIAL OR PUNITIVE DAMAGES. SOME STATES DO NOT ALLOW THE EXCLUSION OR LIMITATION OF PUNITIVE, INCIDENTAL 
+            OR CONSEQUENTIAL DAMAGES, SO THE PRIOR LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.
           </p>
 
           <h3>Termination</h3>
           <p>
-            We may terminate or suspend your account and bar access to Service
-            immediately, without prior notice or liability, under our sole
-            discretion, for any reason whatsoever and without limitation,
-            including but not limited to a breach of Terms.
+            Carbon may suspend or terminate your access to the Service at any time, with or without cause, and with or without 
+            notice, including but not limited to instances where you violate these Terms, fail to make timely payments, or 
+            engage in conduct that may harm Carbon, the Service, or other users.
           </p>
 
           <p>
-            If you wish to terminate your account, you may simply discontinue
-            using Service.
+            Carbon shall not be liable for any losses or damages resulting from any such termination. Access to the Service, 
+            including any Content or data stored therein, may be disabled immediately upon termination.
+          </p>
+          
+          <p>
+            If you wish to terminate your account, you may do so by discontinuing use of the Service or by contacting Carbon 
+            at support@carbonos.dev. Termination will not relieve you of any outstanding payment obligations as of the termination 
+            date.
           </p>
 
           <p>
-            All provisions of Terms which by their nature should survive
-            termination shall survive termination, including, without
-            limitation, ownership provisions, warranty disclaimers, indemnity
-            and limitations of liability.
+            All provisions of these Terms which by their nature should survive termination shall survive, including, without 
+            limitation, provisions related to ownership, confidentiality, feedback, disclaimers, limitations of liability, 
+            indemnification, dispute resolution, and governing law.
           </p>
 
-          <h3>Governing Law</h3>
+          <h3>Governing Law and Interpretation</h3>
           <p>
-            These Terms shall be governed and construed in accordance with the
-            laws of Delaware without regard to its conflict of law provisions.
+            These Terms shall be governed by and construed in accordance with the laws of the State of Delaware, without regard 
+            to any principles of conflicts of law.
           </p>
 
           <p>
-            Our failure to enforce any right or provision of these Terms will
-            not be considered a waiver of those rights. If any provision of
-            these Terms is held to be invalid or unenforceable by a court, the
-            remaining provisions of these Terms will remain in effect. These
-            Terms constitute the entire agreement between us regarding our
-            Service and supersede and replace any prior agreements we might have
-            had between us regarding Service.
+            Any failure by Carbon to enforce any provision of these Terms shall not constitute a waiver of that provision or any 
+            other rights. If any provision of these Terms is held to be invalid, illegal, or unenforceable by a court of competent 
+            jurisdiction, such provision shall be modified or eliminated to the minimum extent necessary, and the remaining provisions 
+            shall remain in full force and effect.
+          </p>
+
+          <p>
+            These Terms constitute the entire agreement between you and Carbon with respect to the subject matter hereof and supersede 
+            all prior or contemporaneous understandings, communications, and agreements, whether written or oral.
           </p>
 
           <h3>Changes To Service</h3>
           <p>
-            We reserve the right to withdraw or amend our Service, and any
-            service or material we provide via Service, in our sole discretion
-            without notice. We will not be liable if for any reason all or any
-            part of Service is unavailable at any time or for any period. From
-            time to time, we may restrict access to some parts of Service, or
-            the entire Service, to users, including registered users.
+            Carbon reserves the right to modify, suspend, or discontinue the Service, or any part thereof, at any time, with or without 
+            notice and for any reason, including scheduled maintenance or operational adjustments.
+          </p>
+
+          <p>
+            Carbon shall not be liable to you or any third party for any modification, suspension, or discontinuation of the Service, or 
+            for any periods during which the Service or any portion thereof becomes unavailable.
+          </p>
+
+          <p>
+            From time to time, Carbon may restrict access to certain portions of the Service, or the entire Service, to certain users, 
+            including registered users, at its sole discretion.
           </p>
 
           <h3>Amendments To Terms</h3>
