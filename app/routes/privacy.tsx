@@ -21,7 +21,7 @@ export default function Privacy() {
               <strong>“Privacy Policy”</strong>) explains how <strong>Carbon Manufacturing
               Systems Corporation. (“Carbon," "we,” "us," or "our")</strong> collects, uses, 
               and discloses <strong>Personal Information</strong> through its online platform,
-              services, and website (collectivey, the <strong>"Platform"</strong>).
+              services, and website (collectively, the <strong>"Platform"</strong>).
               </p>
               <p>
               By accessing or using the Platform, you acknowledge and agree to 
@@ -61,6 +61,7 @@ export default function Privacy() {
                   the Platform, your Organization will be required to provide 
                   certain information, including your <strong>name, email address</strong>, and, 
                   optionally, a <strong>profile photo</strong>. We use this information to:
+                  <p>
                   <ul>
                     <li>
                     Enable your access to and use of the Platform
@@ -88,7 +89,8 @@ export default function Privacy() {
                   Additionally, if you or your Organization choose to integrate
                   <strong>Third-Party Applications</strong> (“Third Party Apps”) with the Platform,
                   you may also log or sync User Content from those services into 
-                  the Platform. 
+                  the Platform.
+                  <p>
                 </li>
                 <li>
                   <strong>Customer Support Communications:</strong>If you 
@@ -106,6 +108,7 @@ export default function Privacy() {
             <ol type="a">
               <li>
                 <strong>Automatically Collected Information</strong>
+                <p></p>
               </li>
               <ol type="I">
                 <li>
@@ -113,14 +116,16 @@ export default function Privacy() {
                   you use the Platform, our servers automatically collect 
                   technical information from your browser or device. This 
                   may include:
+                  <p>
               <ul>
                 <li><strong>IP address</strong></li>
                 <li><strong>Geolocation data</strong></li>
                 <li><strong>Device type and identifiers</strong></li>
                 <li><strong>Cookie data</strong></li>
-                <li><strong>Time spend on Platform</strong></li>
+                <li><strong>Time spent on Platform</strong></li>
                 <li><strong>Pages or features accessed</strong></li>
               </ul> 
+                  </p>
               <p> 
                 We use this data to <strong>troubleshoot issues, enhance 
                 performance, </strong> and <strong>optimize user 
