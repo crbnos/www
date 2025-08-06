@@ -7,7 +7,7 @@ export default function Terms() {
             Terms of Service
           </h1>
           <h2 className="font-medium text-xl text-muted-foreground max-w-5xl text-balance leading-relaxed tracking-tight">
-            Effective July 23, 2025
+            Effective August 6, 2025
           </h2>
         </div>
       </div>
@@ -21,16 +21,23 @@ export default function Terms() {
           </p>
 
           <p>
-            These Terms of Service ("Terms", "Terms of Service") govern your use
-            of our web pages operated by Carbon Manufacturing Systems
-            Corporation.
+            These Terms of Service ("Terms", "Terms of Service") constitute a 
+            legally binding agreement between you (“you,” “your,” or the 
+            “Customer”) and Carbon, and govern your access to and use of our 
+            website, software, and related services (collectively, the “Service”).
           </p>
-
           <p>
-            Our Privacy Policy also governs your use of our Service and explains
-            how we collect, safeguard and disclose information that results from
-            your use of our web pages. Please read it at{" "}
-            <a href="/privacy">our Privacy Policy</a>.
+            By accessing or using the Service, you affirm that you have read, 
+            understood, and agreed to be bound by these Terms and our Privacy 
+            Policy, which together form the “Agreement.” If you are using the 
+            Service on behalf of an organization, you represent that you are 
+            authorized to bind that organization to this Agreement.
+          </p>
+          <p>
+            If you do not agree to these Terms or <a href="/privacy">our Privacy 
+            Policy</a>, you must not access or use the Service. If you have 
+            questions about this Agreement, please contact 
+            support@carbonos.dev.
           </p>
 
           <p>
