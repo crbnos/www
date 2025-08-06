@@ -37,7 +37,7 @@ export default function Privacy() {
               </p>
             </li>
             <li>
-              <strong>Information collected and how we use it</strong> 
+              <strong>Information Collected and How We Use It</strong> 
               <p>
                 As explained further in this section, you will have the 
                 opportunity to provide us with certain personal information. 
