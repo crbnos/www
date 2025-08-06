@@ -315,57 +315,83 @@ export default function Privacy() {
                   raise, in accordance with the Organization Agreements and applicable data 
                   protection laws.
                 </p>
-                
-
-                
-                Because we have collected your
-                personal information as a result of the Organization Agreements,
-                we are a “processor” of your personal information and the
-                Organizations control our use of your personal information and
-                determine how and for what purpose we process your personal
-                information. If you have any questions or concerns about how
-                your personal information is handled or would like to exercise
-                rights you may have as a data subject (including the
-                modification and deletion of your personal information), you
-                should contact the applicable Organizations. We will provide
-                assistance to the Organizations to address any concerns you may
-                have, in accordance with the terms of the Organization
-                Agreements and applicable law.
+                <p>
+                Subject to your right to request deletion of your Personal Information, we 
+                  will retain it as long as necessary to:
+                </p>
+                <p>
+                <ul>
+                  <li>Provide you with access to the Platform</li>
+                  <li>Send you authorized marketing or product-related communications</li>
+                  <li>Comply with legal and regulatory obligations</li>
+                  <li>Enforce our agreements</li>
+                  <li>Protect our legal rights, or the rights of others</li>
+                </ul>
+                </p>
+              <p>
+                If you are located in the European Economic Area (EEA), the United Kingdom 
+                (UK), or another jurisdiction that provides similar rights, you may have 
+                the right to:  
               </p>
               <p>
-                Subject to your right to request deletion of your personal
-                information, we will retain your personal information as long as
-                needed for your use of the Platform, your approved receipt of
-                marketing communications from us, our compliance with legal
-                obligations, and to protect our or other’s interests.
+              <ul>
+                <li>Access the Personal Information we process about you</li>
+                <li>Request correction or deletion of your information</li>
+                <li>Object to or restrict processing of your data</li>
+                <li>Request data portability (where applicable)</li>
+                <li>Withdraw consent, where processing is based on consent</li>
+              </ul>
               </p>
-              <p>
-                If you have any questions about your rights, please contact us
-                at <a href="mailto:info@carbon.ms">info@carbon.ms</a>.
+                <p>
+                To exercise these rights, please contact your Organization directly. For 
+                issues that fall under Carbon's control (like marketing preferences) or
+                for questions about this policy, you can reach us at 
+                <a href="mailto:info@carbon.ms">info@carbon.ms</a>. We will act on all
+                requests as required by data protection laws, though legal and security
+                obligations may require us to retain some information.
               </p>
             </li>
             <li>
-              <strong>How we respond to Do Not Track signals.</strong> We do not
-              track you or collect your personal information across third party
-              websites or online services. Thus, we do not receive Do-Not-Track
-              signals, or other similar signals. To the extent that we do
-              receive any such signals, we will not comply with them as it is
-              not an aspect of the functionality of the Platform.
+              <strong>How we respond to Do Not Track signals.</strong> 
+          <p>
+              The Platform does not track your activity across third-party websites or 
+              online services over time. As a result, we do not respond to “Do Not Track” 
+              (DNT) signals or similar mechanisms transmitted by web browsers or other 
+              devices.
             </li>
+          </p>
+          <p>
+            To the extent we do receive any such signals, we do not take action in response, 
+            as cross-site tracking is not a feature of the Platform.
+          </p>
+          <p>
             <li>
-              <strong>Changes to policy.</strong> We’re constantly trying to
-              improve the Platform, so we may need to change this Policy from
-              time to time as well. The date of the last modification will also
-              be posted at the beginning of this Policy. It is your
-              responsibility to check from time to time for updates. By
-              continuing to access or use the Platform, you are indicating that
-              you agree to be bound by the modified Policy.
+              <strong>Changes to This Privacy Policy.</strong> 
+          </p>
+          <p>
+              We may revise this Privacy Policy from time to time to reflect changes in our 
+              business operations, the functionality of the Platform, or applicable laws and 
+              regulations. <strong>Any such updates will be reflected by a revised “Effective Date” 
+              at the top of this Policy.</strong> We may also provide additional notice of material 
+              changes as required by applicable law.
+            </p>
+            <p>
+              <strong>You are responsible for reviewing this Policy periodically to stay informed of 
+              any updates.</strong> Your continued access to or use of the Platform following the 
+              posting of a revised Policy shall constitute your acknowledgment and acceptance 
+              of its terms.  
+            </p>
             </li>
+          <p>
             <li>
-              <strong>Contact us.</strong> If you have any questions or concerns
-              regarding this Policy, please send us a detailed message to{" "}
+              <strong>Contact us.</strong> 
+          </p>
+          <p>
+              If you have any questions or concerns
+              regarding this Policy, please send us a detailed message to
               <a href="mailto:info@carbon.ms">info@carbon.ms</a>, and we will
               try to resolve your concerns.
+          </p>
             </li>
           </ol>
         </div>
