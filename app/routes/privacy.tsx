@@ -17,7 +17,7 @@ export default function Privacy() {
             <li>
               <strong>Introduction</strong> 
               <p>
-              This Privacy Policy (this{" "}
+              This Privacy Policy (
               <strong>“Privacy Policy”</strong>) explains how <strong>Carbon Manufacturing
               Systems Corporation. (“Carbon," "we,” "us," or "our")</strong> collects, uses, 
               and discloses <strong>Personal Information</strong> through its online platform,
