@@ -19,7 +19,6 @@ export default function Terms() {
             please pause, grab a cup of coffee and carefully read the following
             pages. It will take you approximately 20 minutes.
           </p>
-
           <p>
             These Terms of Service ("Terms", "Terms of Service") constitute a 
             legally binding agreement between you (“you,” “your,” or the 
@@ -28,33 +27,18 @@ export default function Terms() {
           </p>
           <p>
             By accessing or using the Service, you affirm that you have read, 
-            understood, and agreed to be bound by these Terms and our Privacy 
-            Policy, which together form the “Agreement.” If you are using the 
+            understood, and agreed to be bound by these Terms and <a href="/privacy">our Privacy 
+            Policy</a>, which together form the “Agreement.” If you are using the 
             Service on behalf of an organization, you represent that you are 
             authorized to bind that organization to this Agreement.
           </p>
           <p>
-            If you do not agree to these Terms or <a href="/privacy">our Privacy 
-            Policy</a>, you must not access or use the Service. If you have 
-            questions about this Agreement, please contact <a href="mailto:support@carbon.ms">support@carbon.ms</a>.
+            These Terms apply to all visitors, users, and others who wish to access or use
+            the Service. If you do not agree to these Terms or our Privacy Policy, then you 
+            must not access or use the Service. However, if you do not agree, please email 
+            us so we can try to find a solution.  If you have questions about this 
+            Agreement, please contact <a href="mailto:support@carbon.ms">support@carbon.ms</a>.
           </p>
-
-          <p>
-            Your agreement with us includes these Terms and our Privacy Policy
-            ("Agreements"). You acknowledge that you have read and understood
-            Agreements, and agree to be bound by them.
-          </p>
-
-          <p>
-            If you do not agree with (or cannot comply with) Agreements, then
-            you may not use the Service, but please let us know by emailing at
-            support@carbon.ms so we can try to find a solution. These Terms
-            apply to all visitors, users and others who wish to access or use
-            Service.
-          </p>
-
-          <p>Thank you for being responsible.</p>
-
           <h3>Communications</h3>
           <p>
             By creating an Account on our Service, you agree to subscribe to
