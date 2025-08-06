@@ -207,95 +207,82 @@ export default function Terms() {
 
           <h3>Prohibited Uses</h3>
           <p>
-            You may use Service only for lawful purposes and in accordance with
-            Terms. You agree not to use Service:
+            You may use Service only for lawful purposes and in accordance with these Terms. You agree not 
+            to use Service:
           </p>
 
           <ul>
             <li>
-              In any way that violates any applicable national or international
-              law or regulation.
+              In any manner that violates any applicable local, state, national, or international law or 
+              regulation.
             </li>
             <li>
-              For the purpose of exploiting, harming, or attempting to exploit
-              or harm minors in any way by exposing them to inappropriate
-              content or otherwise.
+              For the purpose of exploiting, harming, or attempting to exploit or harm minors in any way, 
+              including by exposing them to inappropriate content.
             </li>
             <li>
-              To transmit, or procure the sending of, any advertising or
-              promotional material, including any "junk mail", "chain letter,"
-              "spam," or any other similar solicitation.
+              To transmit or facilitate the sending of unauthorized advertising or promotional material, 
+              including unsolicited commercial email, “junk mail,” “chain letters,” or “spam.”
             </li>
             <li>
-              To impersonate or attempt to impersonate Company, a Company
-              employee, another user, or any other person or entity.
+              To impersonate or misrepresent your affiliation with Carbon, a Carbon employee, another user, 
+              or any other person or entity.
             </li>
             <li>
-              In any way that infringes upon the rights of others, or in any way
-              is illegal, threatening, fraudulent, or harmful, or in connection
-              with any unlawful, illegal, fraudulent, or harmful purpose or
-              activity.
+              In any manner that infringes upon or violates the rights of others, or is otherwise <strong>illegal, 
+              threatening, abusive, defamatory, invasive of privacy, obscene, or harmful.</strong>
             </li>
             <li>
-              To engage in any other conduct that restricts or inhibits anyone's
-              use or enjoyment of Service, or which, as determined by us, may
-              harm or offend Company or users of Service or expose them to
-              liability.
+              To engage in conduct that, as determined by Carbon, restricts or inhibits any other user’s ability 
+              to use or enjoy the Service, or which may expose Carbon or its users to legal liability.
             </li>
           </ul>
 
-          <p>Additionally, you agree not to:</p>
+          <p>In addition, you agree not to:</p>
 
           <ul>
             <li>
-              Use Service in any manner that could disable, overburden, damage,
-              or impair Service or interfere with any other party's use of
-              Service, including their ability to engage in real time activities
-              through Service.
+              Use the Service in any way that could disable, overburden, damage, or impair the Service, or interfere 
+              with the use of the Service by any other party.
             </li>
             <li>
-              Use the API in a manner that creates an unreasonable load on
-              Carbon’s infrastructure, interferes with the proper functioning of
-              the API, or disproportionately consumes our resources, as
-              determined by Carbon in its sole discretion.
+              Use any robot, spider, crawler, scraper, or other automated means to access or copy material from the 
+              Service.
             </li>
             <li>
-              Use any robot, spider, or other automatic device, process, or
-              means to access Service for any purpose, including monitoring or
-              copying any of the material on Service.
+              Use any manual process to monitor or copy material from the Service for unauthorized purposes without 
+              prior written consent.
             </li>
             <li>
-              Use any manual process to monitor or copy any of the material on
-              Service or for any other unauthorized purpose without our prior
-              written consent.
+              Use any device, software, or routine that interferes with the proper functioning of the Service.
             </li>
             <li>
-              Use any device, software, or routine that interferes with the
-              proper working of Service.
-            </li>
-            <li>
-              Introduce any viruses, trojan horses, worms, logic bombs, or other
-              material which is malicious or technologically harmful.
+              Upload or introduce any viruses, malware, ransomware, trojan horses, worms, logic bombs, or other 
+              harmful or malicious code.
             </li>
             <li>
               Attempt to gain unauthorized access to, interfere with, damage, or
-              disrupt any parts of Service, the server on which Service is
+              disrupt any part of Service, the server on which Service is
               stored, or any server, computer, or database connected to Service.
             </li>
             <li>
-              Attack Service via a denial-of-service attack or a distributed
-              denial-of-service attack.
+              Attack Service via a denial-of-service (DoS) attack or a distributed
+              denial-of-service (DDoS) attack.
             </li>
-            <li>Take any action that may damage or falsify Company rating.</li>
             <li>
-              Otherwise attempt to interfere with the proper working of Service.
+              Engage in behavior intended to manipulate or distort reviews, ratings, or analytics related to the 
+              Service or Carbon’s business.
+            </li>
+            <li>
+              Otherwise attempt to interfere with the security, integrity, or proper operation of the Service.
             </li>
           </ul>
 
           <h3>Analytics</h3>
           <p>
-            We may use third-party Service Providers to monitor and analyze the
-            use of our Service.
+            We may use third-party service providers to collect, monitor, and analyze usage data in order to improve 
+            the functionality and performance of the Service. These third parties may use cookies, web beacons, or 
+            other tracking technologies as part of their services.
           </p>
 
           <h3>No Use By Minors</h3>
