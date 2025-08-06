@@ -53,6 +53,7 @@ export default function Privacy() {
             <ol type="a">
               <li>
                 <strong>Voluntarily Provided Information</strong>
+                <p>
               </li>
               <ol type="i">
                 <li>
@@ -101,6 +102,7 @@ export default function Privacy() {
                 </li>
               </ol>
             </ol>
+              </p>
             <ol type="a">
               <li>
                 <strong>Automatically Collected Information</strong>
@@ -281,7 +283,26 @@ export default function Privacy() {
             </li>
             <li>
               <p>
-                <strong>Your rights.</strong> Because we have collected your
+                <strong>Your rights.</strong> 
+                <p>
+                  Because we collect and process your Personal Information on behalf of 
+                  your Organization under the terms of our agreements with them (the 
+                  “Organization Agreements”), we act as a “processor” of that information. 
+                  Your Organization acts as the “controller” and determines how and for 
+                  what purposes your Personal Information is processed.
+                </p>
+                <p>
+                  If you have questions about how your Personal Information is used—or 
+                  would like to access, modify, or delete that information—you should 
+                  contact your Organization directly. We will provide reasonable assistance 
+                  to your Organization to help respond to any requests or concerns you 
+                  raise, in accordance with the Organization Agreements and applicable data 
+                  protection laws.
+                </p>
+                
+
+                
+                Because we have collected your
                 personal information as a result of the Organization Agreements,
                 we are a “processor” of your personal information and the
                 Organizations control our use of your personal information and
