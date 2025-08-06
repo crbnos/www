@@ -464,6 +464,18 @@ export default function Terms() {
             OR CONSEQUENTIAL DAMAGES, SO THE PRIOR LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.
           </p>
 
+          <h3>Indemnification</h3>
+          <p>
+            You agree to indemnify, defend, and hold harmless Carbon, its affiliates, officers, employees, and agents from any 
+            claims, damages, obligations, losses, liabilities, costs, or debt (including attorney’s fees) arising from: 
+            <ol type="a">
+              <li>Your use of the Service;</li>
+              <li>Your violation of these Terms:</li>
+              <li>Your violation of any third-party rights, including IP or privacy rights; or </li>
+              <li>Your Content.</li>
+            </ol>
+          </p>
+          
           <h3>Termination</h3>
           <p>
             Carbon may suspend or terminate your access to the Service at any time, with or without cause, and with or without 
