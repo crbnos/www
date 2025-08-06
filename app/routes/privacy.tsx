@@ -94,7 +94,7 @@ export default function Privacy() {
                   <p>
                 </li>
                 <li>
-                  <strong>Customer Support Communications:</strong>If you 
+                  <strong>Customer Support Communications:</strong> If you 
                   contact us for support, report a bug, or submit feedback, 
                   we may collect and store the information you provide, 
                   including messages, attachments, and metadata. We use this
@@ -129,7 +129,7 @@ export default function Privacy() {
               <p> 
                 We use this data to <strong>troubleshoot issues, enhance 
                 performance, </strong> and <strong>optimize user 
-                experience</strong>-- for example, by understanding 
+                experience</strong> -- for example, by understanding 
                 which features are most frequently used, we can better 
                 tailor improvements.
               </p> 
@@ -142,7 +142,7 @@ export default function Privacy() {
                   <p></p>
                 </li>
                 <li>
-                  <strong>Cookies and Analytics:</strong>We use cookies and 
+                  <strong>Cookies and Analytics:</strong> We use cookies and 
                   other tracking technologies (such as web beacons, pixels, 
                   and analytics tools) to recognize your browser or device, 
                   remember your preferences, and track usage trends. Some 
@@ -160,7 +160,7 @@ export default function Privacy() {
                   <p>
                 </li>
                 <li>
-                  <strong>Information from Other Sources:</strong>We may supplement the 
+                  <strong>Information from Other Sources:</strong> We may supplement the 
                   information we collect directly from you with information obtained from
                   third-party sources, such as public databases or trusted service 
                   providers (e.g., to verify contact details or business credentials). 
@@ -177,7 +177,7 @@ export default function Privacy() {
             </li>
             <ol type="a">
               <li>
-                <strong>Personnel and Third Party Service Providers.</strong> <br>We 
+                <strong>Personnel and Third Party Service Providers:</strong> <br>We 
                 may share your Personal Information with our employees, contractors, 
                 and trusted third-party service providers who assist us in operating
                 the Platform and delivering services to you. For example, we use 
@@ -300,7 +300,7 @@ export default function Privacy() {
             </li>
             <li>
               <p>
-                <strong>Your rights.</strong> 
+                <strong>Your Rights</strong> 
                 <p>
                   Because we collect and process your Personal Information on behalf of 
                   your Organization under the terms of our agreements with them (the 
@@ -353,7 +353,7 @@ export default function Privacy() {
               </p>
             </li>
             <li>
-              <strong>How we respond to Do Not Track signals.</strong> 
+              <strong>Do Not Track</strong> 
           <p>
               The Platform does not track your activity across third-party websites or 
               online services over time. As a result, we do not respond to “Do Not Track” 
