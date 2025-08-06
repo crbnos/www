@@ -36,8 +36,7 @@ export default function Terms() {
           <p>
             If you do not agree to these Terms or <a href="/privacy">our Privacy 
             Policy</a>, you must not access or use the Service. If you have 
-            questions about this Agreement, please contact 
-            support@carbonos.dev.
+            questions about this Agreement, please contact <a href="mailto:support@carbon.ms">support@carbon.ms</a>.
           </p>
 
           <p>
