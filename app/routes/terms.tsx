@@ -15,7 +15,7 @@ export default function Terms() {
         <div className="prose dark:prose-invert lg:prose-lg">
           <p>
             Welcome to Carbon Manufacturing Systems Corporation ("Company",
-            "we", "our", "us")! As you have just clicked our Terms of Service,
+            "we", "our", "us"). As you have just clicked our Terms of Service,
             please pause, grab a cup of coffee and carefully read the following
             pages. It will take you approximately 20 minutes.
           </p>
@@ -341,49 +341,59 @@ export default function Terms() {
 
           <h3>Copyright Policy</h3>
           <p>
-            We respect the intellectual property rights of others. It is our
-            policy to respond to any claim that Content posted on Service
-            infringes on the copyright or other intellectual property rights
-            ("Infringement") of any person or entity.
+            Carbon respects the intellectual property rights of others and expects users of the Service to do the same. It 
+            is our policy to respond to notices of alleged copyright infringement that comply with the Digital Millennium 
+            Copyright Act ("DMCA") or other applicable intellectual property laws.
           </p>
 
           <p>
-            If you are a copyright owner, or authorized on behalf of one, and
-            you believe that the copyrighted work has been copied in a way that
-            constitutes copyright infringement, please submit your claim via
-            email to support@carbon.ms, with the subject line: "Copyright
-            Infringement" and include in your claim a detailed description of
-            the alleged Infringement.
+            If you believe that any Content hosted on or through the Service infringes upon your copyright or other 
+            intellectual property rights, please send a written notice to support@carbonos.dev with the subject line 
+            “Copyright Infringement.” The notice must include the following information:
           </p>
-
+          <ol>
+            <li>A description of the copyrighted work or other intellectual property you claim has been infringed;</li>
+            <li>Identification of the allegedly infringing material and its location on the Service (e.g., URL);</li>
+            <li>Your full name, address, telephone number, and email address;</li>
+            <li>A statement by you that you have a good faith belief that the disputed use is not authorized by the 
+                copyright owner, its agent, or the law;</li>
+            <li>A statement by you, made under penalty of perjury, that the above information in your notice is accurate 
+              and that you are the copyright owner or authorized to act on the copyright owner's behalf;</li>
+            <li>An electronic or physical signature of the person authorized to act on behalf of the copyright owner.</li>
+          </ol>
           <p>
-            You may be held accountable for damages (including costs and
-            attorneys' fees) for misrepresentation or bad-faith claims on the
-            infringement of any Content found on and/or through Service on your
-            copyright.
+            Carbon reserves the right to remove allegedly infringing content without prior notice and to terminate, in 
+            appropriate circumstances, the accounts of users who are repeat infringers.
+          </p>
+          <p>
+            You may be held liable for damages, including attorneys’ fees and costs, if you knowingly submit a false 
+            claim of infringement.
           </p>
 
           <h3>Error Reporting & Feedback</h3>
           <p>
-            You may provide us directly at support@carbon.ms with information
-            and feedback concerning errors, suggestions for improvements, ideas,
-            problems, complaints, and other matters related to our Service
-            ("Feedback"). You acknowledge and agree that: (i) you shall not
-            retain, acquire or assert any intellectual property right or other
-            right, title or interest in or to the Feedback; (ii) Company may
-            have development ideas similar to the Feedback; (iii) Feedback does
-            not contain confidential information or proprietary information from
-            you or any third party; and (iv) Company is not under any obligation
-            of confidentiality with respect to the Feedback. In the event the
-            transfer of the ownership to the Feedback is not possible due to
-            applicable mandatory laws, you grant Company and its affiliates an
-            exclusive, transferable, irrevocable, free-of-charge,
-            sub-licensable, unlimited and perpetual right to use (including
-            copy, modify, create derivative works, publish, distribute and
-            commercialize) Feedback in any manner and for any purpose.
+            You may provide Carbon with feedback, suggestions, feature requests, bug reports, or other information 
+            related to the Service (collectively, “Feedback”) by contacting support@carbonos.dev or through other 
+            designated support channels. All Feedback is provided voluntarily and shall not be considered 
+            confidential or proprietary to you.
           </p>
-
-          <h3>Links To Other Web Sites</h3>
+          <p>
+            By submitting Feedback, you acknowledge and agree that:
+          <ol>
+            <li>You will not retain, acquire, or assert any intellectual property or other rights in or to the Feedback;</li>
+            <li>Carbon may already be independently developing ideas or technologies similar to the Feedback;</li>
+            <li>The Feedback does not contain any confidential or proprietary information of any third party; and</li>
+            <li>Carbon has no obligation to review, consider, or implement any Feedback, or to keep it confidential.</li>
+          </ol>
+          </p>
+          <p>
+            To the extent ownership of the Feedback does not automatically vest in Carbon, you hereby grant Carbon and its 
+            affiliates an irrevocable, worldwide, perpetual, sublicensable, transferable, royalty-free license to use, 
+            copy, modify, publish, distribute, and otherwise exploit such Feedback for any purpose, including commercial 
+            purposes, without attribution or compensation to you.
+          </p>
+          
+          <h3>Third-Party Links</h3>
           <p>
             Our Service may contain links to third party web sites or services
             that are not owned or controlled by Carbon Manufacturing Systems
