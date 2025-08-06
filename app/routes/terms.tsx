@@ -285,59 +285,58 @@ export default function Terms() {
             other tracking technologies as part of their services.
           </p>
 
-          <h3>No Use By Minors</h3>
+          <h3>Eligibility and Age Restriction</h3>
           <p>
-            Service is intended only for access and use by individuals at least
-            eighteen (18) years old. By accessing or using any of Company, you
-            warrant and represent that you are at least eighteen (18) years of
-            age and with the full authority, right, and capacity to enter into
-            this agreement and abide by all of the terms and conditions of
-            Terms. If you are not at least eighteen (18) years old, you are
-            prohibited from both the access and usage of Service.
+            The Service is intended solely for use by individuals who are at least eighteen (18) years of age. By 
+            accessing or using the Service, you represent and warrant that you are at least eighteen (18) years old 
+            and have the legal authority and capacity to enter into a binding agreement with Carbon.
+          </p>
+          <p>
+            If you are under the age of eighteen (18), you are not authorized to access or use the Service and must 
+            immediately discontinue use.
           </p>
 
           <h3>Accounts</h3>
           <p>
-            When you create an account with us, you guarantee that you are above
-            the age of 18, and that the information you provide us is accurate,
-            complete, and current at all times. Inaccurate, incomplete, or
-            obsolete information may result in the immediate termination of your
-            account on Service.
+            By creating an account with Carbon, you represent and warrant that you are at least eighteen (18) years 
+            of age and that all information provided to Carbon is accurate, complete, and current at all times. You 
+            agree to promptly update your information if any changes occur. Failure to provide accurate or current 
+            information may result in suspension or termination of your account.
           </p>
 
           <p>
-            You are responsible for maintaining the confidentiality of your
-            account and password, including but not limited to the restriction
-            of access to your computer and/or account. You agree to accept
-            responsibility for any and all activities or actions that occur
-            under your account and/or password, whether your password is with
-            our Service or a third-party service. You must notify us immediately
-            upon becoming aware of any breach of security or unauthorized use of
-            your account.
+            You are solely responsible for maintaining the confidentiality of your account credentials, including your 
+            password, and for restricting access to your account and any devices used to access the Service. You agree 
+            to accept full responsibility for all activities that occur under your account, whether authorized by you 
+            or not. You must notify Carbon immediately upon becoming aware of any actual or suspected unauthorized use 
+            of your account or other breach of security.
           </p>
 
           <p>
-            You may not use as a username the name of another person or entity
-            or that is not lawfully available for use, a name or trademark that
-            is subject to any rights of another person or entity other than you,
-            without appropriate authorization. You may not use as a username any
-            name that is offensive, vulgar or obscene.
+            You may not register a username that is intended to impersonate another person or entity, that is not 
+            lawfully available for use, or that infringes on the rights of any third party, including trademarks. Carbon 
+            reserves the right to reject or remove any username that is deemed, in its sole discretion, to be offensive, 
+            misleading, or otherwise inappropriate.
           </p>
 
           <p>
-            We reserve the right to refuse service, terminate accounts, remove
-            or edit content, or cancel orders in our sole discretion.
+            Carbon reserves the right, in its sole discretion, to refuse service, terminate accounts, remove or modify 
+            content, or cancel orders, with or without notice, and without liability to you.
           </p>
 
           <h3>Intellectual Property</h3>
           <p>
-            Service and its original content (excluding Content provided by
-            users), features and functionality are and will remain the exclusive
-            property of Carbon Manufacturing Systems Corporation and its
-            licensors. Service is protected by copyright, trademark, and other
-            laws of foreign countries. Our trademarks and trade dress may not be
-            used in connection with any product or service without the prior
-            written consent of Carbon Manufacturing Systems Corporation.
+            The Service, including all original content, software, visual interfaces, interactive features, design, 
+            graphics, compilation, and underlying technology (excluding Content submitted by users), is and shall remain 
+            the exclusive property of Carbon Manufacturing Systems Corporation and its licensors. The Service and its 
+            content are protected by copyright, trademark, trade secret, and other intellectual property laws of the 
+            United States and foreign jurisdictions.
+          </p>
+
+          <p>
+            Carbon’s name, logo, trademarks, trade dress, and any related branding elements may not be used in connection 
+            with any product or service without the prior written consent of Carbon. All rights not expressly granted 
+            herein are reserved by Carbon.
           </p>
 
           <h3>Copyright Policy</h3>
