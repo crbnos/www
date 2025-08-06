@@ -55,7 +55,7 @@ export default function Privacy() {
                 <strong>Voluntarily Provided Information</strong>
                 <p>
               </li>
-              <ol type="i">
+              <ol type="I">
                 <li>
                   <strong>Account Creation:</strong> To create an account on 
                   the Platform, your Organization will be required to provide 
