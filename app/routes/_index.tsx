@@ -18,6 +18,7 @@ import {
 import { useState } from "react";
 import { Button } from "~/components/ui/button";
 import { DiscordLogo } from "~/components/ui/discord-logo";
+import { GithubLogo } from "~/components/ui/github-logo";
 import { cn } from "~/lib/utils";
 
 export default function Route() {
@@ -85,11 +86,11 @@ function Hero() {
                   <LucidePlay />
                 </a>
               </Button>
-              <Button variant="ghost" size="xl" asChild>
-                <Link to="/sales">
-                  <LucidePhone />
-                  Talk to Us
-                </Link>
+              <Button variant="outline" size="xl" asChild>
+                <a href="https://github.com/crbnos/carbon" target="_blank">
+                  <GithubLogo />
+                  Star on GitHub
+                </a>
               </Button>
             </div>
 
