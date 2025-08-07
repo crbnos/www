@@ -7,78 +7,114 @@ export default function Terms() {
             Terms of Service
           </h1>
           <h2 className="font-medium text-xl text-muted-foreground max-w-5xl text-balance leading-relaxed tracking-tight">
-            Effective July 23, 2025
+            Effective August 7, 2025
           </h2>
         </div>
       </div>
       <div className="mx-auto flex flex-col px-4 w-full lg:w-form-lg max-w-4xl mb-28">
         <div className="prose dark:prose-invert lg:prose-lg">
           <p>
-            Welcome to Carbon Manufacturing Systems Corporation ("Company",
-            "we", "our", "us")! As you have just clicked our Terms of Service,
-            please pause, grab a cup of coffee and carefully read the following
-            pages. It will take you approximately 20 minutes.
+            Welcome to Carbon Manufacturing Systems Corporation ("Carbon",
+            "Company", "we", "our", "us"). As you have just clicked our Terms of
+            Service, please pause, grab a cup of coffee and carefully read the
+            following pages. It will take you approximately 20 minutes.
           </p>
-
           <p>
-            These Terms of Service ("Terms", "Terms of Service") govern your use
-            of our web pages operated by Carbon Manufacturing Systems
-            Corporation.
+            These Terms of Service ("Terms", "Terms of Service") constitute a
+            legally binding agreement between you (“you,” “your,” or the
+            “Customer”) and Carbon, and govern your access to and use of our
+            website, software, and related services (collectively, the
+            “Service”).
           </p>
-
           <p>
-            Our Privacy Policy also governs your use of our Service and explains
-            how we collect, safeguard and disclose information that results from
-            your use of our web pages. Please read it at{" "}
-            <a href="/privacy">our Privacy Policy</a>.
+            By accessing or using the Service, you affirm that you have read,
+            understood, and agreed to be bound by these Terms and{" "}
+            <a href="/privacy">our Privacy Policy</a>, which together form the
+            “Agreement.” If you are using the Service on behalf of an
+            organization, you represent that you are authorized to bind that
+            organization to this Agreement.
           </p>
-
           <p>
-            Your agreement with us includes these Terms and our Privacy Policy
-            ("Agreements"). You acknowledge that you have read and understood
-            Agreements, and agree to be bound by them.
+            These Terms apply to all visitors, users, and others who wish to
+            access or use the Service. If you do not agree to these Terms or our
+            Privacy Policy, then you must not access or use the Service. If you
+            have questions about this Agreement, please contact{" "}
+            <a href="mailto:support@carbon.ms">support@carbon.ms</a>.
           </p>
-
-          <p>
-            If you do not agree with (or cannot comply with) Agreements, then
-            you may not use the Service, but please let us know by emailing at
-            support@carbon.ms so we can try to find a solution. These Terms
-            apply to all visitors, users and others who wish to access or use
-            Service.
-          </p>
-
-          <p>Thank you for being responsible.</p>
-
           <h3>Communications</h3>
           <p>
-            By creating an Account on our Service, you agree to subscribe to
-            newsletters, marketing or promotional materials and other
-            information we may send. However, you may opt out of receiving any,
-            or all, of these communications from us by following the unsubscribe
-            link or by emailing us.
+            By creating an account or otherwise using the Service, you consent
+            to receive electronic communications from Carbon, which may include
+            newsletters, marketing materials, promotional content, product
+            updates, transactional notices, and other information related to
+            your use of the Service. These communications may be sent via email
+            or through in-app notifications.
+          </p>
+          <p>
+            You may opt out of receiving non-essential communications at any
+            time by following the unsubscribe instructions included in the
+            communication or by contacting us at support@carbon.ms. Please note
+            that certain communications, such as those related to your account,
+            transactions, or legal notices, are necessary for the operation of
+            the Service and you may not opt out of receiving them.
           </p>
 
-          <h3>Purchases</h3>
+          <h3>Subscription Terms and Billing</h3>
           <p>
-            If you wish to purchase any product or service made available
-            through Service ("Purchase"), you may be asked to supply certain
-            information relevant to your Purchase including, without limitation,
-            your credit card number, the expiration date of your credit card,
-            your billing address, and your shipping information.
+            Certain features of the Service are made available to Customers on a
+            subscription basis (“Subscription”). Subscription fees are billed in
+            advance on a recurring and periodic basis (“Billing Cycle”), which
+            may be monthly, annually, or as otherwise agreed at the time of
+            purchase.
+          </p>
+          <p>
+            Unless otherwise stated, each Subscription will automatically renew
+            at the end of the applicable Billing Cycle for a successive period
+            of equal length and under the same terms, unless the Customer
+            provides written notice of non-renewal at least thirty (30) days
+            prior to the end of the current term.
+          </p>
+          <p>
+            This renewal policy applies to both of the following subscription
+            types:
+          </p>
+          <p>
+            <ul>
+              <li>
+                <strong>Subscription via Self-Signup on Website:</strong>
+              </li>
+              Customers who subscribed through Carbon’s website must submit
+              cancellation through their <strong>account settings</strong> or by{" "}
+              <strong>emailing support@carbon.ms</strong>
+              at least thirty (30) days before the current term ends to avoid
+              automatic renewal.
+              <p></p>
+              <li>
+                <strong>
+                  Subscription via Subscription Agreement (SA) or Order Form:
+                </strong>
+              </li>
+              Customers who subscribe through a negotiated agreement must submit
+              written notice of non-renewal (email or formal letter) at least
+              thirty (30) days prior to the end of the current term to avoid
+              renewal.
+            </ul>
+          </p>
+          <p>
+            A valid and current payment method (such as a credit card) is
+            required to process payments. You agree to provide accurate and
+            complete billing information, including your full name, billing
+            address, telephone number, and payment details. By providing such
+            information, you authorize Carbon to automatically charge the
+            applicable Subscription fees and any applicable taxes using your
+            designated payment method.
           </p>
 
           <p>
-            You represent and warrant that: (i) you have the legal right to use
-            any credit card(s) or other payment method(s) in connection with any
-            Purchase; and that (ii) the information you supply to us is true,
-            correct and complete.
-          </p>
-
-          <p>
-            We may employ the use of third party services for the purpose of
-            facilitating payment and the completion of Purchases. By submitting
-            your information, you grant us the right to provide the information
-            to these third parties subject to our Privacy Policy.
+            In the event automatic billing is unsuccessful, Carbon may issue an
+            electronic invoice. You agree to remit full payment by the deadline
+            stated on the invoice. Failure to pay may result in the suspension
+            or termination of access to the Service.
           </p>
 
           <p>
@@ -93,369 +129,411 @@ export default function Terms() {
             unauthorized or illegal transaction is suspected.
           </p>
 
-          <h3>Contests, Sweepstakes and Promotions</h3>
+          <h3>
+            <strong>Customer and End User Roles</strong>
+          </h3>
           <p>
-            Any contests, sweepstakes or other promotions (collectively,
-            "Promotions") made available through Service may be governed by
-            rules that are separate from these Terms of Service. If you
-            participate in any Promotions, please review the applicable rules as
-            well as our Privacy Policy. If the rules for a Promotion conflict
-            with these Terms of Service, Promotion rules will apply.
-          </p>
-
-          <h3>Subscriptions</h3>
-          <p>
-            Some parts of Service are billed on a subscription basis
-            ("Subscription(s)"). You will be billed in advance on a recurring
-            and periodic basis ("Billing Cycle"). Billing cycles are set either
-            on a monthly or annual basis, depending on the type of subscription
-            plan you select when purchasing a Subscription.
+            A <strong>"Customer"</strong> is the individual or legal entity that
+            enters into a subscription or service agreement with Carbon to
+            access and use the Service. If the Customer represents an
+            organization, the individual accepting these Terms represents and
+            warrants that they have the authority to bind that organization and
+            its authorized users to these Terms.
           </p>
 
           <p>
-            At the end of each Billing Cycle, your Subscription will
-            automatically renew under the exact same conditions unless you
-            cancel it or Carbon Manufacturing Systems Corporation cancels it.
-            You may cancel your Subscription renewal either through your online
-            account management page or by contacting our customer support team.
+            An <strong>"End User"</strong> is any individual who accesses or
+            uses the Service under the Customer’s account, whether as an
+            employee, contractor, or other representative of the Customer. End
+            Users are granted access by the discretion of the customer or by
+            virtue of the Customer’s agreement with Carbon.
           </p>
 
           <p>
-            A valid payment method, including credit card or PayPal, is required
-            to process the payment for your subscription. You shall provide us
-            with accurate and complete billing information including full name,
-            address, state, zip code, telephone number, and a valid payment
-            method information. By submitting such payment information, you
-            automatically authorize us to charge all Subscription fees incurred
-            through your account to any such payment instruments.
-          </p>
-
-          <p>
-            Should automatic billing fail to occur for any reason, we will issue
-            an electronic invoice indicating that you must proceed manually,
-            within a certain deadline date, with the full payment corresponding
-            to the billing period as indicated on the invoice.
+            The Customer is responsible for all activity occurring under its
+            account, including actions taken by End Users. The Customer shall
+            ensure that all End Users comply with this Agreement and shall be
+            liable for any breach of these Terms by its End Users.
           </p>
 
           <h3>Free Trial</h3>
           <p>
-            We may, at our sole discretion, offer a Subscription with a free
-            trial for a limited period of time ("Free Trial").
-          </p>
-
-          <p>
-            You may be required to enter your billing information in order to
-            sign up for Free Trial.
-          </p>
-
-          <p>
-            If you do enter your billing information when signing up for Free
-            Trial, you will not be charged until Free Trial has expired. On the
-            last day of Free Trial period, unless you cancelled your
-            Subscription, you will be automatically charged the applicable
-            Subscription fees for the type of Subscription you have selected.
-          </p>
-
-          <p>
-            At any time and without notice, we reserve the right to (i) modify
-            Terms of Service of Free Trial offer, or (ii) cancel such Free Trial
+            Carbon may, at its sole discretion, offer access to certain features
+            of the Service on a trial basis at no charge for a limited time
+            (“Free Trial”). The specific terms of any Free Trial, including
+            duration and access scope, will be described at the time of the
             offer.
+          </p>
+
+          <p>
+            To activate a Free Trial, you may be required to provide valid
+            billing information. If billing information is provided, you will
+            not be charged until the Free Trial period expires. Unless you
+            cancel your Subscription prior to the end of the Free Trial, the
+            applicable Subscription fees will be automatically charged to your
+            designated payment method on the first day following the Free Trial
+            period.
+          </p>
+
+          <p>
+            Free Trials are intended for evaluation purposes only and may not be
+            used to create or process data for commercial use unless explicitly
+            permitted by Carbon. Carbon reserves the right to (i) modify or
+            terminate any Free Trial offer at any time without prior notice, and
+            (ii) determine your eligibility for a Free Trial at its sole
+            discretion.
           </p>
 
           <h3>Fee Changes</h3>
           <p>
-            We, in our sole discretion and at any time, may modify Subscription
-            fees for the Subscriptions. Any Subscription fee change will become
-            effective at the end of the then-current Billing Cycle.
+            Carbon may adjust Subscription fees at its sole discretion. Any such
+            changes will take effect at the start of the next applicable Billing
+            Cycle.
           </p>
 
           <p>
-            We will provide you with reasonable prior notice of any change in
-            Subscription fees to give you an opportunity to terminate your
-            Subscription before such change becomes effective.
+            The Customer will be notified of fee changes via email or through
+            the Service. Continued use of the Service after the effective date
+            of the revised fees constitutes the Customer’s acceptance of the new
+            pricing.
+          </p>
+
+          <h3>Refund Policy</h3>
+          <p>
+            All payments made in connection with the Service are non-refundable,
+            except as expressly required by applicable law.
           </p>
 
           <p>
-            Your continued use of Service after Subscription fee change comes
-            into effect constitutes your agreement to pay the modified
-            Subscription fee amount.
-          </p>
-
-          <h3>Refunds</h3>
-          <p>
-            Except when required by law, paid Subscription fees are
-            non-refundable.
+            No credits or refunds will be provided for partial use, unused
+            periods, downgrades, or cancellations within an active Billing
+            Cycle. Customers are responsible for reviewing the Service and
+            Subscription details before purchase.
           </p>
 
           <h3>Content</h3>
           <p>
-            Our Service allows you to post, link, store, share and otherwise
-            make available certain information, text, graphics, videos, or other
-            material ("Content"). You are responsible for Content that you post
-            on or through Service, including its legality, reliability, and
-            appropriateness.
+            The Customer retains all ownership rights to its Content. By
+            submitting or uploading Content to the Service, the Customer
+            represents and warrants that it has all necessary rights, licenses,
+            and permissions to do so. Carbon personnel may access Content only
+            to (a) provide technical support, (b) maintain or improve the
+            Service, or (c) comply with applicable law.
           </p>
 
           <p>
-            By posting Content on or through Service, You represent and warrant
-            that: (i) Content is yours (you own it) and/or you have the right to
-            use it and the right to grant us the rights and license as provided
-            in these Terms, and (ii) that the posting of your Content on or
-            through Service does not violate the privacy rights, publicity
-            rights, copyrights, contract rights or any other rights of any
-            person or entity. We reserve the right to terminate the account of
-            anyone found to be infringing on a copyright.
+            Carbon shall treat all Content as confidential and apply
+            industry-standard safeguards to protect it. By uploading or
+            transmitting Content to the Service, the Customer grants Carbon a
+            non-exclusive, worldwide, royalty-free license to host, store,
+            reproduce, and display such Content solely for the purpose of
+            operating and providing the Service. This license includes the right
+            to transmit Content to and from third-party infrastructure providers
+            used by Carbon in delivering the Service.
           </p>
 
           <p>
-            You retain any and all of your rights to any Content you submit,
-            post or display on or through Service and you are responsible for
-            protecting those rights. We take no responsibility and assume no
-            liability for Content you or any third party posts on or through
-            Service. However, by posting Content using Service you grant us the
-            right and license to use, modify, publicly perform, publicly
-            display, reproduce, and distribute such Content on and through
-            Service. You agree that this license includes the right for us to
-            make your Content available to other users of Service, who may also
-            use your Content subject to these Terms.
+            The Customer is solely responsible for all Content submitted through
+            its account, including the legality, reliability, and
+            appropriateness of such Content. Carbon assumes no liability for any
+            Content uploaded by the Customer or its End Users.
           </p>
 
           <p>
-            Carbon Manufacturing Systems Corporation has the right but not the
-            obligation to monitor and edit all Content provided by users. In
-            addition, Content found on or through this Service are the property
-            of Carbon Manufacturing Systems Corporation or used with permission.
-            You may not distribute, modify, transmit, reuse, download, repost,
-            copy, or use said Content, whether in whole or in part, for
-            commercial purposes or for personal gain, without express advance
-            written permission from us.
+            Upon termination, Carbon may delete all Content within a
+            commercially reasonable timeframe. The Customer is responsible for
+            exporting any necessary data prior to cancellation.
           </p>
 
           <h3>Prohibited Uses</h3>
           <p>
             You may use Service only for lawful purposes and in accordance with
-            Terms. You agree not to use Service:
+            these Terms. You agree not to use Service:
           </p>
 
           <ul>
             <li>
-              In any way that violates any applicable national or international
-              law or regulation.
+              In any manner that violates any applicable local, state, national,
+              or international law or regulation.
             </li>
             <li>
               For the purpose of exploiting, harming, or attempting to exploit
-              or harm minors in any way by exposing them to inappropriate
-              content or otherwise.
+              or harm minors in any way, including by exposing them to
+              inappropriate content.
             </li>
             <li>
-              To transmit, or procure the sending of, any advertising or
-              promotional material, including any "junk mail", "chain letter,"
-              "spam," or any other similar solicitation.
+              To transmit or facilitate the sending of unauthorized advertising
+              or promotional material, including unsolicited commercial email,
+              “junk mail,” “chain letters,” or “spam.”
             </li>
             <li>
-              To impersonate or attempt to impersonate Company, a Company
-              employee, another user, or any other person or entity.
+              To impersonate or misrepresent your affiliation with Carbon, a
+              Carbon employee, another user, or any other person or entity.
             </li>
             <li>
-              In any way that infringes upon the rights of others, or in any way
-              is illegal, threatening, fraudulent, or harmful, or in connection
-              with any unlawful, illegal, fraudulent, or harmful purpose or
-              activity.
+              In any manner that infringes upon or violates the rights of
+              others, or is otherwise{" "}
+              <strong>
+                illegal, threatening, abusive, defamatory, invasive of privacy,
+                obscene, or harmful.
+              </strong>
             </li>
             <li>
-              To engage in any other conduct that restricts or inhibits anyone's
-              use or enjoyment of Service, or which, as determined by us, may
-              harm or offend Company or users of Service or expose them to
-              liability.
+              To engage in conduct that, as determined by Carbon, restricts or
+              inhibits any other user’s ability to use or enjoy the Service, or
+              which may expose Carbon or its users to legal liability.
             </li>
           </ul>
 
-          <p>Additionally, you agree not to:</p>
+          <p>In addition, you agree not to:</p>
 
           <ul>
             <li>
-              Use Service in any manner that could disable, overburden, damage,
-              or impair Service or interfere with any other party's use of
-              Service, including their ability to engage in real time activities
-              through Service.
+              Use the Service in any way that could disable, overburden, damage,
+              or impair the Service, or interfere with the use of the Service by
+              any other party.
             </li>
             <li>
-              Use the API in a manner that creates an unreasonable load on
-              Carbon’s infrastructure, interferes with the proper functioning of
-              the API, or disproportionately consumes our resources, as
-              determined by Carbon in its sole discretion.
+              Use any robot, spider, crawler, scraper, or other automated means
+              to access or copy material from the Service.
             </li>
             <li>
-              Use any robot, spider, or other automatic device, process, or
-              means to access Service for any purpose, including monitoring or
-              copying any of the material on Service.
-            </li>
-            <li>
-              Use any manual process to monitor or copy any of the material on
-              Service or for any other unauthorized purpose without our prior
-              written consent.
+              Use any manual process to monitor or copy material from the
+              Service for unauthorized purposes without prior written consent.
             </li>
             <li>
               Use any device, software, or routine that interferes with the
-              proper working of Service.
+              proper functioning of the Service.
             </li>
             <li>
-              Introduce any viruses, trojan horses, worms, logic bombs, or other
-              material which is malicious or technologically harmful.
+              Upload or introduce any viruses, malware, ransomware, trojan
+              horses, worms, logic bombs, or other harmful or malicious code.
             </li>
             <li>
               Attempt to gain unauthorized access to, interfere with, damage, or
-              disrupt any parts of Service, the server on which Service is
+              disrupt any part of Service, the server on which Service is
               stored, or any server, computer, or database connected to Service.
             </li>
             <li>
-              Attack Service via a denial-of-service attack or a distributed
-              denial-of-service attack.
+              Attack Service via a denial-of-service (DoS) attack or a
+              distributed denial-of-service (DDoS) attack.
             </li>
-            <li>Take any action that may damage or falsify Company rating.</li>
             <li>
-              Otherwise attempt to interfere with the proper working of Service.
+              Engage in behavior intended to manipulate or distort reviews,
+              ratings, or analytics related to the Service or Carbon’s business.
+            </li>
+            <li>
+              Otherwise attempt to interfere with the security, integrity, or
+              proper operation of the Service.
             </li>
           </ul>
 
           <h3>Analytics</h3>
           <p>
-            We may use third-party Service Providers to monitor and analyze the
-            use of our Service.
+            We may use third-party service providers to collect, monitor, and
+            analyze usage data in order to improve the functionality and
+            performance of the Service. These third parties may use cookies, web
+            beacons, or other tracking technologies as part of their services.
           </p>
 
-          <h3>No Use By Minors</h3>
+          <h3>Eligibility and Age Restriction</h3>
           <p>
-            Service is intended only for access and use by individuals at least
-            eighteen (18) years old. By accessing or using any of Company, you
-            warrant and represent that you are at least eighteen (18) years of
-            age and with the full authority, right, and capacity to enter into
-            this agreement and abide by all of the terms and conditions of
-            Terms. If you are not at least eighteen (18) years old, you are
-            prohibited from both the access and usage of Service.
+            The Service is intended solely for use by individuals who are at
+            least eighteen (18) years of age. By accessing or using the Service,
+            you represent and warrant that you are at least eighteen (18) years
+            old and have the legal authority and capacity to enter into a
+            binding agreement with Carbon.
+          </p>
+          <p>
+            If you are under the age of eighteen (18), you are not authorized to
+            access or use the Service and must immediately discontinue use.
           </p>
 
           <h3>Accounts</h3>
           <p>
-            When you create an account with us, you guarantee that you are above
-            the age of 18, and that the information you provide us is accurate,
-            complete, and current at all times. Inaccurate, incomplete, or
-            obsolete information may result in the immediate termination of your
-            account on Service.
+            By creating an account with Carbon, you represent and warrant that
+            you are at least eighteen (18) years of age and that all information
+            provided to Carbon is accurate, complete, and current at all times.
+            You agree to promptly update your information if any changes occur.
+            Failure to provide accurate or current information may result in
+            suspension or termination of your account.
           </p>
 
           <p>
-            You are responsible for maintaining the confidentiality of your
-            account and password, including but not limited to the restriction
-            of access to your computer and/or account. You agree to accept
-            responsibility for any and all activities or actions that occur
-            under your account and/or password, whether your password is with
-            our Service or a third-party service. You must notify us immediately
-            upon becoming aware of any breach of security or unauthorized use of
-            your account.
+            You are solely responsible for maintaining the confidentiality of
+            your account credentials, including your password, and for
+            restricting access to your account and any devices used to access
+            the Service. You agree to accept full responsibility for all
+            activities that occur under your account, whether authorized by you
+            or not. You must notify Carbon immediately upon becoming aware of
+            any actual or suspected unauthorized use of your account or other
+            breach of security.
           </p>
 
           <p>
-            You may not use as a username the name of another person or entity
-            or that is not lawfully available for use, a name or trademark that
-            is subject to any rights of another person or entity other than you,
-            without appropriate authorization. You may not use as a username any
-            name that is offensive, vulgar or obscene.
+            You may not register a username that is intended to impersonate
+            another person or entity, that is not lawfully available for use, or
+            that infringes on the rights of any third party, including
+            trademarks. Carbon reserves the right to reject or remove any
+            username that is deemed, in its sole discretion, to be offensive,
+            misleading, or otherwise inappropriate.
           </p>
 
           <p>
-            We reserve the right to refuse service, terminate accounts, remove
-            or edit content, or cancel orders in our sole discretion.
+            Carbon reserves the right, in its sole discretion, to refuse
+            service, terminate accounts, remove or modify content, or cancel
+            orders, with or without notice, and without liability to you.
           </p>
 
           <h3>Intellectual Property</h3>
           <p>
-            Service and its original content (excluding Content provided by
-            users), features and functionality are and will remain the exclusive
-            property of Carbon Manufacturing Systems Corporation and its
-            licensors. Service is protected by copyright, trademark, and other
-            laws of foreign countries. Our trademarks and trade dress may not be
-            used in connection with any product or service without the prior
-            written consent of Carbon Manufacturing Systems Corporation.
+            The Service, including all original content, software, visual
+            interfaces, interactive features, design, graphics, compilation, and
+            underlying technology (excluding Content submitted by users), is and
+            shall remain the exclusive property of Carbon Manufacturing Systems
+            Corporation and its licensors. The Service and its content are
+            protected by copyright, trademark, trade secret, and other
+            intellectual property laws of the United States and foreign
+            jurisdictions.
+          </p>
+
+          <p>
+            Carbon’s name, logo, trademarks, trade dress, and any related
+            branding elements may not be used in connection with any product or
+            service without the prior written consent of Carbon. All rights not
+            expressly granted herein are reserved by Carbon.
           </p>
 
           <h3>Copyright Policy</h3>
           <p>
-            We respect the intellectual property rights of others. It is our
-            policy to respond to any claim that Content posted on Service
-            infringes on the copyright or other intellectual property rights
-            ("Infringement") of any person or entity.
+            Carbon respects the intellectual property rights of others and
+            expects users of the Service to do the same. It is our policy to
+            respond to notices of alleged copyright infringement that comply
+            with the Digital Millennium Copyright Act ("DMCA") or other
+            applicable intellectual property laws.
           </p>
 
           <p>
-            If you are a copyright owner, or authorized on behalf of one, and
-            you believe that the copyrighted work has been copied in a way that
-            constitutes copyright infringement, please submit your claim via
-            email to support@carbon.ms, with the subject line: "Copyright
-            Infringement" and include in your claim a detailed description of
-            the alleged Infringement.
+            If you believe that any Content hosted on or through the Service
+            infringes upon your copyright or other intellectual property rights,
+            please send a written notice to support@carbon.ms with the subject
+            line “Copyright Infringement.” The notice must include the following
+            information:
           </p>
-
+          <ol>
+            <li>
+              A description of the copyrighted work or other intellectual
+              property you claim has been infringed;
+            </li>
+            <li>
+              Identification of the allegedly infringing material and its
+              location on the Service (e.g., URL);
+            </li>
+            <li>
+              Your full name, address, telephone number, and email address;
+            </li>
+            <li>
+              A statement by you that you have a good faith belief that the
+              disputed use is not authorized by the copyright owner, its agent,
+              or the law;
+            </li>
+            <li>
+              A statement by you, made under penalty of perjury, that the above
+              information in your notice is accurate and that you are the
+              copyright owner or authorized to act on the copyright owner's
+              behalf;
+            </li>
+            <li>
+              An electronic or physical signature of the person authorized to
+              act on behalf of the copyright owner.
+            </li>
+          </ol>
           <p>
-            You may be held accountable for damages (including costs and
-            attorneys' fees) for misrepresentation or bad-faith claims on the
-            infringement of any Content found on and/or through Service on your
-            copyright.
+            Carbon reserves the right to remove allegedly infringing content
+            without prior notice and to terminate, in appropriate circumstances,
+            the accounts of users who are repeat infringers.
+          </p>
+          <p>
+            You may be held liable for damages, including attorneys’ fees and
+            costs, if you knowingly submit a false claim of infringement.
           </p>
 
           <h3>Error Reporting & Feedback</h3>
           <p>
-            You may provide us directly at support@carbon.ms with information
-            and feedback concerning errors, suggestions for improvements, ideas,
-            problems, complaints, and other matters related to our Service
-            ("Feedback"). You acknowledge and agree that: (i) you shall not
-            retain, acquire or assert any intellectual property right or other
-            right, title or interest in or to the Feedback; (ii) Company may
-            have development ideas similar to the Feedback; (iii) Feedback does
-            not contain confidential information or proprietary information from
-            you or any third party; and (iv) Company is not under any obligation
-            of confidentiality with respect to the Feedback. In the event the
-            transfer of the ownership to the Feedback is not possible due to
-            applicable mandatory laws, you grant Company and its affiliates an
-            exclusive, transferable, irrevocable, free-of-charge,
-            sub-licensable, unlimited and perpetual right to use (including
-            copy, modify, create derivative works, publish, distribute and
-            commercialize) Feedback in any manner and for any purpose.
+            You may provide Carbon with feedback, suggestions, feature requests,
+            bug reports, or other information related to the Service
+            (collectively, “Feedback”) by contacting support@carbon.ms or
+            through other designated support channels. All Feedback is provided
+            voluntarily and shall not be considered confidential or proprietary
+            to you.
+          </p>
+          <p>
+            By submitting Feedback, you acknowledge and agree that:
+            <ol type="i">
+              <li>
+                You will not retain, acquire, or assert any intellectual
+                property or other rights in or to the Feedback;
+              </li>
+              <li>
+                Carbon may already be independently developing ideas or
+                technologies similar to the Feedback;
+              </li>
+              <li>
+                The Feedback does not contain any confidential or proprietary
+                information of any third party; and
+              </li>
+              <li>
+                Carbon has no obligation to review, consider, or implement any
+                Feedback, or to keep it confidential.
+              </li>
+            </ol>
+          </p>
+          <p>
+            To the extent ownership of the Feedback does not automatically vest
+            in Carbon, you hereby grant Carbon and its affiliates an
+            irrevocable, worldwide, perpetual, sublicensable, transferable,
+            royalty-free license to use, copy, modify, publish, distribute, and
+            otherwise exploit such Feedback for any purpose, including
+            commercial purposes, without attribution or compensation to you.
           </p>
 
-          <h3>Links To Other Web Sites</h3>
+          <h3>Third-Party Links</h3>
           <p>
-            Our Service may contain links to third party web sites or services
+            The Service may contain links to third-party websites or services
             that are not owned or controlled by Carbon Manufacturing Systems
-            Corporation.
+            Corporation. These links are provided for convenience only and do
+            not imply any endorsement, sponsorship, or affiliation.
           </p>
 
           <p>
-            Carbon Manufacturing Systems Corporation has no control over, and
-            assumes no responsibility for the content, privacy policies, or
-            practices of any third party web sites or services. We do not
-            warrant the offerings of any of these entities/individuals or their
-            websites.
+            Carbon has no control over, and assumes no responsibility for, the
+            content, privacy policies, terms, or practices of any third-party
+            websites or services. We make no warranties or representations
+            regarding the accuracy, completeness, or legality of third-party
+            content or offerings.
           </p>
 
           <p>
-            YOU ACKNOWLEDGE AND AGREE THAT CARBON MANUFACTURING SYSTEMS
-            CORPORATION SHALL NOT BE RESPONSIBLE OR LIABLE, DIRECTLY OR
-            INDIRECTLY, FOR ANY DAMAGE OR LOSS CAUSED OR ALLEGED TO BE CAUSED BY
-            OR IN CONNECTION WITH USE OF OR RELIANCE ON ANY SUCH CONTENT, GOODS
-            OR SERVICES AVAILABLE ON OR THROUGH ANY SUCH THIRD PARTY WEB SITES
-            OR SERVICES.
+            YOU ACKNOWLEDGE AND AGREE THAT CARBON SHALL NOT BE LIABLE, DIRECTLY
+            OR INDIRECTLY, FOR ANY DAMAGE OR LOSS CAUSED OR ALLEGED TO BE CAUSED
+            BY YOUR USE OF OR RELIANCE ON ANY CONTENT, GOODS, OR SERVICES
+            AVAILABLE ON OR THROUGH ANY SUCH THIRD-PARTY WEBSITES OR SERVICES.
+          </p>
+
+          <p>
+            YOU ARE SOLELY RESPONSIBLE FOR REVIEWING THE TERMS AND PRIVACY
+            POLICIES OF ANY THIRD-PARTY WEBSITES YOU VISIT.
           </p>
 
           <p>
             WE STRONGLY ADVISE YOU TO READ THE TERMS OF SERVICE AND PRIVACY
-            POLICIES OF ANY THIRD PARTY WEB SITES OR SERVICES THAT YOU VISIT.
+            POLICIES OF ANY THIRD PARTY WEBSITES OR SERVICES THAT YOU VISIT.
           </p>
 
           <h3>Disclaimer of Warranty</h3>
           <p>
-            THESE SERVICES ARE PROVIDED BY COMPANY ON AN "AS IS" AND "AS
-            AVAILABLE" BASIS. COMPANY MAKES NO REPRESENTATIONS OR WARRANTIES OF
+            THESE SERVICES ARE PROVIDED BY CARBON ON AN "AS IS" AND "AS
+            AVAILABLE" BASIS. CARBON MAKES NO REPRESENTATIONS OR WARRANTIES OF
             ANY KIND, EXPRESS OR IMPLIED, AS TO THE OPERATION OF THEIR SERVICES,
             OR THE INFORMATION, CONTENT OR MATERIALS INCLUDED THEREIN. YOU
             EXPRESSLY AGREE THAT YOUR USE OF THESE SERVICES, THEIR CONTENT, AND
@@ -463,11 +541,11 @@ export default function Terms() {
           </p>
 
           <p>
-            NEITHER COMPANY NOR ANY PERSON ASSOCIATED WITH COMPANY MAKES ANY
+            NEITHER CARBON NOR ANY PERSON ASSOCIATED WITH CARBON MAKES ANY
             WARRANTY OR REPRESENTATION WITH RESPECT TO THE COMPLETENESS,
             SECURITY, RELIABILITY, QUALITY, ACCURACY, OR AVAILABILITY OF THE
-            SERVICES. WITHOUT LIMITING THE FOREGOING, NEITHER COMPANY NOR ANYONE
-            ASSOCIATED WITH COMPANY REPRESENTS OR WARRANTS THAT THE SERVICES,
+            SERVICES. WITHOUT LIMITING THE FOREGOING, NEITHER CARBON NOR ANYONE
+            ASSOCIATED WITH CARBON REPRESENTS OR WARRANTS THAT THE SERVICES,
             THEIR CONTENT, OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE
             SERVICES WILL BE ACCURATE, RELIABLE, ERROR-FREE, OR UNINTERRUPTED,
             THAT DEFECTS WILL BE CORRECTED, THAT THE SERVICES OR THE SERVER THAT
@@ -477,7 +555,7 @@ export default function Terms() {
           </p>
 
           <p>
-            COMPANY HEREBY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS
+            CARBON HEREBY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS
             OR IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING BUT NOT LIMITED TO
             ANY WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT, AND FITNESS FOR
             PARTICULAR PURPOSE.
@@ -501,109 +579,170 @@ export default function Terms() {
             WITHOUT LIMITATION ANY CLAIM FOR PERSONAL INJURY OR PROPERTY DAMAGE,
             ARISING FROM THIS AGREEMENT AND ANY VIOLATION BY YOU OF ANY FEDERAL,
             STATE, OR LOCAL LAWS, STATUTES, RULES, OR REGULATIONS, EVEN IF
-            COMPANY HAS BEEN PREVIOUSLY ADVISED OF THE POSSIBILITY OF SUCH
+            CARBON HAS BEEN PREVIOUSLY ADVISED OF THE POSSIBILITY OF SUCH
             DAMAGE. EXCEPT AS PROHIBITED BY LAW, IF THERE IS LIABILITY FOUND ON
-            THE PART OF COMPANY, IT WILL BE LIMITED TO THE AMOUNT PAID FOR THE
-            PRODUCTS AND/OR SERVICES, AND UNDER NO CIRCUMSTANCES WILL THERE BE
-            CONSEQUENTIAL OR PUNITIVE DAMAGES. SOME STATES DO NOT ALLOW THE
-            EXCLUSION OR LIMITATION OF PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
-            DAMAGES, SO THE PRIOR LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.
+            THE PART OF CARBON, IT WILL BE LIMITED TO THE TOTAL FEES PAID OR
+            PAYABLE BY YOU TO CARBON UNDER THIS AGREEMENT IN THE TWELVE (12)
+            MONTHS IMMEDIATELY PRECEDING THE EVENT GIVING RISE TO THE CLAIM, AND
+            UNDER NO CIRCUMSTANCES WILL THERE BE CONSEQUENTIAL OR PUNITIVE
+            DAMAGES. SOME STATES DO NOT ALLOW THE EXCLUSION OR LIMITATION OF
+            PUNITIVE, INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE PRIOR
+            LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.
+          </p>
+
+          <h3>Indemnification</h3>
+          <p>
+            You agree to indemnify, defend, and hold harmless Carbon, its
+            affiliates, officers, employees, and agents from any claims,
+            damages, obligations, losses, liabilities, costs, or debt (including
+            attorney’s fees) arising from:
+            <ol type="a">
+              <li>Your use of the Service;</li>
+              <li>Your violation of these Terms:</li>
+              <li>
+                Your violation of any third-party rights, including IP or
+                privacy rights; or{" "}
+              </li>
+              <li>Your Content.</li>
+            </ol>
           </p>
 
           <h3>Termination</h3>
           <p>
-            We may terminate or suspend your account and bar access to Service
-            immediately, without prior notice or liability, under our sole
-            discretion, for any reason whatsoever and without limitation,
-            including but not limited to a breach of Terms.
+            Carbon may suspend or terminate your access to the Service at any
+            time, with or without cause, and with or without notice, including
+            but not limited to instances where you violate these Terms, fail to
+            make timely payments, or engage in conduct that may harm Carbon, the
+            Service, or other users.
           </p>
 
           <p>
-            If you wish to terminate your account, you may simply discontinue
-            using Service.
+            Carbon shall not be liable for any losses or damages resulting from
+            any such termination. Access to the Service, including any Content
+            or data stored therein, may be disabled immediately upon
+            termination.
           </p>
 
           <p>
-            All provisions of Terms which by their nature should survive
-            termination shall survive termination, including, without
-            limitation, ownership provisions, warranty disclaimers, indemnity
-            and limitations of liability.
-          </p>
-
-          <h3>Governing Law</h3>
-          <p>
-            These Terms shall be governed and construed in accordance with the
-            laws of Delaware without regard to its conflict of law provisions.
+            If you wish to terminate your account, you may do so by
+            discontinuing use of the Service or by contacting Carbon at
+            support@carbon.ms. Termination will not relieve you of any
+            outstanding payment obligations as of the termination date.
           </p>
 
           <p>
-            Our failure to enforce any right or provision of these Terms will
-            not be considered a waiver of those rights. If any provision of
-            these Terms is held to be invalid or unenforceable by a court, the
-            remaining provisions of these Terms will remain in effect. These
-            Terms constitute the entire agreement between us regarding our
-            Service and supersede and replace any prior agreements we might have
-            had between us regarding Service.
+            All provisions of these Terms which by their nature should survive
+            termination shall survive, including, without limitation, provisions
+            related to ownership, confidentiality, feedback, disclaimers,
+            limitations of liability, indemnification, dispute resolution, and
+            governing law.
           </p>
 
+          <h3>Governing Law and Interpretation</h3>
+          <p>
+            These Terms shall be governed by and construed in accordance with
+            the laws of the State of Delaware, without regard to any principles
+            of conflicts of law.
+          </p>
+
+          <p>
+            Any failure by Carbon to enforce any provision of these Terms shall
+            not constitute a waiver of that provision or any other rights. If
+            any provision of these Terms is held to be invalid, illegal, or
+            unenforceable by a court of competent jurisdiction, such provision
+            shall be modified or eliminated to the minimum extent necessary, and
+            the remaining provisions shall remain in full force and effect.
+          </p>
+
+          <p>
+            These Terms constitute the entire agreement between you and Carbon
+            with respect to the subject matter hereof and supersede all prior or
+            contemporaneous understandings, communications, and agreements,
+            whether written or oral.
+          </p>
+
+          <h3>Dispute Resolution and Arbitration</h3>
+          <p>
+            Any dispute, claim, or controversy arising out of or relating to
+            these Terms or the breach, termination, enforcement, interpretation,
+            or validity thereof shall be resolved by binding arbitration
+            conducted in the State of Delaware, in accordance with the rules of
+            the American Arbitration Association. You agree to waive any right
+            to a jury trial or to participate in a class action. Nothing in this
+            clause shall prevent either party from seeking injunctive or
+            equitable relief in a court of competent jurisdiction.
+          </p>
           <h3>Changes To Service</h3>
           <p>
-            We reserve the right to withdraw or amend our Service, and any
-            service or material we provide via Service, in our sole discretion
-            without notice. We will not be liable if for any reason all or any
-            part of Service is unavailable at any time or for any period. From
-            time to time, we may restrict access to some parts of Service, or
-            the entire Service, to users, including registered users.
+            Carbon reserves the right to modify, suspend, or discontinue the
+            Service, or any part thereof, at any time, with or without notice
+            and for any reason, including scheduled maintenance or operational
+            adjustments.
+          </p>
+
+          <p>
+            Carbon shall not be liable to you or any third party for any
+            modification, suspension, or discontinuation of the Service, or for
+            any periods during which the Service or any portion thereof becomes
+            unavailable.
+          </p>
+
+          <p>
+            From time to time, Carbon may restrict access to certain portions of
+            the Service, or the entire Service, to certain users, including
+            registered users, at its sole discretion.
           </p>
 
           <h3>Amendments To Terms</h3>
           <p>
-            We may amend Terms at any time by posting the amended terms on this
-            site. It is your responsibility to review these Terms periodically.
+            Carbon may revise or update these Terms from time to time without
+            prior notice. The most current version of the Terms will always be
+            posted and dated at the top of the page.
           </p>
 
           <p>
-            Your continued use of the Platform following the posting of revised
-            Terms means that you accept and agree to the changes. You are
-            expected to check this page frequently so you are aware of any
-            changes, as they are binding on you.
-          </p>
-
-          <p>
-            By continuing to access or use our Service after any revisions
-            become effective, you agree to be bound by the revised terms. If you
-            do not agree to the new terms, you are no longer authorized to use
+            Your continued use of the Service after the effective date of any
+            changes constitutes your acceptance of the revised Terms. If you do
+            not agree to the updated Terms, you must discontinue use of the
             Service.
+          </p>
+
+          <p>
+            It is your responsibility to review these Terms periodically. The
+            date of the most recent revision will appear at the top of the
+            document.
           </p>
 
           <h3>Waiver And Severability</h3>
           <p>
-            No waiver by Company of any term or condition set forth in Terms
-            shall be deemed a further or continuing waiver of such term or
-            condition or a waiver of any other term or condition, and any
-            failure of Company to assert a right or provision under Terms shall
-            not constitute a waiver of such right or provision.
+            No waiver by Carbon of any term or condition set forth in these
+            Terms shall be deemed a continuing waiver of such term or condition
+            or a waiver of any other term or condition. Any failure by Carbon to
+            assert a right or enforce a provision under these Terms shall not
+            constitute a waiver of such right or provision.
           </p>
 
           <p>
-            If any provision of Terms is held by a court or other tribunal of
-            competent jurisdiction to be invalid, illegal or unenforceable for
-            any reason, such provision shall be eliminated or limited to the
-            minimum extent such that the remaining provisions of Terms will
-            continue in full force and effect.
+            If any provision of these Terms is held to be invalid, illegal, or
+            unenforceable by a court of competent jurisdiction, such provision
+            shall be modified or limited to the minimum extent necessary to make
+            it enforceable, and the remaining provisions shall continue in full
+            force and effect.
           </p>
 
           <h3>Acknowledgement</h3>
           <p>
-            BY USING SERVICE OR OTHER SERVICES PROVIDED BY US, YOU ACKNOWLEDGE
-            THAT YOU HAVE READ THESE TERMS OF SERVICE AND AGREE TO BE BOUND BY
-            THEM.
+            BY ACCESSING OR USING THE SERVICE, YOU ACKNOWLEDGE THAT YOU HAVE
+            READ, UNDERSTOOD, AND AGREE TO BE BOUND BY THESE TERMS, INCLUDING
+            ANY DOCUMENTS INCORPORATED BY REFERENCE. IF YOU DO NOT AGREE TO
+            THESE TERMS, YOU ARE NOT AUTHORIZED TO ACCESS OR USE THE SERVICE.
           </p>
 
           <h3>Contact Us</h3>
           <p>
             If you have any questions about these terms of service, please
-            contact us by email at support@carbon.ms.
+            contact us by email at{" "}
+            <a href="mailto:support@carbon.ms">support@carbon.ms</a>.
           </p>
         </div>
       </div>
