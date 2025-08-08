@@ -83,21 +83,25 @@ export default function Terms() {
               <li>
                 <strong>Subscription via Self-Signup on Website:</strong>
               </li>
-              Customers who subscribed through Carbon’s website must submit
-              cancellation through their <strong>account settings</strong> or by{" "}
-              <strong>emailing support@carbon.ms</strong>
-              at least thirty (30) days before the current term ends to avoid
-              automatic renewal.
-              <p></p>
+
+              <p>
+                Customers who subscribed through Carbon’s website must submit
+                cancellation through their <strong>account settings</strong> or
+                by <strong>emailing support@carbon.ms</strong>
+                at least thirty (30) days before the current term ends to avoid
+                automatic renewal.
+              </p>
               <li>
                 <strong>
                   Subscription via Subscription Agreement (SA) or Order Form:
                 </strong>
               </li>
-              Customers who subscribe through a negotiated agreement must submit
-              written notice of non-renewal (email or formal letter) at least
-              thirty (30) days prior to the end of the current term to avoid
-              renewal.
+              <p>
+                Customers who subscribe through a negotiated agreement must
+                submit written notice of non-renewal (email or formal letter) at
+                least thirty (30) days prior to the end of the current term to
+                avoid renewal.
+              </p>
             </ul>
           </p>
           <p>
@@ -598,10 +602,10 @@ export default function Terms() {
             attorney’s fees) arising from:
             <ol type="a">
               <li>Your use of the Service;</li>
-              <li>Your violation of these Terms:</li>
+              <li>Your violation of these Terms;</li>
               <li>
                 Your violation of any third-party rights, including IP or
-                privacy rights; or{" "}
+                privacy rights;
               </li>
               <li>Your Content.</li>
             </ol>
