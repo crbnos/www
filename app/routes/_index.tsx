@@ -65,14 +65,14 @@ const customers = [
 
 function Hero() {
   return (
-    <section id="hero" className="py-0">
+    <section id="hero" className="py-0 relative">
       <div className="bg-[linear-gradient(to_bottom_right,#f7f5ff_35.67%,#c9fff8_88.95%)] dark:bg-[linear-gradient(to_bottom_right,#0e0338_35.67%,#1b433e_88.95%)]  w-full mx-auto py-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 z-50">
           <div className="flex flex-col justify-start items-center gap-8">
             <DiscordButton />
-            <h2 className="font-display text-foreground text-balance mx-auto  max-w-5xl text-center font-medium tracking-tight leading-[115%] text-[2.7rem] sm:text-7xl lg:text-[5rem] xl:text-[7.2rem]">
-              The open-source{" "}
-              <span className="text-secondary">manufacturing ERP</span>
+            <h2 className="font-display text-foreground text-balance mx-auto  max-w-5xl text-center font-medium tracking-tight leading-[115%] text-[2.3rem] sm:text-5xl lg:text-6xl xl:text-[5.8rem]">
+              The easiest way to run your{" "}
+              <span className="text-secondary">manufacturing business</span>
             </h2>
             <p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-[780px] text-center font-medium tracking-tighter text-base md:text-lg lg:text-xl">
               Carbon is a modern manufacturing system that combines ERP, MES,
