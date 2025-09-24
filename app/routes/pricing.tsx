@@ -1,47 +1,31 @@
 import { Link } from "@remix-run/react";
-import { Check, LucideHandCoins } from "lucide-react";
+import { Check, LucideHandCoins, LucidePhone } from "lucide-react";
 import { Button } from "~/components/ui/button";
+import { GithubLogo } from "~/components/ui/github-logo";
 import { cn } from "~/lib/utils";
 
 const plans = [
-  {
-    name: "Self-Hosted",
-    description: "Self-hosted AGPL-licensed software",
-    priceHeadline: "Free",
-    priceSubtext: "",
-    action: "Get Started",
-    url: "https://github.com/crbnos/carbon",
-    featured: false,
-    features: [
-      "Self-hosted",
-      "ERP, MES, QMS",
-      "Unlimited records",
-      "API and webhooks",
-      "Self-onboarding",
-      "Community support",
-    ],
-  },
   {
     name: "Starter",
     priceHeadline: "$30",
     priceSubtext: "/user/month",
     action: "Start 30-day free trial",
     url: "https://app.carbon.ms",
-    description:
-      "Managed hosting without support, or self-hosted with commercial license.",
+    description: "A managed cloud-hosted version of Carbon",
     featured: false,
     features: [
-      "Managed hosting",
-      "ERP, MES, QMS",
+      "Automatic updates, patches, backups, and maintenance",
+      "Basic ERP, MES, and QMS functionality",
       "Unlimited records",
       "Self-onboarding",
       "Community support",
+      "All advanced features available as paid upgrades",
     ],
   },
   {
     name: "Business",
     description:
-      "Managed hosting with support, or self-hosted with commercial license.",
+      "A managed cloud-hosted version of Carbon that includes support and all advanced features",
     priceHeadline: "$90",
     priceSubtext: "/user/month",
     action: "Start 30-day free trial",
@@ -52,27 +36,28 @@ const plans = [
       "Everything from Starter",
       "Implementation support",
       "Unlimited functional support",
-      "API and webhooks",
+      "API, webhooks, and integrations",
       "AI-powered workflows",
+      "All advanced features available",
     ],
   },
   {
     name: "Enterprise",
     priceHeadline: "Contact us",
     priceSubtext: "",
-    action: "Get a Quote",
+    action: "Contact us",
     url: "/sales",
     description: "A custom solution to meet your needs",
     featured: false,
     features: [
       "Self-hosted or managed",
-      "SSO/SAML",
       "Commercial license",
+      "Includes full set-up, implementation, and migrations",
       "Custom integrations",
       "Custom development",
-      "Support",
+      "SSO/SAML",
+      "Unlimited functional support",
       "Training",
-      "Migrations",
     ],
   },
 ];
@@ -93,13 +78,9 @@ export default function Pricing() {
         <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
           Simple pricing based on your needs
         </h2>
-        <p className="max-w-3xl text-base leading-6 text-muted-foreground mb-8">
-          Host your own instance of Carbon, or have us host it for you. The
-          price is the same.
-        </p>
       </div>
 
-      <div className="mx-auto grid w-full justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="mx-auto grid w-full justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {plans.map((plan) => (
           <div
             key={plan.name}
@@ -159,6 +140,33 @@ export default function Pricing() {
             </div>
           </div>
         ))}
+      </div>
+
+      <div
+        className={
+          "relative flex w-full flex-col gap-2 rounded-lg bg-muted p-9 text-foreground overflow-hidden h-full border justify-center items-center"
+        }
+      >
+        <h2 className="text-3xl font-bold tracking-tight leading-7">
+          Community
+        </h2>
+        <p className="text-sm leading-5 opacity-80">
+          Our open-source ERP, MES, and QMS, available for free
+        </p>
+        <div className="flex flex-col md:flex-row justify-center gap-4 mt-8">
+          <Button variant="default" size="xl" asChild>
+            <a href="https://github.com/crbnos/carbon">
+              Read the Docs
+              <GithubLogo />
+            </a>
+          </Button>
+          <Button variant="outline" size="xl" asChild>
+            <Link to="/sales">
+              <LucidePhone />
+              Talk to Us
+            </Link>
+          </Button>
+        </div>
       </div>
     </section>
   );
