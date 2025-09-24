@@ -78,7 +78,7 @@ export default function Pricing() {
         </h2>
       </div>
 
-      <div className="mx-auto grid w-full justify-center grid-cols-1  lg:grid-cols-3 gap-4">
+      <div className="mx-auto grid w-full justify-center grid-cols-1 lg:grid-cols-3 gap-4">
         {plans.map((plan) => (
           <div
             key={plan.name}
