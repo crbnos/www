@@ -14,12 +14,11 @@ const plans = [
     description: "A managed cloud-hosted version of Carbon",
     featured: false,
     features: [
-      "Automatic updates, patches, backups, and maintenance",
+      "Automatic updates and backups",
       "Basic ERP, MES, and QMS functionality",
       "Unlimited records",
       "Self-onboarding",
       "Community support",
-      "All advanced features available as paid upgrades",
     ],
   },
   {
@@ -51,7 +50,7 @@ const plans = [
     featured: false,
     features: [
       "Self-hosted or managed",
-      "Includes full set-up, implementation, and migrations",
+      "Full setup and migrations",
       "Custom integrations",
       "Custom development",
       "SSO/SAML",
@@ -118,7 +117,7 @@ export default function Pricing() {
                 {plan.features?.map((feature) => (
                   <li
                     key={feature}
-                    className="flex items-center gap-4 text-sm font-normal leading-[110%]"
+                    className="flex items-center gap-4 text-base font-normal leading-[110%]"
                   >
                     <Check className="size-5 shrink-0 p-[3px]" />
                     <span className="flex">{feature}</span>
@@ -149,7 +148,7 @@ export default function Pricing() {
         <h2 className="text-3xl font-bold tracking-tight leading-7">
           Community
         </h2>
-        <p className="text-sm leading-5 opacity-80">
+        <p className="text-base leading-5 opacity-80">
           Our open-source ERP, MES, and QMS, available for free
         </p>
         <div className="flex flex-col md:flex-row justify-center gap-4 mt-8">
