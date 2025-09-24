@@ -51,7 +51,6 @@ const plans = [
     featured: false,
     features: [
       "Self-hosted or managed",
-      "Commercial license",
       "Includes full set-up, implementation, and migrations",
       "Custom integrations",
       "Custom development",
