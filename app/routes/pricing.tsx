@@ -78,7 +78,7 @@ export default function Pricing() {
         </h2>
       </div>
 
-      <div className="mx-auto grid w-full justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="mx-auto grid w-full justify-center grid-cols-1  lg:grid-cols-3 gap-4">
         {plans.map((plan) => (
           <div
             key={plan.name}
@@ -92,7 +92,7 @@ export default function Pricing() {
             <div className="flex-1 flex flex-col gap-8">
               <div className="flex items-center">
                 <div className="ml-4">
-                  <h2 className="text-xl font-bold tracking-tight leading-7">
+                  <h2 className="text-2xl font-bold tracking-tight leading-7">
                     {plan.name}
                   </h2>
                   <p className="h-12 text-sm leading-5 opacity-80">
@@ -102,7 +102,7 @@ export default function Pricing() {
               </div>
 
               <div className="flex items-end justify-start gap-1 pl-4">
-                <p className="text-3xl font-bold tracking-tight leading-7">
+                <p className="text-4xl font-bold tracking-tight leading-7">
                   {plan.priceHeadline}
                 </p>
 
@@ -131,6 +131,7 @@ export default function Pricing() {
               <Button
                 variant={plan.featured ? "secondary" : "default"}
                 className="w-full"
+                size="xl"
                 asChild
               >
                 <Link to={plan.url}>{plan.action}</Link>
@@ -145,7 +146,7 @@ export default function Pricing() {
           "relative flex w-full flex-col gap-2 rounded-lg bg-muted p-9 text-foreground overflow-hidden h-full border justify-center items-center"
         }
       >
-        <h2 className="text-3xl font-bold tracking-tight leading-7">
+        <h2 className="text-4xl font-bold tracking-tight leading-7">
           Community
         </h2>
         <p className="text-base leading-5 opacity-80">
