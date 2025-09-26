@@ -74,7 +74,7 @@ export default function Pricing() {
             Pricing
           </Button>
         </div>
-        <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+        <h2 className="font-display text-balance mx-auto text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl w-full">
           Simple pricing based on your needs
         </h2>
       </div>
@@ -142,16 +142,12 @@ export default function Pricing() {
         ))}
       </div>
 
-      <div
-        className={
-          "relative flex w-full flex-col gap-2 rounded-lg bg-muted p-9 text-foreground overflow-hidden h-full border justify-center items-center"
-        }
-      >
-        <h2 className="text-4xl font-bold tracking-tight leading-7">
-          Free to try
+      <div className="flex flex-col gap-4 bg-muted dark:bg-muted bg-[url('/cta.webp')] dark:bg-none bg-[0_0] bg-no-repeat bg-cover rounded-xl py-24 justify-center items-center px-4 w-full">
+        <h2 className="font-display text-balance mx-auto max-w-2xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl w-full">
+          Get started for free
         </h2>
-        <p className="text-base leading-5 opacity-80">
-          Our open-source ERP, MES, and QMS, available for free
+        <p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter text-lg">
+          View the docs and start developing locally
         </p>
         <div className="flex flex-col md:flex-row justify-center gap-4 mt-8">
           <Button variant="default" size="xl" asChild>
