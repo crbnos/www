@@ -50,6 +50,7 @@ const plans = [
     featured: false,
     features: [
       "Self-hosted or managed",
+      "ITAR Compliant",
       "Full setup and migrations",
       "Custom integrations",
       "Custom development",
@@ -147,7 +148,7 @@ export default function Pricing() {
         }
       >
         <h2 className="text-4xl font-bold tracking-tight leading-7">
-          Community
+          Free to try
         </h2>
         <p className="text-base leading-5 opacity-80">
           Our open-source ERP, MES, and QMS, available for free
