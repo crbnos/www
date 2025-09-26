@@ -50,6 +50,7 @@ const plans = [
     featured: false,
     features: [
       "Self-hosted or managed",
+      "ITAR Compliant",
       "Source-available",
       "Full setup and migrations",
       "Custom integrations",
@@ -148,7 +149,7 @@ export default function Pricing() {
         }
       >
         <h2 className="text-4xl font-bold tracking-tight leading-7">
-          Community
+          Free to try
         </h2>
         <p className="text-base leading-5 opacity-80">
           Carbon is source-available and free to try locally
