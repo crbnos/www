@@ -521,19 +521,9 @@ function Memo() {
         </p>
 
         <p className="leading-[1.8] text-foreground">
-          We open-sourced Carbon not because it's a great business plan, but
-          because that's the system I would have wanted when I was in your
-          shoes.
-        </p>
-
-        <p className="leading-[1.8] text-foreground">
-          I believe open-source has incredible potential because it's not just a
-          product&ndash;it's a community of like-minded people working to build
-          the future of manufacturing in the age of AI and robotics.
-        </p>
-
-        <p className="leading-[1.8] text-foreground">
-          We're glad you're here for it.
+          That's why I think it's so important for you to have access to the
+          source code. It allows you to use Carbon as a foundation to build the
+          perfect system for your business.
         </p>
 
         <DiscordButton />

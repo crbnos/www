@@ -50,6 +50,7 @@ const plans = [
     featured: false,
     features: [
       "Self-hosted or managed",
+      "Source-available",
       "Full setup and migrations",
       "Custom integrations",
       "Custom development",
@@ -150,7 +151,7 @@ export default function Pricing() {
           Community
         </h2>
         <p className="text-base leading-5 opacity-80">
-          Our open-source ERP, MES, and QMS, available for free
+          Carbon is source-available and free to try locally
         </p>
         <div className="flex flex-col md:flex-row justify-center gap-4 mt-8">
           <Button variant="default" size="xl" asChild>

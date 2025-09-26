@@ -42,7 +42,6 @@ export function Footer() {
                 { href: "/brand", text: "Brand Assets" },
                 { href: "/learn", text: "Blog" },
                 { href: "/contact", text: "Contact" },
-                { href: "/oss", text: "OSS Friends" },
                 { href: "/sales", text: "Sales" },
               ].map((link) => (
                 <Link
