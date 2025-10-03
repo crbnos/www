@@ -50,7 +50,8 @@ const plans = [
     featured: false,
     features: [
       "Self-hosted or managed",
-      "ITAR Compliant",
+      "ITAR compliant",
+      "Hardware included",
       "Full setup and migrations",
       "Custom integrations",
       "Custom development",
