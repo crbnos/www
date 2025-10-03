@@ -334,13 +334,12 @@ function CarbonAcademy() {
       <div className="container z-50 ">
         <div className="flex flex-col gap-4">
           <h2 className="font-display text-balance mx-auto max-w-4xl text-center font-medium tracking-tight leading-[115%] text-5xl lg:text-7xl">
-            Free onboarding
+            Carbon Academy
           </h2>
 
           <p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter text-base">
-            Why pay $15K just to get started? We ditched the onboarding fee and
-            built an automated self-paced learning platform to get you and your
-            team up to speed.
+            We've developed a self-paced learning platform to get you and your
+            team up to speed quickly.
           </p>
 
           <div className="flex flex-col md:flex-row justify-center mt-8 gap-4">
