@@ -47,11 +47,6 @@ const customers = [
     url: "https://blackcatlabs.xyz",
   },
   {
-    name: "Harp Engineering",
-    logo: "/logos/harp.png",
-    url: "https://www.headco.net/",
-  },
-  {
     name: "Northwest Production Source",
     logo: "/logos/northwest.png",
     url: "https://nwprosource.com",
@@ -70,9 +65,9 @@ function Hero() {
         <div className="container mx-auto px-4 z-50">
           <div className="flex flex-col justify-start items-center gap-8">
             <DiscordButton />
-            <h2 className="font-display text-foreground text-balance mx-auto  max-w-5xl text-center font-medium tracking-tight leading-[115%] text-[2.3rem] sm:text-5xl lg:text-6xl xl:text-[5.8rem]">
-              The easiest way to run your{" "}
-              <span className="text-secondary">manufacturing business</span>
+            <h2 className="font-display text-foreground text-balance mx-auto  max-w-5xl text-center font-medium tracking-tight leading-[115%] text-[2.7rem] sm:text-7xl lg:text-[5rem] xl:text-[7.2rem]">
+              The open-source{" "}
+              <span className="text-secondary">manufacturing ERP</span>
             </h2>
             <p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-[780px] text-center font-medium tracking-tighter text-base md:text-lg lg:text-xl">
               Carbon is a modern manufacturing system that combines ERP, MES,
