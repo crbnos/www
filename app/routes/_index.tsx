@@ -419,7 +419,7 @@ function Reviews() {
       className="bg-primary text-primary-foreground bg-[url('/reviews.webp')] bg-[0_0] bg-no-repeat bg-cover py-20 dark:bg-gradient-to-br dark:from-secondary dark:to-secondary-foreground"
     >
       <div className="container flex flex-col gap-12 mx-auto px-4">
-        <h2 className="font-display font-semibold text-balance mx-auto max-w-4xl text-center tracking-tight leading-[115%] text-3xl lg:text-5xl">
+        <h2 className="font-display font-medium text-balance mx-auto max-w-4xl text-center tracking-tight leading-[115%] text-3xl lg:text-5xl">
           What our customers say:
         </h2>
         <div className="max-w-5xl mx-auto overflow-hidden p-4">
