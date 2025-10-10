@@ -1,3 +1,4 @@
+import { MeshGradient } from "@paper-design/shaders-react";
 import { Link } from "@remix-run/react";
 import { DotPattern } from "components/magicui/dot-pattern";
 import { Safari } from "components/magicui/safari";
@@ -19,6 +20,7 @@ import { useState } from "react";
 import { Button } from "~/components/ui/button";
 import { DiscordLogo } from "~/components/ui/discord-logo";
 import { GithubLogo } from "~/components/ui/github-logo";
+import { useMode } from "~/hooks/useMode";
 import { cn } from "~/lib/utils";
 
 export default function Route() {
@@ -59,10 +61,26 @@ const customers = [
 ];
 
 function Hero() {
+  const mode = useMode();
+  const meshGradientColors =
+    mode === "light"
+      ? ["#ffffff", "#f7f5ff", "#c9fff8", "#e6f3ff"]
+      : ["#2452F1", "#022474", "#163DB9", "#0B1D99"];
+
   return (
     <section id="hero" className="py-0 relative">
-      <div className="bg-[linear-gradient(to_bottom_right,#f7f5ff_35.67%,#c9fff8_88.95%)] dark:bg-[linear-gradient(to_bottom_right,#0e0338_35.67%,#1b433e_88.95%)]  w-full mx-auto py-20">
-        <div className="container mx-auto px-4 z-50">
+      <div className="bg-[linear-gradient(to_bottom_right,#f7f5ff_35.67%,#c9fff8_88.95%)] dark:bg-[linear-gradient(to_bottom_right,#0e0338_35.67%,#1b433e_88.95%)]  w-full mx-auto py-20 relative">
+        <MeshGradient
+          speed={1}
+          colors={meshGradientColors}
+          distortion={0.8}
+          swirl={0.1}
+          grainMixer={0}
+          grainOverlay={0}
+          className="absolute inset-0 w-full h-full"
+          style={{ height: "100%", width: "100%" }}
+        />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col justify-start items-center gap-8">
             <DiscordButton />
             <h2 className="font-display text-foreground text-balance mx-auto  max-w-5xl text-center font-medium tracking-tight leading-[115%] text-[2.7rem] sm:text-7xl lg:text-[5rem] xl:text-[7.2rem]">
