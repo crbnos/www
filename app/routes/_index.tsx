@@ -49,6 +49,11 @@ const customers = [
     url: "https://blackcatlabs.xyz",
   },
   {
+    name: "Harp Engineering",
+    logo: "/logos/harp.png",
+    url: "https://headco.net",
+  },
+  {
     name: "Northwest Production Source",
     logo: "/logos/northwest.png",
     url: "https://nwprosource.com",
