@@ -5,7 +5,6 @@ import { Safari } from "components/magicui/safari";
 import {
   LucideArrowLeft,
   LucideArrowRight,
-  LucideBookOpen,
   LucideCable,
   LucideCalendarDays,
   LucideCheckCircle,
@@ -29,7 +28,7 @@ export default function Route() {
       <Hero />
       <Features />
       <Grid />
-      <CarbonAcademy />
+      <Learn />
       <Reviews />
       <Memo />
       <CTA />
@@ -137,7 +136,7 @@ function Hero() {
 
 function Features() {
   return (
-    <section id="features" className="mt-[-105px] pb-[140px]">
+    <section id="features" className="pb-[140px] lg:pb-[240px]">
       <div className="flex gap-8 container max-w-[1380px] mx-auto px-4">
         <div className="flex flex-col gap-8 mt-[205px] flex-grow max-w-[1380px] mx-auto pl-8">
           <h3 className="text-muted-foreground uppercase text-sm leading-[140%] tracking-tighter">
@@ -212,7 +211,7 @@ function Features() {
 function Grid() {
   return (
     <section id="grid">
-      <div className="mx-auto bg-muted rounded-xl max-w-[1380px] w-full py-24">
+      <div className="mx-auto bg-muted w-full py-24">
         <div className="container">
           <div className="flex flex-col gap-8">
             <h2 className="font-display text-balance mx-auto max-w-2xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
@@ -226,15 +225,19 @@ function Grid() {
           </div>
           <div className="flex flex-col gap-8 mt-14 mb-12">
             <div className="flex flex-col">
-              <div className="grid lg:grid-cols-2 grid-cols-1 border border-b-0">
+              <div className="grid lg:grid-cols-2 grid-cols-1 border border-b-0 ">
                 <div className="flex flex-col border-r border-border bg-background lg:border-b-0 border-b justify-center manufacturing-bg">
                   <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
                     <div className="flex flex-col gap-4">
-                      <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl flex items-center gap-2">
-                        <LucideWaypoints className="size-6 flex-shrink-0" />{" "}
-                        End-to-End Traceability
-                      </h4>
-                      <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
+                      <div className="flex items-center gap-2">
+                        <div className="not-prose w-fit shadow-md rounded-lg border bg-primary dark:bg-muted text-white p-1.5 dark:text-muted-foreground [&_svg]:size-4">
+                          <LucideWaypoints className="size-4 flex-shrink-0" />
+                        </div>
+                        <h4 className="text-foreground text-balance text-left font-medium tracking-tighter text-base">
+                          End-to-End Traceability
+                        </h4>
+                      </div>
+                      <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-sm">
                         Achieve granular, end-to-end tracking of materials,
                         components, and processes, ensuring compliance,
                         simplifying audits, and enabling rapid root cause
@@ -251,11 +254,15 @@ function Grid() {
                   {/* <div className="flex justify-center items-center mt-10 mb-[70px] pt-10 pb-[22px]"></div> */}
                   <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
                     <div className="flex flex-col gap-4">
-                      <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl flex items-center gap-2">
-                        <LucideCheckCircle className="size-6 flex-shrink-0" />{" "}
-                        Integrated Agents
-                      </h4>
-                      <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
+                      <div className="flex items-center gap-2">
+                        <div className="not-prose w-fit shadow-md rounded-lg border bg-primary dark:bg-muted text-white p-1.5 dark:text-muted-foreground [&_svg]:size-4">
+                          <LucideCheckCircle className="size-4 flex-shrink-0" />
+                        </div>
+                        <h4 className="text-foreground text-balance text-left font-medium tracking-tighter text-base">
+                          Integrated Agents
+                        </h4>
+                      </div>
+                      <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-sm">
                         Our ever-expanding catalog of agents allow you to save
                         time and money by automating repetitive tasks. For
                         example, our purchasing agent can create purchase orders
@@ -273,11 +280,15 @@ function Grid() {
                   {/* <div className="flex justify-center items-center mt-10 mb-[70px] pt-10 pb-[22px]"></div> */}
                   <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
                     <div className="flex flex-col gap-4">
-                      <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl flex items-center gap-2">
-                        <LucideLayoutDashboard className="size-6 flex-shrink-0" />{" "}
-                        Custom Fields
-                      </h4>
-                      <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
+                      <div className="flex items-center gap-2">
+                        <div className="not-prose w-fit shadow-md rounded-lg border bg-primary dark:bg-muted text-white p-1.5 dark:text-muted-foreground [&_svg]:size-4">
+                          <LucideLayoutDashboard className="size-4 flex-shrink-0" />
+                        </div>
+                        <h4 className="text-foreground text-balance text-left font-medium tracking-tighter text-base">
+                          Custom Fields
+                        </h4>
+                      </div>
+                      <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-sm">
                         Add custom fields with a few clicks to any table to
                         track additional information. Then create custom views
                         to track the data you need. Then use the configurator to
@@ -293,11 +304,15 @@ function Grid() {
                   {/* <div className="flex justify-center items-center mt-10 mb-[70px] pt-10 pb-[22px]"></div> */}
                   <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
                     <div className="flex flex-col gap-4">
-                      <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl flex items-center gap-2">
-                        <LucideCalendarDays className="size-6 flex-shrink-0" />{" "}
-                        Simplified Scheduling
-                      </h4>
-                      <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
+                      <div className="flex items-center gap-2">
+                        <div className="not-prose w-fit shadow-md rounded-lg border bg-primary dark:bg-muted text-white p-1.5 dark:text-muted-foreground [&_svg]:size-4">
+                          <LucideCalendarDays className="size-4 flex-shrink-0" />
+                        </div>
+                        <h4 className="text-foreground text-balance text-left font-medium tracking-tighter text-base">
+                          Simplified Scheduling
+                        </h4>
+                      </div>
+                      <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-sm">
                         Optimize your shop floor schedule with flexible sorting
                         capabilities, maximizing throughput, improving on-time
                         delivery, and easily adapting to priority changes.
@@ -312,11 +327,15 @@ function Grid() {
                   {/* <div className="flex justify-center items-center mt-10 mb-[70px] pt-10 pb-[22px]"></div> */}
                   <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
                     <div className="flex flex-col gap-4">
-                      <h4 className="text-foreground text-balance text-left font-semibold tracking-tighter text-2xl flex items-center gap-2">
-                        <LucideCable className="size-6 flex-shrink-0" />{" "}
-                        API-First Architecture
-                      </h4>
-                      <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-base">
+                      <div className="flex items-center gap-2">
+                        <div className="not-prose w-fit shadow-md rounded-lg border bg-primary dark:bg-muted text-white p-1.5 dark:text-muted-foreground [&_svg]:size-4">
+                          <LucideCable className="size-4 flex-shrink-0" />
+                        </div>
+                        <h4 className="text-foreground text-balance text-left font-medium tracking-tighter text-base">
+                          API-First Architecture
+                        </h4>
+                      </div>
+                      <p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-sm">
                         Carbon is built with an "API-First Architecture," which
                         gives you unparalleled flexibility to seamlessly connect
                         Carbon with your other business systems. This allows you
@@ -337,11 +356,11 @@ function Grid() {
   );
 }
 
-function CarbonAcademy() {
+function Learn() {
   return (
     <section
-      id="academy"
-      className="relative flex h-[800px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background"
+      id="learn"
+      className="relative min-h-[800px] flex w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background"
     >
       <DotPattern
         glow
@@ -349,30 +368,72 @@ function CarbonAcademy() {
           "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)] h-full w-full"
         )}
       />
-      <div className="container z-50 ">
-        <div className="flex flex-col gap-4">
-          <h2 className="font-display text-balance mx-auto max-w-4xl text-center font-medium tracking-tight leading-[115%] text-5xl lg:text-7xl">
-            Carbon Academy
+      <div className="container z-50 py-24">
+        <div className="flex flex-col w-full max-w-section mx-auto px-section gap-24">
+          <h2 className="font-display text-balance mx-auto max-w-3xl text-center font-medium tracking-tight leading-[115%] text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+           Modern, minimal, transparent
           </h2>
+          <div className="grid gap-3 container grid-cols-1 lg:grid-cols-3">
+            <div data-card="true" className="block rounded-xl border bg-card p-4 text-card-foreground transition-colors max-lg:col-span-full flex flex-col">
+              <div className="not-prose mb-2 w-fit shadow-md rounded-lg border bg-primary dark:bg-muted p-1.5 text-muted-foreground [&_svg]:size-4">
+                <img src="/icons/cube.svg" alt="Cube" className="size-4" />
+              </div>
+              <h3 className="not-prose mb-1 text-base font-medium">Video Library</h3>
+              <p className="!my-0 text-sm text-muted-foreground flex-grow">
+                Carbon Academy is a free, self-paced learning platform that
+                teaches you how to use Carbon. It's a great way to get started
+                with Carbon and learn how to use it to its full potential.
+              </p>
+              <div className="text-sm text-muted-foreground prose-no-margin empty:hidden">
+                <Button variant="outline" className="mt-4"  asChild>
+                  <a href="https://learn.carbon.ms" target="_blank">
+                    Start Learning
+                  </a>
+                </Button>
+              </div>
+            </div>
 
-          <p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter text-base">
-            We've developed a self-paced learning platform to get you and your
-            team up to speed quickly.
-          </p>
+            <div data-card="true" className="block rounded-xl border bg-card p-4 text-card-foreground transition-colors max-lg:col-span-full flex flex-col">
+              <div className="not-prose mb-2 w-fit shadow-md rounded-lg border bg-primary dark:bg-muted p-1.5 text-muted-foreground [&_svg]:size-4">
+                <img src="/icons/diamond.svg" alt="Diamond" className="size-4" />
+              </div>
+              <h3 className="not-prose mb-1 text-base font-medium">Documentation</h3>
+              <p className="!my-0 text-sm text-muted-foreground flex-grow">
+                Carbon's developer documentation guides you through getting
+                Carbon running locally, and extending it to build your own own
+                custom applications.
+              </p>
+              <div className="text-sm text-muted-foreground prose-no-margin empty:hidden">
+                <Button variant="outline" className="mt-4" onClick={() => alert('Coming soon')}>
+                  {/* <a href="https://docs.carbon.ms" target="_blank"> */}
+                    View Docs
+                  {/* </a> */}
+                </Button>
+              </div>
+            </div>
 
-          <div className="flex flex-col md:flex-row justify-center mt-8 gap-4">
-            <Button variant="secondary" size="xl" asChild>
-              <a href="https://learn.carbon.ms" target="_blank">
-                Start Learning
-                <LucideGraduationCap />
-              </a>
-            </Button>
-            <Button variant="outline" size="xl" asChild>
-              <a href="https://learn.carbon.ms/about" target="_blank">
-                <LucideBookOpen />
-                How it works
-              </a>
-            </Button>
+            <div data-card="true" className="block rounded-xl border bg-card p-4 text-card-foreground transition-colors max-lg:col-span-full flex flex-col">
+              <div className="not-prose mb-2 w-fit shadow-md rounded-lg border bg-primary dark:bg-muted p-1.5 text-muted-foreground [&_svg]:size-4">
+                <img
+                  src="/icons/triangle.svg"
+                  alt="Triangle"
+                  className="size-4"
+                />
+              </div>
+              <h3 className="not-prose mb-1 text-base font-medium">Source Code</h3>
+              <p className="!my-0 text-sm text-muted-foreground flex-grow">
+                Carbon's source code is available on GitHub and is free to use.
+                You can maintain your own public fork or acquire a commercial
+                license to make your code modifications private.
+              </p>
+              <div className="text-sm text-muted-foreground prose-no-margin empty:hidden">
+                <Button variant="outline" className="mt-4" asChild>
+                  <a href="https://github.com/crbnos/carbon" target="_blank">
+                    View Source
+                  </a>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
