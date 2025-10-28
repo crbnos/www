@@ -1,21 +1,24 @@
 import { MeshGradient } from "@paper-design/shaders-react";
 import { Link } from "@remix-run/react";
-import { DotPattern } from "components/magicui/dot-pattern";
-import { Safari } from "components/magicui/safari";
 import {
-  LucideArrowLeft,
-  LucideArrowRight,
-  LucideCable,
-  LucideCalendarDays,
-  LucideCheckCircle,
-  LucideChevronRight,
-  LucideGraduationCap,
-  LucideLayoutDashboard,
-  LucidePhone,
-  LucidePlay,
-  LucideWaypoints,
+  ArrowLeft,
+  ArrowRight,
+  Book,
+  Cable,
+  CalendarDays,
+  CheckCircle,
+  ChevronRight,
+  ExternalLink,
+  GraduationCap,
+  LayoutDashboard,
+  Phone,
+  Play,
+  PlayCircle,
+  Waypoints,
 } from "lucide-react";
 import { useState } from "react";
+import { DotPattern } from "~/components/dot-pattern";
+import { Safari } from "~/components/safari";
 import { Button } from "~/components/ui/button";
 import { DiscordLogo } from "~/components/ui/discord-logo";
 import { GithubLogo } from "~/components/ui/github-logo";
@@ -100,7 +103,7 @@ function Hero() {
               <Button variant="secondary" size="xl" asChild>
                 <a href="https://app.carbon.ms">
                   Start Now
-                  <LucidePlay />
+                  <Play />
                 </a>
               </Button>
               <Button variant="outline" size="xl" asChild>
@@ -117,7 +120,7 @@ function Hero() {
               </p>
             </div>
 
-            <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8 min-h-[145px]">
               {customers.map((customer) => (
                 <a href={customer.url} target="_blank">
                   <img
@@ -151,25 +154,25 @@ function Features() {
           </p>
           <div className="flex flex-col gap-4">
             <div className="flex justify-start items-center gap-2">
-              <LucideCheckCircle className="size-6 text-secondary" />
+              <CheckCircle className="size-6 text-secondary" />
               <p className="text-foreground text-left font-bold tracking-tighter text-lg">
                 Live Job Costing and Simplified Scheduling
               </p>
             </div>
             <div className="flex justify-start items-center gap-2">
-              <LucideCheckCircle className="size-6 text-secondary" />
+              <CheckCircle className="size-6 text-secondary" />
               <p className="text-foreground text-left font-bold tracking-tighter text-lg">
                 Unified Quoting, Purchasing & Production
               </p>
             </div>
             <div className="flex justify-start items-center gap-2">
-              <LucideCheckCircle className="size-6 text-secondary" />
+              <CheckCircle className="size-6 text-secondary" />
               <p className="text-foreground text-left font-bold tracking-tighter text-lg">
                 Job Shop and Assembly Workflows
               </p>
             </div>
             <div className="flex justify-start items-center gap-2">
-              <LucideCheckCircle className="size-6 text-secondary" />
+              <CheckCircle className="size-6 text-secondary" />
               <p className="text-foreground text-left font-bold tracking-tighter text-lg">
                 Multi-location Planning and Inventory
               </p>
@@ -179,13 +182,13 @@ function Features() {
             <Button variant="secondary" size="xl" asChild>
               <a href="https://learn.carbon.ms">
                 Start Learning
-                <LucideGraduationCap />
+                <GraduationCap />
               </a>
             </Button>
 
             <Button variant="outline" size="xl" asChild>
               <Link to="/sales">
-                <LucidePhone />
+                <Phone />
                 Talk to Us
               </Link>
             </Button>
@@ -230,8 +233,8 @@ function Grid() {
                   <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
                     <div className="flex flex-col gap-4">
                       <div className="flex items-center gap-2">
-                        <div className="not-prose w-fit shadow-md rounded-lg border bg-primary dark:bg-muted text-white p-1.5 dark:text-muted-foreground [&_svg]:size-4">
-                          <LucideWaypoints className="size-4 flex-shrink-0" />
+                        <div className="not-prose w-fit shadow-md rounded-lg border bg-primary dark:bg-muted text-white p-1.5 dark:dark:text-muted-foreground text-white">
+                          <Waypoints className="size-4 flex-shrink-0" />
                         </div>
                         <h4 className="text-foreground text-balance text-left font-medium tracking-tighter text-base">
                           End-to-End Traceability
@@ -255,8 +258,8 @@ function Grid() {
                   <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
                     <div className="flex flex-col gap-4">
                       <div className="flex items-center gap-2">
-                        <div className="not-prose w-fit shadow-md rounded-lg border bg-primary dark:bg-muted text-white p-1.5 dark:text-muted-foreground [&_svg]:size-4">
-                          <LucideCheckCircle className="size-4 flex-shrink-0" />
+                        <div className="not-prose w-fit shadow-md rounded-lg border bg-primary dark:bg-muted text-white p-1.5 dark:dark:text-muted-foreground text-white">
+                          <CheckCircle className="size-4 flex-shrink-0" />
                         </div>
                         <h4 className="text-foreground text-balance text-left font-medium tracking-tighter text-base">
                           Integrated Agents
@@ -281,8 +284,8 @@ function Grid() {
                   <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
                     <div className="flex flex-col gap-4">
                       <div className="flex items-center gap-2">
-                        <div className="not-prose w-fit shadow-md rounded-lg border bg-primary dark:bg-muted text-white p-1.5 dark:text-muted-foreground [&_svg]:size-4">
-                          <LucideLayoutDashboard className="size-4 flex-shrink-0" />
+                        <div className="not-prose w-fit shadow-md rounded-lg border bg-primary dark:bg-muted text-white p-1.5 dark:dark:text-muted-foreground text-white">
+                          <LayoutDashboard className="size-4 flex-shrink-0" />
                         </div>
                         <h4 className="text-foreground text-balance text-left font-medium tracking-tighter text-base">
                           Custom Fields
@@ -305,8 +308,8 @@ function Grid() {
                   <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
                     <div className="flex flex-col gap-4">
                       <div className="flex items-center gap-2">
-                        <div className="not-prose w-fit shadow-md rounded-lg border bg-primary dark:bg-muted text-white p-1.5 dark:text-muted-foreground [&_svg]:size-4">
-                          <LucideCalendarDays className="size-4 flex-shrink-0" />
+                        <div className="not-prose w-fit shadow-md rounded-lg border bg-primary dark:bg-muted text-white p-1.5 dark:dark:text-muted-foreground text-white">
+                          <CalendarDays className="size-4 flex-shrink-0" />
                         </div>
                         <h4 className="text-foreground text-balance text-left font-medium tracking-tighter text-base">
                           Simplified Scheduling
@@ -328,8 +331,8 @@ function Grid() {
                   <div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
                     <div className="flex flex-col gap-4">
                       <div className="flex items-center gap-2">
-                        <div className="not-prose w-fit shadow-md rounded-lg border bg-primary dark:bg-muted text-white p-1.5 dark:text-muted-foreground [&_svg]:size-4">
-                          <LucideCable className="size-4 flex-shrink-0" />
+                        <div className="not-prose w-fit shadow-md rounded-lg border bg-primary dark:bg-muted text-white p-1.5 dark:dark:text-muted-foreground text-white">
+                          <Cable className="size-4 flex-shrink-0" />
                         </div>
                         <h4 className="text-foreground text-balance text-left font-medium tracking-tighter text-base">
                           API-First Architecture
@@ -375,8 +378,8 @@ function Learn() {
           </h2>
           <div className="grid gap-3 container grid-cols-1 lg:grid-cols-3">
             <div data-card="true" className="block rounded-xl border bg-card p-4 text-card-foreground transition-colors max-lg:col-span-full flex flex-col">
-              <div className="not-prose mb-2 w-fit shadow-md rounded-lg border bg-primary dark:bg-muted p-1.5 text-muted-foreground [&_svg]:size-4">
-                <img src="/icons/cube.svg" alt="Cube" className="size-4" />
+              <div className="not-prose mb-2 w-fit shadow-md rounded-lg border bg-primary dark:bg-muted p-1.5 dark:text-muted-foreground text-white">
+                <PlayCircle className="size-4" />
               </div>
               <h3 className="not-prose mb-1 text-base font-medium">Video Library</h3>
               <p className="!my-0 text-sm text-muted-foreground flex-grow">
@@ -388,14 +391,15 @@ function Learn() {
                 <Button variant="outline" className="mt-4"  asChild>
                   <a href="https://learn.carbon.ms" target="_blank">
                     Start Learning
+                    <GraduationCap className="size-4" />
                   </a>
                 </Button>
               </div>
             </div>
 
             <div data-card="true" className="block rounded-xl border bg-card p-4 text-card-foreground transition-colors max-lg:col-span-full flex flex-col">
-              <div className="not-prose mb-2 w-fit shadow-md rounded-lg border bg-primary dark:bg-muted p-1.5 text-muted-foreground [&_svg]:size-4">
-                <img src="/icons/diamond.svg" alt="Diamond" className="size-4" />
+              <div className="not-prose mb-2 w-fit shadow-md rounded-lg border bg-primary dark:bg-muted p-1.5 dark:text-muted-foreground text-white">
+                <Book className="size-4" />
               </div>
               <h3 className="not-prose mb-1 text-base font-medium">Documentation</h3>
               <p className="!my-0 text-sm text-muted-foreground flex-grow">
@@ -404,21 +408,18 @@ function Learn() {
                 custom applications.
               </p>
               <div className="text-sm text-muted-foreground prose-no-margin empty:hidden">
-                <Button variant="outline" className="mt-4" onClick={() => alert('Coming soon')}>
-                  {/* <a href="https://docs.carbon.ms" target="_blank"> */}
+                <Button variant="outline" className="mt-4" asChild>
+                  <a href="https://docs.carbon.ms" target="_blank">
                     View Docs
-                  {/* </a> */}
+                    <ExternalLink className="size-4" />
+                  </a>
                 </Button>
               </div>
             </div>
 
             <div data-card="true" className="block rounded-xl border bg-card p-4 text-card-foreground transition-colors max-lg:col-span-full flex flex-col">
-              <div className="not-prose mb-2 w-fit shadow-md rounded-lg border bg-primary dark:bg-muted p-1.5 text-muted-foreground [&_svg]:size-4">
-                <img
-                  src="/icons/triangle.svg"
-                  alt="Triangle"
-                  className="size-4"
-                />
+              <div className="not-prose mb-2 w-fit shadow-md rounded-lg border bg-primary dark:bg-muted p-1.5 dark:text-muted-foreground text-white">
+                <GithubLogo className="size-4" />
               </div>
               <h3 className="not-prose mb-1 text-base font-medium">Source Code</h3>
               <p className="!my-0 text-sm text-muted-foreground flex-grow">
@@ -430,6 +431,7 @@ function Learn() {
                 <Button variant="outline" className="mt-4" asChild>
                   <a href="https://github.com/crbnos/carbon" target="_blank">
                     View Source
+                    <GithubLogo className="size-4" />
                   </a>
                 </Button>
               </div>
@@ -494,7 +496,7 @@ function Reviews() {
               onClick={onPrev}
               className="hidden lg:flex items-center justify-center bg-background/90 hover:bg-background text-foreground text-3xl font-bold size-12 rounded-xl px-3"
             >
-              <LucideArrowLeft />
+              <ArrowLeft />
             </button>
             <div className="flex flex-grow dark:bg-background/90 bg-background text-foreground rounded-xl w-full h-full min-h-[420px]">
               <div className="flex flex-col flex-grow gap-12 justify-between h-full items-center p-12 w-full">
@@ -524,7 +526,7 @@ function Reviews() {
               onClick={onNext}
               className="hidden lg:flex items-center justify-center bg-background/90 hover:bg-background text-foreground text-3xl font-bold size-12 rounded-xl px-3"
             >
-              <LucideArrowRight />
+              <ArrowRight />
             </button>
           </div>
         </div>
@@ -534,13 +536,13 @@ function Reviews() {
               onClick={onPrev}
               className="flex items-center justify-center bg-background/90 hover:bg-background text-foreground text-3xl font-bold size-12 rounded-xl px-3"
             >
-              <LucideArrowLeft />
+              <ArrowLeft />
             </button>
             <button
               onClick={onNext}
               className="flex items-center justify-center bg-background/90 hover:bg-background text-foreground text-3xl font-bold size-12 rounded-xl px-3"
             >
-              <LucideArrowRight />
+              <ArrowRight />
             </button>
           </div>
           {/* <div className="hidden lg:flex w-full items-center justify-center">
@@ -656,12 +658,12 @@ function CTA() {
             <Button variant="default" size="xl" asChild>
               <a href="https://app.carbon.ms">
                 Start Now
-                <LucidePlay />
+                <Play />
               </a>
             </Button>
             <Button variant="outline" size="xl" asChild>
               <Link to="/sales">
-                <LucidePhone />
+                <Phone />
                 Talk to Us
               </Link>
             </Button>
@@ -679,7 +681,7 @@ function DiscordButton() {
         <a href="https://discord.gg/yGUJWhNqzy" target="_blank">
           <DiscordLogo className="text-[#5865f2]" />
           Join our Discord community{" "}
-          <LucideChevronRight className="text-muted-foreground size-3" />
+          <ChevronRight className="text-muted-foreground size-3" />
         </a>
       </Button>
     </div>

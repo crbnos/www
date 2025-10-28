@@ -18,7 +18,7 @@ import type {
 } from "@vercel/remix";
 import { ReactNode, useState } from "react";
 
-import { Moon, Play, Sun } from "lucide-react";
+import { BookOpen, Moon, Play, Sun } from "lucide-react";
 import Tailwind from "~/styles/tailwind.css?url";
 import { Footer } from "./components/footer";
 import { Button } from "./components/ui/button";
@@ -223,6 +223,20 @@ function Document({
                     <NavigationMenuTrigger>Developers</NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <div className="flex flex-col p-3 w-[325px]">
+                        <NavigationMenuLink asChild>
+                          <a
+                            href="https://docs.carbon.ms"
+                            className="flex items-center gap-3 p-3 hover:bg-accent rounded-md"
+                          >
+                            <BookOpen className="size-12 bg-primary dark:bg-secondary text-primary-foreground dark:text-secondary-foreground rounded-lg p-2" />
+                            <div className="flex flex-col gap-0">
+                              <span>Documentation</span>
+                              <span className="text-xs text-muted-foreground">
+                                Developer guides and API reference
+                              </span>
+                            </div>
+                          </a>
+                        </NavigationMenuLink>
                         <NavigationMenuLink asChild>
                           <a
                             href="https://github.com/crbnos/carbon"

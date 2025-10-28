@@ -1,5 +1,5 @@
 import { Link } from "@remix-run/react";
-import { Check, LucideHandCoins, LucidePhone } from "lucide-react";
+import { BookOpen, Check, LucideHandCoins } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import { GithubLogo } from "~/components/ui/github-logo";
 import { cn } from "~/lib/utils";
@@ -152,16 +152,16 @@ export default function Pricing() {
         </p>
         <div className="flex flex-col md:flex-row justify-center gap-4 mt-8">
           <Button variant="default" size="xl" asChild>
-            <a href="https://github.com/crbnos/carbon">
+            <a href="https://docs.carbon.ms">
               Read the Docs
-              <GithubLogo />
+              <BookOpen />
             </a>
           </Button>
           <Button variant="outline" size="xl" asChild>
-            <Link to="/sales">
-              <LucidePhone />
-              Talk to Us
-            </Link>
+            <a href="https://github.com/crbnos/carbon">
+            <GithubLogo />
+              Star on GitHub
+            </a>
           </Button>
         </div>
       </div>
