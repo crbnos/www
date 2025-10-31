@@ -65,6 +65,11 @@ const customers = [
     logo: "/logos/allinol.png",
     url: "https://allinoltec.com",
   },
+  {
+    name: "M3 Aerospace",
+    logo: "/logos/m3.png",
+    url: "https://m3-aerospace.com/",
+  },
 ];
 
 function Hero() {
