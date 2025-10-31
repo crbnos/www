@@ -96,7 +96,7 @@ function Hero() {
             </h2>
             <p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-[780px] text-center font-medium tracking-tighter text-base md:text-lg lg:text-xl">
               Carbon is a modern manufacturing system that combines ERP, MES,
-              and QMS into a single, unified, API-first system that's perfect
+              and Quality Management into a single, unified, API-first system that's perfect
               for complex manufacturing.
             </p>
             <div className="flex flex-col md:flex-row gap-2">
