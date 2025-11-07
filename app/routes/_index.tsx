@@ -182,6 +182,10 @@ function Features() {
                 Multi-location Planning and Inventory
               </p>
             </div>
+            <div className="flex flex-row gap-4">
+              <img src="/logos/itar.svg" className="h-20 dark:invert" />
+              <img src="/logos/gov-cloud.png" className="h-20 dark:invert" />
+            </div>
           </div>
           <div className="flex flex-col md:flex-row gap-4">
             <Button variant="secondary" size="xl" asChild>
