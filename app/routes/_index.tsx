@@ -101,8 +101,8 @@ function Hero() {
             </h2>
             <p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-[780px] text-center font-medium tracking-tighter text-base md:text-lg lg:text-xl">
               Carbon is a modern manufacturing system that combines ERP, MES,
-              and Quality Management into a single, unified, API-first system that's perfect
-              for complex manufacturing.
+              and Quality Management into a single, unified, API-first system
+              that's perfect for complex manufacturing.
             </p>
             <div className="flex flex-col md:flex-row gap-2">
               <Button variant="secondary" size="xl" asChild>
@@ -182,9 +182,11 @@ function Features() {
                 Multi-location Planning and Inventory
               </p>
             </div>
-            <div className="flex flex-row gap-4">
-              <img src="/logos/itar.svg" className="h-20 dark:invert" />
-              <img src="/logos/gov-cloud.png" className="h-20 dark:invert" />
+            <div className="flex justify-start items-center gap-2">
+              <CheckCircle className="size-6 text-secondary" />
+              <p className="text-foreground text-left font-bold tracking-tighter text-lg">
+                Govcloud-hosted Version Available
+              </p>
             </div>
           </div>
           <div className="flex flex-col md:flex-row gap-4">
@@ -201,6 +203,9 @@ function Features() {
                 Talk to Us
               </Link>
             </Button>
+          </div>
+          <div className="flex flex-row gap-4">
+            <img src="/logos/itar.svg" className="h-20 dark:invert" />
           </div>
         </div>
         <div className="hidden lg:flex mt-[225px] pr-8 hover:scale-110 transition-all duration-300">
@@ -383,21 +388,26 @@ function Learn() {
       <div className="container z-50 py-24">
         <div className="flex flex-col w-full max-w-section mx-auto px-section gap-24">
           <h2 className="font-display text-balance mx-auto max-w-3xl text-center font-medium tracking-tight leading-[115%] text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
-           Modern, minimal, transparent
+            Modern, minimal, transparent
           </h2>
           <div className="grid gap-3 container grid-cols-1 lg:grid-cols-3">
-            <div data-card="true" className="block rounded-xl border bg-card p-4 text-card-foreground transition-colors max-lg:col-span-full flex flex-col">
+            <div
+              data-card="true"
+              className="block rounded-xl border bg-card p-4 text-card-foreground transition-colors max-lg:col-span-full flex flex-col"
+            >
               <div className="not-prose mb-2 w-fit shadow-md rounded-lg border bg-primary dark:bg-muted p-1.5 dark:text-muted-foreground text-white">
                 <PlayCircle className="size-4" />
               </div>
-              <h3 className="not-prose mb-1 text-base font-medium">Video Library</h3>
+              <h3 className="not-prose mb-1 text-base font-medium">
+                Video Library
+              </h3>
               <p className="!my-0 text-sm text-muted-foreground flex-grow">
                 Carbon Academy is a free, self-paced learning platform that
                 teaches you how to use Carbon. It's a great way to get started
                 with Carbon and learn how to use it to its full potential.
               </p>
               <div className="text-sm text-muted-foreground prose-no-margin empty:hidden">
-                <Button variant="outline" className="mt-4"  asChild>
+                <Button variant="outline" className="mt-4" asChild>
                   <a href="https://learn.carbon.ms" target="_blank">
                     Start Learning
                     <GraduationCap className="size-4" />
@@ -406,11 +416,16 @@ function Learn() {
               </div>
             </div>
 
-            <div data-card="true" className="block rounded-xl border bg-card p-4 text-card-foreground transition-colors max-lg:col-span-full flex flex-col">
+            <div
+              data-card="true"
+              className="block rounded-xl border bg-card p-4 text-card-foreground transition-colors max-lg:col-span-full flex flex-col"
+            >
               <div className="not-prose mb-2 w-fit shadow-md rounded-lg border bg-primary dark:bg-muted p-1.5 dark:text-muted-foreground text-white">
                 <Book className="size-4" />
               </div>
-              <h3 className="not-prose mb-1 text-base font-medium">Documentation</h3>
+              <h3 className="not-prose mb-1 text-base font-medium">
+                Documentation
+              </h3>
               <p className="!my-0 text-sm text-muted-foreground flex-grow">
                 Carbon's developer documentation guides you through getting
                 Carbon running locally, and extending it to build your own own
@@ -426,11 +441,16 @@ function Learn() {
               </div>
             </div>
 
-            <div data-card="true" className="block rounded-xl border bg-card p-4 text-card-foreground transition-colors max-lg:col-span-full flex flex-col">
+            <div
+              data-card="true"
+              className="block rounded-xl border bg-card p-4 text-card-foreground transition-colors max-lg:col-span-full flex flex-col"
+            >
               <div className="not-prose mb-2 w-fit shadow-md rounded-lg border bg-primary dark:bg-muted p-1.5 dark:text-muted-foreground text-white">
                 <GithubLogo className="size-4" />
               </div>
-              <h3 className="not-prose mb-1 text-base font-medium">Source Code</h3>
+              <h3 className="not-prose mb-1 text-base font-medium">
+                Source Code
+              </h3>
               <p className="!my-0 text-sm text-muted-foreground flex-grow">
                 Carbon's source code is available on GitHub and is free to use.
                 You can maintain your own public fork or acquire a commercial

@@ -7,7 +7,7 @@ export function Footer() {
       <hr className="m-0 h-px w-full border-none bg-gradient-to-r from-background via-zinc-200 dark:via-zinc-800 to-background " />
       <div className="flex w-full justify-center py-12 md:py-16 lg:py-20 2xl:py-24 dark:border-transparent">
         <div className="mx-auto w-full container flex-col px-4 md:px-6 lg:px-8 grid grid-cols-1 gap-12 sm:grid-cols-5 sm:gap-6">
-          <div className="flex flex-col gap-6 sm:col-span-2">
+          <div className="flex flex-col gap-6 sm:col-span-1">
             <Link
               to="/"
               className="cursor-pointer flex flex-row items-end gap-2 flex-shrink-0 font-display"
@@ -105,6 +105,9 @@ export function Footer() {
                 ))}
               </div>
             </div>
+          </div>
+          <div className="flex col-span-1">
+            <img src="/logos/itar.svg" className="h-20 dark:invert" />
           </div>
         </div>
       </div>
