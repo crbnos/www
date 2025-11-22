@@ -77,7 +77,7 @@ function Hero() {
   const meshGradientColors =
     mode === "light"
       ? ["#c9fff8", "#f7f5ff", "#ffffff", "#e6f3ff"]
-      : ["#2D2D2D", "#0F0F0F", "#1E1E1E", "#121212"];
+      : ["#1A1A1A", "#000000", "#0D0D0D", "#050505"];
 
   return (
     <section id="hero" className="py-0 relative">
