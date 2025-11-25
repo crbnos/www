@@ -81,7 +81,7 @@ function Hero() {
 
   return (
     <section id="hero" className="py-0 relative">
-      <div className="bg-[linear-gradient(to_bottom_right,#f7f5ff_35.67%,#c9fff8_88.95%)] dark:bg-[linear-gradient(to_bottom_right,#121212.67%,#2d2d2d.95%)]  w-full mx-auto py-20 relative">
+      <div className="bg-[linear-gradient(to_bottom_right,#f7f5ff_35.67%,#c9fff8_88.95%)] dark:bg-background  w-full mx-auto py-20 relative">
         <MeshGradient
           speed={1}
           colors={meshGradientColors}
