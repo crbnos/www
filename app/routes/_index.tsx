@@ -81,9 +81,9 @@ const customers = [
     url: "https://www.threeriversprecision.com/",
   },
   {
-    name: "Fiore Home",
-    logo: "/logos/fiore-home.png",
-    url: "https://shopfiorehome.com/",
+    name: "Fiore",
+    logo: "/logos/fiore.png",
+    url: "https://www.facebook.com/fioreliving",
   },
 ];
 
