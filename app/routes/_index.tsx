@@ -70,6 +70,21 @@ const customers = [
     logo: "/logos/m3.png",
     url: "https://m3-aerospace.com/",
   },
+  {
+    name: "Saeki",
+    logo: "/logos/saeki.svg",
+    url: "https://saeki.ch/",
+  },
+  {
+    name: "Three Rivers Precision",
+    logo: "/logos/trp.png",
+    url: "https://www.threeriversprecision.com/",
+  },
+  {
+    name: "Fiore Home",
+    logo: "/logos/fiore-home.png",
+    url: "https://shopfiorehome.com/",
+  },
 ];
 
 function Hero() {
