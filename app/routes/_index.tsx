@@ -71,11 +71,6 @@ const customers = [
 		url: "https://m3-aerospace.com/",
 	},
 	{
-		name: "Saeki",
-		logo: "/logos/saeki.svg",
-		url: "https://saeki.ch/",
-	},
-	{
 		name: "Three Rivers Precision",
 		logo: "/logos/trp.png",
 		url: "https://www.threeriversprecision.com/",
