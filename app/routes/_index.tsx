@@ -61,14 +61,14 @@ const customers = [
 		url: "https://nwprosource.com",
 	},
 	{
-		name: "Allinol Technologies",
-		logo: "/logos/allinol.png",
-		url: "https://allinoltec.com",
-	},
-	{
 		name: "M3 Aerospace",
 		logo: "/logos/m3.png",
 		url: "https://m3-aerospace.com/",
+	},
+	{
+		name: "Allinol Technologies",
+		logo: "/logos/allinol.png",
+		url: "https://allinoltec.com",
 	},
 	{
 		name: "Three Rivers Precision",
