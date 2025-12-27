@@ -70,6 +70,16 @@ const customers = [
 		logo: "/logos/m3.png",
 		url: "https://m3-aerospace.com/",
 	},
+	{
+		name: "Saeki",
+		logo: "/logos/saeki.svg",
+		url: "https://saeki.ch/",
+	},
+	{
+		name: "Three Rivers Precision",
+		logo: "/logos/trp.png",
+		url: "https://www.threeriversprecision.com/",
+	},
 ];
 
 function Hero() {
@@ -131,8 +141,9 @@ function Hero() {
 
 						<div className="flex flex-col md:flex-row items-center justify-center gap-8 min-h-[145px]">
 							{customers.map((customer) => (
-								<a href={customer.url} target="_blank">
+								<a key={customer.name} href={customer.url} target="_blank">
 									<img
+										alt={customer.name}
 										src={customer.logo}
 										className="w-28 h-auto dark:invert"
 									/>
@@ -209,7 +220,11 @@ function Features() {
 						</Button>
 					</div>
 					<div className="flex flex-row gap-4">
-						<img src="/logos/itar.svg" className="h-20 dark:invert" />
+						<img
+							alt="ITAR"
+							src="/logos/itar.svg"
+							className="h-20 dark:invert"
+						/>
 					</div>
 				</div>
 				<div className="hidden lg:flex mt-[225px] pr-8 hover:scale-110 transition-all duration-300">
@@ -539,6 +554,7 @@ function Reviews() {
 					<div className="flex flex-row items-center justify-center gap-4">
 						<button
 							onClick={onPrev}
+							type="button"
 							className="hidden lg:flex items-center justify-center bg-background/90 hover:bg-background text-foreground text-3xl font-bold size-12 rounded-xl px-3"
 						>
 							<ArrowLeft />
@@ -569,6 +585,7 @@ function Reviews() {
 						</div>
 						<button
 							onClick={onNext}
+							type="button"
 							className="hidden lg:flex items-center justify-center bg-background/90 hover:bg-background text-foreground text-3xl font-bold size-12 rounded-xl px-3"
 						>
 							<ArrowRight />
@@ -579,12 +596,14 @@ function Reviews() {
 					<div className="w-full flex justify-center items-center gap-8 lg:hidden">
 						<button
 							onClick={onPrev}
+							type="button"
 							className="flex items-center justify-center bg-background/90 hover:bg-background text-foreground text-3xl font-bold size-12 rounded-xl px-3"
 						>
 							<ArrowLeft />
 						</button>
 						<button
 							onClick={onNext}
+							type="button"
 							className="flex items-center justify-center bg-background/90 hover:bg-background text-foreground text-3xl font-bold size-12 rounded-xl px-3"
 						>
 							<ArrowRight />
