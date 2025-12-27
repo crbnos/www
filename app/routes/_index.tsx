@@ -66,14 +66,19 @@ const customers = [
 		url: "https://m3-aerospace.com/",
 	},
 	{
+		name: "Three Rivers Precision",
+		logo: "/logos/trp.png",
+		url: "https://www.threeriversprecision.com/",
+	},
+	{
 		name: "Allinol Technologies",
 		logo: "/logos/allinol.png",
 		url: "https://allinoltec.com",
 	},
 	{
-		name: "Three Rivers Precision",
-		logo: "/logos/trp.png",
-		url: "https://www.threeriversprecision.com/",
+		name: "Saeki",
+		logo: "/logos/saeki.svg",
+		url: "https://saeki.ch/",
 	},
 ];
 
