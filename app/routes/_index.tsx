@@ -698,7 +698,7 @@ function Memo() {
 						<div className="flex flex-col">
 							<p className="dark:text-tertiary text-foreground">Brad Barbin</p>
 							<p className="dark:text-tertiary text-muted-foreground text-sm">
-								Co-founder &amp; CEO
+								Co-founder
 							</p>
 						</div>
 					</a>
