@@ -80,6 +80,11 @@ const customers = [
 		logo: "/logos/saeki.svg",
 		url: "https://saeki.ch/",
 	},
+   {
+    name: "Award LTD",
+    logo: "/logos/award-ltd.png",
+    url: "https://award-ltd.com",
+  },
 ];
 
 function Hero() {
