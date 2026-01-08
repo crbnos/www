@@ -67,7 +67,7 @@ const customers = [
   },
   {
     name: "Award LTD",
-    logo: "/logos/award-ltd.svg",
+    logo: "/logos/award-ltd.png",
     url: "https://award-ltd.com",
   },
 ];
