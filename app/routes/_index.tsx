@@ -65,6 +65,11 @@ const customers = [
     logo: "/logos/allinol.png",
     url: "https://allinoltec.com",
   },
+  {
+    name: "Elite SXS",
+    logo: "/logos/elite-sxs.png",
+    url: "https://elitesxsengineering.com/",
+  },
 ];
 
 function Hero() {
