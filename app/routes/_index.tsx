@@ -70,6 +70,11 @@ const customers = [
 		logo: "/logos/trp.png",
 		url: "https://www.threeriversprecision.com/",
 	},
+  {
+    name: "Elite SXS",
+    logo: "/logos/elite-sxs.png",
+    url: "https://elitesxsengineering.com/",
+  },
 	{
 		name: "Allinol Technologies",
 		logo: "/logos/allinol.png",
