@@ -7,7 +7,7 @@ import { cn } from "~/lib/utils";
 const plans = [
   {
     name: "Starter",
-    priceHeadline: "$30",
+    priceHeadline: "$35",
     priceSubtext: "/user/month",
     action: "Start 30-day free trial",
     url: "https://app.carbon.ms",
@@ -159,7 +159,7 @@ export default function Pricing() {
           </Button>
           <Button variant="outline" size="xl" asChild>
             <a href="https://github.com/crbnos/carbon">
-            <GithubLogo />
+              <GithubLogo />
               Star on GitHub
             </a>
           </Button>
