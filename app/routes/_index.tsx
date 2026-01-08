@@ -65,6 +65,11 @@ const customers = [
     logo: "/logos/allinol.png",
     url: "https://allinoltec.com",
   },
+  {
+    name: "Award LTD",
+    logo: "/logos/award-ltd.svg",
+    url: "https://award-ltd.com",
+  },
 ];
 
 function Hero() {
