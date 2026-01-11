@@ -253,7 +253,7 @@ function Document({
                         </NavigationMenuLink>
                         <NavigationMenuLink asChild>
                           <a
-                            href="https://discord.gg/yGUJWhNqzy"
+                            href="https://discord.gg/gxckQyanG"
                             className="flex items-center gap-3 p-3 hover:bg-accent rounded-md"
                           >
                             <DiscordLogo className="size-12 bg-[#5865F2] text-white rounded-lg p-2" />
