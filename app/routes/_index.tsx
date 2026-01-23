@@ -146,7 +146,7 @@ function Hero() {
 						<div className="flex flex-col gap-0 max-w-4xl mx-auto mt-8">
 							<div className="flex flex-col gap-4 max-w-4xl mx-auto ">
 								<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-3xl text-center font-medium tracking-tighter text-base">
-									Join 30+ manufacturers powered by Carbon
+									Join 30+ modern manufacturers powered by Carbon
 								</p>
 							</div>
 
