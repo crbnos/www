@@ -50,41 +50,41 @@ const customers = [
 		logo: "/logos/black-cat-labs.png",
 		url: "https://blackcatlabs.xyz",
 	},
-	{
-		name: "Harp Engineering",
-		logo: "/logos/harp.png",
-		url: "https://headco.net",
-	},
-	{
-		name: "Northwest Production Source",
-		logo: "/logos/northwest.png",
-		url: "https://nwprosource.com",
-	},
+	// {
+	// 	name: "Harp Engineering",
+	// 	logo: "/logos/harp.png",
+	// 	url: "https://headco.net",
+	// },
+	// {
+	// 	name: "Northwest Production Source",
+	// 	logo: "/logos/northwest.png",
+	// 	url: "https://nwprosource.com",
+	// },
 	{
 		name: "M3 Aerospace",
 		logo: "/logos/m3.png",
 		url: "https://m3-aerospace.com/",
 	},
-	{
-		name: "Three Rivers Precision",
-		logo: "/logos/trp.png",
-		url: "https://www.threeriversprecision.com/",
-	},
-  {
-    name: "Elite SXS",
-    logo: "/logos/elite-sxs.png",
-    url: "https://elitesxsengineering.com/",
-  },
+	// {
+	// 	name: "Three Rivers Precision",
+	// 	logo: "/logos/trp.png",
+	// 	url: "https://www.threeriversprecision.com/",
+	// },
+	// {
+	//   name: "Elite SXS",
+	//   logo: "/logos/elite-sxs.png",
+	//   url: "https://elitesxsengineering.com/",
+	// },
 	{
 		name: "Allinol Technologies",
 		logo: "/logos/allinol.png",
 		url: "https://allinoltec.com",
 	},
-	{
-		name: "Award LTD",
-		logo: "/logos/award-ltd.png",
-		url: "#",
-  	},
+	// {
+	// 	name: "Award LTD",
+	// 	logo: "/logos/award-ltd.png",
+	// 	url: "#",
+	// 	},
 	{
 		name: "Saeki",
 		logo: "/logos/saeki.svg",
@@ -143,22 +143,24 @@ function Hero() {
 							</Button>
 						</div>
 
-						<div className="flex flex-col gap-4 max-w-4xl mx-auto mt-8">
-							<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-3xl text-center font-medium tracking-tighter text-base">
-								Trusted by builders worldwide
-							</p>
-						</div>
+						<div className="flex flex-col gap-0 max-w-4xl mx-auto mt-8">
+							<div className="flex flex-col gap-4 max-w-4xl mx-auto ">
+								<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-3xl text-center font-medium tracking-tighter text-base">
+									Trusted by 30+ builders worldwide
+								</p>
+							</div>
 
-						<div className="flex flex-col md:flex-row items-center justify-center gap-8 min-h-[145px]">
-							{customers.map((customer) => (
-								<a key={customer.name} href={customer.url} target="_blank">
-									<img
-										alt={customer.name}
-										src={customer.logo}
-										className="w-28 h-auto dark:invert"
-									/>
-								</a>
-							))}
+							<div className="flex flex-col md:flex-row items-center justify-center gap-8 min-h-[125px]">
+								{customers.map((customer) => (
+									<a key={customer.name} href={customer.url} target="_blank">
+										<img
+											alt={customer.name}
+											src={customer.logo}
+											className="w-28 h-auto dark:invert"
+										/>
+									</a>
+								))}
+							</div>
 						</div>
 					</div>
 				</div>
