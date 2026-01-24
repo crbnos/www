@@ -97,11 +97,11 @@ function Hero() {
 	const meshGradientColors =
 		mode === "light"
 			? ["#c9fff8", "#f7f5ff", "#ffffff", "#e6f3ff"]
-			: ["#1A1A1A", "#000000", "#0D0D0D", "#050505"];
+			: ["#023225", "#000000", "#0D0D0D", "#050505"];
 
 	return (
 		<section id="hero" className="py-0 relative">
-			<div className="bg-[linear-gradient(to_bottom_right,#f7f5ff_35.67%,#c9fff8_88.95%)] dark:bg-[linear-gradient(to_bottom_right,#0D0D0D_35.67%,#050505_88.95%)]  w-full mx-auto py-20 relative">
+			<div className="bg-[linear-gradient(to_bottom_right,#f7f5ff_35.67%,#c9fff8_88.95%)] dark:bg-[linear-gradient(to_bottom_right,#0D0D0D_35.67%,#050505_88.95%)] min-h-[calc(100dvh-var(--header-height))] w-full mx-auto py-20 relative">
 				<MeshGradient
 					speed={1}
 					colors={meshGradientColors}
