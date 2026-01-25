@@ -120,9 +120,9 @@ function Hero() {
 							<span className="text-secondary">manufacturing ERP</span>
 						</h2>
 						<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-[780px] text-center font-medium tracking-tighter text-base md:text-lg lg:text-xl">
-							Carbon is a modern manufacturing system that combines ERP, MES,
-							and Quality Management into a single, unified, API-first system
-							that's perfect for complex manufacturing.
+							Carbon is a manufacturing system of record that combines ERP, MES,
+							and QMS into a single, unified, API-first system that's perfect
+							for complex manufacturing.
 						</p>
 						<div className="flex flex-col md:flex-row gap-2">
 							<Button variant="secondary" size="xl" asChild>
@@ -143,11 +143,10 @@ function Hero() {
 							</Button>
 						</div>
 
-						<div className="flex flex-col gap-0 max-w-4xl mx-auto mt-8">
+						<div className="flex flex-col gap-4 max-w-4xl mx-auto mt-8">
 							<div className="flex flex-col gap-4 max-w-4xl mx-auto ">
 								<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-3xl text-center font-medium tracking-tighter text-base">
-									Join a growing community of modern manufacturers powered by
-									Carbon
+									Modern manufacturers build their tech stack on Carbon
 								</p>
 							</div>
 
@@ -179,40 +178,40 @@ function Features() {
 						Features
 					</h3>
 					<h4 className="font-display text-foreground text-balance text-left font-medium tracking-tight leading-[115%] text-4xl lg:text-5xl xl:text-6xl -mt-4">
-						Simplify complex manufacturing
+						Build on a modern foundation
 					</h4>
 					<p className="text-muted-foreground dark:text-foreground text-balance text-left font-medium tracking-tighter text-lg">
-						Escape legacy software with a flexible, AI-powered platform designed
-						for the speed and agility of today's manufacturing challenges.
+						Carbon allows you to build your manufacturing tech stack on a open
+						foundation of ERP, MES, and QMS.
 					</p>
 					<div className="flex flex-col gap-4">
 						<div className="flex justify-start items-center gap-2">
 							<CheckCircle className="size-6 text-secondary" />
-							<p className="text-foreground text-left font-bold tracking-tighter text-lg">
-								Live Job Costing and Simplified Scheduling
+							<p className="text-foreground text-left font-medium tracking-tighter text-lg">
+								Built on the best of open-source software
 							</p>
 						</div>
 						<div className="flex justify-start items-center gap-2">
 							<CheckCircle className="size-6 text-secondary" />
-							<p className="text-foreground text-left font-bold tracking-tighter text-lg">
-								Unified Quoting, Purchasing & Production
+							<p className="text-foreground text-left font-medium tracking-tighter text-lg">
+								Unified Quality, Purchasing & Production
 							</p>
 						</div>
 						<div className="flex justify-start items-center gap-2">
 							<CheckCircle className="size-6 text-secondary" />
-							<p className="text-foreground text-left font-bold tracking-tighter text-lg">
-								Job Shop and Assembly Workflows
+							<p className="text-foreground text-left font-medium tracking-tighter text-lg">
+								Assembly and make-to-order workflows
 							</p>
 						</div>
 						<div className="flex justify-start items-center gap-2">
 							<CheckCircle className="size-6 text-secondary" />
-							<p className="text-foreground text-left font-bold tracking-tighter text-lg">
+							<p className="text-foreground text-left font-medium tracking-tighter text-lg">
 								Multi-location Planning and Inventory
 							</p>
 						</div>
 						<div className="flex justify-start items-center gap-2">
 							<CheckCircle className="size-6 text-secondary" />
-							<p className="text-foreground text-left font-bold tracking-tighter text-lg">
+							<p className="text-foreground text-left font-medium tracking-tighter text-lg">
 								Govcloud-hosted Version Available
 							</p>
 						</div>
