@@ -13,3 +13,5 @@ api/_assets*
 
 # Generated files
 app/lib/static-blog-data.ts
+
+opencode.json
