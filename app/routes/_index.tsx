@@ -116,7 +116,7 @@ function Hero() {
 					<div className="flex flex-col justify-start items-center gap-8">
 						<DiscordButton />
 						<h2 className="font-display text-foreground text-balance mx-auto  max-w-5xl text-center font-medium tracking-tight leading-[115%] text-[2.4rem] sm:text-6xl lg:text-[5rem] xl:text-[7.2rem]">
-							The open source{" "}
+							The open sauce{" "}
 							<span className="text-secondary">manufacturing ERP</span>
 						</h2>
 						<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-[780px] text-center font-medium tracking-tighter text-base md:text-lg lg:text-xl">
