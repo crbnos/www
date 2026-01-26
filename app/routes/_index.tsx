@@ -333,14 +333,14 @@ function Grid() {
 													<LayoutDashboard className="size-4 flex-shrink-0" />
 												</div>
 												<h4 className="text-foreground text-balance text-left font-medium tracking-tighter text-base">
-													Custom Fields
+													Workflow Engine
 												</h4>
 											</div>
 											<p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-sm">
-												Add custom fields with a few clicks to any table to
-												track additional information. Then create custom views
-												to track the data you need. Then use the configurator to
-												generate Bill of Materials.
+												Build custom workflows triggered by events across your
+												connected systems. Our orchestration layer coordinates
+												actions between ERPs, CRMs, and other tools. Automate
+												complex business processes without writing code.
 											</p>
 										</div>
 										{/* <div>
