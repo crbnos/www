@@ -129,7 +129,7 @@ function Hero() {
 						<div className="flex flex-col md:flex-row gap-2">
 							<Button variant="secondary" size="xl" asChild>
 								<a href="https://app.carbon.ms">
-									Start Now
+									Try It Now
 									<Play />
 								</a>
 							</Button>
@@ -746,7 +746,7 @@ function CTA() {
 					<div className="flex flex-col md:flex-row justify-center gap-4 mt-8">
 						<Button variant="default" size="xl" asChild>
 							<a href="https://app.carbon.ms">
-								Start Now
+								Try It Now
 								<Play />
 							</a>
 						</Button>
