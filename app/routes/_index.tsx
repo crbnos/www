@@ -17,6 +17,7 @@ import {
 	Waypoints,
 } from "lucide-react";
 import { useState } from "react";
+import { CodeExamples } from "~/components/code-examples";
 import { DotPattern } from "~/components/dot-pattern";
 import { Safari } from "~/components/safari";
 import { Button } from "~/components/ui/button";
@@ -29,9 +30,10 @@ export default function Route() {
 	return (
 		<>
 			<Hero />
-			<Features />
-			<Grid />
+			<E2E />
+			<CodeExamples />
 			<Learn />
+			<Features />
 			<Reviews />
 			<Memo />
 			<CTA />
@@ -101,7 +103,7 @@ function Hero() {
 
 	return (
 		<section id="hero" className="py-0 relative">
-			<div className="bg-[linear-gradient(to_bottom_right,#f7f5ff_35.67%,#c9fff8_88.95%)] dark:bg-[linear-gradient(to_bottom_right,#0D0D0D_35.67%,#050505_88.95%)] min-h-[calc(100dvh-var(--header-height))] w-full mx-auto py-20 relative">
+			<div className="bg-[linear-gradient(to_bottom_right,#f7f5ff_35.67%,#bdcdff_88.95%)] dark:bg-[linear-gradient(to_bottom_right,#0D0D0D_35.67%,#050505_88.95%)] min-h-[calc(100dvh-var(--header-height))] w-full mx-auto py-20 relative">
 				<MeshGradient
 					speed={1}
 					colors={meshGradientColors}
@@ -169,16 +171,16 @@ function Hero() {
 	);
 }
 
-function Features() {
+function E2E() {
 	return (
-		<section id="features" className="pb-[140px] lg:pb-[240px]">
+		<section id="e2e" className="pb-[140px] lg:pb-[240px]">
 			<div className="flex gap-8 container max-w-[1380px] mx-auto px-4">
 				<div className="flex flex-col gap-8 mt-[205px] flex-grow max-w-[1380px] mx-auto pl-8">
 					<h3 className="text-muted-foreground uppercase text-sm leading-[140%] tracking-tighter">
-						Features
+						End-to-End
 					</h3>
 					<h4 className="font-display text-foreground text-balance text-left font-medium tracking-tight leading-[115%] text-4xl lg:text-5xl xl:text-6xl -mt-4">
-						Build on a modern foundation
+						Designed for manufacturing
 					</h4>
 					<p className="text-muted-foreground dark:text-foreground text-balance text-left font-medium tracking-tighter text-lg">
 						Carbon allows you to build your manufacturing tech stack on a open
@@ -256,20 +258,20 @@ function Features() {
 	);
 }
 
-function Grid() {
+function Features() {
 	return (
 		<section id="grid">
 			<div className="mx-auto bg-muted w-full py-24">
 				<div className="container">
 					<div className="flex flex-col gap-8">
-						<h2 className="font-display text-balance mx-auto max-w-2xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-							Drive growth and efficiency
-						</h2>
-
-						<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter text-base">
-							Leave the spreadsheets and outdated software behind. Carbon gives
-							you the control and clarity you need to run a better business.
-						</p>
+						<div className="flex flex-col gap-2">
+							<h3 className="text-muted-foreground uppercase text-sm leading-[140%] tracking-tighter text-center">
+								Features
+							</h3>
+							<h2 className="font-display text-balance mx-auto max-w-2xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+								Powerful tools to run your business
+							</h2>
+						</div>
 					</div>
 					<div className="flex flex-col gap-8 mt-14 mb-12">
 						<div className="flex flex-col">
@@ -278,7 +280,7 @@ function Grid() {
 									<div className="flex flex-col gap-4 pl-10 py-10 pr-20 h-full justify-between">
 										<div className="flex flex-col gap-4">
 											<div className="flex items-center gap-2">
-												<div className="not-prose w-fit shadow-md rounded-lg border bg-primary dark:bg-muted text-white p-1.5 dark:dark:text-muted-foreground text-white">
+												<div className="not-prose w-fit shadow-md rounded-lg border bg-primary dark:bg-muted text-white p-1.5 dark:dark:text-muted-foreground">
 													<Waypoints className="size-4 flex-shrink-0" />
 												</div>
 												<h4 className="text-foreground text-balance text-left font-medium tracking-tighter text-base">
@@ -333,14 +335,13 @@ function Grid() {
 													<LayoutDashboard className="size-4 flex-shrink-0" />
 												</div>
 												<h4 className="text-foreground text-balance text-left font-medium tracking-tighter text-base">
-													Custom Fields
+													Product Configurator
 												</h4>
 											</div>
 											<p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-sm">
-												Add custom fields with a few clicks to any table to
-												track additional information. Then create custom views
-												to track the data you need. Then use the configurator to
-												generate Bill of Materials.
+												Automatically generate the Bill of Materials and Bill of
+												Process for a given set of options/parameters with our
+												powerful product configurator.
 											</p>
 										</div>
 										{/* <div>
@@ -361,9 +362,10 @@ function Grid() {
 												</h4>
 											</div>
 											<p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-sm">
-												Optimize your shop floor schedule with flexible sorting
-												capabilities, maximizing throughput, improving on-time
-												delivery, and easily adapting to priority changes.
+												Keep your shop floor schedule up-to-date with our simple
+												and powerful scheduling engine. Schedule by job due
+												date, or by fine-tune work center and resource
+												availability.
 											</p>
 										</div>
 										{/* <div>
@@ -418,9 +420,14 @@ function Learn() {
 			/>
 			<div className="container z-50 py-24">
 				<div className="flex flex-col w-full max-w-section mx-auto px-section gap-24">
-					<h2 className="font-display text-balance mx-auto max-w-3xl text-center font-medium tracking-tight leading-[115%] text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
-						Modern, minimal, transparent
-					</h2>
+					<div className="flex flex-col gap-2">
+						<h3 className="text-muted-foreground uppercase text-sm leading-[140%] tracking-tighter text-center">
+							Open Source
+						</h3>
+						<h2 className="font-display text-balance mx-auto max-w-3xl text-center font-medium tracking-tight leading-[115%] text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+							Modern, minimal, transparent
+						</h2>
+					</div>
 					<div className="grid gap-3 container grid-cols-1 lg:grid-cols-3">
 						<div
 							data-card="true"
@@ -559,9 +566,14 @@ function Reviews() {
 			className="bg-primary text-primary-foreground bg-[url('/reviews.webp')] bg-[0_0] bg-no-repeat bg-cover py-20 dark:bg-gradient-to-br dark:from-secondary dark:to-secondary-foreground"
 		>
 			<div className="container flex flex-col gap-12 mx-auto px-4">
-				<h2 className="font-display font-medium text-balance mx-auto max-w-4xl text-center tracking-tight leading-[115%] text-3xl lg:text-5xl">
-					What our customers say:
-				</h2>
+				<div className="flex flex-col gap-2">
+					<h3 className="opacity-60 uppercase text-sm leading-[140%] tracking-tighter text-center">
+						Reviews
+					</h3>
+					<h2 className="font-display font-medium text-balance mx-auto max-w-4xl text-center tracking-tight leading-[115%] text-3xl lg:text-5xl">
+						What our customers say:
+					</h2>
+				</div>
 				<div className="max-w-5xl mx-auto overflow-hidden p-4">
 					<div className="flex flex-row items-center justify-center gap-4">
 						<button
@@ -571,7 +583,10 @@ function Reviews() {
 						>
 							<ArrowLeft />
 						</button>
-						<div className="flex flex-grow dark:bg-background/90 bg-background text-foreground rounded-xl w-full h-full min-h-[420px]">
+						<div
+							className="flex flex-grow dark
+						:bg-background/90 bg-background text-foreground rounded-xl w-full h-full min-h-[420px]"
+						>
 							<div className="flex flex-col flex-grow gap-12 justify-between h-full items-center p-12 w-full">
 								<p className="text-balance text-left flex-grow font-medium tracking-tight text-xl md:text-2xl">
 									{reviews[currentReview].review}
