@@ -117,7 +117,7 @@ function Hero() {
 				<div className="container mx-auto px-4 relative z-10">
 					<div className="flex flex-col justify-start items-center gap-8">
 						<DiscordButton />
-						<h2 className="font-display text-primary dark:text-foreground text-balance mx-auto  max-w-5xl text-center font-medium tracking-tight leading-[115%] text-[2.4rem] sm:text-6xl lg:text-[5rem] xl:text-[7.2rem]">
+						<h2 className="font-display text-primary dark:text-foreground text-balance mx-auto  max-w-5xl text-center font-medium tracking-tighter leading-[115%] text-[2.6rem] sm:text-6xl lg:text-[5rem] xl:text-[7.2rem]">
 							The open source{" "}
 							<span className="text-secondary">manufacturing ERP</span>
 						</h2>
