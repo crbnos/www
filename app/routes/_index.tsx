@@ -182,21 +182,12 @@ function E2E() {
 					<h4 className="font-display text-foreground text-balance text-left font-medium tracking-tight leading-[115%] text-4xl lg:text-5xl xl:text-6xl -mt-4">
 						Designed for manufacturing
 					</h4>
-					<p className="text-muted-foreground dark:text-foreground text-balance text-left font-medium tracking-tighter text-lg">
-						Carbon allows you to build your manufacturing tech stack on a open
-						foundation of ERP, MES, and QMS.
-					</p>
+
 					<div className="flex flex-col gap-4">
 						<div className="flex justify-start items-center gap-2">
 							<CheckCircle className="size-6 text-secondary" />
 							<p className="text-foreground text-left font-medium tracking-tighter text-lg">
-								Built on the best of open-source software
-							</p>
-						</div>
-						<div className="flex justify-start items-center gap-2">
-							<CheckCircle className="size-6 text-secondary" />
-							<p className="text-foreground text-left font-medium tracking-tighter text-lg">
-								Unified Quality, Purchasing & Production
+								Unified quality, purchasing & production
 							</p>
 						</div>
 						<div className="flex justify-start items-center gap-2">
@@ -208,7 +199,13 @@ function E2E() {
 						<div className="flex justify-start items-center gap-2">
 							<CheckCircle className="size-6 text-secondary" />
 							<p className="text-foreground text-left font-medium tracking-tighter text-lg">
-								Multi-location Planning and Inventory
+								Multi-location planning and inventory
+							</p>
+						</div>
+						<div className="flex justify-start items-center gap-2">
+							<CheckCircle className="size-6 text-secondary" />
+							<p className="text-foreground text-left font-medium tracking-tighter text-lg">
+								Built on the best of open-source software
 							</p>
 						</div>
 						<div className="flex justify-start items-center gap-2">
