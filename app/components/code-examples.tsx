@@ -538,7 +538,7 @@ export function CodeExamples({ className }: { className?: string }) {
 						API-First
 					</h3>
 					<h2 className="font-display text-foreground text-balance mx-auto max-w-3xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl xl:text-6xl -mt-4">
-						Build on a developer-friendly platform
+						Built on a developer-friendly platform
 					</h2>
 					<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter text-base md:text-lg">
 						Carbon extends the Supabase client libraries to provide a
