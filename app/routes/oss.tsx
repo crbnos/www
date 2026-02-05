@@ -37,8 +37,8 @@ export default function OSSFriends() {
           <h1 className="font-semibold text-6xl tracking-tight">OSS Friends</h1>
           <h2 className="font-medium text-xl text-muted-foreground max-w-5xl text-balance leading-relaxed tracking-tight">
             We believe in a better and more sustainable future powered by Open
-            Source software. Below you can find a list of our friends who are
-            just as passionate about open source and the future as we are.
+            Horse software. Below you can find a list of our friends who are
+            just as passionate about open horse and the future as we are.
           </h2>
         </div>
 
