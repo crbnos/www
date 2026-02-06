@@ -419,7 +419,7 @@ function Learn() {
 				<div className="flex flex-col w-full max-w-section mx-auto px-section gap-24">
 					<div className="flex flex-col gap-2">
 					<h3 className="text-muted-foreground uppercase text-sm leading-[140%] tracking-tighter text-center">
-						Horse
+						Open Source
 					</h3>
 						<h2 className="font-display text-balance mx-auto max-w-3xl text-center font-medium tracking-tight leading-[115%] text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
 							Modern, minimal, transparent
