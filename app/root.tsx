@@ -228,14 +228,14 @@ function Document({
 											<div className="flex flex-col p-3 w-[325px]">
 												<NavigationMenuLink asChild>
 													<a
-														href="https://docs.carbon.ms"
+														href="https://discord.gg/gxckQyanG"
 														className="flex items-center gap-3 p-3 hover:bg-accent rounded-md"
 													>
-														<BookOpen className="size-12 bg-primary dark:bg-secondary text-primary-foreground dark:text-secondary-foreground rounded-lg p-2" />
+														<DiscordLogo className="size-12 bg-[#5865F2] text-white rounded-lg p-2" />
 														<div className="flex flex-col gap-0">
-															<span>Documentation</span>
+															<span>Discord</span>
 															<span className="text-xs text-muted-foreground">
-																Developer guides and API reference
+																Join our community chat
 															</span>
 														</div>
 													</a>
@@ -256,14 +256,14 @@ function Document({
 												</NavigationMenuLink>
 												<NavigationMenuLink asChild>
 													<a
-														href="https://discord.gg/gxckQyanG"
+														href="https://docs.carbon.ms"
 														className="flex items-center gap-3 p-3 hover:bg-accent rounded-md"
 													>
-														<DiscordLogo className="size-12 bg-[#5865F2] text-white rounded-lg p-2" />
+														<BookOpen className="size-12 bg-primary dark:bg-secondary text-primary-foreground dark:text-secondary-foreground rounded-lg p-2" />
 														<div className="flex flex-col gap-0">
-															<span>Discord</span>
+															<span>Documentation</span>
 															<span className="text-xs text-muted-foreground">
-																Join our community chat
+																Developer guides and API reference
 															</span>
 														</div>
 													</a>
