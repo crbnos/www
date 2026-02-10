@@ -22,6 +22,7 @@
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.10",
+    "@toolwind/corner-shape": "^0.0.8-3",
     "@types/prismjs": "^1.26.5",
     "@upstash/ratelimit": "^2.0.5",
     "@upstash/redis": "^1.34.3",

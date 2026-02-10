@@ -593,7 +593,7 @@ function Reviews() {
 										<img
 											src={reviews[currentReview].face}
 											alt="Avatar"
-											className="size-16 rounded-full"
+											className="size-16 rounded-full corner-squircle"
 										/>
 										<div className="flex flex-col">
 											<p className="text-xl font-bold">
@@ -621,14 +621,14 @@ function Reviews() {
 						<button
 							onClick={onPrev}
 							type="button"
-							className="flex items-center justify-center bg-background/90 hover:bg-background text-foreground text-3xl font-bold size-12 rounded-xl px-3"
+							className="flex items-center justify-center bg-background/90 hover:bg-background text-foreground text-3xl font-bold size-12 rounded-full corner-squircle px-3"
 						>
 							<ArrowLeft />
 						</button>
 						<button
 							onClick={onNext}
 							type="button"
-							className="flex items-center justify-center bg-background/90 hover:bg-background text-foreground text-3xl font-bold size-12 rounded-xl px-3"
+							className="flex items-center justify-center bg-background/90 hover:bg-background text-foreground text-3xl font-bold size-12 rounded-full corner-squircle px-3"
 						>
 							<ArrowRight />
 						</button>
@@ -716,7 +716,7 @@ function Memo() {
 						<img
 							alt="Brad Barbin"
 							loading="lazy"
-							className="w-14 h-auto rounded-full"
+							className="w-14 h-auto rounded-full corner-squircle"
 							src="/faces/brad.webp"
 						/>
 						<div className="flex flex-col">
