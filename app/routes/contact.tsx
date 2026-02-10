@@ -118,21 +118,21 @@ export async function action({ request }: ActionFunctionArgs) {
 }
 
 export default function Contact() {
-  const fetcher = useFetcher<typeof action>();
-  const { ENV } = useLoaderData<typeof loader>();
-  const [isSubmitted, setIsSubmitted] = useState(false);
+   const fetcher = useFetcher<typeof action>();
+   const { ENV } = useLoaderData<typeof loader>();
+   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const [turnstileToken, setTurnstileToken] = useState("");
+   const [turnstileToken, setTurnstileToken] = useState("");
 
-  // Get Turnstile site key from environment
-  const CLOUDFLARE_TURNSTILE_SITE_KEY = ENV?.CLOUDFLARE_TURNSTILE_SITE_KEY;
-  const mode = useMode();
+   // Get Turnstile site key from environment - ensure it's always defined
+   const CLOUDFLARE_TURNSTILE_SITE_KEY = ENV?.CLOUDFLARE_TURNSTILE_SITE_KEY || "";
+   const mode = useMode();
 
-  useEffect(() => {
-    if (fetcher.data?.success) {
-      setIsSubmitted(true);
-    }
-  }, [fetcher.data]);
+   useEffect(() => {
+     if (fetcher.data?.success) {
+       setIsSubmitted(true);
+     }
+   }, [fetcher.data]);
 
   return (
     <div className="flex flex-1 flex-col">
@@ -220,12 +220,15 @@ export default function Contact() {
             <div className="flex justify-between w-full items-start gap-4">
               <Button
                 type="submit"
-                disabled={fetcher.state !== "idle" || !turnstileToken}
+                disabled={
+                  fetcher.state !== "idle" ||
+                  (!!CLOUDFLARE_TURNSTILE_SITE_KEY && !turnstileToken)
+                }
               >
                 Submit
               </Button>
               <div>
-                {CLOUDFLARE_TURNSTILE_SITE_KEY && (
+                {CLOUDFLARE_TURNSTILE_SITE_KEY && CLOUDFLARE_TURNSTILE_SITE_KEY !== "" && (
                   <Turnstile
                     siteKey={CLOUDFLARE_TURNSTILE_SITE_KEY}
                     onSuccess={(token) => setTurnstileToken(token)}
