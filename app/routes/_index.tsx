@@ -589,7 +589,7 @@ function Reviews() {
 									{reviews[currentReview].review}
 								</p>
 								<div className="flex justify-start w-full">
-									<div className="flex items-center gap-2">
+									<div className="flex items-center gap-6">
 										<img
 											src={reviews[currentReview].face}
 											alt="Avatar"
