@@ -548,11 +548,11 @@ export function CodeExamples({ className }: { className?: string }) {
 					<div className="flex flex-col md:flex-row gap-4 justify-center">
 						<Button variant="secondary" size="xl" asChild>
 							<a
-								href="https://github.com/crbnos/carbon/blob/main/apps/erp/app/modules/quality/quality.service.ts"
+								href="https://app.carbon.ms/docs/api/js/intro"
 								target="_blank"
 								rel="noopener"
 							>
-								Read the Code
+								API Docs
 								<Book />
 							</a>
 						</Button>
@@ -562,7 +562,7 @@ export function CodeExamples({ className }: { className?: string }) {
 								target="_blank"
 								rel="noopener"
 							>
-								View Examples
+								Code Examples
 								<ChevronRight />
 							</a>
 						</Button>
