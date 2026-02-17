@@ -1,5 +1,6 @@
 import { MeshGradient } from "@paper-design/shaders-react";
 import { Link } from "@remix-run/react";
+import { AnimatePresence, motion } from "framer-motion";
 import {
 	ArrowLeft,
 	ArrowRight,
@@ -47,11 +48,7 @@ const customers = [
 		logo: "/logos/minimal.svg",
 		url: "https://minimalx.com",
 	},
-	{
-		name: "Kform",
-		logo: "/logos/kform.png",
-		url: "https://kform.com/",
-	},
+
 	{
 		name: "Machenit",
 		logo: "/logos/machenit.png",
@@ -66,6 +63,11 @@ const customers = [
 		name: "M3 Aerospace",
 		logo: "/logos/m3.png",
 		url: "https://m3-aerospace.com/",
+	},
+	{
+		name: "Kform",
+		logo: "/logos/kform.png",
+		url: "https://kform.com/",
 	},
 	{
 		name: "Allinol Technologies",
@@ -136,17 +138,29 @@ function Hero() {
 									Modern manufacturers build their tech stack on Carbon
 								</p>
 							</div>
-
 							<div className="flex flex-col md:flex-row items-center justify-center gap-8 min-h-[125px]">
-								{customers.map((customer) => (
-									<a key={customer.name} href={customer.url} target="_blank">
-										<img
-											alt={customer.name}
-											src={customer.logo}
-											className="w-28 h-auto dark:invert opacity-90 hover:opacity-100 transition-all duration-300"
-										/>
-									</a>
-								))}
+								<AnimatePresence>
+									{customers.map((customer, index) => (
+										<motion.a
+											key={customer.name}
+											href={customer.url}
+											target="_blank"
+											initial={{ opacity: 0 }}
+											animate={{ opacity: 1 }}
+											transition={{
+												duration: 0.5,
+												delay: index * 0.1,
+												ease: "easeInOut",
+											}}
+										>
+											<img
+												alt={customer.name}
+												src={customer.logo}
+												className="w-28 h-auto dark:invert transition-all duration-300 hover:scale-110"
+											/>
+										</motion.a>
+									))}
+								</AnimatePresence>
 							</div>
 						</div>
 					</div>
