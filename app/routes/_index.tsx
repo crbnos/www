@@ -48,45 +48,30 @@ const customers = [
 		url: "https://minimalx.com",
 	},
 	{
+		name: "Kform",
+		logo: "/logos/kform.png",
+		url: "https://kform.com/",
+	},
+	{
+		name: "Machenit",
+		logo: "/logos/machenit.png",
+		url: "https://machenit.com",
+	},
+	{
 		name: "Black Cat Labs",
 		logo: "/logos/black-cat-labs.png",
 		url: "https://blackcatlabs.xyz",
 	},
-	// {
-	// 	name: "Harp Engineering",
-	// 	logo: "/logos/harp.png",
-	// 	url: "https://headco.net",
-	// },
-	// {
-	// 	name: "Northwest Production Source",
-	// 	logo: "/logos/northwest.png",
-	// 	url: "https://nwprosource.com",
-	// },
 	{
 		name: "M3 Aerospace",
 		logo: "/logos/m3.png",
 		url: "https://m3-aerospace.com/",
 	},
-	// {
-	// 	name: "Three Rivers Precision",
-	// 	logo: "/logos/trp.png",
-	// 	url: "https://www.threeriversprecision.com/",
-	// },
-	// {
-	//   name: "Elite SXS",
-	//   logo: "/logos/elite-sxs.png",
-	//   url: "https://elitesxsengineering.com/",
-	// },
 	{
 		name: "Allinol Technologies",
 		logo: "/logos/allinol.png",
 		url: "https://allinoltec.com",
 	},
-	// {
-	// 	name: "Award LTD",
-	// 	logo: "/logos/award-ltd.png",
-	// 	url: "#",
-	// 	},
 	{
 		name: "Saeki",
 		logo: "/logos/saeki.svg",
@@ -158,7 +143,7 @@ function Hero() {
 										<img
 											alt={customer.name}
 											src={customer.logo}
-											className="w-28 h-auto dark:invert"
+											className="w-28 h-auto dark:invert opacity-90 hover:opacity-100 transition-all duration-300"
 										/>
 									</a>
 								))}
