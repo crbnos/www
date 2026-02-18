@@ -94,7 +94,7 @@ export default function Pricing() {
 						<div className="flex-1 flex flex-col gap-8">
 							<div className="flex items-center">
 								<div className="ml-4">
-									<h2 className="text-4xl font-semibold tracking-tighter leading-12">
+									<h2 className="text-4xl font-medium tracking-tighter leading-12">
 										{plan.name}
 									</h2>
 									<p className="h-12 text-sm leading-5 opacity-80">
@@ -104,7 +104,7 @@ export default function Pricing() {
 							</div>
 
 							<div className="flex items-end justify-start gap-1 pl-4">
-								<p className="text-5xl font-semibold tracking-tighter leading-12">
+								<p className="text-5xl font-medium tracking-tighter leading-12">
 									{plan.priceHeadline}
 								</p>
 
