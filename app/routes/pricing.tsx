@@ -87,14 +87,14 @@ export default function Pricing() {
 						className={cn(
 							"relative flex w-full flex-col gap-8 rounded-lg bg-muted p-4 text-foreground overflow-hidden h-full",
 							plan.featured
-								? "border-none bg-primary text-primary-foreground"
+								? "bg-[linear-gradient(to_bottom,#000000_0%,#010215_20%,#0F356E_50%,#4b93aa_65%,#E2E8F2_95%,#FFFFFF_100%)] text-white"
 								: "border border-border",
 						)}
 					>
 						<div className="flex-1 flex flex-col gap-8">
 							<div className="flex items-center">
 								<div className="ml-4">
-									<h2 className="text-2xl font-bold tracking-tight leading-7">
+									<h2 className="text-4xl font-semibold tracking-tighter leading-12">
 										{plan.name}
 									</h2>
 									<p className="h-12 text-sm leading-5 opacity-80">
@@ -104,7 +104,7 @@ export default function Pricing() {
 							</div>
 
 							<div className="flex items-end justify-start gap-1 pl-4">
-								<p className="text-4xl font-bold tracking-tight leading-7">
+								<p className="text-5xl font-semibold tracking-tighter leading-12">
 									{plan.priceHeadline}
 								</p>
 
@@ -130,12 +130,7 @@ export default function Pricing() {
 
 						<div className="mt-auto w-full">
 							<hr className="m-0 h-px w-full border-none bg-gradient-to-r from-zinc-200/0 via-zinc-500/30 to-zinc-200/0 mb-8" />
-							<Button
-								variant={plan.featured ? "secondary" : "default"}
-								className="w-full"
-								size="xl"
-								asChild
-							>
+							<Button variant="default" className="w-full" size="xl" asChild>
 								<Link to={plan.url}>{plan.action}</Link>
 							</Button>
 						</div>
