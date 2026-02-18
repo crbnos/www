@@ -85,10 +85,10 @@ export default function Pricing() {
 					<div
 						key={plan.name}
 						className={cn(
-							"relative flex w-full flex-col gap-8 rounded-lg bg-muted p-4 text-foreground overflow-hidden h-full",
+							"relative flex w-full flex-col gap-8 rounded-lg bg-muted p-4 text-foreground overflow-hidden h-full border border-border",
 							plan.featured
 								? "bg-[linear-gradient(to_bottom,#000000_0%,#010215_20%,#0F356E_50%,#4b93aa_65%,#E2E8F2_95%,#FFFFFF_100%)] text-white"
-								: "border border-border",
+								: "",
 						)}
 					>
 						<div className="flex-1 flex flex-col gap-8">
