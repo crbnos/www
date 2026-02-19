@@ -17,7 +17,7 @@ import type {
 	MetaFunction,
 } from "@vercel/remix";
 import { BookOpen, Moon, Play, Sun } from "lucide-react";
-import { type ReactNode, useState } from "react";
+import { type ReactNode, useEffect, useState } from "react";
 import Tailwind from "~/styles/tailwind.css?url";
 import { Footer } from "./components/footer";
 import { Button } from "./components/ui/button";
@@ -162,6 +162,15 @@ function Document({
 }) {
 	const { showWizard, setShowWizard } = useWizard();
 	const fetcher = useFetcher<typeof action>();
+	const [scrolled, setScrolled] = useState(false);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			setScrolled(window.scrollY > 200);
+		};
+		window.addEventListener("scroll", handleScroll, { passive: true });
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
 
 	return (
 		<html lang="en" className={`${mode} h-full overflow-x-hidden w-[100dvw]`}>
@@ -177,7 +186,12 @@ function Document({
 				suppressHydrationWarning
 				className="h-[100dvh] w-[100dvw] flex flex-col bg-background text-foreground antialiased selection:bg-[#60ffd3] selection:text-[#000000] "
 			>
-				<header className="flex select-none items-center py-4 pl-5 pr-2 h-[var(--header-height)]">
+				<header
+					className={cn(
+						"fixed lg:top-4 left-0 right-0 lg:left-[10dvw] lg:right-[10dvw] lg:rounded-2xl shadow-sm z-header flex select-none items-center py-4 pl-5 pr-2 h-[var(--header-height)] border bg-background/80 backdrop-blur-md lg:transition-[left,right] lg:duration-500 lg:ease-in-out",
+						scrolled && "lg:left-[23dvw] lg:right-[23dvw]",
+					)}
+				>
 					<div className="container mx-auto px-4 flex items-center justify-between gap-2 z-logo text-foreground w-full">
 						<Link
 							to="/"
@@ -195,7 +209,12 @@ function Document({
 							/>
 						</Link>
 						<div className="flex items-center gap-2">
-							<NavigationMenu className="hidden md:flex">
+							<NavigationMenu
+								className={cn(
+									"hidden md:flex transition-[opacity,transform] duration-500 ease-in-out",
+									scrolled && "lg:opacity-0 lg:scale-95 lg:pointer-events-none",
+								)}
+							>
 								<NavigationMenuList>
 									<NavigationMenuItem>
 										<NavigationMenuLink
@@ -290,7 +309,7 @@ function Document({
 								/>
 								<Button
 									type="submit"
-									variant="outline"
+									variant="ghost"
 									size="icon"
 									className={cn(
 										"cursor-pointer",
