@@ -335,7 +335,7 @@ function Document({
 
 				<div className="relative flex h-full w-full items-start justify-center">
 					{/* <LightRays /> */}
-					<main className="flex flex-col w-full">
+					<main className="flex flex-col w-full pt-[var(--header-height)]">
 						{children}
 						<Footer />
 					</main>
