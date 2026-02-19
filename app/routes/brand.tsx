@@ -35,13 +35,13 @@ export default function Brand() {
 							className="h-36"
 						/>
 					</div>
-					<div className="flex gap-4 justify-center">
-						<Button asChild variant="secondary" className="text-sm">
+					<div className="flex gap-2 justify-center">
+						<Button asChild variant="outline" className="text-sm">
 							<a href="/brand/carbon-mark.svg" download>
 								SVG
 							</a>
 						</Button>
-						<Button asChild variant="secondary" className="text-sm">
+						<Button asChild variant="outline" className="text-sm">
 							<a href="/brand/carbon-mark.png" download>
 								PNG
 							</a>
@@ -58,13 +58,13 @@ export default function Brand() {
 								className="h-12"
 							/>
 						</div>
-						<div className="flex gap-4 justify-center">
-							<Button asChild variant="secondary" className="text-sm">
+						<div className="flex gap-2 justify-center">
+							<Button asChild variant="outline" className="text-sm">
 								<a href="/brand/carbon-word-dark.svg" download>
 									SVG
 								</a>
 							</Button>
-							<Button asChild variant="secondary" className="text-sm">
+							<Button asChild variant="outline" className="text-sm">
 								<a href="/brand/carbon-word-dark.png" download>
 									PNG
 								</a>
@@ -80,13 +80,13 @@ export default function Brand() {
 								className="h-12"
 							/>
 						</div>
-						<div className="flex gap-4 justify-center">
-							<Button asChild variant="secondary" className="text-sm">
+						<div className="flex gap-2 justify-center">
+							<Button asChild variant="outline" className="text-sm">
 								<a href="/brand/carbon-word-light.svg" download>
 									SVG
 								</a>
 							</Button>
-							<Button asChild variant="secondary" className="text-sm">
+							<Button asChild variant="outline" className="text-sm">
 								<a href="/brand/carbon-word-light.png" download>
 									PNG
 								</a>
@@ -101,13 +101,13 @@ export default function Brand() {
 								className="h-24"
 							/>
 						</div>
-						<div className="flex gap-4 justify-center">
-							<Button asChild variant="secondary" className="text-sm">
+						<div className="flex gap-2 justify-center">
+							<Button asChild variant="outline" className="text-sm">
 								<a href="/brand/carbon-word-sub-mark.svg" download>
 									SVG
 								</a>
 							</Button>
-							<Button asChild variant="secondary" className="text-sm">
+							<Button asChild variant="outline" className="text-sm">
 								<a href="/brand/carbon-word-sub-mark.png" download>
 									PNG
 								</a>
@@ -123,58 +123,14 @@ export default function Brand() {
 								className="h-24"
 							/>
 						</div>
-						<div className="flex gap-4 justify-center">
-							<Button asChild variant="secondary" className="text-sm">
+						<div className="flex gap-2 justify-center">
+							<Button asChild variant="outline" className="text-sm">
 								<a href="/brand/carbon-sub-mark-light.svg" download>
 									SVG
 								</a>
 							</Button>
-							<Button asChild variant="secondary" className="text-sm">
+							<Button asChild variant="outline" className="text-sm">
 								<a href="/brand/carbon-sub-mark-light.png" download>
-									PNG
-								</a>
-							</Button>
-						</div>
-					</div>
-
-					<div className="flex flex-col gap-4 p-6 rounded-2xl bg-zinc-100 dark:bg-zinc-900 border">
-						<div className="bg-black p-8 rounded-xl flex items-center justify-center min-h-[160px]">
-							<img
-								src="/brand/carbon-sub-mark-plus-dark.svg"
-								alt="Dark Submark Plus"
-								className="h-24"
-							/>
-						</div>
-						<div className="flex gap-4 justify-center">
-							<Button asChild variant="secondary" className="text-sm">
-								<a href="/brand/carbon-word-sub-mark-plus.svg" download>
-									SVG
-								</a>
-							</Button>
-							<Button asChild variant="secondary" className="text-sm">
-								<a href="/brand/carbon-word-sub-mark-plus.png" download>
-									PNG
-								</a>
-							</Button>
-						</div>
-					</div>
-
-					<div className="flex flex-col gap-4 p-6 rounded-2xl bg-zinc-100 dark:bg-zinc-900 border">
-						<div className="bg-white p-8 rounded-xl flex items-center justify-center min-h-[160px]">
-							<img
-								src="/brand/carbon-sub-mark-plus-light.svg"
-								alt="Light Submark Plus"
-								className="h-24"
-							/>
-						</div>
-						<div className="flex gap-4 justify-center">
-							<Button asChild variant="secondary" className="text-sm">
-								<a href="/brand/carbon-sub-mark-plus-light.svg" download>
-									SVG
-								</a>
-							</Button>
-							<Button asChild variant="secondary" className="text-sm">
-								<a href="/brand/carbon-sub-mark-plus-light.png" download>
 									PNG
 								</a>
 							</Button>
@@ -183,7 +139,7 @@ export default function Brand() {
 				</div>
 
 				<div className="flex flex-col justify-center items-center mt-8 mb-16 w-full bg-zinc-100 dark:bg-zinc-900 border rounded-2xl p-6 gap-4">
-					<Button variant="secondary" asChild>
+					<Button variant="outline" asChild>
 						<a href="/brand/carbon-logos.zip" download>
 							Download Logo Kit
 							<DownloadIcon className="w-4 h-4 ml-2" />
