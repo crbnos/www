@@ -188,7 +188,7 @@ function Document({
 			>
 				<header
 					className={cn(
-						"fixed lg:top-4 left-0 right-0 lg:left-[10dvw] lg:right-[10dvw] lg:rounded-2xl shadow-sm z-header flex select-none items-center py-4 pl-5 pr-2 h-[var(--header-height)] border bg-background/80 backdrop-blur-md lg:transition-[left,right] lg:duration-500 lg:ease-in-out",
+						"fixed lg:top-4 left-0 right-0 lg:left-[10dvw] lg:right-[10dvw] lg:rounded-2xl shadow-sm z-header flex select-none items-center py-4 pl-5 pr-2 h-[var(--header-height)] border-b lg:border bg-background/80 backdrop-blur-md lg:transition-[left,right] lg:duration-500 lg:ease-in-out",
 						scrolled && "lg:left-[23dvw] lg:right-[23dvw]",
 					)}
 				>
