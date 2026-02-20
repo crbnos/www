@@ -136,6 +136,50 @@ export default function Brand() {
 							</Button>
 						</div>
 					</div>
+
+					<div className="flex flex-col gap-4 p-6 rounded-2xl bg-zinc-100 dark:bg-zinc-900 border">
+						<div className="bg-black p-8 rounded-xl flex items-center justify-center min-h-[160px]">
+							<img
+								src="/brand/carbon-mono-dark.svg"
+								alt="Dark Monochrome Logo"
+								className="h-12"
+							/>
+						</div>
+						<div className="flex gap-2 justify-center">
+							<Button asChild variant="outline" className="text-sm">
+								<a href="/brand/carbon-mono-dark.svg" download>
+									SVG
+								</a>
+							</Button>
+							<Button asChild variant="outline" className="text-sm">
+								<a href="/brand/carbon-mono-dark.png" download>
+									PNG
+								</a>
+							</Button>
+						</div>
+					</div>
+
+					<div className="flex flex-col gap-4 p-6 rounded-2xl bg-zinc-100 dark:bg-zinc-900 border">
+						<div className="bg-white p-8 rounded-xl flex items-center justify-center min-h-[160px]">
+							<img
+								src="/brand/carbon-mono-light.svg"
+								alt="Light Monochrome Logo"
+								className="h-12"
+							/>
+						</div>
+						<div className="flex gap-2 justify-center">
+							<Button asChild variant="outline" className="text-sm">
+								<a href="/brand/carbon-mono-light.svg" download>
+									SVG
+								</a>
+							</Button>
+							<Button asChild variant="outline" className="text-sm">
+								<a href="/brand/carbon-mono-light.png" download>
+									PNG
+								</a>
+							</Button>
+						</div>
+					</div>
 				</div>
 
 				<div className="flex flex-col justify-center items-center mt-8 mb-16 w-full bg-zinc-100 dark:bg-zinc-900 border rounded-2xl p-6 gap-4">

@@ -85,7 +85,7 @@ export default function Pricing() {
 					<div
 						key={plan.name}
 						className={cn(
-							"relative flex w-full flex-col gap-8 rounded-lg bg-muted p-4 text-foreground overflow-hidden h-full border border-border",
+							"relative flex w-full flex-col gap-8 rounded-2xl bg-muted p-4 text-foreground overflow-hidden h-full border border-border",
 							plan.featured
 								? "bg-[linear-gradient(to_bottom,#000000_0%,#010215_20%,#0F356E_50%,#4b93aa_65%,#E2E8F2_95%,#FFFFFF_100%)] text-white"
 								: "",
@@ -138,7 +138,7 @@ export default function Pricing() {
 				))}
 			</div>
 
-			<div className="flex flex-col gap-4 bg-muted dark:bg-muted bg-[url('/cta.webp')] dark:bg-none bg-[0_0] bg-no-repeat bg-cover rounded-xl py-24 justify-center items-center px-4 w-full">
+			<div className="flex flex-col gap-4 bg-muted dark:bg-muted bg-[url('/cta.webp')] dark:bg-none bg-[0_0] bg-no-repeat bg-cover rounded-2xl py-24 justify-center items-center px-4 w-full">
 				<h2 className="font-display text-balance mx-auto max-w-2xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl w-full">
 					Get started for free
 				</h2>
