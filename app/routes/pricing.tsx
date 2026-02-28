@@ -51,7 +51,7 @@ const plans = [
 		features: [
 			"Self-hosted or managed",
 			"ITAR compliant",
-			"Hardware included",
+			"Advanced audit logging",
 			"Full setup and migrations",
 			"Custom integrations",
 			"Custom development",
