@@ -37,6 +37,7 @@ const plans = [
 			"Unlimited functional support",
 			"API, webhooks, and integrations",
 			"AI-powered workflows",
+			"Advanced audit logging",
 			"All advanced features available",
 		],
 	},
@@ -51,7 +52,7 @@ const plans = [
 		features: [
 			"Self-hosted or managed",
 			"ITAR compliant",
-			"Advanced audit logging",
+			"Hardware included",
 			"Full setup and migrations",
 			"Custom integrations",
 			"Custom development",
