@@ -81,15 +81,9 @@ const editorTheme = {
 
 const typescriptCodeBlock = `import type { SupabaseClient } from "@supabase/supabase-js";
 import { createClient } from "@supabase/supabase-js";
-import { CARBON_API_URL, CARBON_PUBLIC_KEY, CARBON_API_KEY } from "~/env";
+import { CARBON_API_URL, CARBON_API_KEY } from "~/env";
 
-const carbon = createClient(CARBON_API_URL, CARBON_PUBLIC_KEY, {
-	global: {
-		headers: {
-			"carbon-key": CARBON_API_KEY
-		}
-	}
-});
+const carbon = createClient(CARBON_API_URL, CARBON_API_KEY);
 `;
 
 const createOrderBlock = `// apps/erp/app/modules/sales/sales.service.ts 
@@ -261,14 +255,11 @@ const pythonClient = `import os
 from supabase import create_client, Client
 from supabase.client import ClientOptions
 url: str = os.environ.get("CARBON_API_URL")
-key: str = os.environ.get("CARBON_PUBLIC_KEY")
+key: str = os.environ.get("CARBON_API_KEY")
 def main() -> None:
     carbon: Client = create_client(
         url,
         key,
-        headers={
-            "carbon-key": os.environ.get("CARBON_API_KEY")
-        }
     )
     response = (
         carbon.table("employees")
@@ -279,24 +270,14 @@ main()`;
 
 const csharpClient = `using Supabase;
 var url = Environment.GetEnvironmentVariable("CARBON_API_URL");
-var publicKey = Environment.GetEnvironmentVariable("CARBON_PUBLIC_KEY");
 var apiKey = Environment.GetEnvironmentVariable("CARBON_API_KEY");
-var options = new Supabase.SupabaseOptions
-{
-    AutoConnectRealtime = true,
-    Headers = new Dictionary<string, string>
-    {
-        { "carbon-key", apiKey }
-    }
-};
-var carbon = new Supabase.Client(url, publicKey, options);
+var carbon = new Supabase.Client(url, apiKey);
 await carbon.InitializeAsync();
 var employees = await carbon.From<Employee>().Select("*").Execute();`;
 
 const curlOrderCodeBlock = `curl 'https://api.carbon.ms/rest/v1/employees?select=id' \\
 -H "carbon-key: CARBON_API_KEY" \\
--H "apiKey: CARBON_PUBLIC_KEY" \\
--H "Authorization: Bearer CARBON_PUBLIC_KEY"'
+-H "Authorization: Bearer CARBON_API_KEY"'
 `;
 
 type Snippet = {
