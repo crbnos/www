@@ -87,7 +87,7 @@ export default function Pricing() {
 						className={cn(
 							"relative flex w-full flex-col gap-8 rounded-2xl bg-muted p-4 text-foreground overflow-hidden h-full border border-border",
 							plan.featured
-								? "bg-[linear-gradient(to_bottom,#000000_0%,#010215_20%,#0F356E_50%,#4b93aa_65%,#E2E8F2_95%,#FFFFFF_100%)] text-white"
+								? "dark:bg-[linear-gradient(to_bottom,#000000_0%,#010215_20%,#0F356E_50%,#4b93aa_65%,#E2E8F2_95%)] dark:text-white bg-background text-foreground"
 								: "",
 						)}
 					>
@@ -130,7 +130,12 @@ export default function Pricing() {
 
 						<div className="mt-auto w-full">
 							<hr className="m-0 h-px w-full border-none bg-gradient-to-r from-zinc-200/0 via-zinc-500/30 to-zinc-200/0 mb-8" />
-							<Button variant="default" className="w-full" size="xl" asChild>
+							<Button
+								variant={plan.featured ? "default" : "outline"}
+								className="w-full"
+								size="xl"
+								asChild
+							>
 								<Link to={plan.url}>{plan.action}</Link>
 							</Button>
 						</div>
