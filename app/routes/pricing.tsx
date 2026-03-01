@@ -37,6 +37,7 @@ const plans = [
 			"Unlimited functional support",
 			"API, webhooks, and integrations",
 			"AI-powered workflows",
+			"Advanced audit logging",
 			"All advanced features available",
 		],
 	},
