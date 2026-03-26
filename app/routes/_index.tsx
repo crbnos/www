@@ -65,6 +65,11 @@ const customers = [
 		url: "https://m3-aerospace.com/",
 	},
 	{
+		name: "Zero",
+		logo: "/logos/zero.webp",
+		url: "https://zerofarms.it",
+	},
+	{
 		name: "Kform",
 		logo: "/logos/kform.png",
 		url: "https://kform.com/",
@@ -79,6 +84,7 @@ const customers = [
 		logo: "/logos/saeki.svg",
 		url: "https://saeki.ch/",
 	},
+	
 ];
 
 function Hero() {
