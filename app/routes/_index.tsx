@@ -70,6 +70,11 @@ const customers = [
 		url: "https://zerofarms.it",
 	},
 	{
+		name: "Witty Machines",
+		logo: "/logos/witty-machines.svg",
+		url: "https://www.witty-machines.com/",
+	},
+	{
 		name: "Kform",
 		logo: "/logos/kform.png",
 		url: "https://kform.com/",
@@ -80,16 +85,10 @@ const customers = [
 		url: "https://allinoltec.com",
 	},
 	{
-		name: "Witty Machines",
-		logo: "/logos/witty-machines.svg",
-		url: "https://www.witty-machines.com/",
-	},
-	{
 		name: "Saeki",
 		logo: "/logos/saeki.svg",
 		url: "https://saeki.ch/",
 	},
-	
 ];
 
 function Hero() {
