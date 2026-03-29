@@ -46,7 +46,7 @@ const customers = [
 	{
 		name: "Minimal",
 		logo: "/logos/minimal.svg",
-		url: "https://minimalx.com",
+		url: "https://minimal.tech",
 	},
 
 	{
