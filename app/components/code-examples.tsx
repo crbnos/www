@@ -79,6 +79,36 @@ const editorTheme = {
 	],
 } satisfies PrismTheme;
 
+const claudeCodeMcpCodeblock = `claude mcp add --transport http \\
+  carbon https://app.carbon.ms/api/mcp \\
+  --header "Authorization: Bearer crbn_*****************"
+`;
+
+const cursorMcpCodeblock = `// .cursor/mcp.json
+{
+  "mcpServers": {
+    "carbon": {
+      "url": "https://app.carbon.ms/api/mcp",
+      "headers": {
+        "Authorization": "Bearer crbn_*****************"
+      }
+    }
+  }
+}`;
+
+const vscodeMcpCodeblock = `// .vscode/mcp.json
+{
+  "servers": {
+    "carbon": {
+      "type": "http",
+      "url": "https://app.carbon.ms/api/mcp",
+      "headers": {
+        "Authorization": "Bearer crbn_*****************"
+      }
+    }
+  }
+}`;
+
 const typescriptCodeBlock = `import type { SupabaseClient } from "@supabase/supabase-js";
 import { createClient } from "@supabase/supabase-js";
 
@@ -331,6 +361,23 @@ const languagesList = {
 			editorLanguage: "bash",
 		},
 	],
+	MCP: [
+		{
+			name: "Claude Code",
+			codeBlock: claudeCodeMcpCodeblock,
+			editorLanguage: "bash",
+		},
+		{
+			name: "Cursor",
+			codeBlock: cursorMcpCodeblock,
+			editorLanguage: "json",
+		},
+		{
+			name: "VS Code",
+			codeBlock: vscodeMcpCodeblock,
+			editorLanguage: "json",
+		},
+	],
 } as const satisfies {
 	[key: string]: Snippet[];
 };
@@ -339,6 +386,7 @@ type Language = keyof typeof languagesList;
 type SnippetName = (typeof languagesList)[Language][number]["name"];
 
 const languages: { name: Language }[] = [
+	{ name: "MCP" },
 	{ name: "TypeScript" },
 	{ name: "Python" },
 	{ name: "C#" },
@@ -523,9 +571,8 @@ export function CodeExamples({ className }: { className?: string }) {
 						Built on a developer-friendly platform
 					</h2>
 					<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter text-base md:text-lg">
-						Carbon extends the Supabase client libraries to provide a
-						strongly-typed, strongly-permissioned, realtime API for extending
-						your system of record.
+						Carbon provides a comprehensive MCP server and API clients in many
+						popular languages.
 					</p>
 					<div className="flex flex-col md:flex-row gap-4 justify-center">
 						<Button variant="secondary" size="xl" asChild>
