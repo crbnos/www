@@ -15,3 +15,4 @@ api/_assets*
 app/lib/static-blog-data.ts
 
 opencode.json
+.mcp.json

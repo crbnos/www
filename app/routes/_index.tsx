@@ -2,8 +2,6 @@ import { MeshGradient } from "@paper-design/shaders-react";
 import { Link } from "@remix-run/react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
-	ArrowLeft,
-	ArrowRight,
 	Book,
 	Cable,
 	CalendarDays,
@@ -17,7 +15,6 @@ import {
 	PlayCircle,
 	Waypoints,
 } from "lucide-react";
-import { useState } from "react";
 import { CodeExamples } from "~/components/code-examples";
 import { DotPattern } from "~/components/dot-pattern";
 import { Safari } from "~/components/safari";
@@ -556,111 +553,70 @@ const reviews = [
 ];
 
 function Reviews() {
-	const [currentReview, setCurrentReview] = useState(0);
-
-	const onPrev = () => {
-		setCurrentReview((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
-	};
-
-	const onNext = () => {
-		setCurrentReview((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
-	};
-
 	return (
 		<section
 			id="reviews"
 			className="bg-primary text-primary-foreground bg-[url('/reviews.webp')] bg-[0_0] bg-no-repeat bg-cover py-20 dark:bg-gradient-to-br dark:from-secondary dark:to-secondary-foreground"
 		>
-			<div className="container flex flex-col gap-12 mx-auto px-4">
-				<div className="flex flex-col gap-2">
-					<h3 className="opacity-60 uppercase text-sm leading-[140%] tracking-tighter text-center">
+			<div className="mx-auto max-w-7xl px-6 lg:px-8">
+				<div className="flex flex-col gap-2 mb-12">
+					<h3 className="opacity-60 uppercase text-sm tracking-tighter text-center">
 						Reviews
 					</h3>
-					<h2 className="font-display font-medium text-balance mx-auto max-w-4xl text-center tracking-tight leading-[115%] text-3xl lg:text-5xl">
+					<h2 className="font-display font-medium text-balance mx-auto max-w-4xl text-center tracking-tight text-3xl lg:text-5xl">
 						What our customers say:
 					</h2>
 				</div>
-				<div className="max-w-5xl mx-auto overflow-hidden p-4">
-					<div className="flex flex-row items-center justify-center gap-4">
-						<button
-							onClick={onPrev}
-							type="button"
-							className="hidden lg:flex items-center justify-center bg-background/90 hover:bg-background text-foreground text-3xl font-bold size-12 rounded-xl px-3"
-						>
-							<ArrowLeft />
-						</button>
-						<div
-							className="flex flex-grow dark
-						:bg-background/90 bg-background text-foreground rounded-xl w-full h-full min-h-[420px]"
-						>
-							<div className="flex flex-col flex-grow gap-12 justify-between h-full items-center p-12 w-full">
-								<p className="text-balance text-left flex-grow font-medium tracking-tight text-xl md:text-2xl">
-									{reviews[currentReview].review}
-								</p>
-								<div className="flex justify-start w-full">
-									<div className="flex items-center gap-6">
-										<img
-											src={reviews[currentReview].face}
-											alt="Avatar"
-											className="size-16 rounded-full corner-squircle"
-										/>
-										<div className="flex flex-col">
-											<p className="text-xl font-bold">
-												{reviews[currentReview].author}
-											</p>
-											<p className="text-base text-muted-foreground font-medium">
-												{reviews[currentReview].authorTitle}
-											</p>
-										</div>
+				<div className="grid grid-cols-1 gap-6 lg:grid-cols-5">
+					<div className="lg:col-span-3 flex flex-col justify-between rounded-2xl bg-background text-foreground p-10 lg:p-12 shadow-sm outline-1 -outline-offset-1 outline-black/5">
+						<div>
+							<img
+								src={reviews[0].logo}
+								alt=""
+								className="h-8 w-auto mb-8 dark:invert"
+							/>
+							<p className="relative text-pretty text-xl lg:text-2xl font-medium tracking-tight before:absolute before:inline before:-translate-x-full before:content-['\201C'] after:inline after:content-['\201D']">{reviews[0].review}</p>
+						</div>
+						<div className="mt-10 flex items-center gap-5">
+							<img
+								src={reviews[0].face}
+								alt=""
+								className="size-14 rounded-full outline-1 -outline-offset-1 outline-black/5"
+							/>
+							<div>
+								<p className="text-base font-semibold">{reviews[0].author}</p>
+								<p className="text-sm text-muted-foreground">{reviews[0].authorTitle}</p>
+							</div>
+						</div>
+					</div>
+					<div className="lg:col-span-2 flex flex-col gap-6">
+						{reviews.slice(1).map((review) => (
+							<div
+								key={review.author}
+								className="flex flex-1 flex-col justify-between rounded-2xl bg-background text-foreground p-8 shadow-sm outline-1 -outline-offset-1 outline-black/5"
+							>
+								<div className="flex flex-col gap-4">
+									<img
+										src={review.logo}
+										alt=""
+										className="h-6 w-auto self-start dark:invert"
+									/>
+									<p className="relative text-pretty text-base font-medium tracking-tight before:absolute before:inline before:-translate-x-full before:content-['\201C'] after:inline after:content-['\201D']">{review.review}</p>
+								</div>
+								<div className="mt-6 flex items-center gap-4">
+									<img
+										src={review.face}
+										alt=""
+										className="size-10 rounded-full outline-1 -outline-offset-1 outline-black/5"
+									/>
+									<div>
+										<p className="text-sm font-semibold">{review.author}</p>
+										<p className="text-sm text-muted-foreground">{review.authorTitle}</p>
 									</div>
 								</div>
 							</div>
-						</div>
-						<button
-							onClick={onNext}
-							type="button"
-							className="hidden lg:flex items-center justify-center bg-background/90 hover:bg-background text-foreground text-3xl font-bold size-12 rounded-xl px-3"
-						>
-							<ArrowRight />
-						</button>
+						))}
 					</div>
-				</div>
-				<div className="flex flex-col max-w-[864px] mx-auto w-full">
-					<div className="w-full flex justify-center items-center gap-8 lg:hidden">
-						<button
-							onClick={onPrev}
-							type="button"
-							className="flex items-center justify-center bg-background/90 hover:bg-background text-foreground text-3xl font-bold size-12 rounded-full corner-squircle px-3"
-						>
-							<ArrowLeft />
-						</button>
-						<button
-							onClick={onNext}
-							type="button"
-							className="flex items-center justify-center bg-background/90 hover:bg-background text-foreground text-3xl font-bold size-12 rounded-full corner-squircle px-3"
-						>
-							<ArrowRight />
-						</button>
-					</div>
-					{/* <div className="hidden lg:flex w-full items-center justify-center">
-            {reviews.map((image, index) => (
-              <div
-                key={image.logo}
-                role="button"
-                onClick={() => setCurrentReview(index)}
-                className={cn(
-                  "cursor-pointer flex-1 flex items-center justify-center pb-8 border-b border-secondary-foreground opacity-30 transition-opacity duration-200",
-                  index === currentReview && "opacity-100"
-                )}
-              >
-                <img
-                  className="h-6 w-auto invert dark:invert-0"
-                  src={image.logo}
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div> */}
 				</div>
 			</div>
 		</section>
