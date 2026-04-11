@@ -290,19 +290,19 @@ msgstr "専任サポート"
 msgid "Designed for manufacturing"
 msgstr "製造業向けに設計"
 
-#: app/root.tsx:293
+#: app/root.tsx:292
 msgid "Developer guides and API reference"
 msgstr "開発者ガイドとAPIリファレンス"
 
-#: app/root.tsx:253
+#: app/root.tsx:252
 msgid "Developers"
 msgstr "開発者"
 
-#: app/root.tsx:263
+#: app/root.tsx:262
 msgid "Discord"
 msgstr "Discord"
 
-#: app/root.tsx:291
+#: app/root.tsx:290
 #: app/routes/_index.tsx:492
 msgid "Documentation"
 msgstr "ドキュメント"
@@ -327,7 +327,7 @@ msgstr "エンドツーエンド"
 msgid "End-to-End Traceability"
 msgstr "エンドツーエンドトレーサビリティ"
 
-#: app/root.tsx:307
+#: app/root.tsx:306
 #: app/routes/pricing.tsx:47
 msgid "Enterprise"
 msgstr "エンタープライズ"
@@ -368,7 +368,7 @@ msgstr "始める"
 msgid "Get started for free"
 msgstr "無料で始める"
 
-#: app/root.tsx:277
+#: app/root.tsx:276
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -412,7 +412,7 @@ msgstr "ジョン・ドゥ"
 msgid "john@company.com"
 msgstr "john@company.com"
 
-#: app/root.tsx:265
+#: app/root.tsx:264
 msgid "Join our community chat"
 msgstr "コミュニティチャットに参加"
 
@@ -538,7 +538,7 @@ msgid "Powerful tools to run your business"
 msgstr "ビジネスを運営するための強力なツール"
 
 #: app/components/footer.tsx:56
-#: app/root.tsx:247
+#: app/root.tsx:246
 #: app/routes/pricing.tsx:79
 msgid "Pricing"
 msgstr "料金"
@@ -548,7 +548,7 @@ msgid "Privacy"
 msgstr "プライバシー"
 
 #: app/components/footer.tsx:51
-#: app/root.tsx:237
+#: app/root.tsx:236
 msgid "Product"
 msgstr "製品"
 
@@ -633,7 +633,7 @@ msgstr "シングルテナント"
 msgid "Software as a Service"
 msgstr "Software as a Service"
 
-#: app/root.tsx:406
+#: app/root.tsx:405
 msgid "Something went wrong"
 msgstr "何か問題が発生しました"
 
@@ -706,7 +706,7 @@ msgstr "オープンソースの<0>製造ERP</0>"
 msgid "Training"
 msgstr "トレーニング"
 
-#: app/root.tsx:336
+#: app/root.tsx:335
 #: app/routes/_index.tsx:131
 #: app/routes/_index.tsx:756
 msgid "Try It Now"
@@ -733,7 +733,7 @@ msgstr "ビデオライブラリ"
 msgid "View Docs"
 msgstr "ドキュメントを表示"
 
-#: app/root.tsx:279
+#: app/root.tsx:278
 msgid "View our source code and contribute"
 msgstr "ソースコードを表示して貢献する"
 

@@ -290,19 +290,19 @@ msgstr "专属支持"
 msgid "Designed for manufacturing"
 msgstr "为制造而设计"
 
-#: app/root.tsx:293
+#: app/root.tsx:292
 msgid "Developer guides and API reference"
 msgstr "开发者指南和 API 参考"
 
-#: app/root.tsx:253
+#: app/root.tsx:252
 msgid "Developers"
 msgstr "开发者"
 
-#: app/root.tsx:263
+#: app/root.tsx:262
 msgid "Discord"
 msgstr "Discord"
 
-#: app/root.tsx:291
+#: app/root.tsx:290
 #: app/routes/_index.tsx:492
 msgid "Documentation"
 msgstr "文档"
@@ -327,7 +327,7 @@ msgstr "端到端"
 msgid "End-to-End Traceability"
 msgstr "端到端可追溯性"
 
-#: app/root.tsx:307
+#: app/root.tsx:306
 #: app/routes/pricing.tsx:47
 msgid "Enterprise"
 msgstr "企业"
@@ -368,7 +368,7 @@ msgstr "开始"
 msgid "Get started for free"
 msgstr "免费开始"
 
-#: app/root.tsx:277
+#: app/root.tsx:276
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -412,7 +412,7 @@ msgstr "约翰·多"
 msgid "john@company.com"
 msgstr "john@company.com"
 
-#: app/root.tsx:265
+#: app/root.tsx:264
 msgid "Join our community chat"
 msgstr "加入我们的社区聊天"
 
@@ -538,7 +538,7 @@ msgid "Powerful tools to run your business"
 msgstr "强大的工具来运营您的业务"
 
 #: app/components/footer.tsx:56
-#: app/root.tsx:247
+#: app/root.tsx:246
 #: app/routes/pricing.tsx:79
 msgid "Pricing"
 msgstr "定价"
@@ -548,7 +548,7 @@ msgid "Privacy"
 msgstr "隐私"
 
 #: app/components/footer.tsx:51
-#: app/root.tsx:237
+#: app/root.tsx:236
 msgid "Product"
 msgstr "产品"
 
@@ -633,7 +633,7 @@ msgstr "单租户"
 msgid "Software as a Service"
 msgstr "软件即服务"
 
-#: app/root.tsx:406
+#: app/root.tsx:405
 msgid "Something went wrong"
 msgstr "出了问题"
 
@@ -706,7 +706,7 @@ msgstr "开源<0>制造ERP</0>"
 msgid "Training"
 msgstr "培训"
 
-#: app/root.tsx:336
+#: app/root.tsx:335
 #: app/routes/_index.tsx:131
 #: app/routes/_index.tsx:756
 msgid "Try It Now"
@@ -733,7 +733,7 @@ msgstr "视频库"
 msgid "View Docs"
 msgstr "查看文档"
 
-#: app/root.tsx:279
+#: app/root.tsx:278
 msgid "View our source code and contribute"
 msgstr "查看我们的源代码并做出贡献"
 
