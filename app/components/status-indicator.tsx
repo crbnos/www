@@ -3,10 +3,10 @@ import { Suspense } from "react";
 import { Await } from "react-router";
 import { cn } from "~/lib/utils";
 
-function StatusDot({ incident }: { incident: boolean }) {
+function StatusDot({ up }: { up: boolean }) {
 	const { t } = useLingui();
-	const label = incident ? t`Incident detected` : t`Operational`;
-	const color = incident ? "red" : "emerald";
+	const label = up ? t`Operational` : t`Incident detected`;
+	const color = up ? "emerald" : "red";
 
 	return (
 		<a
@@ -51,7 +51,7 @@ function StatusLoading() {
 export function StatusIndicator({
 	statusPromise,
 }: {
-	statusPromise: Promise<{ incident: unknown }>;
+	statusPromise: Promise<{ up: boolean }>;
 }) {
 	return (
 		<div className="flex flex-col gap-1">
@@ -60,7 +60,7 @@ export function StatusIndicator({
 			</span>
 			<Suspense fallback={<StatusLoading />}>
 				<Await resolve={statusPromise}>
-					{(status) => <StatusDot incident={!!status?.incident} />}
+					{(status) => <StatusDot up={status?.up ?? false} />}
 				</Await>
 			</Suspense>
 		</div>

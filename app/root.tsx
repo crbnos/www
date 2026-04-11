@@ -49,6 +49,7 @@ import { loadLinguiCatalog } from "./services/lingui.server";
 import { getLocale } from "./services/locale.server";
 import { getMode, setMode } from "./services/mode.server";
 import { path } from "./utils/path";
+import { fetchStatus } from "./utils/status";
 
 export const config = { runtime: "edge" };
 
@@ -63,12 +64,7 @@ export async function loader({ request, params }: LoaderFunctionArgs) {
 	const locale = getLocale(request);
 	const linguiCatalog = await loadLinguiCatalog(locale);
 
-	const statusPromise = fetch(
-		"https://status.carbon.ms/api-status-page/production",
-	)
-		.then((res) => res.json())
-		.then((json) => ({ incident: json.incident ?? null }))
-		.catch(() => ({ incident: null }));
+	const statusPromise = fetchStatus();
 
 	return { siteUrl, mode: getMode(request, hints.theme), hints, linguiCatalog, locale, statusPromise };
 }
