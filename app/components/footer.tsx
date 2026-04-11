@@ -1,9 +1,11 @@
 import { Trans } from "@lingui/react/macro";
-import { Link } from "react-router";
+import { Link, useRouteLoaderData } from "react-router";
+import type { loader } from "~/root";
 import { SocialIcon } from "./social-icon";
 import { StatusIndicator } from "./status-indicator";
 
 export function Footer() {
+  const data = useRouteLoaderData<typeof loader>("root");
   return (
     <>
       <hr className="m-0 h-px w-full border-none bg-gradient-to-r from-background via-zinc-200 dark:via-zinc-800 to-background " />
@@ -35,7 +37,7 @@ export function Footer() {
               <SocialIcon type="github" href="https://github.com/crbnos" />
             </div>
 
-            <StatusIndicator />
+            <StatusIndicator statusPromise={data!.statusPromise} />
           </div>
           <div className="col-span-1 flex flex-col gap-1">
             <p className="font-medium py-1 col-span-1 text-sm text-muted-foreground">

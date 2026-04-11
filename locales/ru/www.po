@@ -66,10 +66,6 @@ msgstr "Все расширенные функции доступны"
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "Все товарные знаки Carbon, логотипы или другие элементы бренда никогда не могут быть изменены или использованы в каких-либо целях, кроме как для представления Carbon Manufacturing Systems Corporation."
 
-#: app/components/status-indicator.tsx:24
-msgid "All systems operational"
-msgstr "Все системы работают нормально"
-
 #: app/components/hero.tsx:244
 msgid "Analytics"
 msgstr "Аналитика"
@@ -528,6 +524,10 @@ msgstr "Открыть ссылку"
 msgid "Open Source"
 msgstr "Открытый исходный код"
 
+#: app/components/status-indicator.tsx:24
+msgid "Operational"
+msgstr "Работает"
+
 #: app/components/footer.tsx:48
 #: app/routes/oss.tsx:38
 msgid "OSS Friends"
@@ -688,6 +688,10 @@ msgstr "Отправить"
 #: app/components/wizard-form.tsx:130
 msgid "Support Level"
 msgstr "Уровень поддержки"
+
+#: app/components/status-indicator.tsx:32
+msgid "System Status:"
+msgstr "Статус системы:"
 
 #: app/routes/_index.tsx:242
 #: app/routes/_index.tsx:763

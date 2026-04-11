@@ -63,7 +63,14 @@ export async function loader({ request, params }: LoaderFunctionArgs) {
 	const locale = getLocale(request);
 	const linguiCatalog = await loadLinguiCatalog(locale);
 
-	return { siteUrl, mode: getMode(request, hints.theme), hints, linguiCatalog, locale };
+	const statusPromise = fetch(
+		"https://status.carbon.ms/api-status-page/production",
+	)
+		.then((res) => res.json())
+		.then((json) => ({ incident: json.incident ?? null }))
+		.catch(() => ({ incident: null }));
+
+	return { siteUrl, mode: getMode(request, hints.theme), hints, linguiCatalog, locale, statusPromise };
 }
 
 export async function action({ request }: ActionFunctionArgs) {
