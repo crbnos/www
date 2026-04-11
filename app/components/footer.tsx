@@ -1,6 +1,7 @@
 import { Trans } from "@lingui/react/macro";
 import { Link } from "react-router";
 import { SocialIcon } from "./social-icon";
+import { StatusIndicator } from "./status-indicator";
 
 export function Footer() {
   return (
@@ -33,6 +34,8 @@ export function Footer() {
               />
               <SocialIcon type="github" href="https://github.com/crbnos" />
             </div>
+
+            <StatusIndicator />
           </div>
           <div className="col-span-1 flex flex-col gap-1">
             <p className="font-medium py-1 col-span-1 text-sm text-muted-foreground">

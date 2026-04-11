@@ -66,6 +66,10 @@ msgstr "すべての高度な機能が利用可能"
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "すべてのCarbonの商標、ロゴ、またはその他のブランド要素は、Carbon Manufacturing Systems Corporationを表現する目的以外に変更または使用することはできません。"
 
+#: app/components/status-indicator.tsx:24
+msgid "All systems operational"
+msgstr "すべてのシステムが正常に動作しています"
+
 #: app/components/hero.tsx:244
 msgid "Analytics"
 msgstr "分析"
@@ -118,11 +122,11 @@ msgstr "基本的なERP、MES、およびQMS機能"
 msgid "Bill of Materials"
 msgstr "部品表"
 
-#: app/components/footer.tsx:43
+#: app/components/footer.tsx:46
 msgid "Blog"
 msgstr "ブログ"
 
-#: app/components/footer.tsx:42
+#: app/components/footer.tsx:45
 #: app/routes/brand.tsx:22
 msgid "Brand Assets"
 msgstr "ブランドアセット"
@@ -183,6 +187,10 @@ msgstr "Carbonの開発者ドキュメントは、Carbonをローカルで実行
 msgid "Carbon's source code is available on GitHub and is free to use. You can maintain your own public fork or acquire a commercial license to make your code modifications private."
 msgstr "Carbonのソースコードはgithubで利用可能であり、自由に使用できます。独自のパブリックフォークを維持するか、商用ライセンスを取得してコード変更をプライベートにすることができます。"
 
+#: app/components/status-indicator.tsx:27
+msgid "Checking status…"
+msgstr "ステータスを確認中…"
+
 #: app/components/wizard-form.tsx:77
 msgid "Choose how you'd like to own the solution"
 msgstr "ソリューションをどのように所有したいかを選択してください"
@@ -203,7 +211,7 @@ msgstr "コード例"
 msgid "Community support"
 msgstr "コミュニティサポート"
 
-#: app/components/footer.tsx:39
+#: app/components/footer.tsx:42
 msgid "Company"
 msgstr "会社"
 
@@ -228,7 +236,7 @@ msgstr "コンフィギュレーター"
 msgid "Connect your robots and machines to your production systems"
 msgstr "ロボットと機械を本番システムに接続します"
 
-#: app/components/footer.tsx:44
+#: app/components/footer.tsx:47
 #: app/routes/contact.tsx:143
 msgid "Contact"
 msgstr "お問い合わせ"
@@ -392,6 +400,10 @@ msgstr "オープンソースには素晴らしい可能性があると信じて
 msgid "Implementation support"
 msgstr "実装サポート"
 
+#: app/components/status-indicator.tsx:26
+msgid "Incident detected"
+msgstr "インシデントが検出されました"
+
 #: app/routes/_index.tsx:324
 msgid "Integrated Agents"
 msgstr "統合エージェント"
@@ -428,7 +440,7 @@ msgstr "カンバンスケジュール"
 msgid "Keep your shop floor schedule up-to-date with our simple and powerful scheduling engine. Schedule by job due date, or by fine-tune work center and resource availability."
 msgstr "ショップフロアのスケジュールを、シンプルで強力なスケジューリングエンジンで常に最新の状態に保ちます。ジョブの期限日でスケジュール設定するか、ワークセンターとリソースの可用性を細かく調整してスケジュール設定できます。"
 
-#: app/components/footer.tsx:54
+#: app/components/footer.tsx:57
 msgid "Learning"
 msgstr "学習"
 
@@ -440,7 +452,7 @@ msgstr "ラーニングセンター"
 msgid "Least expensive. Basic onboarding and email support"
 msgstr "最も安価です。基本的なオンボーディングとメールサポート"
 
-#: app/components/footer.tsx:63
+#: app/components/footer.tsx:66
 msgid "Legal"
 msgstr "法務"
 
@@ -448,7 +460,7 @@ msgstr "法務"
 msgid "Let us handle the infrastructure for you"
 msgstr "インフラストラクチャの管理はお任せください"
 
-#: app/components/footer.tsx:55
+#: app/components/footer.tsx:58
 msgid "License"
 msgstr "ライセンス"
 
@@ -516,7 +528,7 @@ msgstr "リンクを開く"
 msgid "Open Source"
 msgstr "オープンソース"
 
-#: app/components/footer.tsx:45
+#: app/components/footer.tsx:48
 #: app/routes/oss.tsx:38
 msgid "OSS Friends"
 msgstr "OSSフレンズ"
@@ -537,17 +549,17 @@ msgstr "プロセスを完了するために、ご連絡先の詳細をご入力
 msgid "Powerful tools to run your business"
 msgstr "ビジネスを運営するための強力なツール"
 
-#: app/components/footer.tsx:56
+#: app/components/footer.tsx:59
 #: app/root.tsx:246
 #: app/routes/pricing.tsx:79
 msgid "Pricing"
 msgstr "料金"
 
-#: app/components/footer.tsx:66
+#: app/components/footer.tsx:69
 msgid "Privacy"
 msgstr "プライバシー"
 
-#: app/components/footer.tsx:51
+#: app/components/footer.tsx:54
 #: app/root.tsx:236
 msgid "Product"
 msgstr "製品"
@@ -581,7 +593,7 @@ msgstr "リソース"
 msgid "Reviews"
 msgstr "レビュー"
 
-#: app/components/footer.tsx:46
+#: app/components/footer.tsx:49
 msgid "Sales"
 msgstr "営業"
 
@@ -637,7 +649,7 @@ msgstr "Software as a Service"
 msgid "Something went wrong"
 msgstr "何か問題が発生しました"
 
-#: app/components/footer.tsx:57
+#: app/components/footer.tsx:60
 #: app/routes/_index.tsx:523
 msgid "Source Code"
 msgstr "ソースコード"
@@ -682,7 +694,7 @@ msgstr "サポートレベル"
 msgid "Talk to Us"
 msgstr "お話しします"
 
-#: app/components/footer.tsx:67
+#: app/components/footer.tsx:70
 msgid "Terms"
 msgstr "利用規約"
 

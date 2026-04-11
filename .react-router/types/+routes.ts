@@ -14,6 +14,9 @@ type Pages = {
   "/": {
     params: {};
   };
+  "/api/status": {
+    params: {};
+  };
   "/api/try": {
     params: {};
   };
@@ -51,11 +54,15 @@ type Pages = {
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/api/try" | "/brand" | "/contact" | "/learn" | "/learn/:slug" | "/oss" | "/pricing" | "/privacy" | "/sales" | "/terms";
+    page: "/" | "/api/status" | "/api/try" | "/brand" | "/contact" | "/learn" | "/learn/:slug" | "/oss" | "/pricing" | "/privacy" | "/sales" | "/terms";
   };
   "routes/_index.tsx": {
     id: "routes/_index";
     page: "/";
+  };
+  "routes/api+/status.tsx": {
+    id: "routes/api+/status";
+    page: "/api/status";
   };
   "routes/api+/try.tsx": {
     id: "routes/api+/try";
@@ -106,6 +113,7 @@ type RouteFiles = {
 type RouteModules = {
   "root": typeof import("./app/root.tsx");
   "routes/_index": typeof import("./app/routes/_index.tsx");
+  "routes/api+/status": typeof import("./app/routes/api+/status.tsx");
   "routes/api+/try": typeof import("./app/routes/api+/try.tsx");
   "routes/brand": typeof import("./app/routes/brand.tsx");
   "routes/contact": typeof import("./app/routes/contact.tsx");

@@ -6,6 +6,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: pt\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
 
 #: app/routes/pricing.tsx:14
 #: app/routes/pricing.tsx:31
@@ -60,6 +66,10 @@ msgstr "Todos os recursos avançados disponíveis"
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "Todas as marcas registradas, logotipos ou outros elementos de marca da Carbon nunca podem ser modificados ou usados para qualquer outro propósito que não seja representar a Carbon Manufacturing Systems Corporation."
 
+#: app/components/status-indicator.tsx:24
+msgid "All systems operational"
+msgstr "Todos os sistemas operacionais"
+
 #: app/components/hero.tsx:244
 msgid "Analytics"
 msgstr "Análise"
@@ -112,11 +122,11 @@ msgstr "Funcionalidade básica de ERP, MES e QMS"
 msgid "Bill of Materials"
 msgstr "Lista de Materiais"
 
-#: app/components/footer.tsx:43
+#: app/components/footer.tsx:46
 msgid "Blog"
 msgstr "Blog"
 
-#: app/components/footer.tsx:42
+#: app/components/footer.tsx:45
 #: app/routes/brand.tsx:22
 msgid "Brand Assets"
 msgstr "Ativos de Marca"
@@ -177,6 +187,10 @@ msgstr "A documentação do desenvolvedor do Carbon o guia através da execuçã
 msgid "Carbon's source code is available on GitHub and is free to use. You can maintain your own public fork or acquire a commercial license to make your code modifications private."
 msgstr "O código-fonte do Carbon está disponível no GitHub e é gratuito. Você pode manter seu próprio fork público ou adquirir uma licença comercial para manter suas modificações de código privadas."
 
+#: app/components/status-indicator.tsx:27
+msgid "Checking status…"
+msgstr "Verificando status…"
+
 #: app/components/wizard-form.tsx:77
 msgid "Choose how you'd like to own the solution"
 msgstr "Escolha como você gostaria de possuir a solução"
@@ -197,7 +211,7 @@ msgstr "Exemplos de Código"
 msgid "Community support"
 msgstr "Suporte da comunidade"
 
-#: app/components/footer.tsx:39
+#: app/components/footer.tsx:42
 msgid "Company"
 msgstr "Empresa"
 
@@ -222,7 +236,7 @@ msgstr "Configurador"
 msgid "Connect your robots and machines to your production systems"
 msgstr "Conecte seus robôs e máquinas aos seus sistemas de produção"
 
-#: app/components/footer.tsx:44
+#: app/components/footer.tsx:47
 #: app/routes/contact.tsx:143
 msgid "Contact"
 msgstr "Contacto"
@@ -386,6 +400,10 @@ msgstr "Acredito que o código aberto tem um potencial incrível porque não é 
 msgid "Implementation support"
 msgstr "Suporte de implementação"
 
+#: app/components/status-indicator.tsx:26
+msgid "Incident detected"
+msgstr "Incidente detectado"
+
 #: app/routes/_index.tsx:324
 msgid "Integrated Agents"
 msgstr "Agentes Integrados"
@@ -422,7 +440,7 @@ msgstr "Cronograma Kanban"
 msgid "Keep your shop floor schedule up-to-date with our simple and powerful scheduling engine. Schedule by job due date, or by fine-tune work center and resource availability."
 msgstr "Mantenha o cronograma do seu chão de fábrica atualizado com nosso mecanismo de agendamento simples e poderoso. Agende por data de vencimento do trabalho ou ajuste fino da disponibilidade do centro de trabalho e recursos."
 
-#: app/components/footer.tsx:54
+#: app/components/footer.tsx:57
 msgid "Learning"
 msgstr "Aprendizado"
 
@@ -434,7 +452,7 @@ msgstr "Centro de Aprendizagem"
 msgid "Least expensive. Basic onboarding and email support"
 msgstr "Menos caro. Onboarding básico e suporte por email"
 
-#: app/components/footer.tsx:63
+#: app/components/footer.tsx:66
 msgid "Legal"
 msgstr "Legal"
 
@@ -442,7 +460,7 @@ msgstr "Legal"
 msgid "Let us handle the infrastructure for you"
 msgstr "Deixe-nos cuidar da infraestrutura para você"
 
-#: app/components/footer.tsx:55
+#: app/components/footer.tsx:58
 msgid "License"
 msgstr "Licença"
 
@@ -510,7 +528,7 @@ msgstr "Abrir link"
 msgid "Open Source"
 msgstr "Código Aberto"
 
-#: app/components/footer.tsx:45
+#: app/components/footer.tsx:48
 #: app/routes/oss.tsx:38
 msgid "OSS Friends"
 msgstr "Amigos OSS"
@@ -531,17 +549,17 @@ msgstr "Por favor, forneça seus dados de contato para concluir o processo"
 msgid "Powerful tools to run your business"
 msgstr "Ferramentas poderosas para gerenciar seu negócio"
 
-#: app/components/footer.tsx:56
+#: app/components/footer.tsx:59
 #: app/root.tsx:246
 #: app/routes/pricing.tsx:79
 msgid "Pricing"
 msgstr "Preços"
 
-#: app/components/footer.tsx:66
+#: app/components/footer.tsx:69
 msgid "Privacy"
 msgstr "Privacidade"
 
-#: app/components/footer.tsx:51
+#: app/components/footer.tsx:54
 #: app/root.tsx:236
 msgid "Product"
 msgstr "Produto"
@@ -575,7 +593,7 @@ msgstr "Recursos"
 msgid "Reviews"
 msgstr "Avaliações"
 
-#: app/components/footer.tsx:46
+#: app/components/footer.tsx:49
 msgid "Sales"
 msgstr "Vendas"
 
@@ -631,7 +649,7 @@ msgstr "Software como Serviço"
 msgid "Something went wrong"
 msgstr "Algo deu errado"
 
-#: app/components/footer.tsx:57
+#: app/components/footer.tsx:60
 #: app/routes/_index.tsx:523
 msgid "Source Code"
 msgstr "Código Fonte"
@@ -676,7 +694,7 @@ msgstr "Nível de Suporte"
 msgid "Talk to Us"
 msgstr "Fale Conosco"
 
-#: app/components/footer.tsx:67
+#: app/components/footer.tsx:70
 msgid "Terms"
 msgstr "Termos"
 
