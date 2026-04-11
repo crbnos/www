@@ -1,5 +1,6 @@
 /** biome-ignore-all lint/suspicious/noArrayIndexKey: <explanation> */
 "use carbon";
+import { Trans, useLingui } from "@lingui/react/macro";
 import * as TabsPrimitive from "@radix-ui/react-tabs";
 import { Book, Check, ChevronRight, Copy } from "lucide-react";
 import { Highlight, Prism, type PrismTheme } from "prism-react-renderer";
@@ -465,6 +466,7 @@ function CopyCodeButton({
 	textToCopy: string;
 	className?: string;
 }) {
+	const { t } = useLingui();
 	const [copied, setCopied] = useState(false);
 
 	useEffect(() => {
@@ -476,7 +478,7 @@ function CopyCodeButton({
 	return (
 		<button
 			type="button"
-			aria-label="Copy code snippet"
+			aria-label={t`Copy code snippet`}
 			className={cn(
 				"p-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors",
 				className,
@@ -529,6 +531,7 @@ function SnippetSwitcher({
 }
 
 export function CodeExamples({ className }: { className?: string }) {
+	const { t } = useLingui();
 	const [language, setLanguage] = useState<Language>("TypeScript");
 	const [snippet, setSnippet] = useState<SnippetName>("JS Client");
 
@@ -565,14 +568,14 @@ export function CodeExamples({ className }: { className?: string }) {
 			<div className="container max-w-6xl mx-auto px-4">
 				<div className="flex flex-col gap-8 mb-12">
 					<h3 className="text-muted-foreground uppercase text-sm leading-[140%] tracking-tighter text-center">
-						API-First
+						<Trans>API-First</Trans>
 					</h3>
 					<h2 className="font-display text-foreground text-balance mx-auto max-w-3xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl xl:text-6xl -mt-4">
-						Built on a developer-friendly platform
+						<Trans>Built on a developer-friendly platform</Trans>
 					</h2>
 					<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter text-base md:text-lg">
-						Carbon provides a comprehensive MCP server and API clients in many
-						popular languages.
+						<Trans>Carbon provides a comprehensive MCP server and API clients in many
+						popular languages.</Trans>
 					</p>
 					<div className="flex flex-col md:flex-row gap-4 justify-center">
 						<Button variant="secondary" size="xl" asChild>
@@ -581,7 +584,7 @@ export function CodeExamples({ className }: { className?: string }) {
 								target="_blank"
 								rel="noopener"
 							>
-								API Docs
+								<Trans>API Docs</Trans>
 								<Book />
 							</a>
 						</Button>
@@ -591,7 +594,7 @@ export function CodeExamples({ className }: { className?: string }) {
 								target="_blank"
 								rel="noopener"
 							>
-								Code Examples
+								<Trans>Code Examples</Trans>
 								<ChevronRight />
 							</a>
 						</Button>

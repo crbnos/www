@@ -1,4 +1,5 @@
-import type { ServerRuntimeMetaFunction as MetaFunction } from "@remix-run/server-runtime";
+import { Trans } from "@lingui/react/macro";
+import type { MetaFunction } from "react-router";
 import { DownloadIcon } from "lucide-react";
 import { Button } from "~/components/ui/button";
 
@@ -18,12 +19,12 @@ export default function Brand() {
 			<div className="mx-auto flex w-full flex-col px-4 md:px-6 lg:px-8 3xl:pt-32 4xl:pt-36 max-w-4xl pt-28">
 				<div className="flex flex-col gap-4 lg:items-center lg:text-center mb-16">
 					<h1 className="font-semibold text-6xl tracking-tight">
-						Brand Assets
+						<Trans>Brand Assets</Trans>
 					</h1>
 					<h2 className="font-medium text-xl text-muted-foreground max-w-5xl text-balance leading-relaxed tracking-tight">
-						All Carbon trademarks, logos, or other brand elements can never be
+						<Trans>All Carbon trademarks, logos, or other brand elements can never be
 						modified or used for any other purpose other than to represent
-						Carbon Manufacturing Systems Corporation.
+						Carbon Manufacturing Systems Corporation.</Trans>
 					</h2>
 				</div>
 
@@ -185,7 +186,7 @@ export default function Brand() {
 				<div className="flex flex-col justify-center items-center mt-8 mb-16 w-full bg-zinc-100 dark:bg-zinc-900 border rounded-2xl p-6 gap-4">
 					<Button variant="outline" asChild>
 						<a href="/brand/carbon-logos.zip" download>
-							Download Logo Kit
+							<Trans>Download Logo Kit</Trans>
 							<DownloadIcon className="w-4 h-4 ml-2" />
 						</a>
 					</Button>

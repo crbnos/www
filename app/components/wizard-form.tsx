@@ -1,4 +1,5 @@
-import { useFetcher } from "@remix-run/react";
+import { Trans, useLingui } from "@lingui/react/macro";
+import { useFetcher } from "react-router";
 import {
   ArrowLeft,
   ArrowRight,
@@ -67,117 +68,116 @@ export const useWizard = () => {
   return context;
 };
 
-export const steps: Step[] = [
-  {
-    id: 1,
-    title: "Ownership Model",
-    description: "Choose how you'd like to own the solution",
-    icon: Home,
-    options: [
-      {
-        value: "buy",
-        label: "Buy the Source Code",
-        description: "One-time purchase with full ownership",
-      },
-      {
-        value: "rent",
-        label: "Software as a Service",
-        description: "Low monthly payments",
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "Hosting Preference",
-    description: "Select your preferred hosting solution",
-    icon: Server,
-    options: [
-      {
-        value: "self-hosted",
-        label: "Self-Hosted",
-        description: "Complete control over your infrastructure",
-      },
-      {
-        value: "managed-hosting",
-        label: "Managed Hosting",
-        description: "Let us handle the infrastructure for you",
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "Database",
-    description: "Choose your preferred database",
-    icon: Database,
-    options: [
-      {
-        value: "multi-tenant",
-        label: "Multi-Tenant",
-        description: "Shared database with isolated data",
-      },
-      {
-        value: "single-tenant",
-        label: "Single-Tenant",
-        description: "Dedicated database for your organization",
-      },
-    ],
-  },
-  {
-    id: 4,
-    title: "Support Level",
-    description: "Select your desired level of support",
-    icon: Headphones,
-    options: [
-      {
-        value: "limited",
-        label: "Limited Support",
-        description: "Least expensive. Basic onboarding and email support",
-      },
-      {
-        value: "dedicated",
-        label: "Dedicated Support",
-        description:
-          "Recommended. Priority support with dedicated account manager",
-      },
-      {
-        value: "priority",
-        label: "Feature Prioritization",
-        description:
-          "Enterprise. Influence product roadmap with priority feature requests",
-      },
-    ],
-  },
-  {
-    id: 5,
-    title: "Custom Development",
-    description: "Select which features you need custom development for",
-    icon: Code,
-    options: [
-      {
-        value: "none",
-        label: "None Required",
-        description: "You can handle everything yourself",
-      },
-      {
-        value: "portal",
-        label: "Customer Portal/Website",
-        description:
-          "Create a branded ordering experience that drives production",
-      },
-      {
-        value: "shop-floor",
-        label: "Shop Floor Apps",
-        description:
-          "Connect your robots and machines to your production systems",
-      },
-      {
-        value: "integrations",
-        label: "Integrations",
-        description: "Custom integrations with your existing systems",
-      },
-    ],
-  },
-];
+function useSteps(): Step[] {
+  const { t } = useLingui();
+  return [
+    {
+      id: 1,
+      title: t`Ownership Model`,
+      description: t`Choose how you'd like to own the solution`,
+      icon: Home,
+      options: [
+        {
+          value: "buy",
+          label: t`Buy the Source Code`,
+          description: t`One-time purchase with full ownership`,
+        },
+        {
+          value: "rent",
+          label: t`Software as a Service`,
+          description: t`Low monthly payments`,
+        },
+      ],
+    },
+    {
+      id: 2,
+      title: t`Hosting Preference`,
+      description: t`Select your preferred hosting solution`,
+      icon: Server,
+      options: [
+        {
+          value: "self-hosted",
+          label: t`Self-Hosted`,
+          description: t`Complete control over your infrastructure`,
+        },
+        {
+          value: "managed-hosting",
+          label: t`Managed Hosting`,
+          description: t`Let us handle the infrastructure for you`,
+        },
+      ],
+    },
+    {
+      id: 3,
+      title: t`Database`,
+      description: t`Choose your preferred database`,
+      icon: Database,
+      options: [
+        {
+          value: "multi-tenant",
+          label: t`Multi-Tenant`,
+          description: t`Shared database with isolated data`,
+        },
+        {
+          value: "single-tenant",
+          label: t`Single-Tenant`,
+          description: t`Dedicated database for your organization`,
+        },
+      ],
+    },
+    {
+      id: 4,
+      title: t`Support Level`,
+      description: t`Select your desired level of support`,
+      icon: Headphones,
+      options: [
+        {
+          value: "limited",
+          label: t`Limited Support`,
+          description: t`Least expensive. Basic onboarding and email support`,
+        },
+        {
+          value: "dedicated",
+          label: t`Dedicated Support`,
+          description: t`Recommended. Priority support with dedicated account manager`,
+        },
+        {
+          value: "priority",
+          label: t`Feature Prioritization`,
+          description: t`Enterprise. Influence product roadmap with priority feature requests`,
+        },
+      ],
+    },
+    {
+      id: 5,
+      title: t`Custom Development`,
+      description: t`Select which features you need custom development for`,
+      icon: Code,
+      options: [
+        {
+          value: "none",
+          label: t`None Required`,
+          description: t`You can handle everything yourself`,
+        },
+        {
+          value: "portal",
+          label: t`Customer Portal/Website`,
+          description: t`Create a branded ordering experience that drives production`,
+        },
+        {
+          value: "shop-floor",
+          label: t`Shop Floor Apps`,
+          description: t`Connect your robots and machines to your production systems`,
+        },
+        {
+          value: "integrations",
+          label: t`Integrations`,
+          description: t`Custom integrations with your existing systems`,
+        },
+      ],
+    },
+  ];
+}
 
 export type Step = {
   id: number;
@@ -212,6 +212,7 @@ type WizardFormProps = {
 };
 
 export function WizardForm({ open, onClose }: WizardFormProps) {
+  const steps = useSteps();
   const { answers, setAnswers, currentStep, setCurrentStep } = useWizard();
   const fetcher = useFetcher();
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -296,11 +297,11 @@ export function WizardForm({ open, onClose }: WizardFormProps) {
                   <DialogHeader className="px-0">
                     <DialogTitle className="text-2xl flex items-center gap-2">
                       <Users className="w-6 h-6" />
-                      Contact Information
+                      <Trans>Contact Information</Trans>
                     </DialogTitle>
                     <DialogDescription>
-                      Please provide your contact details to complete the
-                      process
+                      <Trans>Please provide your contact details to complete the
+                      process</Trans>
                     </DialogDescription>
                   </DialogHeader>
                   <ContactForm
@@ -330,7 +331,7 @@ export function WizardForm({ open, onClose }: WizardFormProps) {
                     type="button"
                   >
                     <ArrowLeft className="w-4 h-4 mr-2" />
-                    Back
+                    <Trans>Back</Trans>
                   </Button>
                 )}
                 {currentStep === getTotalSteps(answers) - 1 && (
@@ -345,7 +346,7 @@ export function WizardForm({ open, onClose }: WizardFormProps) {
                       className="ml-auto flex items-center"
                       disabled={!isComplete() || fetcher.state !== "idle"}
                     >
-                      Complete
+                      <Trans>Complete</Trans>
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </>
@@ -358,10 +359,10 @@ export function WizardForm({ open, onClose }: WizardFormProps) {
                 <Check className="w-16 h-16 text-green-500" />
               </div>
               <h2 className="text-2xl font-bold animate-fade-in">
-                Thank you for your interest!
+                <Trans>Thank you for your interest!</Trans>
               </h2>
               <p className="text-center text-muted-foreground animate-fade-in-delayed">
-                We'll be in touch with you shortly to setup a demo.
+                <Trans>We'll be in touch with you shortly to setup a demo.</Trans>
               </p>
             </div>
           )}
@@ -377,39 +378,40 @@ type ContactFormProps = {
 };
 
 function ContactForm({ values, onChange }: ContactFormProps) {
+  const { t } = useLingui();
   return (
     <CardContent className="px-0 space-y-6">
       <div className="space-y-2">
-        <Label htmlFor="name">Full Name</Label>
+        <Label htmlFor="name"><Trans>Full Name</Trans></Label>
         <Input
           id="name"
           name="name"
           value={values.name}
           onChange={(e) => onChange("name", e.target.value)}
-          placeholder="John Doe"
+          placeholder={t`John Doe`}
         />
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="email">Email Address</Label>
+        <Label htmlFor="email"><Trans>Email Address</Trans></Label>
         <Input
           id="email"
           name="email"
           type="email"
           value={values.email}
           onChange={(e) => onChange("email", e.target.value)}
-          placeholder="john@company.com"
+          placeholder={t`john@company.com`}
         />
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="company">Company Name</Label>
+        <Label htmlFor="company"><Trans>Company Name</Trans></Label>
         <Input
           id="company"
           name="company"
           value={values.company}
           onChange={(e) => onChange("company", e.target.value)}
-          placeholder="Acme Inc"
+          placeholder={t`Acme Inc`}
         />
       </div>
     </CardContent>

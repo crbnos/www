@@ -1,4 +1,4 @@
-import { useFetchers } from "@remix-run/react";
+import { useFetchers } from "react-router";
 
 import type { Mode } from "~/types/validators";
 import { modeValidator } from "~/types/validators";

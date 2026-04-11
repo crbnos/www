@@ -1,4 +1,5 @@
 // Start of Selection
+import { Trans, useLingui } from "@lingui/react/macro";
 import {
   motion,
   MotionValue,
@@ -14,10 +15,11 @@ import { useWizard } from "./wizard-form";
 
 export function Hero() {
   const ref = useRef(null);
+  const screenshots = useScreenshots();
 
-  const firstRow = useMemo(() => screenshots.slice(0, 5), []);
-  const secondRow = useMemo(() => screenshots.slice(5, 10), []);
-  const thirdRow = useMemo(() => screenshots.slice(10, 15), []);
+  const firstRow = useMemo(() => screenshots.slice(0, 5), [screenshots]);
+  const secondRow = useMemo(() => screenshots.slice(5, 10), [screenshots]);
+  const thirdRow = useMemo(() => screenshots.slice(10, 15), [screenshots]);
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -118,10 +120,10 @@ export const Header = memo(({ className }: { className?: string }) => {
       )}
     >
       <h2 className="text-balance mx-auto mt-4 max-w-4xl text-center text-4xl font-semibold tracking-tighter bg-[radial-gradient(at_top_left,_var(--tw-gradient-stops))] from-zinc-700 to-zinc-900 dark:from-zinc-200 dark:to-zinc-400 bg-clip-text text-transparent sm:text-5xl md:text-6xl lg:text-7xl xl:text-[4.5rem]">
-        The Modern Manufacturing Stack
+        <Trans>The Modern Manufacturing Stack</Trans>
       </h2>
       <p className="text-balance mx-auto max-w-4xl text-center text-muted-foreground font-medium text-lg">
-        Carbon combines ERP, MES, and QMS into a single, unified system.
+        <Trans>Carbon combines ERP, MES, and QMS into a single, unified system.</Trans>
       </p>
       <Button
         onClick={() => setShowWizard(true)}
@@ -129,7 +131,7 @@ export const Header = memo(({ className }: { className?: string }) => {
         variant="outline"
         className="text-lg rounded-full"
       >
-        Get Started
+        <Trans>Get Started</Trans>
         <Play className="size-5" />
       </Button>
     </motion.div>
@@ -183,69 +185,72 @@ export const ScreenshotCard = memo(
 
 ScreenshotCard.displayName = "ScreenshotCard";
 
-export const screenshots = [
-  {
-    title: "Work Instructions",
-    thumbnail: "/screenshots/bop.webp",
-  },
-  {
-    title: "Quotes Table",
-    thumbnail: "/screenshots/quotes-table.webp",
-  },
-  {
-    title: "MES 3D Viewer",
-    thumbnail: "/screenshots/mes-model.webp",
-  },
-  {
-    title: "Global Search",
-    thumbnail: "/screenshots/search.webp",
-  },
-  {
-    title: "Resources",
-    thumbnail: "/screenshots/permissions.webp",
-  },
-  {
-    title: "Documents",
-    thumbnail: "/screenshots/documents.webp",
-  },
-  {
-    title: "Kanban Schedule",
-    thumbnail: "/screenshots/kanban.webp",
-  },
-  {
-    title: "Auto-generated API Documentation",
-    thumbnail: "/screenshots/api-docs.webp",
-  },
-  {
-    title: "MES Work Instructions",
-    thumbnail: "/screenshots/mes-instructions.webp",
-  },
-  {
-    title: "Bill of Materials",
-    thumbnail: "/screenshots/bom.webp",
-  },
-  {
-    title: "Customer Portal",
-    thumbnail: "/screenshots/customer-portal.webp",
-  },
-  {
-    title: "Configurator",
-    thumbnail: "/screenshots/configurator.webp",
-  },
-  {
-    title: "Quote Pricing",
-    thumbnail: "/screenshots/quote-pricing.webp",
-  },
-  {
-    title: "Analytics",
-    thumbnail: "/screenshots/analytics.webp",
-  },
-  {
-    title: "MES Details",
-    thumbnail: "/screenshots/mes-details.webp",
-  },
-  {
-    title: "Resources",
-    thumbnail: "/screenshots/resources.webp",
-  },
-];
+export function useScreenshots() {
+  const { t } = useLingui();
+  return [
+    {
+      title: t`Work Instructions`,
+      thumbnail: "/screenshots/bop.webp",
+    },
+    {
+      title: t`Quotes Table`,
+      thumbnail: "/screenshots/quotes-table.webp",
+    },
+    {
+      title: t`MES 3D Viewer`,
+      thumbnail: "/screenshots/mes-model.webp",
+    },
+    {
+      title: t`Global Search`,
+      thumbnail: "/screenshots/search.webp",
+    },
+    {
+      title: t`Resources`,
+      thumbnail: "/screenshots/permissions.webp",
+    },
+    {
+      title: t`Documents`,
+      thumbnail: "/screenshots/documents.webp",
+    },
+    {
+      title: t`Kanban Schedule`,
+      thumbnail: "/screenshots/kanban.webp",
+    },
+    {
+      title: t`Auto-generated API Documentation`,
+      thumbnail: "/screenshots/api-docs.webp",
+    },
+    {
+      title: t`MES Work Instructions`,
+      thumbnail: "/screenshots/mes-instructions.webp",
+    },
+    {
+      title: t`Bill of Materials`,
+      thumbnail: "/screenshots/bom.webp",
+    },
+    {
+      title: t`Customer Portal`,
+      thumbnail: "/screenshots/customer-portal.webp",
+    },
+    {
+      title: t`Configurator`,
+      thumbnail: "/screenshots/configurator.webp",
+    },
+    {
+      title: t`Quote Pricing`,
+      thumbnail: "/screenshots/quote-pricing.webp",
+    },
+    {
+      title: t`Analytics`,
+      thumbnail: "/screenshots/analytics.webp",
+    },
+    {
+      title: t`MES Details`,
+      thumbnail: "/screenshots/mes-details.webp",
+    },
+    {
+      title: t`Resources`,
+      thumbnail: "/screenshots/resources.webp",
+    },
+  ];
+}

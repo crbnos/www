@@ -1,7 +1,8 @@
+import { Trans, useLingui } from "@lingui/react/macro";
 import { Turnstile } from "@marsidev/react-turnstile";
-import { useFetcher, useLoaderData } from "@remix-run/react";
+import { data, useFetcher, useLoaderData } from "react-router";
+import type { ActionFunctionArgs, LoaderFunctionArgs } from "react-router";
 import { Ratelimit } from "@upstash/ratelimit";
-import { ActionFunctionArgs, LoaderFunctionArgs, json } from "@vercel/remix";
 import { Check } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "~/components/ui/button";
@@ -20,7 +21,7 @@ const ratelimit = new Ratelimit({
 });
 
 export async function loader({ request }: LoaderFunctionArgs) {
-  return json({
+  return data({
     ENV: {
       CLOUDFLARE_TURNSTILE_SITE_KEY:
         process.env.CLOUDFLARE_TURNSTILE_SITE_KEY || "",
@@ -33,7 +34,7 @@ export async function action({ request }: ActionFunctionArgs) {
   const { success, remaining } = await ratelimit.limit(ip);
 
   if (!success) {
-    return json(
+    return data(
       { success: false, message: "Too many submissions" },
       { status: 429 }
     );
@@ -47,7 +48,7 @@ export async function action({ request }: ActionFunctionArgs) {
   const turnstileToken = String(formData.get("turnstileToken") ?? "");
 
   if (!name || !email || !company || !message) {
-    return json(
+    return data(
       { success: false, message: "Invalid form submission" },
       { status: 400 }
     );
@@ -79,10 +80,10 @@ export async function action({ request }: ActionFunctionArgs) {
       }
     );
 
-    const verifyData = await verifyResponse.json();
+    const verifyData = await verifyResponse.data();
 
     if (!verifyData.success) {
-      return json(
+      return data(
         {
           success: false,
           message: "Bot verification failed. Please try again.",
@@ -114,10 +115,11 @@ export async function action({ request }: ActionFunctionArgs) {
     ],
   });
 
-  return json({ success: true, message: "Form submitted successfully" });
+  return data({ success: true, message: "Form submitted successfully" });
 }
 
 export default function Contact() {
+   const { t } = useLingui();
    const fetcher = useFetcher<typeof action>();
    const { ENV } = useLoaderData<typeof loader>();
    const [isSubmitted, setIsSubmitted] = useState(false);
@@ -138,7 +140,7 @@ export default function Contact() {
     <div className="flex flex-1 flex-col">
       <div className="mx-auto flex w-full flex-col px-4 md:px-6 lg:px-8 3xl:pt-32 4xl:pt-36 max-w-4xl pt-28">
         <div className="flex flex-col gap-4 lg:items-center lg:text-center mb-16">
-          <h1 className="font-semibold text-6xl tracking-tight">Contact</h1>
+          <h1 className="font-semibold text-6xl tracking-tight"><Trans>Contact</Trans></h1>
         </div>
       </div>
       <div className="mx-auto flex flex-col px-4 w-full lg:w-form-lg max-w-4xl mb-28">
@@ -148,23 +150,23 @@ export default function Contact() {
               <Check className="w-16 h-16 text-green-500" />
             </div>
             <h2 className="text-2xl font-bold animate-fade-in">
-              Thank you for your message!
+              <Trans>Thank you for your message!</Trans>
             </h2>
             <p className="text-center text-muted-foreground animate-fade-in-delayed">
-              We'll be in touch with you shortly.
+              <Trans>We'll be in touch with you shortly.</Trans>
             </p>
           </div>
         ) : (
           <fetcher.Form method="post" className="flex flex-col gap-5">
             <input type="hidden" name="turnstileToken" value={turnstileToken} />
             <div className="relative flex flex-col gap-2">
-              <Label htmlFor="name">Name</Label>
+              <Label htmlFor="name"><Trans>Name</Trans></Label>
               <div className="relative flex flex-1">
                 <Input
                   type="text"
                   id="name"
                   name="name"
-                  placeholder="Your name"
+                  placeholder={t`Your name`}
                   required
                   autoComplete="name"
                   data-1p-ignore="true"
@@ -174,13 +176,13 @@ export default function Contact() {
 
             <div className="grid gap-5 lg:grid-cols-2">
               <div className="relative flex flex-col gap-2">
-                <Label htmlFor="email">Work Email</Label>
+                <Label htmlFor="email"><Trans>Work Email</Trans></Label>
                 <div className="relative flex flex-1">
                   <Input
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="you@acme.com"
+                    placeholder={t`you@acme.com`}
                     required
                     autoComplete="email"
                     data-1p-ignore="true"
@@ -189,13 +191,13 @@ export default function Contact() {
               </div>
 
               <div className="relative flex flex-col gap-2">
-                <Label htmlFor="companyName">Company Name</Label>
+                <Label htmlFor="companyName"><Trans>Company Name</Trans></Label>
                 <div className="relative flex flex-1">
                   <Input
                     type="text"
                     id="companyName"
                     name="companyName"
-                    placeholder="Acme, Inc."
+                    placeholder={t`Acme, Inc.`}
                     required
                     autoComplete="organization"
                     data-1p-ignore="true"
@@ -205,12 +207,12 @@ export default function Contact() {
             </div>
 
             <div className="relative flex flex-col gap-2">
-              <Label htmlFor="message">Message</Label>
+              <Label htmlFor="message"><Trans>Message</Trans></Label>
               <div className="relative flex flex-1">
                 <Textarea
                   id="message"
                   name="message"
-                  placeholder="What can we help with?"
+                  placeholder={t`What can we help with?`}
                   className="h-[113px]"
                   required
                 />
@@ -225,7 +227,7 @@ export default function Contact() {
                   (!!CLOUDFLARE_TURNSTILE_SITE_KEY && !turnstileToken)
                 }
               >
-                Submit
+                <Trans>Submit</Trans>
               </Button>
               <div>
                 {CLOUDFLARE_TURNSTILE_SITE_KEY && CLOUDFLARE_TURNSTILE_SITE_KEY !== "" && (

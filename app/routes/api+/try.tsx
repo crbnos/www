@@ -1,4 +1,5 @@
-import { json, type ActionFunctionArgs } from "@vercel/remix";
+import { data } from "react-router";
+import type { ActionFunctionArgs } from "react-router";
 import { z } from "zod";
 import { getSlackClient } from "~/lib/slack.server";
 
@@ -24,7 +25,7 @@ export async function action({ request }: ActionFunctionArgs) {
   const answersJson = formData.get("answers");
 
   if (!answersJson || typeof answersJson !== "string") {
-    return json(
+    return data(
       { success: false, message: "Invalid form submission" },
       { status: 400 }
     );
@@ -34,7 +35,7 @@ export async function action({ request }: ActionFunctionArgs) {
   try {
     answers = answersSchema.parse(JSON.parse(answersJson));
   } catch (error) {
-    return json(
+    return data(
       { success: false, message: "Invalid form data" },
       { status: 400 }
     );
@@ -114,5 +115,5 @@ export async function action({ request }: ActionFunctionArgs) {
     ],
   });
 
-  return json({ success: true, message: "Form submitted successfully" });
+  return data({ success: true, message: "Form submitted successfully" });
 }

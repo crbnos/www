@@ -1,0 +1,794 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2026-04-10 22:40-0400\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: de\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: app/routes/pricing.tsx:14
+#: app/routes/pricing.tsx:31
+msgid "/user/month"
+msgstr "/Benutzer/Monat"
+
+#: app/routes/pricing.tsx:36
+msgid "5 user minimum"
+msgstr "5 Benutzer Minimum"
+
+#: app/routes/pricing.tsx:52
+msgid "A custom solution to meet your needs"
+msgstr "Eine maßgeschneiderte Lösung für Ihre Anforderungen"
+
+#: app/routes/pricing.tsx:17
+msgid "A managed cloud-hosted version of Carbon"
+msgstr "Eine verwaltete Cloud-gehostete Version von Carbon"
+
+#: app/routes/pricing.tsx:29
+msgid "A managed cloud-hosted version of Carbon that includes support and all advanced features"
+msgstr "Eine verwaltete Cloud-gehostete Version von Carbon, die Support und alle erweiterten Funktionen umfasst"
+
+#: app/routes/_index.tsx:301
+msgid "Achieve granular, end-to-end tracking of materials, components, and processes, ensuring compliance, simplifying audits, and enabling rapid root cause analysis without the complexity and cost of traditional high-end systems."
+msgstr "Erreichen Sie granulare, durchgehende Verfolgung von Materialien, Komponenten und Prozessen, gewährleisten Sie Compliance, vereinfachen Sie Audits und ermöglichen Sie schnelle Ursachenanalysen ohne die Komplexität und Kosten traditioneller High-End-Systeme."
+
+#: app/components/wizard-form.tsx:414
+msgid "Acme Inc"
+msgstr "Acme Inc"
+
+#: app/routes/contact.tsx:200
+msgid "Acme, Inc."
+msgstr "Acme, Inc."
+
+#: app/routes/pricing.tsx:40
+msgid "Advanced audit logging"
+msgstr "Erweitertes Audit-Logging"
+
+#: app/routes/_index.tsx:672
+msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
+msgstr "Nach fast einem Jahrzehnt der Entwicklung von End-to-End-Systemen für die Fertigung hatte ich eine ziemlich gute Vorstellung davon, wie eine „ideale\" Lösung aus technischer Perspektive aussehen sollte:"
+
+#: app/routes/pricing.tsx:42
+msgid "AI-powered workflows"
+msgstr "KI-gesteuerte Workflows"
+
+#: app/routes/pricing.tsx:43
+msgid "All advanced features available"
+msgstr "Alle erweiterten Funktionen verfügbar"
+
+#: app/routes/brand.tsx:25
+msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
+msgstr "Alle Carbon-Markenzeichen, Logos oder andere Markenelemente dürfen niemals geändert oder für einen anderen Zweck als die Darstellung der Carbon Manufacturing Systems Corporation verwendet werden."
+
+#: app/components/hero.tsx:244
+msgid "Analytics"
+msgstr "Analytik"
+
+#: app/components/code-examples.tsx:587
+msgid "API Docs"
+msgstr "API-Dokumentation"
+
+#: app/components/code-examples.tsx:571
+msgid "API-First"
+msgstr "API-First"
+
+#: app/routes/_index.tsx:403
+msgid "API-First Architecture"
+msgstr "API-First-Architektur"
+
+#: app/routes/_index.tsx:680
+msgid "API-first, realtime subscriptions, simple scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
+msgstr "API-First, Echtzeit-Abos, einfache Planung und 1.000 kleine Details, um die Nutzung eines ERP-Systems lohnend zu machen."
+
+#: app/routes/pricing.tsx:41
+msgid "API, webhooks, and integrations"
+msgstr "API, Webhooks und Integrationen"
+
+#: app/routes/_index.tsx:209
+msgid "Assembly and make-to-order workflows"
+msgstr "Montage- und Auftragsfertigungs-Workflows"
+
+#: app/components/hero.tsx:220
+msgid "Auto-generated API Documentation"
+msgstr "Automatisch generierte API-Dokumentation"
+
+#: app/routes/pricing.tsx:20
+msgid "Automatic updates and backups"
+msgstr "Automatische Updates und Sicherungen"
+
+#: app/routes/_index.tsx:356
+msgid "Automatically generate the Bill of Materials and Bill of Process for a given set of options/parameters with our powerful product configurator."
+msgstr "Generieren Sie automatisch die Stückliste und den Fertigungsprozess für einen bestimmten Satz von Optionen/Parametern mit unserem leistungsstarken Produktkonfigurator."
+
+#: app/components/wizard-form.tsx:334
+msgid "Back"
+msgstr "Zurück"
+
+#: app/routes/pricing.tsx:21
+msgid "Basic ERP, MES, and QMS functionality"
+msgstr "Grundlegende ERP-, MES- und QMS-Funktionalität"
+
+#: app/components/hero.tsx:228
+msgid "Bill of Materials"
+msgstr "Stückliste"
+
+#: app/components/footer.tsx:43
+msgid "Blog"
+msgstr "Blog"
+
+#: app/components/footer.tsx:42
+#: app/routes/brand.tsx:22
+msgid "Brand Assets"
+msgstr "Markenressourcen"
+
+#: app/routes/_index.tsx:748
+msgid "Build something with Carbon"
+msgstr "Bauen Sie etwas mit Carbon"
+
+#: app/components/code-examples.tsx:574
+msgid "Built on a developer-friendly platform"
+msgstr "Auf einer entwicklerfreundlichen Plattform aufgebaut"
+
+#: app/routes/_index.tsx:221
+msgid "Built on the best of open-source software"
+msgstr "Gebaut auf der Grundlage der besten Open-Source-Software"
+
+#: app/routes/pricing.tsx:28
+msgid "Business"
+msgstr "Geschäft"
+
+#: app/routes/_index.tsx:686
+msgid "But even as we work with our customers to become the best off-the-shelf ERP/MES for many types of discrete manufacturing, we are faced with the reality that there is no \"perfect\" off-the-shelf solution, because each manufacturing business is unique."
+msgstr "Aber während wir mit unseren Kunden zusammenarbeiten, um die beste vorgefertigte ERP/MES-Lösung für viele Arten der Einzelteilfertigung zu werden, müssen wir uns der Realität stellen, dass es keine „perfekte\" vorgefertigte Lösung gibt, da jedes Fertigungsunternehmen einzigartig ist."
+
+#: app/components/wizard-form.tsx:82
+msgid "Buy the Source Code"
+msgstr "Quellcode kaufen"
+
+#: app/routes/_index.tsx:464
+msgid "Carbon Academy is a free, self-paced learning platform that teaches you how to use Carbon. It's a great way to get started with Carbon and learn how to use it to its full potential."
+msgstr "Carbon Academy ist eine kostenlose, selbstgesteuerte Lernplattform, die dir beibringt, wie du Carbon nutzt. Es ist eine großartige Möglichkeit, mit Carbon zu beginnen und zu lernen, wie du es voll ausschöpfst."
+
+#: app/components/hero.tsx:126
+msgid "Carbon combines ERP, MES, and QMS into a single, unified system."
+msgstr "Carbon kombiniert ERP, MES und QMS in einem einzigen, einheitlichen System."
+
+#: app/routes/_index.tsx:122
+msgid "Carbon is a manufacturing system of record that combines ERP, MES, and QMS into a single, unified, API-first system that's perfect for complex manufacturing."
+msgstr "Carbon ist ein Fertigungssystem, das ERP, MES und QMS in einem einzigen, einheitlichen, API-First-System kombiniert, das sich perfekt für komplexe Fertigung eignet."
+
+#: app/routes/_index.tsx:407
+msgid "Carbon is built with an \"API-First Architecture,\" which gives you unparalleled flexibility to seamlessly connect Carbon with your other business systems. This allows you to automate workflows across all applications."
+msgstr "Carbon ist mit einer „API-First Architecture\" aufgebaut, die dir unvergleichliche Flexibilität bietet, um Carbon nahtlos mit deinen anderen Geschäftssystemen zu verbinden. Dies ermöglicht dir, Workflows über alle Anwendungen hinweg zu automatisieren."
+
+#: app/routes/_index.tsx:667
+msgid "Carbon Manufacturing Systems Corp."
+msgstr "Carbon Manufacturing Systems Corp."
+
+#: app/components/code-examples.tsx:577
+msgid "Carbon provides a comprehensive MCP server and API clients in many popular languages."
+msgstr "Carbon bietet einen umfassenden MCP-Server und API-Clients in vielen beliebten Programmiersprachen."
+
+#: app/routes/_index.tsx:495
+msgid "Carbon's developer documentation guides you through getting Carbon running locally, and extending it to build your own own custom applications."
+msgstr "Carbons Entwicklerdokumentation führt Sie durch die lokale Ausführung von Carbon und die Erweiterung, um Ihre eigenen benutzerdefinierten Anwendungen zu erstellen."
+
+#: app/routes/_index.tsx:526
+msgid "Carbon's source code is available on GitHub and is free to use. You can maintain your own public fork or acquire a commercial license to make your code modifications private."
+msgstr "Carbons Quellcode ist auf GitHub verfügbar und kann kostenlos verwendet werden. Sie können Ihren eigenen öffentlichen Fork verwalten oder eine kommerzielle Lizenz erwerben, um Ihre Code-Änderungen privat zu halten."
+
+#: app/components/wizard-form.tsx:77
+msgid "Choose how you'd like to own the solution"
+msgstr "Wählen Sie, wie Sie die Lösung besitzen möchten"
+
+#: app/components/wizard-form.tsx:113
+msgid "Choose your preferred database"
+msgstr "Wählen Sie Ihre bevorzugte Datenbank"
+
+#: app/routes/_index.tsx:732
+msgid "Co-founder"
+msgstr "Mitgründer"
+
+#: app/components/code-examples.tsx:597
+msgid "Code Examples"
+msgstr "Code-Beispiele"
+
+#: app/routes/pricing.tsx:24
+msgid "Community support"
+msgstr "Community-Unterstützung"
+
+#: app/components/footer.tsx:39
+msgid "Company"
+msgstr "Unternehmen"
+
+#: app/components/wizard-form.tsx:408
+#: app/routes/contact.tsx:194
+msgid "Company Name"
+msgstr "Unternehmensname"
+
+#: app/components/wizard-form.tsx:349
+msgid "Complete"
+msgstr "Fertig"
+
+#: app/components/wizard-form.tsx:101
+msgid "Complete control over your infrastructure"
+msgstr "Vollständige Kontrolle über Ihre Infrastruktur"
+
+#: app/components/hero.tsx:236
+msgid "Configurator"
+msgstr "Konfigurator"
+
+#: app/components/wizard-form.tsx:170
+msgid "Connect your robots and machines to your production systems"
+msgstr "Verbinden Sie Ihre Roboter und Maschinen mit Ihren Produktionssystemen"
+
+#: app/components/footer.tsx:44
+#: app/routes/contact.tsx:143
+msgid "Contact"
+msgstr "Kontakt"
+
+#: app/components/wizard-form.tsx:300
+msgid "Contact Information"
+msgstr "Kontaktinformationen"
+
+#: app/routes/pricing.tsx:48
+#: app/routes/pricing.tsx:50
+msgid "Contact us"
+msgstr "Kontaktieren Sie uns"
+
+#: app/components/code-examples.tsx:481
+msgid "Copy code snippet"
+msgstr "Code-Snippet kopieren"
+
+#: app/components/wizard-form.tsx:165
+msgid "Create a branded ordering experience that drives production"
+msgstr "Erstellen Sie ein Markenerlebnis für Bestellungen, das die Produktion vorantreibt"
+
+#: app/routes/pricing.tsx:59
+msgid "Custom development"
+msgstr "Benutzerdefinierte Entwicklung"
+
+#: app/components/wizard-form.tsx:153
+msgid "Custom Development"
+msgstr "Benutzerdefinierte Entwicklung"
+
+#: app/routes/pricing.tsx:58
+msgid "Custom integrations"
+msgstr "Benutzerdefinierte Integrationen"
+
+#: app/components/wizard-form.tsx:175
+msgid "Custom integrations with your existing systems"
+msgstr "Benutzerdefinierte Integrationen mit Ihren bestehenden Systemen"
+
+#: app/components/hero.tsx:232
+msgid "Customer Portal"
+msgstr "Kundenportal"
+
+#: app/components/wizard-form.tsx:164
+msgid "Customer Portal/Website"
+msgstr "Kundenportal/Website"
+
+#: app/components/wizard-form.tsx:112
+msgid "Database"
+msgstr "Datenbank"
+
+#: app/components/wizard-form.tsx:124
+msgid "Dedicated database for your organization"
+msgstr "Dedizierte Datenbank für Ihre Organisation"
+
+#: app/components/wizard-form.tsx:141
+msgid "Dedicated Support"
+msgstr "Dedizierter Support"
+
+#: app/routes/_index.tsx:196
+msgid "Designed for manufacturing"
+msgstr "Für die Fertigung konzipiert"
+
+#: app/root.tsx:293
+msgid "Developer guides and API reference"
+msgstr "Entwicklerhandbücher und API-Referenz"
+
+#: app/root.tsx:253
+msgid "Developers"
+msgstr "Entwickler"
+
+#: app/root.tsx:263
+msgid "Discord"
+msgstr "Discord"
+
+#: app/root.tsx:291
+#: app/routes/_index.tsx:492
+msgid "Documentation"
+msgstr "Dokumentation"
+
+#: app/components/hero.tsx:212
+msgid "Documents"
+msgstr "Dokumente"
+
+#: app/routes/brand.tsx:189
+msgid "Download Logo Kit"
+msgstr "Logo-Kit herunterladen"
+
+#: app/components/wizard-form.tsx:396
+msgid "Email Address"
+msgstr "E-Mail-Adresse"
+
+#: app/routes/_index.tsx:193
+msgid "End-to-End"
+msgstr "End-to-End"
+
+#: app/routes/_index.tsx:297
+msgid "End-to-End Traceability"
+msgstr "Durchgängige Rückverfolgbarkeit"
+
+#: app/root.tsx:307
+#: app/routes/pricing.tsx:47
+msgid "Enterprise"
+msgstr "Unternehmen"
+
+#: app/components/wizard-form.tsx:147
+msgid "Enterprise. Influence product roadmap with priority feature requests"
+msgstr "Enterprise. Beeinflussen Sie die Produktentwicklung mit priorisierten Funktionsanfragen"
+
+#: app/routes/pricing.tsx:37
+msgid "Everything from Starter"
+msgstr "Alles aus dem Starter-Plan"
+
+#: app/components/wizard-form.tsx:146
+msgid "Feature Prioritization"
+msgstr "Funktionspriorisierung"
+
+#: app/routes/_index.tsx:279
+msgid "Features"
+msgstr "Funktionen"
+
+#: app/routes/_index.tsx:664
+msgid "Founder memo"
+msgstr "Gründer-Memo"
+
+#: app/components/wizard-form.tsx:385
+msgid "Full Name"
+msgstr "Vollständiger Name"
+
+#: app/routes/pricing.tsx:57
+msgid "Full setup and migrations"
+msgstr "Vollständige Einrichtung und Migration"
+
+#: app/components/hero.tsx:134
+msgid "Get Started"
+msgstr "Erste Schritte"
+
+#: app/routes/pricing.tsx:152
+msgid "Get started for free"
+msgstr "Kostenlos starten"
+
+#: app/root.tsx:277
+msgid "GitHub"
+msgstr "GitHub"
+
+#: app/components/hero.tsx:204
+msgid "Global Search"
+msgstr "Globale Suche"
+
+#: app/routes/_index.tsx:227
+msgid "Govcloud-hosted Version Available"
+msgstr "Govcloud-gehostete Version verfügbar"
+
+#: app/components/wizard-form.tsx:94
+msgid "Hosting Preference"
+msgstr "Hosting-Präferenz"
+
+#: app/routes/_index.tsx:703
+msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
+msgstr "Ich glaube, dass Open-Source unglaubliches Potenzial hat, weil es nicht nur ein Produkt ist – es ist eine Gemeinschaft von gleichgesinnten Menschen, die an der Zukunft der Fertigung im Zeitalter von KI und Robotik arbeiten."
+
+#: app/routes/pricing.tsx:38
+msgid "Implementation support"
+msgstr "Implementierungsunterstützung"
+
+#: app/routes/_index.tsx:324
+msgid "Integrated Agents"
+msgstr "Integrierte Agenten"
+
+#: app/components/wizard-form.tsx:174
+msgid "Integrations"
+msgstr "Integrationen"
+
+#: app/routes/pricing.tsx:56
+msgid "ITAR compliant"
+msgstr "ITAR-konform"
+
+#: app/components/wizard-form.tsx:391
+msgid "John Doe"
+msgstr "John Doe"
+
+#: app/components/wizard-form.tsx:403
+msgid "john@company.com"
+msgstr "john@company.com"
+
+#: app/root.tsx:265
+msgid "Join our community chat"
+msgstr "Treten Sie unserem Community-Chat bei"
+
+#: app/routes/_index.tsx:779
+msgid "Join our Discord community"
+msgstr "Treten Sie unserer Discord-Community bei"
+
+#: app/components/hero.tsx:216
+msgid "Kanban Schedule"
+msgstr "Kanban-Zeitplan"
+
+#: app/routes/_index.tsx:381
+msgid "Keep your shop floor schedule up-to-date with our simple and powerful scheduling engine. Schedule by job due date, or by fine-tune work center and resource availability."
+msgstr "Halten Sie Ihren Produktionsplan mit unserem einfachen und leistungsstarken Planungsmodul auf dem neuesten Stand. Planen Sie nach Auftragsfertigungsdatum oder durch Feinabstimmung der Verfügbarkeit von Arbeitszentren und Ressourcen."
+
+#: app/components/footer.tsx:54
+msgid "Learning"
+msgstr "Lernen"
+
+#: app/routes/learn+/_layout.tsx:16
+msgid "Learning Center"
+msgstr "Lernzentrum"
+
+#: app/components/wizard-form.tsx:137
+msgid "Least expensive. Basic onboarding and email support"
+msgstr "Günstigste Option. Grundlegende Einführung und E-Mail-Support"
+
+#: app/components/footer.tsx:63
+msgid "Legal"
+msgstr "Rechtliches"
+
+#: app/components/wizard-form.tsx:106
+msgid "Let us handle the infrastructure for you"
+msgstr "Lassen Sie uns die Infrastruktur für Sie verwalten"
+
+#: app/components/footer.tsx:55
+msgid "License"
+msgstr "Lizenz"
+
+#: app/components/wizard-form.tsx:136
+msgid "Limited Support"
+msgstr "Eingeschränkter Support"
+
+#: app/components/wizard-form.tsx:88
+msgid "Low monthly payments"
+msgstr "Niedrige monatliche Zahlungen"
+
+#: app/components/wizard-form.tsx:105
+msgid "Managed Hosting"
+msgstr "Verwaltetes Hosting"
+
+#: app/components/hero.tsx:200
+msgid "MES 3D Viewer"
+msgstr "MES 3D-Viewer"
+
+#: app/components/hero.tsx:248
+msgid "MES Details"
+msgstr "MES-Details"
+
+#: app/components/hero.tsx:224
+msgid "MES Work Instructions"
+msgstr "MES-Arbeitsanweisungen"
+
+#: app/routes/contact.tsx:210
+msgid "Message"
+msgstr "Nachricht"
+
+#: app/routes/_index.tsx:150
+msgid "Modern manufacturers build their tech stack on Carbon"
+msgstr "Moderne Hersteller bauen ihren Tech-Stack auf Carbon auf"
+
+#: app/routes/_index.tsx:449
+msgid "Modern, minimal, transparent"
+msgstr "Modern, minimal, transparent"
+
+#: app/routes/_index.tsx:215
+msgid "Multi-location planning and inventory"
+msgstr "Planung und Bestand an mehreren Standorten"
+
+#: app/components/wizard-form.tsx:118
+msgid "Multi-Tenant"
+msgstr "Multi-Mandant"
+
+#: app/routes/contact.tsx:163
+msgid "Name"
+msgstr "Name"
+
+#: app/components/wizard-form.tsx:159
+msgid "None Required"
+msgstr "Keine erforderlich"
+
+#: app/components/wizard-form.tsx:83
+msgid "One-time purchase with full ownership"
+msgstr "Einmaliger Kauf mit vollständigem Eigentum"
+
+#: app/routes/oss.tsx:58
+msgid "Open link"
+msgstr "Link öffnen"
+
+#: app/routes/_index.tsx:446
+msgid "Open Source"
+msgstr "Open Source"
+
+#: app/components/footer.tsx:45
+#: app/routes/oss.tsx:38
+msgid "OSS Friends"
+msgstr "OSS Friends"
+
+#: app/routes/_index.tsx:328
+msgid "Our ever-expanding catalog of agents allow you to save time and money by automating repetitive tasks. For example, our purchasing agent can create purchase orders and get quotes from suppliers automatically."
+msgstr "Unser ständig wachsender Katalog von Agenten ermöglicht es Ihnen, Zeit und Geld zu sparen, indem Sie sich wiederholende Aufgaben automatisieren. Beispielsweise kann unser Beschaffungsagent automatisch Bestellungen erstellen und Angebote von Lieferanten einholen."
+
+#: app/components/wizard-form.tsx:76
+msgid "Ownership Model"
+msgstr "Eigentumsmodell"
+
+#: app/components/wizard-form.tsx:303
+msgid "Please provide your contact details to complete the process"
+msgstr "Bitte geben Sie Ihre Kontaktdaten an, um den Prozess abzuschließen"
+
+#: app/routes/_index.tsx:282
+msgid "Powerful tools to run your business"
+msgstr "Leistungsstarke Tools zum Verwalten Ihres Unternehmens"
+
+#: app/components/footer.tsx:56
+#: app/root.tsx:247
+#: app/routes/pricing.tsx:79
+msgid "Pricing"
+msgstr "Preisgestaltung"
+
+#: app/components/footer.tsx:66
+msgid "Privacy"
+msgstr "Datenschutz"
+
+#: app/components/footer.tsx:51
+#: app/root.tsx:237
+msgid "Product"
+msgstr "Produkt"
+
+#: app/routes/_index.tsx:352
+msgid "Product Configurator"
+msgstr "Produktkonfigurator"
+
+#: app/components/hero.tsx:240
+msgid "Quote Pricing"
+msgstr "Angebotspreis"
+
+#: app/components/hero.tsx:196
+msgid "Quotes Table"
+msgstr "Angebots-Tabelle"
+
+#: app/routes/pricing.tsx:160
+msgid "Read the Docs"
+msgstr "Dokumentation lesen"
+
+#: app/components/wizard-form.tsx:142
+msgid "Recommended. Priority support with dedicated account manager"
+msgstr "Empfohlen. Prioritätssupport mit dediziertem Account Manager"
+
+#: app/components/hero.tsx:208
+#: app/components/hero.tsx:252
+msgid "Resources"
+msgstr "Ressourcen"
+
+#: app/routes/_index.tsx:588
+msgid "Reviews"
+msgstr "Bewertungen"
+
+#: app/components/footer.tsx:46
+msgid "Sales"
+msgstr "Vertrieb"
+
+#: app/components/wizard-form.tsx:154
+msgid "Select which features you need custom development for"
+msgstr "Wählen Sie aus, für welche Funktionen Sie benutzerdefinierte Entwicklung benötigen"
+
+#: app/components/wizard-form.tsx:131
+msgid "Select your desired level of support"
+msgstr "Wählen Sie Ihre gewünschte Supportebene"
+
+#: app/components/wizard-form.tsx:95
+msgid "Select your preferred hosting solution"
+msgstr "Wählen Sie Ihre bevorzugte Hosting-Lösung"
+
+#: app/components/wizard-form.tsx:100
+msgid "Self-Hosted"
+msgstr "Selbst gehostet"
+
+#: app/routes/pricing.tsx:55
+msgid "Self-hosted or managed"
+msgstr "Selbst gehostet oder verwaltet"
+
+#: app/routes/pricing.tsx:23
+msgid "Self-onboarding"
+msgstr "Selbstständiges Onboarding"
+
+#: app/components/wizard-form.tsx:119
+msgid "Shared database with isolated data"
+msgstr "Gemeinsame Datenbank mit isolierten Daten"
+
+#: app/components/wizard-form.tsx:169
+msgid "Shop Floor Apps"
+msgstr "Shop-Floor-Apps"
+
+#: app/routes/pricing.tsx:83
+msgid "Simple pricing based on your needs"
+msgstr "Einfache Preisgestaltung basierend auf Ihren Anforderungen"
+
+#: app/routes/_index.tsx:377
+msgid "Simplified Scheduling"
+msgstr "Vereinfachte Planung"
+
+#: app/components/wizard-form.tsx:123
+msgid "Single-Tenant"
+msgstr "Single-Tenant"
+
+#: app/components/wizard-form.tsx:87
+msgid "Software as a Service"
+msgstr "Software as a Service"
+
+#: app/root.tsx:406
+msgid "Something went wrong"
+msgstr "Etwas ist schief gelaufen"
+
+#: app/components/footer.tsx:57
+#: app/routes/_index.tsx:523
+msgid "Source Code"
+msgstr "Quellcode"
+
+#: app/routes/pricing.tsx:60
+msgid "SSO/SAML"
+msgstr "SSO/SAML"
+
+#: app/routes/_index.tsx:142
+#: app/routes/pricing.tsx:167
+msgid "Star on GitHub"
+msgstr "Auf GitHub bewerten"
+
+#: app/routes/pricing.tsx:15
+#: app/routes/pricing.tsx:32
+msgid "Start 30-day free trial"
+msgstr "Starten Sie die kostenlose 30-Tage-Testversion"
+
+#: app/routes/_index.tsx:234
+#: app/routes/_index.tsx:477
+msgid "Start Learning"
+msgstr "Lernbereich starten"
+
+#: app/routes/_index.tsx:751
+msgid "Start your 30-day free trial today"
+msgstr "Starten Sie heute Ihre 30-Tage-Kostenlos-Testversion"
+
+#: app/routes/pricing.tsx:12
+msgid "Starter"
+msgstr "Starter"
+
+#: app/routes/contact.tsx:230
+msgid "Submit"
+msgstr "Absenden"
+
+#: app/components/wizard-form.tsx:130
+msgid "Support Level"
+msgstr "Support-Ebene"
+
+#: app/routes/_index.tsx:242
+#: app/routes/_index.tsx:763
+msgid "Talk to Us"
+msgstr "Sprechen Sie mit uns"
+
+#: app/components/footer.tsx:67
+msgid "Terms"
+msgstr "Bedingungen"
+
+#: app/components/wizard-form.tsx:362
+msgid "Thank you for your interest!"
+msgstr "Vielen Dank für Ihr Interesse!"
+
+#: app/routes/contact.tsx:153
+msgid "Thank you for your message!"
+msgstr "Vielen Dank für deine Nachricht!"
+
+#: app/components/hero.tsx:123
+msgid "The Modern Manufacturing Stack"
+msgstr "Der moderne Manufacturing Stack"
+
+#: app/routes/_index.tsx:116
+msgid "The open source <0>manufacturing ERP</0>"
+msgstr "Das Open-Source-<0>Fertigungs-ERP</0>"
+
+#: app/routes/pricing.tsx:62
+msgid "Training"
+msgstr "Schulung"
+
+#: app/root.tsx:336
+#: app/routes/_index.tsx:131
+#: app/routes/_index.tsx:756
+msgid "Try It Now"
+msgstr "Jetzt ausprobieren"
+
+#: app/routes/_index.tsx:203
+msgid "Unified quality, purchasing & production"
+msgstr "Einheitliche Qualität, Beschaffung und Produktion"
+
+#: app/routes/pricing.tsx:39
+#: app/routes/pricing.tsx:61
+msgid "Unlimited functional support"
+msgstr "Unbegrenzte funktionale Unterstützung"
+
+#: app/routes/pricing.tsx:22
+msgid "Unlimited records"
+msgstr "Unbegrenzte Datensätze"
+
+#: app/routes/_index.tsx:461
+msgid "Video Library"
+msgstr "Videobibliothek"
+
+#: app/routes/_index.tsx:508
+msgid "View Docs"
+msgstr "Docs anzeigen"
+
+#: app/root.tsx:279
+msgid "View our source code and contribute"
+msgstr "Zeigen Sie unseren Quellcode an und tragen Sie bei"
+
+#: app/routes/_index.tsx:539
+msgid "View Source"
+msgstr "Quelle anzeigen"
+
+#: app/routes/pricing.tsx:155
+msgid "View the docs and start developing locally"
+msgstr "Schauen Sie sich die Dokumentation an und beginnen Sie mit der lokalen Entwicklung"
+
+#: app/routes/oss.tsx:40
+msgid "We believe in a better and more sustainable future powered by Open Source software. Below you can find a list of our friends who are just as passionate about open source and the future as we are."
+msgstr "Wir glauben an eine bessere und nachhaltigere Zukunft, die durch Open-Source-Software angetrieben wird. Unten finden Sie eine Liste unserer Freunde, die genauso leidenschaftlich für Open Source und die Zukunft sind wie wir."
+
+#: app/routes/_index.tsx:695
+msgid "We open-sourced Carbon not because it's a great business plan, but because that's the system I would have wanted when I was in your shoes."
+msgstr "Wir haben Carbon nicht open-sourced, weil es ein großartiger Geschäftsplan ist, sondern weil das das System ist, das ich mir gewünscht hätte, als ich in deiner Situation war."
+
+#: app/components/wizard-form.tsx:365
+msgid "We'll be in touch with you shortly to setup a demo."
+msgstr "Wir werden uns in Kürze mit Ihnen in Verbindung setzen, um eine Demo einzurichten."
+
+#: app/routes/contact.tsx:156
+msgid "We'll be in touch with you shortly."
+msgstr "Wir werden uns in Kürze bei dir melden."
+
+#: app/routes/_index.tsx:711
+msgid "We're glad you're here for it."
+msgstr "Wir freuen uns, dass du dabei bist."
+
+#: app/routes/contact.tsx:215
+msgid "What can we help with?"
+msgstr "Wobei können wir dir helfen?"
+
+#: app/routes/_index.tsx:591
+msgid "What our customers say:"
+msgstr "Was unsere Kunden sagen:"
+
+#: app/routes/contact.tsx:179
+msgid "Work Email"
+msgstr "Geschäfts-E-Mail"
+
+#: app/components/hero.tsx:192
+msgid "Work Instructions"
+msgstr "Arbeitsanweisungen"
+
+#: app/components/wizard-form.tsx:160
+msgid "You can handle everything yourself"
+msgstr "Du kannst alles selbst handhaben"
+
+#: app/routes/contact.tsx:185
+msgid "you@acme.com"
+msgstr "you@acme.com"
+
+#: app/routes/contact.tsx:169
+msgid "Your name"
+msgstr "Ihr Name"

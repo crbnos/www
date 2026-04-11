@@ -1,35 +1,20 @@
-import { RemixServer } from "@remix-run/react";
-import type { EntryContext } from "@vercel/remix";
-import { handleRequest } from "@vercel/remix";
+import { handleRequest as vercelHandleRequest } from "@vercel/react-router/entry.server";
+import type { EntryContext } from "react-router";
 
-export default async function (
+export const streamTimeout = 5_000;
+
+export default function handleRequest(
   request: Request,
   responseStatusCode: number,
   responseHeaders: Headers,
-  remixContext: EntryContext
+  routerContext: EntryContext,
+  loadContext: any,
 ) {
-  // const acceptLanguage = request.headers.get("accept-language");
-  // const locales = parseAcceptLanguage(acceptLanguage, {
-  //   validate: Intl.DateTimeFormat.supportedLocalesOf,
-  // });
-
-  // // get whether it's a mac or pc from the headers
-  // const platform: OperatingSystemPlatform = request.headers
-  //   .get("user-agent")
-  //   ?.includes("Mac")
-  //   ? "mac"
-  //   : "windows";
-  let remixServer = (
-    // <OperatingSystemContextProvider platform={platform}>
-    //   <I18nProvider locale={locales?.[0] ?? "en-US"}>
-    <RemixServer context={remixContext} url={request.url} />
-    //   </I18nProvider>
-    // </OperatingSystemContextProvider>
-  );
-  return handleRequest(
+  return vercelHandleRequest(
     request,
     responseStatusCode,
     responseHeaders,
-    remixServer
+    routerContext,
+    loadContext,
   );
 }

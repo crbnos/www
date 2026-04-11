@@ -1,6 +1,5 @@
-import { useLoaderData } from "@remix-run/react";
-import type { MetaFunction } from "@vercel/remix";
-import { json } from "@vercel/remix";
+import { data, useLoaderData } from "react-router";
+import type { MetaFunction } from "react-router";
 import { Article } from "~/components/article";
 import { getBlogPosts } from "~/lib/blog.server";
 
@@ -20,7 +19,7 @@ export const meta: MetaFunction = () => {
 
 export async function loader() {
   const posts = (await getBlogPosts()) || [];
-  return json({
+  return data({
     data: posts.sort((a, b) => {
       if (new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)) {
         return -1;

@@ -1,5 +1,6 @@
-import { useLoaderData } from "@remix-run/react";
-import type { ServerRuntimeMetaFunction as MetaFunction } from "@remix-run/server-runtime";
+import { Trans } from "@lingui/react/macro";
+import { useLoaderData } from "react-router";
+import type { MetaFunction } from "react-router";
 
 export const meta: MetaFunction = () => {
   return [
@@ -34,11 +35,11 @@ export default function OSSFriends() {
     <div className="flex flex-1 flex-col">
       <div className="mx-auto flex w-full flex-col px-4 md:px-6 lg:px-8 3xl:pt-32 4xl:pt-36 max-w-4xl pt-28">
         <div className="flex flex-col gap-4 lg:items-center lg:text-center mb-16">
-          <h1 className="font-semibold text-6xl tracking-tight">OSS Friends</h1>
+          <h1 className="font-semibold text-6xl tracking-tight"><Trans>OSS Friends</Trans></h1>
           <h2 className="font-medium text-xl text-muted-foreground max-w-5xl text-balance leading-relaxed tracking-tight">
-            We believe in a better and more sustainable future powered by Open
+            <Trans>We believe in a better and more sustainable future powered by Open
             Source software. Below you can find a list of our friends who are
-            just as passionate about open source and the future as we are.
+            just as passionate about open source and the future as we are.</Trans>
           </h2>
         </div>
 
@@ -54,7 +55,7 @@ export default function OSSFriends() {
                     <h3 className="font-medium text-md">{friend.name}</h3>
                   </a>
                   <a href={friend.href} target="_blank" rel="noreferrer">
-                    <span className="sr-only">Open link</span>
+                    <span className="sr-only"><Trans>Open link</Trans></span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={24}

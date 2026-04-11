@@ -1,4 +1,5 @@
-import { Link } from "@remix-run/react";
+import { Trans } from "@lingui/react/macro";
+import { Link } from "react-router";
 import { SocialIcon } from "./social-icon";
 
 export function Footer() {
@@ -35,74 +36,35 @@ export function Footer() {
           </div>
           <div className="col-span-1 flex flex-col gap-1">
             <p className="font-medium py-1 col-span-1 text-sm text-muted-foreground">
-              Company
+              <Trans>Company</Trans>
             </p>
             <div className="col-span-2 -mx-1 flex flex-wrap gap-2 sm:flex-col">
-              {[
-                { href: "/brand", text: "Brand Assets" },
-                { href: "/learn", text: "Blog" },
-                { href: "/contact", text: "Contact" },
-                { href: "/oss", text: "OSS Friends" },
-                { href: "/sales", text: "Sales" },
-              ].map((link) => (
-                <Link
-                  key={link.href}
-                  className="text-foreground font-medium hover:underline p-1 text-sm"
-                  to={link.href}
-                >
-                  {link.text}
-                </Link>
-              ))}
+              <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="/brand"><Trans>Brand Assets</Trans></Link>
+              <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="/learn"><Trans>Blog</Trans></Link>
+              <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="/contact"><Trans>Contact</Trans></Link>
+              <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="/oss"><Trans>OSS Friends</Trans></Link>
+              <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="/sales"><Trans>Sales</Trans></Link>
             </div>
           </div>
           <div className="col-span-1 flex flex-col gap-1">
             <p className="font-medium py-1 col-span-1 text-sm text-muted-foreground">
-              Product
+              <Trans>Product</Trans>
             </p>
             <div className="col-span-2 -mx-1 flex flex-wrap gap-2 sm:flex-col">
-              {[
-                {
-                  href: "https://learn.carbon.ms",
-                  text: "Learning",
-                },
-                {
-                  href: "https://github.com/crbnos/carbon/blob/main/LICENSE",
-                  text: "License",
-                },
-                { href: "/pricing", text: "Pricing" },
-                {
-                  href: "https://github.com/crbnos/carbon",
-                  text: "Source Code",
-                },
-              ].map((link) => (
-                <Link
-                  key={link.href}
-                  className="text-foreground font-medium hover:underline p-1 text-sm"
-                  to={link.href}
-                >
-                  {link.text}
-                </Link>
-              ))}
+              <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="https://learn.carbon.ms"><Trans>Learning</Trans></Link>
+              <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="https://github.com/crbnos/carbon/blob/main/LICENSE"><Trans>License</Trans></Link>
+              <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="/pricing"><Trans>Pricing</Trans></Link>
+              <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="https://github.com/crbnos/carbon"><Trans>Source Code</Trans></Link>
             </div>
           </div>
           <div className="flex flex-col gap-12">
             <div className="col-span-1 flex flex-col gap-1">
               <p className="font-medium py-1 col-span-1 text-sm text-muted-foreground">
-                Legal
+                <Trans>Legal</Trans>
               </p>
               <div className="col-span-2 -mx-1 flex flex-wrap gap-2 sm:flex-col">
-                {[
-                  { href: "/privacy", text: "Privacy" },
-                  { href: "/terms", text: "Terms" },
-                ].map((link) => (
-                  <Link
-                    key={link.href}
-                    className="text-foreground font-medium hover:underline p-1 text-sm"
-                    to={link.href}
-                  >
-                    {link.text}
-                  </Link>
-                ))}
+                <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="/privacy"><Trans>Privacy</Trans></Link>
+                <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="/terms"><Trans>Terms</Trans></Link>
               </div>
             </div>
           </div>

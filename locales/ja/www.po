@@ -1,0 +1,794 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2026-04-10 22:40-0400\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: ja\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: app/routes/pricing.tsx:14
+#: app/routes/pricing.tsx:31
+msgid "/user/month"
+msgstr "/ユーザー/月"
+
+#: app/routes/pricing.tsx:36
+msgid "5 user minimum"
+msgstr "5ユーザー最小"
+
+#: app/routes/pricing.tsx:52
+msgid "A custom solution to meet your needs"
+msgstr "あなたのニーズに合わせたカスタムソリューション"
+
+#: app/routes/pricing.tsx:17
+msgid "A managed cloud-hosted version of Carbon"
+msgstr "Carbonの管理されたクラウドホスト版"
+
+#: app/routes/pricing.tsx:29
+msgid "A managed cloud-hosted version of Carbon that includes support and all advanced features"
+msgstr "サポートとすべての高度な機能を含むCarbonのマネージドクラウドホスト版"
+
+#: app/routes/_index.tsx:301
+msgid "Achieve granular, end-to-end tracking of materials, components, and processes, ensuring compliance, simplifying audits, and enabling rapid root cause analysis without the complexity and cost of traditional high-end systems."
+msgstr "材料、部品、プロセスの粒度の細かいエンドツーエンドの追跡を実現し、コンプライアンスを確保し、監査を簡素化し、従来の高級システムの複雑さとコストなしに迅速な根本原因分析を可能にします。"
+
+#: app/components/wizard-form.tsx:414
+msgid "Acme Inc"
+msgstr "Acme Inc"
+
+#: app/routes/contact.tsx:200
+msgid "Acme, Inc."
+msgstr "Acme, Inc."
+
+#: app/routes/pricing.tsx:40
+msgid "Advanced audit logging"
+msgstr "高度な監査ログ"
+
+#: app/routes/_index.tsx:672
+msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
+msgstr "製造業向けのエンドツーエンドシステムを約10年間構築してきた後、技術的な観点から「理想的な」ソリューションがどのようなものであるかについて、かなり良い考えを持っていました。"
+
+#: app/routes/pricing.tsx:42
+msgid "AI-powered workflows"
+msgstr "AI駆動ワークフロー"
+
+#: app/routes/pricing.tsx:43
+msgid "All advanced features available"
+msgstr "すべての高度な機能が利用可能"
+
+#: app/routes/brand.tsx:25
+msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
+msgstr "すべてのCarbonの商標、ロゴ、またはその他のブランド要素は、Carbon Manufacturing Systems Corporationを表現する目的以外に変更または使用することはできません。"
+
+#: app/components/hero.tsx:244
+msgid "Analytics"
+msgstr "分析"
+
+#: app/components/code-examples.tsx:587
+msgid "API Docs"
+msgstr "API ドキュメント"
+
+#: app/components/code-examples.tsx:571
+msgid "API-First"
+msgstr "API-First"
+
+#: app/routes/_index.tsx:403
+msgid "API-First Architecture"
+msgstr "API-ファーストアーキテクチャ"
+
+#: app/routes/_index.tsx:680
+msgid "API-first, realtime subscriptions, simple scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
+msgstr "API-first、リアルタイムサブスクリプション、シンプルなスケジューリング、そしてERP利用の価値を引き出すための1,000の細かな工夫。"
+
+#: app/routes/pricing.tsx:41
+msgid "API, webhooks, and integrations"
+msgstr "API、ウェブフック、および統合"
+
+#: app/routes/_index.tsx:209
+msgid "Assembly and make-to-order workflows"
+msgstr "組立およびメイク・トゥ・オーダーワークフロー"
+
+#: app/components/hero.tsx:220
+msgid "Auto-generated API Documentation"
+msgstr "自動生成されたAPIドキュメント"
+
+#: app/routes/pricing.tsx:20
+msgid "Automatic updates and backups"
+msgstr "自動更新とバックアップ"
+
+#: app/routes/_index.tsx:356
+msgid "Automatically generate the Bill of Materials and Bill of Process for a given set of options/parameters with our powerful product configurator."
+msgstr "与えられたオプション/パラメータのセットに対して、当社の強力な製品コンフィギュレータを使用して、材料表と工程表を自動的に生成します。"
+
+#: app/components/wizard-form.tsx:334
+msgid "Back"
+msgstr "戻る"
+
+#: app/routes/pricing.tsx:21
+msgid "Basic ERP, MES, and QMS functionality"
+msgstr "基本的なERP、MES、およびQMS機能"
+
+#: app/components/hero.tsx:228
+msgid "Bill of Materials"
+msgstr "部品表"
+
+#: app/components/footer.tsx:43
+msgid "Blog"
+msgstr "ブログ"
+
+#: app/components/footer.tsx:42
+#: app/routes/brand.tsx:22
+msgid "Brand Assets"
+msgstr "ブランドアセット"
+
+#: app/routes/_index.tsx:748
+msgid "Build something with Carbon"
+msgstr "Carbonで何かを構築する"
+
+#: app/components/code-examples.tsx:574
+msgid "Built on a developer-friendly platform"
+msgstr "開発者フレンドリーなプラットフォーム上に構築"
+
+#: app/routes/_index.tsx:221
+msgid "Built on the best of open-source software"
+msgstr "最高のオープンソースソフトウェアで構築"
+
+#: app/routes/pricing.tsx:28
+msgid "Business"
+msgstr "ビジネス"
+
+#: app/routes/_index.tsx:686
+msgid "But even as we work with our customers to become the best off-the-shelf ERP/MES for many types of discrete manufacturing, we are faced with the reality that there is no \"perfect\" off-the-shelf solution, because each manufacturing business is unique."
+msgstr "しかし、私たちが顧客と協力して、多くの種類の個別製造向けの最高のオフザシェルフERP/MESになろうとしている一方で、各製造事業がユニークであるため、「完璧な」オフザシェルフソリューションは存在しないという現実に直面しています。"
+
+#: app/components/wizard-form.tsx:82
+msgid "Buy the Source Code"
+msgstr "ソースコードを購入"
+
+#: app/routes/_index.tsx:464
+msgid "Carbon Academy is a free, self-paced learning platform that teaches you how to use Carbon. It's a great way to get started with Carbon and learn how to use it to its full potential."
+msgstr "Carbon Academyは、Carbonの使い方を学べる無料の自習型学習プラットフォームです。Carbonを始めるのに最適な方法であり、Carbonの全ての可能性を学ぶことができます。"
+
+#: app/components/hero.tsx:126
+msgid "Carbon combines ERP, MES, and QMS into a single, unified system."
+msgstr "Carbonは、ERP、MES、QMSを1つの統合されたシステムに組み合わせています。"
+
+#: app/routes/_index.tsx:122
+msgid "Carbon is a manufacturing system of record that combines ERP, MES, and QMS into a single, unified, API-first system that's perfect for complex manufacturing."
+msgstr "Carbonは、ERP、MES、QMSを単一の統合されたAPI-firstシステムに組み合わせた製造システムで、複雑な製造に最適です。"
+
+#: app/routes/_index.tsx:407
+msgid "Carbon is built with an \"API-First Architecture,\" which gives you unparalleled flexibility to seamlessly connect Carbon with your other business systems. This allows you to automate workflows across all applications."
+msgstr "Carbonは「API-First Architecture」で構築されており、Carbonを他のビジネスシステムとシームレスに接続する比類のない柔軟性を提供します。これにより、すべてのアプリケーション全体でワークフローを自動化できます。"
+
+#: app/routes/_index.tsx:667
+msgid "Carbon Manufacturing Systems Corp."
+msgstr "カーボン・マニュファクチャリング・システムズ・コーポレーション"
+
+#: app/components/code-examples.tsx:577
+msgid "Carbon provides a comprehensive MCP server and API clients in many popular languages."
+msgstr "Carbonは、包括的なMCPサーバーと多くの一般的なプログラミング言語のAPIクライアントを提供します。"
+
+#: app/routes/_index.tsx:495
+msgid "Carbon's developer documentation guides you through getting Carbon running locally, and extending it to build your own own custom applications."
+msgstr "Carbonの開発者ドキュメントは、Carbonをローカルで実行し、独自のカスタムアプリケーションを構築するために拡張する方法をガイドします。"
+
+#: app/routes/_index.tsx:526
+msgid "Carbon's source code is available on GitHub and is free to use. You can maintain your own public fork or acquire a commercial license to make your code modifications private."
+msgstr "Carbonのソースコードはgithubで利用可能であり、自由に使用できます。独自のパブリックフォークを維持するか、商用ライセンスを取得してコード変更をプライベートにすることができます。"
+
+#: app/components/wizard-form.tsx:77
+msgid "Choose how you'd like to own the solution"
+msgstr "ソリューションをどのように所有したいかを選択してください"
+
+#: app/components/wizard-form.tsx:113
+msgid "Choose your preferred database"
+msgstr "お好みのデータベースを選択してください"
+
+#: app/routes/_index.tsx:732
+msgid "Co-founder"
+msgstr "共同創業者"
+
+#: app/components/code-examples.tsx:597
+msgid "Code Examples"
+msgstr "コード例"
+
+#: app/routes/pricing.tsx:24
+msgid "Community support"
+msgstr "コミュニティサポート"
+
+#: app/components/footer.tsx:39
+msgid "Company"
+msgstr "会社"
+
+#: app/components/wizard-form.tsx:408
+#: app/routes/contact.tsx:194
+msgid "Company Name"
+msgstr "会社名"
+
+#: app/components/wizard-form.tsx:349
+msgid "Complete"
+msgstr "完了"
+
+#: app/components/wizard-form.tsx:101
+msgid "Complete control over your infrastructure"
+msgstr "インフラストラクチャを完全に制御できます"
+
+#: app/components/hero.tsx:236
+msgid "Configurator"
+msgstr "コンフィギュレーター"
+
+#: app/components/wizard-form.tsx:170
+msgid "Connect your robots and machines to your production systems"
+msgstr "ロボットと機械を本番システムに接続します"
+
+#: app/components/footer.tsx:44
+#: app/routes/contact.tsx:143
+msgid "Contact"
+msgstr "お問い合わせ"
+
+#: app/components/wizard-form.tsx:300
+msgid "Contact Information"
+msgstr "連絡先情報"
+
+#: app/routes/pricing.tsx:48
+#: app/routes/pricing.tsx:50
+msgid "Contact us"
+msgstr "お問い合わせ"
+
+#: app/components/code-examples.tsx:481
+msgid "Copy code snippet"
+msgstr "コードスニペットをコピー"
+
+#: app/components/wizard-form.tsx:165
+msgid "Create a branded ordering experience that drives production"
+msgstr "ブランド化された注文体験を作成して、生産を促進します"
+
+#: app/routes/pricing.tsx:59
+msgid "Custom development"
+msgstr "カスタム開発"
+
+#: app/components/wizard-form.tsx:153
+msgid "Custom Development"
+msgstr "カスタム開発"
+
+#: app/routes/pricing.tsx:58
+msgid "Custom integrations"
+msgstr "カスタム統合"
+
+#: app/components/wizard-form.tsx:175
+msgid "Custom integrations with your existing systems"
+msgstr "既存のシステムとのカスタム統合"
+
+#: app/components/hero.tsx:232
+msgid "Customer Portal"
+msgstr "顧客ポータル"
+
+#: app/components/wizard-form.tsx:164
+msgid "Customer Portal/Website"
+msgstr "顧客ポータル/ウェブサイト"
+
+#: app/components/wizard-form.tsx:112
+msgid "Database"
+msgstr "データベース"
+
+#: app/components/wizard-form.tsx:124
+msgid "Dedicated database for your organization"
+msgstr "あなたの組織専用のデータベース"
+
+#: app/components/wizard-form.tsx:141
+msgid "Dedicated Support"
+msgstr "専任サポート"
+
+#: app/routes/_index.tsx:196
+msgid "Designed for manufacturing"
+msgstr "製造業向けに設計"
+
+#: app/root.tsx:293
+msgid "Developer guides and API reference"
+msgstr "開発者ガイドとAPIリファレンス"
+
+#: app/root.tsx:253
+msgid "Developers"
+msgstr "開発者"
+
+#: app/root.tsx:263
+msgid "Discord"
+msgstr "Discord"
+
+#: app/root.tsx:291
+#: app/routes/_index.tsx:492
+msgid "Documentation"
+msgstr "ドキュメント"
+
+#: app/components/hero.tsx:212
+msgid "Documents"
+msgstr "ドキュメント"
+
+#: app/routes/brand.tsx:189
+msgid "Download Logo Kit"
+msgstr "ロゴキットをダウンロード"
+
+#: app/components/wizard-form.tsx:396
+msgid "Email Address"
+msgstr "メールアドレス"
+
+#: app/routes/_index.tsx:193
+msgid "End-to-End"
+msgstr "エンドツーエンド"
+
+#: app/routes/_index.tsx:297
+msgid "End-to-End Traceability"
+msgstr "エンドツーエンドトレーサビリティ"
+
+#: app/root.tsx:307
+#: app/routes/pricing.tsx:47
+msgid "Enterprise"
+msgstr "エンタープライズ"
+
+#: app/components/wizard-form.tsx:147
+msgid "Enterprise. Influence product roadmap with priority feature requests"
+msgstr "エンタープライズ。優先度の高い機能リクエストで製品ロードマップに影響を与えます"
+
+#: app/routes/pricing.tsx:37
+msgid "Everything from Starter"
+msgstr "Starterのすべての機能"
+
+#: app/components/wizard-form.tsx:146
+msgid "Feature Prioritization"
+msgstr "機能の優先順位付け"
+
+#: app/routes/_index.tsx:279
+msgid "Features"
+msgstr "機能"
+
+#: app/routes/_index.tsx:664
+msgid "Founder memo"
+msgstr "創業者メモ"
+
+#: app/components/wizard-form.tsx:385
+msgid "Full Name"
+msgstr "フルネーム"
+
+#: app/routes/pricing.tsx:57
+msgid "Full setup and migrations"
+msgstr "完全なセットアップと移行"
+
+#: app/components/hero.tsx:134
+msgid "Get Started"
+msgstr "始める"
+
+#: app/routes/pricing.tsx:152
+msgid "Get started for free"
+msgstr "無料で始める"
+
+#: app/root.tsx:277
+msgid "GitHub"
+msgstr "GitHub"
+
+#: app/components/hero.tsx:204
+msgid "Global Search"
+msgstr "グローバル検索"
+
+#: app/routes/_index.tsx:227
+msgid "Govcloud-hosted Version Available"
+msgstr "Govcloud ホスト版が利用可能"
+
+#: app/components/wizard-form.tsx:94
+msgid "Hosting Preference"
+msgstr "ホスティング設定"
+
+#: app/routes/_index.tsx:703
+msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
+msgstr "オープンソースには素晴らしい可能性があると信じています。なぜなら、それは単なる製品ではなく、AIとロボット工学の時代に製造業の未来を構築するために働く、志を同じくする人々のコミュニティだからです。"
+
+#: app/routes/pricing.tsx:38
+msgid "Implementation support"
+msgstr "実装サポート"
+
+#: app/routes/_index.tsx:324
+msgid "Integrated Agents"
+msgstr "統合エージェント"
+
+#: app/components/wizard-form.tsx:174
+msgid "Integrations"
+msgstr "統合"
+
+#: app/routes/pricing.tsx:56
+msgid "ITAR compliant"
+msgstr "ITAR準拠"
+
+#: app/components/wizard-form.tsx:391
+msgid "John Doe"
+msgstr "ジョン・ドゥ"
+
+#: app/components/wizard-form.tsx:403
+msgid "john@company.com"
+msgstr "john@company.com"
+
+#: app/root.tsx:265
+msgid "Join our community chat"
+msgstr "コミュニティチャットに参加"
+
+#: app/routes/_index.tsx:779
+msgid "Join our Discord community"
+msgstr "Discordコミュニティに参加する"
+
+#: app/components/hero.tsx:216
+msgid "Kanban Schedule"
+msgstr "カンバンスケジュール"
+
+#: app/routes/_index.tsx:381
+msgid "Keep your shop floor schedule up-to-date with our simple and powerful scheduling engine. Schedule by job due date, or by fine-tune work center and resource availability."
+msgstr "ショップフロアのスケジュールを、シンプルで強力なスケジューリングエンジンで常に最新の状態に保ちます。ジョブの期限日でスケジュール設定するか、ワークセンターとリソースの可用性を細かく調整してスケジュール設定できます。"
+
+#: app/components/footer.tsx:54
+msgid "Learning"
+msgstr "学習"
+
+#: app/routes/learn+/_layout.tsx:16
+msgid "Learning Center"
+msgstr "ラーニングセンター"
+
+#: app/components/wizard-form.tsx:137
+msgid "Least expensive. Basic onboarding and email support"
+msgstr "最も安価です。基本的なオンボーディングとメールサポート"
+
+#: app/components/footer.tsx:63
+msgid "Legal"
+msgstr "法務"
+
+#: app/components/wizard-form.tsx:106
+msgid "Let us handle the infrastructure for you"
+msgstr "インフラストラクチャの管理はお任せください"
+
+#: app/components/footer.tsx:55
+msgid "License"
+msgstr "ライセンス"
+
+#: app/components/wizard-form.tsx:136
+msgid "Limited Support"
+msgstr "限定的なサポート"
+
+#: app/components/wizard-form.tsx:88
+msgid "Low monthly payments"
+msgstr "月額の低い支払い"
+
+#: app/components/wizard-form.tsx:105
+msgid "Managed Hosting"
+msgstr "マネージドホスティング"
+
+#: app/components/hero.tsx:200
+msgid "MES 3D Viewer"
+msgstr "MES 3D ビューアー"
+
+#: app/components/hero.tsx:248
+msgid "MES Details"
+msgstr "MES詳細"
+
+#: app/components/hero.tsx:224
+msgid "MES Work Instructions"
+msgstr "MES作業指示"
+
+#: app/routes/contact.tsx:210
+msgid "Message"
+msgstr "メッセージ"
+
+#: app/routes/_index.tsx:150
+msgid "Modern manufacturers build their tech stack on Carbon"
+msgstr "現代の製造業者はCarbonの上に技術スタックを構築しています"
+
+#: app/routes/_index.tsx:449
+msgid "Modern, minimal, transparent"
+msgstr "モダン、ミニマル、透明性"
+
+#: app/routes/_index.tsx:215
+msgid "Multi-location planning and inventory"
+msgstr "複数拠点の計画と在庫"
+
+#: app/components/wizard-form.tsx:118
+msgid "Multi-Tenant"
+msgstr "マルチテナント"
+
+#: app/routes/contact.tsx:163
+msgid "Name"
+msgstr "名前"
+
+#: app/components/wizard-form.tsx:159
+msgid "None Required"
+msgstr "不要"
+
+#: app/components/wizard-form.tsx:83
+msgid "One-time purchase with full ownership"
+msgstr "一度の購入で完全な所有権を取得"
+
+#: app/routes/oss.tsx:58
+msgid "Open link"
+msgstr "リンクを開く"
+
+#: app/routes/_index.tsx:446
+msgid "Open Source"
+msgstr "オープンソース"
+
+#: app/components/footer.tsx:45
+#: app/routes/oss.tsx:38
+msgid "OSS Friends"
+msgstr "OSSフレンズ"
+
+#: app/routes/_index.tsx:328
+msgid "Our ever-expanding catalog of agents allow you to save time and money by automating repetitive tasks. For example, our purchasing agent can create purchase orders and get quotes from suppliers automatically."
+msgstr "当社の絶えず拡大するエージェントカタログにより、反復的なタスクを自動化することで時間と費用を節約できます。例えば、当社の購買エージェントは自動的に発注書を作成し、サプライヤーから見積もりを取得できます。"
+
+#: app/components/wizard-form.tsx:76
+msgid "Ownership Model"
+msgstr "所有権モデル"
+
+#: app/components/wizard-form.tsx:303
+msgid "Please provide your contact details to complete the process"
+msgstr "プロセスを完了するために、ご連絡先の詳細をご入力ください"
+
+#: app/routes/_index.tsx:282
+msgid "Powerful tools to run your business"
+msgstr "ビジネスを運営するための強力なツール"
+
+#: app/components/footer.tsx:56
+#: app/root.tsx:247
+#: app/routes/pricing.tsx:79
+msgid "Pricing"
+msgstr "料金"
+
+#: app/components/footer.tsx:66
+msgid "Privacy"
+msgstr "プライバシー"
+
+#: app/components/footer.tsx:51
+#: app/root.tsx:237
+msgid "Product"
+msgstr "製品"
+
+#: app/routes/_index.tsx:352
+msgid "Product Configurator"
+msgstr "製品コンフィギュレーター"
+
+#: app/components/hero.tsx:240
+msgid "Quote Pricing"
+msgstr "見積価格"
+
+#: app/components/hero.tsx:196
+msgid "Quotes Table"
+msgstr "見積表"
+
+#: app/routes/pricing.tsx:160
+msgid "Read the Docs"
+msgstr "ドキュメントを読む"
+
+#: app/components/wizard-form.tsx:142
+msgid "Recommended. Priority support with dedicated account manager"
+msgstr "推奨。専任のアカウントマネージャーによる優先サポート"
+
+#: app/components/hero.tsx:208
+#: app/components/hero.tsx:252
+msgid "Resources"
+msgstr "リソース"
+
+#: app/routes/_index.tsx:588
+msgid "Reviews"
+msgstr "レビュー"
+
+#: app/components/footer.tsx:46
+msgid "Sales"
+msgstr "営業"
+
+#: app/components/wizard-form.tsx:154
+msgid "Select which features you need custom development for"
+msgstr "カスタム開発が必要な機能を選択してください"
+
+#: app/components/wizard-form.tsx:131
+msgid "Select your desired level of support"
+msgstr "サポートレベルを選択してください"
+
+#: app/components/wizard-form.tsx:95
+msgid "Select your preferred hosting solution"
+msgstr "ご希望のホスティングソリューションを選択してください"
+
+#: app/components/wizard-form.tsx:100
+msgid "Self-Hosted"
+msgstr "セルフホスト"
+
+#: app/routes/pricing.tsx:55
+msgid "Self-hosted or managed"
+msgstr "自社ホストまたはマネージド"
+
+#: app/routes/pricing.tsx:23
+msgid "Self-onboarding"
+msgstr "セルフオンボーディング"
+
+#: app/components/wizard-form.tsx:119
+msgid "Shared database with isolated data"
+msgstr "分離されたデータを持つ共有データベース"
+
+#: app/components/wizard-form.tsx:169
+msgid "Shop Floor Apps"
+msgstr "ショップフロアアプリ"
+
+#: app/routes/pricing.tsx:83
+msgid "Simple pricing based on your needs"
+msgstr "シンプルな料金体系があなたのニーズに合わせて"
+
+#: app/routes/_index.tsx:377
+msgid "Simplified Scheduling"
+msgstr "簡略化されたスケジューリング"
+
+#: app/components/wizard-form.tsx:123
+msgid "Single-Tenant"
+msgstr "シングルテナント"
+
+#: app/components/wizard-form.tsx:87
+msgid "Software as a Service"
+msgstr "Software as a Service"
+
+#: app/root.tsx:406
+msgid "Something went wrong"
+msgstr "何か問題が発生しました"
+
+#: app/components/footer.tsx:57
+#: app/routes/_index.tsx:523
+msgid "Source Code"
+msgstr "ソースコード"
+
+#: app/routes/pricing.tsx:60
+msgid "SSO/SAML"
+msgstr "SSO/SAML"
+
+#: app/routes/_index.tsx:142
+#: app/routes/pricing.tsx:167
+msgid "Star on GitHub"
+msgstr "GitHubでスターを付ける"
+
+#: app/routes/pricing.tsx:15
+#: app/routes/pricing.tsx:32
+msgid "Start 30-day free trial"
+msgstr "30日間の無料トライアルを開始"
+
+#: app/routes/_index.tsx:234
+#: app/routes/_index.tsx:477
+msgid "Start Learning"
+msgstr "学習を開始"
+
+#: app/routes/_index.tsx:751
+msgid "Start your 30-day free trial today"
+msgstr "今日から30日間の無料トライアルを開始してください"
+
+#: app/routes/pricing.tsx:12
+msgid "Starter"
+msgstr "スターター"
+
+#: app/routes/contact.tsx:230
+msgid "Submit"
+msgstr "送信"
+
+#: app/components/wizard-form.tsx:130
+msgid "Support Level"
+msgstr "サポートレベル"
+
+#: app/routes/_index.tsx:242
+#: app/routes/_index.tsx:763
+msgid "Talk to Us"
+msgstr "お話しします"
+
+#: app/components/footer.tsx:67
+msgid "Terms"
+msgstr "利用規約"
+
+#: app/components/wizard-form.tsx:362
+msgid "Thank you for your interest!"
+msgstr "ご関心をお寄せいただきありがとうございます！"
+
+#: app/routes/contact.tsx:153
+msgid "Thank you for your message!"
+msgstr "ご連絡ありがとうございます！"
+
+#: app/components/hero.tsx:123
+msgid "The Modern Manufacturing Stack"
+msgstr "最新の製造スタック"
+
+#: app/routes/_index.tsx:116
+msgid "The open source <0>manufacturing ERP</0>"
+msgstr "オープンソースの<0>製造ERP</0>"
+
+#: app/routes/pricing.tsx:62
+msgid "Training"
+msgstr "トレーニング"
+
+#: app/root.tsx:336
+#: app/routes/_index.tsx:131
+#: app/routes/_index.tsx:756
+msgid "Try It Now"
+msgstr "今すぐ試す"
+
+#: app/routes/_index.tsx:203
+msgid "Unified quality, purchasing & production"
+msgstr "統一された品質、購買、生産"
+
+#: app/routes/pricing.tsx:39
+#: app/routes/pricing.tsx:61
+msgid "Unlimited functional support"
+msgstr "無制限の機能サポート"
+
+#: app/routes/pricing.tsx:22
+msgid "Unlimited records"
+msgstr "無制限のレコード"
+
+#: app/routes/_index.tsx:461
+msgid "Video Library"
+msgstr "ビデオライブラリ"
+
+#: app/routes/_index.tsx:508
+msgid "View Docs"
+msgstr "ドキュメントを表示"
+
+#: app/root.tsx:279
+msgid "View our source code and contribute"
+msgstr "ソースコードを表示して貢献する"
+
+#: app/routes/_index.tsx:539
+msgid "View Source"
+msgstr "ソースを表示"
+
+#: app/routes/pricing.tsx:155
+msgid "View the docs and start developing locally"
+msgstr "ドキュメントを表示してローカルで開発を開始"
+
+#: app/routes/oss.tsx:40
+msgid "We believe in a better and more sustainable future powered by Open Source software. Below you can find a list of our friends who are just as passionate about open source and the future as we are."
+msgstr "私たちは、オープンソースソフトウェアによって実現される、より良く、より持続可能な未来を信じています。以下は、オープンソースと未来に対して私たちと同じくらい情熱を持つ友人たちのリストです。"
+
+#: app/routes/_index.tsx:695
+msgid "We open-sourced Carbon not because it's a great business plan, but because that's the system I would have wanted when I was in your shoes."
+msgstr "私たちがCarbonをオープンソース化したのは、それが素晴らしいビジネスプランだからではなく、あなたの立場にいた時に欲しかったシステムだからです。"
+
+#: app/components/wizard-form.tsx:365
+msgid "We'll be in touch with you shortly to setup a demo."
+msgstr "まもなくデモのセットアップについてご連絡させていただきます。"
+
+#: app/routes/contact.tsx:156
+msgid "We'll be in touch with you shortly."
+msgstr "まもなくご連絡させていただきます。"
+
+#: app/routes/_index.tsx:711
+msgid "We're glad you're here for it."
+msgstr "私たちはあなたがここにいてくれて嬉しいです。"
+
+#: app/routes/contact.tsx:215
+msgid "What can we help with?"
+msgstr "何かお手伝いできることはありますか？"
+
+#: app/routes/_index.tsx:591
+msgid "What our customers say:"
+msgstr "お客様からのご意見"
+
+#: app/routes/contact.tsx:179
+msgid "Work Email"
+msgstr "仕事用メール"
+
+#: app/components/hero.tsx:192
+msgid "Work Instructions"
+msgstr "作業指示"
+
+#: app/components/wizard-form.tsx:160
+msgid "You can handle everything yourself"
+msgstr "すべて自分で対応できます"
+
+#: app/routes/contact.tsx:185
+msgid "you@acme.com"
+msgstr "you@acme.com"
+
+#: app/routes/contact.tsx:169
+msgid "Your name"
+msgstr "あなたの名前"

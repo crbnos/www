@@ -1,6 +1,6 @@
 import {
+	data,
 	isRouteErrorResponse,
-	json,
 	Link,
 	Links,
 	Meta,
@@ -8,18 +8,21 @@ import {
 	Scripts,
 	ScrollRestoration,
 	useFetcher,
+	useLoaderData,
 	useRouteError,
-} from "@remix-run/react";
-import { Analytics } from "@vercel/analytics/remix";
+} from "react-router";
 import type {
 	ActionFunctionArgs,
 	LoaderFunctionArgs,
 	MetaFunction,
-} from "@vercel/remix";
+} from "react-router";
+import { Analytics } from "@vercel/analytics/react";
+import { Trans, useLingui } from "@lingui/react/macro";
 import { BookOpen, Moon, Play, Sun } from "lucide-react";
 import { type ReactNode, useEffect, useState } from "react";
 import Tailwind from "~/styles/tailwind.css?url";
 import { Footer } from "./components/footer";
+import { LocaleProvider } from "./lib/i18n";
 import { Button } from "./components/ui/button";
 import { ClientHintCheck, getHints } from "./components/ui/client-hints";
 import { DiscordLogo } from "./components/ui/discord-logo";
@@ -42,6 +45,8 @@ import {
 } from "./components/wizard-form";
 import { useMode } from "./hooks/useMode";
 import { cn } from "./lib/utils";
+import { loadLinguiCatalog } from "./services/lingui.server";
+import { getLocale } from "./services/locale.server";
 import { getMode, setMode } from "./services/mode.server";
 import { path } from "./utils/path";
 
@@ -55,8 +60,10 @@ export async function loader({ request, params }: LoaderFunctionArgs) {
 	const requestUrl = new URL(request.url);
 	const siteUrl = requestUrl.protocol + "//" + requestUrl.host;
 	const hints = getHints(request);
+	const locale = getLocale(request);
+	const linguiCatalog = await loadLinguiCatalog(locale);
 
-	return { siteUrl, mode: getMode(request, hints.theme), hints };
+	return { siteUrl, mode: getMode(request, hints.theme), hints, linguiCatalog, locale };
 }
 
 export async function action({ request }: ActionFunctionArgs) {
@@ -64,15 +71,13 @@ export async function action({ request }: ActionFunctionArgs) {
 	const mode = String(formData.get("mode"));
 
 	if (!["light", "dark"].includes(mode)) {
-		return json(
+		return data(
 			{ error: "Invalid mode" },
-			{
-				status: 400,
-			},
+			{ status: 400 },
 		);
 	}
 
-	return json(
+	return data(
 		{},
 		{
 			headers: { "Set-Cookie": setMode(mode as "light" | "dark") },
@@ -160,6 +165,7 @@ function Document({
 	title?: string;
 	mode?: "light" | "dark";
 }) {
+	const { t } = useLingui();
 	const { showWizard, setShowWizard } = useWizard();
 	const fetcher = useFetcher<typeof action>();
 	const [scrolled, setScrolled] = useState(false);
@@ -227,7 +233,7 @@ function Document({
 												target="_blank"
 												rel="noopener"
 											>
-												Product
+												<Trans>Product</Trans>
 											</a>
 										</NavigationMenuLink>
 									</NavigationMenuItem>
@@ -237,13 +243,13 @@ function Document({
 											asChild
 										>
 											<Link prefetch="intent" to="/pricing">
-												Pricing
+												<Trans>Pricing</Trans>
 											</Link>
 										</NavigationMenuLink>
 									</NavigationMenuItem>
 
 									<NavigationMenuItem>
-										<NavigationMenuTrigger>Developers</NavigationMenuTrigger>
+										<NavigationMenuTrigger><Trans>Developers</Trans></NavigationMenuTrigger>
 										<NavigationMenuContent>
 											<div className="flex flex-col p-3 w-[325px]">
 												<NavigationMenuLink asChild>
@@ -253,9 +259,9 @@ function Document({
 													>
 														<DiscordLogo className="size-12 bg-[#5865F2] text-white rounded-lg p-2" />
 														<div className="flex flex-col gap-0">
-															<span>Discord</span>
+															<span><Trans>Discord</Trans></span>
 															<span className="text-xs text-muted-foreground">
-																Join our community chat
+																<Trans>Join our community chat</Trans>
 															</span>
 														</div>
 													</a>
@@ -267,9 +273,9 @@ function Document({
 													>
 														<GithubLogo className="size-12 bg-[#333333] text-white dark:bg-white dark:text-[#333333] rounded-lg p-2" />
 														<div className="flex flex-col gap-0">
-															<span>GitHub</span>
+															<span><Trans>GitHub</Trans></span>
 															<span className="text-xs text-muted-foreground">
-																View our source code and contribute
+																<Trans>View our source code and contribute</Trans>
 															</span>
 														</div>
 													</a>
@@ -281,9 +287,9 @@ function Document({
 													>
 														<BookOpen className="size-12 bg-primary dark:bg-secondary text-primary-foreground dark:text-secondary-foreground rounded-lg p-2" />
 														<div className="flex flex-col gap-0">
-															<span>Documentation</span>
+															<span><Trans>Documentation</Trans></span>
 															<span className="text-xs text-muted-foreground">
-																Developer guides and API reference
+																<Trans>Developer guides and API reference</Trans>
 															</span>
 														</div>
 													</a>
@@ -297,7 +303,7 @@ function Document({
 											className={navigationMenuTriggerStyle()}
 											asChild
 										>
-											<Link to="/sales">Enterprise</Link>
+											<Link to="/sales"><Trans>Enterprise</Trans></Link>
 										</NavigationMenuLink>
 									</NavigationMenuItem>
 								</NavigationMenuList>
@@ -326,7 +332,7 @@ function Document({
 								asChild
 							>
 								<a href="https://app.carbon.ms">
-									Try It Now
+									<Trans>Try It Now</Trans>
 									<Play className="size-4" />
 								</a>
 							</Button>
@@ -356,22 +362,25 @@ export default function App() {
 	const [answers, setAnswers] = useState<FormAnswers>(defaultAnswers);
 	const [currentStep, setCurrentStep] = useState(0);
 	const mode = useMode();
+	const { linguiCatalog, locale } = useLoaderData<typeof loader>();
 
 	return (
-		<WizardContext.Provider
-			value={{
-				showWizard,
-				setShowWizard,
-				answers,
-				setAnswers,
-				currentStep,
-				setCurrentStep,
-			}}
-		>
-			<Document mode={mode}>
-				<Outlet />
-			</Document>
-		</WizardContext.Provider>
+		<LocaleProvider locale={locale} catalog={linguiCatalog}>
+			<WizardContext.Provider
+				value={{
+					showWizard,
+					setShowWizard,
+					answers,
+					setAnswers,
+					currentStep,
+					setCurrentStep,
+				}}
+			>
+				<Document mode={mode}>
+					<Outlet />
+				</Document>
+			</WizardContext.Provider>
+		</LocaleProvider>
 	);
 }
 
@@ -393,7 +402,7 @@ export function ErrorBoundary() {
 						alt="Carbon Logo"
 						className="block max-w-24"
 					/>
-					<h1 className="text-2xl font-bold">Something went wrong</h1>
+					<h1 className="text-2xl font-bold"><Trans>Something went wrong</Trans></h1>
 					<p className="text-muted-foreground max-w-2xl">{message}</p>
 				</div>
 			</div>

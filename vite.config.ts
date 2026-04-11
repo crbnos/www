@@ -1,8 +1,7 @@
-import { vitePlugin as remix } from "@remix-run/dev";
-import { vercelPreset } from "@vercel/remix/vite";
-import path from "node:path";
-import { flatRoutes } from "remix-flat-routes";
+import { reactRouter } from "@react-router/dev/vite";
+import { lingui } from "@lingui/vite-plugin";
 import { defineConfig } from "vite";
+import babel from "vite-plugin-babel";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
@@ -23,31 +22,21 @@ export default defineConfig({
     global: "globalThis",
   },
   ssr: {
-    noExternal: ["react-icons", "tailwind-merge"],
+    noExternal: ["react-icons", "tailwind-merge", "@lingui/react", "@lingui/core"],
   },
   server: {
     port: 3003,
   },
   plugins: [
-    remix({
-      presets: [vercelPreset()],
-      future: {
-        v3_fetcherPersist: false,
-        v3_lazyRouteDiscovery: false,
-        v3_relativeSplatPath: false,
-        v3_routeConfig: false,
-        v3_singleFetch: false,
-        v3_throwAbortReason: false,
-      },
-      ignoredRouteFiles: ["**/.*"],
-      serverModuleFormat: "esm",
-      routes: async (defineRoutes) => {
-        return flatRoutes("routes", defineRoutes, {
-          // eslint-disable-next-line no-undef
-          appDir: path.resolve(__dirname, "app"),
-        });
+    babel({
+      filter: /\.[jt]sx?$/,
+      babelConfig: {
+        presets: ["@babel/preset-typescript"],
+        plugins: ["babel-plugin-macros"],
       },
     }),
+    lingui(),
+    reactRouter(),
     tsconfigPaths(),
   ],
   resolve: {},

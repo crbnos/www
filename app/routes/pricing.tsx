@@ -1,68 +1,72 @@
-import { Link } from "@remix-run/react";
+import { Trans, useLingui } from "@lingui/react/macro";
+import { Link } from "react-router";
 import { BookOpen, Check, LucideHandCoins } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import { GithubLogo } from "~/components/ui/github-logo";
 import { cn } from "~/lib/utils";
 
-const plans = [
-	{
-		name: "Starter",
-		priceHeadline: "$33",
-		priceSubtext: "/user/month",
-		action: "Start 30-day free trial",
-		url: "https://app.carbon.ms",
-		description: "A managed cloud-hosted version of Carbon",
-		featured: false,
-		features: [
-			"Automatic updates and backups",
-			"Basic ERP, MES, and QMS functionality",
-			"Unlimited records",
-			"Self-onboarding",
-			"Community support",
-		],
-	},
-	{
-		name: "Business",
-		description:
-			"A managed cloud-hosted version of Carbon that includes support and all advanced features",
-		priceHeadline: "$92",
-		priceSubtext: "/user/month",
-		action: "Start 30-day free trial",
-		url: "https://app.carbon.ms",
-		featured: true,
-		features: [
-			"5 user minimum",
-			"Everything from Starter",
-			"Implementation support",
-			"Unlimited functional support",
-			"Advanced audit logging",
-			"API, webhooks, and integrations",
-			"AI-powered workflows",
-			"All advanced features available",
-		],
-	},
-	{
-		name: "Enterprise",
-		priceHeadline: "Contact us",
-		priceSubtext: "",
-		action: "Contact us",
-		url: "/sales",
-		description: "A custom solution to meet your needs",
-		featured: false,
-		features: [
-			"Self-hosted or managed",
-			"ITAR compliant",
-			"Full setup and migrations",
-			"Custom integrations",
-			"Custom development",
-			"SSO/SAML",
-			"Unlimited functional support",
-			"Training",
-		],
-	},
-];
+function usePlans() {
+	const { t } = useLingui();
+	return [
+		{
+			name: t`Starter`,
+			priceHeadline: "$33",
+			priceSubtext: t`/user/month`,
+			action: t`Start 30-day free trial`,
+			url: "https://app.carbon.ms",
+			description: t`A managed cloud-hosted version of Carbon`,
+			featured: false,
+			features: [
+				t`Automatic updates and backups`,
+				t`Basic ERP, MES, and QMS functionality`,
+				t`Unlimited records`,
+				t`Self-onboarding`,
+				t`Community support`,
+			],
+		},
+		{
+			name: t`Business`,
+			description: t`A managed cloud-hosted version of Carbon that includes support and all advanced features`,
+			priceHeadline: "$92",
+			priceSubtext: t`/user/month`,
+			action: t`Start 30-day free trial`,
+			url: "https://app.carbon.ms",
+			featured: true,
+			features: [
+				t`5 user minimum`,
+				t`Everything from Starter`,
+				t`Implementation support`,
+				t`Unlimited functional support`,
+				t`Advanced audit logging`,
+				t`API, webhooks, and integrations`,
+				t`AI-powered workflows`,
+				t`All advanced features available`,
+			],
+		},
+		{
+			name: t`Enterprise`,
+			priceHeadline: t`Contact us`,
+			priceSubtext: "",
+			action: t`Contact us`,
+			url: "/sales",
+			description: t`A custom solution to meet your needs`,
+			featured: false,
+			features: [
+				t`Self-hosted or managed`,
+				t`ITAR compliant`,
+				t`Full setup and migrations`,
+				t`Custom integrations`,
+				t`Custom development`,
+				t`SSO/SAML`,
+				t`Unlimited functional support`,
+				t`Training`,
+			],
+		},
+	];
+}
 
 export default function Pricing() {
+	const plans = usePlans();
 	return (
 		<section
 			id="pricing"
@@ -72,11 +76,11 @@ export default function Pricing() {
 				<div>
 					<Button variant="outline" className="cursor-default">
 						<LucideHandCoins />
-						Pricing
+						<Trans>Pricing</Trans>
 					</Button>
 				</div>
 				<h2 className="font-display text-balance mx-auto text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl w-full">
-					Simple pricing based on your needs
+					<Trans>Simple pricing based on your needs</Trans>
 				</h2>
 			</div>
 
@@ -145,22 +149,22 @@ export default function Pricing() {
 
 			<div className="flex flex-col gap-4 bg-muted dark:bg-muted bg-[url('/cta.webp')] dark:bg-none bg-[0_0] bg-no-repeat bg-cover rounded-2xl py-24 justify-center items-center px-4 w-full">
 				<h2 className="font-display text-balance mx-auto max-w-2xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl w-full">
-					Get started for free
+					<Trans>Get started for free</Trans>
 				</h2>
 				<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter text-lg">
-					View the docs and start developing locally
+					<Trans>View the docs and start developing locally</Trans>
 				</p>
 				<div className="flex flex-col md:flex-row justify-center gap-4 mt-8">
 					<Button variant="default" size="xl" asChild>
 						<a href="https://docs.carbon.ms">
-							Read the Docs
+							<Trans>Read the Docs</Trans>
 							<BookOpen />
 						</a>
 					</Button>
 					<Button variant="outline" size="xl" asChild>
 						<a href="https://github.com/crbnos/carbon">
 							<GithubLogo />
-							Star on GitHub
+							<Trans>Star on GitHub</Trans>
 						</a>
 					</Button>
 				</div>

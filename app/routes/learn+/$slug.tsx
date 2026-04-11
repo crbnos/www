@@ -1,6 +1,5 @@
-import { useLoaderData } from "@remix-run/react";
-import type { LoaderFunctionArgs, MetaFunction } from "@vercel/remix";
-import { json } from "@vercel/remix";
+import { data, useLoaderData } from "react-router";
+import type { LoaderFunctionArgs, MetaFunction } from "react-router";
 import { Article } from "~/components/article";
 import { getBlogPost } from "~/lib/blog.server";
 
@@ -17,7 +16,7 @@ export async function loader({ request, params }: LoaderFunctionArgs) {
   const post = await getBlogPost(slug);
   if (!post) throw new Error("Post not found");
 
-  return json(
+  return data(
     {
       post,
       siteUrl,

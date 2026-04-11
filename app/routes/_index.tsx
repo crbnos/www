@@ -1,5 +1,6 @@
+import { Trans } from "@lingui/react/macro";
 import { MeshGradient } from "@paper-design/shaders-react";
-import { Link } from "@remix-run/react";
+import { Link } from "react-router";
 import { AnimatePresence, motion } from "framer-motion";
 import {
 	Book,
@@ -112,18 +113,22 @@ function Hero() {
 					<div className="flex flex-col justify-start items-center gap-8">
 						<DiscordButton />
 						<h2 className="font-display text-primary dark:text-foreground text-balance mx-auto  max-w-5xl text-center font-medium tracking-tighter leading-[115%] text-[2.6rem] sm:text-6xl lg:text-[5rem] xl:text-[7.2rem]">
-							The open source{" "}
-							<span className="text-secondary">manufacturing ERP</span>
+							<Trans>
+								The open source{" "}
+								<span className="text-secondary">manufacturing ERP</span>
+							</Trans>
 						</h2>
 						<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-[780px] text-center font-medium tracking-tighter text-base md:text-lg lg:text-xl">
-							Carbon is a manufacturing system of record that combines ERP, MES,
-							and QMS into a single, unified, API-first system that's perfect
-							for complex manufacturing.
+							<Trans>
+								Carbon is a manufacturing system of record that combines ERP,
+								MES, and QMS into a single, unified, API-first system that's
+								perfect for complex manufacturing.
+							</Trans>
 						</p>
 						<div className="flex flex-col md:flex-row gap-2">
 							<Button variant="secondary" size="xl" asChild>
 								<a href="https://app.carbon.ms">
-									Try It Now
+									<Trans>Try It Now</Trans>
 									<Play />
 								</a>
 							</Button>
@@ -134,7 +139,7 @@ function Hero() {
 									rel="noopener"
 								>
 									<GithubLogo />
-									Star on GitHub
+									<Trans>Star on GitHub</Trans>
 								</a>
 							</Button>
 						</div>
@@ -142,7 +147,9 @@ function Hero() {
 						<div className="flex flex-col gap-4 max-w-4xl mx-auto mt-8">
 							<div className="flex flex-col gap-4 max-w-4xl mx-auto ">
 								<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-3xl text-center font-medium tracking-tighter text-base">
-									Modern manufacturers build their tech stack on Carbon
+									<Trans>
+										Modern manufacturers build their tech stack on Carbon
+									</Trans>
 								</p>
 							</div>
 							<div className="flex flex-col md:flex-row items-center justify-center gap-8 min-h-[125px]">
@@ -183,48 +190,48 @@ function E2E() {
 			<div className="flex gap-8 container max-w-[1380px] mx-auto px-4">
 				<div className="flex flex-col gap-8 mt-[205px] flex-grow max-w-[1380px] mx-auto pl-8">
 					<h3 className="text-muted-foreground uppercase text-sm leading-[140%] tracking-tighter">
-						End-to-End
+						<Trans>End-to-End</Trans>
 					</h3>
 					<h4 className="font-display text-foreground text-balance text-left font-medium tracking-tight leading-[115%] text-4xl lg:text-5xl xl:text-6xl -mt-4">
-						Designed for manufacturing
+						<Trans>Designed for manufacturing</Trans>
 					</h4>
 
 					<div className="flex flex-col gap-4">
 						<div className="flex justify-start items-center gap-2">
 							<CheckCircle className="size-6 text-secondary" />
 							<p className="text-foreground text-left font-medium tracking-tighter text-lg">
-								Unified quality, purchasing & production
+								<Trans>Unified quality, purchasing & production</Trans>
 							</p>
 						</div>
 						<div className="flex justify-start items-center gap-2">
 							<CheckCircle className="size-6 text-secondary" />
 							<p className="text-foreground text-left font-medium tracking-tighter text-lg">
-								Assembly and make-to-order workflows
+								<Trans>Assembly and make-to-order workflows</Trans>
 							</p>
 						</div>
 						<div className="flex justify-start items-center gap-2">
 							<CheckCircle className="size-6 text-secondary" />
 							<p className="text-foreground text-left font-medium tracking-tighter text-lg">
-								Multi-location planning and inventory
+								<Trans>Multi-location planning and inventory</Trans>
 							</p>
 						</div>
 						<div className="flex justify-start items-center gap-2">
 							<CheckCircle className="size-6 text-secondary" />
 							<p className="text-foreground text-left font-medium tracking-tighter text-lg">
-								Built on the best of open-source software
+								<Trans>Built on the best of open-source software</Trans>
 							</p>
 						</div>
 						<div className="flex justify-start items-center gap-2">
 							<CheckCircle className="size-6 text-secondary" />
 							<p className="text-foreground text-left font-medium tracking-tighter text-lg">
-								Govcloud-hosted Version Available
+								<Trans>Govcloud-hosted Version Available</Trans>
 							</p>
 						</div>
 					</div>
 					<div className="flex flex-col md:flex-row gap-4">
 						<Button variant="secondary" size="xl" asChild>
 							<a href="https://learn.carbon.ms">
-								Start Learning
+								<Trans>Start Learning</Trans>
 								<GraduationCap />
 							</a>
 						</Button>
@@ -232,7 +239,7 @@ function E2E() {
 						<Button variant="outline" size="xl" asChild>
 							<Link to="/sales">
 								<Phone />
-								Talk to Us
+								<Trans>Talk to Us</Trans>
 							</Link>
 						</Button>
 					</div>
@@ -269,10 +276,10 @@ function Features() {
 					<div className="flex flex-col gap-8">
 						<div className="flex flex-col gap-2">
 							<h3 className="text-muted-foreground uppercase text-sm leading-[140%] tracking-tighter text-center">
-								Features
+								<Trans>Features</Trans>
 							</h3>
 							<h2 className="font-display text-balance mx-auto max-w-2xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-								Powerful tools to run your business
+								<Trans>Powerful tools to run your business</Trans>
 							</h2>
 						</div>
 					</div>
@@ -287,15 +294,17 @@ function Features() {
 													<Waypoints className="size-4 flex-shrink-0" />
 												</div>
 												<h4 className="text-foreground text-balance text-left font-medium tracking-tighter text-base">
-													End-to-End Traceability
+													<Trans>End-to-End Traceability</Trans>
 												</h4>
 											</div>
 											<p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-sm">
-												Achieve granular, end-to-end tracking of materials,
-												components, and processes, ensuring compliance,
-												simplifying audits, and enabling rapid root cause
-												analysis without the complexity and cost of traditional
-												high-end systems.
+												<Trans>
+													Achieve granular, end-to-end tracking of materials,
+													components, and processes, ensuring compliance,
+													simplifying audits, and enabling rapid root cause
+													analysis without the complexity and cost of
+													traditional high-end systems.
+												</Trans>
 											</p>
 										</div>
 										{/* <div>
@@ -312,14 +321,16 @@ function Features() {
 													<CheckCircle className="size-4 flex-shrink-0" />
 												</div>
 												<h4 className="text-foreground text-balance text-left font-medium tracking-tighter text-base">
-													Integrated Agents
+													<Trans>Integrated Agents</Trans>
 												</h4>
 											</div>
 											<p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-sm">
-												Our ever-expanding catalog of agents allow you to save
-												time and money by automating repetitive tasks. For
-												example, our purchasing agent can create purchase orders
-												and get quotes from suppliers automatically.
+												<Trans>
+													Our ever-expanding catalog of agents allow you to save
+													time and money by automating repetitive tasks. For
+													example, our purchasing agent can create purchase
+													orders and get quotes from suppliers automatically.
+												</Trans>
 											</p>
 										</div>
 										{/* <div>
@@ -338,13 +349,15 @@ function Features() {
 													<LayoutDashboard className="size-4 flex-shrink-0" />
 												</div>
 												<h4 className="text-foreground text-balance text-left font-medium tracking-tighter text-base">
-													Product Configurator
+													<Trans>Product Configurator</Trans>
 												</h4>
 											</div>
 											<p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-sm">
-												Automatically generate the Bill of Materials and Bill of
-												Process for a given set of options/parameters with our
-												powerful product configurator.
+												<Trans>
+													Automatically generate the Bill of Materials and Bill
+													of Process for a given set of options/parameters with
+													our powerful product configurator.
+												</Trans>
 											</p>
 										</div>
 										{/* <div>
@@ -361,14 +374,16 @@ function Features() {
 													<CalendarDays className="size-4 flex-shrink-0" />
 												</div>
 												<h4 className="text-foreground text-balance text-left font-medium tracking-tighter text-base">
-													Simplified Scheduling
+													<Trans>Simplified Scheduling</Trans>
 												</h4>
 											</div>
 											<p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-sm">
-												Keep your shop floor schedule up-to-date with our simple
-												and powerful scheduling engine. Schedule by job due
-												date, or by fine-tune work center and resource
-												availability.
+												<Trans>
+													Keep your shop floor schedule up-to-date with our
+													simple and powerful scheduling engine. Schedule by job
+													due date, or by fine-tune work center and resource
+													availability.
+												</Trans>
 											</p>
 										</div>
 										{/* <div>
@@ -385,14 +400,17 @@ function Features() {
 													<Cable className="size-4 flex-shrink-0" />
 												</div>
 												<h4 className="text-foreground text-balance text-left font-medium tracking-tighter text-base">
-													API-First Architecture
+													<Trans>API-First Architecture</Trans>
 												</h4>
 											</div>
 											<p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-sm">
-												Carbon is built with an "API-First Architecture," which
-												gives you unparalleled flexibility to seamlessly connect
-												Carbon with your other business systems. This allows you
-												to automate workflows across all applications.
+												<Trans>
+													Carbon is built with an "API-First Architecture,"
+													which gives you unparalleled flexibility to seamlessly
+													connect Carbon with your other business systems. This
+													allows you to automate workflows across all
+													applications.
+												</Trans>
 											</p>
 										</div>
 										{/* <div>
@@ -425,10 +443,10 @@ function Learn() {
 				<div className="flex flex-col w-full max-w-section mx-auto px-section gap-24">
 					<div className="flex flex-col gap-2">
 						<h3 className="text-muted-foreground uppercase text-sm leading-[140%] tracking-tighter text-center">
-							Open Source
+							<Trans>Open Source</Trans>
 						</h3>
 						<h2 className="font-display text-balance mx-auto max-w-3xl text-center font-medium tracking-tight leading-[115%] text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
-							Modern, minimal, transparent
+							<Trans>Modern, minimal, transparent</Trans>
 						</h2>
 					</div>
 					<div className="grid gap-3 container grid-cols-1 lg:grid-cols-3">
@@ -440,12 +458,14 @@ function Learn() {
 								<PlayCircle className="size-4" />
 							</div>
 							<h3 className="not-prose mb-1 text-base font-medium">
-								Video Library
+								<Trans>Video Library</Trans>
 							</h3>
 							<p className="!my-0 text-sm text-muted-foreground flex-grow">
-								Carbon Academy is a free, self-paced learning platform that
-								teaches you how to use Carbon. It's a great way to get started
-								with Carbon and learn how to use it to its full potential.
+								<Trans>
+									Carbon Academy is a free, self-paced learning platform that
+									teaches you how to use Carbon. It's a great way to get started
+									with Carbon and learn how to use it to its full potential.
+								</Trans>
 							</p>
 							<div className="text-sm text-muted-foreground prose-no-margin empty:hidden">
 								<Button variant="outline" className="mt-4" asChild>
@@ -454,7 +474,7 @@ function Learn() {
 										target="_blank"
 										rel="noopener"
 									>
-										Start Learning
+										<Trans>Start Learning</Trans>
 										<GraduationCap className="size-4" />
 									</a>
 								</Button>
@@ -469,12 +489,14 @@ function Learn() {
 								<Book className="size-4" />
 							</div>
 							<h3 className="not-prose mb-1 text-base font-medium">
-								Documentation
+								<Trans>Documentation</Trans>
 							</h3>
 							<p className="!my-0 text-sm text-muted-foreground flex-grow">
-								Carbon's developer documentation guides you through getting
-								Carbon running locally, and extending it to build your own own
-								custom applications.
+								<Trans>
+									Carbon's developer documentation guides you through getting
+									Carbon running locally, and extending it to build your own own
+									custom applications.
+								</Trans>
 							</p>
 							<div className="text-sm text-muted-foreground prose-no-margin empty:hidden">
 								<Button variant="outline" className="mt-4" asChild>
@@ -483,7 +505,7 @@ function Learn() {
 										target="_blank"
 										rel="noopener"
 									>
-										View Docs
+										<Trans>View Docs</Trans>
 										<ExternalLink className="size-4" />
 									</a>
 								</Button>
@@ -498,12 +520,14 @@ function Learn() {
 								<GithubLogo className="size-4" />
 							</div>
 							<h3 className="not-prose mb-1 text-base font-medium">
-								Source Code
+								<Trans>Source Code</Trans>
 							</h3>
 							<p className="!my-0 text-sm text-muted-foreground flex-grow">
-								Carbon's source code is available on GitHub and is free to use.
-								You can maintain your own public fork or acquire a commercial
-								license to make your code modifications private.
+								<Trans>
+									Carbon's source code is available on GitHub and is free to
+									use. You can maintain your own public fork or acquire a
+									commercial license to make your code modifications private.
+								</Trans>
 							</p>
 							<div className="text-sm text-muted-foreground prose-no-margin empty:hidden">
 								<Button variant="outline" className="mt-4" asChild>
@@ -512,7 +536,7 @@ function Learn() {
 										target="_blank"
 										rel="noopener"
 									>
-										View Source
+										<Trans>View Source</Trans>
 										<GithubLogo className="size-4" />
 									</a>
 								</Button>
@@ -561,10 +585,10 @@ function Reviews() {
 			<div className="mx-auto max-w-7xl px-6 lg:px-8">
 				<div className="flex flex-col gap-2 mb-12">
 					<h3 className="opacity-60 uppercase text-sm tracking-tighter text-center">
-						Reviews
+						<Trans>Reviews</Trans>
 					</h3>
 					<h2 className="font-display font-medium text-balance mx-auto max-w-4xl text-center tracking-tight text-3xl lg:text-5xl">
-						What our customers say:
+						<Trans>What our customers say:</Trans>
 					</h2>
 				</div>
 				<div className="grid grid-cols-1 gap-6 lg:grid-cols-5">
@@ -575,7 +599,9 @@ function Reviews() {
 								alt=""
 								className="h-8 w-auto mb-8 dark:invert"
 							/>
-							<p className="relative text-pretty text-xl lg:text-2xl font-medium tracking-tight before:absolute before:inline before:-translate-x-full before:content-['\201C'] after:inline after:content-['\201D']">{reviews[0].review}</p>
+							<p className="relative text-pretty text-xl lg:text-2xl font-medium tracking-tight before:absolute before:inline before:-translate-x-full before:content-['\201C'] after:inline after:content-['\201D']">
+								{reviews[0].review}
+							</p>
 						</div>
 						<div className="mt-10 flex items-center gap-5">
 							<img
@@ -585,7 +611,9 @@ function Reviews() {
 							/>
 							<div>
 								<p className="text-base font-semibold">{reviews[0].author}</p>
-								<p className="text-sm text-muted-foreground">{reviews[0].authorTitle}</p>
+								<p className="text-sm text-muted-foreground">
+									{reviews[0].authorTitle}
+								</p>
 							</div>
 						</div>
 					</div>
@@ -601,7 +629,9 @@ function Reviews() {
 										alt=""
 										className="h-6 w-auto self-start dark:invert"
 									/>
-									<p className="relative text-pretty text-base font-medium tracking-tight before:absolute before:inline before:-translate-x-full before:content-['\201C'] after:inline after:content-['\201D']">{review.review}</p>
+									<p className="relative text-pretty text-base font-medium tracking-tight before:absolute before:inline before:-translate-x-full before:content-['\201C'] after:inline after:content-['\201D']">
+										{review.review}
+									</p>
 								</div>
 								<div className="mt-6 flex items-center gap-4">
 									<img
@@ -611,7 +641,9 @@ function Reviews() {
 									/>
 									<div>
 										<p className="text-sm font-semibold">{review.author}</p>
-										<p className="text-sm text-muted-foreground">{review.authorTitle}</p>
+										<p className="text-sm text-muted-foreground">
+											{review.authorTitle}
+										</p>
 									</div>
 								</div>
 							</div>
@@ -629,44 +661,54 @@ function Memo() {
 			<div className="max-w-4xl mx-auto flex flex-col gap-4 border-[0.5px] bg-card px-8 shadow py-12 lg:p-14 text-lg xl-p-16">
 				<div className="mb-4 flex flex-col gap-1.5 md:mb-6 lg:mb-8 tracking-tight">
 					<p className="dark:text-muted-foreground font-mono uppercase text-base font-light">
-						Founder memo
+						<Trans>Founder memo</Trans>
 					</p>
 					<p className="font-mono uppercase font-medium">
-						Carbon Manufacturing Systems Corp.
+						<Trans>Carbon Manufacturing Systems Corp.</Trans>
 					</p>
 				</div>
 
 				<p className="leading-[1.8] text-foreground">
-					After spending nearly a decade building end-to-end systems for
-					manufacturing, I had a pretty good idea of what an "ideal" solution
-					looked like from a technical perspective:
+					<Trans>
+						After spending nearly a decade building end-to-end systems for
+						manufacturing, I had a pretty good idea of what an "ideal" solution
+						looked like from a technical perspective:
+					</Trans>
 				</p>
 
 				<p className="leading-[1.8] text-foreground">
-					API-first, realtime subscriptions, simple scheduling, and 1,000 little
-					details to make the juice of using an ERP worth the squeeze.
+					<Trans>
+						API-first, realtime subscriptions, simple scheduling, and 1,000
+						little details to make the juice of using an ERP worth the squeeze.
+					</Trans>
 				</p>
 				<p className="leading-[1.8] text-foreground">
-					But even as we work with our customers to become the best
-					off-the-shelf ERP/MES for many types of discrete manufacturing, we are
-					faced with the reality that there is no "perfect" off-the-shelf
-					solution, because each manufacturing business is unique.
-				</p>
-
-				<p className="leading-[1.8] text-foreground">
-					We open-sourced Carbon not because it's a great business plan, but
-					because that's the system I would have wanted when I was in your
-					shoes.
+					<Trans>
+						But even as we work with our customers to become the best
+						off-the-shelf ERP/MES for many types of discrete manufacturing, we
+						are faced with the reality that there is no "perfect" off-the-shelf
+						solution, because each manufacturing business is unique.
+					</Trans>
 				</p>
 
 				<p className="leading-[1.8] text-foreground">
-					I believe open-source has incredible potential because it's not just a
-					product&ndash;it's a community of like-minded people working to build
-					the future of manufacturing in the age of AI and robotics.
+					<Trans>
+						We open-sourced Carbon not because it's a great business plan, but
+						because that's the system I would have wanted when I was in your
+						shoes.
+					</Trans>
 				</p>
 
 				<p className="leading-[1.8] text-foreground">
-					We're glad you're here for it.
+					<Trans>
+						I believe open-source has incredible potential because it's not just
+						a product–it's a community of like-minded people working to build
+						the future of manufacturing in the age of AI and robotics.
+					</Trans>
+				</p>
+
+				<p className="leading-[1.8] text-foreground">
+					<Trans>We're glad you're here for it.</Trans>
 				</p>
 
 				<DiscordButton />
@@ -687,7 +729,7 @@ function Memo() {
 						<div className="flex flex-col">
 							<p className="dark:text-tertiary text-foreground">Brad Barbin</p>
 							<p className="dark:text-tertiary text-muted-foreground text-sm">
-								Co-founder
+								<Trans>Co-founder</Trans>
 							</p>
 						</div>
 					</a>
@@ -703,22 +745,22 @@ function CTA() {
 			<div className="container max-w-4xl mx-auto px-4">
 				<div className="flex flex-col gap-4 bg-muted dark:bg-muted bg-[url('/cta.webp')] dark:bg-none bg-[0_0] bg-no-repeat bg-cover rounded-xl py-24 justify-center items-center px-4">
 					<h2 className="font-display text-balance mx-auto max-w-2xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl ">
-						Build something with Carbon
+						<Trans>Build something with Carbon</Trans>
 					</h2>
 					<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter text-lg">
-						Start your 30-day free trial today
+						<Trans>Start your 30-day free trial today</Trans>
 					</p>
 					<div className="flex flex-col md:flex-row justify-center gap-4 mt-8">
 						<Button variant="default" size="xl" asChild>
 							<a href="https://app.carbon.ms">
-								Try It Now
+								<Trans>Try It Now</Trans>
 								<Play />
 							</a>
 						</Button>
 						<Button variant="outline" size="xl" asChild>
 							<Link to="/sales">
 								<Phone />
-								Talk to Us
+								<Trans>Talk to Us</Trans>
 							</Link>
 						</Button>
 					</div>
@@ -734,7 +776,7 @@ function DiscordButton() {
 			<Button variant="outline" asChild>
 				<a href="https://discord.gg/yGUJWhNqzy" target="_blank" rel="noopener">
 					<DiscordLogo className="text-[#5865f2]" />
-					Join our Discord community{" "}
+					<Trans>Join our Discord community</Trans>{" "}
 					<ChevronRight className="text-muted-foreground size-3" />
 				</a>
 			</Button>
