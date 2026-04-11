@@ -2,8 +2,12 @@ export const supportedLanguages = [
   "en",
   "es",
   "de",
+  "fr",
   "it",
   "ja",
+  "pl",
+  "pt",
+  "ru",
   "zh",
 ] as const;
 
