@@ -118,11 +118,11 @@ msgstr "基本的なERP、MES、およびQMS機能"
 msgid "Bill of Materials"
 msgstr "部品表"
 
-#: app/components/footer.tsx:46
+#: app/components/footer.tsx:48
 msgid "Blog"
 msgstr "ブログ"
 
-#: app/components/footer.tsx:45
+#: app/components/footer.tsx:47
 #: app/routes/brand.tsx:22
 msgid "Brand Assets"
 msgstr "ブランドアセット"
@@ -183,7 +183,7 @@ msgstr "Carbonの開発者ドキュメントは、Carbonをローカルで実行
 msgid "Carbon's source code is available on GitHub and is free to use. You can maintain your own public fork or acquire a commercial license to make your code modifications private."
 msgstr "Carbonのソースコードはgithubで利用可能であり、自由に使用できます。独自のパブリックフォークを維持するか、商用ライセンスを取得してコード変更をプライベートにすることができます。"
 
-#: app/components/status-indicator.tsx:27
+#: app/components/status-indicator.tsx:45
 msgid "Checking status…"
 msgstr "ステータスを確認中…"
 
@@ -207,7 +207,7 @@ msgstr "コード例"
 msgid "Community support"
 msgstr "コミュニティサポート"
 
-#: app/components/footer.tsx:42
+#: app/components/footer.tsx:44
 msgid "Company"
 msgstr "会社"
 
@@ -232,7 +232,7 @@ msgstr "コンフィギュレーター"
 msgid "Connect your robots and machines to your production systems"
 msgstr "ロボットと機械を本番システムに接続します"
 
-#: app/components/footer.tsx:47
+#: app/components/footer.tsx:49
 #: app/routes/contact.tsx:143
 msgid "Contact"
 msgstr "お問い合わせ"
@@ -294,19 +294,19 @@ msgstr "専任サポート"
 msgid "Designed for manufacturing"
 msgstr "製造業向けに設計"
 
-#: app/root.tsx:292
+#: app/root.tsx:295
 msgid "Developer guides and API reference"
 msgstr "開発者ガイドとAPIリファレンス"
 
-#: app/root.tsx:252
+#: app/root.tsx:255
 msgid "Developers"
 msgstr "開発者"
 
-#: app/root.tsx:262
+#: app/root.tsx:265
 msgid "Discord"
 msgstr "Discord"
 
-#: app/root.tsx:290
+#: app/root.tsx:293
 #: app/routes/_index.tsx:492
 msgid "Documentation"
 msgstr "ドキュメント"
@@ -331,7 +331,7 @@ msgstr "エンドツーエンド"
 msgid "End-to-End Traceability"
 msgstr "エンドツーエンドトレーサビリティ"
 
-#: app/root.tsx:306
+#: app/root.tsx:309
 #: app/routes/pricing.tsx:47
 msgid "Enterprise"
 msgstr "エンタープライズ"
@@ -372,7 +372,7 @@ msgstr "始める"
 msgid "Get started for free"
 msgstr "無料で始める"
 
-#: app/root.tsx:276
+#: app/root.tsx:279
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -396,7 +396,7 @@ msgstr "オープンソースには素晴らしい可能性があると信じて
 msgid "Implementation support"
 msgstr "実装サポート"
 
-#: app/components/status-indicator.tsx:26
+#: app/components/status-indicator.tsx:8
 msgid "Incident detected"
 msgstr "インシデントが検出されました"
 
@@ -420,7 +420,7 @@ msgstr "ジョン・ドゥ"
 msgid "john@company.com"
 msgstr "john@company.com"
 
-#: app/root.tsx:264
+#: app/root.tsx:267
 msgid "Join our community chat"
 msgstr "コミュニティチャットに参加"
 
@@ -436,7 +436,7 @@ msgstr "カンバンスケジュール"
 msgid "Keep your shop floor schedule up-to-date with our simple and powerful scheduling engine. Schedule by job due date, or by fine-tune work center and resource availability."
 msgstr "ショップフロアのスケジュールを、シンプルで強力なスケジューリングエンジンで常に最新の状態に保ちます。ジョブの期限日でスケジュール設定するか、ワークセンターとリソースの可用性を細かく調整してスケジュール設定できます。"
 
-#: app/components/footer.tsx:57
+#: app/components/footer.tsx:59
 msgid "Learning"
 msgstr "学習"
 
@@ -448,7 +448,7 @@ msgstr "ラーニングセンター"
 msgid "Least expensive. Basic onboarding and email support"
 msgstr "最も安価です。基本的なオンボーディングとメールサポート"
 
-#: app/components/footer.tsx:66
+#: app/components/footer.tsx:68
 msgid "Legal"
 msgstr "法務"
 
@@ -456,7 +456,7 @@ msgstr "法務"
 msgid "Let us handle the infrastructure for you"
 msgstr "インフラストラクチャの管理はお任せください"
 
-#: app/components/footer.tsx:58
+#: app/components/footer.tsx:60
 msgid "License"
 msgstr "ライセンス"
 
@@ -524,11 +524,11 @@ msgstr "リンクを開く"
 msgid "Open Source"
 msgstr "オープンソース"
 
-#: app/components/status-indicator.tsx:24
+#: app/components/status-indicator.tsx:8
 msgid "Operational"
 msgstr "稼働中"
 
-#: app/components/footer.tsx:48
+#: app/components/footer.tsx:50
 #: app/routes/oss.tsx:38
 msgid "OSS Friends"
 msgstr "OSSフレンズ"
@@ -549,18 +549,18 @@ msgstr "プロセスを完了するために、ご連絡先の詳細をご入力
 msgid "Powerful tools to run your business"
 msgstr "ビジネスを運営するための強力なツール"
 
-#: app/components/footer.tsx:59
-#: app/root.tsx:246
+#: app/components/footer.tsx:61
+#: app/root.tsx:249
 #: app/routes/pricing.tsx:79
 msgid "Pricing"
 msgstr "料金"
 
-#: app/components/footer.tsx:69
+#: app/components/footer.tsx:71
 msgid "Privacy"
 msgstr "プライバシー"
 
-#: app/components/footer.tsx:54
-#: app/root.tsx:236
+#: app/components/footer.tsx:56
+#: app/root.tsx:239
 msgid "Product"
 msgstr "製品"
 
@@ -593,7 +593,7 @@ msgstr "リソース"
 msgid "Reviews"
 msgstr "レビュー"
 
-#: app/components/footer.tsx:49
+#: app/components/footer.tsx:51
 msgid "Sales"
 msgstr "営業"
 
@@ -645,11 +645,11 @@ msgstr "シングルテナント"
 msgid "Software as a Service"
 msgstr "Software as a Service"
 
-#: app/root.tsx:405
+#: app/root.tsx:408
 msgid "Something went wrong"
 msgstr "何か問題が発生しました"
 
-#: app/components/footer.tsx:60
+#: app/components/footer.tsx:62
 #: app/routes/_index.tsx:523
 msgid "Source Code"
 msgstr "ソースコード"
@@ -689,7 +689,7 @@ msgstr "送信"
 msgid "Support Level"
 msgstr "サポートレベル"
 
-#: app/components/status-indicator.tsx:32
+#: app/components/status-indicator.tsx:59
 msgid "System Status:"
 msgstr "システムステータス:"
 
@@ -698,7 +698,7 @@ msgstr "システムステータス:"
 msgid "Talk to Us"
 msgstr "お話しします"
 
-#: app/components/footer.tsx:70
+#: app/components/footer.tsx:72
 msgid "Terms"
 msgstr "利用規約"
 
@@ -722,7 +722,7 @@ msgstr "オープンソースの<0>製造ERP</0>"
 msgid "Training"
 msgstr "トレーニング"
 
-#: app/root.tsx:335
+#: app/root.tsx:338
 #: app/routes/_index.tsx:131
 #: app/routes/_index.tsx:756
 msgid "Try It Now"
@@ -749,7 +749,7 @@ msgstr "ビデオライブラリ"
 msgid "View Docs"
 msgstr "ドキュメントを表示"
 
-#: app/root.tsx:278
+#: app/root.tsx:281
 msgid "View our source code and contribute"
 msgstr "ソースコードを表示して貢献する"
 

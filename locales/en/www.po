@@ -118,11 +118,11 @@ msgstr "Basic ERP, MES, and QMS functionality"
 msgid "Bill of Materials"
 msgstr "Bill of Materials"
 
-#: app/components/footer.tsx:46
+#: app/components/footer.tsx:48
 msgid "Blog"
 msgstr "Blog"
 
-#: app/components/footer.tsx:45
+#: app/components/footer.tsx:47
 #: app/routes/brand.tsx:22
 msgid "Brand Assets"
 msgstr "Brand Assets"
@@ -183,7 +183,7 @@ msgstr "Carbon's developer documentation guides you through getting Carbon runni
 msgid "Carbon's source code is available on GitHub and is free to use. You can maintain your own public fork or acquire a commercial license to make your code modifications private."
 msgstr "Carbon's source code is available on GitHub and is free to use. You can maintain your own public fork or acquire a commercial license to make your code modifications private."
 
-#: app/components/status-indicator.tsx:27
+#: app/components/status-indicator.tsx:45
 msgid "Checking status…"
 msgstr "Checking status…"
 
@@ -207,7 +207,7 @@ msgstr "Code Examples"
 msgid "Community support"
 msgstr "Community support"
 
-#: app/components/footer.tsx:42
+#: app/components/footer.tsx:44
 msgid "Company"
 msgstr "Company"
 
@@ -232,7 +232,7 @@ msgstr "Configurator"
 msgid "Connect your robots and machines to your production systems"
 msgstr "Connect your robots and machines to your production systems"
 
-#: app/components/footer.tsx:47
+#: app/components/footer.tsx:49
 #: app/routes/contact.tsx:143
 msgid "Contact"
 msgstr "Contact"
@@ -294,19 +294,19 @@ msgstr "Dedicated Support"
 msgid "Designed for manufacturing"
 msgstr "Designed for manufacturing"
 
-#: app/root.tsx:292
+#: app/root.tsx:295
 msgid "Developer guides and API reference"
 msgstr "Developer guides and API reference"
 
-#: app/root.tsx:252
+#: app/root.tsx:255
 msgid "Developers"
 msgstr "Developers"
 
-#: app/root.tsx:262
+#: app/root.tsx:265
 msgid "Discord"
 msgstr "Discord"
 
-#: app/root.tsx:290
+#: app/root.tsx:293
 #: app/routes/_index.tsx:492
 msgid "Documentation"
 msgstr "Documentation"
@@ -331,7 +331,7 @@ msgstr "End-to-End"
 msgid "End-to-End Traceability"
 msgstr "End-to-End Traceability"
 
-#: app/root.tsx:306
+#: app/root.tsx:309
 #: app/routes/pricing.tsx:47
 msgid "Enterprise"
 msgstr "Enterprise"
@@ -372,7 +372,7 @@ msgstr "Get Started"
 msgid "Get started for free"
 msgstr "Get started for free"
 
-#: app/root.tsx:276
+#: app/root.tsx:279
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -396,7 +396,7 @@ msgstr "I believe open-source has incredible potential because it's not just a p
 msgid "Implementation support"
 msgstr "Implementation support"
 
-#: app/components/status-indicator.tsx:26
+#: app/components/status-indicator.tsx:8
 msgid "Incident detected"
 msgstr "Incident detected"
 
@@ -420,7 +420,7 @@ msgstr "John Doe"
 msgid "john@company.com"
 msgstr "john@company.com"
 
-#: app/root.tsx:264
+#: app/root.tsx:267
 msgid "Join our community chat"
 msgstr "Join our community chat"
 
@@ -436,7 +436,7 @@ msgstr "Kanban Schedule"
 msgid "Keep your shop floor schedule up-to-date with our simple and powerful scheduling engine. Schedule by job due date, or by fine-tune work center and resource availability."
 msgstr "Keep your shop floor schedule up-to-date with our simple and powerful scheduling engine. Schedule by job due date, or by fine-tune work center and resource availability."
 
-#: app/components/footer.tsx:57
+#: app/components/footer.tsx:59
 msgid "Learning"
 msgstr "Learning"
 
@@ -448,7 +448,7 @@ msgstr "Learning Center"
 msgid "Least expensive. Basic onboarding and email support"
 msgstr "Least expensive. Basic onboarding and email support"
 
-#: app/components/footer.tsx:66
+#: app/components/footer.tsx:68
 msgid "Legal"
 msgstr "Legal"
 
@@ -456,7 +456,7 @@ msgstr "Legal"
 msgid "Let us handle the infrastructure for you"
 msgstr "Let us handle the infrastructure for you"
 
-#: app/components/footer.tsx:58
+#: app/components/footer.tsx:60
 msgid "License"
 msgstr "License"
 
@@ -524,11 +524,11 @@ msgstr "Open link"
 msgid "Open Source"
 msgstr "Open Source"
 
-#: app/components/status-indicator.tsx:24
+#: app/components/status-indicator.tsx:8
 msgid "Operational"
 msgstr "Operational"
 
-#: app/components/footer.tsx:48
+#: app/components/footer.tsx:50
 #: app/routes/oss.tsx:38
 msgid "OSS Friends"
 msgstr "OSS Friends"
@@ -549,18 +549,18 @@ msgstr "Please provide your contact details to complete the process"
 msgid "Powerful tools to run your business"
 msgstr "Powerful tools to run your business"
 
-#: app/components/footer.tsx:59
-#: app/root.tsx:246
+#: app/components/footer.tsx:61
+#: app/root.tsx:249
 #: app/routes/pricing.tsx:79
 msgid "Pricing"
 msgstr "Pricing"
 
-#: app/components/footer.tsx:69
+#: app/components/footer.tsx:71
 msgid "Privacy"
 msgstr "Privacy"
 
-#: app/components/footer.tsx:54
-#: app/root.tsx:236
+#: app/components/footer.tsx:56
+#: app/root.tsx:239
 msgid "Product"
 msgstr "Product"
 
@@ -593,7 +593,7 @@ msgstr "Resources"
 msgid "Reviews"
 msgstr "Reviews"
 
-#: app/components/footer.tsx:49
+#: app/components/footer.tsx:51
 msgid "Sales"
 msgstr "Sales"
 
@@ -645,11 +645,11 @@ msgstr "Single-Tenant"
 msgid "Software as a Service"
 msgstr "Software as a Service"
 
-#: app/root.tsx:405
+#: app/root.tsx:408
 msgid "Something went wrong"
 msgstr "Something went wrong"
 
-#: app/components/footer.tsx:60
+#: app/components/footer.tsx:62
 #: app/routes/_index.tsx:523
 msgid "Source Code"
 msgstr "Source Code"
@@ -689,7 +689,7 @@ msgstr "Submit"
 msgid "Support Level"
 msgstr "Support Level"
 
-#: app/components/status-indicator.tsx:32
+#: app/components/status-indicator.tsx:59
 msgid "System Status:"
 msgstr "System Status:"
 
@@ -698,7 +698,7 @@ msgstr "System Status:"
 msgid "Talk to Us"
 msgstr "Talk to Us"
 
-#: app/components/footer.tsx:70
+#: app/components/footer.tsx:72
 msgid "Terms"
 msgstr "Terms"
 
@@ -722,7 +722,7 @@ msgstr "The open source <0>manufacturing ERP</0>"
 msgid "Training"
 msgstr "Training"
 
-#: app/root.tsx:335
+#: app/root.tsx:338
 #: app/routes/_index.tsx:131
 #: app/routes/_index.tsx:756
 msgid "Try It Now"
@@ -749,7 +749,7 @@ msgstr "Video Library"
 msgid "View Docs"
 msgstr "View Docs"
 
-#: app/root.tsx:278
+#: app/root.tsx:281
 msgid "View our source code and contribute"
 msgstr "View our source code and contribute"
 
