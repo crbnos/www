@@ -1,0 +1,2 @@
+npm run lingui:compile
+git add locales/
