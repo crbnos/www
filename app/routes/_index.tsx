@@ -1,6 +1,5 @@
 import { Trans } from "@lingui/react/macro";
 import { MeshGradient } from "@paper-design/shaders-react";
-import { Link } from "react-router";
 import { AnimatePresence, motion } from "framer-motion";
 import {
 	Book,
@@ -16,6 +15,7 @@ import {
 	PlayCircle,
 	Waypoints,
 } from "lucide-react";
+import { Link } from "react-router";
 import { CodeExamples } from "~/components/code-examples";
 import { DotPattern } from "~/components/dot-pattern";
 import { Safari } from "~/components/safari";
@@ -554,7 +554,7 @@ const reviews = [
 		logo: "/logos/minimal.svg",
 		face: "/faces/liam.jpeg",
 		review:
-			"As an engineering start-up pushing the boundaries in manufacturing assembly, we needed more than just another MRP/MES system. Carbon delivered - combining deep functionality with a refreshingly open, API-first design. It integrates seamlessly with our CAD tools, scales effortlessly, has fantastic UX and offers exceptional value.",
+			"Best ERP/MRP/MES System I've ever seen in a 22 year career across defence and automotive. Carbon is what modern engineering and manufacturing needs in 2026. Native integration with Onshape, we synchronise all our data without additional PLM connectors. Fully features, good UX, modern native integrations, under active development, open source and open to contributions, open API and MCP, suitable for cloud and on-prem. We run our whole electric vehicle engineering and manufacturing business on Carbon. I couldn't imagine going back to a legacy system.",
 		author: "Liam Sill",
 		authorTitle: "CTO, Minimal",
 	},
