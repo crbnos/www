@@ -63,11 +63,11 @@ const sections: Section[] = [
         href: "https://supabase.com",
       },
       {
-        name: "Upstash",
+        name: "Redis Cloud",
         purpose: "Managed Redis (caching, rate-limiting)",
         location: "United States",
-        website: "upstash.com",
-        href: "https://upstash.com",
+        website: "redis.io",
+        href: "https://redis.io/cloud",
       },
       {
         name: "Inngest",
@@ -82,12 +82,11 @@ const sections: Section[] = [
     title: "Monitoring & Observability",
     rows: [
       {
-        name: "Datadog",
-        purpose:
-          "Application performance monitoring, log aggregation, anomaly detection",
+        name: "Posthog",
+        purpose: "User metrics monitoring",
         location: "United States",
-        website: "datadoghq.com",
-        href: "https://datadoghq.com",
+        website: "posthog.com",
+        href: "https://posthog.com",
       },
     ],
   },
