@@ -136,7 +136,7 @@ const sections: Section[] = [
 export default function SubProcessors() {
   return (
     <div className="flex flex-1 flex-col">
-      <div className="mx-auto flex w-full flex-col px-4 md:px-6 lg:px-8 3xl:pt-32 4xl:pt-36 max-w-9xl pt-28">
+      <div className="mx-auto flex flex-col px-4 md:px-6 lg:px-8 3xl:pt-32 4xl:pt-36 max-w-4xl pt-28">
         <div className="flex flex-col gap-4 lg:items-center lg:text-center mb-16">
           <h1 className="font-semibold text-6xl tracking-tight">
             Sub-Processors List
@@ -146,8 +146,8 @@ export default function SubProcessors() {
           </h2>
         </div>
       </div>
-      <div className="mx-auto flex flex-col px-4 w-full max-w-9xl mb-28">
-        <div className="prose dark:prose-invert lg:prose-lg mx-auto">
+      <div className="mx-auto flex flex-col px-4 w-full lg:max-w-4xl mb-28">
+        <div className="prose dark:prose-invert lg:prose-lg w-full lg:max-w-4xl mx-auto">
           <p>
             This page lists the third-party sub-processors that{" "}
             <strong>Carbon Manufacturing Systems, Corp.</strong> ("Carbon")
@@ -175,36 +175,38 @@ export default function SubProcessors() {
           {sections.map((section) => (
             <section key={section.title}>
               <h2>{section.title}</h2>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Sub-Processor</th>
-                    <th>Purpose</th>
-                    <th>Data Location</th>
-                    <th>Website</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {section.rows.map((row) => (
-                    <tr key={row.name}>
-                      <td>
-                        <strong>{row.name}</strong>
-                      </td>
-                      <td>{row.purpose}</td>
-                      <td>{row.location}</td>
-                      <td>
-                        <a
-                          href={row.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {row.website}
-                        </a>
-                      </td>
+              <div className="overflow-x-auto -mx-2 sm:mx-0">
+                <table className="w-full">
+                  <thead>
+                    <tr>
+                      <th>Sub-Processor</th>
+                      <th>Purpose</th>
+                      <th>Data Location</th>
+                      <th>Website</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {section.rows.map((row) => (
+                      <tr key={row.name}>
+                        <td>
+                          <strong>{row.name}</strong>
+                        </td>
+                        <td>{row.purpose}</td>
+                        <td>{row.location}</td>
+                        <td>
+                          <a
+                            href={row.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {row.website}
+                          </a>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </section>
           ))}
 
