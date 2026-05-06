@@ -176,13 +176,13 @@ export default function SubProcessors() {
             <section key={section.title}>
               <h2>{section.title}</h2>
               <div className="overflow-x-auto -mx-2 sm:mx-0">
-                <table className="w-full">
+                <table className="w-full table-fixed">
                   <thead>
                     <tr>
-                      <th>Sub-Processor</th>
-                      <th>Purpose</th>
-                      <th>Data Location</th>
-                      <th>Website</th>
+                      <th className="w-1/4">Sub-Processor</th>
+                      <th className="w-1/4">Purpose</th>
+                      <th className="w-1/4">Data Location</th>
+                      <th className="w-1/4">Website</th>
                     </tr>
                   </thead>
                   <tbody>
