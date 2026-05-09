@@ -93,12 +93,12 @@ function Hero() {
 	const mode = useMode();
 	const meshGradientColors =
 		mode === "light"
-			? ["#bdcdff", "#f7f5ff", "#ffffff", "#e6f3ff"]
+			? ["#BDD4FF", "#E0EBFF", "#ffffff", "#e6f3ff"]
 			: ["#023225", "#000000", "#0D0D0D", "#050505"];
 
 	return (
 		<section id="hero" className="py-0 relative -mt-[var(--header-height)]">
-			<div className="bg-[linear-gradient(to_bottom_right,#f7f5ff_35.67%,#bdcdff_88.95%)] dark:bg-[linear-gradient(to_bottom_right,#0D0D0D_35.67%,#050505_88.95%)] min-h-screen w-full mx-auto py-36 relative">
+			<div className="bg-[linear-gradient(to_bottom_right,#E0EBFF_35.67%,#BDD4FF_88.95%)] dark:bg-[linear-gradient(to_bottom_right,#0D0D0D_35.67%,#050505_88.95%)] min-h-screen w-full mx-auto py-36 relative">
 				<MeshGradient
 					speed={1}
 					colors={meshGradientColors}
@@ -775,7 +775,7 @@ function DiscordButton() {
 		<div>
 			<Button variant="outline" asChild>
 				<a href="https://discord.gg/yGUJWhNqzy" target="_blank" rel="noopener">
-					<DiscordLogo className="text-[#5865f2]" />
+					<DiscordLogo />
 					<Trans>Join our Discord community</Trans>{" "}
 					<ChevronRight className="text-muted-foreground size-3" />
 				</a>

@@ -1,6 +1,6 @@
 import { Trans, useLingui } from "@lingui/react/macro";
-import { Link } from "react-router";
 import { BookOpen, Check, LucideHandCoins } from "lucide-react";
+import { Link } from "react-router";
 import { Button } from "~/components/ui/button";
 import { GithubLogo } from "~/components/ui/github-logo";
 import { cn } from "~/lib/utils";
@@ -33,14 +33,13 @@ function usePlans() {
 			url: "https://app.carbon.ms",
 			featured: true,
 			features: [
-				t`5 user minimum`,
 				t`Everything from Starter`,
 				t`Implementation support`,
-				t`Unlimited functional support`,
-				t`Advanced audit logging`,
 				t`API, webhooks, and integrations`,
-				t`AI-powered workflows`,
+				t`Accounting`,
+				t`Audit logging`,
 				t`All advanced features available`,
+				t`5 user minimum`,
 			],
 		},
 		{
@@ -91,7 +90,7 @@ export default function Pricing() {
 						className={cn(
 							"relative flex w-full flex-col gap-8 rounded-2xl bg-muted p-4 text-foreground overflow-hidden h-full border border-border",
 							plan.featured
-								? "dark:bg-[linear-gradient(to_bottom,#000000_0%,#010215_20%,#0F356E_50%,#4b93aa_65%,#E2E8F2_95%)] dark:text-white bg-background text-foreground"
+								? "dark:bg-secondary dark:text-secondary-foreground bg-background text-foreground"
 								: "",
 						)}
 					>
