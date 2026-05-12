@@ -1,6 +1,6 @@
 import { Trans, useLingui } from "@lingui/react/macro";
-import { Link } from "react-router";
 import { BookOpen, Check, LucideHandCoins } from "lucide-react";
+import { Link } from "react-router";
 import { Button } from "~/components/ui/button";
 import { GithubLogo } from "~/components/ui/github-logo";
 import { cn } from "~/lib/utils";
@@ -10,7 +10,7 @@ function usePlans() {
 	return [
 		{
 			name: t`Starter`,
-			priceHeadline: "$33",
+			priceHeadline: "$40",
 			priceSubtext: t`/user/month`,
 			action: t`Start 30-day free trial`,
 			url: "https://app.carbon.ms",
@@ -27,7 +27,7 @@ function usePlans() {
 		{
 			name: t`Business`,
 			description: t`A managed cloud-hosted version of Carbon that includes support and all advanced features`,
-			priceHeadline: "$92",
+			priceHeadline: "$100",
 			priceSubtext: t`/user/month`,
 			action: t`Start 30-day free trial`,
 			url: "https://app.carbon.ms",
