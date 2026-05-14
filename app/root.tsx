@@ -20,6 +20,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { Trans, useLingui } from "@lingui/react/macro";
 import { BookOpen, Moon, Play, Sun } from "lucide-react";
 import { type ReactNode, useEffect, useState } from "react";
+import { flushSync } from "react-dom";
 import Tailwind from "~/styles/tailwind.css?url";
 import { Footer } from "./components/footer";
 import { LocaleProvider } from "./lib/i18n";
@@ -43,11 +44,12 @@ import {
 	WizardContext,
 	WizardForm,
 } from "./components/wizard-form";
-import { useMode } from "./hooks/useMode";
+import { setClientMode, useMode } from "./hooks/useMode";
 import { cn } from "./lib/utils";
 import { loadLinguiCatalog } from "./services/lingui.server";
 import { getLocale } from "./services/locale.server";
 import { getMode, setMode } from "./services/mode.server";
+import { startModeTransition } from "./utils/dom";
 import { path } from "./utils/path";
 import { fetchStatus } from "./utils/status";
 
@@ -311,24 +313,28 @@ function Document({
 									</NavigationMenuItem>
 								</NavigationMenuList>
 							</NavigationMenu>
-							<fetcher.Form action={path.to.root} method="post">
-								<input
-									type="hidden"
-									name="mode"
-									value={mode === "light" ? "dark" : "light"}
-								/>
-								<Button
-									type="submit"
-									variant="ghost"
-									size="icon"
-									className={cn(
-										"cursor-pointer",
-										mode === "dark" && "hover:rotate-180 transition-all",
-									)}
-								>
-									{mode === "light" ? <Moon /> : <Sun />}
-								</Button>
-							</fetcher.Form>
+							<Button
+								variant="ghost"
+								size="icon"
+								className={cn(
+									"cursor-pointer",
+									mode === "dark" && "hover:rotate-180 transition-all",
+								)}
+								onClick={() => {
+									const nextMode = mode === "light" ? "dark" : "light";
+									startModeTransition(nextMode, () => {
+										flushSync(() => {
+											setClientMode(nextMode);
+										});
+										fetcher.submit(
+											{ mode: nextMode },
+											{ method: "post", action: path.to.root },
+										);
+									});
+								}}
+							>
+								{mode === "light" ? <Moon /> : <Sun />}
+							</Button>
 							<Button
 								variant="default"
 								className="cursor-pointer hidden sm:flex"

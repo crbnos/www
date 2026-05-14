@@ -97,7 +97,7 @@ export default function Pricing() {
 						<div className="flex-1 flex flex-col gap-8">
 							<div className="flex items-center">
 								<div className="ml-4">
-									<h2 className="text-4xl font-medium tracking-tighter leading-12">
+									<h2 className="text-4xl font-medium tracking-tight leading-12">
 										{plan.name}
 									</h2>
 									<p className="h-12 text-sm leading-5 opacity-80">
@@ -107,7 +107,7 @@ export default function Pricing() {
 							</div>
 
 							<div className="flex items-end justify-start gap-1 pl-4">
-								<p className="text-5xl font-medium tracking-tighter leading-12">
+								<p className="text-5xl font-medium tracking-tight leading-12">
 									{plan.priceHeadline}
 								</p>
 
@@ -150,7 +150,7 @@ export default function Pricing() {
 				<h2 className="font-display text-balance mx-auto max-w-2xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl w-full">
 					<Trans>Get started for free</Trans>
 				</h2>
-				<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter text-lg">
+				<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tight text-lg">
 					<Trans>View the docs and start developing locally</Trans>
 				</p>
 				<div className="flex flex-col md:flex-row justify-center gap-4 mt-8">

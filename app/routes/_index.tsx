@@ -112,13 +112,13 @@ function Hero() {
 				<div className="container mx-auto px-4 relative z-10">
 					<div className="flex flex-col justify-start items-center gap-8">
 						<DiscordButton />
-						<h2 className="font-display text-primary dark:text-foreground text-balance mx-auto  max-w-5xl text-center font-medium tracking-tighter leading-[115%] text-[2.6rem] sm:text-6xl lg:text-[5rem] xl:text-[7.2rem]">
+						<h2 className="font-display text-primary dark:text-foreground text-balance mx-auto  max-w-5xl text-center font-medium tracking-tight leading-[115%] text-[2.6rem] sm:text-6xl lg:text-[5rem] xl:text-[7.2rem]">
 							<Trans>
 								The open source{" "}
 								<span className="text-secondary">manufacturing ERP</span>
 							</Trans>
 						</h2>
-						<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-[780px] text-center font-medium tracking-tighter text-base md:text-lg lg:text-xl">
+						<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-[780px] text-center font-medium tracking-tight text-base md:text-lg lg:text-xl">
 							<Trans>
 								Carbon is a manufacturing system of record that combines ERP,
 								MES, and QMS into a single, unified, API-first system that's
@@ -146,7 +146,7 @@ function Hero() {
 
 						<div className="flex flex-col gap-4 max-w-4xl mx-auto mt-8">
 							<div className="flex flex-col gap-4 max-w-4xl mx-auto ">
-								<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-3xl text-center font-medium tracking-tighter text-base">
+								<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-3xl text-center font-medium tracking-tight text-base">
 									<Trans>
 										Modern manufacturers build their tech stack on Carbon
 									</Trans>
@@ -170,7 +170,7 @@ function Hero() {
 											<img
 												alt={customer.name}
 												src={customer.logo}
-												className="w-28 h-auto dark:invert transition-all duration-300 hover:scale-110"
+												className="w-28 h-auto dark:invert transition-transform duration-300 hover:scale-105"
 											/>
 										</motion.a>
 									))}
@@ -189,7 +189,7 @@ function E2E() {
 		<section id="e2e" className="pb-[140px] lg:pb-[240px]">
 			<div className="flex gap-8 container max-w-[1380px] mx-auto px-4">
 				<div className="flex flex-col gap-8 mt-[205px] flex-grow max-w-[1380px] mx-auto pl-8">
-					<h3 className="text-muted-foreground uppercase text-sm leading-[140%] tracking-tighter">
+					<h3 className="text-muted-foreground uppercase text-sm leading-[140%] tracking-tight">
 						<Trans>End-to-End</Trans>
 					</h3>
 					<h4 className="font-display text-foreground text-balance text-left font-medium tracking-tight leading-[115%] text-4xl lg:text-5xl xl:text-6xl -mt-4">
@@ -199,31 +199,31 @@ function E2E() {
 					<div className="flex flex-col gap-4">
 						<div className="flex justify-start items-center gap-2">
 							<CheckCircle className="size-6 text-secondary" />
-							<p className="text-foreground text-left font-medium tracking-tighter text-lg">
+							<p className="text-foreground text-left font-medium tracking-tight text-lg">
 								<Trans>Unified quality, purchasing & production</Trans>
 							</p>
 						</div>
 						<div className="flex justify-start items-center gap-2">
 							<CheckCircle className="size-6 text-secondary" />
-							<p className="text-foreground text-left font-medium tracking-tighter text-lg">
+							<p className="text-foreground text-left font-medium tracking-tight text-lg">
 								<Trans>Assembly and make-to-order workflows</Trans>
 							</p>
 						</div>
 						<div className="flex justify-start items-center gap-2">
 							<CheckCircle className="size-6 text-secondary" />
-							<p className="text-foreground text-left font-medium tracking-tighter text-lg">
+							<p className="text-foreground text-left font-medium tracking-tight text-lg">
 								<Trans>Multi-location planning and inventory</Trans>
 							</p>
 						</div>
 						<div className="flex justify-start items-center gap-2">
 							<CheckCircle className="size-6 text-secondary" />
-							<p className="text-foreground text-left font-medium tracking-tighter text-lg">
+							<p className="text-foreground text-left font-medium tracking-tight text-lg">
 								<Trans>Built on the best of open-source software</Trans>
 							</p>
 						</div>
 						<div className="flex justify-start items-center gap-2">
 							<CheckCircle className="size-6 text-secondary" />
-							<p className="text-foreground text-left font-medium tracking-tighter text-lg">
+							<p className="text-foreground text-left font-medium tracking-tight text-lg">
 								<Trans>Govcloud-hosted Version Available</Trans>
 							</p>
 						</div>
@@ -251,7 +251,7 @@ function E2E() {
 						/>
 					</div>
 				</div>
-				<div className="hidden lg:flex mt-[225px] pr-8 hover:scale-110 transition-all duration-300">
+				<div className="hidden lg:flex mt-[225px] pr-8">
 					<Safari
 						url="https://app.carbon.ms"
 						className="size-full dark:hidden"
@@ -275,7 +275,7 @@ function Features() {
 				<div className="container">
 					<div className="flex flex-col gap-8">
 						<div className="flex flex-col gap-2">
-							<h3 className="text-muted-foreground uppercase text-sm leading-[140%] tracking-tighter text-center">
+							<h3 className="text-muted-foreground uppercase text-sm leading-[140%] tracking-tight text-center">
 								<Trans>Features</Trans>
 							</h3>
 							<h2 className="font-display text-balance mx-auto max-w-2xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
@@ -293,11 +293,11 @@ function Features() {
 												<div className="not-prose w-fit shadow-md rounded-lg border bg-primary dark:bg-muted text-white p-1.5 dark:dark:text-muted-foreground">
 													<Waypoints className="size-4 flex-shrink-0" />
 												</div>
-												<h4 className="text-foreground text-balance text-left font-medium tracking-tighter text-base">
+												<h4 className="text-foreground text-balance text-left font-medium tracking-tight text-base">
 													<Trans>End-to-End Traceability</Trans>
 												</h4>
 											</div>
-											<p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-sm">
+											<p className="text-muted-foreground text-balance text-left font-medium tracking-tight text-sm">
 												<Trans>
 													Achieve granular, end-to-end tracking of materials,
 													components, and processes, ensuring compliance,
@@ -320,11 +320,11 @@ function Features() {
 												<div className="not-prose w-fit shadow-md rounded-lg border bg-primary dark:bg-muted text-white p-1.5 dark:dark:text-muted-foreground text-white">
 													<CheckCircle className="size-4 flex-shrink-0" />
 												</div>
-												<h4 className="text-foreground text-balance text-left font-medium tracking-tighter text-base">
+												<h4 className="text-foreground text-balance text-left font-medium tracking-tight text-base">
 													<Trans>Integrated Agents</Trans>
 												</h4>
 											</div>
-											<p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-sm">
+											<p className="text-muted-foreground text-balance text-left font-medium tracking-tight text-sm">
 												<Trans>
 													Our ever-expanding catalog of agents allow you to save
 													time and money by automating repetitive tasks. For
@@ -348,11 +348,11 @@ function Features() {
 												<div className="not-prose w-fit shadow-md rounded-lg border bg-primary dark:bg-muted text-white p-1.5 dark:dark:text-muted-foreground text-white">
 													<LayoutDashboard className="size-4 flex-shrink-0" />
 												</div>
-												<h4 className="text-foreground text-balance text-left font-medium tracking-tighter text-base">
+												<h4 className="text-foreground text-balance text-left font-medium tracking-tight text-base">
 													<Trans>Product Configurator</Trans>
 												</h4>
 											</div>
-											<p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-sm">
+											<p className="text-muted-foreground text-balance text-left font-medium tracking-tight text-sm">
 												<Trans>
 													Automatically generate the Bill of Materials and Bill
 													of Process for a given set of options/parameters with
@@ -373,11 +373,11 @@ function Features() {
 												<div className="not-prose w-fit shadow-md rounded-lg border bg-primary dark:bg-muted text-white p-1.5 dark:dark:text-muted-foreground text-white">
 													<CalendarDays className="size-4 flex-shrink-0" />
 												</div>
-												<h4 className="text-foreground text-balance text-left font-medium tracking-tighter text-base">
+												<h4 className="text-foreground text-balance text-left font-medium tracking-tight text-base">
 													<Trans>Simplified Scheduling</Trans>
 												</h4>
 											</div>
-											<p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-sm">
+											<p className="text-muted-foreground text-balance text-left font-medium tracking-tight text-sm">
 												<Trans>
 													Keep your shop floor schedule up-to-date with our
 													simple and powerful scheduling engine. Schedule by job
@@ -399,11 +399,11 @@ function Features() {
 												<div className="not-prose w-fit shadow-md rounded-lg border bg-primary dark:bg-muted text-white p-1.5 dark:dark:text-muted-foreground text-white">
 													<Cable className="size-4 flex-shrink-0" />
 												</div>
-												<h4 className="text-foreground text-balance text-left font-medium tracking-tighter text-base">
+												<h4 className="text-foreground text-balance text-left font-medium tracking-tight text-base">
 													<Trans>API-First Architecture</Trans>
 												</h4>
 											</div>
-											<p className="text-muted-foreground text-balance text-left font-medium tracking-tighter text-sm">
+											<p className="text-muted-foreground text-balance text-left font-medium tracking-tight text-sm">
 												<Trans>
 													Carbon is built with an "API-First Architecture,"
 													which gives you unparalleled flexibility to seamlessly
@@ -442,7 +442,7 @@ function Learn() {
 			<div className="container z-50 py-24">
 				<div className="flex flex-col w-full max-w-section mx-auto px-section gap-24">
 					<div className="flex flex-col gap-2">
-						<h3 className="text-muted-foreground uppercase text-sm leading-[140%] tracking-tighter text-center">
+						<h3 className="text-muted-foreground uppercase text-sm leading-[140%] tracking-tight text-center">
 							<Trans>Open Source</Trans>
 						</h3>
 						<h2 className="font-display text-balance mx-auto max-w-3xl text-center font-medium tracking-tight leading-[115%] text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
@@ -584,7 +584,7 @@ function Reviews() {
 		>
 			<div className="mx-auto max-w-7xl px-6 lg:px-8">
 				<div className="flex flex-col gap-2 mb-12">
-					<h3 className="opacity-60 uppercase text-sm tracking-tighter text-center">
+					<h3 className="opacity-60 uppercase text-sm tracking-tight text-center">
 						<Trans>Reviews</Trans>
 					</h3>
 					<h2 className="font-display font-medium text-balance mx-auto max-w-4xl text-center tracking-tight text-3xl lg:text-5xl">
@@ -668,7 +668,7 @@ function Memo() {
 					</p>
 				</div>
 
-				<p className="leading-[1.8] text-foreground">
+				<p className="leading-[1.8] text-foreground text-pretty">
 					<Trans>
 						After spending nearly a decade building end-to-end systems for
 						manufacturing, I had a pretty good idea of what an "ideal" solution
@@ -676,13 +676,13 @@ function Memo() {
 					</Trans>
 				</p>
 
-				<p className="leading-[1.8] text-foreground">
+				<p className="leading-[1.8] text-foreground text-pretty">
 					<Trans>
 						API-first, realtime subscriptions, simple scheduling, and 1,000
 						little details to make the juice of using an ERP worth the squeeze.
 					</Trans>
 				</p>
-				<p className="leading-[1.8] text-foreground">
+				<p className="leading-[1.8] text-foreground text-pretty">
 					<Trans>
 						But even as we work with our customers to become the best
 						off-the-shelf ERP/MES for many types of discrete manufacturing, we
@@ -691,7 +691,7 @@ function Memo() {
 					</Trans>
 				</p>
 
-				<p className="leading-[1.8] text-foreground">
+				<p className="leading-[1.8] text-foreground text-pretty">
 					<Trans>
 						We open-sourced Carbon not because it's a great business plan, but
 						because that's the system I would have wanted when I was in your
@@ -699,7 +699,7 @@ function Memo() {
 					</Trans>
 				</p>
 
-				<p className="leading-[1.8] text-foreground">
+				<p className="leading-[1.8] text-foreground text-pretty">
 					<Trans>
 						I believe open-source has incredible potential because it's not just
 						a product–it's a community of like-minded people working to build
@@ -707,7 +707,7 @@ function Memo() {
 					</Trans>
 				</p>
 
-				<p className="leading-[1.8] text-foreground">
+				<p className="leading-[1.8] text-foreground text-pretty">
 					<Trans>We're glad you're here for it.</Trans>
 				</p>
 
@@ -747,7 +747,7 @@ function CTA() {
 					<h2 className="font-display text-balance mx-auto max-w-2xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl ">
 						<Trans>Build something with Carbon</Trans>
 					</h2>
-					<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter text-lg">
+					<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tight text-lg">
 						<Trans>Start your 30-day free trial today</Trans>
 					</p>
 					<div className="flex flex-col md:flex-row justify-center gap-4 mt-8">

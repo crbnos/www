@@ -1,5 +1,4 @@
-@import url("non.geist");
-@import url("non.geist/mono");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 
 @tailwind base;
@@ -98,4 +97,17 @@
 
 .prose img {
   @apply rounded-lg;
+}
+
+.mode-transitioning,
+.mode-transitioning *,
+.mode-transitioning *::before,
+.mode-transitioning *::after {
+  transition-duration: 0s !important;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }
