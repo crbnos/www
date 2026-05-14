@@ -46,6 +46,9 @@ type Pages = {
   "/sales": {
     params: {};
   };
+  "/subprocessors": {
+    params: {};
+  };
   "/terms": {
     params: {};
   };
@@ -54,7 +57,7 @@ type Pages = {
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/api/status" | "/api/try" | "/brand" | "/contact" | "/learn" | "/learn/:slug" | "/oss" | "/pricing" | "/privacy" | "/sales" | "/terms";
+    page: "/" | "/api/status" | "/api/try" | "/brand" | "/contact" | "/learn" | "/learn/:slug" | "/oss" | "/pricing" | "/privacy" | "/sales" | "/subprocessors" | "/terms";
   };
   "routes/_index.tsx": {
     id: "routes/_index";
@@ -104,6 +107,10 @@ type RouteFiles = {
     id: "routes/sales";
     page: "/sales";
   };
+  "routes/subprocessors.tsx": {
+    id: "routes/subprocessors";
+    page: "/subprocessors";
+  };
   "routes/terms.tsx": {
     id: "routes/terms";
     page: "/terms";
@@ -124,5 +131,6 @@ type RouteModules = {
   "routes/pricing": typeof import("./app/routes/pricing.tsx");
   "routes/privacy": typeof import("./app/routes/privacy.tsx");
   "routes/sales": typeof import("./app/routes/sales.tsx");
+  "routes/subprocessors": typeof import("./app/routes/subprocessors.tsx");
   "routes/terms": typeof import("./app/routes/terms.tsx");
 };

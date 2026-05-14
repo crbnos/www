@@ -10,7 +10,7 @@ function usePlans() {
 	return [
 		{
 			name: t`Starter`,
-			priceHeadline: "$33",
+			priceHeadline: "$40",
 			priceSubtext: t`/user/month`,
 			action: t`Start 30-day free trial`,
 			url: "https://app.carbon.ms",
@@ -27,7 +27,7 @@ function usePlans() {
 		{
 			name: t`Business`,
 			description: t`A managed cloud-hosted version of Carbon that includes support and all advanced features`,
-			priceHeadline: "$92",
+			priceHeadline: "$100",
 			priceSubtext: t`/user/month`,
 			action: t`Start 30-day free trial`,
 			url: "https://app.carbon.ms",
