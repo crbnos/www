@@ -93,7 +93,7 @@ export default function Privacy() {
                       </strong>
                       within your Organization (collectively, "
                       <strong>User Content</strong>"). Additionally, if you or
-                      your Organization choose to integrate
+                      your Organization choose to integrate{' '}
                       <strong>Third-Party Applications</strong> ("Third Party
                       Apps") with the Platform, you may also log or sync User
                       Content from those services into the Platform.
@@ -199,14 +199,15 @@ export default function Privacy() {
                   We may share your Personal Information with our employees,
                   contractors, and trusted third-party service providers who
                   assist us in operating the Platform and delivering services to
-                  you. For example, we use
+                  you. For example, we use{" "}
                   <strong>Amazon Web Services (AWS)</strong> to store files and
                   images uploaded to the Platform.
                   <p>
                     These service providers are authorized to access your
                     information only as needed to perform their services and are
                     contractually obligated to maintain its confidentiality and
-                    security.
+                    security. For a current list of our sub-processors, see our{" "}
+                    <a href="/subprocessors">Sub-Processors</a> page.
                   </p>
                 </li>
                 <li>
