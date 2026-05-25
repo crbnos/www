@@ -74,8 +74,8 @@ export default {
 				xxs: "0.675rem",
 			},
 			fontFamily: {
-				sans: ["DM Sans", ...fontFamily.sans],
-				mono: [...fontFamily.mono],
+				sans: ["Geist Variable", ...fontFamily.sans],
+				mono: ["Geist Mono Variable", ...fontFamily.mono],
 				display: ["Barlow Semi Condensed", ...fontFamily.sans],
 			},
 			width: {
