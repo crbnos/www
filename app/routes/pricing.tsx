@@ -33,14 +33,13 @@ function usePlans() {
 			url: "https://app.carbon.ms",
 			featured: true,
 			features: [
-				t`5 user minimum`,
 				t`Everything from Starter`,
 				t`Implementation support`,
-				t`Unlimited functional support`,
-				t`Advanced audit logging`,
 				t`API, webhooks, and integrations`,
-				t`AI-powered workflows`,
+				t`Accounting`,
+				t`Audit logging`,
 				t`All advanced features available`,
+				t`5 user minimum`,
 			],
 		},
 		{
@@ -91,14 +90,14 @@ export default function Pricing() {
 						className={cn(
 							"relative flex w-full flex-col gap-8 rounded-2xl bg-muted p-4 text-foreground overflow-hidden h-full border border-border",
 							plan.featured
-								? "dark:bg-[linear-gradient(to_bottom,#000000_0%,#010215_20%,#0F356E_50%,#4b93aa_65%,#E2E8F2_95%)] dark:text-white bg-background text-foreground"
+								? "dark:bg-secondary dark:text-secondary-foreground bg-background text-foreground"
 								: "",
 						)}
 					>
 						<div className="flex-1 flex flex-col gap-8">
 							<div className="flex items-center">
 								<div className="ml-4">
-									<h2 className="text-4xl font-medium tracking-tighter leading-12">
+									<h2 className="text-4xl font-medium tracking-tight leading-12">
 										{plan.name}
 									</h2>
 									<p className="h-12 text-sm leading-5 opacity-80">
@@ -108,7 +107,7 @@ export default function Pricing() {
 							</div>
 
 							<div className="flex items-end justify-start gap-1 pl-4">
-								<p className="text-5xl font-medium tracking-tighter leading-12">
+								<p className="text-5xl font-medium tracking-tight leading-12">
 									{plan.priceHeadline}
 								</p>
 
@@ -151,7 +150,7 @@ export default function Pricing() {
 				<h2 className="font-display text-balance mx-auto max-w-2xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl w-full">
 					<Trans>Get started for free</Trans>
 				</h2>
-				<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter text-lg">
+				<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tight text-lg">
 					<Trans>View the docs and start developing locally</Trans>
 				</p>
 				<div className="flex flex-col md:flex-row justify-center gap-4 mt-8">

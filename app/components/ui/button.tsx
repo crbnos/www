@@ -5,12 +5,12 @@ import * as React from "react";
 import { cn } from "~/lib/utils";
 
 const buttonVariants = cva(
-	"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full corner-squircle text-sm font-medium tracking-tight transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:scale-95 focus-visible:scale-95 transition-all duration-150 ease-in-out",
+	"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full corner-squircle text-sm font-medium tracking-tight focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 active:scale-[0.96] transition-[transform,color,background-color,border-color] duration-150 ease-in-out",
 	{
 		variants: {
 			variant: {
 				default:
-					"bg-primary text-primary-foreground shadow hover:bg-primary/90 transition-all duration-300",
+					"bg-primary text-primary-foreground shadow hover:bg-primary/90",
 				destructive:
 					"bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
 				outline:

@@ -567,15 +567,17 @@ export function CodeExamples({ className }: { className?: string }) {
 		<section className={cn("py-24", className)}>
 			<div className="container max-w-6xl mx-auto px-4">
 				<div className="flex flex-col gap-8 mb-12">
-					<h3 className="text-muted-foreground uppercase text-sm leading-[140%] tracking-tighter text-center">
+					<h3 className="text-muted-foreground uppercase text-sm leading-[140%] tracking-tight text-center">
 						<Trans>API-First</Trans>
 					</h3>
 					<h2 className="font-display text-foreground text-balance mx-auto max-w-3xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl xl:text-6xl -mt-4">
 						<Trans>Built on a developer-friendly platform</Trans>
 					</h2>
-					<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tighter text-base md:text-lg">
-						<Trans>Carbon provides a comprehensive MCP server and API clients in many
-						popular languages.</Trans>
+					<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tight text-base md:text-lg">
+						<Trans>
+							Carbon provides a comprehensive MCP server and API clients in many
+							popular languages.
+						</Trans>
 					</p>
 					<div className="flex flex-col md:flex-row gap-4 justify-center">
 						<Button variant="secondary" size="xl" asChild>
