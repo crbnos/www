@@ -18,11 +18,11 @@ msgstr ""
 msgid "/user/month"
 msgstr "/ユーザー/月"
 
-#: app/routes/pricing.tsx:36
+#: app/routes/pricing.tsx:42
 msgid "5 user minimum"
 msgstr "5ユーザー最小"
 
-#: app/routes/pricing.tsx:52
+#: app/routes/pricing.tsx:51
 msgid "A custom solution to meet your needs"
 msgstr "あなたのニーズに合わせたカスタムソリューション"
 
@@ -33,6 +33,10 @@ msgstr "Carbonの管理されたクラウドホスト版"
 #: app/routes/pricing.tsx:29
 msgid "A managed cloud-hosted version of Carbon that includes support and all advanced features"
 msgstr "サポートとすべての高度な機能を含むCarbonのマネージドクラウドホスト版"
+
+#: app/routes/pricing.tsx:39
+msgid "Accounting"
+msgstr ""
 
 #: app/routes/_index.tsx:301
 msgid "Achieve granular, end-to-end tracking of materials, components, and processes, ensuring compliance, simplifying audits, and enabling rapid root cause analysis without the complexity and cost of traditional high-end systems."
@@ -46,19 +50,11 @@ msgstr "Acme Inc"
 msgid "Acme, Inc."
 msgstr "Acme, Inc."
 
-#: app/routes/pricing.tsx:40
-msgid "Advanced audit logging"
-msgstr "高度な監査ログ"
-
 #: app/routes/_index.tsx:672
 msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
 msgstr "製造業向けのエンドツーエンドシステムを約10年間構築してきた後、技術的な観点から「理想的な」ソリューションがどのようなものであるかについて、かなり良い考えを持っていました。"
 
-#: app/routes/pricing.tsx:42
-msgid "AI-powered workflows"
-msgstr "AI駆動ワークフロー"
-
-#: app/routes/pricing.tsx:43
+#: app/routes/pricing.tsx:41
 msgid "All advanced features available"
 msgstr "すべての高度な機能が利用可能"
 
@@ -66,11 +62,11 @@ msgstr "すべての高度な機能が利用可能"
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "すべてのCarbonの商標、ロゴ、またはその他のブランド要素は、Carbon Manufacturing Systems Corporationを表現する目的以外に変更または使用することはできません。"
 
-#: app/components/hero.tsx:244
+#: app/components/hero.tsx:246
 msgid "Analytics"
 msgstr "分析"
 
-#: app/components/code-examples.tsx:587
+#: app/components/code-examples.tsx:589
 msgid "API Docs"
 msgstr "API ドキュメント"
 
@@ -86,7 +82,7 @@ msgstr "API-ファーストアーキテクチャ"
 msgid "API-first, realtime subscriptions, simple scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
 msgstr "API-first、リアルタイムサブスクリプション、シンプルなスケジューリング、そしてERP利用の価値を引き出すための1,000の細かな工夫。"
 
-#: app/routes/pricing.tsx:41
+#: app/routes/pricing.tsx:38
 msgid "API, webhooks, and integrations"
 msgstr "API、ウェブフック、および統合"
 
@@ -94,7 +90,11 @@ msgstr "API、ウェブフック、および統合"
 msgid "Assembly and make-to-order workflows"
 msgstr "組立およびメイク・トゥ・オーダーワークフロー"
 
-#: app/components/hero.tsx:220
+#: app/routes/pricing.tsx:40
+msgid "Audit logging"
+msgstr ""
+
+#: app/components/hero.tsx:222
 msgid "Auto-generated API Documentation"
 msgstr "自動生成されたAPIドキュメント"
 
@@ -114,7 +114,7 @@ msgstr "戻る"
 msgid "Basic ERP, MES, and QMS functionality"
 msgstr "基本的なERP、MES、およびQMS機能"
 
-#: app/components/hero.tsx:228
+#: app/components/hero.tsx:230
 msgid "Bill of Materials"
 msgstr "部品表"
 
@@ -199,7 +199,7 @@ msgstr "お好みのデータベースを選択してください"
 msgid "Co-founder"
 msgstr "共同創業者"
 
-#: app/components/code-examples.tsx:597
+#: app/components/code-examples.tsx:599
 msgid "Code Examples"
 msgstr "コード例"
 
@@ -224,7 +224,7 @@ msgstr "完了"
 msgid "Complete control over your infrastructure"
 msgstr "インフラストラクチャを完全に制御できます"
 
-#: app/components/hero.tsx:236
+#: app/components/hero.tsx:238
 msgid "Configurator"
 msgstr "コンフィギュレーター"
 
@@ -241,8 +241,8 @@ msgstr "お問い合わせ"
 msgid "Contact Information"
 msgstr "連絡先情報"
 
-#: app/routes/pricing.tsx:48
-#: app/routes/pricing.tsx:50
+#: app/routes/pricing.tsx:47
+#: app/routes/pricing.tsx:49
 msgid "Contact us"
 msgstr "お問い合わせ"
 
@@ -254,7 +254,7 @@ msgstr "コードスニペットをコピー"
 msgid "Create a branded ordering experience that drives production"
 msgstr "ブランド化された注文体験を作成して、生産を促進します"
 
-#: app/routes/pricing.tsx:59
+#: app/routes/pricing.tsx:58
 msgid "Custom development"
 msgstr "カスタム開発"
 
@@ -262,7 +262,7 @@ msgstr "カスタム開発"
 msgid "Custom Development"
 msgstr "カスタム開発"
 
-#: app/routes/pricing.tsx:58
+#: app/routes/pricing.tsx:57
 msgid "Custom integrations"
 msgstr "カスタム統合"
 
@@ -270,7 +270,7 @@ msgstr "カスタム統合"
 msgid "Custom integrations with your existing systems"
 msgstr "既存のシステムとのカスタム統合"
 
-#: app/components/hero.tsx:232
+#: app/components/hero.tsx:234
 msgid "Customer Portal"
 msgstr "顧客ポータル"
 
@@ -294,28 +294,28 @@ msgstr "専任サポート"
 msgid "Designed for manufacturing"
 msgstr "製造業向けに設計"
 
-#: app/root.tsx:295
+#: app/root.tsx:297
 msgid "Developer guides and API reference"
 msgstr "開発者ガイドとAPIリファレンス"
 
-#: app/root.tsx:255
+#: app/root.tsx:257
 msgid "Developers"
 msgstr "開発者"
 
-#: app/root.tsx:265
+#: app/root.tsx:267
 msgid "Discord"
 msgstr "Discord"
 
-#: app/root.tsx:293
+#: app/root.tsx:295
 #: app/routes/_index.tsx:492
 msgid "Documentation"
 msgstr "ドキュメント"
 
-#: app/components/hero.tsx:212
+#: app/components/hero.tsx:214
 msgid "Documents"
 msgstr "ドキュメント"
 
-#: app/routes/brand.tsx:189
+#: app/routes/brand.tsx:126
 msgid "Download Logo Kit"
 msgstr "ロゴキットをダウンロード"
 
@@ -331,8 +331,8 @@ msgstr "エンドツーエンド"
 msgid "End-to-End Traceability"
 msgstr "エンドツーエンドトレーサビリティ"
 
-#: app/root.tsx:309
-#: app/routes/pricing.tsx:47
+#: app/root.tsx:311
+#: app/routes/pricing.tsx:46
 msgid "Enterprise"
 msgstr "エンタープライズ"
 
@@ -340,7 +340,7 @@ msgstr "エンタープライズ"
 msgid "Enterprise. Influence product roadmap with priority feature requests"
 msgstr "エンタープライズ。優先度の高い機能リクエストで製品ロードマップに影響を与えます"
 
-#: app/routes/pricing.tsx:37
+#: app/routes/pricing.tsx:36
 msgid "Everything from Starter"
 msgstr "Starterのすべての機能"
 
@@ -360,23 +360,23 @@ msgstr "創業者メモ"
 msgid "Full Name"
 msgstr "フルネーム"
 
-#: app/routes/pricing.tsx:57
+#: app/routes/pricing.tsx:56
 msgid "Full setup and migrations"
 msgstr "完全なセットアップと移行"
 
-#: app/components/hero.tsx:134
+#: app/components/hero.tsx:136
 msgid "Get Started"
 msgstr "始める"
 
-#: app/routes/pricing.tsx:152
+#: app/routes/pricing.tsx:151
 msgid "Get started for free"
 msgstr "無料で始める"
 
-#: app/root.tsx:279
+#: app/root.tsx:281
 msgid "GitHub"
 msgstr "GitHub"
 
-#: app/components/hero.tsx:204
+#: app/components/hero.tsx:206
 msgid "Global Search"
 msgstr "グローバル検索"
 
@@ -392,7 +392,7 @@ msgstr "ホスティング設定"
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "オープンソースには素晴らしい可能性があると信じています。なぜなら、それは単なる製品ではなく、AIとロボット工学の時代に製造業の未来を構築するために働く、志を同じくする人々のコミュニティだからです。"
 
-#: app/routes/pricing.tsx:38
+#: app/routes/pricing.tsx:37
 msgid "Implementation support"
 msgstr "実装サポート"
 
@@ -408,7 +408,7 @@ msgstr "統合エージェント"
 msgid "Integrations"
 msgstr "統合"
 
-#: app/routes/pricing.tsx:56
+#: app/routes/pricing.tsx:55
 msgid "ITAR compliant"
 msgstr "ITAR準拠"
 
@@ -420,7 +420,7 @@ msgstr "ジョン・ドゥ"
 msgid "john@company.com"
 msgstr "john@company.com"
 
-#: app/root.tsx:267
+#: app/root.tsx:269
 msgid "Join our community chat"
 msgstr "コミュニティチャットに参加"
 
@@ -428,7 +428,7 @@ msgstr "コミュニティチャットに参加"
 msgid "Join our Discord community"
 msgstr "Discordコミュニティに参加する"
 
-#: app/components/hero.tsx:216
+#: app/components/hero.tsx:218
 msgid "Kanban Schedule"
 msgstr "カンバンスケジュール"
 
@@ -472,15 +472,15 @@ msgstr "月額の低い支払い"
 msgid "Managed Hosting"
 msgstr "マネージドホスティング"
 
-#: app/components/hero.tsx:200
+#: app/components/hero.tsx:202
 msgid "MES 3D Viewer"
 msgstr "MES 3D ビューアー"
 
-#: app/components/hero.tsx:248
+#: app/components/hero.tsx:250
 msgid "MES Details"
 msgstr "MES詳細"
 
-#: app/components/hero.tsx:224
+#: app/components/hero.tsx:226
 msgid "MES Work Instructions"
 msgstr "MES作業指示"
 
@@ -550,8 +550,8 @@ msgid "Powerful tools to run your business"
 msgstr "ビジネスを運営するための強力なツール"
 
 #: app/components/footer.tsx:61
-#: app/root.tsx:249
-#: app/routes/pricing.tsx:79
+#: app/root.tsx:251
+#: app/routes/pricing.tsx:78
 msgid "Pricing"
 msgstr "料金"
 
@@ -560,7 +560,7 @@ msgid "Privacy"
 msgstr "プライバシー"
 
 #: app/components/footer.tsx:56
-#: app/root.tsx:239
+#: app/root.tsx:241
 msgid "Product"
 msgstr "製品"
 
@@ -568,15 +568,15 @@ msgstr "製品"
 msgid "Product Configurator"
 msgstr "製品コンフィギュレーター"
 
-#: app/components/hero.tsx:240
+#: app/components/hero.tsx:242
 msgid "Quote Pricing"
 msgstr "見積価格"
 
-#: app/components/hero.tsx:196
+#: app/components/hero.tsx:198
 msgid "Quotes Table"
 msgstr "見積表"
 
-#: app/routes/pricing.tsx:160
+#: app/routes/pricing.tsx:159
 msgid "Read the Docs"
 msgstr "ドキュメントを読む"
 
@@ -584,8 +584,8 @@ msgstr "ドキュメントを読む"
 msgid "Recommended. Priority support with dedicated account manager"
 msgstr "推奨。専任のアカウントマネージャーによる優先サポート"
 
-#: app/components/hero.tsx:208
-#: app/components/hero.tsx:252
+#: app/components/hero.tsx:210
+#: app/components/hero.tsx:254
 msgid "Resources"
 msgstr "リソース"
 
@@ -613,7 +613,7 @@ msgstr "ご希望のホスティングソリューションを選択してくだ
 msgid "Self-Hosted"
 msgstr "セルフホスト"
 
-#: app/routes/pricing.tsx:55
+#: app/routes/pricing.tsx:54
 msgid "Self-hosted or managed"
 msgstr "自社ホストまたはマネージド"
 
@@ -629,7 +629,7 @@ msgstr "分離されたデータを持つ共有データベース"
 msgid "Shop Floor Apps"
 msgstr "ショップフロアアプリ"
 
-#: app/routes/pricing.tsx:83
+#: app/routes/pricing.tsx:82
 msgid "Simple pricing based on your needs"
 msgstr "シンプルな料金体系があなたのニーズに合わせて"
 
@@ -645,7 +645,7 @@ msgstr "シングルテナント"
 msgid "Software as a Service"
 msgstr "Software as a Service"
 
-#: app/root.tsx:408
+#: app/root.tsx:414
 msgid "Something went wrong"
 msgstr "何か問題が発生しました"
 
@@ -654,12 +654,12 @@ msgstr "何か問題が発生しました"
 msgid "Source Code"
 msgstr "ソースコード"
 
-#: app/routes/pricing.tsx:60
+#: app/routes/pricing.tsx:59
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
 #: app/routes/_index.tsx:142
-#: app/routes/pricing.tsx:167
+#: app/routes/pricing.tsx:166
 msgid "Star on GitHub"
 msgstr "GitHubでスターを付ける"
 
@@ -718,11 +718,11 @@ msgstr "最新の製造スタック"
 msgid "The open source <0>manufacturing ERP</0>"
 msgstr "オープンソースの<0>製造ERP</0>"
 
-#: app/routes/pricing.tsx:62
+#: app/routes/pricing.tsx:61
 msgid "Training"
 msgstr "トレーニング"
 
-#: app/root.tsx:338
+#: app/root.tsx:344
 #: app/routes/_index.tsx:131
 #: app/routes/_index.tsx:756
 msgid "Try It Now"
@@ -732,8 +732,7 @@ msgstr "今すぐ試す"
 msgid "Unified quality, purchasing & production"
 msgstr "統一された品質、購買、生産"
 
-#: app/routes/pricing.tsx:39
-#: app/routes/pricing.tsx:61
+#: app/routes/pricing.tsx:60
 msgid "Unlimited functional support"
 msgstr "無制限の機能サポート"
 
@@ -749,7 +748,7 @@ msgstr "ビデオライブラリ"
 msgid "View Docs"
 msgstr "ドキュメントを表示"
 
-#: app/root.tsx:281
+#: app/root.tsx:283
 msgid "View our source code and contribute"
 msgstr "ソースコードを表示して貢献する"
 
@@ -757,7 +756,7 @@ msgstr "ソースコードを表示して貢献する"
 msgid "View Source"
 msgstr "ソースを表示"
 
-#: app/routes/pricing.tsx:155
+#: app/routes/pricing.tsx:154
 msgid "View the docs and start developing locally"
 msgstr "ドキュメントを表示してローカルで開発を開始"
 
@@ -793,7 +792,7 @@ msgstr "お客様からのご意見"
 msgid "Work Email"
 msgstr "仕事用メール"
 
-#: app/components/hero.tsx:192
+#: app/components/hero.tsx:194
 msgid "Work Instructions"
 msgstr "作業指示"
 

@@ -18,11 +18,11 @@ msgstr ""
 msgid "/user/month"
 msgstr "/用户/月"
 
-#: app/routes/pricing.tsx:36
+#: app/routes/pricing.tsx:42
 msgid "5 user minimum"
 msgstr "5个用户最少"
 
-#: app/routes/pricing.tsx:52
+#: app/routes/pricing.tsx:51
 msgid "A custom solution to meet your needs"
 msgstr "满足您需求的定制解决方案"
 
@@ -33,6 +33,10 @@ msgstr "Carbon 的托管云托管版本"
 #: app/routes/pricing.tsx:29
 msgid "A managed cloud-hosted version of Carbon that includes support and all advanced features"
 msgstr "一个托管的云托管版本的 Carbon，包括支持和所有高级功能"
+
+#: app/routes/pricing.tsx:39
+msgid "Accounting"
+msgstr ""
 
 #: app/routes/_index.tsx:301
 msgid "Achieve granular, end-to-end tracking of materials, components, and processes, ensuring compliance, simplifying audits, and enabling rapid root cause analysis without the complexity and cost of traditional high-end systems."
@@ -46,19 +50,11 @@ msgstr "Acme Inc"
 msgid "Acme, Inc."
 msgstr "Acme, Inc."
 
-#: app/routes/pricing.tsx:40
-msgid "Advanced audit logging"
-msgstr "高级审计日志"
-
 #: app/routes/_index.tsx:672
 msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
 msgstr "在花费近十年时间为制造业构建端到端系统后，我对从技术角度来看\"理想\"解决方案应该是什么样子有了相当清楚的认识："
 
-#: app/routes/pricing.tsx:42
-msgid "AI-powered workflows"
-msgstr "AI 驱动的工作流"
-
-#: app/routes/pricing.tsx:43
+#: app/routes/pricing.tsx:41
 msgid "All advanced features available"
 msgstr "所有高级功能可用"
 
@@ -66,11 +62,11 @@ msgstr "所有高级功能可用"
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "所有Carbon商标、徽标或其他品牌元素不得以任何方式修改或用于任何其他目的，仅限用于代表Carbon Manufacturing Systems Corporation。"
 
-#: app/components/hero.tsx:244
+#: app/components/hero.tsx:246
 msgid "Analytics"
 msgstr "分析"
 
-#: app/components/code-examples.tsx:587
+#: app/components/code-examples.tsx:589
 msgid "API Docs"
 msgstr "API 文档"
 
@@ -86,7 +82,7 @@ msgstr "API 优先架构"
 msgid "API-first, realtime subscriptions, simple scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
 msgstr "API 优先、实时订阅、简单的调度，以及 1,000 个小细节，让使用 ERP 的价值物有所值。"
 
-#: app/routes/pricing.tsx:41
+#: app/routes/pricing.tsx:38
 msgid "API, webhooks, and integrations"
 msgstr "API、Webhook 和集成"
 
@@ -94,7 +90,11 @@ msgstr "API、Webhook 和集成"
 msgid "Assembly and make-to-order workflows"
 msgstr "装配和按单生产工作流"
 
-#: app/components/hero.tsx:220
+#: app/routes/pricing.tsx:40
+msgid "Audit logging"
+msgstr ""
+
+#: app/components/hero.tsx:222
 msgid "Auto-generated API Documentation"
 msgstr "自动生成的API文档"
 
@@ -114,7 +114,7 @@ msgstr "返回"
 msgid "Basic ERP, MES, and QMS functionality"
 msgstr "基础ERP、MES和QMS功能"
 
-#: app/components/hero.tsx:228
+#: app/components/hero.tsx:230
 msgid "Bill of Materials"
 msgstr "物料清单"
 
@@ -199,7 +199,7 @@ msgstr "选择您偏好的数据库"
 msgid "Co-founder"
 msgstr "联合创始人"
 
-#: app/components/code-examples.tsx:597
+#: app/components/code-examples.tsx:599
 msgid "Code Examples"
 msgstr "代码示例"
 
@@ -224,7 +224,7 @@ msgstr "完成"
 msgid "Complete control over your infrastructure"
 msgstr "完全控制您的基础设施"
 
-#: app/components/hero.tsx:236
+#: app/components/hero.tsx:238
 msgid "Configurator"
 msgstr "配置器"
 
@@ -241,8 +241,8 @@ msgstr "联系"
 msgid "Contact Information"
 msgstr "联系信息"
 
-#: app/routes/pricing.tsx:48
-#: app/routes/pricing.tsx:50
+#: app/routes/pricing.tsx:47
+#: app/routes/pricing.tsx:49
 msgid "Contact us"
 msgstr "联系我们"
 
@@ -254,7 +254,7 @@ msgstr "复制代码片段"
 msgid "Create a branded ordering experience that drives production"
 msgstr "创建品牌化的订购体验，推动生产"
 
-#: app/routes/pricing.tsx:59
+#: app/routes/pricing.tsx:58
 msgid "Custom development"
 msgstr "自定义开发"
 
@@ -262,7 +262,7 @@ msgstr "自定义开发"
 msgid "Custom Development"
 msgstr "自定义开发"
 
-#: app/routes/pricing.tsx:58
+#: app/routes/pricing.tsx:57
 msgid "Custom integrations"
 msgstr "自定义集成"
 
@@ -270,7 +270,7 @@ msgstr "自定义集成"
 msgid "Custom integrations with your existing systems"
 msgstr "与您现有系统的自定义集成"
 
-#: app/components/hero.tsx:232
+#: app/components/hero.tsx:234
 msgid "Customer Portal"
 msgstr "客户门户"
 
@@ -294,28 +294,28 @@ msgstr "专属支持"
 msgid "Designed for manufacturing"
 msgstr "为制造而设计"
 
-#: app/root.tsx:295
+#: app/root.tsx:297
 msgid "Developer guides and API reference"
 msgstr "开发者指南和 API 参考"
 
-#: app/root.tsx:255
+#: app/root.tsx:257
 msgid "Developers"
 msgstr "开发者"
 
-#: app/root.tsx:265
+#: app/root.tsx:267
 msgid "Discord"
 msgstr "Discord"
 
-#: app/root.tsx:293
+#: app/root.tsx:295
 #: app/routes/_index.tsx:492
 msgid "Documentation"
 msgstr "文档"
 
-#: app/components/hero.tsx:212
+#: app/components/hero.tsx:214
 msgid "Documents"
 msgstr "文档"
 
-#: app/routes/brand.tsx:189
+#: app/routes/brand.tsx:126
 msgid "Download Logo Kit"
 msgstr "下载徽标工具包"
 
@@ -331,8 +331,8 @@ msgstr "端到端"
 msgid "End-to-End Traceability"
 msgstr "端到端可追溯性"
 
-#: app/root.tsx:309
-#: app/routes/pricing.tsx:47
+#: app/root.tsx:311
+#: app/routes/pricing.tsx:46
 msgid "Enterprise"
 msgstr "企业"
 
@@ -340,7 +340,7 @@ msgstr "企业"
 msgid "Enterprise. Influence product roadmap with priority feature requests"
 msgstr "企业版。通过优先功能请求影响产品路线图"
 
-#: app/routes/pricing.tsx:37
+#: app/routes/pricing.tsx:36
 msgid "Everything from Starter"
 msgstr "Starter 中的所有功能"
 
@@ -360,23 +360,23 @@ msgstr "创始人备忘录"
 msgid "Full Name"
 msgstr "全名"
 
-#: app/routes/pricing.tsx:57
+#: app/routes/pricing.tsx:56
 msgid "Full setup and migrations"
 msgstr "完整的设置和迁移"
 
-#: app/components/hero.tsx:134
+#: app/components/hero.tsx:136
 msgid "Get Started"
 msgstr "开始"
 
-#: app/routes/pricing.tsx:152
+#: app/routes/pricing.tsx:151
 msgid "Get started for free"
 msgstr "免费开始"
 
-#: app/root.tsx:279
+#: app/root.tsx:281
 msgid "GitHub"
 msgstr "GitHub"
 
-#: app/components/hero.tsx:204
+#: app/components/hero.tsx:206
 msgid "Global Search"
 msgstr "全局搜索"
 
@@ -392,7 +392,7 @@ msgstr "托管偏好"
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "我相信开源具有令人难以置信的潜力，因为它不仅仅是一个产品——它是一个志同道合的人们的社区，致力于在人工智能和机器人时代构建制造业的未来。"
 
-#: app/routes/pricing.tsx:38
+#: app/routes/pricing.tsx:37
 msgid "Implementation support"
 msgstr "实施支持"
 
@@ -408,7 +408,7 @@ msgstr "集成代理"
 msgid "Integrations"
 msgstr "集成"
 
-#: app/routes/pricing.tsx:56
+#: app/routes/pricing.tsx:55
 msgid "ITAR compliant"
 msgstr "符合ITAR规范"
 
@@ -420,7 +420,7 @@ msgstr "约翰·多"
 msgid "john@company.com"
 msgstr "john@company.com"
 
-#: app/root.tsx:267
+#: app/root.tsx:269
 msgid "Join our community chat"
 msgstr "加入我们的社区聊天"
 
@@ -428,7 +428,7 @@ msgstr "加入我们的社区聊天"
 msgid "Join our Discord community"
 msgstr "加入我们的 Discord 社区"
 
-#: app/components/hero.tsx:216
+#: app/components/hero.tsx:218
 msgid "Kanban Schedule"
 msgstr "看板计划"
 
@@ -472,15 +472,15 @@ msgstr "低月度付款"
 msgid "Managed Hosting"
 msgstr "托管托管"
 
-#: app/components/hero.tsx:200
+#: app/components/hero.tsx:202
 msgid "MES 3D Viewer"
 msgstr "MES 3D 查看器"
 
-#: app/components/hero.tsx:248
+#: app/components/hero.tsx:250
 msgid "MES Details"
 msgstr "MES 详情"
 
-#: app/components/hero.tsx:224
+#: app/components/hero.tsx:226
 msgid "MES Work Instructions"
 msgstr "MES 工作指令"
 
@@ -550,8 +550,8 @@ msgid "Powerful tools to run your business"
 msgstr "强大的工具来运营您的业务"
 
 #: app/components/footer.tsx:61
-#: app/root.tsx:249
-#: app/routes/pricing.tsx:79
+#: app/root.tsx:251
+#: app/routes/pricing.tsx:78
 msgid "Pricing"
 msgstr "定价"
 
@@ -560,7 +560,7 @@ msgid "Privacy"
 msgstr "隐私"
 
 #: app/components/footer.tsx:56
-#: app/root.tsx:239
+#: app/root.tsx:241
 msgid "Product"
 msgstr "产品"
 
@@ -568,15 +568,15 @@ msgstr "产品"
 msgid "Product Configurator"
 msgstr "产品配置器"
 
-#: app/components/hero.tsx:240
+#: app/components/hero.tsx:242
 msgid "Quote Pricing"
 msgstr "报价定价"
 
-#: app/components/hero.tsx:196
+#: app/components/hero.tsx:198
 msgid "Quotes Table"
 msgstr "报价表"
 
-#: app/routes/pricing.tsx:160
+#: app/routes/pricing.tsx:159
 msgid "Read the Docs"
 msgstr "阅读文档"
 
@@ -584,8 +584,8 @@ msgstr "阅读文档"
 msgid "Recommended. Priority support with dedicated account manager"
 msgstr "推荐。优先支持和专属账户经理"
 
-#: app/components/hero.tsx:208
-#: app/components/hero.tsx:252
+#: app/components/hero.tsx:210
+#: app/components/hero.tsx:254
 msgid "Resources"
 msgstr "资源"
 
@@ -613,7 +613,7 @@ msgstr "选择您偏好的托管解决方案"
 msgid "Self-Hosted"
 msgstr "自托管"
 
-#: app/routes/pricing.tsx:55
+#: app/routes/pricing.tsx:54
 msgid "Self-hosted or managed"
 msgstr "自托管或托管"
 
@@ -629,7 +629,7 @@ msgstr "共享数据库，数据隔离"
 msgid "Shop Floor Apps"
 msgstr "车间应用"
 
-#: app/routes/pricing.tsx:83
+#: app/routes/pricing.tsx:82
 msgid "Simple pricing based on your needs"
 msgstr "基于您的需求的简单定价"
 
@@ -645,7 +645,7 @@ msgstr "单租户"
 msgid "Software as a Service"
 msgstr "软件即服务"
 
-#: app/root.tsx:408
+#: app/root.tsx:414
 msgid "Something went wrong"
 msgstr "出了问题"
 
@@ -654,12 +654,12 @@ msgstr "出了问题"
 msgid "Source Code"
 msgstr "源代码"
 
-#: app/routes/pricing.tsx:60
+#: app/routes/pricing.tsx:59
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
 #: app/routes/_index.tsx:142
-#: app/routes/pricing.tsx:167
+#: app/routes/pricing.tsx:166
 msgid "Star on GitHub"
 msgstr "在 GitHub 上标星"
 
@@ -718,11 +718,11 @@ msgstr "现代制造堆栈"
 msgid "The open source <0>manufacturing ERP</0>"
 msgstr "开源<0>制造ERP</0>"
 
-#: app/routes/pricing.tsx:62
+#: app/routes/pricing.tsx:61
 msgid "Training"
 msgstr "培训"
 
-#: app/root.tsx:338
+#: app/root.tsx:344
 #: app/routes/_index.tsx:131
 #: app/routes/_index.tsx:756
 msgid "Try It Now"
@@ -732,8 +732,7 @@ msgstr "立即尝试"
 msgid "Unified quality, purchasing & production"
 msgstr "统一的质量、采购和生产"
 
-#: app/routes/pricing.tsx:39
-#: app/routes/pricing.tsx:61
+#: app/routes/pricing.tsx:60
 msgid "Unlimited functional support"
 msgstr "无限功能支持"
 
@@ -749,7 +748,7 @@ msgstr "视频库"
 msgid "View Docs"
 msgstr "查看文档"
 
-#: app/root.tsx:281
+#: app/root.tsx:283
 msgid "View our source code and contribute"
 msgstr "查看我们的源代码并做出贡献"
 
@@ -757,7 +756,7 @@ msgstr "查看我们的源代码并做出贡献"
 msgid "View Source"
 msgstr "查看源代码"
 
-#: app/routes/pricing.tsx:155
+#: app/routes/pricing.tsx:154
 msgid "View the docs and start developing locally"
 msgstr "查看文档并开始本地开发"
 
@@ -793,7 +792,7 @@ msgstr "我们的客户怎么说："
 msgid "Work Email"
 msgstr "工作邮箱"
 
-#: app/components/hero.tsx:192
+#: app/components/hero.tsx:194
 msgid "Work Instructions"
 msgstr "工作指令"
 

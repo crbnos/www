@@ -1,2 +1,9 @@
-npm run lingui:compile
-git add locales/
+# Compile lingui translations if any relevant files were modified
+if git diff --cached --name-only | grep -qE '\.(tsx?|jsx?)$|\.po$'; then
+    echo "Compiling translations..."
+    npm run lingui:extract
+    npm run lingui:compile
+
+    # Add compiled locale files to the commit
+    git add locales/
+fi

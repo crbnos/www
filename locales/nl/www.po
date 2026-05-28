@@ -6,799 +6,804 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: nl\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
 
 #: app/routes/pricing.tsx:14
 #: app/routes/pricing.tsx:31
 msgid "/user/month"
-msgstr ""
+msgstr "/gebruiker/maand"
 
-#: app/routes/pricing.tsx:36
+#: app/routes/pricing.tsx:42
 msgid "5 user minimum"
-msgstr ""
+msgstr "5 gebruikers minimum"
 
-#: app/routes/pricing.tsx:52
+#: app/routes/pricing.tsx:51
 msgid "A custom solution to meet your needs"
-msgstr ""
+msgstr "Een aangepaste oplossing voor uw behoeften"
 
 #: app/routes/pricing.tsx:17
 msgid "A managed cloud-hosted version of Carbon"
-msgstr ""
+msgstr "Een beheerde cloud-gehoste versie van Carbon"
 
 #: app/routes/pricing.tsx:29
 msgid "A managed cloud-hosted version of Carbon that includes support and all advanced features"
+msgstr "Een beheerde cloud-gehoste versie van Carbon met ondersteuning en alle geavanceerde functies"
+
+#: app/routes/pricing.tsx:39
+msgid "Accounting"
 msgstr ""
 
 #: app/routes/_index.tsx:301
 msgid "Achieve granular, end-to-end tracking of materials, components, and processes, ensuring compliance, simplifying audits, and enabling rapid root cause analysis without the complexity and cost of traditional high-end systems."
-msgstr ""
+msgstr "Bereik granulaire, end-to-end tracking van materialen, componenten en processen, zorg voor compliance, vereenvoudig audits en maak snelle oorzaakanalyse mogelijk zonder de complexiteit en kosten van traditionele high-end systemen."
 
 #: app/components/wizard-form.tsx:414
 msgid "Acme Inc"
-msgstr ""
+msgstr "Acme Inc"
 
 #: app/routes/contact.tsx:200
 msgid "Acme, Inc."
-msgstr ""
-
-#: app/routes/pricing.tsx:40
-msgid "Advanced audit logging"
-msgstr ""
+msgstr "Acme, Inc."
 
 #: app/routes/_index.tsx:672
 msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
-msgstr ""
+msgstr "Na bijna een decennium aan het bouwen van end-to-end systemen voor productie had ik een goed idee van hoe een \"ideale\" oplossing er technisch gezien uit zou moeten zien:"
 
-#: app/routes/pricing.tsx:42
-msgid "AI-powered workflows"
-msgstr ""
-
-#: app/routes/pricing.tsx:43
+#: app/routes/pricing.tsx:41
 msgid "All advanced features available"
-msgstr ""
+msgstr "Alle geavanceerde functies beschikbaar"
 
 #: app/routes/brand.tsx:25
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
-msgstr ""
+msgstr "Alle Carbon-handelsmerken, logo's of andere merkelementen mogen nooit worden gewijzigd of voor enig ander doel worden gebruikt dan om Carbon Manufacturing Systems Corporation te vertegenwoordigen."
 
-#: app/components/hero.tsx:244
+#: app/components/hero.tsx:246
 msgid "Analytics"
-msgstr ""
+msgstr "Analytische gegevens"
 
-#: app/components/code-examples.tsx:587
+#: app/components/code-examples.tsx:589
 msgid "API Docs"
-msgstr ""
+msgstr "API-documentatie"
 
 #: app/components/code-examples.tsx:571
 msgid "API-First"
-msgstr ""
+msgstr "API-First"
 
 #: app/routes/_index.tsx:403
 msgid "API-First Architecture"
-msgstr ""
+msgstr "API-First Architectuur"
 
 #: app/routes/_index.tsx:680
 msgid "API-first, realtime subscriptions, simple scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
-msgstr ""
+msgstr "API-first, realtime abonnementen, eenvoudige planning, en 1.000 kleine details om het gebruik van een ERP de moeite waard te maken."
 
-#: app/routes/pricing.tsx:41
+#: app/routes/pricing.tsx:38
 msgid "API, webhooks, and integrations"
-msgstr ""
+msgstr "API, webhooks en integraties"
 
 #: app/routes/_index.tsx:209
 msgid "Assembly and make-to-order workflows"
+msgstr "Montage- en op-order-workflows"
+
+#: app/routes/pricing.tsx:40
+msgid "Audit logging"
 msgstr ""
 
-#: app/components/hero.tsx:220
+#: app/components/hero.tsx:222
 msgid "Auto-generated API Documentation"
-msgstr ""
+msgstr "Automatisch gegenereerde API-documentatie"
 
 #: app/routes/pricing.tsx:20
 msgid "Automatic updates and backups"
-msgstr ""
+msgstr "Automatische updates en back-ups"
 
 #: app/routes/_index.tsx:356
 msgid "Automatically generate the Bill of Materials and Bill of Process for a given set of options/parameters with our powerful product configurator."
-msgstr ""
+msgstr "Genereer automatisch de Stuklijst en Proceslijst voor een bepaalde set opties/parameters met onze krachtige productconfigurator."
 
 #: app/components/wizard-form.tsx:334
 msgid "Back"
-msgstr ""
+msgstr "Terug"
 
 #: app/routes/pricing.tsx:21
 msgid "Basic ERP, MES, and QMS functionality"
-msgstr ""
+msgstr "Basis ERP-, MES- en QMS-functionaliteit"
 
-#: app/components/hero.tsx:228
+#: app/components/hero.tsx:230
 msgid "Bill of Materials"
-msgstr ""
+msgstr "Stuklijst"
 
 #: app/components/footer.tsx:48
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 #: app/components/footer.tsx:47
 #: app/routes/brand.tsx:22
 msgid "Brand Assets"
-msgstr ""
+msgstr "Merkidentiteit"
 
 #: app/routes/_index.tsx:748
 msgid "Build something with Carbon"
-msgstr ""
+msgstr "Bouw iets met Carbon"
 
 #: app/components/code-examples.tsx:574
 msgid "Built on a developer-friendly platform"
-msgstr ""
+msgstr "Gebouwd op een ontwikkelaarsvriendelijk platform"
 
 #: app/routes/_index.tsx:221
 msgid "Built on the best of open-source software"
-msgstr ""
+msgstr "Gebouwd op het beste van open-source software"
 
 #: app/routes/pricing.tsx:28
 msgid "Business"
-msgstr ""
+msgstr "Zakelijk"
 
 #: app/routes/_index.tsx:686
 msgid "But even as we work with our customers to become the best off-the-shelf ERP/MES for many types of discrete manufacturing, we are faced with the reality that there is no \"perfect\" off-the-shelf solution, because each manufacturing business is unique."
-msgstr ""
+msgstr "Maar zelfs terwijl we met onze klanten werken om de beste kant-en-klare ERP/MES voor veel soorten discrete fabricage te worden, worden we geconfronteerd met de realiteit dat er geen \"perfecte\" kant-en-klare oplossing bestaat, omdat elk productiebedrijf uniek is."
 
 #: app/components/wizard-form.tsx:82
 msgid "Buy the Source Code"
-msgstr ""
+msgstr "Koop de broncode"
 
 #: app/routes/_index.tsx:464
 msgid "Carbon Academy is a free, self-paced learning platform that teaches you how to use Carbon. It's a great way to get started with Carbon and learn how to use it to its full potential."
-msgstr ""
+msgstr "Carbon Academy is een gratis, zelfstandig leerplatform dat je leert hoe je Carbon kunt gebruiken. Het is een geweldige manier om aan de slag te gaan met Carbon en te leren hoe je het volledig kunt benutten."
 
 #: app/components/hero.tsx:126
 msgid "Carbon combines ERP, MES, and QMS into a single, unified system."
-msgstr ""
+msgstr "Carbon combineert ERP, MES en QMS in één enkel, geïntegreerd systeem."
 
 #: app/routes/_index.tsx:122
 msgid "Carbon is a manufacturing system of record that combines ERP, MES, and QMS into a single, unified, API-first system that's perfect for complex manufacturing."
-msgstr ""
+msgstr "Carbon is een productieregistratiesysteem dat ERP, MES en QMS combineert in één uniform, API-first systeem dat perfect is voor complexe productie."
 
 #: app/routes/_index.tsx:407
 msgid "Carbon is built with an \"API-First Architecture,\" which gives you unparalleled flexibility to seamlessly connect Carbon with your other business systems. This allows you to automate workflows across all applications."
-msgstr ""
+msgstr "Carbon is gebouwd met een \"API-First Architecture\", die je ongeëvenaarde flexibiliteit geeft om Carbon naadloos te verbinden met je andere bedrijfssystemen. Dit stelt je in staat om workflows in alle applicaties te automatiseren."
 
 #: app/routes/_index.tsx:667
 msgid "Carbon Manufacturing Systems Corp."
-msgstr ""
+msgstr "Carbon Manufacturing Systems Corp."
 
 #: app/components/code-examples.tsx:577
 msgid "Carbon provides a comprehensive MCP server and API clients in many popular languages."
-msgstr ""
+msgstr "Carbon biedt een uitgebreide MCP-server en API-clients in veel populaire programmeertalen."
 
 #: app/routes/_index.tsx:495
 msgid "Carbon's developer documentation guides you through getting Carbon running locally, and extending it to build your own own custom applications."
-msgstr ""
+msgstr "De ontwikkelaarsdocumentatie van Carbon begeleidt je bij het lokaal uitvoeren van Carbon en het uitbreiden ervan om je eigen aangepaste applicaties te bouwen."
 
 #: app/routes/_index.tsx:526
 msgid "Carbon's source code is available on GitHub and is free to use. You can maintain your own public fork or acquire a commercial license to make your code modifications private."
-msgstr ""
+msgstr "De broncode van Carbon is beschikbaar op GitHub en kan gratis worden gebruikt. U kunt uw eigen openbare fork onderhouden of een commerciële licentie aanschaffen om uw codewijzigingen privé te houden."
 
 #: app/components/status-indicator.tsx:45
 msgid "Checking status…"
-msgstr ""
+msgstr "Status controleren…"
 
 #: app/components/wizard-form.tsx:77
 msgid "Choose how you'd like to own the solution"
-msgstr ""
+msgstr "Kies hoe je de oplossing wilt bezitten"
 
 #: app/components/wizard-form.tsx:113
 msgid "Choose your preferred database"
-msgstr ""
+msgstr "Kies uw voorkeursdatabase"
 
 #: app/routes/_index.tsx:732
 msgid "Co-founder"
-msgstr ""
+msgstr "Medeoprichter"
 
-#: app/components/code-examples.tsx:597
+#: app/components/code-examples.tsx:599
 msgid "Code Examples"
-msgstr ""
+msgstr "Codevoorbeelden"
 
 #: app/routes/pricing.tsx:24
 msgid "Community support"
-msgstr ""
+msgstr "Communityondersteuning"
 
 #: app/components/footer.tsx:44
 msgid "Company"
-msgstr ""
+msgstr "Bedrijf"
 
 #: app/components/wizard-form.tsx:408
 #: app/routes/contact.tsx:194
 msgid "Company Name"
-msgstr ""
+msgstr "Bedrijfsnaam"
 
 #: app/components/wizard-form.tsx:349
 msgid "Complete"
-msgstr ""
+msgstr "Voltooien"
 
 #: app/components/wizard-form.tsx:101
 msgid "Complete control over your infrastructure"
-msgstr ""
+msgstr "Volledige controle over uw infrastructuur"
 
-#: app/components/hero.tsx:236
+#: app/components/hero.tsx:238
 msgid "Configurator"
-msgstr ""
+msgstr "Configurator"
 
 #: app/components/wizard-form.tsx:170
 msgid "Connect your robots and machines to your production systems"
-msgstr ""
+msgstr "Verbind uw robots en machines met uw productiesystemen"
 
 #: app/components/footer.tsx:49
 #: app/routes/contact.tsx:143
 msgid "Contact"
-msgstr ""
+msgstr "Contact"
 
 #: app/components/wizard-form.tsx:300
 msgid "Contact Information"
-msgstr ""
+msgstr "Contactgegevens"
 
-#: app/routes/pricing.tsx:48
-#: app/routes/pricing.tsx:50
+#: app/routes/pricing.tsx:47
+#: app/routes/pricing.tsx:49
 msgid "Contact us"
-msgstr ""
+msgstr "Neem contact op"
 
 #: app/components/code-examples.tsx:481
 msgid "Copy code snippet"
-msgstr ""
+msgstr "Code fragment kopiëren"
 
 #: app/components/wizard-form.tsx:165
 msgid "Create a branded ordering experience that drives production"
-msgstr ""
+msgstr "Creëer een merkgebonden bestelervaring die productie stimuleert"
 
-#: app/routes/pricing.tsx:59
+#: app/routes/pricing.tsx:58
 msgid "Custom development"
-msgstr ""
+msgstr "Aangepaste ontwikkeling"
 
 #: app/components/wizard-form.tsx:153
 msgid "Custom Development"
-msgstr ""
+msgstr "Aangepaste Ontwikkeling"
 
-#: app/routes/pricing.tsx:58
+#: app/routes/pricing.tsx:57
 msgid "Custom integrations"
-msgstr ""
+msgstr "Aangepaste integraties"
 
 #: app/components/wizard-form.tsx:175
 msgid "Custom integrations with your existing systems"
-msgstr ""
+msgstr "Aangepaste integraties met uw bestaande systemen"
 
-#: app/components/hero.tsx:232
+#: app/components/hero.tsx:234
 msgid "Customer Portal"
-msgstr ""
+msgstr "Klantportaal"
 
 #: app/components/wizard-form.tsx:164
 msgid "Customer Portal/Website"
-msgstr ""
+msgstr "Klantportaal/Website"
 
 #: app/components/wizard-form.tsx:112
 msgid "Database"
-msgstr ""
+msgstr "Database"
 
 #: app/components/wizard-form.tsx:124
 msgid "Dedicated database for your organization"
-msgstr ""
+msgstr "Toegewezen database voor uw organisatie"
 
 #: app/components/wizard-form.tsx:141
 msgid "Dedicated Support"
-msgstr ""
+msgstr "Toegewezen ondersteuning"
 
 #: app/routes/_index.tsx:196
 msgid "Designed for manufacturing"
-msgstr ""
+msgstr "Ontworpen voor productie"
+
+#: app/root.tsx:297
+msgid "Developer guides and API reference"
+msgstr "Ontwikkelaarshandleidingen en API-referentie"
+
+#: app/root.tsx:257
+msgid "Developers"
+msgstr "Ontwikkelaars"
+
+#: app/root.tsx:267
+msgid "Discord"
+msgstr "Discord"
 
 #: app/root.tsx:295
-msgid "Developer guides and API reference"
-msgstr ""
-
-#: app/root.tsx:255
-msgid "Developers"
-msgstr ""
-
-#: app/root.tsx:265
-msgid "Discord"
-msgstr ""
-
-#: app/root.tsx:293
 #: app/routes/_index.tsx:492
 msgid "Documentation"
-msgstr ""
+msgstr "Documentatie"
 
-#: app/components/hero.tsx:212
+#: app/components/hero.tsx:214
 msgid "Documents"
-msgstr ""
+msgstr "Documenten"
 
-#: app/routes/brand.tsx:189
+#: app/routes/brand.tsx:126
 msgid "Download Logo Kit"
-msgstr ""
+msgstr "Logo Kit downloaden"
 
 #: app/components/wizard-form.tsx:396
 msgid "Email Address"
-msgstr ""
+msgstr "E-mailadres"
 
 #: app/routes/_index.tsx:193
 msgid "End-to-End"
-msgstr ""
+msgstr "Van begin tot eind"
 
 #: app/routes/_index.tsx:297
 msgid "End-to-End Traceability"
-msgstr ""
+msgstr "End-to-End Traceerbaarheid"
 
-#: app/root.tsx:309
-#: app/routes/pricing.tsx:47
+#: app/root.tsx:311
+#: app/routes/pricing.tsx:46
 msgid "Enterprise"
-msgstr ""
+msgstr "Onderneming"
 
 #: app/components/wizard-form.tsx:147
 msgid "Enterprise. Influence product roadmap with priority feature requests"
-msgstr ""
+msgstr "Enterprise. Beïnvloed de productroutekaart met prioritaire functieverzoeken"
 
-#: app/routes/pricing.tsx:37
+#: app/routes/pricing.tsx:36
 msgid "Everything from Starter"
-msgstr ""
+msgstr "Alles van Starter"
 
 #: app/components/wizard-form.tsx:146
 msgid "Feature Prioritization"
-msgstr ""
+msgstr "Prioritering van functies"
 
 #: app/routes/_index.tsx:279
 msgid "Features"
-msgstr ""
+msgstr "Functies"
 
 #: app/routes/_index.tsx:664
 msgid "Founder memo"
-msgstr ""
+msgstr "Oprichtermemo"
 
 #: app/components/wizard-form.tsx:385
 msgid "Full Name"
-msgstr ""
+msgstr "Volledige naam"
 
-#: app/routes/pricing.tsx:57
+#: app/routes/pricing.tsx:56
 msgid "Full setup and migrations"
-msgstr ""
+msgstr "Volledige setup en migraties"
 
-#: app/components/hero.tsx:134
+#: app/components/hero.tsx:136
 msgid "Get Started"
-msgstr ""
+msgstr "Aan de slag"
 
-#: app/routes/pricing.tsx:152
+#: app/routes/pricing.tsx:151
 msgid "Get started for free"
-msgstr ""
+msgstr "Gratis aan de slag"
 
-#: app/root.tsx:279
+#: app/root.tsx:281
 msgid "GitHub"
-msgstr ""
+msgstr "GitHub"
 
-#: app/components/hero.tsx:204
+#: app/components/hero.tsx:206
 msgid "Global Search"
-msgstr ""
+msgstr "Globaal zoeken"
 
 #: app/routes/_index.tsx:227
 msgid "Govcloud-hosted Version Available"
-msgstr ""
+msgstr "Govcloud-gehoste versie beschikbaar"
 
 #: app/components/wizard-form.tsx:94
 msgid "Hosting Preference"
-msgstr ""
+msgstr "Hostingvoorkeur"
 
 #: app/routes/_index.tsx:703
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
-msgstr ""
+msgstr "Ik geloof dat open-source ongelooflijk potentieel heeft omdat het niet alleen een product is–het is een gemeenschap van gelijkgestemde mensen die werken aan het bouwen van de toekomst van de productie in het tijdperk van AI en robotica."
 
-#: app/routes/pricing.tsx:38
+#: app/routes/pricing.tsx:37
 msgid "Implementation support"
-msgstr ""
+msgstr "Implementatieondersteuning"
 
 #: app/components/status-indicator.tsx:8
 msgid "Incident detected"
-msgstr ""
+msgstr "Incident gedetecteerd"
 
 #: app/routes/_index.tsx:324
 msgid "Integrated Agents"
-msgstr ""
+msgstr "Geïntegreerde Agents"
 
 #: app/components/wizard-form.tsx:174
 msgid "Integrations"
-msgstr ""
+msgstr "Integraties"
 
-#: app/routes/pricing.tsx:56
+#: app/routes/pricing.tsx:55
 msgid "ITAR compliant"
-msgstr ""
+msgstr "ITAR-compliant"
 
 #: app/components/wizard-form.tsx:391
 msgid "John Doe"
-msgstr ""
+msgstr "John Doe"
 
 #: app/components/wizard-form.tsx:403
 msgid "john@company.com"
-msgstr ""
+msgstr "john@company.com"
 
-#: app/root.tsx:267
+#: app/root.tsx:269
 msgid "Join our community chat"
-msgstr ""
+msgstr "Sluit je aan bij onze community chat"
 
 #: app/routes/_index.tsx:779
 msgid "Join our Discord community"
-msgstr ""
+msgstr "Sluit je aan bij onze Discord-community"
 
-#: app/components/hero.tsx:216
+#: app/components/hero.tsx:218
 msgid "Kanban Schedule"
-msgstr ""
+msgstr "Kanban Schema"
 
 #: app/routes/_index.tsx:381
 msgid "Keep your shop floor schedule up-to-date with our simple and powerful scheduling engine. Schedule by job due date, or by fine-tune work center and resource availability."
-msgstr ""
+msgstr "Houd uw winkelschema up-to-date met onze eenvoudige en krachtige planningsengine. Plan op basis van vervaldatum van de taak of verfijn de beschikbaarheid van werkcentra en resources."
 
 #: app/components/footer.tsx:59
 msgid "Learning"
-msgstr ""
+msgstr "Leren"
 
 #: app/routes/learn+/_layout.tsx:16
 msgid "Learning Center"
-msgstr ""
+msgstr "Leercentrum"
 
 #: app/components/wizard-form.tsx:137
 msgid "Least expensive. Basic onboarding and email support"
-msgstr ""
+msgstr "Minst duur. Basisonboarding en e-mailondersteuning"
 
 #: app/components/footer.tsx:68
 msgid "Legal"
-msgstr ""
+msgstr "Juridisch"
 
 #: app/components/wizard-form.tsx:106
 msgid "Let us handle the infrastructure for you"
-msgstr ""
+msgstr "Laat ons de infrastructuur voor u beheren"
 
 #: app/components/footer.tsx:60
 msgid "License"
-msgstr ""
+msgstr "Licentie"
 
 #: app/components/wizard-form.tsx:136
 msgid "Limited Support"
-msgstr ""
+msgstr "Beperkte ondersteuning"
 
 #: app/components/wizard-form.tsx:88
 msgid "Low monthly payments"
-msgstr ""
+msgstr "Lage maandelijkse betalingen"
 
 #: app/components/wizard-form.tsx:105
 msgid "Managed Hosting"
-msgstr ""
+msgstr "Beheerde Hosting"
 
-#: app/components/hero.tsx:200
+#: app/components/hero.tsx:202
 msgid "MES 3D Viewer"
-msgstr ""
+msgstr "MES 3D Viewer"
 
-#: app/components/hero.tsx:248
+#: app/components/hero.tsx:250
 msgid "MES Details"
-msgstr ""
+msgstr "MES Details"
 
-#: app/components/hero.tsx:224
+#: app/components/hero.tsx:226
 msgid "MES Work Instructions"
-msgstr ""
+msgstr "MES Werkbrieven"
 
 #: app/routes/contact.tsx:210
 msgid "Message"
-msgstr ""
+msgstr "Bericht"
 
 #: app/routes/_index.tsx:150
 msgid "Modern manufacturers build their tech stack on Carbon"
-msgstr ""
+msgstr "Moderne fabrikanten bouwen hun tech stack op Carbon"
 
 #: app/routes/_index.tsx:449
 msgid "Modern, minimal, transparent"
-msgstr ""
+msgstr "Modern, minimaal, transparant"
 
 #: app/routes/_index.tsx:215
 msgid "Multi-location planning and inventory"
-msgstr ""
+msgstr "Plannen en inventaris op meerdere locaties"
 
 #: app/components/wizard-form.tsx:118
 msgid "Multi-Tenant"
-msgstr ""
+msgstr "Multi-Tenant"
 
 #: app/routes/contact.tsx:163
 msgid "Name"
-msgstr ""
+msgstr "Naam"
 
 #: app/components/wizard-form.tsx:159
 msgid "None Required"
-msgstr ""
+msgstr "Niet vereist"
 
 #: app/components/wizard-form.tsx:83
 msgid "One-time purchase with full ownership"
-msgstr ""
+msgstr "Eenmalige aankoop met volledig eigendom"
 
 #: app/routes/oss.tsx:58
 msgid "Open link"
-msgstr ""
+msgstr "Link openen"
 
 #: app/routes/_index.tsx:446
 msgid "Open Source"
-msgstr ""
+msgstr "Open Source"
 
 #: app/components/status-indicator.tsx:8
 msgid "Operational"
-msgstr ""
+msgstr "Operationeel"
 
 #: app/components/footer.tsx:50
 #: app/routes/oss.tsx:38
 msgid "OSS Friends"
-msgstr ""
+msgstr "OSS Friends"
 
 #: app/routes/_index.tsx:328
 msgid "Our ever-expanding catalog of agents allow you to save time and money by automating repetitive tasks. For example, our purchasing agent can create purchase orders and get quotes from suppliers automatically."
-msgstr ""
+msgstr "Onze steeds groeiende catalogus van agents stelt u in staat tijd en geld te besparen door repetitieve taken te automatiseren. Onze inkoopagent kan bijvoorbeeld automatisch inkooporders aanmaken en offertes van leveranciers ophalen."
 
 #: app/components/wizard-form.tsx:76
 msgid "Ownership Model"
-msgstr ""
+msgstr "Eigendomsmodel"
 
 #: app/components/wizard-form.tsx:303
 msgid "Please provide your contact details to complete the process"
-msgstr ""
+msgstr "Geef alstublieft uw contactgegevens op om het proces af te ronden"
 
 #: app/routes/_index.tsx:282
 msgid "Powerful tools to run your business"
-msgstr ""
+msgstr "Krachtige tools om uw bedrijf te runnen"
 
 #: app/components/footer.tsx:61
-#: app/root.tsx:249
-#: app/routes/pricing.tsx:79
+#: app/root.tsx:251
+#: app/routes/pricing.tsx:78
 msgid "Pricing"
-msgstr ""
+msgstr "Prijzen"
 
 #: app/components/footer.tsx:71
 msgid "Privacy"
-msgstr ""
+msgstr "Privacy"
 
 #: app/components/footer.tsx:56
-#: app/root.tsx:239
+#: app/root.tsx:241
 msgid "Product"
-msgstr ""
+msgstr "Product"
 
 #: app/routes/_index.tsx:352
 msgid "Product Configurator"
-msgstr ""
+msgstr "Productconfigurator"
 
-#: app/components/hero.tsx:240
+#: app/components/hero.tsx:242
 msgid "Quote Pricing"
-msgstr ""
+msgstr "Prijsstelling voor offertes"
 
-#: app/components/hero.tsx:196
+#: app/components/hero.tsx:198
 msgid "Quotes Table"
-msgstr ""
+msgstr "Offertetabel"
 
-#: app/routes/pricing.tsx:160
+#: app/routes/pricing.tsx:159
 msgid "Read the Docs"
-msgstr ""
+msgstr "Lees de documentatie"
 
 #: app/components/wizard-form.tsx:142
 msgid "Recommended. Priority support with dedicated account manager"
-msgstr ""
+msgstr "Aanbevolen. Prioriteitsondersteuning met toegewezen accountmanager"
 
-#: app/components/hero.tsx:208
-#: app/components/hero.tsx:252
+#: app/components/hero.tsx:210
+#: app/components/hero.tsx:254
 msgid "Resources"
-msgstr ""
+msgstr "Middelen"
 
 #: app/routes/_index.tsx:588
 msgid "Reviews"
-msgstr ""
+msgstr "Beoordelingen"
 
 #: app/components/footer.tsx:51
 msgid "Sales"
-msgstr ""
+msgstr "Verkoop"
 
 #: app/components/wizard-form.tsx:154
 msgid "Select which features you need custom development for"
-msgstr ""
+msgstr "Selecteer welke functies u aangepaste ontwikkeling nodig hebt"
 
 #: app/components/wizard-form.tsx:131
 msgid "Select your desired level of support"
-msgstr ""
+msgstr "Selecteer uw gewenste ondersteuningsniveau"
 
 #: app/components/wizard-form.tsx:95
 msgid "Select your preferred hosting solution"
-msgstr ""
+msgstr "Selecteer uw voorkeur voor hosting"
 
 #: app/components/wizard-form.tsx:100
 msgid "Self-Hosted"
-msgstr ""
+msgstr "Zelf gehost"
 
-#: app/routes/pricing.tsx:55
+#: app/routes/pricing.tsx:54
 msgid "Self-hosted or managed"
-msgstr ""
+msgstr "Zelf-gehost of beheerd"
 
 #: app/routes/pricing.tsx:23
 msgid "Self-onboarding"
-msgstr ""
+msgstr "Zelf onboarden"
 
 #: app/components/wizard-form.tsx:119
 msgid "Shared database with isolated data"
-msgstr ""
+msgstr "Gedeelde database met geïsoleerde gegevens"
 
 #: app/components/wizard-form.tsx:169
 msgid "Shop Floor Apps"
-msgstr ""
+msgstr "Shop Floor Apps"
 
-#: app/routes/pricing.tsx:83
+#: app/routes/pricing.tsx:82
 msgid "Simple pricing based on your needs"
-msgstr ""
+msgstr "Eenvoudige prijzen op basis van uw behoeften"
 
 #: app/routes/_index.tsx:377
 msgid "Simplified Scheduling"
-msgstr ""
+msgstr "Vereenvoudigde planning"
 
 #: app/components/wizard-form.tsx:123
 msgid "Single-Tenant"
-msgstr ""
+msgstr "Single-Tenant"
 
 #: app/components/wizard-form.tsx:87
 msgid "Software as a Service"
-msgstr ""
+msgstr "Software as a Service"
 
-#: app/root.tsx:408
+#: app/root.tsx:414
 msgid "Something went wrong"
-msgstr ""
+msgstr "Er is iets misgegaan"
 
 #: app/components/footer.tsx:62
 #: app/routes/_index.tsx:523
 msgid "Source Code"
-msgstr ""
+msgstr "Broncode"
 
-#: app/routes/pricing.tsx:60
+#: app/routes/pricing.tsx:59
 msgid "SSO/SAML"
-msgstr ""
+msgstr "SSO/SAML"
 
 #: app/routes/_index.tsx:142
-#: app/routes/pricing.tsx:167
+#: app/routes/pricing.tsx:166
 msgid "Star on GitHub"
-msgstr ""
+msgstr "Ster op GitHub"
 
 #: app/routes/pricing.tsx:15
 #: app/routes/pricing.tsx:32
 msgid "Start 30-day free trial"
-msgstr ""
+msgstr "Start 30-daagse gratis proefperiode"
 
 #: app/routes/_index.tsx:234
 #: app/routes/_index.tsx:477
 msgid "Start Learning"
-msgstr ""
+msgstr "Begin met leren"
 
 #: app/routes/_index.tsx:751
 msgid "Start your 30-day free trial today"
-msgstr ""
+msgstr "Begin vandaag uw gratis proefperiode van 30 dagen"
 
 #: app/routes/pricing.tsx:12
 msgid "Starter"
-msgstr ""
+msgstr "Starter"
 
 #: app/routes/contact.tsx:230
 msgid "Submit"
-msgstr ""
+msgstr "Verzenden"
 
 #: app/components/wizard-form.tsx:130
 msgid "Support Level"
-msgstr ""
+msgstr "Ondersteuningsniveau"
 
 #: app/components/status-indicator.tsx:59
 msgid "System Status:"
-msgstr ""
+msgstr "Systeemstatus:"
 
 #: app/routes/_index.tsx:242
 #: app/routes/_index.tsx:763
 msgid "Talk to Us"
-msgstr ""
+msgstr "Neem contact met ons op"
 
 #: app/components/footer.tsx:72
 msgid "Terms"
-msgstr ""
+msgstr "Voorwaarden"
 
 #: app/components/wizard-form.tsx:362
 msgid "Thank you for your interest!"
-msgstr ""
+msgstr "Bedankt voor je interesse!"
 
 #: app/routes/contact.tsx:153
 msgid "Thank you for your message!"
-msgstr ""
+msgstr "Bedankt voor uw bericht!"
 
 #: app/components/hero.tsx:123
 msgid "The Modern Manufacturing Stack"
-msgstr ""
+msgstr "De Moderne Productie Stack"
 
 #: app/routes/_index.tsx:116
 msgid "The open source <0>manufacturing ERP</0>"
-msgstr ""
+msgstr "De open source <0>manufacturing ERP</0>"
 
-#: app/routes/pricing.tsx:62
+#: app/routes/pricing.tsx:61
 msgid "Training"
-msgstr ""
+msgstr "Training"
 
-#: app/root.tsx:338
+#: app/root.tsx:344
 #: app/routes/_index.tsx:131
 #: app/routes/_index.tsx:756
 msgid "Try It Now"
-msgstr ""
+msgstr "Probeer het nu"
 
 #: app/routes/_index.tsx:203
 msgid "Unified quality, purchasing & production"
-msgstr ""
+msgstr "Geïntegreerde kwaliteit, inkoop en productie"
 
-#: app/routes/pricing.tsx:39
-#: app/routes/pricing.tsx:61
+#: app/routes/pricing.tsx:60
 msgid "Unlimited functional support"
-msgstr ""
+msgstr "Onbeperkte functionele ondersteuning"
 
 #: app/routes/pricing.tsx:22
 msgid "Unlimited records"
-msgstr ""
+msgstr "Onbeperkte records"
 
 #: app/routes/_index.tsx:461
 msgid "Video Library"
-msgstr ""
+msgstr "Videobibliotheek"
 
 #: app/routes/_index.tsx:508
 msgid "View Docs"
-msgstr ""
+msgstr "Docs weergeven"
 
-#: app/root.tsx:281
+#: app/root.tsx:283
 msgid "View our source code and contribute"
-msgstr ""
+msgstr "Bekijk onze broncode en draag bij"
 
 #: app/routes/_index.tsx:539
 msgid "View Source"
-msgstr ""
+msgstr "Bron weergeven"
 
-#: app/routes/pricing.tsx:155
+#: app/routes/pricing.tsx:154
 msgid "View the docs and start developing locally"
-msgstr ""
+msgstr "Bekijk de documentatie en begin lokaal met ontwikkelen"
 
 #: app/routes/oss.tsx:40
 msgid "We believe in a better and more sustainable future powered by Open Source software. Below you can find a list of our friends who are just as passionate about open source and the future as we are."
-msgstr ""
+msgstr "Wij geloven in een betere en duurzamere toekomst aangedreven door Open Source software. Hieronder vindt u een lijst van onze vrienden die net zo gepassioneerd zijn over open source en de toekomst als wij."
 
 #: app/routes/_index.tsx:695
 msgid "We open-sourced Carbon not because it's a great business plan, but because that's the system I would have wanted when I was in your shoes."
-msgstr ""
+msgstr "We hebben Carbon open-source gemaakt, niet omdat het een geweldig bedrijfsplan is, maar omdat dit het systeem is dat ik zou hebben willen hebben toen ik in jouw schoenen stond."
 
 #: app/components/wizard-form.tsx:365
 msgid "We'll be in touch with you shortly to setup a demo."
-msgstr ""
+msgstr "We zullen binnenkort contact met u opnemen om een demo in te stellen."
 
 #: app/routes/contact.tsx:156
 msgid "We'll be in touch with you shortly."
-msgstr ""
+msgstr "We zullen binnenkort contact met u opnemen."
 
 #: app/routes/_index.tsx:711
 msgid "We're glad you're here for it."
-msgstr ""
+msgstr "We zijn blij dat je erbij bent."
 
 #: app/routes/contact.tsx:215
 msgid "What can we help with?"
-msgstr ""
+msgstr "Waarmee kunnen we je helpen?"
 
 #: app/routes/_index.tsx:591
 msgid "What our customers say:"
-msgstr ""
+msgstr "Wat onze klanten zeggen:"
 
 #: app/routes/contact.tsx:179
 msgid "Work Email"
-msgstr ""
+msgstr "Werkmail"
 
-#: app/components/hero.tsx:192
+#: app/components/hero.tsx:194
 msgid "Work Instructions"
-msgstr ""
+msgstr "WerkInstructies"
 
 #: app/components/wizard-form.tsx:160
 msgid "You can handle everything yourself"
-msgstr ""
+msgstr "Je kunt alles zelf afhandelen"
 
 #: app/routes/contact.tsx:185
 msgid "you@acme.com"
-msgstr ""
+msgstr "you@acme.com"
 
 #: app/routes/contact.tsx:169
 msgid "Your name"
-msgstr ""
+msgstr "Uw naam"

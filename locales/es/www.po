@@ -18,11 +18,11 @@ msgstr ""
 msgid "/user/month"
 msgstr "/usuario/mes"
 
-#: app/routes/pricing.tsx:36
+#: app/routes/pricing.tsx:42
 msgid "5 user minimum"
 msgstr "Mínimo de 5 usuarios"
 
-#: app/routes/pricing.tsx:52
+#: app/routes/pricing.tsx:51
 msgid "A custom solution to meet your needs"
 msgstr "Una solución personalizada para satisfacer tus necesidades"
 
@@ -33,6 +33,10 @@ msgstr "Una versión de Carbon alojada en la nube administrada"
 #: app/routes/pricing.tsx:29
 msgid "A managed cloud-hosted version of Carbon that includes support and all advanced features"
 msgstr "Una versión administrada alojada en la nube de Carbon que incluye soporte y todas las funciones avanzadas"
+
+#: app/routes/pricing.tsx:39
+msgid "Accounting"
+msgstr ""
 
 #: app/routes/_index.tsx:301
 msgid "Achieve granular, end-to-end tracking of materials, components, and processes, ensuring compliance, simplifying audits, and enabling rapid root cause analysis without the complexity and cost of traditional high-end systems."
@@ -46,19 +50,11 @@ msgstr "Acme Inc"
 msgid "Acme, Inc."
 msgstr "Acme, Inc."
 
-#: app/routes/pricing.tsx:40
-msgid "Advanced audit logging"
-msgstr "Registro de auditoría avanzado"
-
 #: app/routes/_index.tsx:672
 msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
 msgstr "Después de pasar casi una década construyendo sistemas end-to-end para manufactura, tenía una idea bastante clara de cómo se vería una solución \"ideal\" desde una perspectiva técnica:"
 
-#: app/routes/pricing.tsx:42
-msgid "AI-powered workflows"
-msgstr "Flujos de trabajo impulsados por IA"
-
-#: app/routes/pricing.tsx:43
+#: app/routes/pricing.tsx:41
 msgid "All advanced features available"
 msgstr "Todas las funciones avanzadas disponibles"
 
@@ -66,11 +62,11 @@ msgstr "Todas las funciones avanzadas disponibles"
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "Todas las marcas registradas de Carbon, logotipos u otros elementos de marca nunca pueden ser modificados ni utilizados para ningún otro propósito que no sea representar a Carbon Manufacturing Systems Corporation."
 
-#: app/components/hero.tsx:244
+#: app/components/hero.tsx:246
 msgid "Analytics"
 msgstr "Análisis"
 
-#: app/components/code-examples.tsx:587
+#: app/components/code-examples.tsx:589
 msgid "API Docs"
 msgstr "Documentación de API"
 
@@ -86,7 +82,7 @@ msgstr "Arquitectura API-First"
 msgid "API-first, realtime subscriptions, simple scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
 msgstr "API-first, suscripciones en tiempo real, programación simple y 1.000 pequeños detalles para que valga la pena usar un ERP."
 
-#: app/routes/pricing.tsx:41
+#: app/routes/pricing.tsx:38
 msgid "API, webhooks, and integrations"
 msgstr "API, webhooks e integraciones"
 
@@ -94,7 +90,11 @@ msgstr "API, webhooks e integraciones"
 msgid "Assembly and make-to-order workflows"
 msgstr "Flujos de trabajo de ensamblaje y fabricación bajo pedido"
 
-#: app/components/hero.tsx:220
+#: app/routes/pricing.tsx:40
+msgid "Audit logging"
+msgstr ""
+
+#: app/components/hero.tsx:222
 msgid "Auto-generated API Documentation"
 msgstr "Documentación de API generada automáticamente"
 
@@ -114,7 +114,7 @@ msgstr "Atrás"
 msgid "Basic ERP, MES, and QMS functionality"
 msgstr "Funcionalidad básica de ERP, MES y QMS"
 
-#: app/components/hero.tsx:228
+#: app/components/hero.tsx:230
 msgid "Bill of Materials"
 msgstr "Lista de Materiales"
 
@@ -199,7 +199,7 @@ msgstr "Elige tu base de datos preferida"
 msgid "Co-founder"
 msgstr "Cofundador"
 
-#: app/components/code-examples.tsx:597
+#: app/components/code-examples.tsx:599
 msgid "Code Examples"
 msgstr "Ejemplos de código"
 
@@ -224,7 +224,7 @@ msgstr "Completar"
 msgid "Complete control over your infrastructure"
 msgstr "Control total sobre tu infraestructura"
 
-#: app/components/hero.tsx:236
+#: app/components/hero.tsx:238
 msgid "Configurator"
 msgstr "Configurador"
 
@@ -241,8 +241,8 @@ msgstr "Contacto"
 msgid "Contact Information"
 msgstr "Información de Contacto"
 
-#: app/routes/pricing.tsx:48
-#: app/routes/pricing.tsx:50
+#: app/routes/pricing.tsx:47
+#: app/routes/pricing.tsx:49
 msgid "Contact us"
 msgstr "Contáctanos"
 
@@ -254,7 +254,7 @@ msgstr "Copiar fragmento de código"
 msgid "Create a branded ordering experience that drives production"
 msgstr "Crea una experiencia de pedidos personalizada que impulsa la producción"
 
-#: app/routes/pricing.tsx:59
+#: app/routes/pricing.tsx:58
 msgid "Custom development"
 msgstr "Desarrollo personalizado"
 
@@ -262,7 +262,7 @@ msgstr "Desarrollo personalizado"
 msgid "Custom Development"
 msgstr "Desarrollo Personalizado"
 
-#: app/routes/pricing.tsx:58
+#: app/routes/pricing.tsx:57
 msgid "Custom integrations"
 msgstr "Integraciones personalizadas"
 
@@ -270,7 +270,7 @@ msgstr "Integraciones personalizadas"
 msgid "Custom integrations with your existing systems"
 msgstr "Integraciones personalizadas con tus sistemas existentes"
 
-#: app/components/hero.tsx:232
+#: app/components/hero.tsx:234
 msgid "Customer Portal"
 msgstr "Portal del Cliente"
 
@@ -294,28 +294,28 @@ msgstr "Soporte Dedicado"
 msgid "Designed for manufacturing"
 msgstr "Diseñado para manufactura"
 
-#: app/root.tsx:295
+#: app/root.tsx:297
 msgid "Developer guides and API reference"
 msgstr "Guías para desarrolladores y referencia de API"
 
-#: app/root.tsx:255
+#: app/root.tsx:257
 msgid "Developers"
 msgstr "Desarrolladores"
 
-#: app/root.tsx:265
+#: app/root.tsx:267
 msgid "Discord"
 msgstr "Discord"
 
-#: app/root.tsx:293
+#: app/root.tsx:295
 #: app/routes/_index.tsx:492
 msgid "Documentation"
 msgstr "Documentación"
 
-#: app/components/hero.tsx:212
+#: app/components/hero.tsx:214
 msgid "Documents"
 msgstr "Documentos"
 
-#: app/routes/brand.tsx:189
+#: app/routes/brand.tsx:126
 msgid "Download Logo Kit"
 msgstr "Descargar Kit de Logos"
 
@@ -331,8 +331,8 @@ msgstr "De Extremo a Extremo"
 msgid "End-to-End Traceability"
 msgstr "Trazabilidad de Extremo a Extremo"
 
-#: app/root.tsx:309
-#: app/routes/pricing.tsx:47
+#: app/root.tsx:311
+#: app/routes/pricing.tsx:46
 msgid "Enterprise"
 msgstr "Empresa"
 
@@ -340,7 +340,7 @@ msgstr "Empresa"
 msgid "Enterprise. Influence product roadmap with priority feature requests"
 msgstr "Empresa. Influye en la hoja de ruta del producto con solicitudes de funciones prioritarias"
 
-#: app/routes/pricing.tsx:37
+#: app/routes/pricing.tsx:36
 msgid "Everything from Starter"
 msgstr "Todo de Starter"
 
@@ -360,23 +360,23 @@ msgstr "Nota del fundador"
 msgid "Full Name"
 msgstr "Nombre Completo"
 
-#: app/routes/pricing.tsx:57
+#: app/routes/pricing.tsx:56
 msgid "Full setup and migrations"
 msgstr "Configuración completa y migraciones"
 
-#: app/components/hero.tsx:134
+#: app/components/hero.tsx:136
 msgid "Get Started"
 msgstr "Comenzar"
 
-#: app/routes/pricing.tsx:152
+#: app/routes/pricing.tsx:151
 msgid "Get started for free"
 msgstr "Comienza gratis"
 
-#: app/root.tsx:279
+#: app/root.tsx:281
 msgid "GitHub"
 msgstr "GitHub"
 
-#: app/components/hero.tsx:204
+#: app/components/hero.tsx:206
 msgid "Global Search"
 msgstr "Búsqueda Global"
 
@@ -392,7 +392,7 @@ msgstr "Preferencia de Alojamiento"
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "Creo que el código abierto tiene un potencial increíble porque no es solo un producto, es una comunidad de personas con ideas afines trabajando para construir el futuro de la manufactura en la era de la IA y la robótica."
 
-#: app/routes/pricing.tsx:38
+#: app/routes/pricing.tsx:37
 msgid "Implementation support"
 msgstr "Soporte de implementación"
 
@@ -408,7 +408,7 @@ msgstr "Agentes Integrados"
 msgid "Integrations"
 msgstr "Integraciones"
 
-#: app/routes/pricing.tsx:56
+#: app/routes/pricing.tsx:55
 msgid "ITAR compliant"
 msgstr "Cumplimiento ITAR"
 
@@ -420,7 +420,7 @@ msgstr "John Doe"
 msgid "john@company.com"
 msgstr "john@company.com"
 
-#: app/root.tsx:267
+#: app/root.tsx:269
 msgid "Join our community chat"
 msgstr "Únete a nuestro chat comunitario"
 
@@ -428,7 +428,7 @@ msgstr "Únete a nuestro chat comunitario"
 msgid "Join our Discord community"
 msgstr "Únete a nuestra comunidad de Discord"
 
-#: app/components/hero.tsx:216
+#: app/components/hero.tsx:218
 msgid "Kanban Schedule"
 msgstr "Programación Kanban"
 
@@ -472,15 +472,15 @@ msgstr "Pagos mensuales bajos"
 msgid "Managed Hosting"
 msgstr "Alojamiento Administrado"
 
-#: app/components/hero.tsx:200
+#: app/components/hero.tsx:202
 msgid "MES 3D Viewer"
 msgstr "Visor 3D MES"
 
-#: app/components/hero.tsx:248
+#: app/components/hero.tsx:250
 msgid "MES Details"
 msgstr "Detalles MES"
 
-#: app/components/hero.tsx:224
+#: app/components/hero.tsx:226
 msgid "MES Work Instructions"
 msgstr "Instrucciones de Trabajo MES"
 
@@ -550,8 +550,8 @@ msgid "Powerful tools to run your business"
 msgstr "Herramientas poderosas para dirigir tu negocio"
 
 #: app/components/footer.tsx:61
-#: app/root.tsx:249
-#: app/routes/pricing.tsx:79
+#: app/root.tsx:251
+#: app/routes/pricing.tsx:78
 msgid "Pricing"
 msgstr "Precios"
 
@@ -560,7 +560,7 @@ msgid "Privacy"
 msgstr "Privacidad"
 
 #: app/components/footer.tsx:56
-#: app/root.tsx:239
+#: app/root.tsx:241
 msgid "Product"
 msgstr "Producto"
 
@@ -568,15 +568,15 @@ msgstr "Producto"
 msgid "Product Configurator"
 msgstr "Configurador de Productos"
 
-#: app/components/hero.tsx:240
+#: app/components/hero.tsx:242
 msgid "Quote Pricing"
 msgstr "Precios de Cotización"
 
-#: app/components/hero.tsx:196
+#: app/components/hero.tsx:198
 msgid "Quotes Table"
 msgstr "Tabla de Cotizaciones"
 
-#: app/routes/pricing.tsx:160
+#: app/routes/pricing.tsx:159
 msgid "Read the Docs"
 msgstr "Leer la documentación"
 
@@ -584,8 +584,8 @@ msgstr "Leer la documentación"
 msgid "Recommended. Priority support with dedicated account manager"
 msgstr "Recomendado. Soporte prioritario con gestor de cuenta dedicado"
 
-#: app/components/hero.tsx:208
-#: app/components/hero.tsx:252
+#: app/components/hero.tsx:210
+#: app/components/hero.tsx:254
 msgid "Resources"
 msgstr "Recursos"
 
@@ -613,7 +613,7 @@ msgstr "Selecciona tu solución de alojamiento preferida"
 msgid "Self-Hosted"
 msgstr "Auto-hospedado"
 
-#: app/routes/pricing.tsx:55
+#: app/routes/pricing.tsx:54
 msgid "Self-hosted or managed"
 msgstr "Auto-hospedado o administrado"
 
@@ -629,7 +629,7 @@ msgstr "Base de datos compartida con datos aislados"
 msgid "Shop Floor Apps"
 msgstr "Aplicaciones de Planta de Producción"
 
-#: app/routes/pricing.tsx:83
+#: app/routes/pricing.tsx:82
 msgid "Simple pricing based on your needs"
 msgstr "Precios simples basados en tus necesidades"
 
@@ -645,7 +645,7 @@ msgstr "Single-Tenant"
 msgid "Software as a Service"
 msgstr "Software como Servicio"
 
-#: app/root.tsx:408
+#: app/root.tsx:414
 msgid "Something went wrong"
 msgstr "Algo salió mal"
 
@@ -654,12 +654,12 @@ msgstr "Algo salió mal"
 msgid "Source Code"
 msgstr "Código Fuente"
 
-#: app/routes/pricing.tsx:60
+#: app/routes/pricing.tsx:59
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
 #: app/routes/_index.tsx:142
-#: app/routes/pricing.tsx:167
+#: app/routes/pricing.tsx:166
 msgid "Star on GitHub"
 msgstr "Destacar en GitHub"
 
@@ -718,11 +718,11 @@ msgstr "La Plataforma Moderna de Manufactura"
 msgid "The open source <0>manufacturing ERP</0>"
 msgstr "El <0>ERP de fabricación</0> de código abierto"
 
-#: app/routes/pricing.tsx:62
+#: app/routes/pricing.tsx:61
 msgid "Training"
 msgstr "Capacitación"
 
-#: app/root.tsx:338
+#: app/root.tsx:344
 #: app/routes/_index.tsx:131
 #: app/routes/_index.tsx:756
 msgid "Try It Now"
@@ -732,8 +732,7 @@ msgstr "Pruébalo Ahora"
 msgid "Unified quality, purchasing & production"
 msgstr "Calidad, compras y producción unificadas"
 
-#: app/routes/pricing.tsx:39
-#: app/routes/pricing.tsx:61
+#: app/routes/pricing.tsx:60
 msgid "Unlimited functional support"
 msgstr "Soporte funcional ilimitado"
 
@@ -749,7 +748,7 @@ msgstr "Videoteca"
 msgid "View Docs"
 msgstr "Ver documentación"
 
-#: app/root.tsx:281
+#: app/root.tsx:283
 msgid "View our source code and contribute"
 msgstr "Ver nuestro código fuente y contribuir"
 
@@ -757,7 +756,7 @@ msgstr "Ver nuestro código fuente y contribuir"
 msgid "View Source"
 msgstr "Ver Código Fuente"
 
-#: app/routes/pricing.tsx:155
+#: app/routes/pricing.tsx:154
 msgid "View the docs and start developing locally"
 msgstr "Ver la documentación y comenzar a desarrollar localmente"
 
@@ -793,7 +792,7 @@ msgstr "Lo que dicen nuestros clientes:"
 msgid "Work Email"
 msgstr "Correo electrónico de trabajo"
 
-#: app/components/hero.tsx:192
+#: app/components/hero.tsx:194
 msgid "Work Instructions"
 msgstr "Instrucciones de Trabajo"
 
