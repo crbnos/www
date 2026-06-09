@@ -294,19 +294,19 @@ msgstr "Dedykowana Obsługa"
 msgid "Designed for manufacturing"
 msgstr "Zaprojektowany dla produkcji"
 
-#: app/root.tsx:297
+#: app/root.tsx:329
 msgid "Developer guides and API reference"
 msgstr "Przewodniki dla deweloperów i dokumentacja API"
 
-#: app/root.tsx:257
+#: app/root.tsx:289
 msgid "Developers"
 msgstr "Deweloperzy"
 
-#: app/root.tsx:267
+#: app/root.tsx:299
 msgid "Discord"
 msgstr "Discord"
 
-#: app/root.tsx:295
+#: app/root.tsx:327
 #: app/routes/_index.tsx:492
 msgid "Documentation"
 msgstr "Dokumentacja"
@@ -331,7 +331,7 @@ msgstr "Od końca do końca"
 msgid "End-to-End Traceability"
 msgstr "Kompleksowa identyfikowalność"
 
-#: app/root.tsx:311
+#: app/root.tsx:343
 #: app/routes/pricing.tsx:46
 msgid "Enterprise"
 msgstr "Enterprise"
@@ -372,7 +372,7 @@ msgstr "Zacznij"
 msgid "Get started for free"
 msgstr "Zacznij za darmo"
 
-#: app/root.tsx:281
+#: app/root.tsx:313
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -420,7 +420,7 @@ msgstr "John Doe"
 msgid "john@company.com"
 msgstr "john@company.com"
 
-#: app/root.tsx:269
+#: app/root.tsx:301
 msgid "Join our community chat"
 msgstr "Dołącz do naszego czatu społeczności"
 
@@ -550,7 +550,7 @@ msgid "Powerful tools to run your business"
 msgstr "Potężne narzędzia do zarządzania Twoją firmą"
 
 #: app/components/footer.tsx:61
-#: app/root.tsx:251
+#: app/root.tsx:283
 #: app/routes/pricing.tsx:78
 msgid "Pricing"
 msgstr "Cennik"
@@ -560,7 +560,7 @@ msgid "Privacy"
 msgstr "Prywatność"
 
 #: app/components/footer.tsx:56
-#: app/root.tsx:241
+#: app/root.tsx:273
 msgid "Product"
 msgstr "Produkt"
 
@@ -645,7 +645,7 @@ msgstr "Single-Tenant"
 msgid "Software as a Service"
 msgstr "Oprogramowanie jako usługa"
 
-#: app/root.tsx:414
+#: app/root.tsx:446
 msgid "Something went wrong"
 msgstr "Coś poszło nie tak"
 
@@ -722,7 +722,7 @@ msgstr "Otwartoźródłowy <0>system ERP do produkcji</0>"
 msgid "Training"
 msgstr "Szkolenie"
 
-#: app/root.tsx:344
+#: app/root.tsx:376
 #: app/routes/_index.tsx:131
 #: app/routes/_index.tsx:756
 msgid "Try It Now"
@@ -748,7 +748,7 @@ msgstr "Biblioteka wideo"
 msgid "View Docs"
 msgstr "Wyświetl dokumentację"
 
-#: app/root.tsx:283
+#: app/root.tsx:315
 msgid "View our source code and contribute"
 msgstr "Wyświetl nasz kod źródłowy i wnieś swój wkład"
 

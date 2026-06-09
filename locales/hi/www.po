@@ -294,19 +294,19 @@ msgstr "समर्पित समर्थन"
 msgid "Designed for manufacturing"
 msgstr "विनिर्माण के लिए डिज़ाइन किया गया"
 
-#: app/root.tsx:297
+#: app/root.tsx:329
 msgid "Developer guides and API reference"
 msgstr "डेवलपर गाइड और API संदर्भ"
 
-#: app/root.tsx:257
+#: app/root.tsx:289
 msgid "Developers"
 msgstr "डेवलपर्स"
 
-#: app/root.tsx:267
+#: app/root.tsx:299
 msgid "Discord"
 msgstr "Discord"
 
-#: app/root.tsx:295
+#: app/root.tsx:327
 #: app/routes/_index.tsx:492
 msgid "Documentation"
 msgstr "दस्तावेज़"
@@ -331,7 +331,7 @@ msgstr "अंत से अंत तक"
 msgid "End-to-End Traceability"
 msgstr "अंत-से-अंत ट्रेसेबिलिटी"
 
-#: app/root.tsx:311
+#: app/root.tsx:343
 #: app/routes/pricing.tsx:46
 msgid "Enterprise"
 msgstr "एंटरप्राइज़"
@@ -372,7 +372,7 @@ msgstr "शुरुआत करें"
 msgid "Get started for free"
 msgstr "मुफ्त में शुरुआत करें"
 
-#: app/root.tsx:281
+#: app/root.tsx:313
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -420,7 +420,7 @@ msgstr "जॉन डो"
 msgid "john@company.com"
 msgstr "john@company.com"
 
-#: app/root.tsx:269
+#: app/root.tsx:301
 msgid "Join our community chat"
 msgstr "हमारे कम्युनिटी चैट में शामिल हों"
 
@@ -550,7 +550,7 @@ msgid "Powerful tools to run your business"
 msgstr "अपने व्यवसाय को चलाने के लिए शक्तिशाली उपकरण"
 
 #: app/components/footer.tsx:61
-#: app/root.tsx:251
+#: app/root.tsx:283
 #: app/routes/pricing.tsx:78
 msgid "Pricing"
 msgstr "मूल्य निर्धारण"
@@ -560,7 +560,7 @@ msgid "Privacy"
 msgstr "गोपनीयता"
 
 #: app/components/footer.tsx:56
-#: app/root.tsx:241
+#: app/root.tsx:273
 msgid "Product"
 msgstr "उत्पाद"
 
@@ -645,7 +645,7 @@ msgstr "सिंगल-टेनेंट"
 msgid "Software as a Service"
 msgstr "सॉफ्टवेयर एज़ ए सर्विस"
 
-#: app/root.tsx:414
+#: app/root.tsx:446
 msgid "Something went wrong"
 msgstr "कुछ गलत हो गया"
 
@@ -722,7 +722,7 @@ msgstr "खुला स्रोत <0>विनिर्माण ERP</0>"
 msgid "Training"
 msgstr "प्रशिक्षण"
 
-#: app/root.tsx:344
+#: app/root.tsx:376
 #: app/routes/_index.tsx:131
 #: app/routes/_index.tsx:756
 msgid "Try It Now"
@@ -748,7 +748,7 @@ msgstr "वीडियो लाइब्रेरी"
 msgid "View Docs"
 msgstr "डॉक्स देखें"
 
-#: app/root.tsx:283
+#: app/root.tsx:315
 msgid "View our source code and contribute"
 msgstr "हमारे स्रोत कोड को देखें और योगदान दें"
 
