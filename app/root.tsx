@@ -56,7 +56,39 @@ import { fetchStatus } from "./utils/status";
 export const config = { runtime: "edge" };
 
 export function links() {
-	return [{ rel: "stylesheet", href: Tailwind }];
+	return [
+		{ rel: "stylesheet", href: Tailwind },
+		{
+			rel: "icon",
+			type: "image/svg+xml",
+			href: "/brand/carbon-mark-light.svg",
+			media: "(prefers-color-scheme: light)",
+		},
+		{
+			rel: "icon",
+			type: "image/svg+xml",
+			href: "/brand/carbon-mark-dark.svg",
+			media: "(prefers-color-scheme: dark)",
+		},
+		{
+			rel: "icon",
+			type: "image/png",
+			sizes: "32x32",
+			href: "/favicon-32x32.png",
+		},
+		{
+			rel: "icon",
+			type: "image/png",
+			sizes: "16x16",
+			href: "/favicon-16x16.png",
+		},
+		{
+			rel: "apple-touch-icon",
+			sizes: "180x180",
+			href: "/apple-touch-icon.png",
+		},
+		{ rel: "manifest", href: "/site.webmanifest" },
+	];
 }
 
 export async function loader({ request, params }: LoaderFunctionArgs) {

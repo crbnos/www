@@ -294,19 +294,19 @@ msgstr "Выделенная поддержка"
 msgid "Designed for manufacturing"
 msgstr "Разработано для производства"
 
-#: app/root.tsx:297
+#: app/root.tsx:329
 msgid "Developer guides and API reference"
 msgstr "Руководства разработчика и справочник API"
 
-#: app/root.tsx:257
+#: app/root.tsx:289
 msgid "Developers"
 msgstr "Разработчики"
 
-#: app/root.tsx:267
+#: app/root.tsx:299
 msgid "Discord"
 msgstr "Discord"
 
-#: app/root.tsx:295
+#: app/root.tsx:327
 #: app/routes/_index.tsx:492
 msgid "Documentation"
 msgstr "Документация"
@@ -331,7 +331,7 @@ msgstr "Сквозной"
 msgid "End-to-End Traceability"
 msgstr "Сквозная прослеживаемость"
 
-#: app/root.tsx:311
+#: app/root.tsx:343
 #: app/routes/pricing.tsx:46
 msgid "Enterprise"
 msgstr "Корпоративное решение"
@@ -372,7 +372,7 @@ msgstr "Начать"
 msgid "Get started for free"
 msgstr "Начните бесплатно"
 
-#: app/root.tsx:281
+#: app/root.tsx:313
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -420,7 +420,7 @@ msgstr "John Doe"
 msgid "john@company.com"
 msgstr "john@company.com"
 
-#: app/root.tsx:269
+#: app/root.tsx:301
 msgid "Join our community chat"
 msgstr "Присоединитесь к нашему чату сообщества"
 
@@ -550,7 +550,7 @@ msgid "Powerful tools to run your business"
 msgstr "Мощные инструменты для управления вашим бизнесом"
 
 #: app/components/footer.tsx:61
-#: app/root.tsx:251
+#: app/root.tsx:283
 #: app/routes/pricing.tsx:78
 msgid "Pricing"
 msgstr "Цены"
@@ -560,7 +560,7 @@ msgid "Privacy"
 msgstr "Конфиденциальность"
 
 #: app/components/footer.tsx:56
-#: app/root.tsx:241
+#: app/root.tsx:273
 msgid "Product"
 msgstr "Продукт"
 
@@ -645,7 +645,7 @@ msgstr "Single-Tenant"
 msgid "Software as a Service"
 msgstr "Программное обеспечение как услуга"
 
-#: app/root.tsx:414
+#: app/root.tsx:446
 msgid "Something went wrong"
 msgstr "Что-то пошло не так"
 
@@ -722,7 +722,7 @@ msgstr "Открытая система <0>производственного ER
 msgid "Training"
 msgstr "Обучение"
 
-#: app/root.tsx:344
+#: app/root.tsx:376
 #: app/routes/_index.tsx:131
 #: app/routes/_index.tsx:756
 msgid "Try It Now"
@@ -748,7 +748,7 @@ msgstr "Видеотека"
 msgid "View Docs"
 msgstr "Просмотреть документацию"
 
-#: app/root.tsx:283
+#: app/root.tsx:315
 msgid "View our source code and contribute"
 msgstr "Просмотрите наш исходный код и внесите свой вклад"
 
