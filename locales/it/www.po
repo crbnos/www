@@ -68,7 +68,7 @@ msgstr "Analitiche"
 
 #: app/routes/_index.tsx:519
 msgid "API"
-msgstr ""
+msgstr "API"
 
 #: app/components/code-examples.tsx:589
 msgid "API Docs"
@@ -181,7 +181,7 @@ msgstr "Carbon fornisce un server MCP completo e client API in molti linguaggi p
 
 #: app/routes/_index.tsx:495
 msgid "Carbon's developer documentation covers everything you need to build on the platform: connecting AI agents through the MCP server, integrating with the typed API client, and running and extending Carbon to build your own custom applications."
-msgstr ""
+msgstr "La documentazione per sviluppatori di Carbon copre tutto ciò di cui hai bisogno per costruire sulla piattaforma: connettere agenti AI attraverso il server MCP, integrare il client API tipizzato ed eseguire ed estendere Carbon per costruire le tue applicazioni personalizzate."
 
 #: app/routes/_index.tsx:547
 msgid "Carbon's source code is available on GitHub and is free to use. You can maintain your own public fork or acquire a commercial license to make your code modifications private."
@@ -312,7 +312,7 @@ msgstr "Discord"
 
 #: app/routes/_index.tsx:529
 msgid "Docs"
-msgstr ""
+msgstr "Documentazione"
 
 #: app/root.tsx:327
 #: app/routes/_index.tsx:492
@@ -478,11 +478,11 @@ msgstr "Hosting Gestito"
 
 #: app/routes/_index.tsx:509
 msgid "MCP"
-msgstr ""
+msgstr "MCP"
 
 #: app/routes/_index.tsx:324
 msgid "MCP for Anything"
-msgstr ""
+msgstr "MCP per Qualsiasi Cosa"
 
 #: app/components/hero.tsx:202
 msgid "MES 3D Viewer"
@@ -770,7 +770,7 @@ msgstr "Crediamo in un futuro migliore e più sostenibile alimentato da software
 
 #: app/routes/_index.tsx:328
 msgid "We expose our entire ERP system as an MCP server, allowing you to connect to it from any tool that supports MCP. We currently have over 1,000 tools that your LLM can use to automate your business."
-msgstr ""
+msgstr "Esponiamo l'intero sistema ERP come server MCP, permettendoti di connetterti da qualsiasi strumento che supporta MCP. Attualmente abbiamo oltre 1.000 strumenti che il tuo LLM può utilizzare per automatizzare la tua attività."
 
 #: app/routes/_index.tsx:716
 msgid "We open-sourced Carbon not because it's a great business plan, but because that's the system I would have wanted when I was in your shoes."

@@ -68,7 +68,7 @@ msgstr "Analytik"
 
 #: app/routes/_index.tsx:519
 msgid "API"
-msgstr ""
+msgstr "API"
 
 #: app/components/code-examples.tsx:589
 msgid "API Docs"
@@ -181,7 +181,7 @@ msgstr "Carbon bietet einen umfassenden MCP-Server und API-Clients in vielen bel
 
 #: app/routes/_index.tsx:495
 msgid "Carbon's developer documentation covers everything you need to build on the platform: connecting AI agents through the MCP server, integrating with the typed API client, and running and extending Carbon to build your own custom applications."
-msgstr ""
+msgstr "Carbons Entwicklerdokumentation deckt alles ab, was Sie benötigen, um auf der Plattform zu entwickeln: Verbindung von KI-Agenten über den MCP-Server, Integration mit dem typisierten API-Client und Ausführung sowie Erweiterung von Carbon zum Erstellen Ihrer eigenen benutzerdefinierten Anwendungen."
 
 #: app/routes/_index.tsx:547
 msgid "Carbon's source code is available on GitHub and is free to use. You can maintain your own public fork or acquire a commercial license to make your code modifications private."
@@ -312,7 +312,7 @@ msgstr "Discord"
 
 #: app/routes/_index.tsx:529
 msgid "Docs"
-msgstr ""
+msgstr "Dokumentation"
 
 #: app/root.tsx:327
 #: app/routes/_index.tsx:492
@@ -478,11 +478,11 @@ msgstr "Verwaltetes Hosting"
 
 #: app/routes/_index.tsx:509
 msgid "MCP"
-msgstr ""
+msgstr "MCP"
 
 #: app/routes/_index.tsx:324
 msgid "MCP for Anything"
-msgstr ""
+msgstr "MCP für alles"
 
 #: app/components/hero.tsx:202
 msgid "MES 3D Viewer"
@@ -770,7 +770,7 @@ msgstr "Wir glauben an eine bessere und nachhaltigere Zukunft, die durch Open-So
 
 #: app/routes/_index.tsx:328
 msgid "We expose our entire ERP system as an MCP server, allowing you to connect to it from any tool that supports MCP. We currently have over 1,000 tools that your LLM can use to automate your business."
-msgstr ""
+msgstr "Wir stellen unser gesamtes ERP-System als MCP-Server zur Verfügung, sodass Sie es von jedem Tool aus verbinden können, das MCP unterstützt. Wir haben derzeit über 1.000 Tools, die Ihr LLM zur Automatisierung Ihres Unternehmens nutzen kann."
 
 #: app/routes/_index.tsx:716
 msgid "We open-sourced Carbon not because it's a great business plan, but because that's the system I would have wanted when I was in your shoes."
