@@ -483,7 +483,7 @@ function Learn() {
 
 						<div
 							data-card="true"
-							className="block rounded-xl border bg-card p-4 text-card-foreground transition-colors max-lg:col-span-full flex flex-col"
+							className="block rounded-xl border bg-card p-4 text-card-foreground transition-colors max-lg:col-span-full flex flex-col lg:shadow-lg"
 						>
 							<div className="not-prose mb-2 w-fit shadow-md rounded-lg border bg-primary dark:bg-muted p-1.5 dark:text-muted-foreground text-white">
 								<Book className="size-4" />
@@ -493,9 +493,10 @@ function Learn() {
 							</h3>
 							<p className="!my-0 text-sm text-muted-foreground flex-grow">
 								<Trans>
-									Carbon's developer documentation guides you through getting
-									Carbon running locally, and extending it to build your own own
-									custom applications.
+									Carbon's developer documentation covers everything you need to
+									build on the platform: connecting AI agents through the MCP
+									server, integrating with the typed API client, and running and
+									extending Carbon to build your own custom applications.
 								</Trans>
 							</p>
 							<div className="text-sm text-muted-foreground prose-no-margin empty:hidden flex gap-2">
@@ -505,7 +506,17 @@ function Learn() {
 										target="_blank"
 										rel="noopener"
 									>
-										<Trans>MCP Docs</Trans>
+										<Trans>MCP</Trans>
+										<ExternalLink className="size-4" />
+									</a>
+								</Button>
+								<Button variant="outline" className="mt-4" asChild>
+									<a
+										href="https://app.carbon.ms/docs/api/js/intro"
+										target="_blank"
+										rel="noopener"
+									>
+										<Trans>API</Trans>
 										<ExternalLink className="size-4" />
 									</a>
 								</Button>
@@ -515,7 +526,7 @@ function Learn() {
 										target="_blank"
 										rel="noopener"
 									>
-										<Trans>Developer Docs</Trans>
+										<Trans>Docs</Trans>
 										<ExternalLink className="size-4" />
 									</a>
 								</Button>
