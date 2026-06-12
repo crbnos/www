@@ -36,7 +36,7 @@ msgstr "Zarządzana wersja Carbon hostowana w chmurze, która obejmuje wsparcie 
 
 #: app/routes/pricing.tsx:39
 msgid "Accounting"
-msgstr ""
+msgstr "Rachunkowość"
 
 #: app/routes/_index.tsx:301
 msgid "Achieve granular, end-to-end tracking of materials, components, and processes, ensuring compliance, simplifying audits, and enabling rapid root cause analysis without the complexity and cost of traditional high-end systems."
@@ -50,7 +50,7 @@ msgstr "Acme Inc"
 msgid "Acme, Inc."
 msgstr "Acme, Inc."
 
-#: app/routes/_index.tsx:672
+#: app/routes/_index.tsx:693
 msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
 msgstr "Po prawie dekadzie budowania kompleksowych systemów dla produkcji miałem całkiem dobry pomysł, jak powinna wyglądać „idealna\" solucja z technicznego punktu widzenia:"
 
@@ -66,6 +66,10 @@ msgstr "Wszystkie znaki towarowe Carbon, logotypy lub inne elementy marki nigdy 
 msgid "Analytics"
 msgstr "Analityka"
 
+#: app/routes/_index.tsx:519
+msgid "API"
+msgstr ""
+
 #: app/components/code-examples.tsx:589
 msgid "API Docs"
 msgstr "Dokumentacja API"
@@ -78,7 +82,7 @@ msgstr "API-First"
 msgid "API-First Architecture"
 msgstr "Architektura API-First"
 
-#: app/routes/_index.tsx:680
+#: app/routes/_index.tsx:701
 msgid "API-first, realtime subscriptions, simple scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
 msgstr "API-first, subskrypcje w czasie rzeczywistym, proste planowanie i 1000 małych szczegółów, które sprawiają, że korzystanie z ERP-u jest warte wysiłku."
 
@@ -92,7 +96,7 @@ msgstr "Przepływy pracy montażu i produkcji na zamówienie"
 
 #: app/routes/pricing.tsx:40
 msgid "Audit logging"
-msgstr ""
+msgstr "Rejestrowanie audytu"
 
 #: app/components/hero.tsx:222
 msgid "Auto-generated API Documentation"
@@ -127,7 +131,7 @@ msgstr "Blog"
 msgid "Brand Assets"
 msgstr "Zasoby marki"
 
-#: app/routes/_index.tsx:748
+#: app/routes/_index.tsx:769
 msgid "Build something with Carbon"
 msgstr "Zbuduj coś z Carbon"
 
@@ -143,7 +147,7 @@ msgstr "Zbudowane na najlepszym oprogramowaniu open-source"
 msgid "Business"
 msgstr "Biznes"
 
-#: app/routes/_index.tsx:686
+#: app/routes/_index.tsx:707
 msgid "But even as we work with our customers to become the best off-the-shelf ERP/MES for many types of discrete manufacturing, we are faced with the reality that there is no \"perfect\" off-the-shelf solution, because each manufacturing business is unique."
 msgstr "Ale nawet gdy pracujemy z naszymi klientami, aby stać się najlepszym gotowym rozwiązaniem ERP/MES dla wielu typów produkcji dyskretnej, stajemy przed rzeczywistością, że nie istnieje „idealne\" gotowe rozwiązanie, ponieważ każdy biznes produkcyjny jest unikalny."
 
@@ -167,7 +171,7 @@ msgstr "Carbon to system ewidencji produkcji, który łączy ERP, MES i QMS w je
 msgid "Carbon is built with an \"API-First Architecture,\" which gives you unparalleled flexibility to seamlessly connect Carbon with your other business systems. This allows you to automate workflows across all applications."
 msgstr "Carbon jest zbudowany z architekturą \"API-First\", która daje Ci niezrównaną elastyczność do bezproblemowego połączenia Carbon z Twoimi innymi systemami biznesowymi. Pozwala to na automatyzację przepływów pracy we wszystkich aplikacjach."
 
-#: app/routes/_index.tsx:667
+#: app/routes/_index.tsx:688
 msgid "Carbon Manufacturing Systems Corp."
 msgstr "Carbon Manufacturing Systems Corp."
 
@@ -176,10 +180,10 @@ msgid "Carbon provides a comprehensive MCP server and API clients in many popula
 msgstr "Carbon zapewnia kompleksowy serwer MCP i klientów API w wielu popularnych językach programowania."
 
 #: app/routes/_index.tsx:495
-msgid "Carbon's developer documentation guides you through getting Carbon running locally, and extending it to build your own own custom applications."
-msgstr "Dokumentacja dla programistów Carbon przeprowadzi Cię przez uruchomienie Carbon lokalnie i rozszerzanie go w celu budowania własnych niestandardowych aplikacji."
+msgid "Carbon's developer documentation covers everything you need to build on the platform: connecting AI agents through the MCP server, integrating with the typed API client, and running and extending Carbon to build your own custom applications."
+msgstr ""
 
-#: app/routes/_index.tsx:526
+#: app/routes/_index.tsx:547
 msgid "Carbon's source code is available on GitHub and is free to use. You can maintain your own public fork or acquire a commercial license to make your code modifications private."
 msgstr "Kod źródłowy Carbon jest dostępny na GitHub i jest bezpłatny. Możesz utrzymywać własny publiczny fork lub nabyć licencję komercyjną, aby uczynić modyfikacje kodu prywatnymi."
 
@@ -195,7 +199,7 @@ msgstr "Wybierz, jak chciałbyś posiadać rozwiązanie"
 msgid "Choose your preferred database"
 msgstr "Wybierz preferowaną bazę danych"
 
-#: app/routes/_index.tsx:732
+#: app/routes/_index.tsx:753
 msgid "Co-founder"
 msgstr "Współzałożyciel"
 
@@ -306,6 +310,10 @@ msgstr "Deweloperzy"
 msgid "Discord"
 msgstr "Discord"
 
+#: app/routes/_index.tsx:529
+msgid "Docs"
+msgstr ""
+
 #: app/root.tsx:327
 #: app/routes/_index.tsx:492
 msgid "Documentation"
@@ -352,7 +360,7 @@ msgstr "Priorytetyzacja funkcji"
 msgid "Features"
 msgstr "Funkcje"
 
-#: app/routes/_index.tsx:664
+#: app/routes/_index.tsx:685
 msgid "Founder memo"
 msgstr "Notatka założyciela"
 
@@ -388,7 +396,7 @@ msgstr "Dostępna wersja hostowana w Govcloud"
 msgid "Hosting Preference"
 msgstr "Preferencja hostingu"
 
-#: app/routes/_index.tsx:703
+#: app/routes/_index.tsx:724
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "Uważam, że oprogramowanie open-source ma niesamowity potencjał, ponieważ to nie tylko produkt – to społeczność ludzi o podobnych poglądach pracujących nad budowaniem przyszłości produkcji w erze sztucznej inteligencji i robotyki."
 
@@ -399,10 +407,6 @@ msgstr "Wsparcie wdrażania"
 #: app/components/status-indicator.tsx:8
 msgid "Incident detected"
 msgstr "Wykryto incydent"
-
-#: app/routes/_index.tsx:324
-msgid "Integrated Agents"
-msgstr "Zintegrowane Agenty"
 
 #: app/components/wizard-form.tsx:174
 msgid "Integrations"
@@ -424,7 +428,7 @@ msgstr "john@company.com"
 msgid "Join our community chat"
 msgstr "Dołącz do naszego czatu społeczności"
 
-#: app/routes/_index.tsx:779
+#: app/routes/_index.tsx:800
 msgid "Join our Discord community"
 msgstr "Dołącz do naszej społeczności Discord"
 
@@ -471,6 +475,14 @@ msgstr "Niskie miesięczne opłaty"
 #: app/components/wizard-form.tsx:105
 msgid "Managed Hosting"
 msgstr "Hosting zarządzany"
+
+#: app/routes/_index.tsx:509
+msgid "MCP"
+msgstr ""
+
+#: app/routes/_index.tsx:324
+msgid "MCP for Anything"
+msgstr ""
 
 #: app/components/hero.tsx:202
 msgid "MES 3D Viewer"
@@ -533,10 +545,6 @@ msgstr "Operacyjne"
 msgid "OSS Friends"
 msgstr "Przyjaciele OSS"
 
-#: app/routes/_index.tsx:328
-msgid "Our ever-expanding catalog of agents allow you to save time and money by automating repetitive tasks. For example, our purchasing agent can create purchase orders and get quotes from suppliers automatically."
-msgstr "Nasz stale rozwijający się katalog agentów pozwala zaoszczędzić czas i pieniądze poprzez automatyzację powtarzających się zadań. Na przykład nasz agent zakupów może automatycznie tworzyć zamówienia zakupu i uzyskiwać oferty od dostawców."
-
 #: app/components/wizard-form.tsx:76
 msgid "Ownership Model"
 msgstr "Model Własności"
@@ -589,7 +597,7 @@ msgstr "Rekomendowane. Wsparcie priorytetowe z dedykowanym menedżerem konta"
 msgid "Resources"
 msgstr "Zasoby"
 
-#: app/routes/_index.tsx:588
+#: app/routes/_index.tsx:609
 msgid "Reviews"
 msgstr "Opinie"
 
@@ -650,7 +658,7 @@ msgid "Something went wrong"
 msgstr "Coś poszło nie tak"
 
 #: app/components/footer.tsx:62
-#: app/routes/_index.tsx:523
+#: app/routes/_index.tsx:544
 msgid "Source Code"
 msgstr "Kod źródłowy"
 
@@ -673,7 +681,7 @@ msgstr "Rozpocznij 30-dniowy bezpłatny okres próbny"
 msgid "Start Learning"
 msgstr "Zacznij się uczyć"
 
-#: app/routes/_index.tsx:751
+#: app/routes/_index.tsx:772
 msgid "Start your 30-day free trial today"
 msgstr "Rozpocznij swoją 30-dniową bezpłatną wersję próbną dzisiaj"
 
@@ -694,7 +702,7 @@ msgid "System Status:"
 msgstr "Stan systemu:"
 
 #: app/routes/_index.tsx:242
-#: app/routes/_index.tsx:763
+#: app/routes/_index.tsx:784
 msgid "Talk to Us"
 msgstr "Porozmawiaj z nami"
 
@@ -724,7 +732,7 @@ msgstr "Szkolenie"
 
 #: app/root.tsx:376
 #: app/routes/_index.tsx:131
-#: app/routes/_index.tsx:756
+#: app/routes/_index.tsx:777
 msgid "Try It Now"
 msgstr "Spróbuj teraz"
 
@@ -744,15 +752,11 @@ msgstr "Nieograniczone rekordy"
 msgid "Video Library"
 msgstr "Biblioteka wideo"
 
-#: app/routes/_index.tsx:508
-msgid "View Docs"
-msgstr "Wyświetl dokumentację"
-
 #: app/root.tsx:315
 msgid "View our source code and contribute"
 msgstr "Wyświetl nasz kod źródłowy i wnieś swój wkład"
 
-#: app/routes/_index.tsx:539
+#: app/routes/_index.tsx:560
 msgid "View Source"
 msgstr "Wyświetl źródło"
 
@@ -764,7 +768,11 @@ msgstr "Wyświetl dokumentację i zacznij rozwijać lokalnie"
 msgid "We believe in a better and more sustainable future powered by Open Source software. Below you can find a list of our friends who are just as passionate about open source and the future as we are."
 msgstr "Wierzymy w lepszą i bardziej zrównoważoną przyszłość napędzaną oprogramowaniem Open Source. Poniżej możesz znaleźć listę naszych przyjaciół, którzy są równie pasjonowani open source'em i przyszłością, co my."
 
-#: app/routes/_index.tsx:695
+#: app/routes/_index.tsx:328
+msgid "We expose our entire ERP system as an MCP server, allowing you to connect to it from any tool that supports MCP. We currently have over 1,000 tools that your LLM can use to automate your business."
+msgstr ""
+
+#: app/routes/_index.tsx:716
 msgid "We open-sourced Carbon not because it's a great business plan, but because that's the system I would have wanted when I was in your shoes."
 msgstr "Udostępniliśmy Carbon jako open source nie dlatego, że to świetny plan biznesowy, ale dlatego, że to system, który chciałbym mieć, gdy byłem w Twojej sytuacji."
 
@@ -776,7 +784,7 @@ msgstr "Wkrótce się z Tobą skontaktujemy, aby umówić demo."
 msgid "We'll be in touch with you shortly."
 msgstr "Wkrótce się z Tobą skontaktujemy."
 
-#: app/routes/_index.tsx:711
+#: app/routes/_index.tsx:732
 msgid "We're glad you're here for it."
 msgstr "Cieszmy się, że tu jesteś."
 
@@ -784,7 +792,7 @@ msgstr "Cieszmy się, że tu jesteś."
 msgid "What can we help with?"
 msgstr "W czym możemy Ci pomóc?"
 
-#: app/routes/_index.tsx:591
+#: app/routes/_index.tsx:612
 msgid "What our customers say:"
 msgstr "Co mówią nasi klienci:"
 

@@ -36,7 +36,7 @@ msgstr "サポートとすべての高度な機能を含むCarbonのマネージ
 
 #: app/routes/pricing.tsx:39
 msgid "Accounting"
-msgstr ""
+msgstr "会計"
 
 #: app/routes/_index.tsx:301
 msgid "Achieve granular, end-to-end tracking of materials, components, and processes, ensuring compliance, simplifying audits, and enabling rapid root cause analysis without the complexity and cost of traditional high-end systems."
@@ -50,7 +50,7 @@ msgstr "Acme Inc"
 msgid "Acme, Inc."
 msgstr "Acme, Inc."
 
-#: app/routes/_index.tsx:672
+#: app/routes/_index.tsx:693
 msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
 msgstr "製造業向けのエンドツーエンドシステムを約10年間構築してきた後、技術的な観点から「理想的な」ソリューションがどのようなものであるかについて、かなり良い考えを持っていました。"
 
@@ -66,6 +66,10 @@ msgstr "すべてのCarbonの商標、ロゴ、またはその他のブランド
 msgid "Analytics"
 msgstr "分析"
 
+#: app/routes/_index.tsx:519
+msgid "API"
+msgstr ""
+
 #: app/components/code-examples.tsx:589
 msgid "API Docs"
 msgstr "API ドキュメント"
@@ -78,7 +82,7 @@ msgstr "API-First"
 msgid "API-First Architecture"
 msgstr "API-ファーストアーキテクチャ"
 
-#: app/routes/_index.tsx:680
+#: app/routes/_index.tsx:701
 msgid "API-first, realtime subscriptions, simple scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
 msgstr "API-first、リアルタイムサブスクリプション、シンプルなスケジューリング、そしてERP利用の価値を引き出すための1,000の細かな工夫。"
 
@@ -92,7 +96,7 @@ msgstr "組立およびメイク・トゥ・オーダーワークフロー"
 
 #: app/routes/pricing.tsx:40
 msgid "Audit logging"
-msgstr ""
+msgstr "監査ログ"
 
 #: app/components/hero.tsx:222
 msgid "Auto-generated API Documentation"
@@ -127,7 +131,7 @@ msgstr "ブログ"
 msgid "Brand Assets"
 msgstr "ブランドアセット"
 
-#: app/routes/_index.tsx:748
+#: app/routes/_index.tsx:769
 msgid "Build something with Carbon"
 msgstr "Carbonで何かを構築する"
 
@@ -143,7 +147,7 @@ msgstr "最高のオープンソースソフトウェアで構築"
 msgid "Business"
 msgstr "ビジネス"
 
-#: app/routes/_index.tsx:686
+#: app/routes/_index.tsx:707
 msgid "But even as we work with our customers to become the best off-the-shelf ERP/MES for many types of discrete manufacturing, we are faced with the reality that there is no \"perfect\" off-the-shelf solution, because each manufacturing business is unique."
 msgstr "しかし、私たちが顧客と協力して、多くの種類の個別製造向けの最高のオフザシェルフERP/MESになろうとしている一方で、各製造事業がユニークであるため、「完璧な」オフザシェルフソリューションは存在しないという現実に直面しています。"
 
@@ -167,7 +171,7 @@ msgstr "Carbonは、ERP、MES、QMSを単一の統合されたAPI-firstシステ
 msgid "Carbon is built with an \"API-First Architecture,\" which gives you unparalleled flexibility to seamlessly connect Carbon with your other business systems. This allows you to automate workflows across all applications."
 msgstr "Carbonは「API-First Architecture」で構築されており、Carbonを他のビジネスシステムとシームレスに接続する比類のない柔軟性を提供します。これにより、すべてのアプリケーション全体でワークフローを自動化できます。"
 
-#: app/routes/_index.tsx:667
+#: app/routes/_index.tsx:688
 msgid "Carbon Manufacturing Systems Corp."
 msgstr "カーボン・マニュファクチャリング・システムズ・コーポレーション"
 
@@ -176,10 +180,10 @@ msgid "Carbon provides a comprehensive MCP server and API clients in many popula
 msgstr "Carbonは、包括的なMCPサーバーと多くの一般的なプログラミング言語のAPIクライアントを提供します。"
 
 #: app/routes/_index.tsx:495
-msgid "Carbon's developer documentation guides you through getting Carbon running locally, and extending it to build your own own custom applications."
-msgstr "Carbonの開発者ドキュメントは、Carbonをローカルで実行し、独自のカスタムアプリケーションを構築するために拡張する方法をガイドします。"
+msgid "Carbon's developer documentation covers everything you need to build on the platform: connecting AI agents through the MCP server, integrating with the typed API client, and running and extending Carbon to build your own custom applications."
+msgstr ""
 
-#: app/routes/_index.tsx:526
+#: app/routes/_index.tsx:547
 msgid "Carbon's source code is available on GitHub and is free to use. You can maintain your own public fork or acquire a commercial license to make your code modifications private."
 msgstr "Carbonのソースコードはgithubで利用可能であり、自由に使用できます。独自のパブリックフォークを維持するか、商用ライセンスを取得してコード変更をプライベートにすることができます。"
 
@@ -195,7 +199,7 @@ msgstr "ソリューションをどのように所有したいかを選択して
 msgid "Choose your preferred database"
 msgstr "お好みのデータベースを選択してください"
 
-#: app/routes/_index.tsx:732
+#: app/routes/_index.tsx:753
 msgid "Co-founder"
 msgstr "共同創業者"
 
@@ -306,6 +310,10 @@ msgstr "開発者"
 msgid "Discord"
 msgstr "Discord"
 
+#: app/routes/_index.tsx:529
+msgid "Docs"
+msgstr ""
+
 #: app/root.tsx:327
 #: app/routes/_index.tsx:492
 msgid "Documentation"
@@ -352,7 +360,7 @@ msgstr "機能の優先順位付け"
 msgid "Features"
 msgstr "機能"
 
-#: app/routes/_index.tsx:664
+#: app/routes/_index.tsx:685
 msgid "Founder memo"
 msgstr "創業者メモ"
 
@@ -388,7 +396,7 @@ msgstr "Govcloud ホスト版が利用可能"
 msgid "Hosting Preference"
 msgstr "ホスティング設定"
 
-#: app/routes/_index.tsx:703
+#: app/routes/_index.tsx:724
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "オープンソースには素晴らしい可能性があると信じています。なぜなら、それは単なる製品ではなく、AIとロボット工学の時代に製造業の未来を構築するために働く、志を同じくする人々のコミュニティだからです。"
 
@@ -399,10 +407,6 @@ msgstr "実装サポート"
 #: app/components/status-indicator.tsx:8
 msgid "Incident detected"
 msgstr "インシデントが検出されました"
-
-#: app/routes/_index.tsx:324
-msgid "Integrated Agents"
-msgstr "統合エージェント"
 
 #: app/components/wizard-form.tsx:174
 msgid "Integrations"
@@ -424,7 +428,7 @@ msgstr "john@company.com"
 msgid "Join our community chat"
 msgstr "コミュニティチャットに参加"
 
-#: app/routes/_index.tsx:779
+#: app/routes/_index.tsx:800
 msgid "Join our Discord community"
 msgstr "Discordコミュニティに参加する"
 
@@ -471,6 +475,14 @@ msgstr "月額の低い支払い"
 #: app/components/wizard-form.tsx:105
 msgid "Managed Hosting"
 msgstr "マネージドホスティング"
+
+#: app/routes/_index.tsx:509
+msgid "MCP"
+msgstr ""
+
+#: app/routes/_index.tsx:324
+msgid "MCP for Anything"
+msgstr ""
 
 #: app/components/hero.tsx:202
 msgid "MES 3D Viewer"
@@ -533,10 +545,6 @@ msgstr "稼働中"
 msgid "OSS Friends"
 msgstr "OSSフレンズ"
 
-#: app/routes/_index.tsx:328
-msgid "Our ever-expanding catalog of agents allow you to save time and money by automating repetitive tasks. For example, our purchasing agent can create purchase orders and get quotes from suppliers automatically."
-msgstr "当社の絶えず拡大するエージェントカタログにより、反復的なタスクを自動化することで時間と費用を節約できます。例えば、当社の購買エージェントは自動的に発注書を作成し、サプライヤーから見積もりを取得できます。"
-
 #: app/components/wizard-form.tsx:76
 msgid "Ownership Model"
 msgstr "所有権モデル"
@@ -589,7 +597,7 @@ msgstr "推奨。専任のアカウントマネージャーによる優先サポ
 msgid "Resources"
 msgstr "リソース"
 
-#: app/routes/_index.tsx:588
+#: app/routes/_index.tsx:609
 msgid "Reviews"
 msgstr "レビュー"
 
@@ -650,7 +658,7 @@ msgid "Something went wrong"
 msgstr "何か問題が発生しました"
 
 #: app/components/footer.tsx:62
-#: app/routes/_index.tsx:523
+#: app/routes/_index.tsx:544
 msgid "Source Code"
 msgstr "ソースコード"
 
@@ -673,7 +681,7 @@ msgstr "30日間の無料トライアルを開始"
 msgid "Start Learning"
 msgstr "学習を開始"
 
-#: app/routes/_index.tsx:751
+#: app/routes/_index.tsx:772
 msgid "Start your 30-day free trial today"
 msgstr "今日から30日間の無料トライアルを開始してください"
 
@@ -694,7 +702,7 @@ msgid "System Status:"
 msgstr "システムステータス:"
 
 #: app/routes/_index.tsx:242
-#: app/routes/_index.tsx:763
+#: app/routes/_index.tsx:784
 msgid "Talk to Us"
 msgstr "お話しします"
 
@@ -724,7 +732,7 @@ msgstr "トレーニング"
 
 #: app/root.tsx:376
 #: app/routes/_index.tsx:131
-#: app/routes/_index.tsx:756
+#: app/routes/_index.tsx:777
 msgid "Try It Now"
 msgstr "今すぐ試す"
 
@@ -744,15 +752,11 @@ msgstr "無制限のレコード"
 msgid "Video Library"
 msgstr "ビデオライブラリ"
 
-#: app/routes/_index.tsx:508
-msgid "View Docs"
-msgstr "ドキュメントを表示"
-
 #: app/root.tsx:315
 msgid "View our source code and contribute"
 msgstr "ソースコードを表示して貢献する"
 
-#: app/routes/_index.tsx:539
+#: app/routes/_index.tsx:560
 msgid "View Source"
 msgstr "ソースを表示"
 
@@ -764,7 +768,11 @@ msgstr "ドキュメントを表示してローカルで開発を開始"
 msgid "We believe in a better and more sustainable future powered by Open Source software. Below you can find a list of our friends who are just as passionate about open source and the future as we are."
 msgstr "私たちは、オープンソースソフトウェアによって実現される、より良く、より持続可能な未来を信じています。以下は、オープンソースと未来に対して私たちと同じくらい情熱を持つ友人たちのリストです。"
 
-#: app/routes/_index.tsx:695
+#: app/routes/_index.tsx:328
+msgid "We expose our entire ERP system as an MCP server, allowing you to connect to it from any tool that supports MCP. We currently have over 1,000 tools that your LLM can use to automate your business."
+msgstr ""
+
+#: app/routes/_index.tsx:716
 msgid "We open-sourced Carbon not because it's a great business plan, but because that's the system I would have wanted when I was in your shoes."
 msgstr "私たちがCarbonをオープンソース化したのは、それが素晴らしいビジネスプランだからではなく、あなたの立場にいた時に欲しかったシステムだからです。"
 
@@ -776,7 +784,7 @@ msgstr "まもなくデモのセットアップについてご連絡させてい
 msgid "We'll be in touch with you shortly."
 msgstr "まもなくご連絡させていただきます。"
 
-#: app/routes/_index.tsx:711
+#: app/routes/_index.tsx:732
 msgid "We're glad you're here for it."
 msgstr "私たちはあなたがここにいてくれて嬉しいです。"
 
@@ -784,7 +792,7 @@ msgstr "私たちはあなたがここにいてくれて嬉しいです。"
 msgid "What can we help with?"
 msgstr "何かお手伝いできることはありますか？"
 
-#: app/routes/_index.tsx:591
+#: app/routes/_index.tsx:612
 msgid "What our customers say:"
 msgstr "お客様からのご意見"
 
