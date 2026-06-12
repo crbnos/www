@@ -321,15 +321,15 @@ function Features() {
 													<CheckCircle className="size-4 flex-shrink-0" />
 												</div>
 												<h4 className="text-foreground text-balance text-left font-medium tracking-tight text-base">
-													<Trans>Integrated Agents</Trans>
+													<Trans>MCP for Anything</Trans>
 												</h4>
 											</div>
 											<p className="text-muted-foreground text-balance text-left font-medium tracking-tight text-sm">
 												<Trans>
-													Our ever-expanding catalog of agents allow you to save
-													time and money by automating repetitive tasks. For
-													example, our purchasing agent can create purchase
-													orders and get quotes from suppliers automatically.
+													We expose our entire ERP system as an MCP server,
+													allowing you to connect to it from any tool that
+													supports MCP. We currently have over 1,000 tools that
+													your LLM can use to automate your business.
 												</Trans>
 											</p>
 										</div>
@@ -498,14 +498,24 @@ function Learn() {
 									custom applications.
 								</Trans>
 							</p>
-							<div className="text-sm text-muted-foreground prose-no-margin empty:hidden">
+							<div className="text-sm text-muted-foreground prose-no-margin empty:hidden flex gap-2">
+								<Button variant="outline" className="mt-4" asChild>
+									<a
+										href="https://app.carbon.ms/mcp"
+										target="_blank"
+										rel="noopener"
+									>
+										<Trans>MCP Docs</Trans>
+										<ExternalLink className="size-4" />
+									</a>
+								</Button>
 								<Button variant="outline" className="mt-4" asChild>
 									<a
 										href="https://docs.carbon.ms"
 										target="_blank"
 										rel="noopener"
 									>
-										<Trans>View Docs</Trans>
+										<Trans>Developer Docs</Trans>
 										<ExternalLink className="size-4" />
 									</a>
 								</Button>
