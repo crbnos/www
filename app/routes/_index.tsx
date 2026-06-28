@@ -1,6 +1,5 @@
 import { Trans } from "@lingui/react/macro";
 import { MeshGradient } from "@paper-design/shaders-react";
-import { AnimatePresence, motion } from "framer-motion";
 import {
 	Book,
 	Cable,
@@ -87,6 +86,30 @@ const customers = [
 		logo: "/logos/saeki.svg",
 		url: "https://saeki.ch/",
 	},
+	{
+		name: "Atomic Semi",
+		logo: "/logos/atomic-semi.png",
+		url: "https://atomicsemi.com/",
+	},
+	{
+		name: "Ren-Teq",
+		logo: "/logos/ren-teq.webp",
+		url: "https://www.ren-teq.com/",
+		// white wordmark — invert to dark on light bg, keep white in dark mode
+		tone: "light",
+	},
+	{
+		name: "Digital Metal",
+		logo: "/logos/digital-metal.svg",
+		url: "https://www.digitalmetal.io/",
+	},
+	{
+		name: "Final Frontier Manufacturing",
+		logo: "/logos/ffmfg.svg",
+		url: "https://ffmfg.com/",
+		// near-white logo — invert to dark on light bg, keep white in dark mode
+		tone: "light",
+	},
 ];
 
 function Hero() {
@@ -144,37 +167,50 @@ function Hero() {
 							</Button>
 						</div>
 
-						<div className="flex flex-col gap-4 max-w-4xl mx-auto mt-8">
-							<div className="flex flex-col gap-4 max-w-4xl mx-auto ">
+						<div className="flex flex-col gap-4 w-full max-w-4xl mx-auto mt-8">
+							<div className="flex flex-col gap-4 w-full max-w-4xl mx-auto ">
 								<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-3xl text-center font-medium tracking-tight text-base">
 									<Trans>
 										Modern manufacturers build their tech stack on Carbon
 									</Trans>
 								</p>
 							</div>
-							<div className="flex flex-col md:flex-row items-center justify-center gap-8 min-h-[125px]">
-								<AnimatePresence>
-									{customers.map((customer, index) => (
-										<motion.a
-											key={customer.name}
+							<div
+								className="group relative flex w-full items-center overflow-hidden min-h-[125px] [--marquee-gap:2rem]"
+								style={{
+									maskImage:
+										"linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
+									WebkitMaskImage:
+										"linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
+								}}
+							>
+								<div className="flex w-max shrink-0 animate-marquee items-center gap-[--marquee-gap] group-hover:[animation-play-state:paused] motion-reduce:animate-none">
+									{[...customers, ...customers].map((customer, index) => (
+										<a
+											key={`${customer.name}-${index}`}
 											href={customer.url}
 											target="_blank"
-											initial={{ opacity: 0 }}
-											animate={{ opacity: 1 }}
-											transition={{
-												duration: 0.5,
-												delay: index * 0.1,
-												ease: "easeInOut",
-											}}
+											rel="noreferrer"
+											aria-hidden={index >= customers.length}
+											tabIndex={index >= customers.length ? -1 : undefined}
+											className="shrink-0"
 										>
 											<img
 												alt={customer.name}
 												src={customer.logo}
-												className="w-28 h-auto dark:invert transition-transform duration-300 hover:scale-105"
+												className={cn(
+													"h-auto w-20 transition-transform duration-300 hover:scale-105",
+													customer.className,
+													customer.tone === "light"
+														? "invert dark:invert-0"
+														: customer.tone === "color"
+															? ""
+															: "dark:invert",
+												)}
 											/>
-										</motion.a>
+										</a>
 									))}
-								</AnimatePresence>
+								</div>
 							</div>
 						</div>
 					</div>
