@@ -275,7 +275,7 @@ msgid "Customer Portal/Website"
 msgstr "ग्राहक पोर्टल/वेबसाइट"
 
 #: app/routes/pricing.tsx:55
-msgid "Customizations, Training, and Integrations"
+msgid "Customizations, training, and integrations"
 msgstr ""
 
 #: app/components/wizard-form.tsx:112
@@ -353,7 +353,7 @@ msgid "Features"
 msgstr "विशेषताएं"
 
 #: app/routes/pricing.tsx:54
-msgid "Forward Deployed Engineer"
+msgid "Forward deployed engineer"
 msgstr ""
 
 #: app/routes/_index.tsx:721

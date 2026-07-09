@@ -275,8 +275,8 @@ msgid "Customer Portal/Website"
 msgstr "Customer Portal/Website"
 
 #: app/routes/pricing.tsx:55
-msgid "Customizations, Training, and Integrations"
-msgstr "Customizations, Training, and Integrations"
+msgid "Customizations, training, and integrations"
+msgstr "Customizations, training, and integrations"
 
 #: app/components/wizard-form.tsx:112
 msgid "Database"
@@ -353,8 +353,8 @@ msgid "Features"
 msgstr "Features"
 
 #: app/routes/pricing.tsx:54
-msgid "Forward Deployed Engineer"
-msgstr "Forward Deployed Engineer"
+msgid "Forward deployed engineer"
+msgstr "Forward deployed engineer"
 
 #: app/routes/_index.tsx:721
 msgid "Founder memo"
