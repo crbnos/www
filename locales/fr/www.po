@@ -349,7 +349,7 @@ msgid "Features"
 msgstr "Fonctionnalités"
 
 #: app/routes/pricing.tsx:54
-msgid "Forward Deployed Engineer: Custom development, training, and integrations"
+msgid "Forward Deployed Engineer: Custom Development, Training, and Integrations"
 msgstr ""
 
 #: app/routes/_index.tsx:721

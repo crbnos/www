@@ -349,8 +349,8 @@ msgid "Features"
 msgstr "Features"
 
 #: app/routes/pricing.tsx:54
-msgid "Forward Deployed Engineer: Custom development, training, and integrations"
-msgstr "Forward Deployed Engineer: Custom development, training, and integrations"
+msgid "Forward Deployed Engineer: Custom Development, Training, and Integrations"
+msgstr "Forward Deployed Engineer: Custom Development, Training, and Integrations"
 
 #: app/routes/_index.tsx:721
 msgid "Founder memo"
