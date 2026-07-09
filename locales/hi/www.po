@@ -274,6 +274,10 @@ msgstr "ग्राहक पोर्टल"
 msgid "Customer Portal/Website"
 msgstr "ग्राहक पोर्टल/वेबसाइट"
 
+#: app/routes/pricing.tsx:55
+msgid "Customizations, Training, and Integrations"
+msgstr ""
+
 #: app/components/wizard-form.tsx:112
 msgid "Database"
 msgstr "डेटाबेस"
@@ -349,7 +353,7 @@ msgid "Features"
 msgstr "विशेषताएं"
 
 #: app/routes/pricing.tsx:54
-msgid "Forward Deployed Engineer: Custom Development, Training, and Integrations"
+msgid "Forward Deployed Engineer"
 msgstr ""
 
 #: app/routes/_index.tsx:721
@@ -360,7 +364,7 @@ msgstr "संस्थापक ज्ञापन"
 msgid "Full Name"
 msgstr "पूरा नाम"
 
-#: app/routes/pricing.tsx:56
+#: app/routes/pricing.tsx:57
 msgid "Full setup and migrations"
 msgstr "पूर्ण सेटअप और माइग्रेशन"
 
@@ -368,7 +372,7 @@ msgstr "पूर्ण सेटअप और माइग्रेशन"
 msgid "Get Started"
 msgstr "शुरुआत करें"
 
-#: app/routes/pricing.tsx:148
+#: app/routes/pricing.tsx:149
 msgid "Get started for free"
 msgstr "मुफ्त में शुरुआत करें"
 
@@ -404,7 +408,7 @@ msgstr "घटना का पता चला"
 msgid "Integrations"
 msgstr "एकीकरण"
 
-#: app/routes/pricing.tsx:55
+#: app/routes/pricing.tsx:56
 msgid "ITAR compliant"
 msgstr "ITAR अनुपालन"
 
@@ -551,7 +555,7 @@ msgstr "अपने व्यवसाय को चलाने के लि�
 
 #: app/components/footer.tsx:61
 #: app/root.tsx:283
-#: app/routes/pricing.tsx:75
+#: app/routes/pricing.tsx:76
 msgid "Pricing"
 msgstr "मूल्य निर्धारण"
 
@@ -576,7 +580,7 @@ msgstr "उद्धरण मूल्य निर्धारण"
 msgid "Quotes Table"
 msgstr "उद्धरण तालिका"
 
-#: app/routes/pricing.tsx:156
+#: app/routes/pricing.tsx:157
 msgid "Read the Docs"
 msgstr "डॉक्स पढ़ें"
 
@@ -629,7 +633,7 @@ msgstr "अलग-अलग डेटा के साथ साझा डेट
 msgid "Shop Floor Apps"
 msgstr "शॉप फ्लोर ऐप्स"
 
-#: app/routes/pricing.tsx:79
+#: app/routes/pricing.tsx:80
 msgid "Simple pricing based on your needs"
 msgstr "आपकी आवश्यकताओं के आधार पर सरल मूल्य निर्धारण"
 
@@ -654,12 +658,12 @@ msgstr "कुछ गलत हो गया"
 msgid "Source Code"
 msgstr "स्रोत कोड"
 
-#: app/routes/pricing.tsx:57
+#: app/routes/pricing.tsx:58
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
 #: app/routes/_index.tsx:165
-#: app/routes/pricing.tsx:163
+#: app/routes/pricing.tsx:164
 msgid "Star on GitHub"
 msgstr "GitHub पर स्टार करें"
 
@@ -728,7 +732,7 @@ msgstr "अभी आज़माएं"
 msgid "Unified quality, purchasing & production"
 msgstr "एकीकृत गुणवत्ता, क्रय और उत्पादन"
 
-#: app/routes/pricing.tsx:58
+#: app/routes/pricing.tsx:59
 msgid "Unlimited functional support"
 msgstr "असीमित कार्यात्मक समर्थन"
 
@@ -748,7 +752,7 @@ msgstr "हमारे स्रोत कोड को देखें और 
 msgid "View Source"
 msgstr "स्रोत देखें"
 
-#: app/routes/pricing.tsx:151
+#: app/routes/pricing.tsx:152
 msgid "View the docs and start developing locally"
 msgstr "डॉक्स देखें और स्थानीय रूप से विकास शुरू करें"
 

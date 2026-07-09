@@ -274,6 +274,10 @@ msgstr "Customer Portal"
 msgid "Customer Portal/Website"
 msgstr "Customer Portal/Website"
 
+#: app/routes/pricing.tsx:55
+msgid "Customizations, Training, and Integrations"
+msgstr "Customizations, Training, and Integrations"
+
 #: app/components/wizard-form.tsx:112
 msgid "Database"
 msgstr "Database"
@@ -349,8 +353,8 @@ msgid "Features"
 msgstr "Features"
 
 #: app/routes/pricing.tsx:54
-msgid "Forward Deployed Engineer: Custom Development, Training, and Integrations"
-msgstr "Forward Deployed Engineer: Custom Development, Training, and Integrations"
+msgid "Forward Deployed Engineer"
+msgstr "Forward Deployed Engineer"
 
 #: app/routes/_index.tsx:721
 msgid "Founder memo"
@@ -360,7 +364,7 @@ msgstr "Founder memo"
 msgid "Full Name"
 msgstr "Full Name"
 
-#: app/routes/pricing.tsx:56
+#: app/routes/pricing.tsx:57
 msgid "Full setup and migrations"
 msgstr "Full setup and migrations"
 
@@ -368,7 +372,7 @@ msgstr "Full setup and migrations"
 msgid "Get Started"
 msgstr "Get Started"
 
-#: app/routes/pricing.tsx:148
+#: app/routes/pricing.tsx:149
 msgid "Get started for free"
 msgstr "Get started for free"
 
@@ -404,7 +408,7 @@ msgstr "Incident detected"
 msgid "Integrations"
 msgstr "Integrations"
 
-#: app/routes/pricing.tsx:55
+#: app/routes/pricing.tsx:56
 msgid "ITAR compliant"
 msgstr "ITAR compliant"
 
@@ -551,7 +555,7 @@ msgstr "Powerful tools to run your business"
 
 #: app/components/footer.tsx:61
 #: app/root.tsx:283
-#: app/routes/pricing.tsx:75
+#: app/routes/pricing.tsx:76
 msgid "Pricing"
 msgstr "Pricing"
 
@@ -576,7 +580,7 @@ msgstr "Quote Pricing"
 msgid "Quotes Table"
 msgstr "Quotes Table"
 
-#: app/routes/pricing.tsx:156
+#: app/routes/pricing.tsx:157
 msgid "Read the Docs"
 msgstr "Read the Docs"
 
@@ -629,7 +633,7 @@ msgstr "Shared database with isolated data"
 msgid "Shop Floor Apps"
 msgstr "Shop Floor Apps"
 
-#: app/routes/pricing.tsx:79
+#: app/routes/pricing.tsx:80
 msgid "Simple pricing based on your needs"
 msgstr "Simple pricing based on your needs"
 
@@ -654,12 +658,12 @@ msgstr "Something went wrong"
 msgid "Source Code"
 msgstr "Source Code"
 
-#: app/routes/pricing.tsx:57
+#: app/routes/pricing.tsx:58
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
 #: app/routes/_index.tsx:165
-#: app/routes/pricing.tsx:163
+#: app/routes/pricing.tsx:164
 msgid "Star on GitHub"
 msgstr "Star on GitHub"
 
@@ -728,7 +732,7 @@ msgstr "Try It Now"
 msgid "Unified quality, purchasing & production"
 msgstr "Unified quality, purchasing & production"
 
-#: app/routes/pricing.tsx:58
+#: app/routes/pricing.tsx:59
 msgid "Unlimited functional support"
 msgstr "Unlimited functional support"
 
@@ -748,7 +752,7 @@ msgstr "View our source code and contribute"
 msgid "View Source"
 msgstr "View Source"
 
-#: app/routes/pricing.tsx:151
+#: app/routes/pricing.tsx:152
 msgid "View the docs and start developing locally"
 msgstr "View the docs and start developing locally"
 

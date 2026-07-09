@@ -274,6 +274,10 @@ msgstr "顧客ポータル"
 msgid "Customer Portal/Website"
 msgstr "顧客ポータル/ウェブサイト"
 
+#: app/routes/pricing.tsx:55
+msgid "Customizations, Training, and Integrations"
+msgstr ""
+
 #: app/components/wizard-form.tsx:112
 msgid "Database"
 msgstr "データベース"
@@ -349,7 +353,7 @@ msgid "Features"
 msgstr "機能"
 
 #: app/routes/pricing.tsx:54
-msgid "Forward Deployed Engineer: Custom Development, Training, and Integrations"
+msgid "Forward Deployed Engineer"
 msgstr ""
 
 #: app/routes/_index.tsx:721
@@ -360,7 +364,7 @@ msgstr "創業者メモ"
 msgid "Full Name"
 msgstr "フルネーム"
 
-#: app/routes/pricing.tsx:56
+#: app/routes/pricing.tsx:57
 msgid "Full setup and migrations"
 msgstr "完全なセットアップと移行"
 
@@ -368,7 +372,7 @@ msgstr "完全なセットアップと移行"
 msgid "Get Started"
 msgstr "始める"
 
-#: app/routes/pricing.tsx:148
+#: app/routes/pricing.tsx:149
 msgid "Get started for free"
 msgstr "無料で始める"
 
@@ -404,7 +408,7 @@ msgstr "インシデントが検出されました"
 msgid "Integrations"
 msgstr "統合"
 
-#: app/routes/pricing.tsx:55
+#: app/routes/pricing.tsx:56
 msgid "ITAR compliant"
 msgstr "ITAR準拠"
 
@@ -551,7 +555,7 @@ msgstr "ビジネスを運営するための強力なツール"
 
 #: app/components/footer.tsx:61
 #: app/root.tsx:283
-#: app/routes/pricing.tsx:75
+#: app/routes/pricing.tsx:76
 msgid "Pricing"
 msgstr "料金"
 
@@ -576,7 +580,7 @@ msgstr "見積価格"
 msgid "Quotes Table"
 msgstr "見積表"
 
-#: app/routes/pricing.tsx:156
+#: app/routes/pricing.tsx:157
 msgid "Read the Docs"
 msgstr "ドキュメントを読む"
 
@@ -629,7 +633,7 @@ msgstr "分離されたデータを持つ共有データベース"
 msgid "Shop Floor Apps"
 msgstr "ショップフロアアプリ"
 
-#: app/routes/pricing.tsx:79
+#: app/routes/pricing.tsx:80
 msgid "Simple pricing based on your needs"
 msgstr "シンプルな料金体系があなたのニーズに合わせて"
 
@@ -654,12 +658,12 @@ msgstr "何か問題が発生しました"
 msgid "Source Code"
 msgstr "ソースコード"
 
-#: app/routes/pricing.tsx:57
+#: app/routes/pricing.tsx:58
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
 #: app/routes/_index.tsx:165
-#: app/routes/pricing.tsx:163
+#: app/routes/pricing.tsx:164
 msgid "Star on GitHub"
 msgstr "GitHubでスターを付ける"
 
@@ -728,7 +732,7 @@ msgstr "今すぐ試す"
 msgid "Unified quality, purchasing & production"
 msgstr "統一された品質、購買、生産"
 
-#: app/routes/pricing.tsx:58
+#: app/routes/pricing.tsx:59
 msgid "Unlimited functional support"
 msgstr "無制限の機能サポート"
 
@@ -748,7 +752,7 @@ msgstr "ソースコードを表示して貢献する"
 msgid "View Source"
 msgstr "ソースを表示"
 
-#: app/routes/pricing.tsx:151
+#: app/routes/pricing.tsx:152
 msgid "View the docs and start developing locally"
 msgstr "ドキュメントを表示してローカルで開発を開始"
 

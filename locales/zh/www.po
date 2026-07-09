@@ -274,6 +274,10 @@ msgstr "客户门户"
 msgid "Customer Portal/Website"
 msgstr "客户门户/网站"
 
+#: app/routes/pricing.tsx:55
+msgid "Customizations, Training, and Integrations"
+msgstr ""
+
 #: app/components/wizard-form.tsx:112
 msgid "Database"
 msgstr "数据库"
@@ -349,7 +353,7 @@ msgid "Features"
 msgstr "功能"
 
 #: app/routes/pricing.tsx:54
-msgid "Forward Deployed Engineer: Custom Development, Training, and Integrations"
+msgid "Forward Deployed Engineer"
 msgstr ""
 
 #: app/routes/_index.tsx:721
@@ -360,7 +364,7 @@ msgstr "创始人备忘录"
 msgid "Full Name"
 msgstr "全名"
 
-#: app/routes/pricing.tsx:56
+#: app/routes/pricing.tsx:57
 msgid "Full setup and migrations"
 msgstr "完整的设置和迁移"
 
@@ -368,7 +372,7 @@ msgstr "完整的设置和迁移"
 msgid "Get Started"
 msgstr "开始"
 
-#: app/routes/pricing.tsx:148
+#: app/routes/pricing.tsx:149
 msgid "Get started for free"
 msgstr "免费开始"
 
@@ -404,7 +408,7 @@ msgstr "检测到事件"
 msgid "Integrations"
 msgstr "集成"
 
-#: app/routes/pricing.tsx:55
+#: app/routes/pricing.tsx:56
 msgid "ITAR compliant"
 msgstr "符合ITAR规范"
 
@@ -551,7 +555,7 @@ msgstr "强大的工具来运营您的业务"
 
 #: app/components/footer.tsx:61
 #: app/root.tsx:283
-#: app/routes/pricing.tsx:75
+#: app/routes/pricing.tsx:76
 msgid "Pricing"
 msgstr "定价"
 
@@ -576,7 +580,7 @@ msgstr "报价定价"
 msgid "Quotes Table"
 msgstr "报价表"
 
-#: app/routes/pricing.tsx:156
+#: app/routes/pricing.tsx:157
 msgid "Read the Docs"
 msgstr "阅读文档"
 
@@ -629,7 +633,7 @@ msgstr "共享数据库，数据隔离"
 msgid "Shop Floor Apps"
 msgstr "车间应用"
 
-#: app/routes/pricing.tsx:79
+#: app/routes/pricing.tsx:80
 msgid "Simple pricing based on your needs"
 msgstr "基于您的需求的简单定价"
 
@@ -654,12 +658,12 @@ msgstr "出了问题"
 msgid "Source Code"
 msgstr "源代码"
 
-#: app/routes/pricing.tsx:57
+#: app/routes/pricing.tsx:58
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
 #: app/routes/_index.tsx:165
-#: app/routes/pricing.tsx:163
+#: app/routes/pricing.tsx:164
 msgid "Star on GitHub"
 msgstr "在 GitHub 上标星"
 
@@ -728,7 +732,7 @@ msgstr "立即尝试"
 msgid "Unified quality, purchasing & production"
 msgstr "统一的质量、采购和生产"
 
-#: app/routes/pricing.tsx:58
+#: app/routes/pricing.tsx:59
 msgid "Unlimited functional support"
 msgstr "无限功能支持"
 
@@ -748,7 +752,7 @@ msgstr "查看我们的源代码并做出贡献"
 msgid "View Source"
 msgstr "查看源代码"
 
-#: app/routes/pricing.tsx:151
+#: app/routes/pricing.tsx:152
 msgid "View the docs and start developing locally"
 msgstr "查看文档并开始本地开发"
 
