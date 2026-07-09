@@ -52,13 +52,11 @@ function usePlans() {
 			featured: false,
 			features: [
 				t`Self-hosted or managed`,
+				t`Forward Deployed Engineer: Custom development, training, and integrations`,
 				t`ITAR compliant`,
 				t`Full setup and migrations`,
-				t`Custom integrations`,
-				t`Custom development`,
 				t`SSO/SAML`,
 				t`Unlimited functional support`,
-				t`Training`,
 			],
 		},
 	];
