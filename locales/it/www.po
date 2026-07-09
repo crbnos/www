@@ -258,17 +258,9 @@ msgstr "Copia frammento di codice"
 msgid "Create a branded ordering experience that drives production"
 msgstr "Crea un'esperienza di ordinazione personalizzata che aumenta la produzione"
 
-#: app/routes/pricing.tsx:58
-msgid "Custom development"
-msgstr "Sviluppo personalizzato"
-
 #: app/components/wizard-form.tsx:153
 msgid "Custom Development"
 msgstr "Sviluppo Personalizzato"
-
-#: app/routes/pricing.tsx:57
-msgid "Custom integrations"
-msgstr "Integrazioni personalizzate"
 
 #: app/components/wizard-form.tsx:175
 msgid "Custom integrations with your existing systems"
@@ -360,6 +352,10 @@ msgstr "Prioritizzazione delle Funzionalità"
 msgid "Features"
 msgstr "Funzionalità"
 
+#: app/routes/pricing.tsx:55
+msgid "Forward Deployed Engineer: Custom development, training, and integrations"
+msgstr ""
+
 #: app/routes/_index.tsx:721
 msgid "Founder memo"
 msgstr "Nota del fondatore"
@@ -368,7 +364,7 @@ msgstr "Nota del fondatore"
 msgid "Full Name"
 msgstr "Nome Completo"
 
-#: app/routes/pricing.tsx:56
+#: app/routes/pricing.tsx:57
 msgid "Full setup and migrations"
 msgstr "Configurazione completa e migrazioni"
 
@@ -376,7 +372,7 @@ msgstr "Configurazione completa e migrazioni"
 msgid "Get Started"
 msgstr "Inizia"
 
-#: app/routes/pricing.tsx:151
+#: app/routes/pricing.tsx:149
 msgid "Get started for free"
 msgstr "Inizia gratuitamente"
 
@@ -412,7 +408,7 @@ msgstr "Incidente rilevato"
 msgid "Integrations"
 msgstr "Integrazioni"
 
-#: app/routes/pricing.tsx:55
+#: app/routes/pricing.tsx:56
 msgid "ITAR compliant"
 msgstr "Conforme a ITAR"
 
@@ -559,7 +555,7 @@ msgstr "Strumenti potenti per gestire la tua azienda"
 
 #: app/components/footer.tsx:61
 #: app/root.tsx:283
-#: app/routes/pricing.tsx:78
+#: app/routes/pricing.tsx:76
 msgid "Pricing"
 msgstr "Prezzi"
 
@@ -584,7 +580,7 @@ msgstr "Prezzi Preventivi"
 msgid "Quotes Table"
 msgstr "Tabella Preventivi"
 
-#: app/routes/pricing.tsx:159
+#: app/routes/pricing.tsx:157
 msgid "Read the Docs"
 msgstr "Leggi la documentazione"
 
@@ -637,7 +633,7 @@ msgstr "Database condiviso con dati isolati"
 msgid "Shop Floor Apps"
 msgstr "App per il Reparto di Produzione"
 
-#: app/routes/pricing.tsx:82
+#: app/routes/pricing.tsx:80
 msgid "Simple pricing based on your needs"
 msgstr "Prezzi semplici in base alle tue esigenze"
 
@@ -662,12 +658,12 @@ msgstr "Qualcosa è andato storto"
 msgid "Source Code"
 msgstr "Codice Sorgente"
 
-#: app/routes/pricing.tsx:59
+#: app/routes/pricing.tsx:58
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
 #: app/routes/_index.tsx:165
-#: app/routes/pricing.tsx:166
+#: app/routes/pricing.tsx:164
 msgid "Star on GitHub"
 msgstr "Stella su GitHub"
 
@@ -726,10 +722,6 @@ msgstr "Lo Stack Moderno di Produzione"
 msgid "The open source <0>manufacturing ERP</0>"
 msgstr "L'ERP di produzione <0>open source</0>"
 
-#: app/routes/pricing.tsx:61
-msgid "Training"
-msgstr "Formazione"
-
 #: app/root.tsx:376
 #: app/routes/_index.tsx:154
 #: app/routes/_index.tsx:813
@@ -740,7 +732,7 @@ msgstr "Provalo Ora"
 msgid "Unified quality, purchasing & production"
 msgstr "Qualità, acquisti e produzione unificati"
 
-#: app/routes/pricing.tsx:60
+#: app/routes/pricing.tsx:59
 msgid "Unlimited functional support"
 msgstr "Supporto funzionale illimitato"
 
@@ -760,7 +752,7 @@ msgstr "Visualizza il nostro codice sorgente e contribuisci"
 msgid "View Source"
 msgstr "Visualizza Fonte"
 
-#: app/routes/pricing.tsx:154
+#: app/routes/pricing.tsx:152
 msgid "View the docs and start developing locally"
 msgstr "Visualizza la documentazione e inizia a sviluppare localmente"
 
