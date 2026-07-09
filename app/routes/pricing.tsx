@@ -120,9 +120,9 @@ export default function Pricing() {
 								{plan.features?.map((feature) => (
 									<li
 										key={feature}
-										className="flex items-center gap-4 text-base font-normal leading-[110%]"
+										className="flex items-start gap-4 text-base font-normal leading-[110%]"
 									>
-										<Check className="size-5 shrink-0 p-[3px]" />
+										<Check className="size-5 shrink-0 p-[3px] mt-0.5" />
 										<span className="flex">{feature}</span>
 									</li>
 								))}
