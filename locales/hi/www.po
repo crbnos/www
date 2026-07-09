@@ -18,11 +18,11 @@ msgstr ""
 msgid "/user/month"
 msgstr "/उपयोगकर्ता/माह"
 
-#: app/routes/pricing.tsx:42
+#: app/routes/pricing.tsx:41
 msgid "5 user minimum"
 msgstr "5 उपयोगकर्ता न्यूनतम"
 
-#: app/routes/pricing.tsx:51
+#: app/routes/pricing.tsx:50
 msgid "A custom solution to meet your needs"
 msgstr "आपकी आवश्यकताओं को पूरा करने के लिए एक कस्टम समाधान"
 
@@ -34,7 +34,7 @@ msgstr "Carbon का एक प्रबंधित क्लाउड-हो�
 msgid "A managed cloud-hosted version of Carbon that includes support and all advanced features"
 msgstr "कार्बन का एक प्रबंधित क्लाउड-होस्टेड संस्करण जिसमें समर्थन और सभी उन्नत सुविधाएं शामिल हैं"
 
-#: app/routes/pricing.tsx:39
+#: app/routes/pricing.tsx:38
 msgid "Accounting"
 msgstr "लेखांकन"
 
@@ -54,7 +54,7 @@ msgstr "Acme, Inc."
 msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
 msgstr "लगभग एक दशक तक विनिर्माण के लिए एंड-टू-एंड सिस्टम बनाने के बाद, मुझे तकनीकी दृष्टिकोण से एक \"आदर्श\" समाधान कैसा दिखता है, इसका काफी अच्छा विचार था:"
 
-#: app/routes/pricing.tsx:41
+#: app/routes/pricing.tsx:40
 msgid "All advanced features available"
 msgstr "सभी उन्नत सुविधाएं उपलब्ध हैं"
 
@@ -86,7 +86,7 @@ msgstr "API-प्रथम आर्किटेक्चर"
 msgid "API-first, realtime subscriptions, simple scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
 msgstr "API-first, रीयल-टाइम सदस्यताएं, सरल शेड्यूलिंग, और 1,000 छोटे विवरण जो ERP का उपयोग करने को सार्थक बनाते हैं।"
 
-#: app/routes/pricing.tsx:38
+#: app/routes/pricing.tsx:37
 msgid "API, webhooks, and integrations"
 msgstr "API, वेबहुक, और इंटीग्रेशन"
 
@@ -94,7 +94,7 @@ msgstr "API, वेबहुक, और इंटीग्रेशन"
 msgid "Assembly and make-to-order workflows"
 msgstr "असेंबली और मेक-टू-ऑर्डर वर्कफ़्लो"
 
-#: app/routes/pricing.tsx:40
+#: app/routes/pricing.tsx:39
 msgid "Audit logging"
 msgstr "ऑडिट लॉगिंग"
 
@@ -245,8 +245,8 @@ msgstr "संपर्क"
 msgid "Contact Information"
 msgstr "संपर्क जानकारी"
 
-#: app/routes/pricing.tsx:47
-#: app/routes/pricing.tsx:49
+#: app/routes/pricing.tsx:46
+#: app/routes/pricing.tsx:48
 msgid "Contact us"
 msgstr "हमसे संपर्क करें"
 
@@ -258,17 +258,9 @@ msgstr "कोड स्निपेट कॉपी करें"
 msgid "Create a branded ordering experience that drives production"
 msgstr "एक ब्रांडेड ऑर्डरिंग अनुभव बनाएं जो उत्पादन को बढ़ाता है"
 
-#: app/routes/pricing.tsx:58
-msgid "Custom development"
-msgstr "कस्टम विकास"
-
 #: app/components/wizard-form.tsx:153
 msgid "Custom Development"
 msgstr "कस्टम विकास"
-
-#: app/routes/pricing.tsx:57
-msgid "Custom integrations"
-msgstr "कस्टम इंटीग्रेशन"
 
 #: app/components/wizard-form.tsx:175
 msgid "Custom integrations with your existing systems"
@@ -281,6 +273,10 @@ msgstr "ग्राहक पोर्टल"
 #: app/components/wizard-form.tsx:164
 msgid "Customer Portal/Website"
 msgstr "ग्राहक पोर्टल/वेबसाइट"
+
+#: app/routes/pricing.tsx:55
+msgid "Customizations, training, and integrations"
+msgstr ""
 
 #: app/components/wizard-form.tsx:112
 msgid "Database"
@@ -340,17 +336,13 @@ msgid "End-to-End Traceability"
 msgstr "अंत-से-अंत ट्रेसेबिलिटी"
 
 #: app/root.tsx:343
-#: app/routes/pricing.tsx:46
+#: app/routes/pricing.tsx:45
 msgid "Enterprise"
 msgstr "एंटरप्राइज़"
 
 #: app/components/wizard-form.tsx:147
 msgid "Enterprise. Influence product roadmap with priority feature requests"
 msgstr "Enterprise. उत्पाद रोडमैप को प्राथमिकता वाले फीचर अनुरोधों के साथ प्रभावित करें"
-
-#: app/routes/pricing.tsx:36
-msgid "Everything from Starter"
-msgstr "Starter से सभी कुछ"
 
 #: app/components/wizard-form.tsx:146
 msgid "Feature Prioritization"
@@ -360,6 +352,10 @@ msgstr "फीचर प्राथमिकता"
 msgid "Features"
 msgstr "विशेषताएं"
 
+#: app/routes/pricing.tsx:54
+msgid "Forward deployed engineer"
+msgstr ""
+
 #: app/routes/_index.tsx:721
 msgid "Founder memo"
 msgstr "संस्थापक ज्ञापन"
@@ -368,7 +364,7 @@ msgstr "संस्थापक ज्ञापन"
 msgid "Full Name"
 msgstr "पूरा नाम"
 
-#: app/routes/pricing.tsx:56
+#: app/routes/pricing.tsx:57
 msgid "Full setup and migrations"
 msgstr "पूर्ण सेटअप और माइग्रेशन"
 
@@ -376,7 +372,7 @@ msgstr "पूर्ण सेटअप और माइग्रेशन"
 msgid "Get Started"
 msgstr "शुरुआत करें"
 
-#: app/routes/pricing.tsx:151
+#: app/routes/pricing.tsx:149
 msgid "Get started for free"
 msgstr "मुफ्त में शुरुआत करें"
 
@@ -400,7 +396,7 @@ msgstr "होस्टिंग प्राथमिकता"
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "मुझे विश्वास है कि ओपन-सोर्स में अविश्वसनीय संभावना है क्योंकि यह केवल एक उत्पाद नहीं है–यह समान विचारधारा वाले लोगों का एक समुदाय है जो AI और रोबोटिक्स के युग में विनिर्माण का भविष्य बनाने के लिए काम कर रहे हैं।"
 
-#: app/routes/pricing.tsx:37
+#: app/routes/pricing.tsx:36
 msgid "Implementation support"
 msgstr "कार्यान्वयन समर्थन"
 
@@ -412,7 +408,7 @@ msgstr "घटना का पता चला"
 msgid "Integrations"
 msgstr "एकीकरण"
 
-#: app/routes/pricing.tsx:55
+#: app/routes/pricing.tsx:56
 msgid "ITAR compliant"
 msgstr "ITAR अनुपालन"
 
@@ -559,7 +555,7 @@ msgstr "अपने व्यवसाय को चलाने के लि�
 
 #: app/components/footer.tsx:61
 #: app/root.tsx:283
-#: app/routes/pricing.tsx:78
+#: app/routes/pricing.tsx:76
 msgid "Pricing"
 msgstr "मूल्य निर्धारण"
 
@@ -584,7 +580,7 @@ msgstr "उद्धरण मूल्य निर्धारण"
 msgid "Quotes Table"
 msgstr "उद्धरण तालिका"
 
-#: app/routes/pricing.tsx:159
+#: app/routes/pricing.tsx:157
 msgid "Read the Docs"
 msgstr "डॉक्स पढ़ें"
 
@@ -621,7 +617,7 @@ msgstr "अपनी पसंदीदा होस्टिंग समाध
 msgid "Self-Hosted"
 msgstr "स्व-होस्टेड"
 
-#: app/routes/pricing.tsx:54
+#: app/routes/pricing.tsx:53
 msgid "Self-hosted or managed"
 msgstr "स्व-होस्टेड या प्रबंधित"
 
@@ -637,7 +633,7 @@ msgstr "अलग-अलग डेटा के साथ साझा डेट
 msgid "Shop Floor Apps"
 msgstr "शॉप फ्लोर ऐप्स"
 
-#: app/routes/pricing.tsx:82
+#: app/routes/pricing.tsx:80
 msgid "Simple pricing based on your needs"
 msgstr "आपकी आवश्यकताओं के आधार पर सरल मूल्य निर्धारण"
 
@@ -662,12 +658,12 @@ msgstr "कुछ गलत हो गया"
 msgid "Source Code"
 msgstr "स्रोत कोड"
 
-#: app/routes/pricing.tsx:59
+#: app/routes/pricing.tsx:58
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
 #: app/routes/_index.tsx:165
-#: app/routes/pricing.tsx:166
+#: app/routes/pricing.tsx:164
 msgid "Star on GitHub"
 msgstr "GitHub पर स्टार करें"
 
@@ -726,10 +722,6 @@ msgstr "आधुनिक विनिर्माण स्टैक"
 msgid "The open source <0>manufacturing ERP</0>"
 msgstr "खुला स्रोत <0>विनिर्माण ERP</0>"
 
-#: app/routes/pricing.tsx:61
-msgid "Training"
-msgstr "प्रशिक्षण"
-
 #: app/root.tsx:376
 #: app/routes/_index.tsx:154
 #: app/routes/_index.tsx:813
@@ -740,7 +732,7 @@ msgstr "अभी आज़माएं"
 msgid "Unified quality, purchasing & production"
 msgstr "एकीकृत गुणवत्ता, क्रय और उत्पादन"
 
-#: app/routes/pricing.tsx:60
+#: app/routes/pricing.tsx:59
 msgid "Unlimited functional support"
 msgstr "असीमित कार्यात्मक समर्थन"
 
@@ -760,7 +752,7 @@ msgstr "हमारे स्रोत कोड को देखें और 
 msgid "View Source"
 msgstr "स्रोत देखें"
 
-#: app/routes/pricing.tsx:154
+#: app/routes/pricing.tsx:152
 msgid "View the docs and start developing locally"
 msgstr "डॉक्स देखें और स्थानीय रूप से विकास शुरू करें"
 

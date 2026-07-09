@@ -32,8 +32,7 @@ function usePlans() {
 			action: t`Start 30-day free trial`,
 			url: "https://app.carbon.ms",
 			featured: true,
-			features: [
-				t`Everything from Starter`,
+				features: [
 				t`Implementation support`,
 				t`API, webhooks, and integrations`,
 				t`Accounting`,
@@ -52,13 +51,12 @@ function usePlans() {
 			featured: false,
 			features: [
 				t`Self-hosted or managed`,
+				t`Forward deployed engineer`,
+				t`Customizations, training, and integrations`,
 				t`ITAR compliant`,
 				t`Full setup and migrations`,
-				t`Custom integrations`,
-				t`Custom development`,
 				t`SSO/SAML`,
 				t`Unlimited functional support`,
-				t`Training`,
 			],
 		},
 	];
@@ -122,9 +120,9 @@ export default function Pricing() {
 								{plan.features?.map((feature) => (
 									<li
 										key={feature}
-										className="flex items-center gap-4 text-base font-normal leading-[110%]"
+										className="flex items-start gap-4 text-base font-normal leading-[110%]"
 									>
-										<Check className="size-5 shrink-0 p-[3px]" />
+										<Check className="size-5 shrink-0 p-[3px] mt-0.5" />
 										<span className="flex">{feature}</span>
 									</li>
 								))}

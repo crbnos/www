@@ -18,11 +18,11 @@ msgstr ""
 msgid "/user/month"
 msgstr "/user/month"
 
-#: app/routes/pricing.tsx:42
+#: app/routes/pricing.tsx:41
 msgid "5 user minimum"
 msgstr "5 user minimum"
 
-#: app/routes/pricing.tsx:51
+#: app/routes/pricing.tsx:50
 msgid "A custom solution to meet your needs"
 msgstr "A custom solution to meet your needs"
 
@@ -34,7 +34,7 @@ msgstr "A managed cloud-hosted version of Carbon"
 msgid "A managed cloud-hosted version of Carbon that includes support and all advanced features"
 msgstr "A managed cloud-hosted version of Carbon that includes support and all advanced features"
 
-#: app/routes/pricing.tsx:39
+#: app/routes/pricing.tsx:38
 msgid "Accounting"
 msgstr "Accounting"
 
@@ -54,7 +54,7 @@ msgstr "Acme, Inc."
 msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
 msgstr "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
 
-#: app/routes/pricing.tsx:41
+#: app/routes/pricing.tsx:40
 msgid "All advanced features available"
 msgstr "All advanced features available"
 
@@ -86,7 +86,7 @@ msgstr "API-First Architecture"
 msgid "API-first, realtime subscriptions, simple scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
 msgstr "API-first, realtime subscriptions, simple scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
 
-#: app/routes/pricing.tsx:38
+#: app/routes/pricing.tsx:37
 msgid "API, webhooks, and integrations"
 msgstr "API, webhooks, and integrations"
 
@@ -94,7 +94,7 @@ msgstr "API, webhooks, and integrations"
 msgid "Assembly and make-to-order workflows"
 msgstr "Assembly and make-to-order workflows"
 
-#: app/routes/pricing.tsx:40
+#: app/routes/pricing.tsx:39
 msgid "Audit logging"
 msgstr "Audit logging"
 
@@ -245,8 +245,8 @@ msgstr "Contact"
 msgid "Contact Information"
 msgstr "Contact Information"
 
-#: app/routes/pricing.tsx:47
-#: app/routes/pricing.tsx:49
+#: app/routes/pricing.tsx:46
+#: app/routes/pricing.tsx:48
 msgid "Contact us"
 msgstr "Contact us"
 
@@ -258,17 +258,9 @@ msgstr "Copy code snippet"
 msgid "Create a branded ordering experience that drives production"
 msgstr "Create a branded ordering experience that drives production"
 
-#: app/routes/pricing.tsx:58
-msgid "Custom development"
-msgstr "Custom development"
-
 #: app/components/wizard-form.tsx:153
 msgid "Custom Development"
 msgstr "Custom Development"
-
-#: app/routes/pricing.tsx:57
-msgid "Custom integrations"
-msgstr "Custom integrations"
 
 #: app/components/wizard-form.tsx:175
 msgid "Custom integrations with your existing systems"
@@ -281,6 +273,10 @@ msgstr "Customer Portal"
 #: app/components/wizard-form.tsx:164
 msgid "Customer Portal/Website"
 msgstr "Customer Portal/Website"
+
+#: app/routes/pricing.tsx:55
+msgid "Customizations, training, and integrations"
+msgstr "Customizations, training, and integrations"
 
 #: app/components/wizard-form.tsx:112
 msgid "Database"
@@ -340,17 +336,13 @@ msgid "End-to-End Traceability"
 msgstr "End-to-End Traceability"
 
 #: app/root.tsx:343
-#: app/routes/pricing.tsx:46
+#: app/routes/pricing.tsx:45
 msgid "Enterprise"
 msgstr "Enterprise"
 
 #: app/components/wizard-form.tsx:147
 msgid "Enterprise. Influence product roadmap with priority feature requests"
 msgstr "Enterprise. Influence product roadmap with priority feature requests"
-
-#: app/routes/pricing.tsx:36
-msgid "Everything from Starter"
-msgstr "Everything from Starter"
 
 #: app/components/wizard-form.tsx:146
 msgid "Feature Prioritization"
@@ -360,6 +352,10 @@ msgstr "Feature Prioritization"
 msgid "Features"
 msgstr "Features"
 
+#: app/routes/pricing.tsx:54
+msgid "Forward deployed engineer"
+msgstr "Forward deployed engineer"
+
 #: app/routes/_index.tsx:721
 msgid "Founder memo"
 msgstr "Founder memo"
@@ -368,7 +364,7 @@ msgstr "Founder memo"
 msgid "Full Name"
 msgstr "Full Name"
 
-#: app/routes/pricing.tsx:56
+#: app/routes/pricing.tsx:57
 msgid "Full setup and migrations"
 msgstr "Full setup and migrations"
 
@@ -376,7 +372,7 @@ msgstr "Full setup and migrations"
 msgid "Get Started"
 msgstr "Get Started"
 
-#: app/routes/pricing.tsx:151
+#: app/routes/pricing.tsx:149
 msgid "Get started for free"
 msgstr "Get started for free"
 
@@ -400,7 +396,7 @@ msgstr "Hosting Preference"
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 
-#: app/routes/pricing.tsx:37
+#: app/routes/pricing.tsx:36
 msgid "Implementation support"
 msgstr "Implementation support"
 
@@ -412,7 +408,7 @@ msgstr "Incident detected"
 msgid "Integrations"
 msgstr "Integrations"
 
-#: app/routes/pricing.tsx:55
+#: app/routes/pricing.tsx:56
 msgid "ITAR compliant"
 msgstr "ITAR compliant"
 
@@ -559,7 +555,7 @@ msgstr "Powerful tools to run your business"
 
 #: app/components/footer.tsx:61
 #: app/root.tsx:283
-#: app/routes/pricing.tsx:78
+#: app/routes/pricing.tsx:76
 msgid "Pricing"
 msgstr "Pricing"
 
@@ -584,7 +580,7 @@ msgstr "Quote Pricing"
 msgid "Quotes Table"
 msgstr "Quotes Table"
 
-#: app/routes/pricing.tsx:159
+#: app/routes/pricing.tsx:157
 msgid "Read the Docs"
 msgstr "Read the Docs"
 
@@ -621,7 +617,7 @@ msgstr "Select your preferred hosting solution"
 msgid "Self-Hosted"
 msgstr "Self-Hosted"
 
-#: app/routes/pricing.tsx:54
+#: app/routes/pricing.tsx:53
 msgid "Self-hosted or managed"
 msgstr "Self-hosted or managed"
 
@@ -637,7 +633,7 @@ msgstr "Shared database with isolated data"
 msgid "Shop Floor Apps"
 msgstr "Shop Floor Apps"
 
-#: app/routes/pricing.tsx:82
+#: app/routes/pricing.tsx:80
 msgid "Simple pricing based on your needs"
 msgstr "Simple pricing based on your needs"
 
@@ -662,12 +658,12 @@ msgstr "Something went wrong"
 msgid "Source Code"
 msgstr "Source Code"
 
-#: app/routes/pricing.tsx:59
+#: app/routes/pricing.tsx:58
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
 #: app/routes/_index.tsx:165
-#: app/routes/pricing.tsx:166
+#: app/routes/pricing.tsx:164
 msgid "Star on GitHub"
 msgstr "Star on GitHub"
 
@@ -726,10 +722,6 @@ msgstr "The Modern Manufacturing Stack"
 msgid "The open source <0>manufacturing ERP</0>"
 msgstr "The open source <0>manufacturing ERP</0>"
 
-#: app/routes/pricing.tsx:61
-msgid "Training"
-msgstr "Training"
-
 #: app/root.tsx:376
 #: app/routes/_index.tsx:154
 #: app/routes/_index.tsx:813
@@ -740,7 +732,7 @@ msgstr "Try It Now"
 msgid "Unified quality, purchasing & production"
 msgstr "Unified quality, purchasing & production"
 
-#: app/routes/pricing.tsx:60
+#: app/routes/pricing.tsx:59
 msgid "Unlimited functional support"
 msgstr "Unlimited functional support"
 
@@ -760,7 +752,7 @@ msgstr "View our source code and contribute"
 msgid "View Source"
 msgstr "View Source"
 
-#: app/routes/pricing.tsx:154
+#: app/routes/pricing.tsx:152
 msgid "View the docs and start developing locally"
 msgstr "View the docs and start developing locally"
 
