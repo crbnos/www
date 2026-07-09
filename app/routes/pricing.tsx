@@ -32,8 +32,7 @@ function usePlans() {
 			action: t`Start 30-day free trial`,
 			url: "https://app.carbon.ms",
 			featured: true,
-			features: [
-				t`Everything from Starter`,
+				features: [
 				t`Implementation support`,
 				t`API, webhooks, and integrations`,
 				t`Accounting`,

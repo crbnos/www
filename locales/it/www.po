@@ -18,11 +18,11 @@ msgstr ""
 msgid "/user/month"
 msgstr "/utente/mese"
 
-#: app/routes/pricing.tsx:42
+#: app/routes/pricing.tsx:41
 msgid "5 user minimum"
 msgstr "Minimo 5 utenti"
 
-#: app/routes/pricing.tsx:51
+#: app/routes/pricing.tsx:50
 msgid "A custom solution to meet your needs"
 msgstr "Una soluzione personalizzata per soddisfare le tue esigenze"
 
@@ -34,7 +34,7 @@ msgstr "Una versione gestita e ospitata nel cloud di Carbon"
 msgid "A managed cloud-hosted version of Carbon that includes support and all advanced features"
 msgstr "Una versione gestita in cloud di Carbon che include supporto e tutte le funzionalità avanzate"
 
-#: app/routes/pricing.tsx:39
+#: app/routes/pricing.tsx:38
 msgid "Accounting"
 msgstr "Contabilità"
 
@@ -54,7 +54,7 @@ msgstr "Acme, Inc."
 msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
 msgstr "Dopo aver trascorso quasi un decennio a costruire sistemi end-to-end per la produzione, avevo una buona idea di come dovrebbe apparire una soluzione \"ideale\" da una prospettiva tecnica:"
 
-#: app/routes/pricing.tsx:41
+#: app/routes/pricing.tsx:40
 msgid "All advanced features available"
 msgstr "Tutte le funzionalità avanzate disponibili"
 
@@ -86,7 +86,7 @@ msgstr "Architettura API-First"
 msgid "API-first, realtime subscriptions, simple scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
 msgstr "API-first, sottoscrizioni in tempo reale, pianificazione semplice e 1.000 piccoli dettagli per rendere l'utilizzo di un ERP veramente utile."
 
-#: app/routes/pricing.tsx:38
+#: app/routes/pricing.tsx:37
 msgid "API, webhooks, and integrations"
 msgstr "API, webhook e integrazioni"
 
@@ -94,7 +94,7 @@ msgstr "API, webhook e integrazioni"
 msgid "Assembly and make-to-order workflows"
 msgstr "Flussi di lavoro per assemblaggio e produzione su ordinazione"
 
-#: app/routes/pricing.tsx:40
+#: app/routes/pricing.tsx:39
 msgid "Audit logging"
 msgstr "Registrazione di audit"
 
@@ -245,8 +245,8 @@ msgstr "Contatti"
 msgid "Contact Information"
 msgstr "Informazioni di Contatto"
 
-#: app/routes/pricing.tsx:47
-#: app/routes/pricing.tsx:49
+#: app/routes/pricing.tsx:46
+#: app/routes/pricing.tsx:48
 msgid "Contact us"
 msgstr "Contattaci"
 
@@ -332,17 +332,13 @@ msgid "End-to-End Traceability"
 msgstr "Tracciabilità End-to-End"
 
 #: app/root.tsx:343
-#: app/routes/pricing.tsx:46
+#: app/routes/pricing.tsx:45
 msgid "Enterprise"
 msgstr "Azienda"
 
 #: app/components/wizard-form.tsx:147
 msgid "Enterprise. Influence product roadmap with priority feature requests"
 msgstr "Enterprise. Influenza la roadmap del prodotto con richieste di funzionalità prioritarie"
-
-#: app/routes/pricing.tsx:36
-msgid "Everything from Starter"
-msgstr "Tutto da Starter"
 
 #: app/components/wizard-form.tsx:146
 msgid "Feature Prioritization"
@@ -352,7 +348,7 @@ msgstr "Prioritizzazione delle Funzionalità"
 msgid "Features"
 msgstr "Funzionalità"
 
-#: app/routes/pricing.tsx:55
+#: app/routes/pricing.tsx:54
 msgid "Forward Deployed Engineer: Custom development, training, and integrations"
 msgstr ""
 
@@ -364,7 +360,7 @@ msgstr "Nota del fondatore"
 msgid "Full Name"
 msgstr "Nome Completo"
 
-#: app/routes/pricing.tsx:57
+#: app/routes/pricing.tsx:56
 msgid "Full setup and migrations"
 msgstr "Configurazione completa e migrazioni"
 
@@ -372,7 +368,7 @@ msgstr "Configurazione completa e migrazioni"
 msgid "Get Started"
 msgstr "Inizia"
 
-#: app/routes/pricing.tsx:149
+#: app/routes/pricing.tsx:148
 msgid "Get started for free"
 msgstr "Inizia gratuitamente"
 
@@ -396,7 +392,7 @@ msgstr "Preferenza di Hosting"
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "Credo che l'open-source abbia un potenziale incredibile perché non è solo un prodotto–è una comunità di persone che la pensano allo stesso modo che lavorano per costruire il futuro della produzione nell'era dell'IA e della robotica."
 
-#: app/routes/pricing.tsx:37
+#: app/routes/pricing.tsx:36
 msgid "Implementation support"
 msgstr "Supporto all'implementazione"
 
@@ -408,7 +404,7 @@ msgstr "Incidente rilevato"
 msgid "Integrations"
 msgstr "Integrazioni"
 
-#: app/routes/pricing.tsx:56
+#: app/routes/pricing.tsx:55
 msgid "ITAR compliant"
 msgstr "Conforme a ITAR"
 
@@ -555,7 +551,7 @@ msgstr "Strumenti potenti per gestire la tua azienda"
 
 #: app/components/footer.tsx:61
 #: app/root.tsx:283
-#: app/routes/pricing.tsx:76
+#: app/routes/pricing.tsx:75
 msgid "Pricing"
 msgstr "Prezzi"
 
@@ -580,7 +576,7 @@ msgstr "Prezzi Preventivi"
 msgid "Quotes Table"
 msgstr "Tabella Preventivi"
 
-#: app/routes/pricing.tsx:157
+#: app/routes/pricing.tsx:156
 msgid "Read the Docs"
 msgstr "Leggi la documentazione"
 
@@ -617,7 +613,7 @@ msgstr "Seleziona la tua soluzione di hosting preferita"
 msgid "Self-Hosted"
 msgstr "Auto-ospitato"
 
-#: app/routes/pricing.tsx:54
+#: app/routes/pricing.tsx:53
 msgid "Self-hosted or managed"
 msgstr "Auto-ospitato o gestito"
 
@@ -633,7 +629,7 @@ msgstr "Database condiviso con dati isolati"
 msgid "Shop Floor Apps"
 msgstr "App per il Reparto di Produzione"
 
-#: app/routes/pricing.tsx:80
+#: app/routes/pricing.tsx:79
 msgid "Simple pricing based on your needs"
 msgstr "Prezzi semplici in base alle tue esigenze"
 
@@ -658,12 +654,12 @@ msgstr "Qualcosa è andato storto"
 msgid "Source Code"
 msgstr "Codice Sorgente"
 
-#: app/routes/pricing.tsx:58
+#: app/routes/pricing.tsx:57
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
 #: app/routes/_index.tsx:165
-#: app/routes/pricing.tsx:164
+#: app/routes/pricing.tsx:163
 msgid "Star on GitHub"
 msgstr "Stella su GitHub"
 
@@ -732,7 +728,7 @@ msgstr "Provalo Ora"
 msgid "Unified quality, purchasing & production"
 msgstr "Qualità, acquisti e produzione unificati"
 
-#: app/routes/pricing.tsx:59
+#: app/routes/pricing.tsx:58
 msgid "Unlimited functional support"
 msgstr "Supporto funzionale illimitato"
 
@@ -752,7 +748,7 @@ msgstr "Visualizza il nostro codice sorgente e contribuisci"
 msgid "View Source"
 msgstr "Visualizza Fonte"
 
-#: app/routes/pricing.tsx:152
+#: app/routes/pricing.tsx:151
 msgid "View the docs and start developing locally"
 msgstr "Visualizza la documentazione e inizia a sviluppare localmente"
 
