@@ -200,8 +200,8 @@ msgid "Choose your preferred database"
 msgstr "お好みのデータベースを選択してください"
 
 #: app/routes/_index.tsx:789
-msgid "Co-Founder and CTO"
-msgstr ""
+msgid "Co-founder"
+msgstr "共同創業者"
 
 #: app/components/code-examples.tsx:599
 msgid "Code Examples"

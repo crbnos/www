@@ -291,12 +291,12 @@ function E2E() {
 					<Safari
 						url="https://app.carbon.ms"
 						className="size-full dark:hidden"
-						imageSrc="/screenshots/sales-orders-light.png"
+						imageSrc="/screenshots/sales-orders-light.jpeg"
 					/>
 					<Safari
 						url="https://app.carbon.ms"
 						className="size-full hidden dark:block"
-						imageSrc="/screenshots/sales-orders-light.png"
+						imageSrc="/screenshots/sales-orders-dark.jpeg"
 					/>
 				</div>
 			</div>
@@ -786,7 +786,7 @@ function Memo() {
 						<div className="flex flex-col">
 							<p className="dark:text-tertiary text-foreground">Brad Barbin</p>
 							<p className="dark:text-tertiary text-muted-foreground text-sm">
-								<Trans>Co-Founder and CTO</Trans>
+								<Trans>Co-founder</Trans>
 							</p>
 						</div>
 					</a>
