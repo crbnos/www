@@ -15,6 +15,8 @@ export default defineConfig({
 		"ru",
 		"hi",
 		"nl",
+		"tr",
+		"ko",
 	],
 	fallbackLocales: {
 		default: "en",
