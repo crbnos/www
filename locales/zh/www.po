@@ -200,8 +200,8 @@ msgid "Choose your preferred database"
 msgstr "选择您偏好的数据库"
 
 #: app/routes/_index.tsx:789
-msgid "Co-founder"
-msgstr "联合创始人"
+msgid "Co-Founder and CTO"
+msgstr ""
 
 #: app/components/code-examples.tsx:599
 msgid "Code Examples"
@@ -276,7 +276,7 @@ msgstr "客户门户/网站"
 
 #: app/routes/pricing.tsx:55
 msgid "Customizations, training, and integrations"
-msgstr ""
+msgstr "定制、培训和集成"
 
 #: app/components/wizard-form.tsx:112
 msgid "Database"
@@ -354,7 +354,7 @@ msgstr "功能"
 
 #: app/routes/pricing.tsx:54
 msgid "Forward deployed engineer"
-msgstr ""
+msgstr "前置部署工程师"
 
 #: app/routes/_index.tsx:721
 msgid "Founder memo"

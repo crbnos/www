@@ -200,8 +200,8 @@ msgid "Choose your preferred database"
 msgstr "Choisissez votre base de données préférée"
 
 #: app/routes/_index.tsx:789
-msgid "Co-founder"
-msgstr "Co-fondateur"
+msgid "Co-Founder and CTO"
+msgstr ""
 
 #: app/components/code-examples.tsx:599
 msgid "Code Examples"
@@ -276,7 +276,7 @@ msgstr "Portail Client/Site Web"
 
 #: app/routes/pricing.tsx:55
 msgid "Customizations, training, and integrations"
-msgstr ""
+msgstr "Personnalisations, formation et intégrations"
 
 #: app/components/wizard-form.tsx:112
 msgid "Database"
@@ -354,7 +354,7 @@ msgstr "Fonctionnalités"
 
 #: app/routes/pricing.tsx:54
 msgid "Forward deployed engineer"
-msgstr ""
+msgstr "Ingénieur déployé sur site"
 
 #: app/routes/_index.tsx:721
 msgid "Founder memo"
