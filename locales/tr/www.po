@@ -201,7 +201,7 @@ msgstr "Tercih ettiğiniz veritabanını seçin"
 
 #: app/routes/_index.tsx:789
 msgid "Co-Founder and CTO"
-msgstr ""
+msgstr "Kurucu Ortak ve CTO"
 
 #: app/components/code-examples.tsx:599
 msgid "Code Examples"
@@ -276,7 +276,7 @@ msgstr "Müşteri Portalı/Web Sitesi"
 
 #: app/routes/pricing.tsx:55
 msgid "Customizations, training, and integrations"
-msgstr ""
+msgstr "Özelleştirmeler, eğitim ve entegrasyonlar"
 
 #: app/components/wizard-form.tsx:112
 msgid "Database"
@@ -354,7 +354,7 @@ msgstr "Özellikler"
 
 #: app/routes/pricing.tsx:54
 msgid "Forward deployed engineer"
-msgstr ""
+msgstr "İleri konuşlandırılmış mühendis"
 
 #: app/routes/_index.tsx:721
 msgid "Founder memo"

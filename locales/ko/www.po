@@ -201,7 +201,7 @@ msgstr "선호하는 데이터베이스를 선택하세요"
 
 #: app/routes/_index.tsx:789
 msgid "Co-Founder and CTO"
-msgstr ""
+msgstr "공동 창립자 및 CTO"
 
 #: app/components/code-examples.tsx:599
 msgid "Code Examples"
@@ -276,7 +276,7 @@ msgstr "고객 포털/웹사이트"
 
 #: app/routes/pricing.tsx:55
 msgid "Customizations, training, and integrations"
-msgstr ""
+msgstr "맞춤화, 교육 및 통합"
 
 #: app/components/wizard-form.tsx:112
 msgid "Database"
@@ -354,7 +354,7 @@ msgstr "기능"
 
 #: app/routes/pricing.tsx:54
 msgid "Forward deployed engineer"
-msgstr ""
+msgstr "전방 배치 엔지니어"
 
 #: app/routes/_index.tsx:721
 msgid "Founder memo"

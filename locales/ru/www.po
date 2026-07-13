@@ -201,7 +201,7 @@ msgstr "Выберите предпочитаемую базу данных"
 
 #: app/routes/_index.tsx:789
 msgid "Co-Founder and CTO"
-msgstr ""
+msgstr "Сооснователь и главный технический директор"
 
 #: app/components/code-examples.tsx:599
 msgid "Code Examples"
