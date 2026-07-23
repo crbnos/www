@@ -396,10 +396,6 @@ msgstr "Hostingvoorkeur"
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "Ik geloof dat open-source ongelooflijk potentieel heeft omdat het niet alleen een product is–het is een gemeenschap van gelijkgestemde mensen die werken aan het bouwen van de toekomst van de productie in het tijdperk van AI en robotica."
 
-#: app/routes/pricing.tsx:36
-msgid "Implementation support"
-msgstr "Implementatieondersteuning"
-
 #: app/components/status-indicator.tsx:8
 msgid "Incident detected"
 msgstr "Incident gedetecteerd"
@@ -701,6 +697,10 @@ msgstr "Systeemstatus:"
 #: app/routes/_index.tsx:820
 msgid "Talk to Us"
 msgstr "Neem contact met ons op"
+
+#: app/routes/pricing.tsx:36
+msgid "Technical support"
+msgstr ""
 
 #: app/components/footer.tsx:72
 msgid "Terms"

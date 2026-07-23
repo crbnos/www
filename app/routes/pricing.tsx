@@ -33,7 +33,7 @@ function usePlans() {
 			url: "https://app.carbon.ms",
 			featured: true,
 				features: [
-				t`Implementation support`,
+				t`Technical support`,
 				t`API, webhooks, and integrations`,
 				t`Accounting`,
 				t`Audit logging`,
