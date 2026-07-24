@@ -396,10 +396,6 @@ msgstr "호스팅 선호도"
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "오픈소스는 단순한 제품이 아니라 AI와 로봇 시대에 제조업의 미래를 함께 만들어가는 같은 생각을 가진 사람들의 커뮤니티이기 때문에 엄청난 잠재력을 가지고 있다고 믿습니다."
 
-#: app/routes/pricing.tsx:36
-msgid "Implementation support"
-msgstr "구현 지원"
-
 #: app/components/status-indicator.tsx:8
 msgid "Incident detected"
 msgstr "사건 감지됨"
@@ -701,6 +697,10 @@ msgstr "시스템 상태:"
 #: app/routes/_index.tsx:820
 msgid "Talk to Us"
 msgstr "저희에게 문의하세요"
+
+#: app/routes/pricing.tsx:36
+msgid "Technical support"
+msgstr "기술 지원"
 
 #: app/components/footer.tsx:72
 msgid "Terms"

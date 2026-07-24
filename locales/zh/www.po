@@ -396,10 +396,6 @@ msgstr "托管偏好"
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "我相信开源具有令人难以置信的潜力，因为它不仅仅是一个产品——它是一个志同道合的人们的社区，致力于在人工智能和机器人时代构建制造业的未来。"
 
-#: app/routes/pricing.tsx:36
-msgid "Implementation support"
-msgstr "实施支持"
-
 #: app/components/status-indicator.tsx:8
 msgid "Incident detected"
 msgstr "检测到事件"
@@ -701,6 +697,10 @@ msgstr "系统状态："
 #: app/routes/_index.tsx:820
 msgid "Talk to Us"
 msgstr "与我们交谈"
+
+#: app/routes/pricing.tsx:36
+msgid "Technical support"
+msgstr "技术支持"
 
 #: app/components/footer.tsx:72
 msgid "Terms"
