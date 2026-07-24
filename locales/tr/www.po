@@ -396,10 +396,6 @@ msgstr "Barındırma Tercihi"
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "Açık kaynağın inanılmaz bir potansiyeli olduğuna inanıyorum çünkü bu sadece bir ürün değil–AI ve robotik çağında üretimin geleceğini inşa etmek için çalışan benzer düşünceli insanların bir topluluğudur."
 
-#: app/routes/pricing.tsx:36
-msgid "Implementation support"
-msgstr "Uygulama desteği"
-
 #: app/components/status-indicator.tsx:8
 msgid "Incident detected"
 msgstr "Olay tespit edildi"
@@ -701,6 +697,10 @@ msgstr "Sistem Durumu:"
 #: app/routes/_index.tsx:820
 msgid "Talk to Us"
 msgstr "Bize Ulaşın"
+
+#: app/routes/pricing.tsx:36
+msgid "Technical support"
+msgstr "Teknik destek"
 
 #: app/components/footer.tsx:72
 msgid "Terms"

@@ -396,10 +396,6 @@ msgstr "Preferência de Hospedagem"
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "Acredito que o código aberto tem um potencial incrível porque não é apenas um produto–é uma comunidade de pessoas com ideias semelhantes trabalhando para construir o futuro da manufatura na era da IA e da robótica."
 
-#: app/routes/pricing.tsx:36
-msgid "Implementation support"
-msgstr "Suporte de implementação"
-
 #: app/components/status-indicator.tsx:8
 msgid "Incident detected"
 msgstr "Incidente detectado"
@@ -701,6 +697,10 @@ msgstr "Status do Sistema:"
 #: app/routes/_index.tsx:820
 msgid "Talk to Us"
 msgstr "Fale Conosco"
+
+#: app/routes/pricing.tsx:36
+msgid "Technical support"
+msgstr "Suporte técnico"
 
 #: app/components/footer.tsx:72
 msgid "Terms"
