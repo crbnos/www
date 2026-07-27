@@ -645,7 +645,7 @@ msgstr "Single-Tenant"
 msgid "Software as a Service"
 msgstr "Программное обеспечение как услуга"
 
-#: app/root.tsx:446
+#: app/root.tsx:451
 msgid "Something went wrong"
 msgstr "Что-то пошло не так"
 

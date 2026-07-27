@@ -645,7 +645,7 @@ msgstr "सिंगल-टेनेंट"
 msgid "Software as a Service"
 msgstr "सॉफ्टवेयर एज़ ए सर्विस"
 
-#: app/root.tsx:446
+#: app/root.tsx:451
 msgid "Something went wrong"
 msgstr "कुछ गलत हो गया"
 

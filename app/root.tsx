@@ -435,18 +435,24 @@ export function ErrorBoundary() {
 			: String(error);
 
 	return (
-		<Document title="Error!">
-			<div className="light">
-				<div className="flex flex-col w-[100dvw] h-screen items-center justify-center space-y-4 ">
-					<img
-						src="/brand/carbon-mark.svg"
-						alt="Carbon Logo"
-						className="block max-w-24"
-					/>
-					<h1 className="text-2xl font-bold"><Trans>Something went wrong</Trans></h1>
-					<p className="text-muted-foreground max-w-2xl">{message}</p>
+		// LocaleProvider is required because <Document> calls useLingui(). Without
+		// it, any error that reaches this boundary throws a second, opaque
+		// "Cannot destructure property '_'" error and white-screens instead of
+		// rendering the message below.
+		<LocaleProvider>
+			<Document title="Error!">
+				<div className="light">
+					<div className="flex flex-col w-[100dvw] h-screen items-center justify-center space-y-4 ">
+						<img
+							src="/brand/carbon-mark.svg"
+							alt="Carbon Logo"
+							className="block max-w-24"
+						/>
+						<h1 className="text-2xl font-bold"><Trans>Something went wrong</Trans></h1>
+						<p className="text-muted-foreground max-w-2xl">{message}</p>
+					</div>
 				</div>
-			</div>
-		</Document>
+			</Document>
+		</LocaleProvider>
 	);
 }

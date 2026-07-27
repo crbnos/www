@@ -645,7 +645,7 @@ msgstr "シングルテナント"
 msgid "Software as a Service"
 msgstr "Software as a Service"
 
-#: app/root.tsx:446
+#: app/root.tsx:451
 msgid "Something went wrong"
 msgstr "何か問題が発生しました"
 

@@ -9,23 +9,24 @@ const postsCache = new LRUCache<string, BlogPost>({
 let staticPosts: BlogPost[] | undefined;
 
 export async function getBlogPosts() {
-  if (process.env.VERCEL_ENV === "production") {
+  // import.meta.env.PROD is a Vite build-time constant, so the dev-only branch
+  // below (which reads the filesystem) is statically eliminated from the
+  // production bundle. That's what keeps node:fs out of the edge build without
+  // needing to overwrite blog.local.server.ts with a stub.
+  if (import.meta.env.PROD) {
     if (!staticPosts) {
-      // Looking at static-blog-data.ts, the export is named blogPosts not blogData
       const { blogPosts } = await import("./static-blog-data");
       staticPosts = blogPosts;
     }
-    console.log("getBlogPosts", staticPosts);
     return staticPosts;
   } else {
-    // We use require here instead of import to ensure this isn't bundled in production
     const { getBlogPosts } = await import("./blog.local.server");
     return getBlogPosts();
   }
 }
 
 export async function getBlogPost(slug: string) {
-  if (process.env.VERCEL_ENV === "production") {
+  if (import.meta.env.PROD) {
     const cachedPost = postsCache.get(slug);
     if (cachedPost) {
       return cachedPost;

@@ -645,7 +645,7 @@ msgstr "Tek Kiracılı"
 msgid "Software as a Service"
 msgstr "Hizmet Olarak Yazılım"
 
-#: app/root.tsx:446
+#: app/root.tsx:451
 msgid "Something went wrong"
 msgstr "Bir şeyler yanlış gitti"
 

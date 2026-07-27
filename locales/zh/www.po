@@ -645,7 +645,7 @@ msgstr "单租户"
 msgid "Software as a Service"
 msgstr "软件即服务"
 
-#: app/root.tsx:446
+#: app/root.tsx:451
 msgid "Something went wrong"
 msgstr "出了问题"
 

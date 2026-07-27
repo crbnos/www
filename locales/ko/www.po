@@ -645,7 +645,7 @@ msgstr "단일 테넌트"
 msgid "Software as a Service"
 msgstr "Software as a Service"
 
-#: app/root.tsx:446
+#: app/root.tsx:451
 msgid "Something went wrong"
 msgstr "뭔가 잘못되었습니다"
 

@@ -59,14 +59,23 @@ export async function generateStaticBlogData() {
     path.join(process.cwd(), "app", "routes", "learn+", "posts")
   );
 
-  // Write the static data to a JSON file
+  // Emit a TypeScript module (NOT .json) so production can do
+  // `import { blogPosts } from "./static-blog-data"`. static-blog-data.ts is
+  // gitignored and regenerated on every build. Writing .json here was the bug:
+  // a bare JSON array has no `blogPosts` export, so `blogPosts` was undefined
+  // in production and every blog page came back empty.
   const outputPath = path.join(
     process.cwd(),
     "app",
     "lib",
-    "static-blog-data.json"
+    "static-blog-data.ts"
   );
-  fs.writeFileSync(outputPath, JSON.stringify(posts, null, 2));
+  const fileContent = `import type { BlogPost } from "./types";\n\nexport const blogPosts: BlogPost[] = ${JSON.stringify(
+    posts,
+    null,
+    2
+  )};\n`;
+  fs.writeFileSync(outputPath, fileContent);
 }
 
 export async function getBlogPosts() {

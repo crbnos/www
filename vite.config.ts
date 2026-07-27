@@ -29,6 +29,12 @@ export default defineConfig({
   },
   plugins: [
     babel({
+      // `include` must be set explicitly: since vite-plugin-babel@1.7.0 the
+      // default `include` is /\.jsx?$/ (no .tsx) and is applied BEFORE `filter`,
+      // so .tsx files would otherwise skip babel-plugin-macros and the Lingui
+      // <Trans>/useLingui macros would never be transformed (build fails with
+      // "macro ... executed outside the context of compilation").
+      include: /\.[jt]sx?$/,
       filter: /\.[jt]sx?$/,
       babelConfig: {
         presets: ["@babel/preset-typescript"],

@@ -645,7 +645,7 @@ msgstr "Mono-locataire"
 msgid "Software as a Service"
 msgstr "Logiciel en tant que service"
 
-#: app/root.tsx:446
+#: app/root.tsx:451
 msgid "Something went wrong"
 msgstr "Quelque chose s'est mal passé"
 
