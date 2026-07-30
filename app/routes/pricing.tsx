@@ -80,7 +80,7 @@ export default function Pricing() {
 		<>
 			<section className="border-b border-border py-24 sm:py-28">
 				<div className={shell}>
-					<div className={eyebrow}>PRICING</div>
+					<div className={eyebrow}>Pricing</div>
 					<h1 className={cn(heading, "mt-5 max-w-[20ch]")}>
 						<Trans>Simple pricing based on your needs.</Trans>
 					</h1>
@@ -155,7 +155,7 @@ export default function Pricing() {
 					</div>
 
 					<p className="mt-6 font-mono text-[11px] uppercase tracking-[0.16em] text-muted-foreground">
-						BILLED PER USER, MONTHLY · 30-DAY FREE TRIAL · CANCEL ANYTIME
+						Billed per user, monthly · 30-day free trial · Cancel anytime
 					</p>
 				</div>
 			</section>
@@ -175,7 +175,7 @@ export default function Pricing() {
 					}}
 				/>
 				<div className="relative mx-auto max-w-[1000px] px-6 text-center">
-					<div className={eyebrow}>OPEN CORE · SELF-HOST</div>
+					<div className={eyebrow}>Open core · Self-host</div>
 					<h2 className="mt-6 font-display font-semibold tracking-[-0.045em] leading-[0.96] text-[clamp(2.25rem,5vw,4.5rem)]">
 						<Trans>Get started for free.</Trans>
 					</h2>

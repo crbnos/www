@@ -83,7 +83,7 @@ export default {
 			},
 			fontFamily: {
 				sans: ["Archivo", "Geist Variable", ...fontFamily.sans],
-				mono: ["JetBrains Mono", "Geist Mono Variable", ...fontFamily.mono],
+				mono: ["Geist Mono Variable", ...fontFamily.mono],
 				display: ["Archivo", "Barlow Semi Condensed", ...fontFamily.sans],
 			},
 			width: {

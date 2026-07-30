@@ -78,10 +78,24 @@ const heroWords: MessageDescriptor[] = [
 ];
 
 const statusQuo = [
+	
 	{
+		id: "spreadsheet",
+		name: msg`Spreadsheet`,
+		rows: [
+            msg`No accounting`,
+			msg`Shortages found on the floor`,
+			msg`Costing guessed after the fact`,
+			msg`Revisions lost in email`,
+			msg`No serial-level history`,
+			msg`Audits reconstructed from memory`,
+		],
+	},
+  {
 		id: "legacy",
 		name: msg`Legacy ERP`,
 		rows: [
+            msg`Accounting-focused`,
 			msg`18-month implementation`,
 			msg`Huge consulting bills`,
 			msg`BOMs re-keyed by hand`,
@@ -90,25 +104,15 @@ const statusQuo = [
 		],
 	},
 	{
-		id: "spreadsheet",
-		name: msg`Spreadsheet`,
-		rows: [
-			msg`Shortages found on the floor`,
-			msg`Costing guessed after the fact`,
-			msg`Revisions lost in email`,
-			msg`No serial-level history`,
-			msg`Audits reconstructed from memory`,
-		],
-	},
-	{
 		id: "carbon",
 		name: msg`Next Generation`,
 		accent: true,
 		rows: [
+            msg`Manufacturing-focused`,
+            msg`Everything integrated`,
 			msg`Live in weeks`,
-			msg`One schema: API/MCP-first`,
+			msg`API-first, with first-class MCP`,
 			msg`Full traceability and COGS`,
-			msg`Every operation timestamped`,
 			msg`Audit trail is the database`,
 		],
 	},
@@ -186,30 +190,31 @@ const stages = [
 	{ name: msg`Shipping`, note: msg`packing & certs` },
 	{ name: msg`Invoicing`, note: msg`costed actuals` },
 	{ name: msg`Accounting`, note: msg`GL & accruals` },
+	{ name: msg`Customize`, note: msg`API, MCP, apps` },
 ];
 
 const stats = [
 	{
 		value: 4,
-		label: msg`SYSTEMS REPLACED`,
+		label: msg`Systems replaced`,
 		sub: msg`ERP · MRP · MES · QMS`,
 	},
 	{
 		value: 1,
-		label: msg`SHARED SCHEMA`,
-		sub: msg`NO SYNC JOBS, NO DRIFT`,
+		label: msg`Shared schema`,
+		sub: msg`No sync jobs, no drift`,
 	},
 	{
 		value: 100,
 		suffix: "%",
 		accent: true,
-		label: msg`SERIAL-LEVEL TRACE`,
-		sub: msg`EVERY UNIT, EVERY OP`,
+		label: msg`Serial-level trace`,
+		sub: msg`Every unit, every op`,
 	},
 	{
 		value: 28,
-		label: msg`DAYS TO GO LIVE`,
-		sub: msg`TYPICAL FIRST DEPLOYMENT`,
+		label: msg`Days to go live`,
+		sub: msg`Typical first deployment`,
 	},
 ];
 
@@ -220,12 +225,12 @@ const devPillars = [
 		desc: msg`Generated straight from Carbon's schema — 381 resources and 1,641 endpoints, with typed clients for TypeScript, Python, C#, and cURL.`,
 	},
 	{
-		tag: "MCP SERVER",
+		tag: "MCP server",
 		name: msg`Agent-ready by default`,
 		desc: msg`A built-in MCP server exposes 1,374 operations across 15 modules through three discovery tools. Permissions are baked in — an agent can never do what its identity can't.`,
 	},
 	{
-		tag: "SOURCE AVAILABLE",
+		tag: "Source available",
 		name: msg`Read it. Extend it.`,
 		desc: msg`A typed TypeScript monorepo with one generated database type shared across the app, the API, and the AI tools. Bring your own LLM.`,
 	},
@@ -253,12 +258,12 @@ const industries = [
 ];
 
 const compliance: MessageDescriptor[] = [
-	msg`ITAR-READY DEPLOYMENT`,
+	msg`ITAR-ready deployment`,
 	msg`AS9100`,
 	msg`ISO 13485`,
-	msg`21 CFR PART 11`,
-	msg`SOC 2 CONTROLS`,
-	msg`ROW-LEVEL SECURITY`,
+	msg`21 CFR Part 11`,
+	msg`SOC 2 controls`,
+	msg`Row-level security`,
 ];
 
 const integrations = [
@@ -268,7 +273,6 @@ const integrations = [
 	{ name: "Linear", kind: msg`Tasks` },
 	{ name: "Jira", kind: msg`Tasks` },
 	{ name: "Slack", kind: msg`Chat` },
-	{ name: "Ignition", kind: msg`SCADA` },
 	{ name: "Paperless Parts", kind: msg`Quoting` },
 	{ name: "Avalara", kind: msg`Taxes` },
 	{ name: "Rillet", kind: msg`Finance` },
@@ -276,6 +280,7 @@ const integrations = [
 	{ name: "Epson", kind: msg`Printer` },
 	{ name: "Brother", kind: msg`Printer` },
 	{ name: "Zebra ZPL", kind: msg`Printer` },
+	{ name: "Ignition", kind: msg`SCADA` },
 	{ name: "REST and Webhooks", kind: msg`API` },
 	{ name: "Claude", kind: msg`LLM` },
 	{ name: "ChatGPT", kind: msg`LLM` },
@@ -284,9 +289,9 @@ const integrations = [
 const featureRows = [
 	{
 		id: "configure",
-		eyebrow: msg`CONFIGURE TO ORDER`,
-		title: msg`Variants that don't fork your BOM.`,
-		body: msg`Parameterize the part, not the paperwork. Rules drive the bill of materials, the routing, the price and the drawing set — every option combination costed before you quote it.`,
+		eyebrow: msg`Configure to order`,
+		title: msg`Unfork your BOM.`,
+		body: msg`Parameterize the part, not the paperwork. Rules drive the bill of materials, the routing, the price before you quote it.`,
 		points: [
 			msg`Rule-based BOM and routing generation`,
 			msg`Revision control with effectivity dates`,
@@ -300,9 +305,9 @@ const featureRows = [
 	},
 	{
 		id: "execution",
-		eyebrow: msg`MANUFACTURING EXECUTION`,
+		eyebrow: msg`Manufacturing execution`,
 		title: msg`The floor, live to the second.`,
-		body: msg`Operators clock into operations from a terminal or a scanner. Machines report cycle time over MTConnect and OPC-UA. Scrap, labor and yield land in costing as they happen — not at month end.`,
+		body: msg`Every part, hour, barcode, and deviation tracked and handled in real-time.`,
 		points: [
 			msg`Digital travelers with work instructions`,
 			msg`QR and barcode tracking on every unit`,
@@ -310,11 +315,13 @@ const featureRows = [
 		],
 		shotLabel: msg`Shop floor / job traveler`,
 		shot: "features-mes",
+		shotLight: "/screenshots/mes-light.jpg",
+		shotDark: "/screenshots/mes-dark.jpg",
 		flip: true,
 	},
 	{
 		id: "quality",
-		eyebrow: msg`QUALITY`,
+		eyebrow: msg`Quality`,
 		title: msg`Traceability is the default state.`,
 		body: msg`First article inspection, non-conformance, CAPA and gauge calibration sit on the same records as production. Pull any serial number and get its full genealogy — material certs, operators, measurements, deviations.`,
 		points: [
@@ -328,6 +335,22 @@ const featureRows = [
 		shotDark: "/screenshots/traceability-dark.jpg",
 		flip: false,
 	},
+	{
+		id: "multi-entity",
+		eyebrow: msg`Multi-entity · Multi-location`,
+		title: msg`Every site on one ledger.`,
+		body: msg`Carbon allows you to a scale from a single-entity, single-location operation, to a multi-national, multi-location manufacturing engine with consolidated accounts.`,
+		points: [
+			msg`Multi-entity accounting with intercompany transactions`,
+			msg`Per-entity currency, COA and tax, consolidated books`,
+			msg`Multi-location planning with inter-site transfers`,
+		],
+		shotLabel: msg`Multi-entity ledger / multi-site planning`,
+		shot: "multi-entity",
+		shotLight: "/screenshots/multi-light.jpg",
+		shotDark: "/screenshots/multi-dark.jpg",
+		flip: true,
+	},
 ];
 
 const APP_URL = "https://app.carbon.ms";
@@ -339,7 +362,7 @@ const GITHUB_URL = "https://github.com/crbnos/carbon";
 
 const shell = "mx-auto w-full max-w-[1360px] px-6 sm:px-7";
 const eyebrow =
-	"font-mono text-[11px] uppercase leading-none tracking-[0.2em] text-muted-foreground";
+	"font-mono text-sm uppercase leading-none tracking-[0.2em] text-muted-foreground";
 const heading =
 	"font-display font-semibold tracking-[-0.035em] leading-[0.95] text-[clamp(2.125rem,4.4vw,3.875rem)]";
 
@@ -433,7 +456,7 @@ function Placeholder({ label, className }: { label: string; className?: string }
 					className="size-6 text-muted-foreground/50"
 					strokeWidth={1.5}
 				/>
-				<span className="max-w-[24ch] font-mono text-[11px] uppercase leading-relaxed tracking-[0.16em] text-muted-foreground/70">
+				<span className="max-w-[24ch] font-mono text-sm uppercase leading-relaxed tracking-[0.16em] text-muted-foreground/70">
 					{label}
 				</span>
 			</div>
@@ -555,27 +578,14 @@ function Hero() {
 			id="hero"
 			className="relative flex min-h-[calc(100vh-var(--header-height))] flex-col overflow-hidden pt-16 sm:pt-24"
 		>
-			{/* grid + glow backdrop */}
-			<div
-				aria-hidden
-				className="pointer-events-none absolute inset-0"
-				style={{
-					backgroundImage:
-						"linear-gradient(rgba(128,128,128,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(128,128,128,0.08) 1px, transparent 1px)",
-					backgroundSize: "64px 64px",
-					maskImage:
-						"radial-gradient(115% 85% at 50% 6%, #000 12%, transparent 74%)",
-					WebkitMaskImage:
-						"radial-gradient(115% 85% at 50% 6%, #000 12%, transparent 74%)",
-				}}
-			/>
+			{/* glow backdrop */}
 			<div
 				aria-hidden
 				className="pointer-events-none absolute left-1/2 top-[-320px] h-[560px] w-[1200px] max-w-full -translate-x-1/2 rounded-full bg-secondary/20 blur-[110px]"
 			/>
 
 			<div className={cn(shell, "relative")}>
-				<div className="flex items-center gap-3.5 font-mono text-[11px] uppercase leading-none tracking-[0.2em] text-muted-foreground">
+				<div className="flex items-center gap-3.5 font-mono text-sm uppercase leading-none tracking-[0.2em] text-muted-foreground">
 					<span className="text-secondary">ERP</span>
 					<span>/</span>
 					<span className="text-secondary">MRP</span>
@@ -583,8 +593,8 @@ function Hero() {
 					<span className="text-secondary">MES</span>
 					<span>/</span>
 					<span className="text-secondary">QMS</span>
-					<span className="ml-auto hidden bg-secondary/10 dark:bg-secondary-surface px-3 py-1.5 text-secondary sm:inline">
-						<Trans>ONE SYSTEM OF RECORD</Trans>
+					<span className="ml-auto hidden bg-secondary/10 dark:bg-secondary-surface px-3 py-1.5 text-secondary sm:inline uppercase text-[11px]">
+						<Trans>Unified system of record</Trans>
 					</span>
 				</div>
 
@@ -623,11 +633,11 @@ function HeroDashboard() {
 			/>
 			<div className="border border-b-0 border-border bg-card px-2.5 pt-2.5">
 				<div className="flex items-center justify-between px-2 pb-3 pt-1.5 font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
+					
+						<Trans>Carbon / Assembly Instructions</Trans>
+					
 					<span>
-						<Trans>CARBON / ASSEMBLY INSTRUCTIONS</Trans>
-					</span>
-					<span>
-						<Trans>REV 4 · LIVE</Trans>
+						<Trans>Rev 4 · Live</Trans>
 					</span>
 				</div>
 				<div className="relative overflow-hidden border-t border-border sm:h-[min(66vh,740px)]">
@@ -719,17 +729,6 @@ function StatusQuo() {
 									: "bg-card dark:bg-background",
 							)}
 						>
-							<div className="flex items-center justify-between gap-2">
-								
-								<div
-									className={cn(
-										"font-mono text-[10px] uppercase leading-none tracking-wide",
-										col.accent ? "text-secondary" : "text-muted-foreground/40",
-									)}
-								>
-									{col.accent ? "" : <Trans>LEGACY</Trans>}
-								</div>
-							</div>
 							<div
 								className={cn(
 									"mt-4 pb-6 text-xl font-medium",
@@ -816,7 +815,7 @@ function OneModel() {
 				<div className="grid grid-cols-1 gap-px border border-t-0 border-border bg-border lg:grid-cols-2">
 					<div className="bg-card p-7">
 						<div className="font-mono text-[10px] uppercase leading-none tracking-[0.18em] text-muted-foreground">
-							{mod.code} · {modName.toUpperCase()}
+							{mod.code} · {modName}
 						</div>
 						<div className="mt-5 flex flex-col">
 							{mod.rows.map((row, i) => (
@@ -864,7 +863,7 @@ function HappyPath() {
 
 				<div className="relative mt-16 border-t border-border">
 					<div className="absolute left-0 top-[-2px] h-[3px] w-32 animate-cb-flow bg-gradient-to-r from-transparent to-secondary" />
-					<div className="grid grid-cols-2 gap-px bg-border sm:grid-cols-3 lg:grid-cols-9">
+					<div className="grid grid-cols-2 gap-px bg-border sm:grid-cols-3 lg:grid-cols-10">
 						{stages.map((s, i) => (
 							<div
 								key={i}
@@ -876,7 +875,7 @@ function HappyPath() {
 								<div className="mt-3.5 text-[15px] font-medium">
 									{i18n._(s.name)}
 								</div>
-								<div className="mt-2 font-mono text-[11px] leading-snug text-muted-foreground">
+								<div className="mt-2 font-mono text-xs leading-snug text-muted-foreground">
 									{i18n._(s.note)}
 								</div>
 							</div>
@@ -1139,7 +1138,7 @@ function TrustOpen() {
 						</h3>
 						<p className="mt-4 max-w-[40ch] text-[15px] leading-relaxed text-muted-foreground">
 							<Trans>
-								Immutable journal ledger entries, granular permissions, and the
+								Immutable ledgers, granular permissions, and the
 								controls regulated programs are held to.
 							</Trans>
 						</p>
@@ -1158,7 +1157,7 @@ function TrustOpen() {
 					<div className="bg-muted p-10 sm:p-11">
 						<div className="font-mono text-[11px] uppercase leading-none tracking-[0.2em] text-secondary">
 							<span className="inline-block bg-secondary/10 dark:bg-secondary-surface px-3 py-1.5">
-								<Trans>SOURCE AVAILABLE</Trans>
+								<Trans>Source available</Trans>
 							</span>
 						</div>
 						<h3 className="mt-5 font-display font-semibold tracking-[-0.03em] leading-[1] text-[clamp(1.625rem,2.6vw,2.375rem)]">
@@ -1171,11 +1170,11 @@ function TrustOpen() {
 						</p>
 						<CopyPrompt prompt={AUDIT_PROMPT} />
 						<div className="mt-7 flex flex-wrap gap-6 font-mono text-xs uppercase leading-none text-muted-foreground">
-							<span>TYPESCRIPT</span>
-							<span>REACT</span>
-							<span>POSTGRES</span>
+							<span>TypeScript</span>
+							<span>React</span>
+							<span>Postgres</span>
 							<span>RLS</span>
-							<span>REST + WEBHOOKS</span>
+							<span>REST + Webhooks</span>
 						</div>
 					</div>
 				</Reveal>
@@ -1230,7 +1229,7 @@ function StartCTA() {
 			/>
 			<div className="relative mx-auto max-w-[1000px] px-6 text-center">
 				<div className={eyebrow}>
-					<Trans>START NOW · NO CALL REQUIRED</Trans>
+					<Trans>Start now · No call required</Trans>
 				</div>
 				<h2 className="mt-6 font-display font-semibold tracking-[-0.045em] leading-[0.96] text-[clamp(2.5rem,6vw,5.5rem)]">
 					<Trans>Ship faster than your competitors can quote.</Trans>
@@ -1255,7 +1254,7 @@ function StartCTA() {
 				</div>
 				<div className="mt-5 font-mono text-[11px] uppercase leading-none text-muted-foreground">
 					<a href={GITHUB_URL} target="_blank" rel="noopener">
-						<Trans>OR SELF-HOST THE OPEN SOURCE CORE</Trans>
+						<Trans>Or self-host the open source core</Trans>
 					</a>
 				</div>
 			</div>
