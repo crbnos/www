@@ -1,11 +1,10 @@
 /** biome-ignore-all lint/suspicious/noArrayIndexKey: <explanation> */
 "use carbon";
-import { Trans, useLingui } from "@lingui/react/macro";
+import { useLingui } from "@lingui/react/macro";
 import * as TabsPrimitive from "@radix-ui/react-tabs";
-import { Book, Check, ChevronRight, Copy } from "lucide-react";
+import { Check, Copy } from "lucide-react";
 import { Highlight, Prism, type PrismTheme } from "prism-react-renderer";
 import { useEffect, useState } from "react";
-import { Button } from "~/components/ui/button";
 import { cn } from "~/lib/utils";
 
 // Register C# language with Prism (not included in default bundle)
@@ -403,11 +402,10 @@ const LanguageTrigger = ({
 	<TabsPrimitive.Trigger
 		value={value}
 		className={cn(
-			"inline-flex items-center gap-1 justify-center whitespace-nowrap rounded-t-lg px-4 py-2 text-sm transition-all",
-			"hover:text-zinc-200 disabled:pointer-events-none disabled:opacity-50",
-			"bg-transparent data-[state=active]:bg-zinc-800",
-			"border border-b-0 border-transparent data-[state=active]:border-zinc-700",
-			"text-zinc-500 data-[state=active]:text-zinc-100 font-medium",
+			"inline-flex items-center justify-center whitespace-nowrap px-4 py-2.5 font-mono text-[13px] transition-colors",
+			"disabled:pointer-events-none disabled:opacity-50",
+			"text-muted-foreground hover:text-foreground",
+			"data-[state=active]:bg-card data-[state=active]:text-foreground data-[state=active]:shadow-[inset_0_2px_0] data-[state=active]:shadow-secondary",
 			className,
 		)}
 		{...props}
@@ -440,7 +438,7 @@ function CodeEditor({
 							);
 							return (
 								<div key={`${codeBlock}-line-${i}`} {...getLineProps({ line })}>
-									<span className="select-none text-zinc-600 mr-6 inline-block w-6 text-right">
+									<span className="select-none text-muted-foreground/40 mr-6 inline-block w-6 text-right">
 										{paddedLineGutter}
 									</span>
 									{line.map((token, key) => (
@@ -480,7 +478,7 @@ function CopyCodeButton({
 			type="button"
 			aria-label={t`Copy code snippet`}
 			className={cn(
-				"p-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors",
+				"inline-flex items-center justify-center border border-border bg-background p-2 text-muted-foreground transition-colors hover:text-foreground",
 				className,
 			)}
 			onClick={() => {
@@ -489,9 +487,9 @@ function CopyCodeButton({
 			}}
 		>
 			{copied ? (
-				<Check className="size-4 text-green-500" />
+				<Check className="size-4 text-secondary" strokeWidth={2.5} />
 			) : (
-				<Copy className="size-4 text-zinc-400" />
+				<Copy className="size-4" strokeWidth={2} />
 			)}
 		</button>
 	);
@@ -507,18 +505,20 @@ function SnippetSwitcher({
 	setSnippet: React.Dispatch<React.SetStateAction<SnippetName>>;
 }) {
 	return (
-		<div className="flex flex-col justify-start min-w-[180px] text-sm pt-6 px-4 border-r border-zinc-800">
-			<div className="flex flex-row lg:flex-col items-start gap-1">
+		<div className="flex flex-col justify-start min-w-[180px] text-sm pt-6 px-4 border-b lg:border-b-0 lg:border-r border-border">
+			<div className="flex flex-row lg:flex-col items-start gap-1 overflow-x-auto">
 				{snippets.map((snippet) => (
 					<button
 						key={snippet.name}
 						type="button"
 						onClick={() => setSnippet(snippet.name as SnippetName)}
 						className={cn(
-							"flex items-center cursor-pointer hover:bg-zinc-800 py-1.5 px-3 rounded-lg w-full text-left transition-colors",
+							"flex shrink-0 items-center cursor-pointer py-1.5 px-3 w-full text-left transition-colors",
 							{
-								"bg-zinc-800 text-zinc-100": currentSnippet === snippet.name,
-								"text-zinc-500": currentSnippet !== snippet.name,
+								"bg-muted text-foreground shadow-[inset_2px_0_0] shadow-secondary":
+									currentSnippet === snippet.name,
+								"text-muted-foreground hover:text-foreground":
+									currentSnippet !== snippet.name,
 							},
 						)}
 					>
@@ -531,7 +531,6 @@ function SnippetSwitcher({
 }
 
 export function CodeExamples({ className }: { className?: string }) {
-	const { t } = useLingui();
 	const [language, setLanguage] = useState<Language>("TypeScript");
 	const [snippet, setSnippet] = useState<SnippetName>("JS Client");
 
@@ -564,80 +563,44 @@ export function CodeExamples({ className }: { className?: string }) {
 	}
 
 	return (
-		<section className={cn("py-24", className)}>
-			<div className="container max-w-6xl mx-auto px-4">
-				<div className="flex flex-col gap-8 mb-12">
-					<h3 className="text-muted-foreground uppercase text-sm leading-[140%] tracking-tight text-center">
-						<Trans>API-First</Trans>
-					</h3>
-					<h2 className="font-display text-foreground text-balance mx-auto max-w-3xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl xl:text-6xl -mt-4">
-						<Trans>Built on a developer-friendly platform</Trans>
-					</h2>
-					<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tight text-base md:text-lg">
-						<Trans>
-							Carbon provides a comprehensive MCP server and API clients in many
-							popular languages.
-						</Trans>
-					</p>
-					<div className="flex flex-col md:flex-row gap-4 justify-center">
-						<Button variant="secondary" size="xl" asChild>
-							<a
-								href="https://app.carbon.ms/docs/api/js/intro"
-								target="_blank"
-								rel="noopener"
-							>
-								<Trans>API Docs</Trans>
-								<Book />
-							</a>
-						</Button>
-						<Button variant="outline" size="xl" asChild>
-							<a
-								href="https://github.com/crbnos/carbon/tree/main/examples"
-								target="_blank"
-								rel="noopener"
-							>
-								<Trans>Code Examples</Trans>
-								<ChevronRight />
-							</a>
-						</Button>
-					</div>
-				</div>
+		<div
+			className={cn(
+				"dark relative w-full border border-border bg-card text-foreground",
+				className,
+			)}
+		>
+			<Tabs
+				defaultValue={language}
+				onValueChange={(l) => setLanguage(l as Language)}
+				className="relative flex items-end h-14 border-b border-border bg-background"
+			>
+				<TabsPrimitive.List className="flex items-end overflow-x-auto">
+					{languages.map(({ name }) => (
+						<LanguageTrigger key={name} value={name}>
+							{name}
+						</LanguageTrigger>
+					))}
+				</TabsPrimitive.List>
+			</Tabs>
 
-				<div className="relative w-full rounded-xl border border-zinc-800 bg-zinc-900 overflow-hidden">
-					<Tabs
-						defaultValue={language}
-						onValueChange={(l) => setLanguage(l as Language)}
-						className="relative flex items-end h-14 px-4 border-b border-zinc-800 bg-zinc-950"
-					>
-						<TabsPrimitive.List className="flex items-end gap-2 overflow-x-auto">
-							{languages.map(({ name }) => (
-								<LanguageTrigger key={name} value={name}>
-									{name}
-								</LanguageTrigger>
-							))}
-						</TabsPrimitive.List>
-					</Tabs>
-
-					<div className="flex flex-col lg:flex-row overflow-x-auto min-h-[420px] bg-zinc-900">
-						<SnippetSwitcher
-							snippets={languagesList[language]}
-							currentSnippet={snippet}
-							setSnippet={setSnippet}
-						/>
-						<div className="relative flex w-full pt-4 pb-8 pl-4 lg:pl-8 pr-4 font-mono text-sm overflow-x-auto bg-zinc-900">
-							<CodeEditor
-								language={getLanguage({ language, snippet })}
-								theme={editorTheme}
-								codeBlock={getCodeBlock({ language, snippet })}
-							/>
-							<CopyCodeButton
-								textToCopy={getCodeBlock({ language, snippet })}
-								className="absolute top-4 right-4"
-							/>
-						</div>
-					</div>
+			<div className="flex flex-col lg:flex-row overflow-x-auto min-h-[420px]">
+				<SnippetSwitcher
+					snippets={languagesList[language]}
+					currentSnippet={snippet}
+					setSnippet={setSnippet}
+				/>
+				<div className="relative flex w-full pt-4 pb-8 pl-4 lg:pl-8 pr-4 font-mono text-sm overflow-x-auto">
+					<CodeEditor
+						language={getLanguage({ language, snippet })}
+						theme={editorTheme}
+						codeBlock={getCodeBlock({ language, snippet })}
+					/>
+					<CopyCodeButton
+						textToCopy={getCodeBlock({ language, snippet })}
+						className="absolute top-4 right-4"
+					/>
 				</div>
 			</div>
-		</section>
+		</div>
 	);
 }

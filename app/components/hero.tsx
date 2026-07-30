@@ -131,7 +131,7 @@ export const Header = memo(({ className }: { className?: string }) => {
 				onClick={() => setShowWizard(true)}
 				size="xl"
 				variant="outline"
-				className="text-lg rounded-full"
+				className="text-lg"
 			>
 				<Trans>Get Started</Trans>
 				<Play className="size-5" />

@@ -1,15 +1,25 @@
 import { Trans, useLingui } from "@lingui/react/macro";
-import { BookOpen, Check, LucideHandCoins } from "lucide-react";
+import { Check } from "lucide-react";
 import { Link } from "react-router";
 import { Button } from "~/components/ui/button";
 import { GithubLogo } from "~/components/ui/github-logo";
 import { cn } from "~/lib/utils";
+
+const shell = "mx-auto w-full max-w-[1360px] px-6 sm:px-7";
+const eyebrow =
+	"font-mono text-[11px] uppercase leading-none tracking-[0.2em] text-muted-foreground";
+const heading =
+	"font-display font-semibold tracking-[-0.035em] leading-[0.95] text-[clamp(2.125rem,4.4vw,3.875rem)]";
+
+const DOCS_URL = "https://docs.carbon.ms";
+const GITHUB_URL = "https://github.com/crbnos/carbon";
 
 function usePlans() {
 	const { t } = useLingui();
 	return [
 		{
 			name: t`Starter`,
+			tag: t`Self-serve`,
 			priceHeadline: "$40",
 			priceSubtext: t`/user/month`,
 			action: t`Start 30-day free trial`,
@@ -26,13 +36,14 @@ function usePlans() {
 		},
 		{
 			name: t`Business`,
+			tag: t`Most popular`,
 			description: t`A managed cloud-hosted version of Carbon that includes support and all advanced features`,
 			priceHeadline: "$100",
 			priceSubtext: t`/user/month`,
 			action: t`Start 30-day free trial`,
 			url: "https://app.carbon.ms",
 			featured: true,
-				features: [
+			features: [
 				t`Technical support`,
 				t`API, webhooks, and integrations`,
 				t`Accounting`,
@@ -43,6 +54,7 @@ function usePlans() {
 		},
 		{
 			name: t`Enterprise`,
+			tag: t`Custom`,
 			priceHeadline: t`Contact us`,
 			priceSubtext: "",
 			action: t`Contact us`,
@@ -65,107 +77,129 @@ function usePlans() {
 export default function Pricing() {
 	const plans = usePlans();
 	return (
-		<section
-			id="pricing"
-			className="mx-auto flex w-screen max-w-7xl px-6 flex-col gap-8 py-14 md:px-8 min-h-[calc(100dvh-100px)] justify-center items-center"
-		>
-			<div className="flex flex-col gap-4 mx-auto text-center">
-				<div>
-					<Button variant="outline" className="cursor-default">
-						<LucideHandCoins />
-						<Trans>Pricing</Trans>
-					</Button>
-				</div>
-				<h2 className="font-display text-balance mx-auto text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl w-full">
-					<Trans>Simple pricing based on your needs</Trans>
-				</h2>
-			</div>
+		<>
+			<section className="border-b border-border py-24 sm:py-28">
+				<div className={shell}>
+					<div className={eyebrow}>PRICING</div>
+					<h1 className={cn(heading, "mt-5 max-w-[20ch]")}>
+						<Trans>Simple pricing based on your needs.</Trans>
+					</h1>
+					<p className="mt-6 max-w-[52ch] text-lg leading-relaxed text-muted-foreground">
+						<Trans>
+							Managed cloud or self-host the open-source core. Start free for 30
+							days — no sales call required.
+						</Trans>
+					</p>
 
-			<div className="mx-auto grid w-full justify-center grid-cols-1 lg:grid-cols-3 gap-4">
-				{plans.map((plan) => (
-					<div
-						key={plan.name}
-						className={cn(
-							"relative flex w-full flex-col gap-8 rounded-2xl bg-muted p-4 text-foreground overflow-hidden h-full border border-border",
-							plan.featured
-								? "dark:bg-secondary dark:text-secondary-foreground bg-background text-foreground"
-								: "",
-						)}
-					>
-						<div className="flex-1 flex flex-col gap-8">
-							<div className="flex items-center">
-								<div className="ml-4">
-									<h2 className="text-4xl font-medium tracking-tight leading-12">
-										{plan.name}
-									</h2>
-									<p className="h-12 text-sm leading-5 opacity-80">
-										{plan.description}
-									</p>
+					<div className="mt-14 grid grid-cols-1 gap-px border border-border bg-border lg:grid-cols-3">
+						{plans.map((plan) => (
+							<div
+								key={plan.name}
+								className={cn(
+									"flex flex-col p-8",
+									plan.featured
+										? "bg-muted shadow-[inset_0_2px_0] shadow-secondary"
+										: "bg-card",
+								)}
+							>
+								<div
+									className={cn(
+										"font-mono text-[10px] uppercase leading-none tracking-[0.18em]",
+										plan.featured ? "text-secondary" : "text-muted-foreground",
+									)}
+								>
+									{plan.tag}
+								</div>
+
+								<h2 className="mt-5 font-display text-2xl font-semibold tracking-[-0.02em]">
+									{plan.name}
+								</h2>
+								<p className="mt-2 min-h-[40px] text-sm leading-snug text-muted-foreground">
+									{plan.description}
+								</p>
+
+								<div className="mt-6 flex items-end gap-1.5">
+									<span className="font-display font-semibold leading-none tracking-[-0.04em] text-[clamp(2.25rem,4vw,3.25rem)]">
+										{plan.priceHeadline}
+									</span>
+									{plan.priceSubtext && (
+										<span className="mb-1 font-mono text-xs text-muted-foreground">
+											{plan.priceSubtext}
+										</span>
+									)}
+								</div>
+
+								<div className="my-7 h-px w-full bg-border" />
+
+								<ul className="flex flex-col gap-3">
+									{plan.features.map((feature) => (
+										<li key={feature} className="flex items-start gap-2.5">
+											<Check className="mt-0.5 size-4 shrink-0 text-secondary" />
+											<span className="text-sm leading-snug">{feature}</span>
+										</li>
+									))}
+								</ul>
+
+								<div className="mt-auto pt-8">
+									<Button
+										asChild
+										variant={plan.featured ? "accent" : "accentOutline"}
+										size="cta"
+										className="w-full"
+									>
+										<Link to={plan.url}>{plan.action}</Link>
+									</Button>
 								</div>
 							</div>
-
-							<div className="flex items-end justify-start gap-1 pl-4">
-								<p className="text-5xl font-medium tracking-tight leading-12">
-									{plan.priceHeadline}
-								</p>
-
-								<p className="text-xs leading-5 opacity-80">
-									{plan.priceSubtext}
-								</p>
-							</div>
-
-							<hr className="m-0 h-px w-full border-none bg-gradient-to-r from-zinc-200/0 via-zinc-500/30 to-zinc-200/0" />
-
-							<ul className="flex flex-col gap-2 font-normal">
-								{plan.features?.map((feature) => (
-									<li
-										key={feature}
-										className="flex items-start gap-4 text-base font-normal leading-[110%]"
-									>
-										<Check className="size-5 shrink-0 p-[3px] mt-0.5" />
-										<span className="flex">{feature}</span>
-									</li>
-								))}
-							</ul>
-						</div>
-
-						<div className="mt-auto w-full">
-							<hr className="m-0 h-px w-full border-none bg-gradient-to-r from-zinc-200/0 via-zinc-500/30 to-zinc-200/0 mb-8" />
-							<Button
-								variant={plan.featured ? "default" : "outline"}
-								className="w-full"
-								size="xl"
-								asChild
-							>
-								<Link to={plan.url}>{plan.action}</Link>
-							</Button>
-						</div>
+						))}
 					</div>
-				))}
-			</div>
 
-			<div className="flex flex-col gap-4 bg-muted dark:bg-muted bg-[url('/cta.webp')] dark:bg-none bg-[0_0] bg-no-repeat bg-cover rounded-2xl py-24 justify-center items-center px-4 w-full">
-				<h2 className="font-display text-balance mx-auto max-w-2xl text-center font-medium tracking-tight leading-[115%] text-3xl md:text-4xl lg:text-5xl w-full">
-					<Trans>Get started for free</Trans>
-				</h2>
-				<p className="text-muted-foreground dark:text-foreground text-balance mx-auto max-w-2xl text-center font-medium tracking-tight text-lg">
-					<Trans>View the docs and start developing locally</Trans>
-				</p>
-				<div className="flex flex-col md:flex-row justify-center gap-4 mt-8">
-					<Button variant="default" size="xl" asChild>
-						<a href="https://docs.carbon.ms">
-							<Trans>Read the Docs</Trans>
-							<BookOpen />
-						</a>
-					</Button>
-					<Button variant="outline" size="xl" asChild>
-						<a href="https://github.com/crbnos/carbon">
-							<GithubLogo />
-							<Trans>Star on GitHub</Trans>
-						</a>
-					</Button>
+					<p className="mt-6 font-mono text-[11px] uppercase tracking-[0.16em] text-muted-foreground">
+						BILLED PER USER, MONTHLY · 30-DAY FREE TRIAL · CANCEL ANYTIME
+					</p>
 				</div>
-			</div>
-		</section>
+			</section>
+
+			<section className="relative overflow-hidden py-28 sm:py-32">
+				<div
+					aria-hidden
+					className="pointer-events-none absolute inset-0"
+					style={{
+						backgroundImage:
+							"linear-gradient(rgba(128,128,128,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(128,128,128,0.06) 1px, transparent 1px)",
+						backgroundSize: "56px 56px",
+						maskImage:
+							"radial-gradient(90% 90% at 50% 50%, #000 10%, transparent 72%)",
+						WebkitMaskImage:
+							"radial-gradient(90% 90% at 50% 50%, #000 10%, transparent 72%)",
+					}}
+				/>
+				<div className="relative mx-auto max-w-[1000px] px-6 text-center">
+					<div className={eyebrow}>OPEN CORE · SELF-HOST</div>
+					<h2 className="mt-6 font-display font-semibold tracking-[-0.045em] leading-[0.96] text-[clamp(2.25rem,5vw,4.5rem)]">
+						<Trans>Get started for free.</Trans>
+					</h2>
+					<p className="mx-auto mt-6 max-w-[48ch] text-lg leading-relaxed text-muted-foreground">
+						<Trans>
+							Read the source, run it in your own environment, and start
+							developing locally.
+						</Trans>
+					</p>
+					<div className="mt-10 flex flex-wrap justify-center gap-3">
+						<Button asChild variant="accent" size="cta">
+							<a href={DOCS_URL}>
+								<Trans>Read the Docs</Trans>
+							</a>
+						</Button>
+						<Button asChild variant="accentOutline" size="cta">
+							<a href={GITHUB_URL} target="_blank" rel="noopener">
+								<GithubLogo className="size-4" />
+								<Trans>Star on GitHub</Trans>
+							</a>
+						</Button>
+					</div>
+				</div>
+			</section>
+		</>
 	);
 }

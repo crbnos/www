@@ -1,13 +1,11 @@
 import {
 	data,
 	isRouteErrorResponse,
-	Link,
 	Links,
 	Meta,
 	Outlet,
 	Scripts,
 	ScrollRestoration,
-	useFetcher,
 	useLoaderData,
 	useRouteError,
 } from "react-router";
@@ -17,26 +15,13 @@ import type {
 	MetaFunction,
 } from "react-router";
 import { Analytics } from "@vercel/analytics/react";
-import { Trans, useLingui } from "@lingui/react/macro";
-import { BookOpen, Moon, Play, Sun } from "lucide-react";
-import { type ReactNode, useEffect, useState } from "react";
-import { flushSync } from "react-dom";
+import { Trans } from "@lingui/react/macro";
+import { type ReactNode, useState } from "react";
 import Tailwind from "~/styles/tailwind.css?url";
 import { Footer } from "./components/footer";
+import { Header } from "./components/header";
 import { LocaleProvider } from "./lib/i18n";
-import { Button } from "./components/ui/button";
 import { ClientHintCheck, getHints } from "./components/ui/client-hints";
-import { DiscordLogo } from "./components/ui/discord-logo";
-import { GithubLogo } from "./components/ui/github-logo";
-import {
-	NavigationMenu,
-	NavigationMenuContent,
-	NavigationMenuItem,
-	NavigationMenuLink,
-	NavigationMenuList,
-	NavigationMenuTrigger,
-	navigationMenuTriggerStyle,
-} from "./components/ui/navigation-menu";
 import {
 	defaultAnswers,
 	type FormAnswers,
@@ -44,13 +29,10 @@ import {
 	WizardContext,
 	WizardForm,
 } from "./components/wizard-form";
-import { setClientMode, useMode } from "./hooks/useMode";
-import { cn } from "./lib/utils";
+import { useMode } from "./hooks/useMode";
 import { loadLinguiCatalog } from "./services/lingui.server";
 import { getLocale } from "./services/locale.server";
 import { getMode, setMode } from "./services/mode.server";
-import { startModeTransition } from "./utils/dom";
-import { path } from "./utils/path";
 import { fetchStatus } from "./utils/status";
 
 export const config = { runtime: "edge" };
@@ -202,18 +184,7 @@ function Document({
 	title?: string;
 	mode?: "light" | "dark";
 }) {
-	const { t } = useLingui();
 	const { showWizard, setShowWizard } = useWizard();
-	const fetcher = useFetcher<typeof action>();
-	const [scrolled, setScrolled] = useState(false);
-
-	useEffect(() => {
-		const handleScroll = () => {
-			setScrolled(window.scrollY > 200);
-		};
-		window.addEventListener("scroll", handleScroll, { passive: true });
-		return () => window.removeEventListener("scroll", handleScroll);
-	}, []);
 
 	return (
 		<html lang="en" className={`${mode} h-full overflow-x-hidden w-[100dvw]`}>
@@ -227,163 +198,12 @@ function Document({
 			</head>
 			<body
 				suppressHydrationWarning
-				className="h-[100dvh] w-[100dvw] flex flex-col bg-background text-foreground antialiased selection:bg-[#60ffd3] selection:text-[#000000] "
+				className="min-h-[100dvh] w-[100dvw] flex flex-col bg-background text-foreground antialiased selection:bg-[#60ffd3] selection:text-[#000000] "
 			>
-				<header
-					className={cn(
-						"fixed lg:top-4 left-0 right-0 lg:left-1/2 lg:w-[960px] lg:rounded-2xl shadow-sm z-header flex select-none items-center py-4 pl-5 pr-2 h-[var(--header-height)] border-b lg:border bg-background/80 backdrop-blur-md lg:transition-[width,transform] lg:duration-500 lg:ease-in-out lg:-translate-x-1/2",
-						scrolled && "lg:w-[640px]",
-					)}
-				>
-					<div className=" mx-auto flex px-2 items-center justify-between gap-2 z-logo text-foreground w-full">
-						<Link
-							to="/"
-							className="cursor-pointer flex flex-row items-end gap-2 flex-shrink-0 font-display"
-						>
-							<img
-								src="/brand/carbon-word-light.svg"
-								alt="Carbon"
-								className="h-7 w-auto block dark:hidden"
-							/>
-							<img
-								src="/brand/carbon-word-dark.svg"
-								alt="Carbon"
-								className="h-7 w-auto hidden dark:block"
-							/>
-						</Link>
-						<div className="flex items-center gap-2">
-							<NavigationMenu
-								className={cn(
-									"hidden md:flex transition-[opacity,transform] duration-500 ease-in-out",
-									scrolled &&
-										"lg:opacity-0 lg:scale-95 lg:hidden lg:pointer-events-none",
-								)}
-							>
-								<NavigationMenuList>
-									<NavigationMenuItem>
-										<NavigationMenuLink
-											className={navigationMenuTriggerStyle()}
-											asChild
-										>
-											<a
-												href="https://learn.carbon.ms"
-												target="_blank"
-												rel="noopener"
-											>
-												<Trans>Product</Trans>
-											</a>
-										</NavigationMenuLink>
-									</NavigationMenuItem>
-									<NavigationMenuItem>
-										<NavigationMenuLink
-											className={navigationMenuTriggerStyle()}
-											asChild
-										>
-											<Link prefetch="intent" to="/pricing">
-												<Trans>Pricing</Trans>
-											</Link>
-										</NavigationMenuLink>
-									</NavigationMenuItem>
+				<Header />
 
-									<NavigationMenuItem>
-										<NavigationMenuTrigger><Trans>Developers</Trans></NavigationMenuTrigger>
-										<NavigationMenuContent>
-											<div className="flex flex-col p-3 w-[325px]">
-												<NavigationMenuLink asChild>
-													<a
-														href="https://discord.gg/gxckQyanG"
-														className="flex items-center gap-3 p-3 hover:bg-accent rounded-md"
-													>
-														<DiscordLogo className="size-12 bg-[#5865F2] text-white rounded-lg p-2" />
-														<div className="flex flex-col gap-0">
-															<span><Trans>Discord</Trans></span>
-															<span className="text-xs text-muted-foreground">
-																<Trans>Join our community chat</Trans>
-															</span>
-														</div>
-													</a>
-												</NavigationMenuLink>
-												<NavigationMenuLink asChild>
-													<a
-														href="https://github.com/crbnos/carbon"
-														className="flex items-center gap-3 p-3 hover:bg-accent rounded-md"
-													>
-														<GithubLogo className="size-12 bg-[#333333] text-white dark:bg-white dark:text-[#333333] rounded-lg p-2" />
-														<div className="flex flex-col gap-0">
-															<span><Trans>GitHub</Trans></span>
-															<span className="text-xs text-muted-foreground">
-																<Trans>View our source code and contribute</Trans>
-															</span>
-														</div>
-													</a>
-												</NavigationMenuLink>
-												<NavigationMenuLink asChild>
-													<a
-														href="https://docs.carbon.ms"
-														className="flex items-center gap-3 p-3 hover:bg-accent rounded-md"
-													>
-														<BookOpen className="size-12 bg-primary dark:bg-secondary text-primary-foreground dark:text-secondary-foreground rounded-lg p-2" />
-														<div className="flex flex-col gap-0">
-															<span><Trans>Documentation</Trans></span>
-															<span className="text-xs text-muted-foreground">
-																<Trans>Developer guides and API reference</Trans>
-															</span>
-														</div>
-													</a>
-												</NavigationMenuLink>
-											</div>
-										</NavigationMenuContent>
-									</NavigationMenuItem>
-
-									<NavigationMenuItem>
-										<NavigationMenuLink
-											className={navigationMenuTriggerStyle()}
-											asChild
-										>
-											<Link to="/sales"><Trans>Enterprise</Trans></Link>
-										</NavigationMenuLink>
-									</NavigationMenuItem>
-								</NavigationMenuList>
-							</NavigationMenu>
-							<Button
-								variant="ghost"
-								size="icon"
-								className={cn(
-									"cursor-pointer",
-									mode === "dark" && "hover:rotate-180 transition-all",
-								)}
-								onClick={() => {
-									const nextMode = mode === "light" ? "dark" : "light";
-									startModeTransition(nextMode, () => {
-										flushSync(() => {
-											setClientMode(nextMode);
-										});
-										fetcher.submit(
-											{ mode: nextMode },
-											{ method: "post", action: path.to.root },
-										);
-									});
-								}}
-							>
-								{mode === "light" ? <Moon /> : <Sun />}
-							</Button>
-							<Button
-								variant="default"
-								className="cursor-pointer hidden sm:flex"
-								asChild
-							>
-								<a href="https://app.carbon.ms">
-									<Trans>Try It Now</Trans>
-									<Play className="size-4" />
-								</a>
-							</Button>
-						</div>
-					</div>
-				</header>
-
-				<div className="relative flex h-full w-full items-start justify-center">
-					{/* <LightRays /> */}
-					<main className="flex flex-col w-full pt-[var(--header-height)]">
+				<div className="relative flex w-full justify-center">
+					<main className="flex flex-col w-full">
 						{children}
 						<Footer />
 					</main>
@@ -435,10 +255,10 @@ export function ErrorBoundary() {
 			: String(error);
 
 	return (
-		// LocaleProvider is required because <Document> calls useLingui(). Without
-		// it, any error that reaches this boundary throws a second, opaque
-		// "Cannot destructure property '_'" error and white-screens instead of
-		// rendering the message below.
+		// LocaleProvider is required because <Document> renders <Header>/<Footer>,
+		// which use <Trans>/useLingui. Without it, any error that reaches this
+		// boundary throws a second, opaque "Cannot destructure property '_'" error
+		// and white-screens instead of rendering the message below.
 		<LocaleProvider>
 			<Document title="Error!">
 				<div className="light">

@@ -64,19 +64,26 @@ export default {
 					ring: "hsl(var(--sidebar-ring))",
 				},
 			},
+			// Flat aesthetic: square corners everywhere. `full` is kept for genuine
+			// circles (avatars, status dots, blobs), everything else is 0.
 			borderRadius: {
-				xl: "calc(var(--radius) + 4px)",
-				lg: "var(--radius)",
-				md: "calc(var(--radius) - 2px)",
-				sm: "calc(var(--radius) - 4px)",
+				none: "0px",
+				sm: "0px",
+				DEFAULT: "0px",
+				md: "0px",
+				lg: "0px",
+				xl: "0px",
+				"2xl": "0px",
+				"3xl": "0px",
+				full: "9999px",
 			},
 			fontSize: {
 				xxs: "0.675rem",
 			},
 			fontFamily: {
-				sans: ["Geist Variable", ...fontFamily.sans],
-				mono: ["Geist Mono Variable", ...fontFamily.mono],
-				display: ["Barlow Semi Condensed", ...fontFamily.sans],
+				sans: ["Archivo", "Geist Variable", ...fontFamily.sans],
+				mono: ["JetBrains Mono", "Geist Mono Variable", ...fontFamily.mono],
+				display: ["Archivo", "Barlow Semi Condensed", ...fontFamily.sans],
 			},
 			width: {
 				"form-sm": "360px",
@@ -121,6 +128,23 @@ export default {
 						transform: "translateX(calc(-50% - var(--marquee-gap, 2rem) / 2))",
 					},
 				},
+				"cb-word": {
+					"0%": {
+						opacity: "0",
+						transform: "translateY(0.42em) rotateX(-55deg)",
+					},
+					"100%": { opacity: "1", transform: "none" },
+				},
+				"cb-flow": {
+					"0%": { transform: "translateX(-8%)", opacity: "0" },
+					"12%": { opacity: "1" },
+					"88%": { opacity: "1" },
+					"100%": { transform: "translateX(108%)", opacity: "0" },
+				},
+				"cb-blink": {
+					"0%, 49%": { opacity: "1" },
+					"50%, 100%": { opacity: "0" },
+				},
 			},
 			animation: {
 				"accordion-down": "accordion-down 0.2s ease-out",
@@ -128,6 +152,9 @@ export default {
 				gradient: "gradient 8s linear infinite",
 				"shiny-text": "shiny-text 8s infinite",
 				marquee: "marquee var(--marquee-duration, 40s) linear infinite",
+				"cb-word": "cb-word 0.55s cubic-bezier(0.2, 0.7, 0.2, 1)",
+				"cb-flow": "cb-flow 5.5s linear infinite",
+				"cb-blink": "cb-blink 1.1s step-end infinite",
 			},
 			screens: {
 				tall: {
