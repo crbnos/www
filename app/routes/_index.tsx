@@ -294,6 +294,8 @@ const featureRows = [
 		],
 		shotLabel: msg`Part configurator / BOM tree`,
 		shot: "configurator",
+		shotLight: "/screenshots/bom-light.jpg",
+		shotDark: "/screenshots/bom-dark.jpg",
 		flip: false,
 	},
 	{
@@ -322,6 +324,8 @@ const featureRows = [
 		],
 		shotLabel: msg`Quality / traceability record`,
 		shot: "traceability",
+		shotLight: "/screenshots/traceability-light.jpg",
+		shotDark: "/screenshots/traceability-dark.jpg",
 		flip: false,
 	},
 ];
@@ -889,7 +893,10 @@ function FeatureRows() {
 	return (
 		<section className="border-b border-border py-28 sm:py-32">
 			<div className={cn(shell, "flex flex-col gap-24 lg:gap-32")}>
-				{featureRows.map((f) => (
+				{featureRows.map((f) => {
+					const shotLight = "shotLight" in f ? f.shotLight : undefined;
+					const shotDark = "shotDark" in f ? f.shotDark : undefined;
+					return (
 					<Reveal
 						key={f.id}
 						className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-14"
@@ -915,13 +922,27 @@ function FeatureRows() {
 							)}
 						>
 							<div className="relative overflow-hidden sm:h-[min(52vh,480px)]">
-								<Screenshot
-									label={i18n._(f.shotLabel)}
-								/>
+								{shotLight && shotDark ? (
+									<>
+										<Screenshot
+											className="dark:hidden"
+											src={shotLight}
+											label={i18n._(f.shotLabel)}
+										/>
+										<Screenshot
+											className="hidden dark:block"
+											src={shotDark}
+											label={i18n._(f.shotLabel)}
+										/>
+									</>
+								) : (
+									<Screenshot label={i18n._(f.shotLabel)} />
+								)}
 							</div>
 						</div>
 					</Reveal>
-				))}
+					);
+				})}
 			</div>
 		</section>
 	);

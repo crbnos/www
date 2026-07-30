@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. placeholder {0}: mod.code
-#: app/routes/_index.tsx:833
+#: app/routes/_index.tsx:837
 msgid "{0} · {modName} — module detail"
 msgstr "{0} · {modName} — 模块详情"
 
@@ -92,7 +92,7 @@ msgstr "所有高级功能可用"
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "所有Carbon商标、徽标或其他品牌元素不得以任何方式修改或用于任何其他目的，仅限用于代表Carbon Manufacturing Systems Corporation。"
 
-#: app/routes/_index.tsx:968
+#: app/routes/_index.tsx:989
 msgid "An API for the entire organization."
 msgstr "面向整个组织的 API"
 
@@ -100,8 +100,8 @@ msgstr "面向整个组织的 API"
 msgid "Analytics"
 msgstr "分析"
 
-#: app/routes/_index.tsx:634
-#: app/routes/_index.tsx:641
+#: app/routes/_index.tsx:638
+#: app/routes/_index.tsx:645
 msgid "Animated assembly instructions"
 msgstr ""
 
@@ -109,7 +109,7 @@ msgstr ""
 msgid "API"
 msgstr "API"
 
-#: app/routes/_index.tsx:978
+#: app/routes/_index.tsx:999
 msgid "API Docs"
 msgstr "API 文档"
 
@@ -125,7 +125,7 @@ msgstr "AS9100"
 msgid "AS9100, FAI, full genealogy"
 msgstr "AS9100、FAI、完整溯源"
 
-#: app/routes/_index.tsx:1144
+#: app/routes/_index.tsx:1165
 msgid "Ask your agent what it thinks"
 msgstr "询问您的代理的看法"
 
@@ -137,7 +137,7 @@ msgstr "审计日志"
 msgid "Audit trail is the database"
 msgstr "审计追踪就是数据库"
 
-#: app/routes/_index.tsx:1117
+#: app/routes/_index.tsx:1138
 msgid "Auditable by construction."
 msgstr "通过构建可审计。"
 
@@ -190,7 +190,7 @@ msgstr "手工重新输入的BOM"
 msgid "Brand Assets"
 msgstr "品牌资产"
 
-#: app/routes/_index.tsx:588
+#: app/routes/_index.tsx:592
 msgid "Build <0/><1/>at the speed of software."
 msgstr "以软件的速度 <0/><1/>构建。"
 
@@ -206,11 +206,11 @@ msgstr "购买源代码"
 msgid "CAD"
 msgstr "CAD"
 
-#: app/routes/_index.tsx:850
+#: app/routes/_index.tsx:854
 msgid "CAD to cash, unbroken."
 msgstr "从CAD到现金，不中断。"
 
-#: app/routes/_index.tsx:623
+#: app/routes/_index.tsx:627
 msgid "CARBON / ASSEMBLY INSTRUCTIONS"
 msgstr "CARBON / 组装说明"
 
@@ -218,15 +218,15 @@ msgstr "CARBON / 组装说明"
 msgid "Carbon combines ERP, MES, and QMS into a single, unified system."
 msgstr "Carbon 将 ERP、MES 和 QMS 整合到一个统一的系统中。"
 
-#: app/routes/_index.tsx:596
+#: app/routes/_index.tsx:600
 msgid "Carbon is the engineering-first operating system for manufacturers. Quote, plan, buy, build, inspect and ship on one live model of your factory — from a ten-person prototype shop to a rate-production line."
 msgstr "Carbon是面向制造商的工程优先操作系统。在您工厂的一个实时模型上进行报价、计划、采购、构建、检查和发货——从十人原型车间到批量生产线。"
 
-#: app/routes/_index.tsx:1147
+#: app/routes/_index.tsx:1168
 msgid "Carbon's source code is available. Copy the prompt below into your favorite LLM."
 msgstr "Carbon的源代码是可用的。将下面的提示复制到您喜欢的LLM中。"
 
-#: app/routes/_index.tsx:321
+#: app/routes/_index.tsx:323
 msgid "Certificates generated from live data"
 msgstr "从实时数据生成的证书"
 
@@ -310,7 +310,7 @@ msgstr "联系信息"
 
 #: app/components/header.tsx:154
 #: app/components/header.tsx:250
-#: app/routes/_index.tsx:1231
+#: app/routes/_index.tsx:1252
 msgid "Contact Sales"
 msgstr "联系销售"
 
@@ -319,11 +319,11 @@ msgstr "联系销售"
 msgid "Contact us"
 msgstr "联系我们"
 
-#: app/routes/_index.tsx:1095
+#: app/routes/_index.tsx:1116
 msgid "Copied"
 msgstr "已复制"
 
-#: app/routes/_index.tsx:1095
+#: app/routes/_index.tsx:1116
 msgid "Copy"
 msgstr "复制"
 
@@ -343,7 +343,7 @@ msgstr "事后猜测的成本"
 msgid "Create a branded ordering experience that drives production"
 msgstr "创建品牌化的订购体验，推动生产"
 
-#: app/routes/_index.tsx:1218
+#: app/routes/_index.tsx:1239
 msgid "Create a company, connect the MCP, release your first job today."
 msgstr "创建公司、连接MCP、今天发布第一个作业。"
 
@@ -412,7 +412,7 @@ msgstr "开发者"
 msgid "Digital job travelers"
 msgstr "数字作业单"
 
-#: app/routes/_index.tsx:305
+#: app/routes/_index.tsx:307
 msgid "Digital travelers with work instructions"
 msgstr "带有工作说明的数字作业单"
 
@@ -475,7 +475,7 @@ msgstr "ERP · MRP · MES · QMS"
 msgid "Every operation timestamped"
 msgstr "每个操作都有时间戳"
 
-#: app/routes/_index.tsx:854
+#: app/routes/_index.tsx:858
 msgid "Every stage writes to the same record. No handoffs, no re-keying, no reconciliation."
 msgstr "每个阶段都写入同一条记录。没有交接、没有重新输入、没有协调。"
 
@@ -512,7 +512,7 @@ msgstr "财务"
 msgid "Finite capacity model"
 msgstr "有限产能模型"
 
-#: app/routes/_index.tsx:307
+#: app/routes/_index.tsx:309
 msgid "Finite capacity scheduling that reacts"
 msgstr "反应型有限产能调度"
 
@@ -520,7 +520,7 @@ msgstr "反应型有限产能调度"
 msgid "First article inspection"
 msgstr "首件检测"
 
-#: app/routes/_index.tsx:317
+#: app/routes/_index.tsx:319
 msgid "First article inspection, non-conformance, CAPA and gauge calibration sit on the same records as production. Pull any serial number and get its full genealogy — material certs, operators, measurements, deviations."
 msgstr "首件检测、不合格、CAPA和测量仪校准与生产坐在相同的记录中。拉取任何序列号并获取其完整溯源——物料证书、操作员、测量、偏差。"
 
@@ -528,7 +528,7 @@ msgstr "首件检测、不合格、CAPA和测量仪校准与生产坐在相同�
 msgid "Forward deployed engineer"
 msgstr "前置部署工程师"
 
-#: app/routes/_index.tsx:784
+#: app/routes/_index.tsx:788
 msgid "Four systems, one schema. Nothing to integrate."
 msgstr "四个系统、一个模式。没有整合。"
 
@@ -584,11 +584,11 @@ msgstr "托管偏好"
 msgid "Huge consulting bills"
 msgstr "巨大的咨询账单"
 
-#: app/routes/_index.tsx:1030
+#: app/routes/_index.tsx:1051
 msgid "If it has a bill of materials, Carbon runs it."
 msgstr "如果有物料清单，Carbon就能运行它。"
 
-#: app/routes/_index.tsx:1120
+#: app/routes/_index.tsx:1141
 msgid "Immutable journal ledger entries, granular permissions, and the controls regulated programs are held to."
 msgstr "不可变日志账本条目、细粒度权限和受管制程序所遵守的控制。"
 
@@ -600,7 +600,7 @@ msgstr "检测到事件"
 msgid "Industrial equipment"
 msgstr "工业设备"
 
-#: app/routes/_index.tsx:1173
+#: app/routes/_index.tsx:1194
 msgid "Integrated with the world's best software."
 msgstr "与世界最好的软件集成。"
 
@@ -684,7 +684,7 @@ msgstr "学习中心"
 msgid "Least expensive. Basic onboarding and email support"
 msgstr "最便宜。基础入门和电子邮件支持"
 
-#: app/routes/_index.tsx:726
+#: app/routes/_index.tsx:730
 msgid "LEGACY"
 msgstr "遗留"
 
@@ -692,7 +692,7 @@ msgstr "遗留"
 msgid "Legacy ERP"
 msgstr ""
 
-#: app/routes/_index.tsx:702
+#: app/routes/_index.tsx:706
 msgid "Legacy ERPs were built for accountants in 1998."
 msgstr "遗留ERP是在1998年为会计师构建的。"
 
@@ -741,11 +741,11 @@ msgstr "托管云或自托管开源内核。免费开始30天——无需销售�
 msgid "Managed Hosting"
 msgstr "托管托管"
 
-#: app/routes/_index.tsx:301
+#: app/routes/_index.tsx:303
 msgid "MANUFACTURING EXECUTION"
 msgstr ""
 
-#: app/routes/_index.tsx:988
+#: app/routes/_index.tsx:1009
 msgid "MCP Docs"
 msgstr "MCP 文档"
 
@@ -785,7 +785,7 @@ msgstr "多租户"
 msgid "Name"
 msgstr "名称"
 
-#: app/routes/_index.tsx:320
+#: app/routes/_index.tsx:322
 msgid "NCR to CAPA workflow with sign-off"
 msgstr "NCR到CAPA工作流程，带签核"
 
@@ -813,7 +813,7 @@ msgstr "无需自定义开发"
 msgid "One schema: API/MCP-first"
 msgstr ""
 
-#: app/routes/_index.tsx:583
+#: app/routes/_index.tsx:587
 msgid "ONE SYSTEM OF RECORD"
 msgstr "单一记录系统"
 
@@ -833,7 +833,7 @@ msgstr "正常运行"
 msgid "Operator terminal"
 msgstr "操作员终端"
 
-#: app/routes/_index.tsx:303
+#: app/routes/_index.tsx:305
 msgid "Operators clock into operations from a terminal or a scanner. Machines report cycle time over MTConnect and OPC-UA. Scrap, labor and yield land in costing as they happen — not at month end."
 msgstr "操作员从终端或扫描仪打卡进入操作。机器通过MTConnect和OPC-UA报告周期时间。废料、劳动力和产率在发生时进入成本——不是在月底。"
 
@@ -841,7 +841,7 @@ msgstr "操作员从终端或扫描仪打卡进入操作。机器通过MTConnect
 msgid "ops on the floor"
 msgstr "工厂操作"
 
-#: app/routes/_index.tsx:1237
+#: app/routes/_index.tsx:1258
 msgid "OR SELF-HOST THE OPEN SOURCE CORE"
 msgstr "或自托管开源内核"
 
@@ -926,7 +926,7 @@ msgstr "采购"
 msgid "Purchasing & receipts"
 msgstr "采购和收据"
 
-#: app/routes/_index.tsx:306
+#: app/routes/_index.tsx:308
 msgid "QR and barcode tracking on every unit"
 msgstr "每个单元上的二维码和条码追踪"
 
@@ -935,11 +935,11 @@ msgstr "每个单元上的二维码和条码追踪"
 msgid "Quality"
 msgstr "质量"
 
-#: app/routes/_index.tsx:315
+#: app/routes/_index.tsx:317
 msgid "QUALITY"
 msgstr "质量"
 
-#: app/routes/_index.tsx:323
+#: app/routes/_index.tsx:325
 msgid "Quality / traceability record"
 msgstr "质量/可追溯性记录"
 
@@ -987,7 +987,7 @@ msgstr "读取源代码、在您自己的环境中运行，并开始在本地开
 msgid "Recommended. Priority support with dedicated account manager"
 msgstr "推荐。优先支持和专属账户经理"
 
-#: app/routes/_index.tsx:1034
+#: app/routes/_index.tsx:1055
 msgid "Regulated or not, one-off or rate production — the primitives are the same. The configuration is yours."
 msgstr "无论是否受管制、一次性或批量生产——原始方法是相同的。配置是您的。"
 
@@ -996,7 +996,7 @@ msgstr "无论是否受管制、一次性或批量生产——原始方法是相
 msgid "Resources"
 msgstr "资源"
 
-#: app/routes/_index.tsx:626
+#: app/routes/_index.tsx:630
 msgid "REV 4 · LIVE"
 msgstr "REV 4 · 上线"
 
@@ -1084,7 +1084,7 @@ msgstr "半导体"
 msgid "Serial & lot genealogy"
 msgstr "序列和批次溯源"
 
-#: app/routes/_index.tsx:319
+#: app/routes/_index.tsx:321
 msgid "Serial and lot genealogy, forwards and back"
 msgstr "序列和批次溯源，前向和反向"
 
@@ -1100,7 +1100,7 @@ msgstr "共享数据库，数据隔离"
 msgid "SHARED SCHEMA"
 msgstr "共享模式"
 
-#: app/routes/_index.tsx:1215
+#: app/routes/_index.tsx:1236
 msgid "Ship faster than your competitors can quote."
 msgstr "比竞争对手报价更快地发货。"
 
@@ -1108,7 +1108,7 @@ msgstr "比竞争对手报价更快地发货。"
 msgid "Shipping"
 msgstr "运输"
 
-#: app/routes/_index.tsx:309
+#: app/routes/_index.tsx:311
 msgid "Shop floor / job traveler"
 msgstr "车间/作业单"
 
@@ -1148,7 +1148,7 @@ msgstr "软件即服务"
 msgid "Something went wrong"
 msgstr "出了问题"
 
-#: app/routes/_index.tsx:1140
+#: app/routes/_index.tsx:1161
 msgid "SOURCE AVAILABLE"
 msgstr "源代码可用"
 
@@ -1179,11 +1179,11 @@ msgstr "开始30天免费试用"
 
 #: app/components/header.tsx:144
 #: app/components/header.tsx:245
-#: app/routes/_index.tsx:1226
+#: app/routes/_index.tsx:1247
 msgid "Start Free"
 msgstr "免费开始"
 
-#: app/routes/_index.tsx:1212
+#: app/routes/_index.tsx:1233
 msgid "START NOW · NO CALL REQUIRED"
 msgstr "立即开始 · 无需电话"
 
@@ -1244,7 +1244,7 @@ msgstr "感谢您的消息！"
 msgid "the floor itself"
 msgstr "工厂本身"
 
-#: app/routes/_index.tsx:302
+#: app/routes/_index.tsx:304
 msgid "The floor, live to the second."
 msgstr "工厂，实时到秒。"
 
@@ -1252,7 +1252,7 @@ msgstr "工厂，实时到秒。"
 msgid "The Modern Manufacturing Stack"
 msgstr "现代制造堆栈"
 
-#: app/routes/_index.tsx:316
+#: app/routes/_index.tsx:318
 msgid "Traceability is the default state."
 msgstr "可追溯性是默认状态。"
 
@@ -1260,11 +1260,11 @@ msgstr "可追溯性是默认状态。"
 msgid "Traveler printed at 6am, stale by 9"
 msgstr "作业单在早上6点打印，到9点就过期了"
 
-#: app/routes/_index.tsx:1113
+#: app/routes/_index.tsx:1134
 msgid "Trusted"
 msgstr "值得信赖的"
 
-#: app/routes/_index.tsx:655
+#: app/routes/_index.tsx:659
 msgid "Trusted by the world's most innovative"
 msgstr "受到世界最创新者的信任"
 
