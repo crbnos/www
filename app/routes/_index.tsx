@@ -471,7 +471,7 @@ function Hero() {
 					<span className="text-secondary">MES</span>
 					<span>/</span>
 					<span className="text-secondary">QMS</span>
-					<span className="ml-auto hidden bg-secondary/10 px-3 py-1.5 text-secondary sm:inline">
+					<span className="ml-auto hidden bg-secondary-surface px-3 py-1.5 text-secondary sm:inline">
 						<Trans>ONE SYSTEM OF RECORD</Trans>
 					</span>
 				</div>
@@ -893,7 +893,7 @@ function Agents() {
 							className="flex flex-col gap-4 bg-card p-8 transition-colors hover:bg-muted"
 						>
 							<div className="font-mono text-[10px] uppercase leading-none tracking-wide text-secondary">
-								<span className="inline-block bg-secondary/10 px-3 py-1.5">
+								<span className="inline-block bg-secondary-surface px-3 py-1.5">
 									{p.tag}
 								</span>
 							</div>
@@ -1006,7 +1006,7 @@ function TrustOpen() {
 				<Reveal className="grid grid-cols-1 gap-px border border-border bg-border lg:grid-cols-2">
 					<div className="bg-card p-10 sm:p-11">
 						<div className="font-mono text-[11px] uppercase leading-none tracking-[0.2em] text-secondary">
-							<span className="inline-block bg-secondary/10 px-3 py-1.5">
+							<span className="inline-block bg-secondary-surface px-3 py-1.5">
 								<Trans>Trusted</Trans>
 							</span>
 						</div>
@@ -1033,7 +1033,7 @@ function TrustOpen() {
 
 					<div className="bg-muted p-10 sm:p-11">
 						<div className="font-mono text-[11px] uppercase leading-none tracking-[0.2em] text-secondary">
-							<span className="inline-block bg-secondary/10 px-3 py-1.5">
+							<span className="inline-block bg-secondary-surface px-3 py-1.5">
 								<Trans>SOURCE AVAILABLE</Trans>
 							</span>
 						</div>

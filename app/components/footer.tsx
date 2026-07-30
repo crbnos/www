@@ -47,7 +47,6 @@ export function Footer() {
               <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="/brand"><Trans>Brand Assets</Trans></Link>
               <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="/learn"><Trans>Blog</Trans></Link>
               <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="/contact"><Trans>Contact</Trans></Link>
-              <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="/oss"><Trans>OSS Friends</Trans></Link>
               <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="/sales"><Trans>Sales</Trans></Link>
             </div>
           </div>
