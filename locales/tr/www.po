@@ -334,7 +334,7 @@ msgstr "Kopyalandı"
 msgid "Copy"
 msgstr "Kopyala"
 
-#: app/components/code-examples.tsx:479
+#: app/components/code-examples.tsx:531
 msgid "Copy code snippet"
 msgstr "Kod parçacığını kopyala"
 

@@ -5,6 +5,7 @@ import * as TabsPrimitive from "@radix-ui/react-tabs";
 import { Check, Copy } from "lucide-react";
 import { Highlight, Prism, type PrismTheme } from "prism-react-renderer";
 import { useEffect, useState } from "react";
+import { useMode } from "~/hooks/useMode";
 import { cn } from "~/lib/utils";
 
 // Register C# language with Prism (not included in default bundle)
@@ -28,7 +29,7 @@ Object.assign(Prism.languages, { csharp: csharpGrammar });
 
 const Tabs = TabsPrimitive.Root;
 
-const editorTheme = {
+const darkEditorTheme = {
 	plain: {
 		color: "#F8F8F2",
 		backgroundColor: "transparent",
@@ -74,6 +75,57 @@ const editorTheme = {
 			types: ["property"],
 			style: {
 				color: "#3CEEAE",
+			},
+		},
+	],
+} satisfies PrismTheme;
+
+const lightEditorTheme = {
+	plain: {
+		color: "#1e293b",
+		backgroundColor: "transparent",
+	},
+	styles: [
+		{
+			types: ["keyword"],
+			style: {
+				color: "#0284c7",
+			},
+		},
+		{
+			types: ["function"],
+			style: {
+				color: "#7c3aed",
+			},
+		},
+		{
+			types: ["string"],
+			style: {
+				color: "#059669",
+			},
+		},
+		{
+			types: ["string-property"],
+			style: {
+				color: "#7c3aed",
+			},
+		},
+		{
+			types: ["number"],
+			style: {
+				color: "#db2777",
+			},
+		},
+		{
+			types: ["comment"],
+			style: {
+				color: "#94a3b8",
+			},
+		},
+		{
+			types: ["property"],
+			style: {
+				color: "#059669",
 			},
 		},
 	],
@@ -531,8 +583,10 @@ function SnippetSwitcher({
 }
 
 export function CodeExamples({ className }: { className?: string }) {
+	const mode = useMode();
 	const [language, setLanguage] = useState<Language>("TypeScript");
 	const [snippet, setSnippet] = useState<SnippetName>("JS Client");
+	const editorTheme = mode === "dark" ? darkEditorTheme : lightEditorTheme;
 
 	useEffect(() => {
 		setSnippet(languagesList[language][0].name);
@@ -565,7 +619,7 @@ export function CodeExamples({ className }: { className?: string }) {
 	return (
 		<div
 			className={cn(
-				"dark relative w-full border border-border bg-card text-foreground",
+				"relative w-full border border-border bg-card text-foreground",
 				className,
 			)}
 		>

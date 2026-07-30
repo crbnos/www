@@ -334,7 +334,7 @@ msgstr "복사됨"
 msgid "Copy"
 msgstr "복사"
 
-#: app/components/code-examples.tsx:479
+#: app/components/code-examples.tsx:531
 msgid "Copy code snippet"
 msgstr "코드 스니펫 복사"
 

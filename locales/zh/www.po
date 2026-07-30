@@ -334,7 +334,7 @@ msgstr "已复制"
 msgid "Copy"
 msgstr "复制"
 
-#: app/components/code-examples.tsx:479
+#: app/components/code-examples.tsx:531
 msgid "Copy code snippet"
 msgstr "复制代码片段"
 

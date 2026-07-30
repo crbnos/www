@@ -334,7 +334,7 @@ msgstr "कॉपी किया गया"
 msgid "Copy"
 msgstr "कॉपी"
 
-#: app/components/code-examples.tsx:479
+#: app/components/code-examples.tsx:531
 msgid "Copy code snippet"
 msgstr "कोड स्निपेट कॉपी करें"
 
