@@ -80,8 +80,7 @@ const heroWords: MessageDescriptor[] = [
 const statusQuo = [
 	{
 		id: "legacy",
-		tag: msg`LEGACY STACK`,
-		name: msg`Rip & replace`,
+		name: msg`Legacy ERP`,
 		rows: [
 			msg`18-month implementation`,
 			msg`Huge consulting bills`,
@@ -92,8 +91,7 @@ const statusQuo = [
 	},
 	{
 		id: "spreadsheet",
-		tag: msg`SPREADSHEET REALITY`,
-		name: msg`Duct tape`,
+		name: msg`Spreadsheet`,
 		rows: [
 			msg`Shortages found on the floor`,
 			msg`Costing guessed after the fact`,
@@ -104,12 +102,11 @@ const statusQuo = [
 	},
 	{
 		id: "carbon",
-		tag: msg`CARBON`,
 		name: msg`Next Generation`,
 		accent: true,
 		rows: [
 			msg`Live in weeks`,
-			msg`One schema: part to invoice`,
+			msg`One schema: API/MCP-first`,
 			msg`Full traceability and COGS`,
 			msg`Every operation timestamped`,
 			msg`Audit trail is the database`,
@@ -120,7 +117,8 @@ const statusQuo = [
 const modules = [
 	{
 		code: "ERP",
-		name: msg`Costing`,
+		shot: "sales-order",
+		name: msg`Inventory & Costing`,
 		note: msg`money in, money out`,
 		rows: [
 			msg`Quotes & RFQ pricing`,
@@ -134,6 +132,7 @@ const modules = [
 	},
 	{
 		code: "MRP",
+		shot: "kanban",
 		name: msg`Planning`,
 		note: msg`what to make, when`,
 		rows: [
@@ -149,6 +148,7 @@ const modules = [
 	},
 	{
 		code: "MES",
+		shot: "mes-model",
 		name: msg`Execution`,
 		note: msg`the floor itself`,
 		rows: [
@@ -162,6 +162,7 @@ const modules = [
 	},
 	{
 		code: "QMS",
+		shot: "traceability",
 		name: msg`Quality`,
 		note: msg`proof, not paperwork`,
 		rows: [
@@ -263,8 +264,6 @@ const compliance: MessageDescriptor[] = [
 const integrations = [
 	// Product names stay literal; only the category ("kind") is translated.
 	{ name: "Onshape", kind: msg`CAD` },
-	{ name: "Rillet", kind: msg`Finance` },
-	{ name: "Xero", kind: msg`Finance` },
 	{ name: "Ramp", kind: msg`Expenses` },
 	{ name: "Linear", kind: msg`Tasks` },
 	{ name: "Jira", kind: msg`Tasks` },
@@ -272,6 +271,8 @@ const integrations = [
 	{ name: "Ignition", kind: msg`SCADA` },
 	{ name: "Paperless Parts", kind: msg`Quoting` },
 	{ name: "Avalara", kind: msg`Taxes` },
+	{ name: "Rillet", kind: msg`Finance` },
+	{ name: "Xero", kind: msg`Finance` },
 	{ name: "Epson", kind: msg`Printer` },
 	{ name: "Brother", kind: msg`Printer` },
 	{ name: "Zebra ZPL", kind: msg`Printer` },
@@ -292,11 +293,12 @@ const featureRows = [
 			msg`Rolled-up cost at any configuration`,
 		],
 		shotLabel: msg`Part configurator / BOM tree`,
+		shot: "configurator",
 		flip: false,
 	},
 	{
 		id: "execution",
-		eyebrow: msg`EXECUTION`,
+		eyebrow: msg`MANUFACTURING EXECUTION`,
 		title: msg`The floor, live to the second.`,
 		body: msg`Operators clock into operations from a terminal or a scanner. Machines report cycle time over MTConnect and OPC-UA. Scrap, labor and yield land in costing as they happen — not at month end.`,
 		points: [
@@ -305,6 +307,7 @@ const featureRows = [
 			msg`Finite capacity scheduling that reacts`,
 		],
 		shotLabel: msg`Shop floor / job traveler`,
+		shot: "features-mes",
 		flip: true,
 	},
 	{
@@ -318,6 +321,7 @@ const featureRows = [
 			msg`Certificates generated from live data`,
 		],
 		shotLabel: msg`Quality / traceability record`,
+		shot: "traceability",
 		flip: false,
 	},
 ];
@@ -433,6 +437,110 @@ function Placeholder({ label, className }: { label: string; className?: string }
 	);
 }
 
+/**
+ * A product screenshot — or a muted screen recording — dropped into a panel.
+ * App views are wide and multi-column, so we never crop horizontally (which
+ * would slice off nav / sidebars):
+ *   - Below `sm`: the media shows at its natural height (phones). No fixed
+ *     frame, so a wide shot scaled to phone width never leaves dead space.
+ *   - `sm` and up: the media is pinned to the top of the fixed-height frame and
+ *     bleeds past it, fading into the card — reads as "the app continues below".
+ * `fit="cover"` instead fills the frame from the top-left (for pre-cropped,
+ * near-square regions). Pass `video` for a screen recording; `src` doubles as
+ * its poster (and as the still fallback for reduced-motion or a missing video).
+ * Falls back to <Placeholder> when nothing loads, so the page degrades
+ * gracefully until real assets land in /public/screenshots.
+ */
+function Screenshot({
+	src,
+	video,
+	label,
+	fit = "width",
+	eager = false,
+	className,
+}: {
+	src?: string;
+	video?: string;
+	label: string;
+	fit?: "width" | "cover";
+	eager?: boolean;
+	className?: string;
+}) {
+	const [loaded, setLoaded] = useState(false);
+	const [reduce, setReduce] = useState(false);
+	const [videoFailed, setVideoFailed] = useState(false);
+	const mediaRef = useRef<HTMLImageElement | HTMLVideoElement | null>(null);
+	useEffect(() => {
+		setReduce(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+	}, []);
+	const showVideo = !!video && !reduce && !videoFailed;
+	// onLoad/onLoadedData can fire before hydration (eager/cached media finish
+	// during SSR paint), so settle `loaded` on mount too. A <video> paints its
+	// poster immediately, so treat it as shown right away.
+	useEffect(() => {
+		const el = mediaRef.current;
+		if (!el) return;
+		if (el instanceof HTMLVideoElement) setLoaded(true);
+		else setLoaded(el.complete && el.naturalWidth > 0);
+	}, [src, showVideo]);
+
+	const mediaClass = cn(
+		"block w-full select-none transition-opacity duration-500",
+		loaded ? "opacity-100" : "opacity-0",
+		fit === "cover"
+			? "h-auto sm:absolute sm:inset-0 sm:h-full sm:object-cover sm:object-left-top"
+			: "h-auto sm:absolute sm:inset-x-0 sm:top-0",
+	);
+
+	return (
+		<div
+			className={cn(
+				"relative w-full overflow-hidden bg-card min-h-[220px] sm:min-h-0 sm:h-full",
+				className,
+			)}
+		>
+			{!loaded && <Placeholder label={label} className="absolute inset-0" />}
+			{showVideo ? (
+				<video
+					ref={(el) => {
+						mediaRef.current = el;
+					}}
+					key={video}
+					poster={src}
+					autoPlay
+					muted
+					loop
+					playsInline
+					preload="metadata"
+					aria-label={label}
+					onLoadedData={() => setLoaded(true)}
+					onError={() => setVideoFailed(true)}
+					className={mediaClass}
+				>
+					<source src={video} type="video/mp4" />
+				</video>
+			) : src ? (
+				<img
+					ref={(el) => {
+						mediaRef.current = el;
+					}}
+					src={src}
+					alt={label}
+					loading={eager ? "eager" : "lazy"}
+					onLoad={() => setLoaded(true)}
+					className={mediaClass}
+				/>
+			) : null}
+			{(showVideo || src) && loaded && fit === "width" && (
+				<div
+					aria-hidden
+					className="pointer-events-none absolute inset-0 hidden sm:block [background:linear-gradient(to_bottom,transparent_55%,hsl(var(--card)))]"
+				/>
+			)}
+		</div>
+	);
+}
+
 /* -------------------------------------------------------------------------- */
 /*  Sections                                                                   */
 /* -------------------------------------------------------------------------- */
@@ -518,8 +626,21 @@ function HeroDashboard() {
 						<Trans>REV 4 · LIVE</Trans>
 					</span>
 				</div>
-				<div className="relative h-[min(66vh,740px)] overflow-hidden border-t border-border">
-					<Placeholder label={t`Animated  assembly instructions`} />
+				<div className="relative overflow-hidden border-t border-border sm:h-[min(66vh,740px)]">
+					<Screenshot
+						className="dark:hidden"
+						src="/screenshots/assembly-light.jpeg"
+						video="/screenshots/assembly-light.mp4"
+						label={t`Animated assembly instructions`}
+						eager
+					/>
+					<Screenshot
+						className="hidden dark:block"
+						src="/screenshots/assembly-dark.jpeg"
+						video="/screenshots/assembly-dark.mp4"
+						label={t`Animated assembly instructions`}
+						eager
+					/>
 				</div>
 			</div>
 		</div>
@@ -577,9 +698,6 @@ function StatusQuo() {
 			<div className={shell}>
 				<Reveal className="flex flex-wrap items-end justify-between gap-10">
 					<div>
-						<div className={eyebrow}>
-							<Trans>THE STATUS QUO</Trans>
-						</div>
 						<h2 className={cn(heading, "mt-5 max-w-[22ch]")}>
 							<Trans>Legacy ERPs were built for accountants in 1998.</Trans>
 						</h2>
@@ -598,14 +716,7 @@ function StatusQuo() {
 							)}
 						>
 							<div className="flex items-center justify-between gap-2">
-								<div
-									className={cn(
-										"font-mono text-[10px] uppercase leading-none tracking-wide",
-										col.accent ? "text-secondary" : "text-muted-foreground",
-									)}
-								>
-									{i18n._(col.tag)}
-								</div>
+								
 								<div
 									className={cn(
 										"font-mono text-[10px] uppercase leading-none tracking-wide",
@@ -625,7 +736,7 @@ function StatusQuo() {
 							</div>
 							<ul
 								role="list"
-								className="flex flex-col divide-y divide-border/60"
+								className={cn("flex flex-col divide-y divide-border/60", col.accent && "divide-secondary/20")}
 							>
 								{col.rows.map((row, rowIndex) => (
 									<li
@@ -669,9 +780,6 @@ function OneModel() {
 		<section id="modules" className="border-b border-border py-28 sm:py-32">
 			<div className={shell}>
 				<Reveal>
-					<div className={eyebrow}>
-						<Trans>ONE DATA MODEL</Trans>
-					</div>
 					<h2 className={cn(heading, "mt-5 max-w-[26ch]")}>
 						<Trans>Four systems, one schema. Nothing to integrate.</Trans>
 					</h2>
@@ -720,8 +828,10 @@ function OneModel() {
 							))}
 						</div>
 					</div>
-					<div className="relative min-h-[360px] overflow-hidden bg-card lg:h-[520px]">
-						<Placeholder label={t`${mod.code} · ${modName} — module detail`} />
+					<div className="relative overflow-hidden bg-card sm:h-[420px] lg:h-[520px]">
+						<Screenshot
+							label={t`${mod.code} · ${modName} — module detail`}
+						/>
 					</div>
 				</div>
 			</div>
@@ -736,9 +846,6 @@ function HappyPath() {
 			<div className={shell}>
 				<Reveal className="flex flex-wrap items-end justify-between gap-8">
 					<div>
-						<div className={eyebrow}>
-							<Trans>THE NARROW PATH</Trans>
-						</div>
 						<h2 className={cn(heading, "mt-5")}>
 							<Trans>CAD to cash, unbroken.</Trans>
 						</h2>
@@ -807,8 +914,10 @@ function FeatureRows() {
 								f.flip && "lg:order-1",
 							)}
 						>
-							<div className="relative h-[min(52vh,480px)] overflow-hidden">
-								<Placeholder label={i18n._(f.shotLabel)} />
+							<div className="relative overflow-hidden sm:h-[min(52vh,480px)]">
+								<Screenshot
+									label={i18n._(f.shotLabel)}
+								/>
 							</div>
 						</div>
 					</Reveal>
@@ -855,9 +964,6 @@ function Agents() {
 			<div className={shell}>
 				<Reveal className="flex flex-wrap items-end justify-between gap-8">
 					<div>
-						<div className={eyebrow}>
-							<Trans>DEVELOPER PLATFORM</Trans>
-						</div>
 						<h2 className={cn(heading, "mt-5 max-w-[40ch]")}>
 							<Trans>An API for the entire organization.</Trans>
 						</h2>
@@ -920,9 +1026,6 @@ function Industries() {
 			<div className={shell}>
 				<Reveal className="flex flex-wrap items-end justify-between gap-8">
 					<div>
-						<div className={eyebrow}>
-							<Trans>INDUSTRIES</Trans>
-						</div>
 						<h2 className={cn(heading, "mt-5 max-w-[22ch]")}>
 							<Trans>If it has a bill of materials, Carbon runs it.</Trans>
 						</h2>
@@ -1066,9 +1169,6 @@ function Integrations() {
 		<section className="border-b border-border py-24">
 			<div className={shell}>
 				<Reveal>
-					<div className={eyebrow}>
-						<Trans>CONNECTED</Trans>
-					</div>
 					<h2 className="mb-12 mt-5 font-display font-semibold tracking-[-0.03em] leading-[0.98] text-[clamp(1.75rem,3vw,2.75rem)]">
 						<Trans>Integrated with the world's best software.</Trans>
 					</h2>
