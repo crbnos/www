@@ -31,18 +31,6 @@ msgstr "Implementação de 18 meses"
 msgid "21 CFR PART 11"
 msgstr "21 CFR PART 11"
 
-#: app/routes/_index.tsx:228
-#~ msgid ""
-#~ "412 lines parsed\n"
-#~ "matched 388 to prior routings\n"
-#~ "margin floor 34% held\n"
-#~ "→ quote drafted in 41s"
-#~ msgstr ""
-#~ "412 linhas analisadas\n"
-#~ "correspondência de 388 com roteamentos anteriores\n"
-#~ "piso de margem 34% mantido\n"
-#~ "→ cotação rascunhada em 41s"
-
 #: app/routes/pricing.tsx:52
 msgid "5 user minimum"
 msgstr "Mínimo de 5 usuários"
@@ -76,10 +64,6 @@ msgstr "Contabilidade"
 msgid "Accrual accounting"
 msgstr "Contabilidade de competência"
 
-#: app/routes/_index.tsx:337
-#~ msgid "Achieve granular, end-to-end tracking of materials, components, and processes, ensuring compliance, simplifying audits, and enabling rapid root cause analysis without the complexity and cost of traditional high-end systems."
-#~ msgstr "Alcance rastreamento granular e de ponta a ponta de materiais, componentes e processos, garantindo conformidade, simplificando auditorias e permitindo análise rápida de causa raiz sem a complexidade e custo dos sistemas tradicionais de alta gama."
-
 #: app/components/wizard-form.tsx:414
 msgid "Acme Inc"
 msgstr "Acme Inc"
@@ -96,29 +80,9 @@ msgstr "IU MES Adaptativa"
 msgid "Aerospace"
 msgstr "Aeroespacial"
 
-#: app/routes/_index.tsx:729
-#~ msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
-#~ msgstr "Depois de passar quase uma década construindo sistemas end-to-end para manufatura, eu tinha uma ideia bem clara de como uma solução \"ideal\" deveria parecer de uma perspectiva técnica:"
-
-#: app/routes/_index.tsx:225
-#~ msgid "AGENT · COMMERCE"
-#~ msgstr "AGENT · COMÉRCIO"
-
-#: app/routes/_index.tsx:234
-#~ msgid "AGENT · ENGINEERING"
-#~ msgstr "AGENT · ENGENHARIA"
-
-#: app/routes/_index.tsx:216
-#~ msgid "AGENT · SUPPLY"
-#~ msgstr "AGENT · SUPRIMENTOS"
-
 #: app/routes/_index.tsx:223
 msgid "Agent-ready by default"
 msgstr "Pronto para agentes por padrão"
-
-#: app/routes/_index.tsx:885
-#~ msgid "Agents that work the plan, not a chat window."
-#~ msgstr "Agentes que trabalham o plano, não uma janela de chat."
 
 #: app/routes/pricing.tsx:51
 msgid "All advanced features available"
@@ -131,10 +95,6 @@ msgstr "Todas as marcas registradas, logotipos ou outros elementos de marca da C
 #: app/routes/_index.tsx:862
 msgid "An API for the entire organization."
 msgstr "Uma API para toda a organização."
-
-#: app/routes/_index.tsx:862
-#~ msgid "An open API for the entire factory."
-#~ msgstr "Uma API aberta para toda a fábrica."
 
 #: app/components/hero.tsx:246
 msgid "Analytics"
@@ -152,18 +112,6 @@ msgstr "API"
 msgid "API Docs"
 msgstr "Documentação da API"
 
-#: app/components/code-examples.tsx:571
-#~ msgid "API-First"
-#~ msgstr "API-First"
-
-#: app/routes/_index.tsx:439
-#~ msgid "API-First Architecture"
-#~ msgstr "Arquitetura API-First"
-
-#: app/routes/_index.tsx:737
-#~ msgid "API-first, realtime subscriptions, simple scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
-#~ msgstr "API-first, subscrições em tempo real, agendamento simples e 1.000 pequenos detalhes para tornar o uso de um ERP realmente valioso."
-
 #: app/routes/pricing.tsx:48
 msgid "API, webhooks, and integrations"
 msgstr "API, webhooks e integrações"
@@ -179,10 +127,6 @@ msgstr "AS9100, FAI, genealogia completa"
 #: app/routes/_index.tsx:1041
 msgid "Ask your agent what it thinks"
 msgstr "Pergunte ao seu agente o que ele pensa"
-
-#: app/routes/_index.tsx:245
-#~ msgid "Assembly and make-to-order workflows"
-#~ msgstr "Fluxos de trabalho de montagem e produção sob encomenda"
 
 #: app/routes/pricing.tsx:50
 msgid "Audit logging"
@@ -208,17 +152,9 @@ msgstr "Documentação de API Gerada Automaticamente"
 msgid "Automatic updates and backups"
 msgstr "Atualizações e backups automáticos"
 
-#: app/routes/_index.tsx:392
-#~ msgid "Automatically generate the Bill of Materials and Bill of Process for a given set of options/parameters with our powerful product configurator."
-#~ msgstr "Gere automaticamente a Lista de Materiais e Lista de Processos para um determinado conjunto de opções/parâmetros com nosso poderoso configurador de produtos."
-
 #: app/routes/_index.tsx:236
 msgid "Automotive"
 msgstr "Automotiva"
-
-#: app/routes/_index.tsx:882
-#~ msgid "AUTONOMY"
-#~ msgstr "AUTONOMIA"
 
 #: app/components/wizard-form.tsx:334
 msgid "Back"
@@ -231,10 +167,6 @@ msgstr "Rastreamento de código de barras / QR"
 #: app/routes/pricing.tsx:31
 msgid "Basic ERP, MES, and QMS functionality"
 msgstr "Funcionalidade básica de ERP, MES e QMS"
-
-#: app/routes/_index.tsx:889
-#~ msgid "Because the whole factory is one model, agents can act on it — with permissions, and a full audit trail."
-#~ msgstr "Como toda a fábrica é um modelo, os agentes podem agir sobre ele — com permissões e uma trilha de auditoria completa."
 
 #: app/components/hero.tsx:230
 msgid "Bill of Materials"
@@ -261,25 +193,9 @@ msgstr "Ativos de Marca"
 msgid "Build <0/><1/>at the speed of software."
 msgstr "Construa <0/><1/>na velocidade do software."
 
-#: app/routes/_index.tsx:805
-#~ msgid "Build something with Carbon"
-#~ msgstr "Construa algo com Carbon"
-
-#: app/components/code-examples.tsx:574
-#~ msgid "Built on a developer-friendly platform"
-#~ msgstr "Construído em uma plataforma amigável para desenvolvedores"
-
-#: app/routes/_index.tsx:257
-#~ msgid "Built on the best of open-source software"
-#~ msgstr "Construído com o melhor software de código aberto"
-
 #: app/routes/pricing.tsx:38
 msgid "Business"
 msgstr "Negócios"
-
-#: app/routes/_index.tsx:743
-#~ msgid "But even as we work with our customers to become the best off-the-shelf ERP/MES for many types of discrete manufacturing, we are faced with the reality that there is no \"perfect\" off-the-shelf solution, because each manufacturing business is unique."
-#~ msgstr "Mas mesmo enquanto trabalhamos com nossos clientes para nos tornarmos o melhor ERP/MES pronto para usar para muitos tipos de manufatura discreta, enfrentamos a realidade de que não existe uma solução pronta para usar \"perfeita\", porque cada negócio de manufatura é único."
 
 #: app/components/wizard-form.tsx:82
 msgid "Buy the Source Code"
@@ -301,41 +217,13 @@ msgstr "CARBON"
 msgid "CARBON / ASSEMBLY INSTRUCTIONS"
 msgstr "CARBON / INSTRUÇÕES DE MONTAGEM"
 
-#: app/routes/_index.tsx:500
-#~ msgid "Carbon Academy is a free, self-paced learning platform that teaches you how to use Carbon. It's a great way to get started with Carbon and learn how to use it to its full potential."
-#~ msgstr "Carbon Academy é uma plataforma de aprendizado gratuita e no seu próprio ritmo que ensina como usar o Carbon. É uma ótima maneira de começar com o Carbon e aprender como usá-lo ao máximo potencial."
-
 #: app/components/hero.tsx:126
 msgid "Carbon combines ERP, MES, and QMS into a single, unified system."
 msgstr "Carbon combina ERP, MES e QMS num único sistema unificado."
 
-#: app/routes/_index.tsx:145
-#~ msgid "Carbon is a manufacturing system of record that combines ERP, MES, and QMS into a single, unified, API-first system that's perfect for complex manufacturing."
-#~ msgstr "Carbon é um sistema de registro de manufatura que combina ERP, MES e QMS em um único sistema unificado e API-first, perfeito para manufatura complexa."
-
-#: app/routes/_index.tsx:443
-#~ msgid "Carbon is built with an \"API-First Architecture,\" which gives you unparalleled flexibility to seamlessly connect Carbon with your other business systems. This allows you to automate workflows across all applications."
-#~ msgstr "Carbon é construído com uma \"Arquitetura API-First\", que oferece flexibilidade incomparável para conectar perfeitamente o Carbon com seus outros sistemas de negócios. Isso permite que você automatize fluxos de trabalho em todos os aplicativos."
-
 #: app/routes/_index.tsx:488
 msgid "Carbon is the engineering-first operating system for manufacturers. Quote, plan, buy, build, inspect and ship on one live model of your factory — from a ten-person prototype shop to a rate-production line."
 msgstr "Carbon é o sistema operacional com foco em engenharia para fabricantes. Cotar, planejar, comprar, construir, inspecionar e enviar em um modelo vivo de sua fábrica — de uma oficina de protótipos de dez pessoas até uma linha de produção de taxa."
-
-#: app/routes/_index.tsx:724
-#~ msgid "Carbon Manufacturing Systems Corp."
-#~ msgstr "Carbon Manufacturing Systems Corp."
-
-#: app/components/code-examples.tsx:577
-#~ msgid "Carbon provides a comprehensive MCP server and API clients in many popular languages."
-#~ msgstr "Carbon fornece um servidor MCP abrangente e clientes de API em muitas linguagens populares."
-
-#: app/routes/_index.tsx:531
-#~ msgid "Carbon's developer documentation covers everything you need to build on the platform: connecting AI agents through the MCP server, integrating with the typed API client, and running and extending Carbon to build your own custom applications."
-#~ msgstr "A documentação do desenvolvedor do Carbon cobre tudo o que você precisa para construir na plataforma: conectar agentes de IA através do servidor MCP, integrar com o cliente API tipado e executar e estender o Carbon para construir suas próprias aplicações personalizadas."
-
-#: app/routes/_index.tsx:583
-#~ msgid "Carbon's source code is available on GitHub and is free to use. You can maintain your own public fork or acquire a commercial license to make your code modifications private."
-#~ msgstr "O código-fonte do Carbon está disponível no GitHub e é gratuito. Você pode manter seu próprio fork público ou adquirir uma licença comercial para manter suas modificações de código privadas."
 
 #: app/routes/_index.tsx:1044
 msgid "Carbon's source code is available. Copy the prompt below into your favorite LLM."
@@ -368,14 +256,6 @@ msgstr "Escolha seu banco de dados preferido"
 #: app/routes/_index.tsx:246
 msgid "cleanroom ops, yield analytics"
 msgstr "operações em sala limpa, análise de rendimento"
-
-#: app/routes/_index.tsx:789
-#~ msgid "Co-Founder and CTO"
-#~ msgstr "Co-Fundador e CTO"
-
-#: app/components/code-examples.tsx:599
-#~ msgid "Code Examples"
-#~ msgstr "Exemplos de Código"
 
 #: app/routes/pricing.tsx:34
 msgid "Community support"
@@ -530,10 +410,6 @@ msgstr "Defesa"
 msgid "Demand & forecast"
 msgstr "Demanda e previsão"
 
-#: app/routes/_index.tsx:232
-#~ msgid "Designed for manufacturing"
-#~ msgstr "Projetado para manufatura"
-
 #: app/components/header.tsx:44
 msgid "Developer guides and API reference"
 msgstr "Guias de desenvolvedor e referência de API"
@@ -588,14 +464,6 @@ msgstr "Fita adesiva"
 msgid "Email Address"
 msgstr "Endereço de Email"
 
-#: app/routes/_index.tsx:229
-#~ msgid "End-to-End"
-#~ msgstr "De Ponta a Ponta"
-
-#: app/routes/_index.tsx:333
-#~ msgid "End-to-End Traceability"
-#~ msgstr "Rastreabilidade de Ponta a Ponta"
-
 #: app/routes/_index.tsx:244
 msgid "Energy & grid"
 msgstr "Energia e rede"
@@ -638,10 +506,6 @@ msgstr "Cada tabela é um endpoint"
 msgid "EVERY UNIT, EVERY OP"
 msgstr "CADA UNIDADE, CADA OP"
 
-#: app/routes/_index.tsx:291
-#~ msgid "Exchange"
-#~ msgstr "Intercâmbio"
-
 #: app/routes/_index.tsx:152
 msgid "Execution"
 msgstr "Execução"
@@ -661,10 +525,6 @@ msgstr "FAI & NCR"
 #: app/components/wizard-form.tsx:146
 msgid "Feature Prioritization"
 msgstr "Priorização de Recursos"
-
-#: app/routes/_index.tsx:315
-#~ msgid "Features"
-#~ msgstr "Recursos"
 
 #: app/routes/_index.tsx:266
 #: app/routes/_index.tsx:267
@@ -690,10 +550,6 @@ msgstr "Inspeção do primeiro artigo, não conformidade, CAPA e calibração de
 #: app/routes/pricing.tsx:66
 msgid "Forward deployed engineer"
 msgstr "Engenheiro implantado no local"
-
-#: app/routes/_index.tsx:721
-#~ msgid "Founder memo"
-#~ msgstr "Memorando do fundador"
 
 #: app/routes/_index.tsx:676
 msgid "Four systems, one schema. Nothing to integrate."
@@ -723,10 +579,6 @@ msgstr "Gerado diretamente do esquema do Carbon — 381 recursos e 1.641 endpoin
 msgid "Get Started"
 msgstr "Começar"
 
-#: app/routes/pricing.tsx:149
-#~ msgid "Get started for free"
-#~ msgstr "Comece gratuitamente"
-
 #: app/routes/pricing.tsx:180
 msgid "Get started for free."
 msgstr "Comece gratuitamente."
@@ -743,10 +595,6 @@ msgstr "GL e competências"
 msgid "Global Search"
 msgstr "Pesquisa Global"
 
-#: app/routes/_index.tsx:263
-#~ msgid "Govcloud-hosted Version Available"
-#~ msgstr "Versão hospedada em Govcloud disponível"
-
 #: app/routes/_index.tsx:71
 msgid "hardware"
 msgstr "hardware"
@@ -755,17 +603,9 @@ msgstr "hardware"
 msgid "Hosting Preference"
 msgstr "Preferência de Hospedagem"
 
-#: app/routes/_index.tsx:86
-#~ msgid "Huge consultanting bills"
-#~ msgstr ""
-
 #: app/routes/_index.tsx:87
 msgid "Huge consulting bills"
 msgstr "Contas de consultoria enormes"
-
-#: app/routes/_index.tsx:760
-#~ msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
-#~ msgstr "Acredito que o código aberto tem um potencial incrível porque não é apenas um produto–é uma comunidade de pessoas com ideias semelhantes trabalhando para construir o futuro da manufatura na era da IA e da robótica."
 
 #: app/routes/_index.tsx:927
 msgid "If it has a bill of materials, Carbon runs it."
@@ -790,10 +630,6 @@ msgstr "INDÚSTRIAS"
 #: app/routes/_index.tsx:1073
 msgid "Integrated with the world's best software."
 msgstr "Integrado com o melhor software do mundo."
-
-#: app/routes/_index.tsx:1076
-#~ msgid "Integrates with the world's best software."
-#~ msgstr "Integra com o melhor software do mundo."
 
 #: app/components/wizard-form.tsx:174
 msgid "Integrations"
@@ -847,17 +683,9 @@ msgstr "john@company.com"
 msgid "Join our community chat"
 msgstr "Junte-se ao nosso chat da comunidade"
 
-#: app/routes/_index.tsx:836
-#~ msgid "Join our Discord community"
-#~ msgstr "Junte-se à nossa comunidade Discord"
-
 #: app/components/hero.tsx:218
 msgid "Kanban Schedule"
 msgstr "Cronograma Kanban"
-
-#: app/routes/_index.tsx:417
-#~ msgid "Keep your shop floor schedule up-to-date with our simple and powerful scheduling engine. Schedule by job due date, or by fine-tune work center and resource availability."
-#~ msgstr "Mantenha o cronograma do seu chão de fábrica atualizado com nosso mecanismo de agendamento simples e poderoso. Agende por data de vencimento do trabalho ou ajuste fino da disponibilidade do centro de trabalho e recursos."
 
 #: app/routes/_index.tsx:158
 msgid "Labor, scrap & yield"
@@ -867,7 +695,7 @@ msgstr "Trabalho, sucata e rendimento"
 msgid "Lead times & buffers"
 msgstr "Prazos de entrega e buffers"
 
-#: app/components/footer.tsx:59
+#: app/components/footer.tsx:58
 msgid "Learning"
 msgstr "Aprendizado"
 
@@ -891,7 +719,7 @@ msgstr "ERPs legados foram construídos para contadores em 1998."
 msgid "LEGACY STACK"
 msgstr "PILHA LEGADA"
 
-#: app/components/footer.tsx:68
+#: app/components/footer.tsx:67
 msgid "Legal"
 msgstr "Legal"
 
@@ -899,7 +727,7 @@ msgstr "Legal"
 msgid "Let us handle the infrastructure for you"
 msgstr "Deixe-nos cuidar da infraestrutura para você"
 
-#: app/components/footer.tsx:60
+#: app/components/footer.tsx:59
 msgid "License"
 msgstr "Licença"
 
@@ -936,17 +764,9 @@ msgstr "Nuvem gerenciada ou hospedagem própria do núcleo de código aberto. Co
 msgid "Managed Hosting"
 msgstr "Hospedagem Gerenciada"
 
-#: app/routes/_index.tsx:545
-#~ msgid "MCP"
-#~ msgstr "MCP"
-
 #: app/routes/_index.tsx:882
 msgid "MCP Docs"
 msgstr "Docs do MCP"
-
-#: app/routes/_index.tsx:360
-#~ msgid "MCP for Anything"
-#~ msgstr "MCP para Qualquer Coisa"
 
 #: app/routes/_index.tsx:237
 msgid "Medical devices"
@@ -968,14 +788,6 @@ msgstr "Instruções de Trabalho MES"
 msgid "Message"
 msgstr "Mensagem"
 
-#: app/routes/_index.tsx:173
-#~ msgid "Modern manufacturers build their tech stack on Carbon"
-#~ msgstr "Fabricantes modernos constroem sua pilha de tecnologia no Carbon"
-
-#: app/routes/_index.tsx:485
-#~ msgid "Modern, minimal, transparent"
-#~ msgstr "Moderno, minimalista, transparente"
-
 #: app/routes/_index.tsx:124
 msgid "money in, money out"
 msgstr "dinheiro entra, dinheiro sai"
@@ -983,10 +795,6 @@ msgstr "dinheiro entra, dinheiro sai"
 #: app/routes/pricing.tsx:39
 msgid "Most popular"
 msgstr "Mais popular"
-
-#: app/routes/_index.tsx:251
-#~ msgid "Multi-location planning and inventory"
-#~ msgstr "Planejamento e inventário em múltiplas localizações"
 
 #: app/components/wizard-form.tsx:118
 msgid "Multi-Tenant"
@@ -1040,14 +848,6 @@ msgstr "rastreabilidade única e lote de um"
 msgid "One-time purchase with full ownership"
 msgstr "Compra única com propriedade total"
 
-#: app/routes/oss.tsx:58
-msgid "Open link"
-msgstr "Abrir link"
-
-#: app/routes/_index.tsx:482
-#~ msgid "Open Source"
-#~ msgstr "Código Aberto"
-
 #: app/components/status-indicator.tsx:8
 msgid "Operational"
 msgstr "Operacional"
@@ -1071,11 +871,6 @@ msgstr "OU AUTO-HOSPEDE O NÚCLEO DE CÓDIGO ABERTO"
 #: app/routes/_index.tsx:182
 msgid "Order"
 msgstr "Pedido"
-
-#: app/components/footer.tsx:50
-#: app/routes/oss.tsx:38
-msgid "OSS Friends"
-msgstr "Amigos OSS"
 
 #: app/components/wizard-form.tsx:76
 msgid "Ownership Model"
@@ -1114,15 +909,7 @@ msgstr "Por favor, forneça seus dados de contato para concluir o processo"
 msgid "POs & receipts"
 msgstr "POs e recibos"
 
-#: app/routes/_index.tsx:318
-#~ msgid "Powerful tools to run your business"
-#~ msgstr "Ferramentas poderosas para gerenciar seu negócio"
-
-#: app/routes/_index.tsx:227
-#~ msgid "Prices a multi-hundred-line RFQ from your own routing and purchase history, with margin held to your rules."
-#~ msgstr "Precifica um RFQ de múltiplas centenas de linhas do seu próprio roteamento e histórico de compras, com margem mantida às suas regras."
-
-#: app/components/footer.tsx:61
+#: app/components/footer.tsx:60
 #: app/components/header.tsx:92
 #: app/components/header.tsx:216
 msgid "Pricing"
@@ -1134,17 +921,13 @@ msgstr "Preços"
 msgid "Printer"
 msgstr "Impressora"
 
-#: app/components/footer.tsx:71
+#: app/components/footer.tsx:70
 msgid "Privacy"
 msgstr "Privacidade"
 
-#: app/components/footer.tsx:56
+#: app/components/footer.tsx:55
 msgid "Product"
 msgstr "Produto"
-
-#: app/routes/_index.tsx:388
-#~ msgid "Product Configurator"
-#~ msgstr "Configurador de Produtos"
 
 #: app/routes/_index.tsx:183
 msgid "Production"
@@ -1186,10 +969,6 @@ msgstr "Registro de qualidade / rastreabilidade"
 #: app/routes/_index.tsx:90
 msgid "Quality in a separate binder"
 msgstr "Qualidade em um fichário separado"
-
-#: app/routes/_index.tsx:226
-#~ msgid "Quote"
-#~ msgstr "Cotação"
 
 #: app/components/hero.tsx:242
 msgid "Quote Pricing"
@@ -1244,26 +1023,6 @@ msgstr "Recursos"
 msgid "REV 4 · LIVE"
 msgstr "REV 4 · LIVE"
 
-#: app/routes/_index.tsx:237
-#~ msgid ""
-#~ "REV C → REV D diff\n"
-#~ "2 ops changed, 1 added\n"
-#~ "instructions regenerated\n"
-#~ "→ effective next lot"
-#~ msgstr ""
-#~ "Diferença de REV C → REV D\n"
-#~ "2 ops alteradas, 1 adicionada\n"
-#~ "instruções regeneradas\n"
-#~ "→ efetivo próximo lote"
-
-#: app/routes/_index.tsx:645
-#~ msgid "Reviews"
-#~ msgstr "Avaliações"
-
-#: app/routes/_index.tsx:235
-#~ msgid "Revision"
-#~ msgstr "Revisão"
-
 #: app/routes/_index.tsx:291
 msgid "Revision control with effectivity dates"
 msgstr "Controle de revisão com datas de efetividade"
@@ -1300,7 +1059,7 @@ msgstr "SEGURANÇA EM NÍVEL DE LINHA"
 msgid "Rule-based BOM and routing generation"
 msgstr "Geração de BOM e roteamento baseado em regras"
 
-#: app/components/footer.tsx:51
+#: app/components/footer.tsx:50
 msgid "Sales"
 msgstr "Vendas"
 
@@ -1315,22 +1074,6 @@ msgstr "satélites"
 #: app/routes/_index.tsx:272
 msgid "SCADA"
 msgstr "SCADA"
-
-#: app/routes/_index.tsx:219
-#~ msgid ""
-#~ "scan 1,284 demand lines\n"
-#~ "PN-4471 short 12 · lead 9d\n"
-#~ "→ resequenced WC-02, WC-05\n"
-#~ "→ escalated to buyer"
-#~ msgstr ""
-#~ "verificar 1.284 linhas de demanda\n"
-#~ "PN-4471 curto 12 · prazo 9d\n"
-#~ "→ WC-02, WC-05 resequenciados\n"
-#~ "→ escalado para comprador"
-
-#: app/routes/_index.tsx:545
-#~ msgid "Scheduling / job board"
-#~ msgstr "Agendamento / quadro de trabalho"
 
 #: app/components/wizard-form.tsx:154
 msgid "Select which features you need custom development for"
@@ -1400,10 +1143,6 @@ msgstr "Chão de fábrica / viajante de trabalho"
 msgid "Shop Floor Apps"
 msgstr "Aplicativos de Chão de Fábrica"
 
-#: app/routes/_index.tsx:217
-#~ msgid "Shortage"
-#~ msgstr "Escassez"
-
 #: app/routes/_index.tsx:145
 msgid "Shortage escalation"
 msgstr "Escalação de escassez"
@@ -1412,17 +1151,9 @@ msgstr "Escalação de escassez"
 msgid "Shortages found on the floor"
 msgstr "Escassez encontrada no chão"
 
-#: app/routes/pricing.tsx:80
-#~ msgid "Simple pricing based on your needs"
-#~ msgstr "Preços simples baseados nas suas necessidades"
-
 #: app/routes/pricing.tsx:85
 msgid "Simple pricing based on your needs."
 msgstr "Preços simples baseados em suas necessidades."
-
-#: app/routes/_index.tsx:413
-#~ msgid "Simplified Scheduling"
-#~ msgstr "Agendamento Simplificado"
 
 #: app/components/wizard-form.tsx:123
 msgid "Single-Tenant"
@@ -1448,7 +1179,7 @@ msgstr "Algo deu errado"
 msgid "SOURCE AVAILABLE"
 msgstr "FONTE DISPONÍVEL"
 
-#: app/components/footer.tsx:62
+#: app/components/footer.tsx:61
 msgid "Source Code"
 msgstr "Código Fonte"
 
@@ -1479,18 +1210,9 @@ msgstr "Iniciar avaliação gratuita de 30 dias"
 msgid "Start Free"
 msgstr "Comece gratuitamente"
 
-#: app/routes/_index.tsx:270
-#: app/routes/_index.tsx:513
-#~ msgid "Start Learning"
-#~ msgstr "Começar a Aprender"
-
 #: app/routes/_index.tsx:1112
 msgid "START NOW · NO CALL REQUIRED"
 msgstr "COMECE AGORA · SEM CHAMADA NECESSÁRIA"
-
-#: app/routes/_index.tsx:808
-#~ msgid "Start your 30-day free trial today"
-#~ msgstr "Comece seu teste gratuito de 30 dias hoje"
 
 #: app/routes/pricing.tsx:21
 msgid "Starter"
@@ -1520,11 +1242,6 @@ msgstr "Status do Sistema:"
 msgid "SYSTEMS REPLACED"
 msgstr "SISTEMAS SUBSTITUÍDOS"
 
-#: app/routes/_index.tsx:278
-#: app/routes/_index.tsx:820
-#~ msgid "Talk to Us"
-#~ msgstr "Fale Conosco"
-
 #: app/routes/_index.tsx:269
 #: app/routes/_index.tsx:270
 msgid "Tasks"
@@ -1538,7 +1255,7 @@ msgstr "Impostos"
 msgid "Technical support"
 msgstr "Suporte técnico"
 
-#: app/components/footer.tsx:72
+#: app/components/footer.tsx:71
 msgid "Terms"
 msgstr "Termos"
 
@@ -1558,10 +1275,6 @@ msgstr "o próprio chão"
 msgid "The floor, live to the second."
 msgstr "O chão, ao vivo ao segundo."
 
-#: app/routes/_index.tsx:740
-#~ msgid "THE HAPPY PATH"
-#~ msgstr "O CAMINHO FELIZ"
-
 #: app/components/hero.tsx:123
 msgid "The Modern Manufacturing Stack"
 msgstr "A Pilha Moderna de Manufatura"
@@ -1569,10 +1282,6 @@ msgstr "A Pilha Moderna de Manufatura"
 #: app/routes/_index.tsx:740
 msgid "THE NARROW PATH"
 msgstr "O CAMINHO ESTREITO"
-
-#: app/routes/_index.tsx:139
-#~ msgid "The open source <0>manufacturing ERP</0>"
-#~ msgstr "O <0>ERP</0> de manufatura de código aberto"
 
 #: app/routes/_index.tsx:581
 msgid "THE STATUS QUO"
@@ -1586,10 +1295,6 @@ msgstr "Rastreabilidade é o estado padrão."
 msgid "Traveler printed at 6am, stale by 9"
 msgstr "Viajante impresso às 6h, obsoleto às 9h"
 
-#: app/routes/_index.tsx:1007
-#~ msgid "TRUST"
-#~ msgstr "CONFIANÇA"
-
 #: app/routes/_index.tsx:1010
 msgid "Trusted"
 msgstr "Confiável"
@@ -1598,23 +1303,9 @@ msgstr "Confiável"
 msgid "Trusted by the world's most innovative"
 msgstr "Confiável pelos mais inovadores do mundo"
 
-#: app/root.tsx:376
-#: app/routes/_index.tsx:154
-#: app/routes/_index.tsx:813
-#~ msgid "Try It Now"
-#~ msgstr "Experimente Agora"
-
-#: app/routes/_index.tsx:236
-#~ msgid "Turns an approved drawing change into an updated routing, work instructions and effectivity date on the floor."
-#~ msgstr "Transforma uma mudança de desenho aprovada em um roteamento atualizado, instruções de trabalho e data de efetividade no chão."
-
 #: app/routes/_index.tsx:211
 msgid "TYPICAL FIRST DEPLOYMENT"
 msgstr "IMPLANTAÇÃO TÍPICA DO PRIMEIRO"
-
-#: app/routes/_index.tsx:239
-#~ msgid "Unified quality, purchasing & production"
-#~ msgstr "Qualidade, compras e produção unificadas"
 
 #: app/routes/pricing.tsx:71
 msgid "Unlimited functional support"
@@ -1632,37 +1323,9 @@ msgstr "Variantes que não bifurcam seu BOM."
 msgid "vehicles"
 msgstr "veículos"
 
-#: app/routes/_index.tsx:497
-#~ msgid "Video Library"
-#~ msgstr "Biblioteca de Vídeos"
-
 #: app/components/header.tsx:36
 msgid "View our source code and contribute"
 msgstr "Veja nosso código-fonte e contribua"
-
-#: app/routes/_index.tsx:596
-#~ msgid "View Source"
-#~ msgstr "Ver Código-Fonte"
-
-#: app/routes/pricing.tsx:152
-#~ msgid "View the docs and start developing locally"
-#~ msgstr "Veja a documentação e comece a desenvolver localmente"
-
-#: app/routes/_index.tsx:218
-#~ msgid "Watches every open order against inbound supply, reschedules operations and names the critical path before it bites."
-#~ msgstr "Observa cada pedido aberto em relação ao suprimento de entrada, agenda novamente as operações e nomeia o caminho crítico antes que morda."
-
-#: app/routes/oss.tsx:40
-msgid "We believe in a better and more sustainable future powered by Open Source software. Below you can find a list of our friends who are just as passionate about open source and the future as we are."
-msgstr "Acreditamos em um futuro melhor e mais sustentável impulsionado por software Open Source. Abaixo você pode encontrar uma lista de nossos amigos que são tão apaixonados por código aberto e o futuro quanto nós somos."
-
-#: app/routes/_index.tsx:364
-#~ msgid "We expose our entire ERP system as an MCP server, allowing you to connect to it from any tool that supports MCP. We currently have over 1,000 tools that your LLM can use to automate your business."
-#~ msgstr "Expomos todo o nosso sistema ERP como um servidor MCP, permitindo que você se conecte a ele a partir de qualquer ferramenta que suporte MCP. Atualmente temos mais de 1.000 ferramentas que seu LLM pode usar para automatizar seu negócio."
-
-#: app/routes/_index.tsx:752
-#~ msgid "We open-sourced Carbon not because it's a great business plan, but because that's the system I would have wanted when I was in your shoes."
-#~ msgstr "Abrimos o código-fonte do Carbon não porque seja um ótimo plano de negócios, mas porque é o sistema que eu teria querido quando estava na sua situação."
 
 #: app/components/wizard-form.tsx:365
 msgid "We'll be in touch with you shortly to setup a demo."
@@ -1672,17 +1335,9 @@ msgstr "Entraremos em contato com você em breve para agendar uma demonstração
 msgid "We'll be in touch with you shortly."
 msgstr "Entraremos em contato com você em breve."
 
-#: app/routes/_index.tsx:768
-#~ msgid "We're glad you're here for it."
-#~ msgstr "Ficamos felizes que você esteja aqui para isso."
-
 #: app/routes/contact.tsx:215
 msgid "What can we help with?"
 msgstr "Como podemos ajudar?"
-
-#: app/routes/_index.tsx:648
-#~ msgid "What our customers say:"
-#~ msgstr "O que nossos clientes dizem:"
 
 #: app/routes/_index.tsx:138
 msgid "what to make, when"

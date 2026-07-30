@@ -31,18 +31,6 @@ msgstr "18个月实现"
 msgid "21 CFR PART 11"
 msgstr "21 CFR PART 11"
 
-#: app/routes/_index.tsx:228
-#~ msgid ""
-#~ "412 lines parsed\n"
-#~ "matched 388 to prior routings\n"
-#~ "margin floor 34% held\n"
-#~ "→ quote drafted in 41s"
-#~ msgstr ""
-#~ "已解析412行\n"
-#~ "匹配到之前的工艺388个\n"
-#~ "毛利率下限34%已保留\n"
-#~ "→ 在41秒内起草报价"
-
 #: app/routes/pricing.tsx:52
 msgid "5 user minimum"
 msgstr "5个用户最少"
@@ -76,10 +64,6 @@ msgstr "会计"
 msgid "Accrual accounting"
 msgstr "应计会计"
 
-#: app/routes/_index.tsx:337
-#~ msgid "Achieve granular, end-to-end tracking of materials, components, and processes, ensuring compliance, simplifying audits, and enabling rapid root cause analysis without the complexity and cost of traditional high-end systems."
-#~ msgstr "实现材料、组件和流程的细粒度端到端追踪，确保合规性、简化审计，并能够进行快速根本原因分析，无需传统高端系统的复杂性和成本。"
-
 #: app/components/wizard-form.tsx:414
 msgid "Acme Inc"
 msgstr "Acme Inc"
@@ -96,29 +80,9 @@ msgstr "自适应MES用户界面"
 msgid "Aerospace"
 msgstr "航空航天"
 
-#: app/routes/_index.tsx:729
-#~ msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
-#~ msgstr "在花费近十年时间为制造业构建端到端系统后，我对从技术角度来看\"理想\"解决方案应该是什么样子有了相当清楚的认识："
-
-#: app/routes/_index.tsx:225
-#~ msgid "AGENT · COMMERCE"
-#~ msgstr "代理 · 商务"
-
-#: app/routes/_index.tsx:234
-#~ msgid "AGENT · ENGINEERING"
-#~ msgstr "代理 · 工程"
-
-#: app/routes/_index.tsx:216
-#~ msgid "AGENT · SUPPLY"
-#~ msgstr "代理 · 供应"
-
 #: app/routes/_index.tsx:223
 msgid "Agent-ready by default"
 msgstr "默认代理就绪"
-
-#: app/routes/_index.tsx:885
-#~ msgid "Agents that work the plan, not a chat window."
-#~ msgstr "处理计划的代理，而不是聊天窗口。"
 
 #: app/routes/pricing.tsx:51
 msgid "All advanced features available"
@@ -131,10 +95,6 @@ msgstr "所有Carbon商标、徽标或其他品牌元素不得以任何方式修
 #: app/routes/_index.tsx:862
 msgid "An API for the entire organization."
 msgstr "面向整个组织的 API"
-
-#: app/routes/_index.tsx:862
-#~ msgid "An open API for the entire factory."
-#~ msgstr "面向整个工厂的开放 API。"
 
 #: app/components/hero.tsx:246
 msgid "Analytics"
@@ -152,18 +112,6 @@ msgstr "API"
 msgid "API Docs"
 msgstr "API 文档"
 
-#: app/components/code-examples.tsx:571
-#~ msgid "API-First"
-#~ msgstr "API 优先"
-
-#: app/routes/_index.tsx:439
-#~ msgid "API-First Architecture"
-#~ msgstr "API 优先架构"
-
-#: app/routes/_index.tsx:737
-#~ msgid "API-first, realtime subscriptions, simple scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
-#~ msgstr "API 优先、实时订阅、简单的调度，以及 1,000 个小细节，让使用 ERP 的价值物有所值。"
-
 #: app/routes/pricing.tsx:48
 msgid "API, webhooks, and integrations"
 msgstr "API、Webhook 和集成"
@@ -179,10 +127,6 @@ msgstr "AS9100、FAI、完整溯源"
 #: app/routes/_index.tsx:1041
 msgid "Ask your agent what it thinks"
 msgstr "询问您的代理的看法"
-
-#: app/routes/_index.tsx:245
-#~ msgid "Assembly and make-to-order workflows"
-#~ msgstr "装配和按单生产工作流"
 
 #: app/routes/pricing.tsx:50
 msgid "Audit logging"
@@ -208,17 +152,9 @@ msgstr "自动生成的API文档"
 msgid "Automatic updates and backups"
 msgstr "自动更新和备份"
 
-#: app/routes/_index.tsx:392
-#~ msgid "Automatically generate the Bill of Materials and Bill of Process for a given set of options/parameters with our powerful product configurator."
-#~ msgstr "自动为给定的选项/参数集生成物料清单和工艺流程，使用我们强大的产品配置器。"
-
 #: app/routes/_index.tsx:236
 msgid "Automotive"
 msgstr "汽车"
-
-#: app/routes/_index.tsx:882
-#~ msgid "AUTONOMY"
-#~ msgstr "自主性"
 
 #: app/components/wizard-form.tsx:334
 msgid "Back"
@@ -231,10 +167,6 @@ msgstr "条码/二维码追踪"
 #: app/routes/pricing.tsx:31
 msgid "Basic ERP, MES, and QMS functionality"
 msgstr "基础ERP、MES和QMS功能"
-
-#: app/routes/_index.tsx:889
-#~ msgid "Because the whole factory is one model, agents can act on it — with permissions, and a full audit trail."
-#~ msgstr "因为整个工厂是一个模型，代理可以对其采取行动——拥有权限和完整的审计追踪。"
 
 #: app/components/hero.tsx:230
 msgid "Bill of Materials"
@@ -261,25 +193,9 @@ msgstr "品牌资产"
 msgid "Build <0/><1/>at the speed of software."
 msgstr "以软件的速度 <0/><1/>构建。"
 
-#: app/routes/_index.tsx:805
-#~ msgid "Build something with Carbon"
-#~ msgstr "用 Carbon 构建一些东西"
-
-#: app/components/code-examples.tsx:574
-#~ msgid "Built on a developer-friendly platform"
-#~ msgstr "基于开发者友好的平台构建"
-
-#: app/routes/_index.tsx:257
-#~ msgid "Built on the best of open-source software"
-#~ msgstr "建立在最好的开源软件之上"
-
 #: app/routes/pricing.tsx:38
 msgid "Business"
 msgstr "商业"
-
-#: app/routes/_index.tsx:743
-#~ msgid "But even as we work with our customers to become the best off-the-shelf ERP/MES for many types of discrete manufacturing, we are faced with the reality that there is no \"perfect\" off-the-shelf solution, because each manufacturing business is unique."
-#~ msgstr "但即使我们与客户合作，为许多类型的离散制造业提供最好的现成ERP/MES解决方案，我们也面临着一个现实：没有\"完美\"的现成解决方案，因为每个制造业务都是独特的。"
 
 #: app/components/wizard-form.tsx:82
 msgid "Buy the Source Code"
@@ -301,41 +217,13 @@ msgstr "CARBON"
 msgid "CARBON / ASSEMBLY INSTRUCTIONS"
 msgstr "CARBON / 组装说明"
 
-#: app/routes/_index.tsx:500
-#~ msgid "Carbon Academy is a free, self-paced learning platform that teaches you how to use Carbon. It's a great way to get started with Carbon and learn how to use it to its full potential."
-#~ msgstr "Carbon Academy 是一个免费的自主学习平台，教您如何使用 Carbon。这是开始使用 Carbon 并学习如何充分利用其功能的绝佳方式。"
-
 #: app/components/hero.tsx:126
 msgid "Carbon combines ERP, MES, and QMS into a single, unified system."
 msgstr "Carbon 将 ERP、MES 和 QMS 整合到一个统一的系统中。"
 
-#: app/routes/_index.tsx:145
-#~ msgid "Carbon is a manufacturing system of record that combines ERP, MES, and QMS into a single, unified, API-first system that's perfect for complex manufacturing."
-#~ msgstr "Carbon 是一个制造系统记录，将 ERP、MES 和 QMS 整合到一个统一的、API 优先的系统中，非常适合复杂的制造。"
-
-#: app/routes/_index.tsx:443
-#~ msgid "Carbon is built with an \"API-First Architecture,\" which gives you unparalleled flexibility to seamlessly connect Carbon with your other business systems. This allows you to automate workflows across all applications."
-#~ msgstr "Carbon 采用\"API 优先架构\"构建，为您提供无与伦比的灵活性，可以将 Carbon 与您的其他业务系统无缝连接。这使您能够跨所有应用程序自动化工作流。"
-
 #: app/routes/_index.tsx:488
 msgid "Carbon is the engineering-first operating system for manufacturers. Quote, plan, buy, build, inspect and ship on one live model of your factory — from a ten-person prototype shop to a rate-production line."
 msgstr "Carbon是面向制造商的工程优先操作系统。在您工厂的一个实时模型上进行报价、计划、采购、构建、检查和发货——从十人原型车间到批量生产线。"
-
-#: app/routes/_index.tsx:724
-#~ msgid "Carbon Manufacturing Systems Corp."
-#~ msgstr "Carbon Manufacturing Systems Corp."
-
-#: app/components/code-examples.tsx:577
-#~ msgid "Carbon provides a comprehensive MCP server and API clients in many popular languages."
-#~ msgstr "Carbon 提供了全面的 MCP 服务器和许多流行语言的 API 客户端。"
-
-#: app/routes/_index.tsx:531
-#~ msgid "Carbon's developer documentation covers everything you need to build on the platform: connecting AI agents through the MCP server, integrating with the typed API client, and running and extending Carbon to build your own custom applications."
-#~ msgstr "Carbon 的开发者文档涵盖了在平台上构建所需的一切：通过 MCP 服务器连接 AI 代理、与类型化 API 客户端集成，以及运行和扩展 Carbon 以构建您自己的自定义应用程序。"
-
-#: app/routes/_index.tsx:583
-#~ msgid "Carbon's source code is available on GitHub and is free to use. You can maintain your own public fork or acquire a commercial license to make your code modifications private."
-#~ msgstr "Carbon的源代码在GitHub上可用，可以免费使用。您可以维护自己的公开分支，或获取商业许可证以保持代码修改的私密性。"
 
 #: app/routes/_index.tsx:1044
 msgid "Carbon's source code is available. Copy the prompt below into your favorite LLM."
@@ -368,14 +256,6 @@ msgstr "选择您偏好的数据库"
 #: app/routes/_index.tsx:246
 msgid "cleanroom ops, yield analytics"
 msgstr "洁净室操作、产率分析"
-
-#: app/routes/_index.tsx:789
-#~ msgid "Co-Founder and CTO"
-#~ msgstr "联合创始人兼首席技术官"
-
-#: app/components/code-examples.tsx:599
-#~ msgid "Code Examples"
-#~ msgstr "代码示例"
 
 #: app/routes/pricing.tsx:34
 msgid "Community support"
@@ -530,10 +410,6 @@ msgstr "防御"
 msgid "Demand & forecast"
 msgstr "需求和预测"
 
-#: app/routes/_index.tsx:232
-#~ msgid "Designed for manufacturing"
-#~ msgstr "为制造而设计"
-
 #: app/components/header.tsx:44
 msgid "Developer guides and API reference"
 msgstr "开发者指南和 API 参考"
@@ -588,14 +464,6 @@ msgstr "胶带"
 msgid "Email Address"
 msgstr "电子邮件地址"
 
-#: app/routes/_index.tsx:229
-#~ msgid "End-to-End"
-#~ msgstr "端到端"
-
-#: app/routes/_index.tsx:333
-#~ msgid "End-to-End Traceability"
-#~ msgstr "端到端可追溯性"
-
 #: app/routes/_index.tsx:244
 msgid "Energy & grid"
 msgstr "能源和电网"
@@ -638,10 +506,6 @@ msgstr "每个表都是一个端点"
 msgid "EVERY UNIT, EVERY OP"
 msgstr "每个单元、每个操作"
 
-#: app/routes/_index.tsx:291
-#~ msgid "Exchange"
-#~ msgstr "交换"
-
 #: app/routes/_index.tsx:152
 msgid "Execution"
 msgstr "执行"
@@ -661,10 +525,6 @@ msgstr "FAI & NCR"
 #: app/components/wizard-form.tsx:146
 msgid "Feature Prioritization"
 msgstr "功能优先级"
-
-#: app/routes/_index.tsx:315
-#~ msgid "Features"
-#~ msgstr "功能"
 
 #: app/routes/_index.tsx:266
 #: app/routes/_index.tsx:267
@@ -690,10 +550,6 @@ msgstr "首件检测、不合格、CAPA和测量仪校准与生产坐在相同�
 #: app/routes/pricing.tsx:66
 msgid "Forward deployed engineer"
 msgstr "前置部署工程师"
-
-#: app/routes/_index.tsx:721
-#~ msgid "Founder memo"
-#~ msgstr "创始人备忘录"
 
 #: app/routes/_index.tsx:676
 msgid "Four systems, one schema. Nothing to integrate."
@@ -723,10 +579,6 @@ msgstr "直接从 Carbon 的模式生成 — 381 个资源和 1,641 个端点，
 msgid "Get Started"
 msgstr "开始"
 
-#: app/routes/pricing.tsx:149
-#~ msgid "Get started for free"
-#~ msgstr "免费开始"
-
 #: app/routes/pricing.tsx:180
 msgid "Get started for free."
 msgstr "免费开始。"
@@ -743,10 +595,6 @@ msgstr "GL和应计"
 msgid "Global Search"
 msgstr "全局搜索"
 
-#: app/routes/_index.tsx:263
-#~ msgid "Govcloud-hosted Version Available"
-#~ msgstr "Govcloud托管版本可用"
-
 #: app/routes/_index.tsx:71
 msgid "hardware"
 msgstr "硬件"
@@ -755,17 +603,9 @@ msgstr "硬件"
 msgid "Hosting Preference"
 msgstr "托管偏好"
 
-#: app/routes/_index.tsx:86
-#~ msgid "Huge consultanting bills"
-#~ msgstr ""
-
 #: app/routes/_index.tsx:87
 msgid "Huge consulting bills"
 msgstr "巨大的咨询账单"
-
-#: app/routes/_index.tsx:760
-#~ msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
-#~ msgstr "我相信开源具有令人难以置信的潜力，因为它不仅仅是一个产品——它是一个志同道合的人们的社区，致力于在人工智能和机器人时代构建制造业的未来。"
 
 #: app/routes/_index.tsx:927
 msgid "If it has a bill of materials, Carbon runs it."
@@ -790,10 +630,6 @@ msgstr "行业"
 #: app/routes/_index.tsx:1073
 msgid "Integrated with the world's best software."
 msgstr "与世界最好的软件集成。"
-
-#: app/routes/_index.tsx:1076
-#~ msgid "Integrates with the world's best software."
-#~ msgstr "与世界上最好的软件集成。"
 
 #: app/components/wizard-form.tsx:174
 msgid "Integrations"
@@ -847,17 +683,9 @@ msgstr "john@company.com"
 msgid "Join our community chat"
 msgstr "加入我们的社区聊天"
 
-#: app/routes/_index.tsx:836
-#~ msgid "Join our Discord community"
-#~ msgstr "加入我们的 Discord 社区"
-
 #: app/components/hero.tsx:218
 msgid "Kanban Schedule"
 msgstr "看板计划"
-
-#: app/routes/_index.tsx:417
-#~ msgid "Keep your shop floor schedule up-to-date with our simple and powerful scheduling engine. Schedule by job due date, or by fine-tune work center and resource availability."
-#~ msgstr "保持您的车间楼层计划与我们简单而强大的调度引擎保持最新。按工作截止日期或通过微调工作中心和资源可用性进行调度。"
 
 #: app/routes/_index.tsx:158
 msgid "Labor, scrap & yield"
@@ -867,7 +695,7 @@ msgstr "劳动力、废料和产率"
 msgid "Lead times & buffers"
 msgstr "交货期和缓冲"
 
-#: app/components/footer.tsx:59
+#: app/components/footer.tsx:58
 msgid "Learning"
 msgstr "学习"
 
@@ -891,7 +719,7 @@ msgstr "遗留ERP是在1998年为会计师构建的。"
 msgid "LEGACY STACK"
 msgstr "遗留堆栈"
 
-#: app/components/footer.tsx:68
+#: app/components/footer.tsx:67
 msgid "Legal"
 msgstr "法律"
 
@@ -899,7 +727,7 @@ msgstr "法律"
 msgid "Let us handle the infrastructure for you"
 msgstr "让我们为您处理基础设施"
 
-#: app/components/footer.tsx:60
+#: app/components/footer.tsx:59
 msgid "License"
 msgstr "许可证"
 
@@ -936,17 +764,9 @@ msgstr "托管云或自托管开源内核。免费开始30天——无需销售�
 msgid "Managed Hosting"
 msgstr "托管托管"
 
-#: app/routes/_index.tsx:545
-#~ msgid "MCP"
-#~ msgstr "MCP"
-
 #: app/routes/_index.tsx:882
 msgid "MCP Docs"
 msgstr "MCP 文档"
-
-#: app/routes/_index.tsx:360
-#~ msgid "MCP for Anything"
-#~ msgstr "任何工具的 MCP"
 
 #: app/routes/_index.tsx:237
 msgid "Medical devices"
@@ -968,14 +788,6 @@ msgstr "MES 工作指令"
 msgid "Message"
 msgstr "消息"
 
-#: app/routes/_index.tsx:173
-#~ msgid "Modern manufacturers build their tech stack on Carbon"
-#~ msgstr "现代制造商在 Carbon 上构建他们的技术栈"
-
-#: app/routes/_index.tsx:485
-#~ msgid "Modern, minimal, transparent"
-#~ msgstr "现代、简洁、透明"
-
 #: app/routes/_index.tsx:124
 msgid "money in, money out"
 msgstr "进钱、出钱"
@@ -983,10 +795,6 @@ msgstr "进钱、出钱"
 #: app/routes/pricing.tsx:39
 msgid "Most popular"
 msgstr "最受欢迎"
-
-#: app/routes/_index.tsx:251
-#~ msgid "Multi-location planning and inventory"
-#~ msgstr "多地点规划和库存"
 
 #: app/components/wizard-form.tsx:118
 msgid "Multi-Tenant"
@@ -1040,14 +848,6 @@ msgstr "一次性、单件溯源"
 msgid "One-time purchase with full ownership"
 msgstr "一次性购买，完全所有权"
 
-#: app/routes/oss.tsx:58
-msgid "Open link"
-msgstr "打开链接"
-
-#: app/routes/_index.tsx:482
-#~ msgid "Open Source"
-#~ msgstr "开源"
-
 #: app/components/status-indicator.tsx:8
 msgid "Operational"
 msgstr "正常运行"
@@ -1071,11 +871,6 @@ msgstr "或自托管开源内核"
 #: app/routes/_index.tsx:182
 msgid "Order"
 msgstr "订单"
-
-#: app/components/footer.tsx:50
-#: app/routes/oss.tsx:38
-msgid "OSS Friends"
-msgstr "开源友好"
 
 #: app/components/wizard-form.tsx:76
 msgid "Ownership Model"
@@ -1114,15 +909,7 @@ msgstr "请提供您的联系方式以完成该流程"
 msgid "POs & receipts"
 msgstr "采购订单和收据"
 
-#: app/routes/_index.tsx:318
-#~ msgid "Powerful tools to run your business"
-#~ msgstr "强大的工具来运营您的业务"
-
-#: app/routes/_index.tsx:227
-#~ msgid "Prices a multi-hundred-line RFQ from your own routing and purchase history, with margin held to your rules."
-#~ msgstr "从您自己的工艺和采购历史对多百行的RFQ进行定价，保持利润率符合您的规则。"
-
-#: app/components/footer.tsx:61
+#: app/components/footer.tsx:60
 #: app/components/header.tsx:92
 #: app/components/header.tsx:216
 msgid "Pricing"
@@ -1134,17 +921,13 @@ msgstr "定价"
 msgid "Printer"
 msgstr "打印机"
 
-#: app/components/footer.tsx:71
+#: app/components/footer.tsx:70
 msgid "Privacy"
 msgstr "隐私"
 
-#: app/components/footer.tsx:56
+#: app/components/footer.tsx:55
 msgid "Product"
 msgstr "产品"
-
-#: app/routes/_index.tsx:388
-#~ msgid "Product Configurator"
-#~ msgstr "产品配置器"
 
 #: app/routes/_index.tsx:183
 msgid "Production"
@@ -1186,10 +969,6 @@ msgstr "质量/可追溯性记录"
 #: app/routes/_index.tsx:90
 msgid "Quality in a separate binder"
 msgstr "质量在单独的活页夹中"
-
-#: app/routes/_index.tsx:226
-#~ msgid "Quote"
-#~ msgstr "报价"
 
 #: app/components/hero.tsx:242
 msgid "Quote Pricing"
@@ -1244,26 +1023,6 @@ msgstr "资源"
 msgid "REV 4 · LIVE"
 msgstr "REV 4 · 上线"
 
-#: app/routes/_index.tsx:237
-#~ msgid ""
-#~ "REV C → REV D diff\n"
-#~ "2 ops changed, 1 added\n"
-#~ "instructions regenerated\n"
-#~ "→ effective next lot"
-#~ msgstr ""
-#~ "REV C → REV D差异\n"
-#~ "2个操作已更改，1个已添加\n"
-#~ "说明已重新生成\n"
-#~ "→ 对下一批生效"
-
-#: app/routes/_index.tsx:645
-#~ msgid "Reviews"
-#~ msgstr "评论"
-
-#: app/routes/_index.tsx:235
-#~ msgid "Revision"
-#~ msgstr "版本"
-
 #: app/routes/_index.tsx:291
 msgid "Revision control with effectivity dates"
 msgstr "带有生效日期的版本控制"
@@ -1300,7 +1059,7 @@ msgstr "行级安全"
 msgid "Rule-based BOM and routing generation"
 msgstr "基于规则的BOM和工艺生成"
 
-#: app/components/footer.tsx:51
+#: app/components/footer.tsx:50
 msgid "Sales"
 msgstr "销售"
 
@@ -1315,22 +1074,6 @@ msgstr "卫星"
 #: app/routes/_index.tsx:272
 msgid "SCADA"
 msgstr "SCADA"
-
-#: app/routes/_index.tsx:219
-#~ msgid ""
-#~ "scan 1,284 demand lines\n"
-#~ "PN-4471 short 12 · lead 9d\n"
-#~ "→ resequenced WC-02, WC-05\n"
-#~ "→ escalated to buyer"
-#~ msgstr ""
-#~ "扫描1,284条需求行\n"
-#~ "PN-4471短缺12 · 交货期9d\n"
-#~ "→ 重新排序了WC-02、WC-05\n"
-#~ "→ 已提升给采购员"
-
-#: app/routes/_index.tsx:545
-#~ msgid "Scheduling / job board"
-#~ msgstr "调度/工作板"
 
 #: app/components/wizard-form.tsx:154
 msgid "Select which features you need custom development for"
@@ -1400,10 +1143,6 @@ msgstr "车间/作业单"
 msgid "Shop Floor Apps"
 msgstr "车间应用"
 
-#: app/routes/_index.tsx:217
-#~ msgid "Shortage"
-#~ msgstr "短缺"
-
 #: app/routes/_index.tsx:145
 msgid "Shortage escalation"
 msgstr "短缺升级"
@@ -1412,17 +1151,9 @@ msgstr "短缺升级"
 msgid "Shortages found on the floor"
 msgstr "在车间发现的短缺"
 
-#: app/routes/pricing.tsx:80
-#~ msgid "Simple pricing based on your needs"
-#~ msgstr "基于您的需求的简单定价"
-
 #: app/routes/pricing.tsx:85
 msgid "Simple pricing based on your needs."
 msgstr "基于您需求的简单定价。"
-
-#: app/routes/_index.tsx:413
-#~ msgid "Simplified Scheduling"
-#~ msgstr "简化的日程安排"
 
 #: app/components/wizard-form.tsx:123
 msgid "Single-Tenant"
@@ -1448,7 +1179,7 @@ msgstr "出了问题"
 msgid "SOURCE AVAILABLE"
 msgstr "源代码可用"
 
-#: app/components/footer.tsx:62
+#: app/components/footer.tsx:61
 msgid "Source Code"
 msgstr "源代码"
 
@@ -1479,18 +1210,9 @@ msgstr "开始30天免费试用"
 msgid "Start Free"
 msgstr "免费开始"
 
-#: app/routes/_index.tsx:270
-#: app/routes/_index.tsx:513
-#~ msgid "Start Learning"
-#~ msgstr "开始学习"
-
 #: app/routes/_index.tsx:1112
 msgid "START NOW · NO CALL REQUIRED"
 msgstr "立即开始 · 无需电话"
-
-#: app/routes/_index.tsx:808
-#~ msgid "Start your 30-day free trial today"
-#~ msgstr "立即开始您的30天免费试用"
 
 #: app/routes/pricing.tsx:21
 msgid "Starter"
@@ -1520,11 +1242,6 @@ msgstr "系统状态："
 msgid "SYSTEMS REPLACED"
 msgstr "系统已替换"
 
-#: app/routes/_index.tsx:278
-#: app/routes/_index.tsx:820
-#~ msgid "Talk to Us"
-#~ msgstr "与我们交谈"
-
 #: app/routes/_index.tsx:269
 #: app/routes/_index.tsx:270
 msgid "Tasks"
@@ -1538,7 +1255,7 @@ msgstr "税收"
 msgid "Technical support"
 msgstr "技术支持"
 
-#: app/components/footer.tsx:72
+#: app/components/footer.tsx:71
 msgid "Terms"
 msgstr "条款"
 
@@ -1558,10 +1275,6 @@ msgstr "工厂本身"
 msgid "The floor, live to the second."
 msgstr "工厂，实时到秒。"
 
-#: app/routes/_index.tsx:740
-#~ msgid "THE HAPPY PATH"
-#~ msgstr "幸福路径"
-
 #: app/components/hero.tsx:123
 msgid "The Modern Manufacturing Stack"
 msgstr "现代制造堆栈"
@@ -1569,10 +1282,6 @@ msgstr "现代制造堆栈"
 #: app/routes/_index.tsx:740
 msgid "THE NARROW PATH"
 msgstr "狭隘之路"
-
-#: app/routes/_index.tsx:139
-#~ msgid "The open source <0>manufacturing ERP</0>"
-#~ msgstr "开源<0>制造ERP</0>"
 
 #: app/routes/_index.tsx:581
 msgid "THE STATUS QUO"
@@ -1586,10 +1295,6 @@ msgstr "可追溯性是默认状态。"
 msgid "Traveler printed at 6am, stale by 9"
 msgstr "作业单在早上6点打印，到9点就过期了"
 
-#: app/routes/_index.tsx:1007
-#~ msgid "TRUST"
-#~ msgstr "信任"
-
 #: app/routes/_index.tsx:1010
 msgid "Trusted"
 msgstr "值得信赖的"
@@ -1598,23 +1303,9 @@ msgstr "值得信赖的"
 msgid "Trusted by the world's most innovative"
 msgstr "受到世界最创新者的信任"
 
-#: app/root.tsx:376
-#: app/routes/_index.tsx:154
-#: app/routes/_index.tsx:813
-#~ msgid "Try It Now"
-#~ msgstr "立即尝试"
-
-#: app/routes/_index.tsx:236
-#~ msgid "Turns an approved drawing change into an updated routing, work instructions and effectivity date on the floor."
-#~ msgstr "将批准的图纸更改转变为更新的工艺、工作说明和工厂的生效日期。"
-
 #: app/routes/_index.tsx:211
 msgid "TYPICAL FIRST DEPLOYMENT"
 msgstr "典型的首次部署"
-
-#: app/routes/_index.tsx:239
-#~ msgid "Unified quality, purchasing & production"
-#~ msgstr "统一的质量、采购和生产"
 
 #: app/routes/pricing.tsx:71
 msgid "Unlimited functional support"
@@ -1632,37 +1323,9 @@ msgstr "不分叉您BOM的变体。"
 msgid "vehicles"
 msgstr "车辆"
 
-#: app/routes/_index.tsx:497
-#~ msgid "Video Library"
-#~ msgstr "视频库"
-
 #: app/components/header.tsx:36
 msgid "View our source code and contribute"
 msgstr "查看我们的源代码并做出贡献"
-
-#: app/routes/_index.tsx:596
-#~ msgid "View Source"
-#~ msgstr "查看源代码"
-
-#: app/routes/pricing.tsx:152
-#~ msgid "View the docs and start developing locally"
-#~ msgstr "查看文档并开始本地开发"
-
-#: app/routes/_index.tsx:218
-#~ msgid "Watches every open order against inbound supply, reschedules operations and names the critical path before it bites."
-#~ msgstr "监视每个开放订单与入站供应、重新安排操作并在关键路径咬人前命名。"
-
-#: app/routes/oss.tsx:40
-msgid "We believe in a better and more sustainable future powered by Open Source software. Below you can find a list of our friends who are just as passionate about open source and the future as we are."
-msgstr "我们相信由开源软件驱动的更美好、更可持续的未来。以下是我们的朋友名单，他们与我们一样对开源和未来充满热情。"
-
-#: app/routes/_index.tsx:364
-#~ msgid "We expose our entire ERP system as an MCP server, allowing you to connect to it from any tool that supports MCP. We currently have over 1,000 tools that your LLM can use to automate your business."
-#~ msgstr "我们将整个ERP系统作为MCP服务器公开，允许您从任何支持MCP的工具连接到它。我们目前拥有超过1,000个工具，您的LLM可以使用这些工具来自动化您的业务。"
-
-#: app/routes/_index.tsx:752
-#~ msgid "We open-sourced Carbon not because it's a great business plan, but because that's the system I would have wanted when I was in your shoes."
-#~ msgstr "我们开源 Carbon 不是因为这是一个伟大的商业计划，而是因为这是我在你的位置时想要的系统。"
 
 #: app/components/wizard-form.tsx:365
 msgid "We'll be in touch with you shortly to setup a demo."
@@ -1672,17 +1335,9 @@ msgstr "我们很快会与您联系以安排演示。"
 msgid "We'll be in touch with you shortly."
 msgstr "我们很快就会与您联系。"
 
-#: app/routes/_index.tsx:768
-#~ msgid "We're glad you're here for it."
-#~ msgstr "我们很高兴你在这里。"
-
 #: app/routes/contact.tsx:215
 msgid "What can we help with?"
 msgstr "我们能帮助您什么？"
-
-#: app/routes/_index.tsx:648
-#~ msgid "What our customers say:"
-#~ msgstr "我们的客户怎么说："
 
 #: app/routes/_index.tsx:138
 msgid "what to make, when"

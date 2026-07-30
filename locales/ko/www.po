@@ -31,18 +31,6 @@ msgstr "18개월 구현"
 msgid "21 CFR PART 11"
 msgstr "21 CFR PART 11"
 
-#: app/routes/_index.tsx:228
-#~ msgid ""
-#~ "412 lines parsed\n"
-#~ "matched 388 to prior routings\n"
-#~ "margin floor 34% held\n"
-#~ "→ quote drafted in 41s"
-#~ msgstr ""
-#~ "412개 라인 파싱됨\n"
-#~ "388개가 이전 라우팅과 일치\n"
-#~ "마진 바닥 34% 유지됨\n"
-#~ "→ 41초 내에 견적 작성됨"
-
 #: app/routes/pricing.tsx:52
 msgid "5 user minimum"
 msgstr "5명 최소 사용자"
@@ -76,10 +64,6 @@ msgstr "회계"
 msgid "Accrual accounting"
 msgstr "발생 회계"
 
-#: app/routes/_index.tsx:337
-#~ msgid "Achieve granular, end-to-end tracking of materials, components, and processes, ensuring compliance, simplifying audits, and enabling rapid root cause analysis without the complexity and cost of traditional high-end systems."
-#~ msgstr "재료, 부품 및 프로세스의 세밀한 엔드투엔드 추적을 달성하여 규정 준수를 보장하고, 감사를 단순화하며, 기존 고급 시스템의 복잡성과 비용 없이 신속한 근본 원인 분석을 가능하게 합니다."
-
 #: app/components/wizard-form.tsx:414
 msgid "Acme Inc"
 msgstr "Acme Inc"
@@ -96,29 +80,9 @@ msgstr "적응형 MES UI"
 msgid "Aerospace"
 msgstr "항공우주"
 
-#: app/routes/_index.tsx:729
-#~ msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
-#~ msgstr "제조 시스템을 구축하는 데 거의 10년을 보낸 후, 기술적 관점에서 \"이상적인\" 솔루션이 어떤 모습일지에 대해 꽤 좋은 아이디어를 얻었습니다:"
-
-#: app/routes/_index.tsx:225
-#~ msgid "AGENT · COMMERCE"
-#~ msgstr "AGENT · COMMERCE"
-
-#: app/routes/_index.tsx:234
-#~ msgid "AGENT · ENGINEERING"
-#~ msgstr "AGENT · ENGINEERING"
-
-#: app/routes/_index.tsx:216
-#~ msgid "AGENT · SUPPLY"
-#~ msgstr "AGENT · SUPPLY"
-
 #: app/routes/_index.tsx:223
 msgid "Agent-ready by default"
 msgstr "기본적으로 에이전트 준비 완료"
-
-#: app/routes/_index.tsx:885
-#~ msgid "Agents that work the plan, not a chat window."
-#~ msgstr "계획을 실행하는 에이전트, 채팅 창이 아닌."
 
 #: app/routes/pricing.tsx:51
 msgid "All advanced features available"
@@ -131,10 +95,6 @@ msgstr "모든 Carbon 상표, 로고 또는 기타 브랜드 요소는 Carbon Ma
 #: app/routes/_index.tsx:862
 msgid "An API for the entire organization."
 msgstr "조직 전체를 위한 API"
-
-#: app/routes/_index.tsx:862
-#~ msgid "An open API for the entire factory."
-#~ msgstr "전체 팩토리를 위한 개방형 API입니다."
 
 #: app/components/hero.tsx:246
 msgid "Analytics"
@@ -152,18 +112,6 @@ msgstr "API"
 msgid "API Docs"
 msgstr "API 문서"
 
-#: app/components/code-examples.tsx:571
-#~ msgid "API-First"
-#~ msgstr "API-First"
-
-#: app/routes/_index.tsx:439
-#~ msgid "API-First Architecture"
-#~ msgstr "API-우선 아키텍처"
-
-#: app/routes/_index.tsx:737
-#~ msgid "API-first, realtime subscriptions, simple scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
-#~ msgstr "API 우선, 실시간 구독, 간단한 스케줄링, 그리고 ERP 사용의 가치를 높이는 1,000가지 작은 세부사항들."
-
 #: app/routes/pricing.tsx:48
 msgid "API, webhooks, and integrations"
 msgstr "API, 웹훅, 및 통합"
@@ -179,10 +127,6 @@ msgstr "AS9100, FAI, 전체 계보"
 #: app/routes/_index.tsx:1041
 msgid "Ask your agent what it thinks"
 msgstr "에이전트에게 생각을 물어보세요"
-
-#: app/routes/_index.tsx:245
-#~ msgid "Assembly and make-to-order workflows"
-#~ msgstr "조립 및 주문형 제조 워크플로우"
 
 #: app/routes/pricing.tsx:50
 msgid "Audit logging"
@@ -208,17 +152,9 @@ msgstr "자동 생성 API 문서"
 msgid "Automatic updates and backups"
 msgstr "자동 업데이트 및 백업"
 
-#: app/routes/_index.tsx:392
-#~ msgid "Automatically generate the Bill of Materials and Bill of Process for a given set of options/parameters with our powerful product configurator."
-#~ msgstr "주어진 옵션/매개변수 세트에 대해 당사의 강력한 제품 구성기를 사용하여 자동으로 자재 명세서 및 공정 명세서를 생성합니다."
-
 #: app/routes/_index.tsx:236
 msgid "Automotive"
 msgstr "자동차"
-
-#: app/routes/_index.tsx:882
-#~ msgid "AUTONOMY"
-#~ msgstr "자율성"
 
 #: app/components/wizard-form.tsx:334
 msgid "Back"
@@ -231,10 +167,6 @@ msgstr "바코드 / QR 추적"
 #: app/routes/pricing.tsx:31
 msgid "Basic ERP, MES, and QMS functionality"
 msgstr "기본 ERP, MES 및 QMS 기능"
-
-#: app/routes/_index.tsx:889
-#~ msgid "Because the whole factory is one model, agents can act on it — with permissions, and a full audit trail."
-#~ msgstr "전체 공장이 하나의 모델이므로 에이전트가 이에 대해 작용할 수 있습니다. 권한과 전체 감사 추적을 통해."
 
 #: app/components/hero.tsx:230
 msgid "Bill of Materials"
@@ -261,25 +193,9 @@ msgstr "브랜드 자산"
 msgid "Build <0/><1/>at the speed of software."
 msgstr "소프트웨어 속도로 <0/><1/>구축하세요."
 
-#: app/routes/_index.tsx:805
-#~ msgid "Build something with Carbon"
-#~ msgstr "Carbon으로 뭔가를 만들어보세요"
-
-#: app/components/code-examples.tsx:574
-#~ msgid "Built on a developer-friendly platform"
-#~ msgstr "개발자 친화적인 플랫폼으로 구축됨"
-
-#: app/routes/_index.tsx:257
-#~ msgid "Built on the best of open-source software"
-#~ msgstr "최고의 오픈소스 소프트웨어로 구축됨"
-
 #: app/routes/pricing.tsx:38
 msgid "Business"
 msgstr "비즈니스"
-
-#: app/routes/_index.tsx:743
-#~ msgid "But even as we work with our customers to become the best off-the-shelf ERP/MES for many types of discrete manufacturing, we are faced with the reality that there is no \"perfect\" off-the-shelf solution, because each manufacturing business is unique."
-#~ msgstr "하지만 우리가 고객들과 함께 다양한 이산 제조 유형을 위한 최고의 기성 ERP/MES가 되기 위해 노력하고 있는 와중에도, 각 제조 사업이 고유하기 때문에 \"완벽한\" 기성 솔루션은 존재하지 않는다는 현실에 직면하고 있습니다."
 
 #: app/components/wizard-form.tsx:82
 msgid "Buy the Source Code"
@@ -301,41 +217,13 @@ msgstr "CARBON"
 msgid "CARBON / ASSEMBLY INSTRUCTIONS"
 msgstr "CARBON / 조립 지침"
 
-#: app/routes/_index.tsx:500
-#~ msgid "Carbon Academy is a free, self-paced learning platform that teaches you how to use Carbon. It's a great way to get started with Carbon and learn how to use it to its full potential."
-#~ msgstr "Carbon Academy는 Carbon 사용 방법을 가르치는 무료 자기주도 학습 플랫폼입니다. Carbon을 시작하고 최대한 활용하는 방법을 배우는 좋은 방법입니다."
-
 #: app/components/hero.tsx:126
 msgid "Carbon combines ERP, MES, and QMS into a single, unified system."
 msgstr "Carbon은 ERP, MES, QMS를 하나의 통합 시스템으로 결합합니다."
 
-#: app/routes/_index.tsx:145
-#~ msgid "Carbon is a manufacturing system of record that combines ERP, MES, and QMS into a single, unified, API-first system that's perfect for complex manufacturing."
-#~ msgstr "Carbon는 ERP, MES, QMS를 하나의 통합된 API 우선 시스템으로 결합한 제조 기록 시스템으로, 복잡한 제조에 완벽합니다."
-
-#: app/routes/_index.tsx:443
-#~ msgid "Carbon is built with an \"API-First Architecture,\" which gives you unparalleled flexibility to seamlessly connect Carbon with your other business systems. This allows you to automate workflows across all applications."
-#~ msgstr "Carbon는 \"API-First Architecture\"로 구축되어 있으며, 이를 통해 Carbon을 다른 비즈니스 시스템과 원활하게 연결할 수 있는 비교할 수 없는 유연성을 제공합니다. 이를 통해 모든 애플리케이션 전반에서 워크플로우를 자동화할 수 있습니다."
-
 #: app/routes/_index.tsx:488
 msgid "Carbon is the engineering-first operating system for manufacturers. Quote, plan, buy, build, inspect and ship on one live model of your factory — from a ten-person prototype shop to a rate-production line."
 msgstr "Carbon은 제조업체를 위한 엔지니어링 우선 운영 체제입니다. 당신의 공장의 하나의 라이브 모델에서 견적, 계획, 구매, 구축, 검사 및 배송 — 10명의 프로토타입 가게에서 속도 생산 라인까지."
-
-#: app/routes/_index.tsx:724
-#~ msgid "Carbon Manufacturing Systems Corp."
-#~ msgstr "Carbon Manufacturing Systems Corp."
-
-#: app/components/code-examples.tsx:577
-#~ msgid "Carbon provides a comprehensive MCP server and API clients in many popular languages."
-#~ msgstr "Carbon는 포괄적인 MCP 서버와 많은 인기 있는 언어의 API 클라이언트를 제공합니다."
-
-#: app/routes/_index.tsx:531
-#~ msgid "Carbon's developer documentation covers everything you need to build on the platform: connecting AI agents through the MCP server, integrating with the typed API client, and running and extending Carbon to build your own custom applications."
-#~ msgstr "Carbon의 개발자 문서는 플랫폼에서 구축하기 위해 필요한 모든 것을 다룹니다: MCP 서버를 통해 AI 에이전트 연결, 타입이 지정된 API 클라이언트와의 통합, 그리고 Carbon을 실행 및 확장하여 자신만의 커스텀 애플리케이션을 구축합니다."
-
-#: app/routes/_index.tsx:583
-#~ msgid "Carbon's source code is available on GitHub and is free to use. You can maintain your own public fork or acquire a commercial license to make your code modifications private."
-#~ msgstr "Carbon의 소스 코드는 GitHub에서 사용 가능하며 무료로 사용할 수 있습니다. 자신의 공개 포크를 유지하거나 상용 라이선스를 획득하여 코드 수정 사항을 비공개로 유지할 수 있습니다."
 
 #: app/routes/_index.tsx:1044
 msgid "Carbon's source code is available. Copy the prompt below into your favorite LLM."
@@ -368,14 +256,6 @@ msgstr "선호하는 데이터베이스를 선택하세요"
 #: app/routes/_index.tsx:246
 msgid "cleanroom ops, yield analytics"
 msgstr "정화실 운영, 수율 분석"
-
-#: app/routes/_index.tsx:789
-#~ msgid "Co-Founder and CTO"
-#~ msgstr "공동 창립자 및 CTO"
-
-#: app/components/code-examples.tsx:599
-#~ msgid "Code Examples"
-#~ msgstr "코드 예제"
 
 #: app/routes/pricing.tsx:34
 msgid "Community support"
@@ -530,10 +410,6 @@ msgstr "국방"
 msgid "Demand & forecast"
 msgstr "수요 및 예측"
 
-#: app/routes/_index.tsx:232
-#~ msgid "Designed for manufacturing"
-#~ msgstr "제조를 위해 설계됨"
-
 #: app/components/header.tsx:44
 msgid "Developer guides and API reference"
 msgstr "개발자 가이드 및 API 참조"
@@ -588,14 +464,6 @@ msgstr "덕트 테이프"
 msgid "Email Address"
 msgstr "이메일 주소"
 
-#: app/routes/_index.tsx:229
-#~ msgid "End-to-End"
-#~ msgstr "엔드-투-엔드"
-
-#: app/routes/_index.tsx:333
-#~ msgid "End-to-End Traceability"
-#~ msgstr "엔드-투-엔드 추적성"
-
 #: app/routes/_index.tsx:244
 msgid "Energy & grid"
 msgstr "에너지 및 전력망"
@@ -638,10 +506,6 @@ msgstr "모든 테이블은 끝점입니다"
 msgid "EVERY UNIT, EVERY OP"
 msgstr "모든 단위, 모든 작업"
 
-#: app/routes/_index.tsx:291
-#~ msgid "Exchange"
-#~ msgstr "교환"
-
 #: app/routes/_index.tsx:152
 msgid "Execution"
 msgstr "실행"
@@ -661,10 +525,6 @@ msgstr "FAI & NCR"
 #: app/components/wizard-form.tsx:146
 msgid "Feature Prioritization"
 msgstr "기능 우선순위"
-
-#: app/routes/_index.tsx:315
-#~ msgid "Features"
-#~ msgstr "기능"
 
 #: app/routes/_index.tsx:266
 #: app/routes/_index.tsx:267
@@ -690,10 +550,6 @@ msgstr "첫 번째 제품 검사, 부적합, CAPA 및 게이지 보정은 생산
 #: app/routes/pricing.tsx:66
 msgid "Forward deployed engineer"
 msgstr "전방 배치 엔지니어"
-
-#: app/routes/_index.tsx:721
-#~ msgid "Founder memo"
-#~ msgstr "창립자 메모"
 
 #: app/routes/_index.tsx:676
 msgid "Four systems, one schema. Nothing to integrate."
@@ -723,10 +579,6 @@ msgstr "Carbon의 스키마에서 직접 생성됨 — TypeScript, Python, C# �
 msgid "Get Started"
 msgstr "시작하기"
 
-#: app/routes/pricing.tsx:149
-#~ msgid "Get started for free"
-#~ msgstr "무료로 시작하기"
-
 #: app/routes/pricing.tsx:180
 msgid "Get started for free."
 msgstr "무료로 시작하세요."
@@ -743,10 +595,6 @@ msgstr "GL & 발생액"
 msgid "Global Search"
 msgstr "전역 검색"
 
-#: app/routes/_index.tsx:263
-#~ msgid "Govcloud-hosted Version Available"
-#~ msgstr "Govcloud 호스팅 버전 사용 가능"
-
 #: app/routes/_index.tsx:71
 msgid "hardware"
 msgstr "하드웨어"
@@ -755,17 +603,9 @@ msgstr "하드웨어"
 msgid "Hosting Preference"
 msgstr "호스팅 선호도"
 
-#: app/routes/_index.tsx:86
-#~ msgid "Huge consultanting bills"
-#~ msgstr ""
-
 #: app/routes/_index.tsx:87
 msgid "Huge consulting bills"
 msgstr "거대한 컨설팅 비용"
-
-#: app/routes/_index.tsx:760
-#~ msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
-#~ msgstr "오픈소스는 단순한 제품이 아니라 AI와 로봇 시대에 제조업의 미래를 함께 만들어가는 같은 생각을 가진 사람들의 커뮤니티이기 때문에 엄청난 잠재력을 가지고 있다고 믿습니다."
 
 #: app/routes/_index.tsx:927
 msgid "If it has a bill of materials, Carbon runs it."
@@ -790,10 +630,6 @@ msgstr "산업"
 #: app/routes/_index.tsx:1073
 msgid "Integrated with the world's best software."
 msgstr "세계 최고의 소프트웨어와 통합됨."
-
-#: app/routes/_index.tsx:1076
-#~ msgid "Integrates with the world's best software."
-#~ msgstr "세계 최고의 소프트웨어와 통합됩니다."
 
 #: app/components/wizard-form.tsx:174
 msgid "Integrations"
@@ -847,17 +683,9 @@ msgstr "john@company.com"
 msgid "Join our community chat"
 msgstr "우리 커뮤니티 채팅에 참여하세요"
 
-#: app/routes/_index.tsx:836
-#~ msgid "Join our Discord community"
-#~ msgstr "우리 Discord 커뮤니티에 참여하세요"
-
 #: app/components/hero.tsx:218
 msgid "Kanban Schedule"
 msgstr "칸반 스케줄"
-
-#: app/routes/_index.tsx:417
-#~ msgid "Keep your shop floor schedule up-to-date with our simple and powerful scheduling engine. Schedule by job due date, or by fine-tune work center and resource availability."
-#~ msgstr "작업장 일정을 간단하고 강력한 스케줄링 엔진으로 최신 상태로 유지하세요. 작업 마감일 또는 작업 센터와 리소스 가용성을 세밀하게 조정하여 스케줄링하세요."
 
 #: app/routes/_index.tsx:158
 msgid "Labor, scrap & yield"
@@ -867,7 +695,7 @@ msgstr "노동력, 스크랩 및 수율"
 msgid "Lead times & buffers"
 msgstr "리드 타임 및 버퍼"
 
-#: app/components/footer.tsx:59
+#: app/components/footer.tsx:58
 msgid "Learning"
 msgstr "학습"
 
@@ -891,7 +719,7 @@ msgstr "레거시 ERP는 1998년에 회계사를 위해 구축되었습니다."
 msgid "LEGACY STACK"
 msgstr "레거시 스택"
 
-#: app/components/footer.tsx:68
+#: app/components/footer.tsx:67
 msgid "Legal"
 msgstr "법적"
 
@@ -899,7 +727,7 @@ msgstr "법적"
 msgid "Let us handle the infrastructure for you"
 msgstr "인프라를 저희가 관리해드립니다"
 
-#: app/components/footer.tsx:60
+#: app/components/footer.tsx:59
 msgid "License"
 msgstr "라이선스"
 
@@ -936,17 +764,9 @@ msgstr "관리형 클라우드 또는 오픈 소스 코어를 자체 호스팅�
 msgid "Managed Hosting"
 msgstr "관리형 호스팅"
 
-#: app/routes/_index.tsx:545
-#~ msgid "MCP"
-#~ msgstr "MCP"
-
 #: app/routes/_index.tsx:882
 msgid "MCP Docs"
 msgstr "MCP 문서"
-
-#: app/routes/_index.tsx:360
-#~ msgid "MCP for Anything"
-#~ msgstr "모든 것을 위한 MCP"
 
 #: app/routes/_index.tsx:237
 msgid "Medical devices"
@@ -968,14 +788,6 @@ msgstr "MES 작업 지시"
 msgid "Message"
 msgstr "메시지"
 
-#: app/routes/_index.tsx:173
-#~ msgid "Modern manufacturers build their tech stack on Carbon"
-#~ msgstr "현대 제조업체들은 Carbon으로 기술 스택을 구축합니다"
-
-#: app/routes/_index.tsx:485
-#~ msgid "Modern, minimal, transparent"
-#~ msgstr "현대적이고 미니멀하며 투명한"
-
 #: app/routes/_index.tsx:124
 msgid "money in, money out"
 msgstr "돈 들어옴, 돈 나감"
@@ -983,10 +795,6 @@ msgstr "돈 들어옴, 돈 나감"
 #: app/routes/pricing.tsx:39
 msgid "Most popular"
 msgstr "가장 인기있는"
-
-#: app/routes/_index.tsx:251
-#~ msgid "Multi-location planning and inventory"
-#~ msgstr "다중 위치 계획 및 인벤토리"
 
 #: app/components/wizard-form.tsx:118
 msgid "Multi-Tenant"
@@ -1040,14 +848,6 @@ msgstr "일회성, 단일 로트 추적 가능성"
 msgid "One-time purchase with full ownership"
 msgstr "일회성 구매로 완전한 소유권 획득"
 
-#: app/routes/oss.tsx:58
-msgid "Open link"
-msgstr "링크 열기"
-
-#: app/routes/_index.tsx:482
-#~ msgid "Open Source"
-#~ msgstr "오픈 소스"
-
 #: app/components/status-indicator.tsx:8
 msgid "Operational"
 msgstr "정상 작동"
@@ -1071,11 +871,6 @@ msgstr "또는 오픈 소스 코어를 자체 호스팅"
 #: app/routes/_index.tsx:182
 msgid "Order"
 msgstr "주문"
-
-#: app/components/footer.tsx:50
-#: app/routes/oss.tsx:38
-msgid "OSS Friends"
-msgstr "OSS Friends"
 
 #: app/components/wizard-form.tsx:76
 msgid "Ownership Model"
@@ -1114,15 +909,7 @@ msgstr "프로세스를 완료하기 위해 연락처 정보를 제공해주세�
 msgid "POs & receipts"
 msgstr "PO 및 영수증"
 
-#: app/routes/_index.tsx:318
-#~ msgid "Powerful tools to run your business"
-#~ msgstr "비즈니스를 운영하기 위한 강력한 도구"
-
-#: app/routes/_index.tsx:227
-#~ msgid "Prices a multi-hundred-line RFQ from your own routing and purchase history, with margin held to your rules."
-#~ msgstr "자신의 라우팅 및 구매 기록에서 수백 줄의 RFQ 가격을 책정합니다. 마진은 규칙에 따라 유지됩니다."
-
-#: app/components/footer.tsx:61
+#: app/components/footer.tsx:60
 #: app/components/header.tsx:92
 #: app/components/header.tsx:216
 msgid "Pricing"
@@ -1134,17 +921,13 @@ msgstr "가격"
 msgid "Printer"
 msgstr "프린터"
 
-#: app/components/footer.tsx:71
+#: app/components/footer.tsx:70
 msgid "Privacy"
 msgstr "개인정보 보호"
 
-#: app/components/footer.tsx:56
+#: app/components/footer.tsx:55
 msgid "Product"
 msgstr "제품"
-
-#: app/routes/_index.tsx:388
-#~ msgid "Product Configurator"
-#~ msgstr "제품 구성기"
 
 #: app/routes/_index.tsx:183
 msgid "Production"
@@ -1186,10 +969,6 @@ msgstr "품질 / 추적 기록"
 #: app/routes/_index.tsx:90
 msgid "Quality in a separate binder"
 msgstr "별도 바인더의 품질"
-
-#: app/routes/_index.tsx:226
-#~ msgid "Quote"
-#~ msgstr "견적"
 
 #: app/components/hero.tsx:242
 msgid "Quote Pricing"
@@ -1244,26 +1023,6 @@ msgstr "리소스"
 msgid "REV 4 · LIVE"
 msgstr "REV 4 · LIVE"
 
-#: app/routes/_index.tsx:237
-#~ msgid ""
-#~ "REV C → REV D diff\n"
-#~ "2 ops changed, 1 added\n"
-#~ "instructions regenerated\n"
-#~ "→ effective next lot"
-#~ msgstr ""
-#~ "REV C → REV D diff\n"
-#~ "2개 작업 변경, 1개 추가\n"
-#~ "지침 재생성됨\n"
-#~ "→ 다음 로트에 효과 있음"
-
-#: app/routes/_index.tsx:645
-#~ msgid "Reviews"
-#~ msgstr "리뷰"
-
-#: app/routes/_index.tsx:235
-#~ msgid "Revision"
-#~ msgstr "개정"
-
 #: app/routes/_index.tsx:291
 msgid "Revision control with effectivity dates"
 msgstr "효과 날짜가 있는 개정 제어"
@@ -1300,7 +1059,7 @@ msgstr "행 수준 보안"
 msgid "Rule-based BOM and routing generation"
 msgstr "규칙 기반 BOM 및 라우팅 생성"
 
-#: app/components/footer.tsx:51
+#: app/components/footer.tsx:50
 msgid "Sales"
 msgstr "판매"
 
@@ -1315,22 +1074,6 @@ msgstr "위성"
 #: app/routes/_index.tsx:272
 msgid "SCADA"
 msgstr "SCADA"
-
-#: app/routes/_index.tsx:219
-#~ msgid ""
-#~ "scan 1,284 demand lines\n"
-#~ "PN-4471 short 12 · lead 9d\n"
-#~ "→ resequenced WC-02, WC-05\n"
-#~ "→ escalated to buyer"
-#~ msgstr ""
-#~ "1,284개의 수요 라인 스캔\n"
-#~ "PN-4471 부족 12 · 리드 9일\n"
-#~ "→ WC-02, WC-05 재정렬\n"
-#~ "→ 구매자에게 에스컬레이션"
-
-#: app/routes/_index.tsx:545
-#~ msgid "Scheduling / job board"
-#~ msgstr "스케줄링 / 작업 보드"
 
 #: app/components/wizard-form.tsx:154
 msgid "Select which features you need custom development for"
@@ -1400,10 +1143,6 @@ msgstr "작업 현장 / 작업 추적"
 msgid "Shop Floor Apps"
 msgstr "Shop Floor Apps"
 
-#: app/routes/_index.tsx:217
-#~ msgid "Shortage"
-#~ msgstr "부족"
-
 #: app/routes/_index.tsx:145
 msgid "Shortage escalation"
 msgstr "부족 에스컬레이션"
@@ -1412,17 +1151,9 @@ msgstr "부족 에스컬레이션"
 msgid "Shortages found on the floor"
 msgstr "작업 현장에서 발견된 부족"
 
-#: app/routes/pricing.tsx:80
-#~ msgid "Simple pricing based on your needs"
-#~ msgstr "당신의 필요에 따른 간단한 가격 책정"
-
 #: app/routes/pricing.tsx:85
 msgid "Simple pricing based on your needs."
 msgstr "필요에 따른 간단한 가격."
-
-#: app/routes/_index.tsx:413
-#~ msgid "Simplified Scheduling"
-#~ msgstr "간소화된 스케줄링"
 
 #: app/components/wizard-form.tsx:123
 msgid "Single-Tenant"
@@ -1448,7 +1179,7 @@ msgstr "뭔가 잘못되었습니다"
 msgid "SOURCE AVAILABLE"
 msgstr "소스 사용 가능"
 
-#: app/components/footer.tsx:62
+#: app/components/footer.tsx:61
 msgid "Source Code"
 msgstr "소스 코드"
 
@@ -1479,18 +1210,9 @@ msgstr "30일 무료 체험 시작"
 msgid "Start Free"
 msgstr "무료로 시작"
 
-#: app/routes/_index.tsx:270
-#: app/routes/_index.tsx:513
-#~ msgid "Start Learning"
-#~ msgstr "학습 시작"
-
 #: app/routes/_index.tsx:1112
 msgid "START NOW · NO CALL REQUIRED"
 msgstr "지금 시작 · 통화 불필요"
-
-#: app/routes/_index.tsx:808
-#~ msgid "Start your 30-day free trial today"
-#~ msgstr "오늘 30일 무료 체험을 시작하세요"
 
 #: app/routes/pricing.tsx:21
 msgid "Starter"
@@ -1520,11 +1242,6 @@ msgstr "시스템 상태:"
 msgid "SYSTEMS REPLACED"
 msgstr "대체된 시스템"
 
-#: app/routes/_index.tsx:278
-#: app/routes/_index.tsx:820
-#~ msgid "Talk to Us"
-#~ msgstr "저희에게 문의하세요"
-
 #: app/routes/_index.tsx:269
 #: app/routes/_index.tsx:270
 msgid "Tasks"
@@ -1538,7 +1255,7 @@ msgstr "세금"
 msgid "Technical support"
 msgstr "기술 지원"
 
-#: app/components/footer.tsx:72
+#: app/components/footer.tsx:71
 msgid "Terms"
 msgstr "약관"
 
@@ -1558,10 +1275,6 @@ msgstr "바닥 자체"
 msgid "The floor, live to the second."
 msgstr "바닥, 초 단위로 라이브."
 
-#: app/routes/_index.tsx:740
-#~ msgid "THE HAPPY PATH"
-#~ msgstr "행복한 경로"
-
 #: app/components/hero.tsx:123
 msgid "The Modern Manufacturing Stack"
 msgstr "현대적인 제조 스택"
@@ -1569,10 +1282,6 @@ msgstr "현대적인 제조 스택"
 #: app/routes/_index.tsx:740
 msgid "THE NARROW PATH"
 msgstr "좁은 길"
-
-#: app/routes/_index.tsx:139
-#~ msgid "The open source <0>manufacturing ERP</0>"
-#~ msgstr "오픈 소스 <0>제조 ERP</0>"
 
 #: app/routes/_index.tsx:581
 msgid "THE STATUS QUO"
@@ -1586,10 +1295,6 @@ msgstr "추적 가능성은 기본 상태입니다."
 msgid "Traveler printed at 6am, stale by 9"
 msgstr "오전 6시에 인쇄된 추적, 9시까지 오래됨"
 
-#: app/routes/_index.tsx:1007
-#~ msgid "TRUST"
-#~ msgstr "신뢰"
-
 #: app/routes/_index.tsx:1010
 msgid "Trusted"
 msgstr "신뢰"
@@ -1598,23 +1303,9 @@ msgstr "신뢰"
 msgid "Trusted by the world's most innovative"
 msgstr "세계에서 가장 혁신적인 기업의 신뢰"
 
-#: app/root.tsx:376
-#: app/routes/_index.tsx:154
-#: app/routes/_index.tsx:813
-#~ msgid "Try It Now"
-#~ msgstr "지금 시도해보기"
-
-#: app/routes/_index.tsx:236
-#~ msgid "Turns an approved drawing change into an updated routing, work instructions and effectivity date on the floor."
-#~ msgstr "승인된 도면 변경을 바닥의 업데이트된 라우팅, 작업 지침 및 효과 날짜로 변환합니다."
-
 #: app/routes/_index.tsx:211
 msgid "TYPICAL FIRST DEPLOYMENT"
 msgstr "전형적인 첫 배포"
-
-#: app/routes/_index.tsx:239
-#~ msgid "Unified quality, purchasing & production"
-#~ msgstr "통합 품질, 구매 및 생산"
 
 #: app/routes/pricing.tsx:71
 msgid "Unlimited functional support"
@@ -1632,37 +1323,9 @@ msgstr "BOM을 포크하지 않는 변형."
 msgid "vehicles"
 msgstr "차량"
 
-#: app/routes/_index.tsx:497
-#~ msgid "Video Library"
-#~ msgstr "비디오 라이브러리"
-
 #: app/components/header.tsx:36
 msgid "View our source code and contribute"
 msgstr "우리의 소스 코드를 보고 기여하세요"
-
-#: app/routes/_index.tsx:596
-#~ msgid "View Source"
-#~ msgstr "소스 보기"
-
-#: app/routes/pricing.tsx:152
-#~ msgid "View the docs and start developing locally"
-#~ msgstr "문서를 보고 로컬에서 개발을 시작하세요"
-
-#: app/routes/_index.tsx:218
-#~ msgid "Watches every open order against inbound supply, reschedules operations and names the critical path before it bites."
-#~ msgstr "모든 미해결 주문을 인바운드 공급과 비교하여 감시하고, 작업을 재스케줄링하고 치명적 경로를 먼저 지정합니다."
-
-#: app/routes/oss.tsx:40
-msgid "We believe in a better and more sustainable future powered by Open Source software. Below you can find a list of our friends who are just as passionate about open source and the future as we are."
-msgstr "우리는 오픈소스 소프트웨어로 구동되는 더 나은 그리고 더 지속 가능한 미래를 믿습니다. 아래에서 오픈소스와 미래에 대해 우리만큼 열정적인 우리의 친구들의 목록을 찾을 수 있습니다."
-
-#: app/routes/_index.tsx:364
-#~ msgid "We expose our entire ERP system as an MCP server, allowing you to connect to it from any tool that supports MCP. We currently have over 1,000 tools that your LLM can use to automate your business."
-#~ msgstr "당사의 전체 ERP 시스템을 MCP 서버로 노출하여 MCP를 지원하는 모든 도구에서 연결할 수 있습니다. 현재 LLM이 비즈니스를 자동화하는 데 사용할 수 있는 1,000개 이상의 도구를 보유하고 있습니다."
-
-#: app/routes/_index.tsx:752
-#~ msgid "We open-sourced Carbon not because it's a great business plan, but because that's the system I would have wanted when I was in your shoes."
-#~ msgstr "우리가 Carbon을 오픈소스로 공개한 것은 훌륭한 사업 계획이어서가 아니라, 내가 당신의 입장에 있었을 때 원했을 시스템이기 때문입니다."
 
 #: app/components/wizard-form.tsx:365
 msgid "We'll be in touch with you shortly to setup a demo."
@@ -1672,17 +1335,9 @@ msgstr "곧 데모 설정을 위해 연락드리겠습니다."
 msgid "We'll be in touch with you shortly."
 msgstr "곧 연락드리겠습니다."
 
-#: app/routes/_index.tsx:768
-#~ msgid "We're glad you're here for it."
-#~ msgstr "우리는 당신이 여기 있어서 기쁩니다."
-
 #: app/routes/contact.tsx:215
 msgid "What can we help with?"
 msgstr "무엇을 도와드릴까요?"
-
-#: app/routes/_index.tsx:648
-#~ msgid "What our customers say:"
-#~ msgstr "고객들의 의견:"
 
 #: app/routes/_index.tsx:138
 msgid "what to make, when"
