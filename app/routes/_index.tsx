@@ -299,8 +299,8 @@ const featureRows = [
 		],
 		shotLabel: msg`Part configurator / BOM tree`,
 		shot: "configurator",
-		shotLight: "/screenshots/bom-light.jpg",
-		shotDark: "/screenshots/bom-dark.jpg",
+		shotLight: "/screenshots/bom-light.webp",
+		shotDark: "/screenshots/bom-dark.webp",
 		flip: false,
 	},
 	{
@@ -315,8 +315,8 @@ const featureRows = [
 		],
 		shotLabel: msg`Shop floor / job traveler`,
 		shot: "features-mes",
-		shotLight: "/screenshots/mes-light.jpg",
-		shotDark: "/screenshots/mes-dark.jpg",
+		shotLight: "/screenshots/mes-light.webp",
+		shotDark: "/screenshots/mes-dark.webp",
 		flip: true,
 	},
 	{
@@ -331,8 +331,8 @@ const featureRows = [
 		],
 		shotLabel: msg`Quality / traceability record`,
 		shot: "traceability",
-		shotLight: "/screenshots/traceability-light.jpg",
-		shotDark: "/screenshots/traceability-dark.jpg",
+		shotLight: "/screenshots/traceability-light.webp",
+		shotDark: "/screenshots/traceability-dark.webp",
 		flip: false,
 	},
 	{
@@ -347,8 +347,8 @@ const featureRows = [
 		],
 		shotLabel: msg`Multi-entity ledger / multi-site planning`,
 		shot: "multi-entity",
-		shotLight: "/screenshots/multi-light.jpg",
-		shotDark: "/screenshots/multi-dark.jpg",
+		shotLight: "/screenshots/multi-light.webp",
+		shotDark: "/screenshots/multi-dark.webp",
 		flip: true,
 	},
 ];
@@ -643,14 +643,14 @@ function HeroDashboard() {
 				<div className="relative overflow-hidden border-t border-border sm:h-[min(66vh,740px)]">
 					<Screenshot
 						className="dark:hidden"
-						src="/screenshots/assembly-light.jpeg"
+						src="/screenshots/assembly-light.webp"
 						video="/screenshots/assembly-light.mp4"
 						label={t`Animated assembly instructions`}
 						eager
 					/>
 					<Screenshot
 						className="hidden dark:block"
-						src="/screenshots/assembly-dark.jpeg"
+						src="/screenshots/assembly-dark.webp"
 						video="/screenshots/assembly-dark.mp4"
 						label={t`Animated assembly instructions`}
 						eager
