@@ -1065,21 +1065,21 @@ function Agents() {
 					<div className="flex flex-wrap gap-3">
 						<Button asChild variant="accent" size="cta">
 							<a
-								href="https://docs.carbon.ms/api-reference"
-								target="_blank"
-								rel="noopener"
-							>
-								<Trans>API Docs</Trans>
-								<Book />
-							</a>
-						</Button>
-						<Button asChild variant="accentOutline" size="cta">
-							<a
 								href="https://docs.carbon.ms/mcp"
 								target="_blank"
 								rel="noopener"
 							>
 								<Trans>MCP Docs</Trans>
+								<Book />
+							</a>
+						</Button>
+						<Button asChild variant="accentOutline" size="cta">
+							<a
+								href="https://docs.carbon.ms/api-reference"
+								target="_blank"
+								rel="noopener"
+							>
+								<Trans>API Docs</Trans>
 								<ChevronRight />
 							</a>
 						</Button>

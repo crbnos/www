@@ -108,7 +108,7 @@ msgstr "Animasyonlu montaj talimatları"
 msgid "API"
 msgstr "API"
 
-#: app/routes/_index.tsx:1072
+#: app/routes/_index.tsx:1082
 msgid "API Docs"
 msgstr "API Dokümanları"
 
@@ -784,7 +784,7 @@ msgstr "İmalat yürütmesi"
 msgid "Manufacturing-focused, GAAP accounting"
 msgstr "İmalat odaklı, GAAP muhasebesi"
 
-#: app/routes/_index.tsx:1082
+#: app/routes/_index.tsx:1072
 msgid "MCP Docs"
 msgstr "MCP Belgeleri"
 

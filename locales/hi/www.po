@@ -108,7 +108,7 @@ msgstr "एनिमेटेड असेंबली निर्देश"
 msgid "API"
 msgstr "API"
 
-#: app/routes/_index.tsx:1072
+#: app/routes/_index.tsx:1082
 msgid "API Docs"
 msgstr "API डॉक्स"
 
@@ -784,7 +784,7 @@ msgstr "विनिर्माण निष्पादन"
 msgid "Manufacturing-focused, GAAP accounting"
 msgstr "विनिर्माण-केंद्रित, GAAP लेखांकन"
 
-#: app/routes/_index.tsx:1082
+#: app/routes/_index.tsx:1072
 msgid "MCP Docs"
 msgstr "MCP डॉक्स"
 
