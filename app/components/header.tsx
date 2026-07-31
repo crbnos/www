@@ -6,6 +6,7 @@ import { Link, useFetcher } from "react-router";
 import { setClientMode, useMode } from "~/hooks/useMode";
 import { startModeTransition } from "~/utils/dom";
 import { path } from "~/utils/path";
+import { AppCtaLabel } from "./app-cta-label";
 import { Button } from "./ui/button";
 import { DiscordLogo } from "./ui/discord-logo";
 import { GithubLogo } from "./ui/github-logo";
@@ -142,7 +143,7 @@ export function Header() {
 						className="hidden sm:inline-flex"
 					>
 						<a href={APP_URL}>
-							<Trans>Start Free</Trans>
+							<AppCtaLabel />
 						</a>
 					</Button>
 					<Button
@@ -243,7 +244,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
 				<div className="mt-4 flex items-center gap-3">
 					<Button asChild variant="accentOutline" size="ctaSm" className="flex-1">
 						<a href={APP_URL}>
-							<Trans>Start Free</Trans>
+							<AppCtaLabel />
 						</a>
 					</Button>
 					<Button asChild variant="accent" size="ctaSm" className="flex-1">

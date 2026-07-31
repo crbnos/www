@@ -32,6 +32,10 @@
     --ring: 240 10% 3.9%;
     --radius: 0rem;
 
+    /* Matches the background baked into the product screenshots in
+       /public/screenshots, so their frames don't read as a different shade. */
+    --screenshot: 0 0% 100%;
+
     --header-height: 70px;
   }
 
@@ -57,6 +61,10 @@
     --border: 173 3.7% 15.9%;
     --input: 173 3.7% 15.9%;
     --ring: 173 4.9% 83.9%;
+
+    /* #0a0a0a — the neutral black the dark screenshots were captured on.
+       --card is teal-tinted (rgb 5,15,14) and shows as a visible band. */
+    --screenshot: 0 0% 3.9%;
   }
 }
 
@@ -129,5 +137,21 @@
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none;
+  mix-blend-mode: normal;
+}
+
+/* Screenshot click-to-zoom (see components/zoomable-image.tsx). The thumbnail
+   is cropped and the dialog image is contained, so without object-fit the two
+   snapshots stretch into each other on the way across. */
+::view-transition-group(zoomed-image) {
+  animation-duration: 320ms;
+  animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+}
+
+::view-transition-old(zoomed-image),
+::view-transition-new(zoomed-image) {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
   mix-blend-mode: normal;
 }
