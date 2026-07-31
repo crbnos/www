@@ -269,7 +269,7 @@ msgstr "선호하는 데이터베이스를 선택하세요"
 msgid "cleanroom ops, yield analytics"
 msgstr "정화실 운영, 수율 분석"
 
-#: app/components/zoomable-image.tsx:142
+#: app/components/zoomable-image.tsx:127
 msgid "Close"
 msgstr "닫기"
 
@@ -526,7 +526,7 @@ msgstr "모든 것이 통합됨"
 msgid "Execution"
 msgstr "실행"
 
-#: app/components/zoomable-image.tsx:106
+#: app/components/zoomable-image.tsx:91
 msgid "Expand image"
 msgstr "이미지 확대"
 

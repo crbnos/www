@@ -269,7 +269,7 @@ msgstr "お好みのデータベースを選択してください"
 msgid "cleanroom ops, yield analytics"
 msgstr "クリーンルームオプス、収率分析"
 
-#: app/components/zoomable-image.tsx:142
+#: app/components/zoomable-image.tsx:127
 msgid "Close"
 msgstr "閉じる"
 
@@ -526,7 +526,7 @@ msgstr "すべてが統合"
 msgid "Execution"
 msgstr "実行"
 
-#: app/components/zoomable-image.tsx:106
+#: app/components/zoomable-image.tsx:91
 msgid "Expand image"
 msgstr "画像を拡大"
 

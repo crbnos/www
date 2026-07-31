@@ -269,7 +269,7 @@ msgstr "选择您偏好的数据库"
 msgid "cleanroom ops, yield analytics"
 msgstr "洁净室操作、产率分析"
 
-#: app/components/zoomable-image.tsx:142
+#: app/components/zoomable-image.tsx:127
 msgid "Close"
 msgstr "关闭"
 
@@ -526,7 +526,7 @@ msgstr "所有功能集成"
 msgid "Execution"
 msgstr "执行"
 
-#: app/components/zoomable-image.tsx:106
+#: app/components/zoomable-image.tsx:91
 msgid "Expand image"
 msgstr "展开图像"
 

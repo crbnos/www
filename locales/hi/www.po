@@ -269,7 +269,7 @@ msgstr "अपनी पसंदीदा डेटाबेस चुनें
 msgid "cleanroom ops, yield analytics"
 msgstr "शुद्ध कक्ष ops, yield विश्लेषण"
 
-#: app/components/zoomable-image.tsx:142
+#: app/components/zoomable-image.tsx:127
 msgid "Close"
 msgstr "बंद करें"
 
@@ -526,7 +526,7 @@ msgstr "सब कुछ एकीकृत"
 msgid "Execution"
 msgstr "निष्पादन"
 
-#: app/components/zoomable-image.tsx:106
+#: app/components/zoomable-image.tsx:91
 msgid "Expand image"
 msgstr "इमेज को बड़ा करें"
 

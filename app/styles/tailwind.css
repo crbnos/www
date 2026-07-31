@@ -139,19 +139,3 @@
   animation: none;
   mix-blend-mode: normal;
 }
-
-/* Screenshot click-to-zoom (see components/zoomable-image.tsx). The thumbnail
-   is cropped and the dialog image is contained, so without object-fit the two
-   snapshots stretch into each other on the way across. */
-::view-transition-group(zoomed-image) {
-  animation-duration: 320ms;
-  animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
-}
-
-::view-transition-old(zoomed-image),
-::view-transition-new(zoomed-image) {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-  mix-blend-mode: normal;
-}

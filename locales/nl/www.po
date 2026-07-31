@@ -269,7 +269,7 @@ msgstr "Kies uw voorkeursdatabase"
 msgid "cleanroom ops, yield analytics"
 msgstr "schone kamer operaties, opbrengstanalyses"
 
-#: app/components/zoomable-image.tsx:142
+#: app/components/zoomable-image.tsx:127
 msgid "Close"
 msgstr "Sluiten"
 
@@ -526,7 +526,7 @@ msgstr "Alles geïntegreerd"
 msgid "Execution"
 msgstr "Uitvoering"
 
-#: app/components/zoomable-image.tsx:106
+#: app/components/zoomable-image.tsx:91
 msgid "Expand image"
 msgstr "Afbeelding vergroten"
 

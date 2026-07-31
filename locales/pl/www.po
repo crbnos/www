@@ -269,7 +269,7 @@ msgstr "Wybierz preferowaną bazę danych"
 msgid "cleanroom ops, yield analytics"
 msgstr "operacje w pomieszczeniu czystym, analityka wydajności"
 
-#: app/components/zoomable-image.tsx:142
+#: app/components/zoomable-image.tsx:127
 msgid "Close"
 msgstr "Zamknij"
 
@@ -526,7 +526,7 @@ msgstr "Wszystko zintegrowane"
 msgid "Execution"
 msgstr "Wykonanie"
 
-#: app/components/zoomable-image.tsx:106
+#: app/components/zoomable-image.tsx:91
 msgid "Expand image"
 msgstr "Rozwiń obraz"
 

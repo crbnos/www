@@ -1,29 +1,21 @@
 import { Trans } from "@lingui/react/macro";
 import { X } from "lucide-react";
-import { type ReactNode, useCallback, useLayoutEffect, useRef, useState } from "react";
+import { animateView, useReducedMotion } from "motion/react";
+import { type ReactNode, useCallback, useId, useLayoutEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import { cn } from "~/lib/utils";
 
-/**
- * Shared across every zoomable image. Only one element may carry a given
- * view-transition-name at a time, so the name is assigned imperatively to
- * whichever image is mid-transition and cleared as soon as it settles.
- */
-const VT_NAME = "zoomed-image";
-
-function canAnimate() {
-	return (
-		typeof document !== "undefined" &&
-		typeof document.startViewTransition === "function" &&
-		!window.matchMedia("(prefers-reduced-motion: reduce)").matches
-	);
-}
+const MORPH = { duration: 0.32, ease: [0.2, 0, 0, 1] } as const;
 
 /**
  * Click-to-zoom for the product screenshots: the thumbnail morphs into a
- * full-size dialog via the View Transition API, and back on close. Browsers
- * without the API (Firefox, Safari < 18) still get the dialog, just cut rather
- * than morphed — same for anyone who asked for reduced motion.
+ * full-size dialog and back.
+ *
+ * Motion's `animateView` drives the View Transition. It assigns and releases
+ * `view-transition-name` itself — pairing two different elements through
+ * `.add(old, new)` — so nothing here has to juggle names, and it falls back to
+ * running the update unanimated when the browser has no View Transition API
+ * (Firefox, Safari < 18).
  */
 export function ZoomableImage({
 	src,
@@ -40,9 +32,14 @@ export function ZoomableImage({
 	const [open, setOpen] = useState(false);
 	const thumbRef = useRef<HTMLDivElement>(null);
 	const dialogRef = useRef<HTMLDialogElement>(null);
+	const reduceMotion = useReducedMotion();
+	// The dialog image does not exist yet when the zoom-in transition is set up,
+	// so it is paired by selector and resolved after the update. `useId` contains
+	// colons, which are not valid in a plain attribute selector.
+	const zoomId = useId().replace(/[^a-zA-Z0-9]/g, "");
 
-	// The <dialog> has to enter/leave the top layer inside the view transition's
-	// update callback, so drive it from a layout effect (flushSync runs these
+	// The <dialog> has to enter/leave the top layer inside the transition's update
+	// callback, so drive it from a layout effect (flushSync runs these
 	// synchronously) rather than from the click handler.
 	useLayoutEffect(() => {
 		const dialog = dialogRef.current;
@@ -51,47 +48,35 @@ export function ZoomableImage({
 		if (!open && dialog.open) dialog.close();
 	}, [open]);
 
-	const thumbImage = useCallback(
-		() => thumbRef.current?.querySelector("img") ?? null,
-		[],
-	);
-
 	const zoomIn = useCallback(() => {
-		if (!canAnimate()) {
+		if (reduceMotion) {
 			setOpen(true);
 			return;
 		}
-		const img = thumbImage();
-		// Name the thumbnail so it is captured as the "old" state...
-		if (img) img.style.viewTransitionName = VT_NAME;
-		document
-			.startViewTransition(() => {
-				// ...then hand the name over to the dialog image, so the two are
-				// never named at the same time.
-				if (img) img.style.viewTransitionName = "";
-				flushSync(() => setOpen(true));
-			})
-			.finished.finally(() => {
-				if (img) img.style.viewTransitionName = "";
-			});
-	}, [thumbImage]);
+		const thumb = thumbRef.current?.querySelector("img");
+		const transition = animateView(() => flushSync(() => setOpen(true)));
+		if (thumb) {
+			transition
+				.add(thumb, `[data-zoom-image="${zoomId}"]`)
+				// The thumbnail sits inside two overflow-hidden wrappers; nesting the
+				// layer under them would clip the image as it grows past the card.
+				.group(false)
+				.layout(MORPH);
+		}
+	}, [reduceMotion, zoomId]);
 
 	const zoomOut = useCallback(() => {
-		if (!canAnimate()) {
+		if (reduceMotion) {
 			setOpen(false);
 			return;
 		}
-		const img = thumbImage();
-		document
-			.startViewTransition(() => {
-				flushSync(() => setOpen(false));
-				// The thumbnail is the "new" state on the way back.
-				if (img) img.style.viewTransitionName = VT_NAME;
-			})
-			.finished.finally(() => {
-				if (img) img.style.viewTransitionName = "";
-			});
-	}, [thumbImage]);
+		const full = dialogRef.current?.querySelector("img");
+		const thumb = thumbRef.current?.querySelector("img");
+		const transition = animateView(() => flushSync(() => setOpen(false)));
+		if (full && thumb) {
+			transition.add(full, thumb).group(false).layout(MORPH);
+		}
+	}, [reduceMotion]);
 
 	return (
 		<>
@@ -128,7 +113,7 @@ export function ZoomableImage({
 						<img
 							src={src}
 							alt={alt}
-							style={{ viewTransitionName: VT_NAME }}
+							data-zoom-image={zoomId}
 							className="max-h-[92vh] max-w-[94vw] cursor-zoom-out object-contain"
 							onClick={zoomOut}
 						/>

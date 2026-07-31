@@ -269,7 +269,7 @@ msgstr "Tercih ettiğiniz veritabanını seçin"
 msgid "cleanroom ops, yield analytics"
 msgstr "Temiz Oda Operasyonları, Verim Analizi"
 
-#: app/components/zoomable-image.tsx:142
+#: app/components/zoomable-image.tsx:127
 msgid "Close"
 msgstr "Kapat"
 
@@ -526,7 +526,7 @@ msgstr "Her şey entegre"
 msgid "Execution"
 msgstr "Yürütme"
 
-#: app/components/zoomable-image.tsx:106
+#: app/components/zoomable-image.tsx:91
 msgid "Expand image"
 msgstr "Resmi genişlet"
 
