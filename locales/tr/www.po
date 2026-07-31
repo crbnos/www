@@ -693,7 +693,7 @@ msgstr "Kanban Programı"
 
 #: app/routes/_index.tsx:162
 msgid "Labor, scrap & rework"
-msgstr ""
+msgstr "İşçilik, hurda ve yeniden işleme"
 
 #: app/routes/_index.tsx:147
 msgid "Lead times & buffers"

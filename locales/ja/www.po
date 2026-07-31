@@ -693,7 +693,7 @@ msgstr "カンバンスケジュール"
 
 #: app/routes/_index.tsx:162
 msgid "Labor, scrap & rework"
-msgstr ""
+msgstr "労務、スクラップ、再加工"
 
 #: app/routes/_index.tsx:147
 msgid "Lead times & buffers"

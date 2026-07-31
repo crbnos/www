@@ -693,7 +693,7 @@ msgstr "कानबन शेड्यूल"
 
 #: app/routes/_index.tsx:162
 msgid "Labor, scrap & rework"
-msgstr ""
+msgstr "श्रम, स्क्रैप और पुनर्कार्य"
 
 #: app/routes/_index.tsx:147
 msgid "Lead times & buffers"

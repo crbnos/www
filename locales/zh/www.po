@@ -693,7 +693,7 @@ msgstr "看板计划"
 
 #: app/routes/_index.tsx:162
 msgid "Labor, scrap & rework"
-msgstr ""
+msgstr "人工、废品和返工"
 
 #: app/routes/_index.tsx:147
 msgid "Lead times & buffers"

@@ -693,7 +693,7 @@ msgstr "Harmonogram Kanban"
 
 #: app/routes/_index.tsx:162
 msgid "Labor, scrap & rework"
-msgstr ""
+msgstr "Robocizna, złom i przeróbki"
 
 #: app/routes/_index.tsx:147
 msgid "Lead times & buffers"

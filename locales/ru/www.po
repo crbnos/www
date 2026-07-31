@@ -693,7 +693,7 @@ msgstr "Канбан расписание"
 
 #: app/routes/_index.tsx:162
 msgid "Labor, scrap & rework"
-msgstr ""
+msgstr "Труд, брак и доработка"
 
 #: app/routes/_index.tsx:147
 msgid "Lead times & buffers"

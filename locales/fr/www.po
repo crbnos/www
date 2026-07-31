@@ -693,7 +693,7 @@ msgstr "Planification Kanban"
 
 #: app/routes/_index.tsx:162
 msgid "Labor, scrap & rework"
-msgstr ""
+msgstr "Main-d’œuvre, rebut et retouche"
 
 #: app/routes/_index.tsx:147
 msgid "Lead times & buffers"

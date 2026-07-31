@@ -693,7 +693,7 @@ msgstr "Cronograma Kanban"
 
 #: app/routes/_index.tsx:162
 msgid "Labor, scrap & rework"
-msgstr ""
+msgstr "Mão de obra, sucata e retrabalho"
 
 #: app/routes/_index.tsx:147
 msgid "Lead times & buffers"

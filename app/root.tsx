@@ -149,7 +149,7 @@ export const meta: MetaFunction = ({ data }) => {
 		},
 		{
 			property: "og:image",
-			content: `${siteUrl}/images/banner.jpg`,
+			content: `${siteUrl}/images/og.jpg`,
 		},
 		{
 			name: "twitter:card",
@@ -170,7 +170,7 @@ export const meta: MetaFunction = ({ data }) => {
 		},
 		{
 			name: "twitter:image",
-			content: `${siteUrl}/images/banner.jpg`,
+			content: `${siteUrl}/images/og.jpg`,
 		},
 	];
 };
