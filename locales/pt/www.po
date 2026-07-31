@@ -716,8 +716,8 @@ msgid "Legacy ERP"
 msgstr "ERP legado"
 
 #: app/routes/_index.tsx:716
-msgid "Legacy ERPs were built for accountants in 1998."
-msgstr "ERPs legados foram construídos para contadores em 1998."
+msgid "Legacy ERPs were built for accountants in the 1990s."
+msgstr "ERPs legados foram construídos para contadores nos anos 1990."
 
 #: app/components/footer.tsx:67
 msgid "Legal"
