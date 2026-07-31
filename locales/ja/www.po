@@ -91,7 +91,7 @@ msgstr "すべての高度な機能が利用可能"
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "すべてのCarbonの商標、ロゴ、またはその他のブランド要素は、Carbon Manufacturing Systems Corporationを表現する目的以外に変更または使用することはできません。"
 
-#: app/routes/_index.tsx:971
+#: app/routes/_index.tsx:989
 msgid "An API for the entire organization."
 msgstr "組織全体のための API"
 
@@ -108,7 +108,7 @@ msgstr "アニメーション付き組立指示"
 msgid "API"
 msgstr "API"
 
-#: app/routes/_index.tsx:981
+#: app/routes/_index.tsx:999
 msgid "API Docs"
 msgstr "API ドキュメント"
 
@@ -132,7 +132,7 @@ msgstr "AS9100"
 msgid "AS9100, FAI, full genealogy"
 msgstr "AS9100、FAI、完全な系統"
 
-#: app/routes/_index.tsx:1147
+#: app/routes/_index.tsx:1165
 msgid "Ask your agent what it thinks"
 msgstr "エージェントの意見を聞く"
 
@@ -144,7 +144,7 @@ msgstr "監査ログ"
 msgid "Audit trail is the database"
 msgstr "監査証跡がデータベース"
 
-#: app/routes/_index.tsx:1120
+#: app/routes/_index.tsx:1138
 msgid "Auditable by construction."
 msgstr "構築による監査可能。"
 
@@ -217,7 +217,7 @@ msgstr "ソースコードを購入"
 msgid "CAD"
 msgstr "CAD"
 
-#: app/routes/_index.tsx:865
+#: app/routes/_index.tsx:883
 msgid "CAD to cash, unbroken."
 msgstr "CADから現金まで、途切れなく。"
 
@@ -237,7 +237,7 @@ msgstr "Carbonは、ERP、MES、QMSを1つの統合されたシステムに組�
 msgid "Carbon is the engineering-first operating system for manufacturers. Quote, plan, buy, build, inspect and ship on one live model of your factory — from a ten-person prototype shop to a rate-production line."
 msgstr "Carbonは製造業者向けのエンジニアリング第一のオペレーティングシステムです。10人のプロトタイプショップから生産ラインまで、工場の1つのライブモデルで見積もり、計画、購入、構築、検査、出荷できます。"
 
-#: app/routes/_index.tsx:1150
+#: app/routes/_index.tsx:1168
 msgid "Carbon's source code is available. Copy the prompt below into your favorite LLM."
 msgstr "Carbonのソースコードが利用可能です。以下のプロンプトをお気に入りのLLMにコピーします。"
 
@@ -325,7 +325,7 @@ msgstr "連絡先情報"
 
 #: app/components/header.tsx:155
 #: app/components/header.tsx:251
-#: app/routes/_index.tsx:1234
+#: app/routes/_index.tsx:1252
 msgid "Contact Sales"
 msgstr "営業に連絡"
 
@@ -334,11 +334,11 @@ msgstr "営業に連絡"
 msgid "Contact us"
 msgstr "お問い合わせ"
 
-#: app/routes/_index.tsx:1098
+#: app/routes/_index.tsx:1116
 msgid "Copied"
 msgstr "コピー済み"
 
-#: app/routes/_index.tsx:1098
+#: app/routes/_index.tsx:1116
 msgid "Copy"
 msgstr "コピー"
 
@@ -358,7 +358,7 @@ msgstr "後付けで推測された原価計算"
 msgid "Create a branded ordering experience that drives production"
 msgstr "ブランド化された注文体験を作成して、生産を促進します"
 
-#: app/routes/_index.tsx:1221
+#: app/routes/_index.tsx:1239
 msgid "Create a company, connect the MCP, release your first job today."
 msgstr "会社を作成し、MCPを接続し、今日最初のジョブをリリースします。"
 
@@ -498,7 +498,7 @@ msgstr "すべての部品、作業時間、バーコード、偏差がリアル
 msgid "Every site on one ledger."
 msgstr "すべてのサイトが統一された帳簿上にあります。"
 
-#: app/routes/_index.tsx:869
+#: app/routes/_index.tsx:887
 msgid "Every stage writes to the same record. No handoffs, no re-keying, no reconciliation."
 msgstr "すべてのステージが同じレコードに書き込みます。ハンドオフなし、再入力なし、調整なし。"
 
@@ -555,7 +555,7 @@ msgstr "初回品検査、不適合、CAPA、ゲージキャリブレーショ�
 msgid "Forward deployed engineer"
 msgstr "フォワードデプロイエンジニア"
 
-#: app/routes/_index.tsx:797
+#: app/routes/_index.tsx:815
 msgid "Four systems, one schema. Nothing to integrate."
 msgstr "4つのシステム、1つのスキーマ。統合する必要なし。"
 
@@ -611,11 +611,11 @@ msgstr "ホスティング設定"
 msgid "Huge consulting bills"
 msgstr "巨大なコンサルティング料金"
 
-#: app/routes/_index.tsx:1033
+#: app/routes/_index.tsx:1051
 msgid "If it has a bill of materials, Carbon runs it."
 msgstr "部品表がある場合、Carbonがそれを実行します。"
 
-#: app/routes/_index.tsx:1123
+#: app/routes/_index.tsx:1141
 msgid "Immutable ledgers, granular permissions, and the controls regulated programs are held to."
 msgstr "不変の帳簿、粒度の細かい権限、および規制プログラムが対象とするコントロール。"
 
@@ -627,7 +627,7 @@ msgstr "インシデントが検出されました"
 msgid "Industrial equipment"
 msgstr "産業用機器"
 
-#: app/routes/_index.tsx:1176
+#: app/routes/_index.tsx:1194
 msgid "Integrated with the world's best software."
 msgstr "世界最高のソフトウェアと統合"
 
@@ -772,7 +772,7 @@ msgstr "製造実行"
 msgid "Manufacturing-focused, GAAP accounting"
 msgstr "製造重視、GAAP会計"
 
-#: app/routes/_index.tsx:991
+#: app/routes/_index.tsx:1009
 msgid "MCP Docs"
 msgstr "MCP ドキュメント"
 
@@ -872,7 +872,7 @@ msgstr "オペレータ端末"
 msgid "ops on the floor"
 msgstr "床上のオプス"
 
-#: app/routes/_index.tsx:1240
+#: app/routes/_index.tsx:1258
 msgid "Or self-host the open source core"
 msgstr "またはオープンソースコアの自己ホスト"
 
@@ -1019,7 +1019,7 @@ msgstr "ソースを読み、独自の環境で実行し、ローカルで開発
 msgid "Recommended. Priority support with dedicated account manager"
 msgstr "推奨。専任のアカウントマネージャーによる優先サポート"
 
-#: app/routes/_index.tsx:1037
+#: app/routes/_index.tsx:1055
 msgid "Regulated or not, one-off or rate production — the primitives are the same. The configuration is yours."
 msgstr "規制されているかどうか、1回限りまたは生産レート — プリミティブは同じです。構成はあなたのものです。"
 
@@ -1132,7 +1132,7 @@ msgstr "分離されたデータを持つ共有データベース"
 msgid "Shared schema"
 msgstr "共有スキーマ"
 
-#: app/routes/_index.tsx:1218
+#: app/routes/_index.tsx:1236
 msgid "Ship faster than your competitors can quote."
 msgstr "競合他社が見積もるより速く配送します。"
 
@@ -1180,7 +1180,7 @@ msgstr "Software as a Service"
 msgid "Something went wrong"
 msgstr "何か問題が発生しました"
 
-#: app/routes/_index.tsx:1143
+#: app/routes/_index.tsx:1161
 msgid "Source available"
 msgstr "ソース入手可能"
 
@@ -1211,11 +1211,11 @@ msgstr "30日間の無料トライアルを開始"
 
 #: app/components/header.tsx:145
 #: app/components/header.tsx:246
-#: app/routes/_index.tsx:1229
+#: app/routes/_index.tsx:1247
 msgid "Start Free"
 msgstr "無料開始"
 
-#: app/routes/_index.tsx:1215
+#: app/routes/_index.tsx:1233
 msgid "Start now · No call required"
 msgstr "今すぐ開始 · 通話不要"
 
@@ -1292,7 +1292,7 @@ msgstr "トレーサビリティはデフォルト状態です。"
 msgid "Traveler printed at 6am, stale by 9"
 msgstr "午前6時に印刷されたトラベラー、午前9時までに古くなる"
 
-#: app/routes/_index.tsx:1116
+#: app/routes/_index.tsx:1134
 msgid "Trusted"
 msgstr "信頼"
 

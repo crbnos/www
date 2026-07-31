@@ -91,7 +91,7 @@ msgstr "모든 고급 기능 사용 가능"
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "모든 Carbon 상표, 로고 또는 기타 브랜드 요소는 Carbon Manufacturing Systems Corporation을 나타내기 위한 목적 이외에는 수정되거나 사용될 수 없습니다."
 
-#: app/routes/_index.tsx:971
+#: app/routes/_index.tsx:989
 msgid "An API for the entire organization."
 msgstr "조직 전체를 위한 API"
 
@@ -108,7 +108,7 @@ msgstr "애니메이션 조립 지침"
 msgid "API"
 msgstr "API"
 
-#: app/routes/_index.tsx:981
+#: app/routes/_index.tsx:999
 msgid "API Docs"
 msgstr "API 문서"
 
@@ -132,7 +132,7 @@ msgstr "AS9100"
 msgid "AS9100, FAI, full genealogy"
 msgstr "AS9100, FAI, 전체 계보"
 
-#: app/routes/_index.tsx:1147
+#: app/routes/_index.tsx:1165
 msgid "Ask your agent what it thinks"
 msgstr "에이전트에게 생각을 물어보세요"
 
@@ -144,7 +144,7 @@ msgstr "감사 로깅"
 msgid "Audit trail is the database"
 msgstr "감사 추적이 데이터베이스입니다"
 
-#: app/routes/_index.tsx:1120
+#: app/routes/_index.tsx:1138
 msgid "Auditable by construction."
 msgstr "구조적으로 감사 가능합니다."
 
@@ -217,7 +217,7 @@ msgstr "소스 코드 구매"
 msgid "CAD"
 msgstr "CAD"
 
-#: app/routes/_index.tsx:865
+#: app/routes/_index.tsx:883
 msgid "CAD to cash, unbroken."
 msgstr "CAD에서 현금까지, 끊기지 않게."
 
@@ -237,7 +237,7 @@ msgstr "Carbon은 ERP, MES, QMS를 하나의 통합 시스템으로 결합합니
 msgid "Carbon is the engineering-first operating system for manufacturers. Quote, plan, buy, build, inspect and ship on one live model of your factory — from a ten-person prototype shop to a rate-production line."
 msgstr "Carbon은 제조업체를 위한 엔지니어링 우선 운영 체제입니다. 당신의 공장의 하나의 라이브 모델에서 견적, 계획, 구매, 구축, 검사 및 배송 — 10명의 프로토타입 가게에서 속도 생산 라인까지."
 
-#: app/routes/_index.tsx:1150
+#: app/routes/_index.tsx:1168
 msgid "Carbon's source code is available. Copy the prompt below into your favorite LLM."
 msgstr "Carbon의 소스 코드를 사용할 수 있습니다. 아래 프롬프트를 좋아하는 LLM에 복사하세요."
 
@@ -325,7 +325,7 @@ msgstr "연락처 정보"
 
 #: app/components/header.tsx:155
 #: app/components/header.tsx:251
-#: app/routes/_index.tsx:1234
+#: app/routes/_index.tsx:1252
 msgid "Contact Sales"
 msgstr "영업 문의"
 
@@ -334,11 +334,11 @@ msgstr "영업 문의"
 msgid "Contact us"
 msgstr "문의하기"
 
-#: app/routes/_index.tsx:1098
+#: app/routes/_index.tsx:1116
 msgid "Copied"
 msgstr "복사됨"
 
-#: app/routes/_index.tsx:1098
+#: app/routes/_index.tsx:1116
 msgid "Copy"
 msgstr "복사"
 
@@ -358,7 +358,7 @@ msgstr "사후 추측 원가 계산"
 msgid "Create a branded ordering experience that drives production"
 msgstr "브랜드화된 주문 경험을 만들어 생산을 촉진하세요"
 
-#: app/routes/_index.tsx:1221
+#: app/routes/_index.tsx:1239
 msgid "Create a company, connect the MCP, release your first job today."
 msgstr "회사를 만들고, MCP에 연결하고, 오늘 첫 번째 작업을 출시하세요."
 
@@ -498,7 +498,7 @@ msgstr "모든 부품, 시간, 바코드 및 편차를 실시간으로 추적하
 msgid "Every site on one ledger."
 msgstr "모든 사이트가 하나의 원장에."
 
-#: app/routes/_index.tsx:869
+#: app/routes/_index.tsx:887
 msgid "Every stage writes to the same record. No handoffs, no re-keying, no reconciliation."
 msgstr "모든 단계가 동일한 레코드에 작성됩니다. 인계 없음, 재입력 없음, 조정 없음."
 
@@ -555,7 +555,7 @@ msgstr "첫 번째 제품 검사, 부적합, CAPA 및 게이지 보정은 생산
 msgid "Forward deployed engineer"
 msgstr "전방 배치 엔지니어"
 
-#: app/routes/_index.tsx:797
+#: app/routes/_index.tsx:815
 msgid "Four systems, one schema. Nothing to integrate."
 msgstr "네 개의 시스템, 하나의 스키마. 통합할 것이 없습니다."
 
@@ -611,11 +611,11 @@ msgstr "호스팅 선호도"
 msgid "Huge consulting bills"
 msgstr "거대한 컨설팅 비용"
 
-#: app/routes/_index.tsx:1033
+#: app/routes/_index.tsx:1051
 msgid "If it has a bill of materials, Carbon runs it."
 msgstr "BOM이 있으면 Carbon이 실행합니다."
 
-#: app/routes/_index.tsx:1123
+#: app/routes/_index.tsx:1141
 msgid "Immutable ledgers, granular permissions, and the controls regulated programs are held to."
 msgstr "불변 원장, 세밀한 권한 및 규제 프로그램이 준수해야 하는 제어."
 
@@ -627,7 +627,7 @@ msgstr "사건 감지됨"
 msgid "Industrial equipment"
 msgstr "산업 장비"
 
-#: app/routes/_index.tsx:1176
+#: app/routes/_index.tsx:1194
 msgid "Integrated with the world's best software."
 msgstr "세계 최고의 소프트웨어와 통합됨."
 
@@ -772,7 +772,7 @@ msgstr "제조 실행"
 msgid "Manufacturing-focused, GAAP accounting"
 msgstr "제조 중심, GAAP 회계"
 
-#: app/routes/_index.tsx:991
+#: app/routes/_index.tsx:1009
 msgid "MCP Docs"
 msgstr "MCP 문서"
 
@@ -872,7 +872,7 @@ msgstr "운영자 터미널"
 msgid "ops on the floor"
 msgstr "바닥의 작업"
 
-#: app/routes/_index.tsx:1240
+#: app/routes/_index.tsx:1258
 msgid "Or self-host the open source core"
 msgstr "또는 오픈 소스 코어를 자체 호스팅"
 
@@ -1019,7 +1019,7 @@ msgstr "소스를 읽고 자신의 환경에서 실행하고 로컬에서 개발
 msgid "Recommended. Priority support with dedicated account manager"
 msgstr "권장됨. 전담 계정 관리자와 함께 우선 지원"
 
-#: app/routes/_index.tsx:1037
+#: app/routes/_index.tsx:1055
 msgid "Regulated or not, one-off or rate production — the primitives are the same. The configuration is yours."
 msgstr "규제되거나 규제되지 않거나, 일회성 또는 속도 생산이거나. 원시값은 동일합니다. 구성은 당신의 것입니다."
 
@@ -1132,7 +1132,7 @@ msgstr "격리된 데이터가 있는 공유 데이터베이스"
 msgid "Shared schema"
 msgstr "공유 스키마"
 
-#: app/routes/_index.tsx:1218
+#: app/routes/_index.tsx:1236
 msgid "Ship faster than your competitors can quote."
 msgstr "경쟁사가 견적할 수 있는 것보다 더 빨리 배송하세요."
 
@@ -1180,7 +1180,7 @@ msgstr "Software as a Service"
 msgid "Something went wrong"
 msgstr "뭔가 잘못되었습니다"
 
-#: app/routes/_index.tsx:1143
+#: app/routes/_index.tsx:1161
 msgid "Source available"
 msgstr "소스 사용 가능"
 
@@ -1211,11 +1211,11 @@ msgstr "30일 무료 체험 시작"
 
 #: app/components/header.tsx:145
 #: app/components/header.tsx:246
-#: app/routes/_index.tsx:1229
+#: app/routes/_index.tsx:1247
 msgid "Start Free"
 msgstr "무료로 시작"
 
-#: app/routes/_index.tsx:1215
+#: app/routes/_index.tsx:1233
 msgid "Start now · No call required"
 msgstr "지금 시작 · 전화 필요 없음"
 
@@ -1292,7 +1292,7 @@ msgstr "추적 가능성은 기본 상태입니다."
 msgid "Traveler printed at 6am, stale by 9"
 msgstr "오전 6시에 인쇄된 추적, 9시까지 오래됨"
 
-#: app/routes/_index.tsx:1116
+#: app/routes/_index.tsx:1134
 msgid "Trusted"
 msgstr "신뢰"
 

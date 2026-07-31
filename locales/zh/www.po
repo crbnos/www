@@ -91,7 +91,7 @@ msgstr "所有高级功能可用"
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "所有Carbon商标、徽标或其他品牌元素不得以任何方式修改或用于任何其他目的，仅限用于代表Carbon Manufacturing Systems Corporation。"
 
-#: app/routes/_index.tsx:971
+#: app/routes/_index.tsx:989
 msgid "An API for the entire organization."
 msgstr "面向整个组织的 API"
 
@@ -108,7 +108,7 @@ msgstr "动画组装说明"
 msgid "API"
 msgstr "API"
 
-#: app/routes/_index.tsx:981
+#: app/routes/_index.tsx:999
 msgid "API Docs"
 msgstr "API 文档"
 
@@ -132,7 +132,7 @@ msgstr "AS9100"
 msgid "AS9100, FAI, full genealogy"
 msgstr "AS9100、FAI、完整溯源"
 
-#: app/routes/_index.tsx:1147
+#: app/routes/_index.tsx:1165
 msgid "Ask your agent what it thinks"
 msgstr "询问您的代理的看法"
 
@@ -144,7 +144,7 @@ msgstr "审计日志"
 msgid "Audit trail is the database"
 msgstr "审计追踪就是数据库"
 
-#: app/routes/_index.tsx:1120
+#: app/routes/_index.tsx:1138
 msgid "Auditable by construction."
 msgstr "通过构建可审计。"
 
@@ -217,7 +217,7 @@ msgstr "购买源代码"
 msgid "CAD"
 msgstr "CAD"
 
-#: app/routes/_index.tsx:865
+#: app/routes/_index.tsx:883
 msgid "CAD to cash, unbroken."
 msgstr "从CAD到现金，不中断。"
 
@@ -237,7 +237,7 @@ msgstr "Carbon 将 ERP、MES 和 QMS 整合到一个统一的系统中。"
 msgid "Carbon is the engineering-first operating system for manufacturers. Quote, plan, buy, build, inspect and ship on one live model of your factory — from a ten-person prototype shop to a rate-production line."
 msgstr "Carbon是面向制造商的工程优先操作系统。在您工厂的一个实时模型上进行报价、计划、采购、构建、检查和发货——从十人原型车间到批量生产线。"
 
-#: app/routes/_index.tsx:1150
+#: app/routes/_index.tsx:1168
 msgid "Carbon's source code is available. Copy the prompt below into your favorite LLM."
 msgstr "Carbon的源代码是可用的。将下面的提示复制到您喜欢的LLM中。"
 
@@ -325,7 +325,7 @@ msgstr "联系信息"
 
 #: app/components/header.tsx:155
 #: app/components/header.tsx:251
-#: app/routes/_index.tsx:1234
+#: app/routes/_index.tsx:1252
 msgid "Contact Sales"
 msgstr "联系销售"
 
@@ -334,11 +334,11 @@ msgstr "联系销售"
 msgid "Contact us"
 msgstr "联系我们"
 
-#: app/routes/_index.tsx:1098
+#: app/routes/_index.tsx:1116
 msgid "Copied"
 msgstr "已复制"
 
-#: app/routes/_index.tsx:1098
+#: app/routes/_index.tsx:1116
 msgid "Copy"
 msgstr "复制"
 
@@ -358,7 +358,7 @@ msgstr "事后猜测的成本"
 msgid "Create a branded ordering experience that drives production"
 msgstr "创建品牌化的订购体验，推动生产"
 
-#: app/routes/_index.tsx:1221
+#: app/routes/_index.tsx:1239
 msgid "Create a company, connect the MCP, release your first job today."
 msgstr "创建公司、连接MCP、今天发布第一个作业。"
 
@@ -498,7 +498,7 @@ msgstr "每个零件、小时、条形码和偏差都被实时跟踪和处理。
 msgid "Every site on one ledger."
 msgstr "所有地点在一个分类账中。"
 
-#: app/routes/_index.tsx:869
+#: app/routes/_index.tsx:887
 msgid "Every stage writes to the same record. No handoffs, no re-keying, no reconciliation."
 msgstr "每个阶段都写入同一条记录。没有交接、没有重新输入、没有协调。"
 
@@ -555,7 +555,7 @@ msgstr "首件检测、不合格、CAPA和测量仪校准与生产坐在相同�
 msgid "Forward deployed engineer"
 msgstr "前置部署工程师"
 
-#: app/routes/_index.tsx:797
+#: app/routes/_index.tsx:815
 msgid "Four systems, one schema. Nothing to integrate."
 msgstr "四个系统、一个模式。没有整合。"
 
@@ -611,11 +611,11 @@ msgstr "托管偏好"
 msgid "Huge consulting bills"
 msgstr "巨大的咨询账单"
 
-#: app/routes/_index.tsx:1033
+#: app/routes/_index.tsx:1051
 msgid "If it has a bill of materials, Carbon runs it."
 msgstr "如果有物料清单，Carbon就能运行它。"
 
-#: app/routes/_index.tsx:1123
+#: app/routes/_index.tsx:1141
 msgid "Immutable ledgers, granular permissions, and the controls regulated programs are held to."
 msgstr "不可变分类账、细粒度权限和受监管程序必须遵守的控制。"
 
@@ -627,7 +627,7 @@ msgstr "检测到事件"
 msgid "Industrial equipment"
 msgstr "工业设备"
 
-#: app/routes/_index.tsx:1176
+#: app/routes/_index.tsx:1194
 msgid "Integrated with the world's best software."
 msgstr "与世界最好的软件集成。"
 
@@ -772,7 +772,7 @@ msgstr "制造执行"
 msgid "Manufacturing-focused, GAAP accounting"
 msgstr "以制造为中心，GAAP 会计"
 
-#: app/routes/_index.tsx:991
+#: app/routes/_index.tsx:1009
 msgid "MCP Docs"
 msgstr "MCP 文档"
 
@@ -872,7 +872,7 @@ msgstr "操作员终端"
 msgid "ops on the floor"
 msgstr "工厂操作"
 
-#: app/routes/_index.tsx:1240
+#: app/routes/_index.tsx:1258
 msgid "Or self-host the open source core"
 msgstr "或自托管开源核心"
 
@@ -1019,7 +1019,7 @@ msgstr "读取源代码、在您自己的环境中运行，并开始在本地开
 msgid "Recommended. Priority support with dedicated account manager"
 msgstr "推荐。优先支持和专属账户经理"
 
-#: app/routes/_index.tsx:1037
+#: app/routes/_index.tsx:1055
 msgid "Regulated or not, one-off or rate production — the primitives are the same. The configuration is yours."
 msgstr "无论是否受管制、一次性或批量生产——原始方法是相同的。配置是您的。"
 
@@ -1132,7 +1132,7 @@ msgstr "共享数据库，数据隔离"
 msgid "Shared schema"
 msgstr "共享架构"
 
-#: app/routes/_index.tsx:1218
+#: app/routes/_index.tsx:1236
 msgid "Ship faster than your competitors can quote."
 msgstr "比竞争对手报价更快地发货。"
 
@@ -1180,7 +1180,7 @@ msgstr "软件即服务"
 msgid "Something went wrong"
 msgstr "出了问题"
 
-#: app/routes/_index.tsx:1143
+#: app/routes/_index.tsx:1161
 msgid "Source available"
 msgstr "源代码可用"
 
@@ -1211,11 +1211,11 @@ msgstr "开始30天免费试用"
 
 #: app/components/header.tsx:145
 #: app/components/header.tsx:246
-#: app/routes/_index.tsx:1229
+#: app/routes/_index.tsx:1247
 msgid "Start Free"
 msgstr "免费开始"
 
-#: app/routes/_index.tsx:1215
+#: app/routes/_index.tsx:1233
 msgid "Start now · No call required"
 msgstr "立即开始 · 无需通话"
 
@@ -1292,7 +1292,7 @@ msgstr "可追溯性是默认状态。"
 msgid "Traveler printed at 6am, stale by 9"
 msgstr "作业单在早上6点打印，到9点就过期了"
 
-#: app/routes/_index.tsx:1116
+#: app/routes/_index.tsx:1134
 msgid "Trusted"
 msgstr "值得信赖的"
 

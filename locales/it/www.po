@@ -91,7 +91,7 @@ msgstr "Tutte le funzionalità avanzate disponibili"
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "Tutti i marchi commerciali Carbon, i loghi o altri elementi del marchio non possono mai essere modificati o utilizzati per alcuno scopo diverso da quello di rappresentare Carbon Manufacturing Systems Corporation."
 
-#: app/routes/_index.tsx:971
+#: app/routes/_index.tsx:989
 msgid "An API for the entire organization."
 msgstr "Un'API per l'intera organizzazione."
 
@@ -108,7 +108,7 @@ msgstr "Istruzioni di assemblaggio animate"
 msgid "API"
 msgstr "API"
 
-#: app/routes/_index.tsx:981
+#: app/routes/_index.tsx:999
 msgid "API Docs"
 msgstr "Documentazione API"
 
@@ -132,7 +132,7 @@ msgstr "AS9100"
 msgid "AS9100, FAI, full genealogy"
 msgstr "AS9100, FAI, genealogia completa"
 
-#: app/routes/_index.tsx:1147
+#: app/routes/_index.tsx:1165
 msgid "Ask your agent what it thinks"
 msgstr "Chiedi al tuo agente cosa ne pensa"
 
@@ -144,7 +144,7 @@ msgstr "Registrazione di audit"
 msgid "Audit trail is the database"
 msgstr "Audit trail è il database"
 
-#: app/routes/_index.tsx:1120
+#: app/routes/_index.tsx:1138
 msgid "Auditable by construction."
 msgstr "Controllabile per costruzione."
 
@@ -217,7 +217,7 @@ msgstr "Acquista il Codice Sorgente"
 msgid "CAD"
 msgstr "CAD"
 
-#: app/routes/_index.tsx:865
+#: app/routes/_index.tsx:883
 msgid "CAD to cash, unbroken."
 msgstr "Da CAD a denaro, senza interruzioni."
 
@@ -237,7 +237,7 @@ msgstr "Carbon combina ERP, MES e QMS in un unico sistema unificato."
 msgid "Carbon is the engineering-first operating system for manufacturers. Quote, plan, buy, build, inspect and ship on one live model of your factory — from a ten-person prototype shop to a rate-production line."
 msgstr "Carbon è il sistema operativo engineering-first per i produttori. Quotare, pianificare, acquistare, costruire, ispezionare e spedire su un unico modello live della tua fabbrica — da un piccolo laboratorio di prototipazione a una linea di produzione."
 
-#: app/routes/_index.tsx:1150
+#: app/routes/_index.tsx:1168
 msgid "Carbon's source code is available. Copy the prompt below into your favorite LLM."
 msgstr "Il codice sorgente di Carbon è disponibile. Copia il prompt di seguito nel tuo LLM preferito."
 
@@ -325,7 +325,7 @@ msgstr "Informazioni di Contatto"
 
 #: app/components/header.tsx:155
 #: app/components/header.tsx:251
-#: app/routes/_index.tsx:1234
+#: app/routes/_index.tsx:1252
 msgid "Contact Sales"
 msgstr "Contatta il team vendite"
 
@@ -334,11 +334,11 @@ msgstr "Contatta il team vendite"
 msgid "Contact us"
 msgstr "Contattaci"
 
-#: app/routes/_index.tsx:1098
+#: app/routes/_index.tsx:1116
 msgid "Copied"
 msgstr "Copiato"
 
-#: app/routes/_index.tsx:1098
+#: app/routes/_index.tsx:1116
 msgid "Copy"
 msgstr "Copia"
 
@@ -358,7 +358,7 @@ msgstr "Costing indovinato dopo i fatti"
 msgid "Create a branded ordering experience that drives production"
 msgstr "Crea un'esperienza di ordinazione personalizzata che aumenta la produzione"
 
-#: app/routes/_index.tsx:1221
+#: app/routes/_index.tsx:1239
 msgid "Create a company, connect the MCP, release your first job today."
 msgstr "Crea un'azienda, connetti l'MCP, rilascia il tuo primo lavoro oggi."
 
@@ -498,7 +498,7 @@ msgstr "Ogni parte, ora, codice a barre e deviazione tracciata e gestita in temp
 msgid "Every site on one ledger."
 msgstr "Ogni sito su un unico ledger."
 
-#: app/routes/_index.tsx:869
+#: app/routes/_index.tsx:887
 msgid "Every stage writes to the same record. No handoffs, no re-keying, no reconciliation."
 msgstr "Ogni fase scrive nello stesso record. Nessun passaggio, nessuna digitazione, nessuna riconciliazione."
 
@@ -555,7 +555,7 @@ msgstr "L'ispezione del primo articolo, non-conformità, CAPA e calibrazione dei
 msgid "Forward deployed engineer"
 msgstr "Ingegnere distribuito in loco"
 
-#: app/routes/_index.tsx:797
+#: app/routes/_index.tsx:815
 msgid "Four systems, one schema. Nothing to integrate."
 msgstr "Quattro sistemi, uno schema. Niente da integrare."
 
@@ -611,11 +611,11 @@ msgstr "Preferenza di Hosting"
 msgid "Huge consulting bills"
 msgstr "Bollette di consulenza enormi"
 
-#: app/routes/_index.tsx:1033
+#: app/routes/_index.tsx:1051
 msgid "If it has a bill of materials, Carbon runs it."
 msgstr "Se ha una distinta base, Carbon la gestisce."
 
-#: app/routes/_index.tsx:1123
+#: app/routes/_index.tsx:1141
 msgid "Immutable ledgers, granular permissions, and the controls regulated programs are held to."
 msgstr "Ledger immutabili, autorizzazioni granulari e i controlli a cui sono soggetti i programmi regolamentati."
 
@@ -627,7 +627,7 @@ msgstr "Incidente rilevato"
 msgid "Industrial equipment"
 msgstr "Attrezzature industriali"
 
-#: app/routes/_index.tsx:1176
+#: app/routes/_index.tsx:1194
 msgid "Integrated with the world's best software."
 msgstr "Integrato con il miglior software del mondo."
 
@@ -772,7 +772,7 @@ msgstr "Esecuzione della produzione"
 msgid "Manufacturing-focused, GAAP accounting"
 msgstr "Focalizzato sulla produzione, contabilità GAAP"
 
-#: app/routes/_index.tsx:991
+#: app/routes/_index.tsx:1009
 msgid "MCP Docs"
 msgstr "MCP Docs"
 
@@ -872,7 +872,7 @@ msgstr "Terminale operatore"
 msgid "ops on the floor"
 msgstr "operazioni in fabbrica"
 
-#: app/routes/_index.tsx:1240
+#: app/routes/_index.tsx:1258
 msgid "Or self-host the open source core"
 msgstr "Oppure ospita autonomamente il core open source"
 
@@ -1019,7 +1019,7 @@ msgstr "Leggi il codice sorgente, eseguilo nel tuo ambiente e inizia a sviluppar
 msgid "Recommended. Priority support with dedicated account manager"
 msgstr "Consigliato. Supporto prioritario con account manager dedicato"
 
-#: app/routes/_index.tsx:1037
+#: app/routes/_index.tsx:1055
 msgid "Regulated or not, one-off or rate production — the primitives are the same. The configuration is yours."
 msgstr "Regolamentato o meno, produzione una tantum o in ritmo — i primitivi sono gli stessi. La configurazione è tua."
 
@@ -1132,7 +1132,7 @@ msgstr "Database condiviso con dati isolati"
 msgid "Shared schema"
 msgstr "Schema condiviso"
 
-#: app/routes/_index.tsx:1218
+#: app/routes/_index.tsx:1236
 msgid "Ship faster than your competitors can quote."
 msgstr "Spedisci più velocemente di quanto i tuoi concorrenti possono quotare."
 
@@ -1180,7 +1180,7 @@ msgstr "Software as a Service"
 msgid "Something went wrong"
 msgstr "Qualcosa è andato storto"
 
-#: app/routes/_index.tsx:1143
+#: app/routes/_index.tsx:1161
 msgid "Source available"
 msgstr "Sorgente disponibile"
 
@@ -1211,11 +1211,11 @@ msgstr "Inizia la prova gratuita di 30 giorni"
 
 #: app/components/header.tsx:145
 #: app/components/header.tsx:246
-#: app/routes/_index.tsx:1229
+#: app/routes/_index.tsx:1247
 msgid "Start Free"
 msgstr "Inizia gratuitamente"
 
-#: app/routes/_index.tsx:1215
+#: app/routes/_index.tsx:1233
 msgid "Start now · No call required"
 msgstr "Inizia ora · Nessuna chiamata richiesta"
 
@@ -1292,7 +1292,7 @@ msgstr "La tracciabilità è lo stato predefinito."
 msgid "Traveler printed at 6am, stale by 9"
 msgstr "Traveller stampato alle 6, obsoleto alle 9"
 
-#: app/routes/_index.tsx:1116
+#: app/routes/_index.tsx:1134
 msgid "Trusted"
 msgstr "Affidato"
 

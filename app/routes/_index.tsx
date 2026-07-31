@@ -779,18 +779,36 @@ function OneModel() {
 	const [active, setActive] = useState(0);
 	// Auto-rotate through the systems every 3s until the visitor picks one.
 	const [paused, setPaused] = useState(false);
+	// Only rotate while the section is on-screen — otherwise the swapping rows
+	// change the section height off-screen and jank the page as it scrolls.
+	const [inView, setInView] = useState(false);
+	const sectionRef = useRef<HTMLElement>(null);
 	useEffect(() => {
-		if (paused) return;
+		const el = sectionRef.current;
+		if (!el) return;
+		const io = new IntersectionObserver(
+			(entries) => setInView(!!entries[0]?.isIntersecting),
+			{ threshold: 0.2 },
+		);
+		io.observe(el);
+		return () => io.disconnect();
+	}, []);
+	useEffect(() => {
+		if (paused || !inView) return;
 		const id = setInterval(
 			() => setActive((v) => (v + 1) % modules.length),
 			3000,
 		);
 		return () => clearInterval(id);
-	}, [paused]);
+	}, [paused, inView]);
 	const mod = modules[active];
 	const modName = i18n._(mod.name);
 	return (
-		<section id="modules" className="border-b border-border py-28 sm:py-32">
+		<section
+			ref={sectionRef}
+			id="modules"
+			className="border-b border-border py-28 sm:py-32"
+		>
 			<div className={shell}>
 				<Reveal>
 					<h2 className={cn(heading, "mt-5 max-w-[26ch]")}>
