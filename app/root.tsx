@@ -30,6 +30,7 @@ import {
 	WizardForm,
 } from "./components/wizard-form";
 import { useMode } from "./hooks/useMode";
+import { getCompanyId } from "./services/company.server";
 import { loadLinguiCatalog } from "./services/lingui.server";
 import { getLocale } from "./services/locale.server";
 import { getMode, setMode } from "./services/mode.server";
@@ -82,7 +83,16 @@ export async function loader({ request, params }: LoaderFunctionArgs) {
 
 	const statusPromise = fetchStatus();
 
-	return { siteUrl, mode: getMode(request, hints.theme), hints, linguiCatalog, locale, statusPromise };
+	return {
+		siteUrl,
+		mode: getMode(request, hints.theme),
+		hints,
+		linguiCatalog,
+		locale,
+		statusPromise,
+		// Only the presence matters here — never expose the id itself to the client.
+		hasCompany: getCompanyId(request) !== null,
+	};
 }
 
 export async function action({ request }: ActionFunctionArgs) {

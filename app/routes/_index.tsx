@@ -1,11 +1,14 @@
 import type { MessageDescriptor } from "@lingui/core";
 import { msg } from "@lingui/core/macro";
 import { Trans, useLingui } from "@lingui/react/macro";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { Book, Check, ChevronRight, Copy, ImageIcon, X } from "lucide-react";
 import { type ReactNode, useEffect, useRef, useState } from "react";
 import { Link } from "react-router";
+import { AppCtaLabel } from "~/components/app-cta-label";
 import { CodeExamples } from "~/components/code-examples";
 import { Button } from "~/components/ui/button";
+import { ZoomableImage } from "~/components/zoomable-image";
 import { cn } from "~/lib/utils";
 
 /* -------------------------------------------------------------------------- */
@@ -381,20 +384,93 @@ function Reveal({
 
 function CyclingWord() {
 	const { i18n } = useLingui();
+	const reduceMotion = useReducedMotion();
 	const [i, setI] = useState(0);
+	// Hold the next swap until the outgoing word has finished exiting, so the
+	// two never overlap mid-flight.
+	const [isAnimating, setIsAnimating] = useState(false);
 	useEffect(() => {
-		const id = setInterval(
-			() => setI((v) => (v + 1) % heroWords.length),
-			2300,
-		);
-		return () => clearInterval(id);
-	}, []);
+		if (isAnimating) return;
+		const id = setTimeout(() => {
+			setI((v) => (v + 1) % heroWords.length);
+			setIsAnimating(true);
+		}, 2300);
+		return () => clearTimeout(id);
+	}, [isAnimating]);
+
+	const word = i18n._(heroWords[i]);
+
+	// Every word occupies the same grid cell so the slot keeps a constant size —
+	// otherwise a longer word re-wraps the headline and shoves the copy and
+	// dashboard below it down a line each time it cycles.
 	return (
-		<span
-			key={i}
-			className="inline-block animate-cb-word text-secondary [transform-style:preserve-3d]"
-		>
-			{i18n._(heroWords[i])}
+		<span className="relative inline-grid max-w-full justify-items-start">
+			{heroWords.map((w, idx) => (
+				<span
+					key={idx}
+					aria-hidden
+					className="invisible col-start-1 row-start-1"
+				>
+					{i18n._(w)}
+				</span>
+			))}
+			<span className="col-start-1 row-start-1 text-secondary">
+				{reduceMotion ? (
+					<span>{word}</span>
+				) : (
+					<AnimatePresence onExitComplete={() => setIsAnimating(false)}>
+						<motion.span
+							key={word}
+							aria-label={word}
+							initial={{ opacity: 0, y: 10 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ type: "spring", stiffness: 260, damping: 22 }}
+							// Exits straight up. The upstream component also flings x+40 and
+							// scales 2x, but the exiting word is absolutely positioned and
+							// that grows with the word — it painted 18px past the viewport
+							// edge at 375px, and worse on wide screens. Vertical only, so
+							// the widest word can never extend the page horizontally.
+							exit={{
+								opacity: 0,
+								y: -24,
+								filter: "blur(6px)",
+								position: "absolute",
+								transition: { duration: 0.2, ease: "easeIn" },
+							}}
+							className="z-10 inline-block text-left"
+						>
+							{word.split(" ").map((part, partIndex) => (
+								<motion.span
+									key={part + partIndex}
+									aria-hidden
+									initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
+									animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+									transition={{ delay: partIndex * 0.12, duration: 0.18 }}
+									className="inline-block whitespace-nowrap"
+								>
+									{part.split("").map((letter, letterIndex) => (
+										<motion.span
+											key={part + letterIndex}
+											initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
+											animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+											transition={{
+												delay: partIndex * 0.12 + letterIndex * 0.025,
+												duration: 0.15,
+											}}
+											className="inline-block"
+										>
+											{letter}
+										</motion.span>
+									))}
+									{partIndex < word.split(" ").length - 1 && (
+										<span className="inline-block">&nbsp;</span>
+									)}
+								</motion.span>
+							))}
+						</motion.span>
+					</AnimatePresence>
+				)}
+			</span>
 		</span>
 	);
 }
@@ -522,7 +598,7 @@ function Screenshot({
 	return (
 		<div
 			className={cn(
-				"relative w-full overflow-hidden bg-card min-h-[220px] sm:min-h-0 sm:h-full",
+				"relative w-full overflow-hidden bg-screenshot min-h-[220px] sm:min-h-0 sm:h-full",
 				className,
 			)}
 		>
@@ -584,7 +660,12 @@ function Hero() {
 				className="pointer-events-none absolute left-1/2 top-[-320px] h-[560px] w-[1200px] max-w-full -translate-x-1/2 rounded-full bg-secondary/20 blur-[110px]"
 			/>
 
-			<div className={cn(shell, "relative")}>
+			{/* Tighter gutter at 320px and below so "Build <word>" fits one line.
+			    Raw media query, not max-[320px]: — the `tall` raw screen in
+			    tailwind.config.js suppresses Tailwind's min and max variants. */}
+			<div
+				className={cn(shell, "relative [@media(max-width:320px)]:px-4")}
+			>
 				<div className="flex items-center gap-3.5 font-mono text-sm uppercase leading-none tracking-[0.2em] text-muted-foreground">
 					<span className="text-secondary">ERP</span>
 					<span>/</span>
@@ -928,23 +1009,33 @@ function FeatureRows() {
 						</div>
 						<div
 							className={cn(
-								"relative overflow-hidden border border-border bg-card p-2.5",
+								"relative overflow-hidden border border-border bg-screenshot p-2.5",
 								f.flip && "lg:order-1",
 							)}
 						>
 							<div className="relative overflow-hidden sm:h-[min(52vh,480px)]">
 								{shotLight && shotDark ? (
 									<>
-										<Screenshot
+										<ZoomableImage
 											className="dark:hidden"
 											src={shotLight}
-											label={i18n._(f.shotLabel)}
-										/>
-										<Screenshot
+											alt={i18n._(f.shotLabel)}
+										>
+											<Screenshot
+												src={shotLight}
+												label={i18n._(f.shotLabel)}
+											/>
+										</ZoomableImage>
+										<ZoomableImage
 											className="hidden dark:block"
 											src={shotDark}
-											label={i18n._(f.shotLabel)}
-										/>
+											alt={i18n._(f.shotLabel)}
+										>
+											<Screenshot
+												src={shotDark}
+												label={i18n._(f.shotLabel)}
+											/>
+										</ZoomableImage>
 									</>
 								) : (
 									<Screenshot label={i18n._(f.shotLabel)} />
@@ -984,7 +1075,7 @@ function Agents() {
 						</Button>
 						<Button asChild variant="accentOutline" size="cta">
 							<a
-								href="https://docs.carbon.ms/mcpt"
+								href="https://docs.carbon.ms/mcp"
 								target="_blank"
 								rel="noopener"
 							>
@@ -1226,7 +1317,7 @@ function StartCTA() {
 				<div className="mt-10 flex flex-wrap justify-center gap-2.5">
 					<Button asChild variant="accentOutline" size="cta">
 						<a href={APP_URL}>
-							<Trans>Start Free</Trans>
+							<AppCtaLabel />
 						</a>
 					</Button>
 					<Button asChild variant="accent" size="cta">

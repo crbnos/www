@@ -6,7 +6,7 @@ import {
 	useScroll,
 	useSpring,
 	useTransform,
-} from "framer-motion";
+} from "motion/react";
 import { Play } from "lucide-react";
 import { memo, useMemo, useRef } from "react";
 import { cn } from "~/lib/utils";
