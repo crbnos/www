@@ -16,3 +16,8 @@ app/lib/static-blog-data.ts
 
 opencode.json
 .mcp.json
+# translate skill scratch
+.ai/scratch
+
+# Conductor workspace scratch
+.context

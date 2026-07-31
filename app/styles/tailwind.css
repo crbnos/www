@@ -1,6 +1,6 @@
 @import url("non.geist");
 @import url("non.geist/mono");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -20,6 +20,7 @@
     --primary-foreground: 0 0% 98%;
     --secondary: 219 93% 56%;
     --secondary-foreground: 219 88% 98%;
+    --secondary-surface: 173 100% 8%;
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 37.1%;
     --accent: 240 4.8% 95.9%;
@@ -29,39 +30,42 @@
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
     --ring: 240 10% 3.9%;
-    --radius: 0.5rem;
+    --radius: 0rem;
 
     --header-height: 70px;
   }
 
   .dark {
-    --background: 220 14.3% 6.1%;
+    --background: 173 32% 6.1%;
     --foreground: 0 0% 98%;
-    --card: 220 10% 3.9%;
+    --card: 173 50% 3.9%;
     --card-foreground: 0 0% 98%;
-    --popover: 220 10% 3.9%;
+    --popover: 173 10% 3.9%;
     --popover-foreground: 0 0% 98%;
     --primary: 0 0% 98%;
-    --primary-foreground: 220 5.9% 10%;
+    --primary-foreground: 173 5.9% 10%;
     --active: 0 0% 98%;
-    --active-foreground: 220 5.9% 10%;
+    --active-foreground: 173 5.9% 10%;
     --secondary: 163 93% 56%;
     --secondary-foreground: 163 88% 11%;
-    --muted: 0 0% 13.6%;
+    --muted: 173 20% 13.6%;
     --muted-foreground: 0 0% 65%;
     --accent: 0 0% 7.6%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 220 3.7% 15.9%;
-    --input: 220 3.7% 15.9%;
-    --ring: 220 4.9% 83.9%;
+    --border: 173 3.7% 15.9%;
+    --input: 173 3.7% 15.9%;
+    --ring: 173 4.9% 83.9%;
   }
 }
 
 @layer base {
   * {
     @apply border-border;
+  }
+  html {
+    line-height: normal;
   }
   body {
     @apply bg-background text-foreground;
@@ -81,6 +85,21 @@
 
   to {
     opacity: 1;
+  }
+}
+
+@keyframes cb-pulse {
+  0% {
+    opacity: 0.25;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.25;
+    transform: scale(0.85);
   }
 }
 

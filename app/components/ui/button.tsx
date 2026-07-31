@@ -5,7 +5,7 @@ import * as React from "react";
 import { cn } from "~/lib/utils";
 
 const buttonVariants = cva(
-	"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full corner-squircle text-sm font-medium tracking-tight focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 active:scale-[0.96] transition-[transform,color,background-color,border-color] duration-150 ease-in-out",
+	"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-none text-sm font-medium tracking-tight focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 active:scale-[0.96] transition-[transform,color,background-color,border-color] duration-150 ease-in-out",
 	{
 		variants: {
 			variant: {
@@ -19,13 +19,19 @@ const buttonVariants = cva(
 					"bg-secondary/90 text-secondary-foreground shadow-sm hover:bg-secondary/80",
 				ghost: "hover:bg-background/70 hover:text-accent-foreground",
 				link: "text-primary underline-offset-4 hover:underline",
+				accent:
+					"bg-secondary text-secondary-foreground transition-opacity hover:opacity-90 dark:border dark:border-secondary/50 dark:bg-secondary-surface dark:text-secondary dark:transition-colors dark:hover:bg-secondary/20 dark:hover:opacity-100",
+				accentOutline:
+					"border border-border text-foreground transition-colors hover:border-foreground",
 			},
 			size: {
 				default: "h-9 px-4 py-2",
 				sm: "h-8 rounded-md px-3 text-xs",
 				lg: "h-10 rounded-md px-8",
-				xl: "h-12 rounded-full corner-squircle px-8 text-lg",
+				xl: "h-12 rounded-none px-8 text-lg",
 				icon: "h-9 w-9",
+				cta: "px-6 py-4 font-mono text-[11px] uppercase tracking-[0.15em]",
+				ctaSm: "px-4 py-2 font-mono text-[11px] uppercase tracking-[0.15em]",
 			},
 		},
 		defaultVariants: {
