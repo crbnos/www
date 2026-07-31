@@ -713,7 +713,7 @@ function StatusQuo() {
 				<Reveal className="flex flex-wrap items-end justify-between gap-10">
 					<div>
 						<h2 className={cn(heading, "mt-5 max-w-[22ch]")}>
-							<Trans>Legacy ERPs were built for accountants in 1998.</Trans>
+							<Trans>Legacy ERPs were built for accountants in the 1990s.</Trans>
 						</h2>
 					</div>
 				</Reveal>
