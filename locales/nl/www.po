@@ -108,7 +108,7 @@ msgstr "Geanimeerde montagerichtlijnen"
 msgid "API"
 msgstr "API"
 
-#: app/routes/_index.tsx:1072
+#: app/routes/_index.tsx:1082
 msgid "API Docs"
 msgstr "API-documentatie"
 
@@ -784,7 +784,7 @@ msgstr "Productieuitvoering"
 msgid "Manufacturing-focused, GAAP accounting"
 msgstr "Productiegericht, GAAP-boekhouding"
 
-#: app/routes/_index.tsx:1082
+#: app/routes/_index.tsx:1072
 msgid "MCP Docs"
 msgstr "MCP Docs"
 

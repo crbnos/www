@@ -108,7 +108,7 @@ msgstr "アニメーション付き組立指示"
 msgid "API"
 msgstr "API"
 
-#: app/routes/_index.tsx:1072
+#: app/routes/_index.tsx:1082
 msgid "API Docs"
 msgstr "API ドキュメント"
 
@@ -784,7 +784,7 @@ msgstr "製造実行"
 msgid "Manufacturing-focused, GAAP accounting"
 msgstr "製造重視、GAAP会計"
 
-#: app/routes/_index.tsx:1082
+#: app/routes/_index.tsx:1072
 msgid "MCP Docs"
 msgstr "MCP ドキュメント"
 
