@@ -13,11 +13,6 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#. placeholder {0}: mod.code
-#: app/routes/_index.tsx:836
-msgid "{0} · {modName} — module detail"
-msgstr "{0} · {modName} — मॉड्यूल विवरण"
-
 #: app/routes/pricing.tsx:24
 #: app/routes/pricing.tsx:42
 msgid "/user/month"
@@ -29,7 +24,7 @@ msgstr "18-माह कार्यान्वयन"
 
 #: app/routes/_index.tsx:264
 msgid "21 CFR Part 11"
-msgstr ""
+msgstr "21 CFR Part 11"
 
 #: app/routes/pricing.tsx:52
 msgid "5 user minimum"
@@ -62,7 +57,7 @@ msgstr "लेखांकन"
 
 #: app/routes/_index.tsx:98
 msgid "Accounting-focused"
-msgstr ""
+msgstr "लेखांकन-केंद्रित"
 
 #: app/routes/_index.tsx:134
 msgid "Accrual accounting"
@@ -96,7 +91,7 @@ msgstr "सभी उन्नत सुविधाएं उपलब्ध �
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "सभी कार्बन ट्रेडमार्क, लोगो, या अन्य ब्रांड तत्वों को कभी भी संशोधित नहीं किया जा सकता है या कार्बन मैनुफैक्चरिंग सिस्टम्स कॉर्पोरेशन का प्रतिनिधित्व करने के अलावा किसी अन्य उद्देश्य के लिए उपयोग नहीं किया जा सकता है।"
 
-#: app/routes/_index.tsx:988
+#: app/routes/_index.tsx:971
 msgid "An API for the entire organization."
 msgstr "संपूर्ण संगठन के लिए एक API।"
 
@@ -107,23 +102,23 @@ msgstr "विश्लेषण"
 #: app/routes/_index.tsx:648
 #: app/routes/_index.tsx:655
 msgid "Animated assembly instructions"
-msgstr ""
+msgstr "एनिमेटेड असेंबली निर्देश"
 
 #: app/routes/_index.tsx:284
 msgid "API"
 msgstr "API"
 
-#: app/routes/_index.tsx:998
+#: app/routes/_index.tsx:981
 msgid "API Docs"
 msgstr "API डॉक्स"
 
 #: app/routes/_index.tsx:114
 msgid "API-first, with first-class MCP"
-msgstr ""
+msgstr "API-पहले, प्रथम-श्रेणी MCP के साथ"
 
 #: app/routes/_index.tsx:193
 msgid "API, MCP, apps"
-msgstr ""
+msgstr "API, MCP, ऐप्स"
 
 #: app/routes/pricing.tsx:48
 msgid "API, webhooks, and integrations"
@@ -137,7 +132,7 @@ msgstr "AS9100"
 msgid "AS9100, FAI, full genealogy"
 msgstr "AS9100, FAI, पूर्ण वंशावली"
 
-#: app/routes/_index.tsx:1164
+#: app/routes/_index.tsx:1147
 msgid "Ask your agent what it thinks"
 msgstr "अपने एजेंट से पूछें कि वह क्या सोचता है"
 
@@ -149,7 +144,7 @@ msgstr "ऑडिट लॉगिंग"
 msgid "Audit trail is the database"
 msgstr "ऑडिट ट्रेल डेटाबेस है"
 
-#: app/routes/_index.tsx:1137
+#: app/routes/_index.tsx:1120
 msgid "Auditable by construction."
 msgstr "निर्माण द्वारा ऑडिट योग्य।"
 
@@ -176,6 +171,10 @@ msgstr "वापस"
 #: app/routes/_index.tsx:163
 msgid "Barcode / QR tracking"
 msgstr "बारकोड / QR ट्रैकिंग"
+
+#: app/routes/_index.tsx:86
+msgid "Based on assumptions"
+msgstr "धारणाओं पर आधारित"
 
 #: app/routes/pricing.tsx:31
 msgid "Basic ERP, MES, and QMS functionality"
@@ -218,17 +217,17 @@ msgstr "स्रोत कोड खरीदें"
 msgid "CAD"
 msgstr "CAD"
 
-#: app/routes/_index.tsx:853
+#: app/routes/_index.tsx:865
 msgid "CAD to cash, unbroken."
 msgstr "CAD से नकद, अखंड।"
 
 #: app/routes/_index.tsx:637
 msgid "Carbon / Assembly Instructions"
-msgstr ""
+msgstr "Carbon / असेंबली निर्देश"
 
 #: app/routes/_index.tsx:342
 msgid "Carbon allows you to a scale from a single-entity, single-location operation, to a multi-national, multi-location manufacturing engine with consolidated accounts."
-msgstr ""
+msgstr "Carbon आपको एक एकल-इकाई, एकल-स्थान संचालन से एक बहु-राष्ट्रीय, बहु-स्थान विनिर्माण इंजन तक पैमाने पर जाने की अनुमति देता है समेकित खातों के साथ।"
 
 #: app/components/hero.tsx:126
 msgid "Carbon combines ERP, MES, and QMS into a single, unified system."
@@ -238,7 +237,7 @@ msgstr "Carbon ERP, MES, और QMS को एक एकीकृत प्र�
 msgid "Carbon is the engineering-first operating system for manufacturers. Quote, plan, buy, build, inspect and ship on one live model of your factory — from a ten-person prototype shop to a rate-production line."
 msgstr "Carbon निर्माताओं के लिए इंजीनियरिंग-पहली ऑपरेटिंग सिस्टम है। अपनी फैक्ट्री के एक लाइव मॉडल पर उद्धरण, योजना, खरीद, बिल्ड, निरीक्षण और शिप करें — एक दस-व्यक्ति प्रोटोटाइप शॉप से दर-उत्पादन लाइन तक।"
 
-#: app/routes/_index.tsx:1167
+#: app/routes/_index.tsx:1150
 msgid "Carbon's source code is available. Copy the prompt below into your favorite LLM."
 msgstr "Carbon का स्रोत कोड उपलब्ध है। नीचे दिए गए प्रॉम्प्ट को अपने पसंदीदा LLM में कॉपी करें।"
 
@@ -297,7 +296,7 @@ msgstr "कॉन्फ़िगरेटर"
 
 #: app/routes/_index.tsx:292
 msgid "Configure to order"
-msgstr ""
+msgstr "ऑर्डर के लिए कॉन्फ़िगर करें"
 
 #: app/routes/_index.tsx:256
 msgid "configure to order, aftermarket"
@@ -324,9 +323,9 @@ msgstr "संपर्क"
 msgid "Contact Information"
 msgstr "संपर्क जानकारी"
 
-#: app/components/header.tsx:154
-#: app/components/header.tsx:250
-#: app/routes/_index.tsx:1251
+#: app/components/header.tsx:155
+#: app/components/header.tsx:251
+#: app/routes/_index.tsx:1234
 msgid "Contact Sales"
 msgstr "बिक्रय से संपर्क करें"
 
@@ -335,11 +334,11 @@ msgstr "बिक्रय से संपर्क करें"
 msgid "Contact us"
 msgstr "हमसे संपर्क करें"
 
-#: app/routes/_index.tsx:1115
+#: app/routes/_index.tsx:1098
 msgid "Copied"
 msgstr "कॉपी किया गया"
 
-#: app/routes/_index.tsx:1115
+#: app/routes/_index.tsx:1098
 msgid "Copy"
 msgstr "कॉपी"
 
@@ -359,7 +358,7 @@ msgstr "तथ्य के बाद अनुमानित लागत"
 msgid "Create a branded ordering experience that drives production"
 msgstr "एक ब्रांडेड ऑर्डरिंग अनुभव बनाएं जो उत्पादन को बढ़ाता है"
 
-#: app/routes/_index.tsx:1238
+#: app/routes/_index.tsx:1221
 msgid "Create a company, connect the MCP, release your first job today."
 msgstr "एक कंपनी बनाएं, MCP को कनेक्ट करें, आज अपनी पहली नौकरी जारी करें।"
 
@@ -389,7 +388,7 @@ msgstr "अनुकूलन, प्रशिक्षण, और एकीक�
 
 #: app/routes/_index.tsx:193
 msgid "Customize"
-msgstr ""
+msgstr "अनुकूलित करें"
 
 #: app/components/wizard-form.tsx:112
 msgid "Database"
@@ -397,7 +396,7 @@ msgstr "डेटाबेस"
 
 #: app/routes/_index.tsx:216
 msgid "Days to go live"
-msgstr ""
+msgstr "लाइव जाने के दिन"
 
 #: app/components/wizard-form.tsx:124
 msgid "Dedicated database for your organization"
@@ -424,7 +423,7 @@ msgid "Developer guides and API reference"
 msgstr "डेवलपर गाइड और API संदर्भ"
 
 #: app/components/header.tsx:98
-#: app/components/header.tsx:227
+#: app/components/header.tsx:228
 msgid "Developers"
 msgstr "डेवलपर्स"
 
@@ -441,7 +440,7 @@ msgid "Discord"
 msgstr "Discord"
 
 #: app/components/header.tsx:82
-#: app/components/header.tsx:209
+#: app/components/header.tsx:210
 msgid "Docs"
 msgstr "डॉक्स"
 
@@ -478,7 +477,7 @@ msgid "Engineering change orders"
 msgstr "इंजीनियरिंग परिवर्तन आदेश"
 
 #: app/components/header.tsx:127
-#: app/components/header.tsx:223
+#: app/components/header.tsx:224
 #: app/routes/pricing.tsx:56
 msgid "Enterprise"
 msgstr "एंटरप्राइज़"
@@ -493,13 +492,13 @@ msgstr "ERP · MRP · MES · QMS"
 
 #: app/routes/_index.tsx:310
 msgid "Every part, hour, barcode, and deviation tracked and handled in real-time."
-msgstr ""
+msgstr "हर हिस्सा, घंटा, बारकोड, और विचलन रीयल-टाइम में ट्रैक और संभाला जाता है।"
 
 #: app/routes/_index.tsx:341
 msgid "Every site on one ledger."
-msgstr ""
+msgstr "हर साइट एक खाता बही पर।"
 
-#: app/routes/_index.tsx:857
+#: app/routes/_index.tsx:869
 msgid "Every stage writes to the same record. No handoffs, no re-keying, no reconciliation."
 msgstr "प्रत्येक चरण एक ही रिकॉर्ड में लिखता है। कोई हस्तांतरण नहीं, कोई फिर से की गई नहीं, कोई मिलान नहीं।"
 
@@ -509,11 +508,11 @@ msgstr "हर टेबल एक अंतबिंदु है"
 
 #: app/routes/_index.tsx:212
 msgid "Every unit, every op"
-msgstr ""
+msgstr "हर इकाई, हर ऑप"
 
 #: app/routes/_index.tsx:112
 msgid "Everything integrated"
-msgstr ""
+msgstr "सब कुछ एकीकृत"
 
 #: app/routes/_index.tsx:156
 msgid "Execution"
@@ -556,7 +555,7 @@ msgstr "प्रथम लेख निरीक्षण, गैर-अनु�
 msgid "Forward deployed engineer"
 msgstr "आगे तैनात इंजीनियर"
 
-#: app/routes/_index.tsx:787
+#: app/routes/_index.tsx:797
 msgid "Four systems, one schema. Nothing to integrate."
 msgstr "चार प्रणालियाँ, एक स्कीमा। एकीकृत करने के लिए कुछ नहीं।"
 
@@ -612,13 +611,13 @@ msgstr "होस्टिंग प्राथमिकता"
 msgid "Huge consulting bills"
 msgstr "विशाल परामर्श बिल"
 
-#: app/routes/_index.tsx:1050
+#: app/routes/_index.tsx:1033
 msgid "If it has a bill of materials, Carbon runs it."
 msgstr "यदि इसमें सामग्री का बिल है, तो Carbon इसे चलाता है।"
 
-#: app/routes/_index.tsx:1140
+#: app/routes/_index.tsx:1123
 msgid "Immutable ledgers, granular permissions, and the controls regulated programs are held to."
-msgstr ""
+msgstr "अपरिवर्तनीय खाता बहियां, दानेदार अनुमतियां, और नियंत्रण जो विनियमित कार्यक्रम रखते हैं।"
 
 #: app/components/status-indicator.tsx:8
 msgid "Incident detected"
@@ -628,7 +627,7 @@ msgstr "घटना का पता चला"
 msgid "Industrial equipment"
 msgstr "औद्योगिक उपकरण"
 
-#: app/routes/_index.tsx:1193
+#: app/routes/_index.tsx:1176
 msgid "Integrated with the world's best software."
 msgstr "विश्व के सर्वश्रेष्ठ सॉफ़्टवेयर के साथ एकीकृत।"
 
@@ -638,7 +637,7 @@ msgstr "एकीकरण"
 
 #: app/routes/_index.tsx:125
 msgid "Inventory & Costing"
-msgstr ""
+msgstr "इन्वेंटरी और लागत"
 
 #: app/routes/_index.tsx:131
 msgid "Inventory & locations"
@@ -666,7 +665,7 @@ msgstr "ITAR अनुपालन"
 
 #: app/routes/_index.tsx:261
 msgid "ITAR-ready deployment"
-msgstr ""
+msgstr "ITAR-तैयार तैनाती"
 
 #: app/routes/_index.tsx:240
 msgid "ITAR-ready, serialized, audit-first"
@@ -693,8 +692,8 @@ msgid "Kanban Schedule"
 msgstr "कानबन शेड्यूल"
 
 #: app/routes/_index.tsx:162
-msgid "Labor, scrap & yield"
-msgstr "श्रम, स्क्रैप और उपज"
+msgid "Labor, scrap & rework"
+msgstr ""
 
 #: app/routes/_index.tsx:147
 msgid "Lead times & buffers"
@@ -714,7 +713,7 @@ msgstr "सबसे सस्ता। बुनियादी ऑनबोर
 
 #: app/routes/_index.tsx:96
 msgid "Legacy ERP"
-msgstr ""
+msgstr "विरासत ERP"
 
 #: app/routes/_index.tsx:716
 msgid "Legacy ERPs were built for accountants in 1998."
@@ -767,13 +766,13 @@ msgstr "प्रबंधित होस्टिंग"
 
 #: app/routes/_index.tsx:308
 msgid "Manufacturing execution"
-msgstr ""
+msgstr "विनिर्माण निष्पादन"
 
 #: app/routes/_index.tsx:111
-msgid "Manufacturing-focused"
-msgstr ""
+msgid "Manufacturing-focused, GAAP accounting"
+msgstr "विनिर्माण-केंद्रित, GAAP लेखांकन"
 
-#: app/routes/_index.tsx:1008
+#: app/routes/_index.tsx:991
 msgid "MCP Docs"
 msgstr "MCP डॉक्स"
 
@@ -807,19 +806,19 @@ msgstr "सबसे लोकप्रिय"
 
 #: app/routes/_index.tsx:340
 msgid "Multi-entity · Multi-location"
-msgstr ""
+msgstr "बहु-इकाई · बहु-स्थान"
 
 #: app/routes/_index.tsx:344
 msgid "Multi-entity accounting with intercompany transactions"
-msgstr ""
+msgstr "अंतर-कंपनी लेनदेन के साथ बहु-इकाई लेखांकन"
 
 #: app/routes/_index.tsx:348
 msgid "Multi-entity ledger / multi-site planning"
-msgstr ""
+msgstr "बहु-इकाई खाता बही / बहु-साइट योजना"
 
 #: app/routes/_index.tsx:346
 msgid "Multi-location planning with inter-site transfers"
-msgstr ""
+msgstr "अंतर-साइट स्थानान्तरण के साथ बहु-स्थान योजना"
 
 #: app/components/wizard-form.tsx:118
 msgid "Multi-Tenant"
@@ -837,17 +836,13 @@ msgstr "साइन-ऑफ के साथ NCR से CAPA वर्कफ़�
 msgid "Next Generation"
 msgstr "अगली पीढ़ी"
 
-#: app/routes/_index.tsx:86
-msgid "No accounting"
-msgstr ""
-
 #: app/routes/_index.tsx:90
 msgid "No serial-level history"
 msgstr "कोई सीरियल-स्तर का इतिहास नहीं"
 
 #: app/routes/_index.tsx:205
 msgid "No sync jobs, no drift"
-msgstr ""
+msgstr "कोई सिंक नौकरियां नहीं, कोई बहाव नहीं"
 
 #: app/routes/_index.tsx:174
 msgid "Non-conformance & CAPA"
@@ -877,9 +872,9 @@ msgstr "ऑपरेटर टर्मिनल"
 msgid "ops on the floor"
 msgstr "फ्लोर पर ops"
 
-#: app/routes/_index.tsx:1257
+#: app/routes/_index.tsx:1240
 msgid "Or self-host the open source core"
-msgstr ""
+msgstr "या खुले स्रोत कोर को स्व-होस्ट करें"
 
 #: app/routes/_index.tsx:187
 msgid "Order"
@@ -895,7 +890,7 @@ msgstr "पैकिंग और certs"
 
 #: app/routes/_index.tsx:294
 msgid "Parameterize the part, not the paperwork. Rules drive the bill of materials, the routing, the price before you quote it."
-msgstr ""
+msgstr "हिस्से को पैरामीटर करें, कागजी कार्रवाई नहीं। नियम सामग्री की बिल, रूटिंग, मूल्य को चलाते हैं इससे पहले कि आप इसे उद्धृत करें।"
 
 #: app/routes/_index.tsx:300
 msgid "Part configurator / BOM tree"
@@ -911,7 +906,7 @@ msgstr "भाग"
 
 #: app/routes/_index.tsx:345
 msgid "Per-entity currency, COA and tax, consolidated books"
-msgstr ""
+msgstr "प्रति-इकाई मुद्रा, COA और कर, समेकित किताबें"
 
 #: app/routes/_index.tsx:140
 #: app/routes/_index.tsx:185
@@ -928,7 +923,7 @@ msgstr "PO और रसीदें"
 
 #: app/components/footer.tsx:60
 #: app/components/header.tsx:92
-#: app/components/header.tsx:216
+#: app/components/header.tsx:217
 msgid "Pricing"
 msgstr "मूल्य निर्धारण"
 
@@ -1024,7 +1019,7 @@ msgstr "स्रोत पढ़ें, इसे अपने स्वयं 
 msgid "Recommended. Priority support with dedicated account manager"
 msgstr "अनुशंसित। समर्पित खाता प्रबंधक के साथ प्राथमिकता समर्थन"
 
-#: app/routes/_index.tsx:1054
+#: app/routes/_index.tsx:1037
 msgid "Regulated or not, one-off or rate production — the primitives are the same. The configuration is yours."
 msgstr "विनियमित हो या नहीं, एकबारी या दर उत्पादन — आदिम समान हैं। कॉन्फ़िगरेशन आपका है।"
 
@@ -1035,7 +1030,7 @@ msgstr "संसाधन"
 
 #: app/routes/_index.tsx:640
 msgid "Rev 4 · Live"
-msgstr ""
+msgstr "Rev 4 · लाइव"
 
 #: app/routes/_index.tsx:297
 msgid "Revision control with effectivity dates"
@@ -1063,7 +1058,7 @@ msgstr "राउटिंग और कार्य निर्देश"
 
 #: app/routes/_index.tsx:266
 msgid "Row-level security"
-msgstr ""
+msgstr "पंक्ति-स्तर की सुरक्षा"
 
 #: app/routes/_index.tsx:296
 msgid "Rule-based BOM and routing generation"
@@ -1127,7 +1122,7 @@ msgstr "सीरियल और लॉट वंशावली, आगे औ
 
 #: app/routes/_index.tsx:211
 msgid "Serial-level trace"
-msgstr ""
+msgstr "सीरीज़-स्तर ट्रेस"
 
 #: app/components/wizard-form.tsx:119
 msgid "Shared database with isolated data"
@@ -1135,9 +1130,9 @@ msgstr "अलग-अलग डेटा के साथ साझा डेट
 
 #: app/routes/_index.tsx:204
 msgid "Shared schema"
-msgstr ""
+msgstr "साझा स्कीमा"
 
-#: app/routes/_index.tsx:1235
+#: app/routes/_index.tsx:1218
 msgid "Ship faster than your competitors can quote."
 msgstr "अपने प्रतिद्वंद्वियों से तेजी से जहाज करें।"
 
@@ -1175,7 +1170,7 @@ msgstr "SMT, अनुबंध निर्माण, NPI"
 
 #: app/routes/_index.tsx:265
 msgid "SOC 2 controls"
-msgstr ""
+msgstr "SOC 2 नियंत्रण"
 
 #: app/components/wizard-form.tsx:87
 msgid "Software as a Service"
@@ -1185,9 +1180,9 @@ msgstr "सॉफ्टवेयर एज़ ए सर्विस"
 msgid "Something went wrong"
 msgstr "कुछ गलत हो गया"
 
-#: app/routes/_index.tsx:1160
+#: app/routes/_index.tsx:1143
 msgid "Source available"
-msgstr ""
+msgstr "स्रोत उपलब्ध"
 
 #: app/components/footer.tsx:61
 msgid "Source Code"
@@ -1199,7 +1194,7 @@ msgstr "अंतरिक्ष"
 
 #: app/routes/_index.tsx:84
 msgid "Spreadsheet"
-msgstr ""
+msgstr "स्प्रेडशीट"
 
 #: app/routes/pricing.tsx:70
 msgid "SSO/SAML"
@@ -1214,15 +1209,15 @@ msgstr "GitHub पर स्टार करें"
 msgid "Start 30-day free trial"
 msgstr "30-दिन की निःशुल्क परीक्षण शुरू करें"
 
-#: app/components/header.tsx:144
-#: app/components/header.tsx:245
-#: app/routes/_index.tsx:1246
+#: app/components/header.tsx:145
+#: app/components/header.tsx:246
+#: app/routes/_index.tsx:1229
 msgid "Start Free"
 msgstr "मुफ्त शुरू करें"
 
-#: app/routes/_index.tsx:1232
+#: app/routes/_index.tsx:1215
 msgid "Start now · No call required"
-msgstr ""
+msgstr "अभी शुरू करें · कोई कॉल की आवश्यकता नहीं"
 
 #: app/routes/pricing.tsx:21
 msgid "Starter"
@@ -1250,7 +1245,7 @@ msgstr "सिस्टम स्थिति:"
 
 #: app/routes/_index.tsx:199
 msgid "Systems replaced"
-msgstr ""
+msgstr "सिस्टम प्रतिस्थापित"
 
 #: app/routes/_index.tsx:273
 #: app/routes/_index.tsx:274
@@ -1297,7 +1292,7 @@ msgstr "पता लगाने की क्षमता डिफ़ॉल�
 msgid "Traveler printed at 6am, stale by 9"
 msgstr "6am पर मुद्रित ट्रैवलर, 9 तक बासी"
 
-#: app/routes/_index.tsx:1133
+#: app/routes/_index.tsx:1116
 msgid "Trusted"
 msgstr "विश्वसनीय"
 
@@ -1307,15 +1302,15 @@ msgstr "विश्व के सबसे अभिनव द्वारा �
 
 #: app/routes/_index.tsx:217
 msgid "Typical first deployment"
-msgstr ""
+msgstr "विशिष्ट पहली तैनाती"
 
 #: app/routes/_index.tsx:293
 msgid "Unfork your BOM."
-msgstr ""
+msgstr "अपने BOM को अनफोर्क करें।"
 
 #: app/routes/_index.tsx:597
 msgid "Unified system of record"
-msgstr ""
+msgstr "रिकॉर्ड की एकीकृत प्रणाली"
 
 #: app/routes/pricing.tsx:71
 msgid "Unlimited functional support"

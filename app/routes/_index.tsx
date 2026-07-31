@@ -83,7 +83,7 @@ const statusQuo = [
 		id: "spreadsheet",
 		name: msg`Spreadsheet`,
 		rows: [
-            msg`No accounting`,
+            msg`Based on assumptions`,
 			msg`Shortages found on the floor`,
 			msg`Costing guessed after the fact`,
 			msg`Revisions lost in email`,
@@ -108,7 +108,7 @@ const statusQuo = [
 		name: msg`Next Generation`,
 		accent: true,
 		rows: [
-            msg`Manufacturing-focused`,
+            msg`Manufacturing-focused, GAAP accounting`,
             msg`Everything integrated`,
 			msg`Live in weeks`,
 			msg`API-first, with first-class MCP`,
@@ -159,7 +159,7 @@ const modules = [
 			msg`Digital job travelers`,
 			msg`Operator terminal`,
 			msg`Adaptive MES UI`,
-			msg`Labor, scrap & yield`,
+			msg`Labor, scrap & rework`,
 			msg`Barcode / QR tracking`,
 			msg`Live schedule board`,
 		],
@@ -665,7 +665,7 @@ function LogoStrip() {
 	return (
 		<section className="border-y border-border py-16">
 			<div className={cn(shell, "flex flex-col gap-8")}>
-				<div className="font-mono text-[10px] uppercase leading-relaxed tracking-[0.18em] text-muted-foreground">
+				<div className="font-mono text-[11px] text-center uppercase leading-relaxed tracking-[0.18em] text-muted-foreground">
 					<Trans>Trusted by the world's most innovative</Trans>
 				</div>
 				<div
@@ -775,8 +775,18 @@ function StatusQuo() {
 }
 
 function OneModel() {
-	const { t, i18n } = useLingui();
+	const { i18n } = useLingui();
 	const [active, setActive] = useState(0);
+	// Auto-rotate through the systems every 3s until the visitor picks one.
+	const [paused, setPaused] = useState(false);
+	useEffect(() => {
+		if (paused) return;
+		const id = setInterval(
+			() => setActive((v) => (v + 1) % modules.length),
+			3000,
+		);
+		return () => clearInterval(id);
+	}, [paused]);
 	const mod = modules[active];
 	const modName = i18n._(mod.name);
 	return (
@@ -788,31 +798,38 @@ function OneModel() {
 					</h2>
 				</Reveal>
 
-				<div className="mt-12 grid grid-cols-2 gap-px border border-border bg-border lg:grid-cols-4">
-					{modules.map((m, i) => (
-						<button
-							key={m.code}
-							type="button"
-							onClick={() => setActive(i)}
-							className={cn(
-								"p-6 text-left transition-colors",
-								i === active
-									? "bg-muted text-foreground shadow-[inset_0_2px_0] shadow-secondary"
-									: "bg-card text-muted-foreground hover:text-foreground",
-							)}
-						>
-							<div className="font-mono text-[10px] uppercase leading-none tracking-[0.18em]">
-								{m.code}
-							</div>
-							<div className="mt-3 text-[17px] font-medium">{i18n._(m.name)}</div>
-							<div className="mt-2 font-mono text-xs text-muted-foreground">
-								{i18n._(m.note)}
-							</div>
-						</button>
-					))}
-				</div>
+				<div className="mt-12 grid grid-cols-1 gap-px border border-border bg-border lg:grid-cols-2">
+					{/* left — the four systems, stacked */}
+					<div className="grid auto-rows-fr grid-cols-1 gap-px bg-border">
+						{modules.map((m, i) => (
+							<button
+								key={m.code}
+								type="button"
+								onClick={() => {
+									setPaused(true);
+									setActive(i);
+								}}
+								className={cn(
+									"p-6 text-left transition-colors",
+									i === active
+										? "bg-muted text-foreground shadow-[inset_2px_0_0] shadow-secondary"
+										: "bg-card text-muted-foreground hover:text-foreground",
+								)}
+							>
+								<div className="font-mono text-[10px] uppercase leading-none tracking-[0.18em]">
+									{m.code}
+								</div>
+								<div className="mt-3 text-[17px] font-medium">
+									{i18n._(m.name)}
+								</div>
+								<div className="mt-2 font-mono text-xs text-muted-foreground">
+									{i18n._(m.note)}
+								</div>
+							</button>
+						))}
+					</div>
 
-				<div className="grid grid-cols-1 gap-px border border-t-0 border-border bg-border lg:grid-cols-2">
+					{/* right — the selected system's features */}
 					<div className="bg-card p-7">
 						<div className="font-mono text-[10px] uppercase leading-none tracking-[0.18em] text-muted-foreground">
 							{mod.code} · {modName}
@@ -830,11 +847,6 @@ function OneModel() {
 								</div>
 							))}
 						</div>
-					</div>
-					<div className="relative overflow-hidden bg-card sm:h-[420px] lg:h-[520px]">
-						<Screenshot
-							label={t`${mod.code} · ${modName} — module detail`}
-						/>
 					</div>
 				</div>
 			</div>
@@ -947,35 +959,6 @@ function FeatureRows() {
 	);
 }
 
-function Stats() {
-	const { i18n } = useLingui();
-	return (
-		<section className="border-b border-border py-24">
-			<div className={shell}>
-				<Reveal className="grid grid-cols-1 gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
-					{stats.map((s, i) => (
-						<div key={i} className="bg-card px-7 py-8">
-							<div
-								className={cn(
-									"font-display font-semibold tracking-[-0.04em] leading-none text-[clamp(2.5rem,5vw,4.25rem)]",
-									s.accent && "text-secondary",
-								)}
-							>
-								<CountUp to={s.value} />
-								{s.suffix}
-							</div>
-							<div className="mt-3.5 font-mono text-xs uppercase leading-relaxed text-muted-foreground">
-								{i18n._(s.label)}
-								<br />
-								{i18n._(s.sub)}
-							</div>
-						</div>
-					))}
-				</Reveal>
-			</div>
-		</section>
-	);
-}
 
 function Agents() {
 	const { i18n } = useLingui();
@@ -1267,14 +1250,13 @@ export default function Route() {
 		<>
 			<Hero />
 			<LogoStrip />
-			<StatusQuo />
-			<OneModel />
 			<HappyPath />
 			<FeatureRows />
-			<Stats />
-			<Agents />
+			<StatusQuo />
+			<OneModel />
 			<Industries />
 			<TrustOpen />
+			<Agents />
 			<Integrations />
 			<StartCTA />
 		</>

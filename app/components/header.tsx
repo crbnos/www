@@ -133,7 +133,8 @@ export function Header() {
 
 				{/* right: utilities */}
 				<div className="flex items-center justify-self-end gap-1 sm:gap-3">
-					<ModeToggle />
+					{/* Theme toggle is a dev-only affordance; production ships a single theme. */}
+					{import.meta.env.DEV && <ModeToggle />}
 					<Button
 						asChild
 						variant="accentOutline"
