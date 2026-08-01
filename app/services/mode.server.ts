@@ -9,14 +9,13 @@ const cookieName = "mode";
  * client-hint script) and the `mode` cookie shared across `.carbon.ms`, which
  * app.carbon.ms also writes.
  *
- * - Only one reported → use it. That makes `mode` the first-load fallback,
- *   covering the render before the hint script has run.
- * - Both reported and they disagree → dark wins.
- * - Neither → null, and the caller falls back to light.
+ * The OS preference always wins once it has been reported. The `mode` cookie is
+ * only a first-load fallback, covering the render before the hint script runs.
  *
- * The old order returned the `mode` cookie unconditionally, so a stale value
- * pinned the theme forever — nothing ever refreshed it and switching the OS
- * theme did nothing.
+ * Nothing ever refreshes `mode`, so anything that lets it outrank the OS pins
+ * the theme: returning it unconditionally meant switching the OS theme did
+ * nothing, and preferring dark on a conflict meant a stale `mode=dark` made
+ * light unreachable.
  */
 export function getMode(request: Request, hint?: Mode): Mode | null {
 	const cookieHeader = request.headers.get("cookie");
@@ -24,14 +23,12 @@ export function getMode(request: Request, hint?: Mode): Mode | null {
 
 	// Only trust the hint once the client has actually reported one — otherwise
 	// it is just the "light" fallback baked into the hint definition.
-	const osMode = cookies[clientHint.cookieName] ? (hint ?? null) : null;
+	if (cookies[clientHint.cookieName]) return hint ?? null;
 
 	const stored = cookies[cookieName];
-	const appMode = stored === "light" || stored === "dark" ? stored : null;
+	if (stored === "light" || stored === "dark") return stored;
 
-	if (osMode && appMode && osMode !== appMode) return "dark";
-
-	return osMode ?? appMode ?? null;
+	return null;
 }
 
 export function setMode(mode: Mode | "system") {
