@@ -79,7 +79,7 @@ export function Header() {
 									className={navigationMenuTriggerStyle()}
 									asChild
 								>
-									<a href="https://docs.carbon.ms/docs" target="_blank" rel="noopener">
+									<a href="https://docs.carbon.ms" target="_blank" rel="noopener">
 										<Trans>Docs</Trans>
 									</a>
 								</NavigationMenuLink>
@@ -202,7 +202,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
 		<div className="absolute inset-x-0 top-full border-b bg-background lg:hidden">
 			<nav className="mx-auto flex w-full max-w-[1360px] flex-col px-6 py-4 sm:px-7">
 				<a
-					href="https://docs.carbon.ms/docs"
+					href="https://docs.carbon.ms"
 					target="_blank"
 					rel="noopener"
 					onClick={onClose}
