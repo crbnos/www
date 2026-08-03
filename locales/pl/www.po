@@ -91,7 +91,7 @@ msgstr "Wszystkie zaawansowane funkcje dostępne"
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "Wszystkie znaki towarowe Carbon, logotypy lub inne elementy marki nigdy nie mogą być modyfikowane ani używane do żadnego innego celu niż reprezentowanie Carbon Manufacturing Systems Corporation."
 
-#: app/routes/_index.tsx:1062
+#: app/routes/_index.tsx:1108
 msgid "An API for the entire organization."
 msgstr "API dla całej organizacji."
 
@@ -108,7 +108,7 @@ msgstr "Animowane instrukcje montażu"
 msgid "API"
 msgstr "API"
 
-#: app/routes/_index.tsx:1082
+#: app/routes/_index.tsx:1128
 msgid "API Docs"
 msgstr "Dokumentacja API"
 
@@ -132,7 +132,7 @@ msgstr "AS9100"
 msgid "AS9100, FAI, full genealogy"
 msgstr "AS9100, FAI, pełna genealogia"
 
-#: app/routes/_index.tsx:1238
+#: app/routes/_index.tsx:1284
 msgid "Ask your agent what it thinks"
 msgstr "Zapytaj swojego agenta, co myśli"
 
@@ -144,7 +144,7 @@ msgstr "Rejestrowanie audytu"
 msgid "Audit trail is the database"
 msgstr "Ścieżka audytu to baza danych"
 
-#: app/routes/_index.tsx:1211
+#: app/routes/_index.tsx:1257
 msgid "Auditable by construction."
 msgstr "Podlegająca audytowi przez konstrukcję."
 
@@ -179,6 +179,10 @@ msgstr "Na podstawie założeń"
 #: app/routes/pricing.tsx:31
 msgid "Basic ERP, MES, and QMS functionality"
 msgstr "Podstawowa funkcjonalność ERP, MES i QMS"
+
+#: app/routes/_index.tsx:797
+msgid "Best ERP/MRP/MES system I've ever seen in a 22-year career across defense and automotive. Native Onshape integration means we synchronize all our data without extra PLM connectors — good UX, modern integrations, open source, open API and MCP, cloud or on-prem. We run our whole electric-vehicle engineering and manufacturing business on Carbon, and I couldn't imagine going back to a legacy system."
+msgstr "Najlepszy system ERP/MRP/MES, jaki kiedykolwiek widziałem w 22-letniej karierze w branżach obronnej i motoryzacyjnej. Natywna integracja Onshape oznacza, że synchronizujemy wszystkie nasze dane bez dodatkowych złączeń PLM — dobra UX, nowoczesne integracje, open source, otwarty API i MCP, chmura lub on-prem. Prowadzimy całą naszą działalność inżynierii i produkcji pojazdów elektrycznych na Carbon i nie potrafię sobie wyobrazić powrotu do systemu legacy."
 
 #: app/components/hero.tsx:230
 msgid "Bill of Materials"
@@ -217,7 +221,7 @@ msgstr "Kup kod źródłowy"
 msgid "CAD"
 msgstr "CAD"
 
-#: app/routes/_index.tsx:946
+#: app/routes/_index.tsx:992
 msgid "CAD to cash, unbroken."
 msgstr "Z CAD do gotówki, bez przerwy."
 
@@ -237,7 +241,7 @@ msgstr "Carbon łączy ERP, MES i QMS w jeden, ujednolicony system."
 msgid "Carbon is the engineering-first operating system for manufacturers. Quote, plan, buy, build, inspect and ship on one live model of your factory — from a ten-person prototype shop to a rate-production line."
 msgstr "Carbon to inżynierski system operacyjny dla producentów. Wycenę, planowanie, zakupy, produkcję, inspekcję i wysyłkę na jednym żywym modelu twojej fabryki — od prototypu dziesięcioosobowego do linii produkcji."
 
-#: app/routes/_index.tsx:1241
+#: app/routes/_index.tsx:1287
 msgid "Carbon's source code is available. Copy the prompt below into your favorite LLM."
 msgstr "Kod źródłowy Carbon jest dostępny. Skopiuj poniższy monit do swojego ulubionego LLM."
 
@@ -329,7 +333,7 @@ msgstr "Informacje kontaktowe"
 
 #: app/components/header.tsx:156
 #: app/components/header.tsx:252
-#: app/routes/_index.tsx:1325
+#: app/routes/_index.tsx:1371
 msgid "Contact Sales"
 msgstr "Skontaktuj się ze sprzedażą"
 
@@ -338,11 +342,11 @@ msgstr "Skontaktuj się ze sprzedażą"
 msgid "Contact us"
 msgstr "Skontaktuj się z nami"
 
-#: app/routes/_index.tsx:1189
+#: app/routes/_index.tsx:1235
 msgid "Copied"
 msgstr "Skopiowano"
 
-#: app/routes/_index.tsx:1189
+#: app/routes/_index.tsx:1235
 msgid "Copy"
 msgstr "Kopiuj"
 
@@ -362,7 +366,7 @@ msgstr "Wycena zgadywana po fakcie"
 msgid "Create a branded ordering experience that drives production"
 msgstr "Utwórz markowe doświadczenie zamawiania, które napędza produkcję"
 
-#: app/routes/_index.tsx:1312
+#: app/routes/_index.tsx:1358
 msgid "Create a company, connect the MCP, release your first job today."
 msgstr "Utwórz firmę, połącz MCP, wydaj swoje pierwsze zadanie dzisiaj."
 
@@ -506,7 +510,7 @@ msgstr "Każda część, godzina, kod kreskowy i odchylenie śledzone i obsługi
 msgid "Every site on one ledger."
 msgstr "Każda lokacja na jednym rachunku głównym."
 
-#: app/routes/_index.tsx:950
+#: app/routes/_index.tsx:996
 msgid "Every stage writes to the same record. No handoffs, no re-keying, no reconciliation."
 msgstr "Każdy etap zapisuje do tego samego rekordu. Brak przesyłek, brak ponownego wpisywania, brak uzgodnienia."
 
@@ -567,7 +571,7 @@ msgstr "Inspekcja pierwszego artykułu, niezgodność, CAPA i kalibracja przyrz�
 msgid "Forward deployed engineer"
 msgstr "Inżynier wdrożony na miejscu"
 
-#: app/routes/_index.tsx:878
+#: app/routes/_index.tsx:924
 msgid "Four systems, one schema. Nothing to integrate."
 msgstr "Cztery systemy, jeden schemat. Nic do integracji."
 
@@ -623,11 +627,11 @@ msgstr "Preferencja hostingu"
 msgid "Huge consulting bills"
 msgstr "Ogromne rachunki konsultingowe"
 
-#: app/routes/_index.tsx:1124
+#: app/routes/_index.tsx:1170
 msgid "If it has a bill of materials, Carbon runs it."
 msgstr "Jeśli ma rachunek materiałów, Carbon to uruchamia."
 
-#: app/routes/_index.tsx:1214
+#: app/routes/_index.tsx:1260
 msgid "Immutable ledgers, granular permissions, and the controls regulated programs are held to."
 msgstr "Niezmienne rachunki główne, szczegółowe uprawnienia i kontrole wymagane przez programy regulacyjne."
 
@@ -639,7 +643,7 @@ msgstr "Wykryto incydent"
 msgid "Industrial equipment"
 msgstr "Urządzenia przemysłowe"
 
-#: app/routes/_index.tsx:1267
+#: app/routes/_index.tsx:1313
 msgid "Integrated with the world's best software."
 msgstr "Zintegrowane z najlepszym oprogramowaniem na świecie."
 
@@ -727,7 +731,7 @@ msgstr "Najtańsza opcja. Podstawowe wdrożenie i wsparcie e-mail"
 msgid "Legacy ERP"
 msgstr "Starszy ERP"
 
-#: app/routes/_index.tsx:797
+#: app/routes/_index.tsx:843
 msgid "Legacy ERPs were built for accountants in the 1990s."
 msgstr "Starsze systemy ERP były budowane dla księgowych w latach dziewięćdziesiątych."
 
@@ -784,7 +788,7 @@ msgstr "Wykonanie produkcji"
 msgid "Manufacturing-focused, GAAP accounting"
 msgstr "Zorientowana na produkcję, rachunkowość GAAP"
 
-#: app/routes/_index.tsx:1072
+#: app/routes/_index.tsx:1118
 msgid "MCP Docs"
 msgstr "Dokumentacja MCP"
 
@@ -884,7 +888,7 @@ msgstr "Terminal operatora"
 msgid "ops on the floor"
 msgstr "operacje na piętrze"
 
-#: app/routes/_index.tsx:1331
+#: app/routes/_index.tsx:1377
 msgid "Or self-host the open source core"
 msgstr "Lub hostuj samodzielnie otwarte źródło core"
 
@@ -1031,7 +1035,7 @@ msgstr "Przeczytaj źródło, uruchom je w swoim własnym środowisku i zacznij 
 msgid "Recommended. Priority support with dedicated account manager"
 msgstr "Rekomendowane. Wsparcie priorytetowe z dedykowanym menedżerem konta"
 
-#: app/routes/_index.tsx:1128
+#: app/routes/_index.tsx:1174
 msgid "Regulated or not, one-off or rate production — the primitives are the same. The configuration is yours."
 msgstr "Regulowana lub nie, jednorazowa lub szybka produkcja — prymitywy są takie same. Konfiguracja jest twoja."
 
@@ -1144,7 +1148,7 @@ msgstr "Udostępniona baza danych z izolowanymi danymi"
 msgid "Shared schema"
 msgstr "Udostępniony schemat"
 
-#: app/routes/_index.tsx:1309
+#: app/routes/_index.tsx:1355
 msgid "Ship faster than your competitors can quote."
 msgstr "Wyślij szybciej niż twoi konkurenci mogą wycenieć."
 
@@ -1192,7 +1196,7 @@ msgstr "Oprogramowanie jako usługa"
 msgid "Something went wrong"
 msgstr "Coś poszło nie tak"
 
-#: app/routes/_index.tsx:1234
+#: app/routes/_index.tsx:1280
 msgid "Source available"
 msgstr "Źródło dostępne"
 
@@ -1225,7 +1229,7 @@ msgstr "Rozpocznij 30-dniowy bezpłatny okres próbny"
 msgid "Start Free"
 msgstr "Zacznij za darmo"
 
-#: app/routes/_index.tsx:1306
+#: app/routes/_index.tsx:1352
 msgid "Start now · No call required"
 msgstr "Zacznij teraz · Brak wymaganego połączenia"
 
@@ -1302,7 +1306,7 @@ msgstr "Śledzalność jest stanem domyślnym."
 msgid "Traveler printed at 6am, stale by 9"
 msgstr "Karta pracy wydrukowana o 6 rano, nieświeża o 9"
 
-#: app/routes/_index.tsx:1207
+#: app/routes/_index.tsx:1253
 msgid "Trusted"
 msgstr "Zaufany"
 
