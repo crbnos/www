@@ -786,6 +786,52 @@ function LogoStrip() {
 	);
 }
 
+function Testimonial() {
+	return (
+		<section id="testimonial" className="border-b border-border py-28 sm:py-32">
+			<div className={shell}>
+				<Reveal className="mx-auto max-w-3xl">
+					<figure className="border border-border bg-card shadow-[inset_2px_0_0] shadow-secondary">
+						<div className="p-8 sm:p-12">
+							<blockquote className="text-pretty font-display text-xl font-medium leading-[1.55] tracking-[-0.01em] text-foreground sm:text-[1.5rem] sm:leading-[1.5]">
+								<Trans>
+									Best ERP/MRP/MES system I've ever seen in a 22-year career
+									across defense and automotive. Native Onshape integration
+									means we synchronize all our data without extra PLM connectors
+									— good UX, modern integrations, open source, open API and MCP,
+									cloud or on-prem. We run our whole electric-vehicle
+									engineering and manufacturing business on Carbon, and I
+									couldn't imagine going back to a legacy system.
+								</Trans>
+							</blockquote>
+						</div>
+						<figcaption className="flex items-center gap-4 border-t border-border px-8 py-6 sm:px-12">
+							<img
+								src="/faces/liam.jpeg"
+								alt="Liam Sill"
+								className="size-12 shrink-0 rounded-full object-cover ring-1 ring-border"
+							/>
+							<div>
+								<div className="text-[15px] font-medium leading-tight text-foreground">
+									Liam Sill
+								</div>
+								<div className="mt-1 font-mono text-[11px] uppercase leading-none tracking-[0.16em] text-muted-foreground">
+									CTO · Minimal
+								</div>
+							</div>
+							<img
+								src="/logos/minimal.svg"
+								alt="Minimal"
+								className="ml-auto h-5 w-auto shrink-0 opacity-50 dark:invert"
+							/>
+						</figcaption>
+					</figure>
+				</Reveal>
+			</div>
+		</section>
+	);
+}
+
 function StatusQuo() {
 	const { i18n } = useLingui();
 	return (
@@ -1342,6 +1388,7 @@ export default function Route() {
 			<Hero />
 			<LogoStrip />
 			<HappyPath />
+			<Testimonial />
 			<FeatureRows />
 			<StatusQuo />
 			<OneModel />

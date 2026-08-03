@@ -91,7 +91,7 @@ msgstr "Tüm gelişmiş özellikler kullanılabilir"
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "Tüm Carbon ticari markaları, logoları veya diğer marka öğeleri hiçbir zaman değiştirilemez veya Carbon Manufacturing Systems Corporation'ı temsil etmek dışında başka herhangi bir amaç için kullanılamaz."
 
-#: app/routes/_index.tsx:1062
+#: app/routes/_index.tsx:1108
 msgid "An API for the entire organization."
 msgstr "Tüm kuruluş için bir API."
 
@@ -108,7 +108,7 @@ msgstr "Animasyonlu montaj talimatları"
 msgid "API"
 msgstr "API"
 
-#: app/routes/_index.tsx:1082
+#: app/routes/_index.tsx:1128
 msgid "API Docs"
 msgstr "API Dokümanları"
 
@@ -132,7 +132,7 @@ msgstr "AS9100"
 msgid "AS9100, FAI, full genealogy"
 msgstr "AS9100, FAI, tam soybilim"
 
-#: app/routes/_index.tsx:1238
+#: app/routes/_index.tsx:1284
 msgid "Ask your agent what it thinks"
 msgstr "Aracınıza ne düşündüğünü sorun"
 
@@ -144,7 +144,7 @@ msgstr "Denetim günlüğü"
 msgid "Audit trail is the database"
 msgstr "Denetim izi veritabanıdır"
 
-#: app/routes/_index.tsx:1211
+#: app/routes/_index.tsx:1257
 msgid "Auditable by construction."
 msgstr "İnşaat tarafından denetlenebilir."
 
@@ -179,6 +179,10 @@ msgstr "Varsayımlara dayalı"
 #: app/routes/pricing.tsx:31
 msgid "Basic ERP, MES, and QMS functionality"
 msgstr "Temel ERP, MES ve QMS işlevselliği"
+
+#: app/routes/_index.tsx:797
+msgid "Best ERP/MRP/MES system I've ever seen in a 22-year career across defense and automotive. Native Onshape integration means we synchronize all our data without extra PLM connectors — good UX, modern integrations, open source, open API and MCP, cloud or on-prem. We run our whole electric-vehicle engineering and manufacturing business on Carbon, and I couldn't imagine going back to a legacy system."
+msgstr "Gördüğüm en iyi ERP/MRP/MES sistemi - 22 yıllık savunma ve otomotiv sektörü deneyimim içinde. Yerel Onshape entegrasyonu, tüm verilerimizi ekstra PLM bağlayıcıları olmadan senkronize edebilmemiz anlamına gelir — iyi UX, modern entegrasyonlar, açık kaynaklı, açık API ve MCP, bulut veya şirket içi. Tüm elektrikli araç mühendisliği ve üretim işletmemizi Carbon üzerinde yürütüyoruz ve eski bir sisteme geri dönmeyi hayal bile edemiyorum."
 
 #: app/components/hero.tsx:230
 msgid "Bill of Materials"
@@ -217,7 +221,7 @@ msgstr "Kaynak Kodunu Satın Al"
 msgid "CAD"
 msgstr "CAD"
 
-#: app/routes/_index.tsx:946
+#: app/routes/_index.tsx:992
 msgid "CAD to cash, unbroken."
 msgstr "CAD'den nakit, kesintisiz."
 
@@ -237,7 +241,7 @@ msgstr "Carbon, ERP, MES ve QMS'yi tek bir birleşik sisteme dönüştürür."
 msgid "Carbon is the engineering-first operating system for manufacturers. Quote, plan, buy, build, inspect and ship on one live model of your factory — from a ten-person prototype shop to a rate-production line."
 msgstr "Carbon, üreticiler için mühendislik odaklı ilk işletim sistemidir. Fabrika modelinizde tek canlı modelde teklif verin, planlayın, satın alın, oluşturun, denetim edin ve gönderin - on kişilik prototip atölyesinden hızlı üretim hattına kadar."
 
-#: app/routes/_index.tsx:1241
+#: app/routes/_index.tsx:1287
 msgid "Carbon's source code is available. Copy the prompt below into your favorite LLM."
 msgstr "Carbon'ın kaynak kodu mevcuttur. Aşağıdaki istemi favori LLM'inize kopyalayın."
 
@@ -329,7 +333,7 @@ msgstr "İletişim Bilgileri"
 
 #: app/components/header.tsx:156
 #: app/components/header.tsx:252
-#: app/routes/_index.tsx:1325
+#: app/routes/_index.tsx:1371
 msgid "Contact Sales"
 msgstr "Satış ile İletişime Geçin"
 
@@ -338,11 +342,11 @@ msgstr "Satış ile İletişime Geçin"
 msgid "Contact us"
 msgstr "Bize ulaşın"
 
-#: app/routes/_index.tsx:1189
+#: app/routes/_index.tsx:1235
 msgid "Copied"
 msgstr "Kopyalandı"
 
-#: app/routes/_index.tsx:1189
+#: app/routes/_index.tsx:1235
 msgid "Copy"
 msgstr "Kopyala"
 
@@ -362,7 +366,7 @@ msgstr "Olay Sonrası Tahmin Edilen Maliyet"
 msgid "Create a branded ordering experience that drives production"
 msgstr "Üretimi artıran markalı bir sipariş deneyimi oluşturun"
 
-#: app/routes/_index.tsx:1312
+#: app/routes/_index.tsx:1358
 msgid "Create a company, connect the MCP, release your first job today."
 msgstr "Bir şirket oluşturun, MCP'yi bağlayın, ilk işinizi bugün yayınlayın."
 
@@ -506,7 +510,7 @@ msgstr "Her parça, saat, barkod ve sapma gerçek zamanlı olarak izlenir ve ele
 msgid "Every site on one ledger."
 msgstr "Her site bir defter üzerinde."
 
-#: app/routes/_index.tsx:950
+#: app/routes/_index.tsx:996
 msgid "Every stage writes to the same record. No handoffs, no re-keying, no reconciliation."
 msgstr "Her aşama aynı kayda yazılır. Aktarım yok, yeniden anahtar yok, mutabakat yok."
 
@@ -567,7 +571,7 @@ msgstr "İlk madde denetimi, uygunsuzluk, CAPA ve gösterge kalibrasyonu üretim
 msgid "Forward deployed engineer"
 msgstr "İleri konuşlandırılmış mühendis"
 
-#: app/routes/_index.tsx:878
+#: app/routes/_index.tsx:924
 msgid "Four systems, one schema. Nothing to integrate."
 msgstr "Dört sistem, bir şema. Entegre edilecek hiçbir şey yok."
 
@@ -623,11 +627,11 @@ msgstr "Barındırma Tercihi"
 msgid "Huge consulting bills"
 msgstr "Büyük Danışmanlık Faturaları"
 
-#: app/routes/_index.tsx:1124
+#: app/routes/_index.tsx:1170
 msgid "If it has a bill of materials, Carbon runs it."
 msgstr "Bir malzeme listesi varsa, Carbon bunu çalıştırır."
 
-#: app/routes/_index.tsx:1214
+#: app/routes/_index.tsx:1260
 msgid "Immutable ledgers, granular permissions, and the controls regulated programs are held to."
 msgstr "Değişmez defterler, ayrıntılı izinler ve düzenlenen programların tutulduğu kontrollar."
 
@@ -639,7 +643,7 @@ msgstr "Olay tespit edildi"
 msgid "Industrial equipment"
 msgstr "Endüstriyel Ekipman"
 
-#: app/routes/_index.tsx:1267
+#: app/routes/_index.tsx:1313
 msgid "Integrated with the world's best software."
 msgstr "Dünyanın en iyi yazılımı ile entegre."
 
@@ -727,7 +731,7 @@ msgstr "En ucuz. Temel onboarding ve e-posta desteği"
 msgid "Legacy ERP"
 msgstr "Eski ERP"
 
-#: app/routes/_index.tsx:797
+#: app/routes/_index.tsx:843
 msgid "Legacy ERPs were built for accountants in the 1990s."
 msgstr "Eski ERP'ler, 1990'larda muhasebeciler için tasarlandı."
 
@@ -784,7 +788,7 @@ msgstr "İmalat yürütmesi"
 msgid "Manufacturing-focused, GAAP accounting"
 msgstr "İmalat odaklı, GAAP muhasebesi"
 
-#: app/routes/_index.tsx:1072
+#: app/routes/_index.tsx:1118
 msgid "MCP Docs"
 msgstr "MCP Belgeleri"
 
@@ -884,7 +888,7 @@ msgstr "Operatör Terminali"
 msgid "ops on the floor"
 msgstr "Şantiye Operasyonları"
 
-#: app/routes/_index.tsx:1331
+#: app/routes/_index.tsx:1377
 msgid "Or self-host the open source core"
 msgstr "Ya da açık kaynak çekirdeği kendi barındırın"
 
@@ -1031,7 +1035,7 @@ msgstr "Kaynağı okuyun, kendi ortamınızda çalıştırın ve yerel olarak ge
 msgid "Recommended. Priority support with dedicated account manager"
 msgstr "Önerilen. Özel hesap yöneticisi ile öncelikli destek"
 
-#: app/routes/_index.tsx:1128
+#: app/routes/_index.tsx:1174
 msgid "Regulated or not, one-off or rate production — the primitives are the same. The configuration is yours."
 msgstr "Düzenlenmiş veya değil, tek üretim veya hız üretimi - temel öğeler aynıdır. Yapılandırma sizindir."
 
@@ -1144,7 +1148,7 @@ msgstr "İzole edilmiş verilerle paylaşılan veritabanı"
 msgid "Shared schema"
 msgstr "Paylaşılan şema"
 
-#: app/routes/_index.tsx:1309
+#: app/routes/_index.tsx:1355
 msgid "Ship faster than your competitors can quote."
 msgstr "Rakiplerinizin teklif verebileceğinden daha hızlı gönderin."
 
@@ -1192,7 +1196,7 @@ msgstr "Hizmet Olarak Yazılım"
 msgid "Something went wrong"
 msgstr "Bir şeyler yanlış gitti"
 
-#: app/routes/_index.tsx:1234
+#: app/routes/_index.tsx:1280
 msgid "Source available"
 msgstr "Kaynak mevcut"
 
@@ -1225,7 +1229,7 @@ msgstr "30 günlük ücretsiz denemeyi başlat"
 msgid "Start Free"
 msgstr "Ücretsiz Başlayın"
 
-#: app/routes/_index.tsx:1306
+#: app/routes/_index.tsx:1352
 msgid "Start now · No call required"
 msgstr "Şimdi başlayın · Çağrı gerekmez"
 
@@ -1302,7 +1306,7 @@ msgstr "İzlenebilirlik Varsayılan Durumdur."
 msgid "Traveler printed at 6am, stale by 9"
 msgstr "Saat 6'da Yazdırılan Gezgin, Saat 9'da Eski"
 
-#: app/routes/_index.tsx:1207
+#: app/routes/_index.tsx:1253
 msgid "Trusted"
 msgstr "Güvenilir"
 
