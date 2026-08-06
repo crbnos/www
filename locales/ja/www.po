@@ -50,6 +50,11 @@ msgstr "サポートとすべての高度な機能を含むCarbonのマネージ
 msgid "A typed TypeScript monorepo with one generated database type shared across the app, the API, and the AI tools. Bring your own LLM."
 msgstr "アプリ、API、AI ツール全体で共有される生成されたデータベース型を備えた型付き TypeScript モノレポ。自分の LLM を用意してください。"
 
+#: app/components/header.tsx:83
+#: app/components/header.tsx:219
+msgid "About"
+msgstr "について"
+
 #: app/routes/_index.tsx:195
 #: app/routes/pricing.tsx:49
 msgid "Accounting"
@@ -78,6 +83,10 @@ msgstr "適応MES UI"
 #: app/routes/_index.tsx:244
 msgid "Aerospace"
 msgstr "航空宇宙"
+
+#: app/routes/about.tsx:31
+msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
+msgstr "製造業向けのエンドツーエンドシステムを構築して約10年が経ち、技術的な観点から「理想的な」ソリューションがどのような形であるべきかについて、かなり明確なビジョンを持つようになりました。"
 
 #: app/routes/_index.tsx:232
 msgid "Agent-ready by default"
@@ -111,6 +120,10 @@ msgstr "API"
 #: app/routes/_index.tsx:1128
 msgid "API Docs"
 msgstr "API ドキュメント"
+
+#: app/routes/about.tsx:39
+msgid "API-first, realtime subscriptions, simple scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
+msgstr "APIファースト、リアルタイムサブスクリプション、シンプルなスケジューリング、そしてERPの利用を本当に価値あるものにするための1,000の細かな工夫。"
 
 #: app/routes/_index.tsx:117
 msgid "API-first, with first-class MCP"
@@ -213,6 +226,10 @@ msgstr "Build <0/><1/>ソフトウェアのスピードで。"
 msgid "Business"
 msgstr "ビジネス"
 
+#: app/routes/about.tsx:45
+msgid "But even as we work with our customers to become the best off-the-shelf ERP/MES for many types of discrete manufacturing, we are faced with the reality that there is no \"perfect\" off-the-shelf solution, because each manufacturing business is unique."
+msgstr "多くの個別生産型製造業に対して最高のオフザシェルフERP/MESになるために顧客と共に取り組む一方で、各製造業務がユニークであるという現実に直面しています。それは「完璧な」既製ソリューションは存在しないということです。"
+
 #: app/components/wizard-form.tsx:82
 msgid "Buy the Source Code"
 msgstr "ソースコードを購入"
@@ -240,6 +257,10 @@ msgstr "Carbonは、ERP、MES、QMSを1つの統合されたシステムに組�
 #: app/routes/_index.tsx:691
 msgid "Carbon is the engineering-first operating system for manufacturers. Quote, plan, buy, build, inspect and ship on one live model of your factory — from a ten-person prototype shop to a rate-production line."
 msgstr "Carbonは製造業者向けのエンジニアリング第一のオペレーティングシステムです。10人のプロトタイプショップから生産ラインまで、工場の1つのライブモデルで見積もり、計画、購入、構築、検査、出荷できます。"
+
+#: app/routes/about.tsx:26
+msgid "Carbon Manufacturing Systems Corp."
+msgstr "Carbon Manufacturing Systems Corp."
 
 #: app/routes/_index.tsx:1287
 msgid "Carbon's source code is available. Copy the prompt below into your favorite LLM."
@@ -276,6 +297,10 @@ msgstr "クリーンルームオプス、収率分析"
 #: app/components/zoomable-image.tsx:127
 msgid "Close"
 msgstr "閉じる"
+
+#: app/routes/about.tsx:103
+msgid "Co-Founder and CTO"
+msgstr "共同創設者兼CTO"
 
 #: app/routes/pricing.tsx:34
 msgid "Community support"
@@ -331,8 +356,8 @@ msgstr "お問い合わせ"
 msgid "Contact Information"
 msgstr "連絡先情報"
 
-#: app/components/header.tsx:156
-#: app/components/header.tsx:252
+#: app/components/header.tsx:166
+#: app/components/header.tsx:269
 #: app/routes/_index.tsx:1371
 msgid "Contact Sales"
 msgstr "営業に連絡"
@@ -434,8 +459,8 @@ msgstr "需要と予測"
 msgid "Developer guides and API reference"
 msgstr "開発者ガイドとAPIリファレンス"
 
-#: app/components/header.tsx:99
-#: app/components/header.tsx:229
+#: app/components/header.tsx:109
+#: app/components/header.tsx:246
 msgid "Developers"
 msgstr "開発者"
 
@@ -451,8 +476,8 @@ msgstr "作業指示を含むデジタルトラベラー"
 msgid "Discord"
 msgstr "Discord"
 
-#: app/components/header.tsx:83
-#: app/components/header.tsx:211
+#: app/components/header.tsx:93
+#: app/components/header.tsx:228
 msgid "Docs"
 msgstr "ドキュメント"
 
@@ -488,8 +513,8 @@ msgstr "エンジニアリング"
 msgid "Engineering change orders"
 msgstr "エンジニアリング変更注文"
 
-#: app/components/header.tsx:128
-#: app/components/header.tsx:225
+#: app/components/header.tsx:138
+#: app/components/header.tsx:242
 #: app/routes/pricing.tsx:56
 msgid "Enterprise"
 msgstr "エンタープライズ"
@@ -571,6 +596,10 @@ msgstr "初回品検査、不適合、CAPA、ゲージキャリブレーショ�
 msgid "Forward deployed engineer"
 msgstr "フォワードデプロイエンジニア"
 
+#: app/routes/about.tsx:23
+msgid "Founder memo"
+msgstr "創設者からのメッセージ"
+
 #: app/routes/_index.tsx:924
 msgid "Four systems, one schema. Nothing to integrate."
 msgstr "4つのシステム、1つのスキーマ。統合する必要なし。"
@@ -626,6 +655,10 @@ msgstr "ホスティング設定"
 #: app/routes/_index.tsx:103
 msgid "Huge consulting bills"
 msgstr "巨大なコンサルティング料金"
+
+#: app/routes/about.tsx:62
+msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
+msgstr "オープンソースは素晴らしい可能性を秘めていると信じています。なぜなら、それは単なる製品ではなく、AIとロボティクスの時代に製造業の未来を構築しようとする志を同じくする人々のコミュニティだからです。"
 
 #: app/routes/_index.tsx:1170
 msgid "If it has a bill of materials, Carbon runs it."
@@ -702,6 +735,10 @@ msgstr "john@company.com"
 #: app/components/header.tsx:29
 msgid "Join our community chat"
 msgstr "コミュニティチャットに参加"
+
+#: app/routes/about.tsx:81
+msgid "Join our Discord community"
+msgstr "Discordコミュニティに参加する"
 
 #: app/components/hero.tsx:218
 msgid "Kanban Schedule"
@@ -938,8 +975,8 @@ msgid "POs & receipts"
 msgstr "PO&領収書"
 
 #: app/components/footer.tsx:60
-#: app/components/header.tsx:93
-#: app/components/header.tsx:218
+#: app/components/header.tsx:103
+#: app/components/header.tsx:235
 msgid "Pricing"
 msgstr "料金"
 
@@ -1342,6 +1379,10 @@ msgstr "車両"
 msgid "View our source code and contribute"
 msgstr "ソースコードを表示して貢献する"
 
+#: app/routes/about.tsx:54
+msgid "We open-sourced Carbon not because it's a great business plan, but because that's the system I would have wanted when I was in your shoes."
+msgstr "Carbonをオープンソース化したのは、それが優れたビジネスプランだからではなく、自分があなたの立場にあったときに欲しかったシステムだからです。"
+
 #: app/components/wizard-form.tsx:365
 msgid "We'll be in touch with you shortly to setup a demo."
 msgstr "まもなくデモのセットアップについてご連絡させていただきます。"
@@ -1349,6 +1390,10 @@ msgstr "まもなくデモのセットアップについてご連絡させてい
 #: app/routes/contact.tsx:156
 msgid "We'll be in touch with you shortly."
 msgstr "まもなくご連絡させていただきます。"
+
+#: app/routes/about.tsx:70
+msgid "We're glad you're here for it."
+msgstr "このコミュニティにいてくれてうれしいです。"
 
 #: app/routes/contact.tsx:215
 msgid "What can we help with?"

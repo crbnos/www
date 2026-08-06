@@ -50,6 +50,11 @@ msgstr "Une version gérée hébergée dans le cloud de Carbon qui inclut le sup
 msgid "A typed TypeScript monorepo with one generated database type shared across the app, the API, and the AI tools. Bring your own LLM."
 msgstr "Un monorepo TypeScript typé avec un type de base de données généré partagé entre l'application, l'API et les outils IA. Apportez votre propre LLM."
 
+#: app/components/header.tsx:83
+#: app/components/header.tsx:219
+msgid "About"
+msgstr "À propos"
+
 #: app/routes/_index.tsx:195
 #: app/routes/pricing.tsx:49
 msgid "Accounting"
@@ -78,6 +83,10 @@ msgstr "Interface MES adaptative"
 #: app/routes/_index.tsx:244
 msgid "Aerospace"
 msgstr "Aérospatiale"
+
+#: app/routes/about.tsx:31
+msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
+msgstr "Après avoir passé près d'une décennie à construire des systèmes de bout en bout pour la fabrication, j'avais une très bonne idée de ce à quoi une solution « idéale » ressemblerait d'un point de vue technique :"
 
 #: app/routes/_index.tsx:232
 msgid "Agent-ready by default"
@@ -111,6 +120,10 @@ msgstr "API"
 #: app/routes/_index.tsx:1128
 msgid "API Docs"
 msgstr "Documentation API"
+
+#: app/routes/about.tsx:39
+msgid "API-first, realtime subscriptions, simple scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
+msgstr "API-first, abonnements en temps réel, planification simple et 1 000 petits détails pour que l'utilisation d'un ERP en vaille vraiment la peine."
 
 #: app/routes/_index.tsx:117
 msgid "API-first, with first-class MCP"
@@ -213,6 +226,10 @@ msgstr "Construire <0/><1/>à la vitesse du logiciel."
 msgid "Business"
 msgstr "Professionnel"
 
+#: app/routes/about.tsx:45
+msgid "But even as we work with our customers to become the best off-the-shelf ERP/MES for many types of discrete manufacturing, we are faced with the reality that there is no \"perfect\" off-the-shelf solution, because each manufacturing business is unique."
+msgstr "Mais même si nous travaillons avec nos clients pour devenir le meilleur ERP/MES prêt à l'emploi pour de nombreux types de fabrication discrète, nous sommes confrontés à la réalité qu'il n'existe pas de solution prête à l'emploi « parfaite », car chaque entreprise de fabrication est unique."
+
 #: app/components/wizard-form.tsx:82
 msgid "Buy the Source Code"
 msgstr "Acheter le code source"
@@ -240,6 +257,10 @@ msgstr "Carbon combine ERP, MES et QMS dans un seul système unifié."
 #: app/routes/_index.tsx:691
 msgid "Carbon is the engineering-first operating system for manufacturers. Quote, plan, buy, build, inspect and ship on one live model of your factory — from a ten-person prototype shop to a rate-production line."
 msgstr "Carbon est le système d'exploitation orienté vers l'ingénierie pour les fabricants. Devis, plan, achat, construction, inspection et expédition sur un seul modèle en direct de votre usine — du petit atelier de prototypage à la chaîne de production en série."
+
+#: app/routes/about.tsx:26
+msgid "Carbon Manufacturing Systems Corp."
+msgstr "Carbon Manufacturing Systems Corp."
 
 #: app/routes/_index.tsx:1287
 msgid "Carbon's source code is available. Copy the prompt below into your favorite LLM."
@@ -276,6 +297,10 @@ msgstr "opérations de salle blanche, analytique de rendement"
 #: app/components/zoomable-image.tsx:127
 msgid "Close"
 msgstr "Fermer"
+
+#: app/routes/about.tsx:103
+msgid "Co-Founder and CTO"
+msgstr "Co-fondateur et CTO"
 
 #: app/routes/pricing.tsx:34
 msgid "Community support"
@@ -331,8 +356,8 @@ msgstr "Contact"
 msgid "Contact Information"
 msgstr "Informations de contact"
 
-#: app/components/header.tsx:156
-#: app/components/header.tsx:252
+#: app/components/header.tsx:166
+#: app/components/header.tsx:269
 #: app/routes/_index.tsx:1371
 msgid "Contact Sales"
 msgstr "Contactez les ventes"
@@ -434,8 +459,8 @@ msgstr "Demande et prévisions"
 msgid "Developer guides and API reference"
 msgstr "Guides de développeur et référence API"
 
-#: app/components/header.tsx:99
-#: app/components/header.tsx:229
+#: app/components/header.tsx:109
+#: app/components/header.tsx:246
 msgid "Developers"
 msgstr "Développeurs"
 
@@ -451,8 +476,8 @@ msgstr "Trajets numériques avec instructions de travail"
 msgid "Discord"
 msgstr "Discord"
 
-#: app/components/header.tsx:83
-#: app/components/header.tsx:211
+#: app/components/header.tsx:93
+#: app/components/header.tsx:228
 msgid "Docs"
 msgstr "Docs"
 
@@ -488,8 +513,8 @@ msgstr "Ingénierie"
 msgid "Engineering change orders"
 msgstr "Ordres de modification d'ingénierie"
 
-#: app/components/header.tsx:128
-#: app/components/header.tsx:225
+#: app/components/header.tsx:138
+#: app/components/header.tsx:242
 #: app/routes/pricing.tsx:56
 msgid "Enterprise"
 msgstr "Entreprise"
@@ -571,6 +596,10 @@ msgstr "L'inspection du premier article, la non-conformité, la CAPA et l'étalo
 msgid "Forward deployed engineer"
 msgstr "Ingénieur déployé sur site"
 
+#: app/routes/about.tsx:23
+msgid "Founder memo"
+msgstr "Mémo du fondateur"
+
 #: app/routes/_index.tsx:924
 msgid "Four systems, one schema. Nothing to integrate."
 msgstr "Quatre systèmes, un schéma. Rien à intégrer."
@@ -626,6 +655,10 @@ msgstr "Préférence d'hébergement"
 #: app/routes/_index.tsx:103
 msgid "Huge consulting bills"
 msgstr "Énormes factures de consultation"
+
+#: app/routes/about.tsx:62
+msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
+msgstr "Je crois que l'open-source a un potentiel incroyable car ce n'est pas juste un produit – c'est une communauté de personnes partageant les mêmes idées qui travaillent à construire l'avenir de la fabrication à l'ère de l'IA et de la robotique."
 
 #: app/routes/_index.tsx:1170
 msgid "If it has a bill of materials, Carbon runs it."
@@ -702,6 +735,10 @@ msgstr "john@company.com"
 #: app/components/header.tsx:29
 msgid "Join our community chat"
 msgstr "Rejoignez notre chat communautaire"
+
+#: app/routes/about.tsx:81
+msgid "Join our Discord community"
+msgstr "Rejoignez notre communauté Discord"
 
 #: app/components/hero.tsx:218
 msgid "Kanban Schedule"
@@ -938,8 +975,8 @@ msgid "POs & receipts"
 msgstr "Bons de commande et reçus"
 
 #: app/components/footer.tsx:60
-#: app/components/header.tsx:93
-#: app/components/header.tsx:218
+#: app/components/header.tsx:103
+#: app/components/header.tsx:235
 msgid "Pricing"
 msgstr "Tarification"
 
@@ -1342,6 +1379,10 @@ msgstr "véhicules"
 msgid "View our source code and contribute"
 msgstr "Consultez notre code source et contribuez"
 
+#: app/routes/about.tsx:54
+msgid "We open-sourced Carbon not because it's a great business plan, but because that's the system I would have wanted when I was in your shoes."
+msgstr "Nous avons rendu Carbon open-source non pas parce que c'est un excellent plan commercial, mais parce que c'est le système que j'aurais voulu quand j'étais à votre place."
+
 #: app/components/wizard-form.tsx:365
 msgid "We'll be in touch with you shortly to setup a demo."
 msgstr "Nous vous recontacterons bientôt pour mettre en place une démonstration."
@@ -1349,6 +1390,10 @@ msgstr "Nous vous recontacterons bientôt pour mettre en place une démonstratio
 #: app/routes/contact.tsx:156
 msgid "We'll be in touch with you shortly."
 msgstr "Nous vous recontacterons bientôt."
+
+#: app/routes/about.tsx:70
+msgid "We're glad you're here for it."
+msgstr "Nous sommes heureux que vous soyez là pour ça."
 
 #: app/routes/contact.tsx:215
 msgid "What can we help with?"

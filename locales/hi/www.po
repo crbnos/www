@@ -50,6 +50,11 @@ msgstr "कार्बन का एक प्रबंधित क्ला�
 msgid "A typed TypeScript monorepo with one generated database type shared across the app, the API, and the AI tools. Bring your own LLM."
 msgstr "एक टाइप किया गया TypeScript मोनोरेपो जिसमें एक जनरेट की गई डेटाबेस प्रकार ऐप, API, और AI उपकरणों में साझा की जाती है। अपना LLM लाएं।"
 
+#: app/components/header.tsx:83
+#: app/components/header.tsx:219
+msgid "About"
+msgstr "के बारे में"
+
 #: app/routes/_index.tsx:195
 #: app/routes/pricing.tsx:49
 msgid "Accounting"
@@ -78,6 +83,10 @@ msgstr "अनुकूली MES UI"
 #: app/routes/_index.tsx:244
 msgid "Aerospace"
 msgstr "एयरोस्पेस"
+
+#: app/routes/about.tsx:31
+msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
+msgstr "विनिर्माण के लिए लगभग एक दशक तक अंत-से-अंत सिस्टम बनाने के बाद, मुझे काफी अच्छा अंदाजा था कि एक \"आदर्श\" समाधान तकनीकी दृष्टिकोण से कैसा दिखता है:"
 
 #: app/routes/_index.tsx:232
 msgid "Agent-ready by default"
@@ -111,6 +120,10 @@ msgstr "API"
 #: app/routes/_index.tsx:1128
 msgid "API Docs"
 msgstr "API डॉक्स"
+
+#: app/routes/about.tsx:39
+msgid "API-first, realtime subscriptions, simple scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
+msgstr "API-पहली, रीयल-टाइम सदस्यताएं, सरल शेड्यूलिंग, और 1,000 छोटी विस्तारें ERP का उपयोग करने को सार्थक बनाती हैं।"
 
 #: app/routes/_index.tsx:117
 msgid "API-first, with first-class MCP"
@@ -213,6 +226,10 @@ msgstr "सॉफ़्टवेयर की गति से <0/><1/>बना
 msgid "Business"
 msgstr "व्यावसायिक"
 
+#: app/routes/about.tsx:45
+msgid "But even as we work with our customers to become the best off-the-shelf ERP/MES for many types of discrete manufacturing, we are faced with the reality that there is no \"perfect\" off-the-shelf solution, because each manufacturing business is unique."
+msgstr "लेकिन जैसे-जैसे हम अपने ग्राहकों के साथ कई प्रकार के असतत विनिर्माण के लिए सर्वश्रेष्ठ तैयार ERP/MES बनने के लिए काम करते हैं, हम इस वास्तविकता का सामना करते हैं कि कोई \"संपूर्ण\" तैयार समाधान नहीं है, क्योंकि प्रत्येक विनिर्माण व्यवसाय अद्वितीय है।"
+
 #: app/components/wizard-form.tsx:82
 msgid "Buy the Source Code"
 msgstr "स्रोत कोड खरीदें"
@@ -240,6 +257,10 @@ msgstr "Carbon ERP, MES, और QMS को एक एकीकृत प्र�
 #: app/routes/_index.tsx:691
 msgid "Carbon is the engineering-first operating system for manufacturers. Quote, plan, buy, build, inspect and ship on one live model of your factory — from a ten-person prototype shop to a rate-production line."
 msgstr "Carbon निर्माताओं के लिए इंजीनियरिंग-पहली ऑपरेटिंग सिस्टम है। अपनी फैक्ट्री के एक लाइव मॉडल पर उद्धरण, योजना, खरीद, बिल्ड, निरीक्षण और शिप करें — एक दस-व्यक्ति प्रोटोटाइप शॉप से दर-उत्पादन लाइन तक।"
+
+#: app/routes/about.tsx:26
+msgid "Carbon Manufacturing Systems Corp."
+msgstr "Carbon Manufacturing Systems Corp."
 
 #: app/routes/_index.tsx:1287
 msgid "Carbon's source code is available. Copy the prompt below into your favorite LLM."
@@ -276,6 +297,10 @@ msgstr "शुद्ध कक्ष ops, yield विश्लेषण"
 #: app/components/zoomable-image.tsx:127
 msgid "Close"
 msgstr "बंद करें"
+
+#: app/routes/about.tsx:103
+msgid "Co-Founder and CTO"
+msgstr "सह-संस्थापक और CTO"
 
 #: app/routes/pricing.tsx:34
 msgid "Community support"
@@ -331,8 +356,8 @@ msgstr "संपर्क"
 msgid "Contact Information"
 msgstr "संपर्क जानकारी"
 
-#: app/components/header.tsx:156
-#: app/components/header.tsx:252
+#: app/components/header.tsx:166
+#: app/components/header.tsx:269
 #: app/routes/_index.tsx:1371
 msgid "Contact Sales"
 msgstr "बिक्रय से संपर्क करें"
@@ -434,8 +459,8 @@ msgstr "मांग और पूर्वानुमान"
 msgid "Developer guides and API reference"
 msgstr "डेवलपर गाइड और API संदर्भ"
 
-#: app/components/header.tsx:99
-#: app/components/header.tsx:229
+#: app/components/header.tsx:109
+#: app/components/header.tsx:246
 msgid "Developers"
 msgstr "डेवलपर्स"
 
@@ -451,8 +476,8 @@ msgstr "कार्य निर्देशों के साथ डिज�
 msgid "Discord"
 msgstr "Discord"
 
-#: app/components/header.tsx:83
-#: app/components/header.tsx:211
+#: app/components/header.tsx:93
+#: app/components/header.tsx:228
 msgid "Docs"
 msgstr "डॉक्स"
 
@@ -488,8 +513,8 @@ msgstr "इंजीनियरिंग"
 msgid "Engineering change orders"
 msgstr "इंजीनियरिंग परिवर्तन आदेश"
 
-#: app/components/header.tsx:128
-#: app/components/header.tsx:225
+#: app/components/header.tsx:138
+#: app/components/header.tsx:242
 #: app/routes/pricing.tsx:56
 msgid "Enterprise"
 msgstr "एंटरप्राइज़"
@@ -571,6 +596,10 @@ msgstr "प्रथम लेख निरीक्षण, गैर-अनु�
 msgid "Forward deployed engineer"
 msgstr "आगे तैनात इंजीनियर"
 
+#: app/routes/about.tsx:23
+msgid "Founder memo"
+msgstr "संस्थापक ज्ञापन"
+
 #: app/routes/_index.tsx:924
 msgid "Four systems, one schema. Nothing to integrate."
 msgstr "चार प्रणालियाँ, एक स्कीमा। एकीकृत करने के लिए कुछ नहीं।"
@@ -626,6 +655,10 @@ msgstr "होस्टिंग प्राथमिकता"
 #: app/routes/_index.tsx:103
 msgid "Huge consulting bills"
 msgstr "विशाल परामर्श बिल"
+
+#: app/routes/about.tsx:62
+msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
+msgstr "मुझे विश्वास है कि ओपन-सोर्स में असाधारण संभावना है क्योंकि यह केवल एक उत्पाद नहीं है–यह AI और रोबोटिक्स के युग में विनिर्माण का भविष्य बनाने के लिए समान विचारधारा वाले लोगों का एक समुदाय है।"
 
 #: app/routes/_index.tsx:1170
 msgid "If it has a bill of materials, Carbon runs it."
@@ -702,6 +735,10 @@ msgstr "john@company.com"
 #: app/components/header.tsx:29
 msgid "Join our community chat"
 msgstr "हमारे कम्युनिटी चैट में शामिल हों"
+
+#: app/routes/about.tsx:81
+msgid "Join our Discord community"
+msgstr "हमारे Discord समुदाय में शामिल हों"
 
 #: app/components/hero.tsx:218
 msgid "Kanban Schedule"
@@ -938,8 +975,8 @@ msgid "POs & receipts"
 msgstr "PO और रसीदें"
 
 #: app/components/footer.tsx:60
-#: app/components/header.tsx:93
-#: app/components/header.tsx:218
+#: app/components/header.tsx:103
+#: app/components/header.tsx:235
 msgid "Pricing"
 msgstr "मूल्य निर्धारण"
 
@@ -1342,6 +1379,10 @@ msgstr "वाहन"
 msgid "View our source code and contribute"
 msgstr "हमारे स्रोत कोड को देखें और योगदान दें"
 
+#: app/routes/about.tsx:54
+msgid "We open-sourced Carbon not because it's a great business plan, but because that's the system I would have wanted when I was in your shoes."
+msgstr "हमने Carbon को ओपन-सोर्स किया, न कि क्योंकि यह एक शानदार व्यावसायिक योजना है, बल्कि क्योंकि यह वह प्रणाली है जो मैं चाहता था जब मैं आपकी जगह होता।"
+
 #: app/components/wizard-form.tsx:365
 msgid "We'll be in touch with you shortly to setup a demo."
 msgstr "हम जल्द ही आपसे संपर्क करेंगे डेमो सेटअप करने के लिए।"
@@ -1349,6 +1390,10 @@ msgstr "हम जल्द ही आपसे संपर्क करें�
 #: app/routes/contact.tsx:156
 msgid "We'll be in touch with you shortly."
 msgstr "हम जल्द ही आपसे संपर्क करेंगे।"
+
+#: app/routes/about.tsx:70
+msgid "We're glad you're here for it."
+msgstr "हम खुश हैं कि आप इसके लिए यहां हैं।"
 
 #: app/routes/contact.tsx:215
 msgid "What can we help with?"

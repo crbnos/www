@@ -50,6 +50,11 @@ msgstr "一个托管的云托管版本的 Carbon，包括支持和所有高级�
 msgid "A typed TypeScript monorepo with one generated database type shared across the app, the API, and the AI tools. Bring your own LLM."
 msgstr "一个类型化的 TypeScript 单仓库，具有在应用、API 和 AI 工具之间共享的一个生成的数据库类型。自带您的 LLM。"
 
+#: app/components/header.tsx:83
+#: app/components/header.tsx:219
+msgid "About"
+msgstr "关于"
+
 #: app/routes/_index.tsx:195
 #: app/routes/pricing.tsx:49
 msgid "Accounting"
@@ -78,6 +83,10 @@ msgstr "自适应MES用户界面"
 #: app/routes/_index.tsx:244
 msgid "Aerospace"
 msgstr "航空航天"
+
+#: app/routes/about.tsx:31
+msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
+msgstr "在花了近十年时间为制造业构建端到端系统后，从技术角度来说，我对什么样的“理想”解决方案有了相当清楚的认识："
 
 #: app/routes/_index.tsx:232
 msgid "Agent-ready by default"
@@ -111,6 +120,10 @@ msgstr "API"
 #: app/routes/_index.tsx:1128
 msgid "API Docs"
 msgstr "API 文档"
+
+#: app/routes/about.tsx:39
+msgid "API-first, realtime subscriptions, simple scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
+msgstr "优先考虑 API、实时订阅、简单的调度安排，以及 1,000 个小细节，使 ERP 的使用物有所值。"
 
 #: app/routes/_index.tsx:117
 msgid "API-first, with first-class MCP"
@@ -213,6 +226,10 @@ msgstr "以软件的速度 <0/><1/>构建。"
 msgid "Business"
 msgstr "商业"
 
+#: app/routes/about.tsx:45
+msgid "But even as we work with our customers to become the best off-the-shelf ERP/MES for many types of discrete manufacturing, we are faced with the reality that there is no \"perfect\" off-the-shelf solution, because each manufacturing business is unique."
+msgstr "但即使当我们与客户合作成为许多类型的离散制造业最好的现成 ERP/MES 解决方案时，我们也面临着一个现实：不存在“完美的”现成解决方案，因为每个制造业务都是独特的。"
+
 #: app/components/wizard-form.tsx:82
 msgid "Buy the Source Code"
 msgstr "购买源代码"
@@ -240,6 +257,10 @@ msgstr "Carbon 将 ERP、MES 和 QMS 整合到一个统一的系统中。"
 #: app/routes/_index.tsx:691
 msgid "Carbon is the engineering-first operating system for manufacturers. Quote, plan, buy, build, inspect and ship on one live model of your factory — from a ten-person prototype shop to a rate-production line."
 msgstr "Carbon是面向制造商的工程优先操作系统。在您工厂的一个实时模型上进行报价、计划、采购、构建、检查和发货——从十人原型车间到批量生产线。"
+
+#: app/routes/about.tsx:26
+msgid "Carbon Manufacturing Systems Corp."
+msgstr "Carbon Manufacturing Systems Corp."
 
 #: app/routes/_index.tsx:1287
 msgid "Carbon's source code is available. Copy the prompt below into your favorite LLM."
@@ -276,6 +297,10 @@ msgstr "洁净室操作、产率分析"
 #: app/components/zoomable-image.tsx:127
 msgid "Close"
 msgstr "关闭"
+
+#: app/routes/about.tsx:103
+msgid "Co-Founder and CTO"
+msgstr "联合创始人兼首席技术官"
 
 #: app/routes/pricing.tsx:34
 msgid "Community support"
@@ -331,8 +356,8 @@ msgstr "联系"
 msgid "Contact Information"
 msgstr "联系信息"
 
-#: app/components/header.tsx:156
-#: app/components/header.tsx:252
+#: app/components/header.tsx:166
+#: app/components/header.tsx:269
 #: app/routes/_index.tsx:1371
 msgid "Contact Sales"
 msgstr "联系销售"
@@ -434,8 +459,8 @@ msgstr "需求和预测"
 msgid "Developer guides and API reference"
 msgstr "开发者指南和 API 参考"
 
-#: app/components/header.tsx:99
-#: app/components/header.tsx:229
+#: app/components/header.tsx:109
+#: app/components/header.tsx:246
 msgid "Developers"
 msgstr "开发者"
 
@@ -451,8 +476,8 @@ msgstr "带有工作说明的数字作业单"
 msgid "Discord"
 msgstr "Discord"
 
-#: app/components/header.tsx:83
-#: app/components/header.tsx:211
+#: app/components/header.tsx:93
+#: app/components/header.tsx:228
 msgid "Docs"
 msgstr "文档"
 
@@ -488,8 +513,8 @@ msgstr "工程"
 msgid "Engineering change orders"
 msgstr "工程变更单"
 
-#: app/components/header.tsx:128
-#: app/components/header.tsx:225
+#: app/components/header.tsx:138
+#: app/components/header.tsx:242
 #: app/routes/pricing.tsx:56
 msgid "Enterprise"
 msgstr "企业"
@@ -571,6 +596,10 @@ msgstr "首件检测、不合格、CAPA和测量仪校准与生产坐在相同�
 msgid "Forward deployed engineer"
 msgstr "前置部署工程师"
 
+#: app/routes/about.tsx:23
+msgid "Founder memo"
+msgstr "创始人备忘录"
+
 #: app/routes/_index.tsx:924
 msgid "Four systems, one schema. Nothing to integrate."
 msgstr "四个系统、一个模式。没有整合。"
@@ -626,6 +655,10 @@ msgstr "托管偏好"
 #: app/routes/_index.tsx:103
 msgid "Huge consulting bills"
 msgstr "巨大的咨询账单"
+
+#: app/routes/about.tsx:62
+msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
+msgstr "我相信开源具有令人难以置信的潜力，因为它不仅仅是一个产品——它是一个志同道合的人们社区，致力于在人工智能和机器人时代建设制造业的未来。"
 
 #: app/routes/_index.tsx:1170
 msgid "If it has a bill of materials, Carbon runs it."
@@ -702,6 +735,10 @@ msgstr "john@company.com"
 #: app/components/header.tsx:29
 msgid "Join our community chat"
 msgstr "加入我们的社区聊天"
+
+#: app/routes/about.tsx:81
+msgid "Join our Discord community"
+msgstr "加入我们的 Discord 社区"
 
 #: app/components/hero.tsx:218
 msgid "Kanban Schedule"
@@ -938,8 +975,8 @@ msgid "POs & receipts"
 msgstr "采购订单和收据"
 
 #: app/components/footer.tsx:60
-#: app/components/header.tsx:93
-#: app/components/header.tsx:218
+#: app/components/header.tsx:103
+#: app/components/header.tsx:235
 msgid "Pricing"
 msgstr "定价"
 
@@ -1342,6 +1379,10 @@ msgstr "车辆"
 msgid "View our source code and contribute"
 msgstr "查看我们的源代码并做出贡献"
 
+#: app/routes/about.tsx:54
+msgid "We open-sourced Carbon not because it's a great business plan, but because that's the system I would have wanted when I was in your shoes."
+msgstr "我们开源 Carbon 不是因为这是一个伟大的商业计划，而是因为这是我在你的位置时想要的系统。"
+
 #: app/components/wizard-form.tsx:365
 msgid "We'll be in touch with you shortly to setup a demo."
 msgstr "我们很快会与您联系以安排演示。"
@@ -1349,6 +1390,10 @@ msgstr "我们很快会与您联系以安排演示。"
 #: app/routes/contact.tsx:156
 msgid "We'll be in touch with you shortly."
 msgstr "我们很快就会与您联系。"
+
+#: app/routes/about.tsx:70
+msgid "We're glad you're here for it."
+msgstr "我们很高兴你在这里。"
 
 #: app/routes/contact.tsx:215
 msgid "What can we help with?"

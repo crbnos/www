@@ -79,6 +79,16 @@ export function Header() {
 									className={navigationMenuTriggerStyle()}
 									asChild
 								>
+									<Link prefetch="intent" to="/about">
+										<Trans>About</Trans>
+									</Link>
+								</NavigationMenuLink>
+							</NavigationMenuItem>
+							<NavigationMenuItem>
+								<NavigationMenuLink
+									className={navigationMenuTriggerStyle()}
+									asChild
+								>
 									<a href="https://docs.carbon.ms" target="_blank" rel="noopener">
 										<Trans>Docs</Trans>
 									</a>
@@ -201,6 +211,13 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
 	return (
 		<div className="absolute inset-x-0 top-full border-b bg-background lg:hidden">
 			<nav className="mx-auto flex w-full max-w-[1360px] flex-col px-6 py-4 sm:px-7">
+				<Link
+					to="/about"
+					onClick={onClose}
+					className="border-b border-border/60 py-3 text-sm text-foreground"
+				>
+					<Trans>About</Trans>
+				</Link>
 				<a
 					href="https://docs.carbon.ms"
 					target="_blank"
