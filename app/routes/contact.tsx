@@ -80,7 +80,7 @@ export async function action({ request }: ActionFunctionArgs) {
       }
     );
 
-    const verifyData = await verifyResponse.data();
+    const verifyData = await verifyResponse.json();
 
     if (!verifyData.success) {
       return data(
