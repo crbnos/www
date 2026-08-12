@@ -38,7 +38,7 @@ const sections: Section[] = [
       {
         name: "AWS GovCloud (US)",
         purpose:
-          "Isolated cloud infrastructure for ITAR/CUI workloads (ENT GovCloud customers only)",
+          "Isolated cloud infrastructure for ITAR workloads (Enterprise GovCloud customers only)",
         location: "United States",
         website: "aws.amazon.com/govcloud-us",
         href: "https://aws.amazon.com/govcloud-us",
@@ -94,10 +94,10 @@ const sections: Section[] = [
     title: "Customer Communications",
     rows: [
       {
-        name: "Resend (or Novu)",
-        purpose: "Transactional email delivery",
+        name: "Resend",
+        purpose: "Transactional email delivery (custom SMTP also supported)",
         location: "United States",
-        website: "resend.com / novu.co",
+        website: "resend.com",
         href: "https://resend.com",
       },
       {
@@ -141,7 +141,7 @@ export default function SubProcessors() {
             Sub-Processors List
           </h1>
           <h2 className="font-medium text-xl text-muted-foreground max-w-5xl text-balance leading-relaxed tracking-tight">
-            Last updated April 2026
+            Last updated August 2026
           </h2>
         </div>
       </div>
@@ -224,10 +224,14 @@ export default function SubProcessors() {
               DPA.
             </li>
             <li>
-              <strong>AWS GovCloud customers:</strong> ITAR-controlled data and
-              CUI for ENT GovCloud customers is processed exclusively in AWS
-              GovCloud (US). The non-GovCloud sub-processors above (Datadog,
-              Cloudflare, etc.) do not receive GovCloud customer data.
+              <strong>AWS GovCloud customers:</strong> ITAR-controlled data for
+              Enterprise GovCloud customers is processed exclusively in AWS
+              GovCloud (US). The non-GovCloud sub-processors above do not
+              receive GovCloud customer data. The only exception is Resend,
+              which delivers login and invite emails for GovCloud customers;
+              those emails contain no technical data. GovCloud customers may
+              alternatively configure their own custom SMTP server, removing
+              Resend from the data path.
             </li>
             <li>
               <strong>Self-Hosted customers:</strong> Customers running Carbon
