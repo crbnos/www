@@ -50,8 +50,8 @@ msgstr "Zarządzana wersja Carbon hostowana w chmurze, która obejmuje wsparcie 
 msgid "A typed TypeScript monorepo with one generated database type shared across the app, the API, and the AI tools. Bring your own LLM."
 msgstr "Typed TypeScript monorepo z jednym wygenerowanym typem bazy danych udostępnianym w całej aplikacji, API i narzędziach AI. Przynieś swoje własne LLM."
 
-#: app/components/header.tsx:83
-#: app/components/header.tsx:219
+#: app/components/header.tsx:69
+#: app/components/header.tsx:205
 msgid "About"
 msgstr "O nas"
 
@@ -356,8 +356,8 @@ msgstr "Kontakt"
 msgid "Contact Information"
 msgstr "Informacje kontaktowe"
 
-#: app/components/header.tsx:166
-#: app/components/header.tsx:269
+#: app/components/header.tsx:152
+#: app/components/header.tsx:255
 #: app/routes/_index.tsx:1371
 msgid "Contact Sales"
 msgstr "Skontaktuj się ze sprzedażą"
@@ -367,6 +367,7 @@ msgstr "Skontaktuj się ze sprzedażą"
 msgid "Contact us"
 msgstr "Skontaktuj się z nami"
 
+#: app/components/logo-menu.tsx:66
 #: app/routes/_index.tsx:1235
 msgid "Copied"
 msgstr "Skopiowano"
@@ -374,6 +375,10 @@ msgstr "Skopiowano"
 #: app/routes/_index.tsx:1235
 msgid "Copy"
 msgstr "Kopiuj"
+
+#: app/components/logo-menu.tsx:66
+msgid "Copy .SVG"
+msgstr ""
 
 #: app/components/code-examples.tsx:531
 msgid "Copy code snippet"
@@ -455,12 +460,12 @@ msgstr "Obronność"
 msgid "Demand & forecast"
 msgstr "Popyt i prognoza"
 
-#: app/components/header.tsx:45
+#: app/components/header.tsx:46
 msgid "Developer guides and API reference"
 msgstr "Przewodniki dla deweloperów i dokumentacja API"
 
-#: app/components/header.tsx:109
-#: app/components/header.tsx:246
+#: app/components/header.tsx:95
+#: app/components/header.tsx:232
 msgid "Developers"
 msgstr "Deweloperzy"
 
@@ -472,16 +477,16 @@ msgstr "Cyfrowe karty pracy"
 msgid "Digital travelers with work instructions"
 msgstr "Cyfrowe karty pracy z instrukcjami pracy"
 
-#: app/components/header.tsx:28
+#: app/components/header.tsx:29
 msgid "Discord"
 msgstr "Discord"
 
-#: app/components/header.tsx:93
-#: app/components/header.tsx:228
+#: app/components/header.tsx:79
+#: app/components/header.tsx:214
 msgid "Docs"
 msgstr "Dokumentacja"
 
-#: app/components/header.tsx:44
+#: app/components/header.tsx:45
 msgid "Documentation"
 msgstr "Dokumentacja"
 
@@ -513,8 +518,8 @@ msgstr "Inżynieria"
 msgid "Engineering change orders"
 msgstr "Polecenia zmian inżynierskich"
 
-#: app/components/header.tsx:138
-#: app/components/header.tsx:242
+#: app/components/header.tsx:124
+#: app/components/header.tsx:228
 #: app/routes/pricing.tsx:56
 msgid "Enterprise"
 msgstr "Enterprise"
@@ -632,7 +637,7 @@ msgstr "Zacznij"
 msgid "Get started for free."
 msgstr "Zacznij za darmo."
 
-#: app/components/header.tsx:36
+#: app/components/header.tsx:37
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -732,7 +737,7 @@ msgstr "John Doe"
 msgid "john@company.com"
 msgstr "john@company.com"
 
-#: app/components/header.tsx:29
+#: app/components/header.tsx:30
 msgid "Join our community chat"
 msgstr "Dołącz do naszego czatu społeczności"
 
@@ -828,6 +833,10 @@ msgstr "Zorientowana na produkcję, rachunkowość GAAP"
 #: app/routes/_index.tsx:1118
 msgid "MCP Docs"
 msgstr "Dokumentacja MCP"
+
+#: app/components/logo-menu.tsx:71
+msgid "Media Kit"
+msgstr ""
 
 #: app/routes/_index.tsx:246
 msgid "Medical devices"
@@ -975,8 +984,8 @@ msgid "POs & receipts"
 msgstr "ZO i paragony"
 
 #: app/components/footer.tsx:60
-#: app/components/header.tsx:103
-#: app/components/header.tsx:235
+#: app/components/header.tsx:89
+#: app/components/header.tsx:221
 msgid "Pricing"
 msgstr "Cennik"
 
@@ -1375,7 +1384,7 @@ msgstr "Nieograniczone rekordy"
 msgid "vehicles"
 msgstr "pojazdy"
 
-#: app/components/header.tsx:37
+#: app/components/header.tsx:38
 msgid "View our source code and contribute"
 msgstr "Wyświetl nasz kod źródłowy i wnieś swój wkład"
 

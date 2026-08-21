@@ -50,8 +50,8 @@ msgstr "Управляемая облачная версия Carbon, котор�
 msgid "A typed TypeScript monorepo with one generated database type shared across the app, the API, and the AI tools. Bring your own LLM."
 msgstr "Типизированный монорепозиторий TypeScript с одним сгенерированным типом базы данных, общей для приложения, API и инструментов ИИ. Используйте свою LLM."
 
-#: app/components/header.tsx:83
-#: app/components/header.tsx:219
+#: app/components/header.tsx:69
+#: app/components/header.tsx:205
 msgid "About"
 msgstr "О нас"
 
@@ -356,8 +356,8 @@ msgstr "Контакт"
 msgid "Contact Information"
 msgstr "Контактная информация"
 
-#: app/components/header.tsx:166
-#: app/components/header.tsx:269
+#: app/components/header.tsx:152
+#: app/components/header.tsx:255
 #: app/routes/_index.tsx:1371
 msgid "Contact Sales"
 msgstr "Связаться с отделом продаж"
@@ -367,6 +367,7 @@ msgstr "Связаться с отделом продаж"
 msgid "Contact us"
 msgstr "Свяжитесь с нами"
 
+#: app/components/logo-menu.tsx:66
 #: app/routes/_index.tsx:1235
 msgid "Copied"
 msgstr "Скопировано"
@@ -374,6 +375,10 @@ msgstr "Скопировано"
 #: app/routes/_index.tsx:1235
 msgid "Copy"
 msgstr "Копировать"
+
+#: app/components/logo-menu.tsx:66
+msgid "Copy .SVG"
+msgstr ""
 
 #: app/components/code-examples.tsx:531
 msgid "Copy code snippet"
@@ -455,12 +460,12 @@ msgstr "Защита"
 msgid "Demand & forecast"
 msgstr "Спрос и прогноз"
 
-#: app/components/header.tsx:45
+#: app/components/header.tsx:46
 msgid "Developer guides and API reference"
 msgstr "Руководства разработчика и справочник API"
 
-#: app/components/header.tsx:109
-#: app/components/header.tsx:246
+#: app/components/header.tsx:95
+#: app/components/header.tsx:232
 msgid "Developers"
 msgstr "Разработчики"
 
@@ -472,16 +477,16 @@ msgstr "Цифровые путевые листы заданий"
 msgid "Digital travelers with work instructions"
 msgstr "Цифровые путевые листы с инструкциями по работе"
 
-#: app/components/header.tsx:28
+#: app/components/header.tsx:29
 msgid "Discord"
 msgstr "Discord"
 
-#: app/components/header.tsx:93
-#: app/components/header.tsx:228
+#: app/components/header.tsx:79
+#: app/components/header.tsx:214
 msgid "Docs"
 msgstr "Документация"
 
-#: app/components/header.tsx:44
+#: app/components/header.tsx:45
 msgid "Documentation"
 msgstr "Документация"
 
@@ -513,8 +518,8 @@ msgstr "Инженерия"
 msgid "Engineering change orders"
 msgstr "Заказы на изменение инженерии"
 
-#: app/components/header.tsx:138
-#: app/components/header.tsx:242
+#: app/components/header.tsx:124
+#: app/components/header.tsx:228
 #: app/routes/pricing.tsx:56
 msgid "Enterprise"
 msgstr "Корпоративное решение"
@@ -632,7 +637,7 @@ msgstr "Начать"
 msgid "Get started for free."
 msgstr "Начните бесплатно."
 
-#: app/components/header.tsx:36
+#: app/components/header.tsx:37
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -732,7 +737,7 @@ msgstr "John Doe"
 msgid "john@company.com"
 msgstr "john@company.com"
 
-#: app/components/header.tsx:29
+#: app/components/header.tsx:30
 msgid "Join our community chat"
 msgstr "Присоединитесь к нашему чату сообщества"
 
@@ -828,6 +833,10 @@ msgstr "Ориентирован на производство, учет по GA
 #: app/routes/_index.tsx:1118
 msgid "MCP Docs"
 msgstr "Документация MCP"
+
+#: app/components/logo-menu.tsx:71
+msgid "Media Kit"
+msgstr ""
 
 #: app/routes/_index.tsx:246
 msgid "Medical devices"
@@ -975,8 +984,8 @@ msgid "POs & receipts"
 msgstr "ПО и квитанции"
 
 #: app/components/footer.tsx:60
-#: app/components/header.tsx:103
-#: app/components/header.tsx:235
+#: app/components/header.tsx:89
+#: app/components/header.tsx:221
 msgid "Pricing"
 msgstr "Цены"
 
@@ -1375,7 +1384,7 @@ msgstr "Неограниченное количество записей"
 msgid "vehicles"
 msgstr "транспортные средства"
 
-#: app/components/header.tsx:37
+#: app/components/header.tsx:38
 msgid "View our source code and contribute"
 msgstr "Просмотрите наш исходный код и внесите свой вклад"
 

@@ -36,7 +36,7 @@
        /public/screenshots, so their frames don't read as a different shade. */
     --screenshot: 0 0% 100%;
 
-    --header-height: 70px;
+    --header-height: 64px;
   }
 
   .dark {
