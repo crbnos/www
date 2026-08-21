@@ -84,7 +84,7 @@ msgstr "Adaptieve MES-interface"
 msgid "Aerospace"
 msgstr "Luchtvaart"
 
-#: app/routes/about.tsx:31
+#: app/routes/about.tsx:30
 msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
 msgstr "Na bijna tien jaar lang end-to-end systemen voor de productie te bouwen, had ik al een behoorlijk goed idee van hoe een \"ideale\" oplossing er vanuit technisch oogpunt uit zou zien:"
 
@@ -96,7 +96,7 @@ msgstr "Standaard agentgereed"
 msgid "All advanced features available"
 msgstr "Alle geavanceerde functies beschikbaar"
 
-#: app/routes/brand.tsx:25
+#: app/routes/brand.tsx:23
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "Alle Carbon-handelsmerken, logo's of andere merkelementen mogen nooit worden gewijzigd of voor enig ander doel worden gebruikt dan om Carbon Manufacturing Systems Corporation te vertegenwoordigen."
 
@@ -121,7 +121,7 @@ msgstr "API"
 msgid "API Docs"
 msgstr "API-documentatie"
 
-#: app/routes/about.tsx:39
+#: app/routes/about.tsx:38
 msgid "API-first, realtime subscriptions, simple scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
 msgstr "API-first, realtime abonnementen, eenvoudig plannen, en 1.000 kleine details om het gebruik van een ERP echt lonend te maken."
 
@@ -214,7 +214,7 @@ msgid "BOMs re-keyed by hand"
 msgstr "BOM's handmatig opnieuw ingevoerd"
 
 #: app/components/footer.tsx:47
-#: app/routes/brand.tsx:22
+#: app/routes/brand.tsx:20
 msgid "Brand Assets"
 msgstr "Merkidentiteit"
 
@@ -226,7 +226,7 @@ msgstr "Build <0/><1/>met de snelheid van software."
 msgid "Business"
 msgstr "Zakelijk"
 
-#: app/routes/about.tsx:45
+#: app/routes/about.tsx:44
 msgid "But even as we work with our customers to become the best off-the-shelf ERP/MES for many types of discrete manufacturing, we are faced with the reality that there is no \"perfect\" off-the-shelf solution, because each manufacturing business is unique."
 msgstr "Maar terwijl we met onze klanten werken om de beste standaard ERP/MES voor veel soorten discrete productie te worden, worden we geconfronteerd met de realiteit dat er geen \"perfecte\" standaard oplossing is, omdat elk productiebedrijf uniek is."
 
@@ -258,7 +258,7 @@ msgstr "Carbon combineert ERP, MES en QMS in één enkel, geïntegreerd systeem.
 msgid "Carbon is the engineering-first operating system for manufacturers. Quote, plan, buy, build, inspect and ship on one live model of your factory — from a ten-person prototype shop to a rate-production line."
 msgstr "Carbon is het engineering-first besturingssysteem voor fabrikanten. Offerteer, plan, koop, bouw, inspecteer en verzend op één live model van je fabriek — van een tienpersoonsprototypewerkplaats tot een massaproductielijn."
 
-#: app/routes/about.tsx:26
+#: app/routes/about.tsx:25
 msgid "Carbon Manufacturing Systems Corp."
 msgstr "Carbon Manufacturing Systems Corp."
 
@@ -298,7 +298,7 @@ msgstr "schone kamer operaties, opbrengstanalyses"
 msgid "Close"
 msgstr "Sluiten"
 
-#: app/routes/about.tsx:103
+#: app/routes/about.tsx:102
 msgid "Co-Founder and CTO"
 msgstr "Medeoprichter en CTO"
 
@@ -464,6 +464,7 @@ msgstr "Vraag & prognose"
 msgid "Developer guides and API reference"
 msgstr "Ontwikkelaarshandleidingen en API-referentie"
 
+#: app/components/footer.tsx:58
 #: app/components/header.tsx:95
 #: app/components/header.tsx:232
 msgid "Developers"
@@ -486,6 +487,7 @@ msgstr "Discord"
 msgid "Docs"
 msgstr "Docs"
 
+#: app/components/footer.tsx:59
 #: app/components/header.tsx:45
 msgid "Documentation"
 msgstr "Documentatie"
@@ -494,7 +496,7 @@ msgstr "Documentatie"
 msgid "Documents"
 msgstr "Documenten"
 
-#: app/routes/brand.tsx:126
+#: app/routes/brand.tsx:124
 msgid "Download Logo Kit"
 msgstr "Logo Kit downloaden"
 
@@ -601,7 +603,7 @@ msgstr "Eerste artikelinspectie, non-conformiteit, CAPA en maatstafkalibratie be
 msgid "Forward deployed engineer"
 msgstr "Ter plaatse geplaatste engineer"
 
-#: app/routes/about.tsx:23
+#: app/routes/about.tsx:22
 msgid "Founder memo"
 msgstr "Memo van de oprichter"
 
@@ -661,7 +663,7 @@ msgstr "Hostingvoorkeur"
 msgid "Huge consulting bills"
 msgstr "Enorme consultingrekeningen"
 
-#: app/routes/about.tsx:62
+#: app/routes/about.tsx:61
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "Ik geloof dat open-source ongelooflijk veel potentieel heeft omdat het niet alleen een product is, maar een gemeenschap van gelijkgestemde mensen die werken aan de toekomst van productie in het tijdperk van AI en robotica."
 
@@ -741,7 +743,7 @@ msgstr "john@company.com"
 msgid "Join our community chat"
 msgstr "Sluit je aan bij onze community chat"
 
-#: app/routes/about.tsx:81
+#: app/routes/about.tsx:80
 msgid "Join our Discord community"
 msgstr "Sluit je aan bij onze Discord-gemeenschap"
 
@@ -757,7 +759,7 @@ msgstr "Arbeid, uitval & herbewerking"
 msgid "Lead times & buffers"
 msgstr "Doorlooptijden & buffers"
 
-#: app/components/footer.tsx:58
+#: app/components/footer.tsx:60
 msgid "Learning"
 msgstr "Leren"
 
@@ -777,7 +779,7 @@ msgstr "Legacy ERP"
 msgid "Legacy ERPs were built for accountants in the 1990s."
 msgstr "Verouderde ERPs werden gebouwd voor boekhoudkundigen in de jaren 90."
 
-#: app/components/footer.tsx:67
+#: app/components/footer.tsx:69
 msgid "Legal"
 msgstr "Juridisch"
 
@@ -785,7 +787,7 @@ msgstr "Juridisch"
 msgid "Let us handle the infrastructure for you"
 msgstr "Laat ons de infrastructuur voor u beheren"
 
-#: app/components/footer.tsx:59
+#: app/components/footer.tsx:61
 msgid "License"
 msgstr "Licentie"
 
@@ -983,7 +985,7 @@ msgstr "Geef alstublieft uw contactgegevens op om het proces af te ronden"
 msgid "POs & receipts"
 msgstr "PO's & ontvangsten"
 
-#: app/components/footer.tsx:60
+#: app/components/footer.tsx:62
 #: app/components/header.tsx:89
 #: app/components/header.tsx:221
 msgid "Pricing"
@@ -995,7 +997,7 @@ msgstr "Prijzen"
 msgid "Printer"
 msgstr "Printer"
 
-#: app/components/footer.tsx:70
+#: app/components/footer.tsx:72
 msgid "Privacy"
 msgstr "Privacy"
 
@@ -1242,7 +1244,7 @@ msgstr "Software as a Service"
 msgid "Source available"
 msgstr "Bron beschikbaar"
 
-#: app/components/footer.tsx:61
+#: app/components/footer.tsx:63
 msgid "Source Code"
 msgstr "Broncode"
 
@@ -1316,7 +1318,7 @@ msgstr "Belastingen"
 msgid "Technical support"
 msgstr "Technische ondersteuning"
 
-#: app/components/footer.tsx:71
+#: app/components/footer.tsx:73
 msgid "Terms"
 msgstr "Voorwaarden"
 
@@ -1384,7 +1386,7 @@ msgstr "voertuigen"
 msgid "View our source code and contribute"
 msgstr "Bekijk onze broncode en draag bij"
 
-#: app/routes/about.tsx:54
+#: app/routes/about.tsx:53
 msgid "We open-sourced Carbon not because it's a great business plan, but because that's the system I would have wanted when I was in your shoes."
 msgstr "We hebben Carbon open-source gemaakt, niet omdat het een geweldig bedrijfsplan is, maar omdat dit het systeem is dat ik zou willen hebben gehad toen ik in jouw schoenen stond."
 
@@ -1396,7 +1398,7 @@ msgstr "We zullen binnenkort contact met u opnemen om een demo in te stellen."
 msgid "We'll be in touch with you shortly."
 msgstr "We zullen binnenkort contact met u opnemen."
 
-#: app/routes/about.tsx:70
+#: app/routes/about.tsx:69
 msgid "We're glad you're here for it."
 msgstr "We zijn blij dat je hier bent."
 

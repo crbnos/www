@@ -1,6 +1,7 @@
 // Ported from @carbon/react (ErrorBoundary/RootErrorBoundary).
 import { useEffect } from "react";
 import { isRouteErrorResponse, useNavigate } from "react-router";
+import { RECOVERY_LINKS } from "~/lib/agent/site";
 import { ErrorScreen, type ErrorScreenProps } from "./ErrorScreen";
 
 /**
@@ -51,6 +52,9 @@ function resolveConfig(error: unknown, retry: () => void): ErrorScreenProps {
 					"> recommendation: return to known coordinates",
 				],
 				actions: [{ label: "return home", to: "/" }],
+				// The same recovery set the Markdown 404 body lists, so a human
+				// and an agent that hit this URL get the same way out.
+				links: RECOVERY_LINKS,
 			};
 		}
 

@@ -2,16 +2,14 @@ import { Trans } from "@lingui/react/macro";
 import type { MetaFunction } from "react-router";
 import { DownloadIcon } from "lucide-react";
 import { Button } from "~/components/ui/button";
+import { pageMeta } from "~/lib/seo";
 
-export const meta: MetaFunction = () => {
-	return [
-		{ title: "Carbon | Brand Assets" },
-		{
-			name: "description",
-			content: "Carbon Brand Assets",
-		},
-	];
-};
+export const meta: MetaFunction = ({ matches }) =>
+	pageMeta(matches, {
+		title: "Carbon brand assets",
+		description:
+			"Logos, wordmarks and usage guidance for Carbon Manufacturing Systems.",
+	});
 
 export default function Brand() {
 	return (

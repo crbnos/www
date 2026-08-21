@@ -84,7 +84,7 @@ msgstr "適応MES UI"
 msgid "Aerospace"
 msgstr "航空宇宙"
 
-#: app/routes/about.tsx:31
+#: app/routes/about.tsx:30
 msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
 msgstr "製造業向けのエンドツーエンドシステムを構築して約10年が経ち、技術的な観点から「理想的な」ソリューションがどのような形であるべきかについて、かなり明確なビジョンを持つようになりました。"
 
@@ -96,7 +96,7 @@ msgstr "デフォルトでエージェント対応"
 msgid "All advanced features available"
 msgstr "すべての高度な機能が利用可能"
 
-#: app/routes/brand.tsx:25
+#: app/routes/brand.tsx:23
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "すべてのCarbonの商標、ロゴ、またはその他のブランド要素は、Carbon Manufacturing Systems Corporationを表現する目的以外に変更または使用することはできません。"
 
@@ -121,7 +121,7 @@ msgstr "API"
 msgid "API Docs"
 msgstr "API ドキュメント"
 
-#: app/routes/about.tsx:39
+#: app/routes/about.tsx:38
 msgid "API-first, realtime subscriptions, simple scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
 msgstr "APIファースト、リアルタイムサブスクリプション、シンプルなスケジューリング、そしてERPの利用を本当に価値あるものにするための1,000の細かな工夫。"
 
@@ -214,7 +214,7 @@ msgid "BOMs re-keyed by hand"
 msgstr "BOMs手動で再入力"
 
 #: app/components/footer.tsx:47
-#: app/routes/brand.tsx:22
+#: app/routes/brand.tsx:20
 msgid "Brand Assets"
 msgstr "ブランドアセット"
 
@@ -226,7 +226,7 @@ msgstr "Build <0/><1/>ソフトウェアのスピードで。"
 msgid "Business"
 msgstr "ビジネス"
 
-#: app/routes/about.tsx:45
+#: app/routes/about.tsx:44
 msgid "But even as we work with our customers to become the best off-the-shelf ERP/MES for many types of discrete manufacturing, we are faced with the reality that there is no \"perfect\" off-the-shelf solution, because each manufacturing business is unique."
 msgstr "多くの個別生産型製造業に対して最高のオフザシェルフERP/MESになるために顧客と共に取り組む一方で、各製造業務がユニークであるという現実に直面しています。それは「完璧な」既製ソリューションは存在しないということです。"
 
@@ -258,7 +258,7 @@ msgstr "Carbonは、ERP、MES、QMSを1つの統合されたシステムに組�
 msgid "Carbon is the engineering-first operating system for manufacturers. Quote, plan, buy, build, inspect and ship on one live model of your factory — from a ten-person prototype shop to a rate-production line."
 msgstr "Carbonは製造業者向けのエンジニアリング第一のオペレーティングシステムです。10人のプロトタイプショップから生産ラインまで、工場の1つのライブモデルで見積もり、計画、購入、構築、検査、出荷できます。"
 
-#: app/routes/about.tsx:26
+#: app/routes/about.tsx:25
 msgid "Carbon Manufacturing Systems Corp."
 msgstr "Carbon Manufacturing Systems Corp."
 
@@ -298,7 +298,7 @@ msgstr "クリーンルームオプス、収率分析"
 msgid "Close"
 msgstr "閉じる"
 
-#: app/routes/about.tsx:103
+#: app/routes/about.tsx:102
 msgid "Co-Founder and CTO"
 msgstr "共同創設者兼CTO"
 
@@ -464,6 +464,7 @@ msgstr "需要と予測"
 msgid "Developer guides and API reference"
 msgstr "開発者ガイドとAPIリファレンス"
 
+#: app/components/footer.tsx:58
 #: app/components/header.tsx:95
 #: app/components/header.tsx:232
 msgid "Developers"
@@ -486,6 +487,7 @@ msgstr "Discord"
 msgid "Docs"
 msgstr "ドキュメント"
 
+#: app/components/footer.tsx:59
 #: app/components/header.tsx:45
 msgid "Documentation"
 msgstr "ドキュメント"
@@ -494,7 +496,7 @@ msgstr "ドキュメント"
 msgid "Documents"
 msgstr "ドキュメント"
 
-#: app/routes/brand.tsx:126
+#: app/routes/brand.tsx:124
 msgid "Download Logo Kit"
 msgstr "ロゴキットをダウンロード"
 
@@ -601,7 +603,7 @@ msgstr "初回品検査、不適合、CAPA、ゲージキャリブレーショ�
 msgid "Forward deployed engineer"
 msgstr "フォワードデプロイエンジニア"
 
-#: app/routes/about.tsx:23
+#: app/routes/about.tsx:22
 msgid "Founder memo"
 msgstr "創設者からのメッセージ"
 
@@ -661,7 +663,7 @@ msgstr "ホスティング設定"
 msgid "Huge consulting bills"
 msgstr "巨大なコンサルティング料金"
 
-#: app/routes/about.tsx:62
+#: app/routes/about.tsx:61
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "オープンソースは素晴らしい可能性を秘めていると信じています。なぜなら、それは単なる製品ではなく、AIとロボティクスの時代に製造業の未来を構築しようとする志を同じくする人々のコミュニティだからです。"
 
@@ -741,7 +743,7 @@ msgstr "john@company.com"
 msgid "Join our community chat"
 msgstr "コミュニティチャットに参加"
 
-#: app/routes/about.tsx:81
+#: app/routes/about.tsx:80
 msgid "Join our Discord community"
 msgstr "Discordコミュニティに参加する"
 
@@ -757,7 +759,7 @@ msgstr "労務、スクラップ、再加工"
 msgid "Lead times & buffers"
 msgstr "リードタイムとバッファ"
 
-#: app/components/footer.tsx:58
+#: app/components/footer.tsx:60
 msgid "Learning"
 msgstr "学習"
 
@@ -777,7 +779,7 @@ msgstr "レガシーERP"
 msgid "Legacy ERPs were built for accountants in the 1990s."
 msgstr "従来のERPは1990年代に会計士向けに構築されました。"
 
-#: app/components/footer.tsx:67
+#: app/components/footer.tsx:69
 msgid "Legal"
 msgstr "法務"
 
@@ -785,7 +787,7 @@ msgstr "法務"
 msgid "Let us handle the infrastructure for you"
 msgstr "インフラストラクチャの管理はお任せください"
 
-#: app/components/footer.tsx:59
+#: app/components/footer.tsx:61
 msgid "License"
 msgstr "ライセンス"
 
@@ -983,7 +985,7 @@ msgstr "プロセスを完了するために、ご連絡先の詳細をご入力
 msgid "POs & receipts"
 msgstr "PO&領収書"
 
-#: app/components/footer.tsx:60
+#: app/components/footer.tsx:62
 #: app/components/header.tsx:89
 #: app/components/header.tsx:221
 msgid "Pricing"
@@ -995,7 +997,7 @@ msgstr "料金"
 msgid "Printer"
 msgstr "プリンター"
 
-#: app/components/footer.tsx:70
+#: app/components/footer.tsx:72
 msgid "Privacy"
 msgstr "プライバシー"
 
@@ -1242,7 +1244,7 @@ msgstr "Software as a Service"
 msgid "Source available"
 msgstr "ソース入手可能"
 
-#: app/components/footer.tsx:61
+#: app/components/footer.tsx:63
 msgid "Source Code"
 msgstr "ソースコード"
 
@@ -1316,7 +1318,7 @@ msgstr "税金"
 msgid "Technical support"
 msgstr "技術サポート"
 
-#: app/components/footer.tsx:71
+#: app/components/footer.tsx:73
 msgid "Terms"
 msgstr "利用規約"
 
@@ -1384,7 +1386,7 @@ msgstr "車両"
 msgid "View our source code and contribute"
 msgstr "ソースコードを表示して貢献する"
 
-#: app/routes/about.tsx:54
+#: app/routes/about.tsx:53
 msgid "We open-sourced Carbon not because it's a great business plan, but because that's the system I would have wanted when I was in your shoes."
 msgstr "Carbonをオープンソース化したのは、それが優れたビジネスプランだからではなく、自分があなたの立場にあったときに欲しかったシステムだからです。"
 
@@ -1396,7 +1398,7 @@ msgstr "まもなくデモのセットアップについてご連絡させてい
 msgid "We'll be in touch with you shortly."
 msgstr "まもなくご連絡させていただきます。"
 
-#: app/routes/about.tsx:70
+#: app/routes/about.tsx:69
 msgid "We're glad you're here for it."
 msgstr "このコミュニティにいてくれてうれしいです。"
 

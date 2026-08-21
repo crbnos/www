@@ -1,5 +1,11 @@
 # Carbon welcomes AI agents and crawlers.
-# Agent guidance: https://carbon.ms/llms.txt
+# Agent guidance:  https://carbon.ms/llms.txt
+# OpenAPI spec:    https://carbon.ms/openapi.json
+# MCP manifest:    https://carbon.ms/.well-known/mcp.json
+# Developer index: https://carbon.ms/developers
+#
+# Every page is also available as Markdown: send `Accept: text/markdown`,
+# or append `.md` to the path.
 
 User-agent: *
 Allow: /

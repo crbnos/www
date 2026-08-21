@@ -3,15 +3,14 @@ import { ChevronRight } from "lucide-react";
 import type { MetaFunction } from "react-router";
 import { Button } from "~/components/ui/button";
 import { DiscordLogo } from "~/components/ui/discord-logo";
+import { pageMeta } from "~/lib/seo";
 
-export const meta: MetaFunction = () => [
-	{ title: "About · Carbon" },
-	{
-		name: "description",
-		content:
+export const meta: MetaFunction = ({ matches }) =>
+	pageMeta(matches, {
+		title: "About Carbon Manufacturing Systems",
+		description:
 			"A founder memo on why we built Carbon and open-sourced it for the manufacturing community.",
-	},
-];
+	});
 
 export default function About() {
 	return (
