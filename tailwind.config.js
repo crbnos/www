@@ -147,6 +147,15 @@ export default {
 					"0%, 49%": { opacity: "1" },
 					"50%, 100%": { opacity: "0" },
 				},
+				// ErrorBoundary (VOID//SYS) effects — ported from @carbon/react.
+				scan: {
+					from: { transform: "translateY(-100%)" },
+					to: { transform: "translateY(300%)" },
+				},
+				flicker: {
+					"0%, 18%, 22%, 25%, 53%, 57%, 100%": { opacity: "1" },
+					"20%, 24%, 55%": { opacity: "0.25" },
+				},
 			},
 			animation: {
 				"accordion-down": "accordion-down 0.2s ease-out",
@@ -157,6 +166,8 @@ export default {
 				"cb-word": "cb-word 0.55s cubic-bezier(0.2, 0.7, 0.2, 1)",
 				"cb-flow": "cb-flow 5.5s linear infinite",
 				"cb-blink": "cb-blink 1.1s step-end infinite",
+				scan: "scan 6s linear infinite",
+				flicker: "flicker 1.6s steps(1, end) infinite",
 			},
 			screens: {
 				tall: {

@@ -1238,10 +1238,6 @@ msgstr "SOC 2 kontrolleri"
 msgid "Software as a Service"
 msgstr "Hizmet Olarak Yazılım"
 
-#: app/root.tsx:281
-msgid "Something went wrong"
-msgstr "Bir şeyler yanlış gitti"
-
 #: app/routes/_index.tsx:1280
 msgid "Source available"
 msgstr "Kaynak mevcut"

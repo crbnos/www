@@ -1,6 +1,5 @@
 import {
 	data,
-	isRouteErrorResponse,
 	Links,
 	Meta,
 	Outlet,
@@ -15,9 +14,9 @@ import type {
 	MetaFunction,
 } from "react-router";
 import { Analytics } from "@vercel/analytics/react";
-import { Trans } from "@lingui/react/macro";
 import { type ReactNode, useState } from "react";
 import Tailwind from "~/styles/tailwind.css?url";
+import { RootErrorBoundary } from "./components/error/RootErrorBoundary";
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 import { LocaleProvider } from "./lib/i18n";
@@ -77,6 +76,10 @@ export function links() {
 export async function loader({ request, params }: LoaderFunctionArgs) {
 	const requestUrl = new URL(request.url);
 	const siteUrl = requestUrl.protocol + "//" + requestUrl.host;
+	// Canonical URL: origin + path, without query/hash and without a trailing
+	// slash (except the root). Gives agents and search engines one stable URL.
+	const canonicalPath = requestUrl.pathname.replace(/\/+$/, "") || "/";
+	const canonicalUrl = siteUrl + canonicalPath;
 	const hints = getHints(request);
 	const locale = getLocale(request);
 	const linguiCatalog = await loadLinguiCatalog(locale);
@@ -85,6 +88,7 @@ export async function loader({ request, params }: LoaderFunctionArgs) {
 
 	return {
 		siteUrl,
+		canonicalUrl,
 		mode: getMode(request, hints.theme),
 		hints,
 		linguiCatalog,
@@ -115,7 +119,10 @@ export async function action({ request }: ActionFunctionArgs) {
 }
 
 export const meta: MetaFunction = ({ data }) => {
-	const { siteUrl } = data as { siteUrl: string };
+	const { siteUrl, canonicalUrl } = (data ?? {}) as {
+		siteUrl?: string;
+		canonicalUrl?: string;
+	};
 
 	if (!siteUrl) {
 		return [
@@ -127,7 +134,66 @@ export const meta: MetaFunction = ({ data }) => {
 		];
 	}
 
+	// JSON-LD structured data so agents and search engines can resolve the
+	// organization, the site, and the product from a single graph.
+	const structuredData = {
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+				"@type": "Organization",
+				"@id": `${siteUrl}/#organization`,
+				name: "Carbon",
+				legalName: "Carbon Manufacturing Systems Corporation",
+				url: siteUrl,
+				logo: `${siteUrl}/brand/carbon-mark.svg`,
+				description:
+					"Carbon is an API-first operating system for manufacturing that gives you full access to the source code, so you have complete control.",
+				sameAs: [
+					"https://github.com/crbnos",
+					"https://x.com/carbon_ms",
+					"https://www.linkedin.com/company/carbon-manufacturing-systems",
+				],
+				contactPoint: [
+					{
+						"@type": "ContactPoint",
+						contactType: "sales",
+						url: `${siteUrl}/contact`,
+						availableLanguage: ["en"],
+					},
+				],
+			},
+			{
+				"@type": "WebSite",
+				"@id": `${siteUrl}/#website`,
+				name: "Carbon Manufacturing Systems",
+				url: siteUrl,
+				publisher: { "@id": `${siteUrl}/#organization` },
+				inLanguage: "en",
+			},
+			{
+				"@type": "SoftwareApplication",
+				name: "Carbon",
+				applicationCategory: "BusinessApplication",
+				applicationSubCategory: "ERP",
+				operatingSystem: "Web, Self-hosted",
+				url: siteUrl,
+				publisher: { "@id": `${siteUrl}/#organization` },
+				description:
+					"An API-first, open-source operating system for manufacturing (ERP/MRP) with full source-code access, available as managed SaaS or self-hosted.",
+				offers: {
+					"@type": "Offer",
+					url: `${siteUrl}/pricing`,
+					category: "SaaS or source-code license",
+				},
+			},
+		],
+	};
+
 	return [
+		...(canonicalUrl
+			? [{ tagName: "link" as const, rel: "canonical", href: canonicalUrl }]
+			: []),
+		{ "script:ld+json": structuredData },
 		{
 			title: "Carbon Manufacturing Systems",
 		},
@@ -258,31 +324,28 @@ export default function App() {
 export function ErrorBoundary() {
 	const error = useRouteError();
 
-	const message = isRouteErrorResponse(error)
-		? (error.data.message ?? error.data)
-		: error instanceof Error
-			? error.message
-			: String(error);
-
+	// VOID//SYS — the same 404/500 screen the ERP/MES apps use. It renders its
+	// own minimal document shell (no Header/Footer/loader data) so it can't crash
+	// during SSR the way the old Header/Footer-based boundary did, which is what
+	// turned unmatched routes into raw HTTP 500s. React Router routes both
+	// unmatched paths (404) and thrown render errors (500) here, and sets the
+	// response status from the error, so agents get correct status codes.
 	return (
-		// LocaleProvider is required because <Document> renders <Header>/<Footer>,
-		// which use <Trans>/useLingui. Without it, any error that reaches this
-		// boundary throws a second, opaque "Cannot destructure property '_'" error
-		// and white-screens instead of rendering the message below.
-		<LocaleProvider>
-			<Document title="Error!">
-				<div className="light">
-					<div className="flex flex-col w-[100dvw] h-screen items-center justify-center space-y-4 ">
-						<img
-							src="/brand/carbon-mark.svg"
-							alt="Carbon Logo"
-							className="block max-w-24"
-						/>
-						<h1 className="text-2xl font-bold"><Trans>Something went wrong</Trans></h1>
-						<p className="text-muted-foreground max-w-2xl">{message}</p>
-					</div>
-				</div>
-			</Document>
-		</LocaleProvider>
+		<html lang="en" className="dark h-full">
+			<head>
+				<meta charSet="utf-8" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<Meta />
+				<Links />
+			</head>
+			<body
+				suppressHydrationWarning
+				className="min-h-svh bg-background text-foreground antialiased"
+			>
+				<RootErrorBoundary error={error} />
+				<ScrollRestoration />
+				<Scripts />
+			</body>
+		</html>
 	);
 }
