@@ -50,8 +50,8 @@ msgstr "一个托管的云托管版本的 Carbon，包括支持和所有高级�
 msgid "A typed TypeScript monorepo with one generated database type shared across the app, the API, and the AI tools. Bring your own LLM."
 msgstr "一个类型化的 TypeScript 单仓库，具有在应用、API 和 AI 工具之间共享的一个生成的数据库类型。自带您的 LLM。"
 
-#: app/components/header.tsx:83
-#: app/components/header.tsx:219
+#: app/components/header.tsx:69
+#: app/components/header.tsx:205
 msgid "About"
 msgstr "关于"
 
@@ -356,8 +356,8 @@ msgstr "联系"
 msgid "Contact Information"
 msgstr "联系信息"
 
-#: app/components/header.tsx:166
-#: app/components/header.tsx:269
+#: app/components/header.tsx:152
+#: app/components/header.tsx:255
 #: app/routes/_index.tsx:1371
 msgid "Contact Sales"
 msgstr "联系销售"
@@ -367,6 +367,7 @@ msgstr "联系销售"
 msgid "Contact us"
 msgstr "联系我们"
 
+#: app/components/logo-menu.tsx:66
 #: app/routes/_index.tsx:1235
 msgid "Copied"
 msgstr "已复制"
@@ -374,6 +375,10 @@ msgstr "已复制"
 #: app/routes/_index.tsx:1235
 msgid "Copy"
 msgstr "复制"
+
+#: app/components/logo-menu.tsx:66
+msgid "Copy .SVG"
+msgstr ""
 
 #: app/components/code-examples.tsx:531
 msgid "Copy code snippet"
@@ -455,12 +460,12 @@ msgstr "防御"
 msgid "Demand & forecast"
 msgstr "需求和预测"
 
-#: app/components/header.tsx:45
+#: app/components/header.tsx:46
 msgid "Developer guides and API reference"
 msgstr "开发者指南和 API 参考"
 
-#: app/components/header.tsx:109
-#: app/components/header.tsx:246
+#: app/components/header.tsx:95
+#: app/components/header.tsx:232
 msgid "Developers"
 msgstr "开发者"
 
@@ -472,16 +477,16 @@ msgstr "数字作业单"
 msgid "Digital travelers with work instructions"
 msgstr "带有工作说明的数字作业单"
 
-#: app/components/header.tsx:28
+#: app/components/header.tsx:29
 msgid "Discord"
 msgstr "Discord"
 
-#: app/components/header.tsx:93
-#: app/components/header.tsx:228
+#: app/components/header.tsx:79
+#: app/components/header.tsx:214
 msgid "Docs"
 msgstr "文档"
 
-#: app/components/header.tsx:44
+#: app/components/header.tsx:45
 msgid "Documentation"
 msgstr "文档"
 
@@ -513,8 +518,8 @@ msgstr "工程"
 msgid "Engineering change orders"
 msgstr "工程变更单"
 
-#: app/components/header.tsx:138
-#: app/components/header.tsx:242
+#: app/components/header.tsx:124
+#: app/components/header.tsx:228
 #: app/routes/pricing.tsx:56
 msgid "Enterprise"
 msgstr "企业"
@@ -632,7 +637,7 @@ msgstr "开始"
 msgid "Get started for free."
 msgstr "免费开始。"
 
-#: app/components/header.tsx:36
+#: app/components/header.tsx:37
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -732,7 +737,7 @@ msgstr "约翰·多"
 msgid "john@company.com"
 msgstr "john@company.com"
 
-#: app/components/header.tsx:29
+#: app/components/header.tsx:30
 msgid "Join our community chat"
 msgstr "加入我们的社区聊天"
 
@@ -828,6 +833,10 @@ msgstr "以制造为中心，GAAP 会计"
 #: app/routes/_index.tsx:1118
 msgid "MCP Docs"
 msgstr "MCP 文档"
+
+#: app/components/logo-menu.tsx:71
+msgid "Media Kit"
+msgstr ""
 
 #: app/routes/_index.tsx:246
 msgid "Medical devices"
@@ -975,8 +984,8 @@ msgid "POs & receipts"
 msgstr "采购订单和收据"
 
 #: app/components/footer.tsx:60
-#: app/components/header.tsx:103
-#: app/components/header.tsx:235
+#: app/components/header.tsx:89
+#: app/components/header.tsx:221
 msgid "Pricing"
 msgstr "定价"
 
@@ -1375,7 +1384,7 @@ msgstr "无限记录"
 msgid "vehicles"
 msgstr "车辆"
 
-#: app/components/header.tsx:37
+#: app/components/header.tsx:38
 msgid "View our source code and contribute"
 msgstr "查看我们的源代码并做出贡献"
 

@@ -7,6 +7,7 @@ import { setClientMode, useMode } from "~/hooks/useMode";
 import { startModeTransition } from "~/utils/dom";
 import { path } from "~/utils/path";
 import { AppCtaLabel } from "./app-cta-label";
+import { LogoMenu } from "./logo-menu";
 import { Button } from "./ui/button";
 import { DiscordLogo } from "./ui/discord-logo";
 import { GithubLogo } from "./ui/github-logo";
@@ -55,22 +56,7 @@ export function Header() {
 	return (
 		<header className="sticky top-0 z-header w-full border-b bg-background/90 backdrop-blur-sm">
 			<div className="mx-auto flex h-[var(--header-height)] w-full max-w-[1360px] items-center justify-between gap-6 px-6 sm:px-7 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:justify-normal">
-					<Link
-						to="/"
-						aria-label="Homepage"
-						className="flex shrink-0 select-none items-center justify-self-start font-display"
-					>
-						<img
-							src="/brand/carbon-word-light.svg"
-							alt="Carbon"
-							className="h-7 w-auto dark:hidden"
-						/>
-						<img
-							src="/brand/carbon-word-dark.svg"
-							alt="Carbon"
-							className="hidden h-7 w-auto dark:block"
-						/>
-					</Link>
+					<LogoMenu />
                     
 					<NavigationMenu className="hidden justify-self-center lg:flex">
 						<NavigationMenuList className="gap-1">
