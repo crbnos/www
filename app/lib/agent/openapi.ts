@@ -22,10 +22,19 @@ import type {
   Parameter,
   PathItem,
 } from "./openapi-types";
-import { DOCS_URL, MCP_URL, REST_URL, SITE_URL, SUPPORT_EMAIL } from "./site";
+import {
+  API_VERSIONING,
+  APP_URL,
+  DOCS_URL,
+  MCP_URL,
+  OAUTH_METADATA,
+  REST_URL,
+  SITE_URL,
+  SUPPORT_EMAIL,
+} from "./site";
 
 /** Bumped when the shape of the document changes, not when Carbon ships. */
-export const OPENAPI_INFO_VERSION = "1.0.0";
+export const OPENAPI_INFO_VERSION = API_VERSIONING.specVersion;
 
 type ResourceName = keyof typeof API_SCHEMAS;
 
@@ -537,11 +546,16 @@ export function buildOpenApiDocument(): OpenApiDocument {
         "",
         "**Authentication.** Create a scoped API key in Settings → API Keys and send it as `Authorization: Bearer <api-key>`, or in the `carbon-key` header. A key belongs to one company and carries an explicit set of module permissions; row-level security in the database — not just the application — confines every request to that scope.",
         "",
+        `**OAuth 2.0.** Agents that cannot hold a long-lived key can obtain a token instead: ${APP_URL} is the authorization server, and its metadata is published at ${OAUTH_METADATA.authorizationServer} (RFC 8414), with protected-resource metadata at ${OAUTH_METADATA.protectedResource} (RFC 9728). Both are mirrored from ${SITE_URL} by redirect. The MCP endpoint returns \`401\` with a \`WWW-Authenticate: Bearer resource_metadata="…"\` header pointing at the same document.`,
+        "",
         "**Rate limiting.** Every key allows 60 requests per minute. The limit is platform-controlled, not configurable per key. A refused request returns `429` with `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` and `Retry-After` — wait out `Retry-After` rather than retrying immediately.",
         "",
         "**Querying.** The API is PostgREST-shaped: filter with `?column=eq.value`, choose columns with `select`, sort with `order`, page with `limit`/`offset`, and embed relations inside `select`. There are no `/{id}` paths — address a single row with `?id=eq.<id>`.",
         "",
         `**Agents.** Carbon also speaks the Model Context Protocol over Streamable HTTP at ${MCP_URL}, with the manifest at ${SITE_URL}/.well-known/mcp.json.`,
+        "",
+        "**Versioning and deprecation.**",
+        ...API_VERSIONING.rules.map((rule) => `- ${rule}`),
       ].join("\n"),
       termsOfService: `${SITE_URL}/terms`,
       contact: {

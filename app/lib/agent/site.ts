@@ -18,6 +18,39 @@ export const REPO_URL = "https://github.com/crbnos/carbon";
 /** The Streamable HTTP MCP endpoint, as registered in an agent's config. */
 export const MCP_URL = `${APP_URL}/api/mcp`;
 
+/**
+ * OAuth 2.0 lives on the app, not here.
+ *
+ * `app.carbon.ms` is the authorization server and the resource server; carbon.ms
+ * is the marketing domain and issues no tokens. RFC 8414 requires the `issuer` in
+ * authorization-server metadata to match the origin the document is served from,
+ * so carbon.ms REDIRECTS to the app's metadata rather than mirroring it — a copy
+ * served here would carry `issuer: app.carbon.ms` at a carbon.ms URL, and a
+ * conforming client is required to reject exactly that.
+ */
+export const OAUTH_METADATA = {
+  authorizationServer: `${APP_URL}/.well-known/oauth-authorization-server`,
+  protectedResource: `${APP_URL}/.well-known/oauth-protected-resource`,
+} as const;
+
+/**
+ * What an agent can rely on about the API's shape over time.
+ *
+ * Stated as fact, not aspiration: the first two points describe artifacts served
+ * from this repo and are enforced by tests. The REST surface itself carries no
+ * version segment today — saying so plainly is more useful to an integrator than
+ * implying a guarantee that does not exist.
+ */
+export const API_VERSIONING = {
+  /** Bumped when the published contract changes; see RULES below. */
+  specVersion: "1.0.0",
+  rules: [
+    "The OpenAPI document is versioned by `info.version`, semver. It is served from a stable URL (`/openapi.json`) and its version is bumped whenever the published contract changes.",
+    "A breaking change to a published operation — a removed operation, a removed or retyped field, a new required parameter — bumps the MAJOR. Additive changes bump the MINOR.",
+    "The REST API itself carries no version segment in its URL today: resources are addressed directly (`/item`, `/salesOrder`). Pin the spec version you built against, and diff `info.version` before upgrading.",
+  ],
+} as const;
+
 export const SUPPORT_EMAIL = "support@carbon.ms";
 export const INFO_EMAIL = "info@carbon.ms";
 

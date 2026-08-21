@@ -15,9 +15,11 @@
  */
 
 import {
+  API_VERSIONING,
   APP_URL,
   DEVELOPER_RESOURCES,
   DOCS_URL,
+  OAUTH_METADATA,
   LEARN_URL,
   MCP_URL,
   REPO_URL,
@@ -222,6 +224,24 @@ curl '${REST_URL}/item?limit=1' \\
 The key is scoped to one company and to the module permissions you check when
 creating it, and the database enforces those scopes with row-level security —
 not just the application layer.
+
+## OAuth 2.0
+
+An agent that cannot hold a long-lived key can obtain a token instead.
+[${APP_URL}](${APP_URL}) is the authorization server; its metadata is published
+at [\`/.well-known/oauth-authorization-server\`](${OAUTH_METADATA.authorizationServer})
+(RFC 8414), and protected-resource metadata at
+[\`/.well-known/oauth-protected-resource\`](${OAUTH_METADATA.protectedResource})
+(RFC 9728). Both paths on \`carbon.ms\` redirect to them, so either origin
+resolves.
+
+The MCP endpoint returns \`401\` with
+\`WWW-Authenticate: Bearer resource_metadata="..."\` pointing at the same
+document, which is the discovery path a compliant MCP client follows on its own.
+
+## Versioning and deprecation
+
+${API_VERSIONING.rules.map((rule) => `- ${rule}`).join("\n")}
 
 ## Connect an agent over MCP
 

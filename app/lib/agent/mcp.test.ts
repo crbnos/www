@@ -19,6 +19,18 @@ describe("mcp manifest", () => {
     expect(META.endpoint).toBe(MCP_URL);
   });
 
+  it("names both OAuth discovery documents, and what an unauthed handshake returns", () => {
+    // A scanner that opens the transport without a credential gets 401 — that is
+    // the discovery handshake, not a broken server, so the manifest says so.
+    expect(META.authentication.authorizationServerMetadata).toMatch(
+      /\/\.well-known\/oauth-authorization-server$/,
+    );
+    expect(META.authentication.protectedResourceMetadata).toMatch(
+      /\/\.well-known\/oauth-protected-resource$/,
+    );
+    expect(META.authentication.unauthenticatedInitializeReturns).toBe(401);
+  });
+
   it("says how to authenticate, and marks the credential secret", () => {
     const header = mcpManifest.remotes[0]?.headers[0];
     expect(header?.name).toBe("Authorization");
