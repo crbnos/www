@@ -36,18 +36,26 @@ export async function markdownForPath(path: string): Promise<string | null> {
   return getAgentPage(path)?.markdown ?? null;
 }
 
-function markdownResponse(body: string, status: number): Response {
-  return new Response(body, {
-    status,
-    headers: {
-      "Content-Type": MARKDOWN_CONTENT_TYPE,
-      Vary: NEGOTIATED_VARY,
-      // Short shared cache; the Vary above is what keeps a CDN from handing this
-      // variant to a browser.
-      "Cache-Control": "public, max-age=0, s-maxage=300",
-      "X-Robots-Tag": status === 404 ? "noindex" : "all",
-    },
+function markdownResponse(
+  body: string,
+  status: number,
+  canonical?: string,
+): Response {
+  const headers = new Headers({
+    "Content-Type": MARKDOWN_CONTENT_TYPE,
+    Vary: NEGOTIATED_VARY,
+    // Short shared cache; the Vary above is what keeps a CDN from handing this
+    // variant to a browser.
+    "Cache-Control": "public, max-age=0, s-maxage=300",
+    "X-Robots-Tag": status === 404 ? "noindex" : "all",
   });
+
+  // `/pricing.md` is the same content as `/pricing`. Naming the HTML page as
+  // canonical keeps the pair from reading as duplicate content, and tells an
+  // agent which URL to cite.
+  if (canonical) headers.set("Link", `<${canonical}>; rel="canonical"`);
+
+  return new Response(body, { status, headers });
 }
 
 /**
@@ -68,13 +76,13 @@ export async function negotiateMarkdown(
   responseStatusCode: number,
 ): Promise<Response | null> {
   const accept = request.headers.get("Accept");
-  const { pathname } = new URL(request.url);
+  const { pathname, origin } = new URL(request.url);
   const { path, explicit } = resolveMarkdownPath(pathname);
   const wantsMarkdown = explicit || prefersMarkdown(accept);
 
   if (wantsMarkdown) {
     const markdown = await markdownForPath(path);
-    if (markdown) return markdownResponse(markdown, 200);
+    if (markdown) return markdownResponse(markdown, 200, `${origin}${path}`);
   }
 
   if (responseStatusCode === 404 && (wantsMarkdown || !acceptsHtmlExplicitly(accept))) {

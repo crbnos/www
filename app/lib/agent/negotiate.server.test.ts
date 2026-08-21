@@ -44,6 +44,19 @@ describe("negotiateMarkdown", () => {
     expect(await response?.text()).toContain("$40");
   });
 
+  it("names the HTML page as canonical, so the pair is not duplicate content", async () => {
+    const response = await negotiateMarkdown(request("/pricing.md"), 404);
+    expect(response?.headers.get("Link")).toBe(
+      '<https://carbon.ms/pricing>; rel="canonical"',
+    );
+  });
+
+  it("leaves the 404 body uncanonicalised and noindex", async () => {
+    const response = await negotiateMarkdown(request("/nope"), 404);
+    expect(response?.headers.get("Link")).toBeNull();
+    expect(response?.headers.get("X-Robots-Tag")).toBe("noindex");
+  });
+
   it("serves the home page markdown at /index.md", async () => {
     const response = await negotiateMarkdown(request("/index.md"), 404);
     expect(response?.status).toBe(200);
