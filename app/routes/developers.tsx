@@ -3,6 +3,7 @@ import {
   APP_URL,
   DEVELOPER_RESOURCES,
   DOCS_URL,
+  internalHref,
   MCP_URL,
   REST_URL,
   SITE_URL,
@@ -130,7 +131,7 @@ export default function Developers() {
             </a>
             . It authenticates with the same API key as a bearer token, or with
             OAuth. Its manifest is at{" "}
-            <a href={`${SITE_URL}/.well-known/mcp.json`}>
+            <a href="/.well-known/mcp.json">
               <code>/.well-known/mcp.json</code>
             </a>
             .
@@ -150,7 +151,7 @@ export default function Developers() {
           <ul>
             {DEVELOPER_RESOURCES.map((resource) => (
               <li key={resource.url}>
-                <a href={resource.url}>{resource.name}</a> —{" "}
+                <a href={internalHref(resource.url)}>{resource.name}</a> —{" "}
                 {resource.description}
               </li>
             ))}
@@ -164,7 +165,7 @@ export default function Developers() {
           <ul>
             {MACHINE_FILES.map((file) => (
               <li key={file.path}>
-                <a href={`${SITE_URL}${file.path}`}>
+                <a href={file.path}>
                   <code>{file.path}</code>
                 </a>{" "}
                 — {file.description}

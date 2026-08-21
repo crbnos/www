@@ -45,6 +45,30 @@ export const ORGANIZATION = {
 } as const;
 
 /**
+ * Rebase a canonical carbon.ms URL onto another origin. External URLs are
+ * returned untouched.
+ *
+ * Navigation has to resolve on whatever origin is serving the page — a preview
+ * deploy, local dev, a self-hosted copy. A hard-coded `https://carbon.ms` in an
+ * `href` walks the visitor off the deployment they are looking at and onto
+ * production: that is how the link to /openapi.json on /developers 404'd when
+ * clicked from a preview, before the route existed on the production domain.
+ *
+ * Citation is the opposite and stays absolute — the Markdown pages and the
+ * JSON-LD name canonical carbon.ms URLs on purpose, because an agent reads them
+ * with no origin for context.
+ */
+export function onOrigin(url: string, origin: string): string {
+  if (!url.startsWith(SITE_URL)) return url;
+  return `${origin}${url.slice(SITE_URL.length)}` || "/";
+}
+
+/** Root-relative form of a same-origin URL, for use in an `href`. */
+export function internalHref(url: string): string {
+  return onOrigin(url, "");
+}
+
+/**
  * Where a lost client should look first, in the order it should look. Rendered
  * on the HTML 404 screen and listed in the Markdown 404 body, so a human and an
  * agent that hit the same dead URL get the same way out.

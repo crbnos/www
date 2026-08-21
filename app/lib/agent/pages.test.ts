@@ -1,7 +1,13 @@
 import { describe, expect, it } from "vitest";
 import { notFoundMarkdown } from "./not-found";
 import { AGENT_PAGE_PATHS, getAgentPage, resolveMarkdownPath } from "./pages";
-import { RECOVERY_LINKS, SITE_URL } from "./site";
+import {
+  DEVELOPER_RESOURCES,
+  internalHref,
+  onOrigin,
+  RECOVERY_LINKS,
+  SITE_URL,
+} from "./site";
 
 describe("resolveMarkdownPath", () => {
   it.each([
@@ -70,5 +76,62 @@ describe("notFoundMarkdown", () => {
   it("lists the site's own pages", () => {
     expect(markdown).toContain(`${SITE_URL}/pricing`);
     expect(markdown).toContain(`${SITE_URL}/developers`);
+  });
+
+  it("points at the origin the client actually reached", () => {
+    // A preview deploy handing back production URLs is a recovery aid that
+    // sends the caller somewhere else.
+    const preview = notFoundMarkdown("/nope", "https://preview.vercel.app");
+
+    expect(preview).toContain("https://preview.vercel.app/pricing");
+    expect(preview).toContain("https://preview.vercel.app/llms.txt");
+    expect(preview).not.toContain(SITE_URL);
+    // External recovery targets are not rebased.
+    expect(preview).toContain("https://docs.carbon.ms");
+  });
+});
+
+describe("onOrigin / internalHref", () => {
+  it("rebases a same-origin URL", () => {
+    expect(onOrigin(`${SITE_URL}/openapi.json`, "https://preview.test")).toBe(
+      "https://preview.test/openapi.json",
+    );
+  });
+
+  it("leaves an external URL alone", () => {
+    for (const url of [
+      "https://docs.carbon.ms/mcp",
+      "https://app.carbon.ms/api/mcp",
+      "https://github.com/crbnos/carbon",
+    ]) {
+      expect(onOrigin(url, "https://preview.test"), url).toBe(url);
+    }
+  });
+
+  it("makes a same-origin URL root-relative for an href", () => {
+    // This is the bug it exists to prevent: /developers linked to
+    // https://carbon.ms/openapi.json, so clicking it from a preview deploy left
+    // that deploy and 404'd on production, where the route did not exist yet.
+    expect(internalHref(`${SITE_URL}/openapi.json`)).toBe("/openapi.json");
+    expect(internalHref(`${SITE_URL}/.well-known/mcp.json`)).toBe(
+      "/.well-known/mcp.json",
+    );
+    expect(internalHref(SITE_URL)).toBe("/");
+    expect(internalHref("https://docs.carbon.ms")).toBe(
+      "https://docs.carbon.ms",
+    );
+  });
+
+  it("turns every same-origin developer resource into a working path", () => {
+    const internal = DEVELOPER_RESOURCES.filter((resource) =>
+      resource.url.startsWith(SITE_URL),
+    );
+
+    expect(internal.length).toBeGreaterThan(0);
+    for (const resource of internal) {
+      const href = internalHref(resource.url);
+      expect(href.startsWith("/"), resource.name).toBe(true);
+      expect(href, resource.name).not.toContain(SITE_URL);
+    }
   });
 });

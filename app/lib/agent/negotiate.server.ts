@@ -86,7 +86,7 @@ export async function negotiateMarkdown(
   }
 
   if (responseStatusCode === 404 && (wantsMarkdown || !acceptsHtmlExplicitly(accept))) {
-    return markdownResponse(notFoundMarkdown(pathname), 404);
+    return markdownResponse(notFoundMarkdown(pathname, origin), 404);
   }
 
   return null;

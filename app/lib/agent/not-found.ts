@@ -8,23 +8,34 @@
  */
 
 import { AGENT_PAGE_PATHS } from "./pages";
-import { RECOVERY_LINKS, SITE_URL } from "./site";
+import { onOrigin, RECOVERY_LINKS, SITE_URL } from "./site";
 
 /**
  * Markdown for a 404 at `pathname`. Kept short on purpose — this is a recovery
  * aid, not a page.
+ *
+ * `origin` is the origin the client actually reached, so the links it gets back
+ * point at the deployment it is talking to. Handing a preview deploy's caller a
+ * list of production URLs is how a recovery aid sends someone somewhere else.
  */
-export function notFoundMarkdown(pathname: string): string {
-  const pages = AGENT_PAGE_PATHS.map((path) => `- [${SITE_URL}${path === "/" ? "" : path}](${SITE_URL}${path})`);
+export function notFoundMarkdown(
+  pathname: string,
+  origin: string = SITE_URL,
+): string {
+  const pages = AGENT_PAGE_PATHS.map(
+    (path) => `- [${origin}${path === "/" ? "" : path}](${origin}${path})`,
+  );
 
   return [
     "# 404 Not Found",
     "",
-    `\`${pathname}\` does not exist on carbon.ms. Nothing was moved — this path has no resource behind it.`,
+    `\`${pathname}\` does not exist on ${origin}. Nothing was moved — this path has no resource behind it.`,
     "",
     "## Where to look next",
     "",
-    ...RECOVERY_LINKS.map((link) => `- [${link.label}](${link.href})`),
+    ...RECOVERY_LINKS.map(
+      (link) => `- [${link.label}](${onOrigin(link.href, origin)})`,
+    ),
     "",
     "## Pages on this site",
     "",

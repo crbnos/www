@@ -1,7 +1,7 @@
 // Ported from @carbon/react (ErrorBoundary/RootErrorBoundary).
 import { useEffect } from "react";
 import { isRouteErrorResponse, useNavigate } from "react-router";
-import { RECOVERY_LINKS } from "~/lib/agent/site";
+import { internalHref, RECOVERY_LINKS } from "~/lib/agent/site";
 import { ErrorScreen, type ErrorScreenProps } from "./ErrorScreen";
 
 /**
@@ -53,8 +53,13 @@ function resolveConfig(error: unknown, retry: () => void): ErrorScreenProps {
 				],
 				actions: [{ label: "return home", to: "/" }],
 				// The same recovery set the Markdown 404 body lists, so a human
-				// and an agent that hit this URL get the same way out.
-				links: RECOVERY_LINKS,
+				// and an agent that hit this URL get the same way out. Rebased
+				// onto the current origin: a preview deploy or a self-hosted copy
+				// must not send the visitor to production to recover.
+				links: RECOVERY_LINKS.map((link) => ({
+					...link,
+					href: internalHref(link.href),
+				})),
 			};
 		}
 

@@ -101,6 +101,17 @@ describe("negotiateMarkdown", () => {
       expect(response?.status).toBe(404);
     });
 
+    it("recovers the caller on the origin it reached, not on production", async () => {
+      const response = await negotiateMarkdown(
+        new Request("https://preview.vercel.app/nope"),
+        404,
+      );
+      const body = (await response?.text()) ?? "";
+
+      expect(body).toContain("https://preview.vercel.app/sitemap.xml");
+      expect(body).not.toContain("https://carbon.ms");
+    });
+
     it("leaves a browser on the HTML 404 screen", async () => {
       expect(await negotiateMarkdown(request("/nope", BROWSER), 404)).toBeNull();
     });
