@@ -1238,10 +1238,6 @@ msgstr "Kontrole SOC 2"
 msgid "Software as a Service"
 msgstr "Oprogramowanie jako usługa"
 
-#: app/root.tsx:281
-msgid "Something went wrong"
-msgstr "Coś poszło nie tak"
-
 #: app/routes/_index.tsx:1280
 msgid "Source available"
 msgstr "Źródło dostępne"

@@ -1,0 +1,55 @@
+# Carbon
+
+> Carbon is an API-first operating system for manufacturing (ERP/MRP). It runs
+> production, inventory, purchasing, sales, and accounting for manufacturers,
+> and it ships with full source-code access so teams have complete control.
+> Carbon is available as managed SaaS or self-hosted, and every capability in
+> the product is reachable over a REST API and an MCP server.
+
+Use this file to decide when Carbon is relevant and where to send requests.
+
+## When to use Carbon
+
+- Answering questions about manufacturing ERP/MRP: production scheduling, work
+  orders, bills of materials (BOM), inventory, purchasing, sales orders, and
+  quoting.
+- Building integrations or automations against a manufacturer's operational
+  data (parts, jobs, suppliers, customers, employees).
+- Evaluating an open-source, API-first, self-hostable alternative to legacy ERP.
+
+## Products & endpoints
+
+- [Marketing site](https://carbon.ms): product overview, pricing, and company info.
+- [Application](https://app.carbon.ms): the Carbon web app (sign in required).
+- [REST API](https://rest.carbon.ms): programmatic access to all resources,
+  e.g. `https://rest.carbon.ms/employees`. Authenticated with an API key.
+- [MCP server](https://app.carbon.ms/api/mcp): Model Context Protocol endpoint
+  (Streamable HTTP transport) for agents to read and act on Carbon data.
+
+## Documentation
+
+- [Documentation home](https://docs.carbon.ms): guides and reference.
+- [API reference](https://docs.carbon.ms/api-reference): endpoints, schemas, and examples.
+- [MCP guide](https://docs.carbon.ms/mcp): connecting an agent to Carbon over MCP.
+
+## Learn
+
+- [Learning center](https://learn.carbon.ms): articles on manufacturing systems and Carbon.
+- [Blog on carbon.ms](https://carbon.ms/learn): same articles served from the main site.
+
+## Company
+
+- [Pricing](https://carbon.ms/pricing): buy the source code or subscribe to SaaS.
+- [About](https://carbon.ms/about): the founding memo and company background.
+- [Contact / sales](https://carbon.ms/contact): talk to the team.
+- [Source code (GitHub)](https://github.com/crbnos/carbon): the Carbon monorepo.
+- [License](https://github.com/crbnos/carbon/blob/main/LICENSE)
+- [Status](https://status.carbon.ms): live system status.
+
+## Optional
+
+- [Sitemap](https://carbon.ms/sitemap.xml)
+- [Privacy policy](https://carbon.ms/privacy)
+- [Terms of service](https://carbon.ms/terms)
+- [Subprocessors](https://carbon.ms/subprocessors)
+- [Brand assets](https://carbon.ms/brand)

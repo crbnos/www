@@ -1238,10 +1238,6 @@ msgstr "SOC 2 नियंत्रण"
 msgid "Software as a Service"
 msgstr "सॉफ्टवेयर एज़ ए सर्विस"
 
-#: app/root.tsx:281
-msgid "Something went wrong"
-msgstr "कुछ गलत हो गया"
-
 #: app/routes/_index.tsx:1280
 msgid "Source available"
 msgstr "स्रोत उपलब्ध"
