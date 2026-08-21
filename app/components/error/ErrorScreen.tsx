@@ -11,6 +11,11 @@ export type ErrorAction = {
 	variant?: "solid" | "ghost";
 };
 
+export type ErrorLink = {
+	label: string;
+	href: string;
+};
+
 export type ErrorScreenProps = {
 	code: string;
 	eyebrow: string;
@@ -19,6 +24,8 @@ export type ErrorScreenProps = {
 	logLines: string[];
 	highlightIndex?: number;
 	actions: ErrorAction[];
+	/** Quiet secondary links — where to look next after a dead URL. */
+	links?: readonly ErrorLink[];
 };
 
 export function ErrorScreen({
@@ -29,6 +36,7 @@ export function ErrorScreen({
 	logLines,
 	highlightIndex,
 	actions,
+	links,
 }: ErrorScreenProps) {
 	return (
 		<main className="relative flex min-h-svh flex-col overflow-hidden bg-background text-foreground">
@@ -72,6 +80,23 @@ export function ErrorScreen({
 						</MagneticLink>
 					))}
 				</div>
+
+				{links && links.length > 0 && (
+					<nav
+						aria-label="Where to look next"
+						className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground sm:text-xs"
+					>
+						{links.map((link) => (
+							<a
+								key={link.href}
+								href={link.href}
+								className="transition-colors duration-200 hover:text-foreground"
+							>
+								{link.label}
+							</a>
+						))}
+					</nav>
+				)}
 			</div>
 		</main>
 	);

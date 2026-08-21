@@ -17,6 +17,12 @@ export type BlogPost = {
   metadata: Metadata;
   slug: string;
   html: string;
+  /**
+   * The post's source Markdown, front matter stripped. Carried alongside the
+   * rendered HTML so `Accept: text/markdown` can serve the real article rather
+   * than a conversion of the DOM.
+   */
+  markdown: string;
   author?: Author;
 };
 

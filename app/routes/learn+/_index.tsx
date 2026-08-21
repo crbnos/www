@@ -2,20 +2,18 @@ import { data, useLoaderData } from "react-router";
 import type { MetaFunction } from "react-router";
 import { Article } from "~/components/article";
 import { getBlogPosts } from "~/lib/blog.server";
+import { pageMeta } from "~/lib/seo";
 
 export const config = {
   runtime: "edge",
 };
 
-export const meta: MetaFunction = () => {
-  return [
-    { title: "Blog | Carbon" },
-    {
-      name: "description",
-      content: "Latest articles and updates from Carbon",
-    },
-  ];
-};
+export const meta: MetaFunction = ({ matches }) =>
+  pageMeta(matches, {
+    title: "Carbon blog",
+    description:
+      "Articles and updates from Carbon Manufacturing Systems on manufacturing ERP, MRP, MES and QMS.",
+  });
 
 export async function loader() {
   const posts = (await getBlogPosts()) || [];

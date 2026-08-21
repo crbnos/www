@@ -44,9 +44,9 @@ async function getMDXData(dir: string) {
 
   for await (const file of mdxFiles) {
     const { metadata, content, author } = readMDXFile(path.join(dir, file));
-    const { html } = await processMarkdown(content);
+    const { html, raw } = await processMarkdown(content);
     const slug = path.basename(file, path.extname(file));
-    const post = { metadata, slug, html, author };
+    const post = { metadata, slug, html, markdown: raw, author };
 
     posts.push(post);
   }

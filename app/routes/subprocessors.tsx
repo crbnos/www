@@ -1,15 +1,12 @@
 import type { MetaFunction } from "react-router";
+import { pageMeta } from "~/lib/seo";
 
-export const meta: MetaFunction = () => {
-  return [
-    { title: "Carbon | Sub-Processors List" },
-    {
-      name: "description",
-      content:
-        "Third-party sub-processors engaged by Carbon Manufacturing Systems, Corp. to support delivery of the Carbon platform.",
-    },
-  ];
-};
+export const meta: MetaFunction = ({ matches }) =>
+  pageMeta(matches, {
+    title: "Carbon sub-processors",
+    description:
+      "Third-party sub-processors engaged by Carbon Manufacturing Systems, Corp. to support delivery of the Carbon platform.",
+  });
 
 type Row = {
   name: string;

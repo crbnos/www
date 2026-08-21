@@ -29,6 +29,7 @@ import {
 	WizardForm,
 } from "./components/wizard-form";
 import { useMode } from "./hooks/useMode";
+import { INFO_EMAIL, ORGANIZATION, SUPPORT_EMAIL } from "./lib/agent/site";
 import { getCompanyId } from "./services/company.server";
 import { loadLinguiCatalog } from "./services/lingui.server";
 import { getLocale } from "./services/locale.server";
@@ -142,22 +143,37 @@ export const meta: MetaFunction = ({ data }) => {
 			{
 				"@type": "Organization",
 				"@id": `${siteUrl}/#organization`,
-				name: "Carbon",
-				legalName: "Carbon Manufacturing Systems Corporation",
+				name: ORGANIZATION.name,
+				legalName: ORGANIZATION.legalName,
 				url: siteUrl,
 				logo: `${siteUrl}/brand/carbon-mark.svg`,
-				description:
-					"Carbon is an API-first operating system for manufacturing that gives you full access to the source code, so you have complete control.",
-				sameAs: [
-					"https://github.com/crbnos",
-					"https://x.com/carbon_ms",
-					"https://www.linkedin.com/company/carbon-manufacturing-systems",
-				],
+				description: ORGANIZATION.description,
+				email: INFO_EMAIL,
+				sameAs: [...ORGANIZATION.sameAs],
+				address: {
+					"@type": "PostalAddress",
+					...ORGANIZATION.address,
+				},
 				contactPoint: [
 					{
 						"@type": "ContactPoint",
 						contactType: "sales",
+						email: INFO_EMAIL,
 						url: `${siteUrl}/contact`,
+						availableLanguage: ["en"],
+					},
+					{
+						"@type": "ContactPoint",
+						contactType: "customer support",
+						email: SUPPORT_EMAIL,
+						url: `${siteUrl}/contact`,
+						availableLanguage: ["en"],
+					},
+					{
+						"@type": "ContactPoint",
+						contactType: "technical support",
+						email: SUPPORT_EMAIL,
+						url: `${siteUrl}/developers`,
 						availableLanguage: ["en"],
 					},
 				],
@@ -181,9 +197,41 @@ export const meta: MetaFunction = ({ data }) => {
 				description:
 					"An API-first, open-source operating system for manufacturing (ERP/MRP) with full source-code access, available as managed SaaS or self-hosted.",
 				offers: {
-					"@type": "Offer",
+					"@type": "AggregateOffer",
 					url: `${siteUrl}/pricing`,
 					category: "SaaS or source-code license",
+					priceCurrency: "USD",
+					lowPrice: "40",
+					highPrice: "100",
+					offerCount: 3,
+					// Named so an agent asked "what does Carbon cost" can answer
+					// from the graph rather than from the rendered page.
+					offers: [
+						{
+							"@type": "Offer",
+							name: "Starter",
+							price: "40",
+							priceCurrency: "USD",
+							url: `${siteUrl}/pricing`,
+							description: "Managed cloud, per user per month.",
+						},
+						{
+							"@type": "Offer",
+							name: "Business",
+							price: "100",
+							priceCurrency: "USD",
+							url: `${siteUrl}/pricing`,
+							description:
+								"Managed cloud with support, API access and all advanced features, per user per month. 5 user minimum.",
+						},
+						{
+							"@type": "Offer",
+							name: "Enterprise",
+							url: `${siteUrl}/contact`,
+							description:
+								"Self-hosted or managed, with migrations, SSO/SAML and ITAR compliance. Priced on request.",
+						},
+					],
 				},
 			},
 		],

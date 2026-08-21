@@ -26,11 +26,35 @@ Use this file to decide when Carbon is relevant and where to send requests.
 - [MCP server](https://app.carbon.ms/api/mcp): Model Context Protocol endpoint
   (Streamable HTTP transport) for agents to read and act on Carbon data.
 
+## Machine-readable files on carbon.ms
+
+Public, unauthenticated, CORS-open.
+
+- [OpenAPI specification](https://carbon.ms/openapi.json): OpenAPI 3.1 for the
+  Carbon REST API — an operationId, a description and typed response schemas on
+  every operation. Mirrored at `/.well-known/openapi.json`; YAML at
+  [/openapi.yaml](https://carbon.ms/openapi.yaml).
+- [MCP manifest](https://carbon.ms/.well-known/mcp.json): the Carbon MCP server's
+  transport (Streamable HTTP), endpoint, and authentication. Mirrored at
+  [/mcp.json](https://carbon.ms/mcp.json).
+- [Sitemap](https://carbon.ms/sitemap.xml): every page on this site.
+
+Every page on carbon.ms is available as Markdown. Send `Accept: text/markdown`,
+or append `.md` to the path (`https://carbon.ms/pricing.md`). Responses carry
+`Vary: Accept, Accept-Encoding`, and a nonexistent path returns a real HTTP 404
+with a Markdown body listing where to look next.
+
 ## Documentation
 
+- [Developer resources](https://carbon.ms/developers): the API, the MCP server,
+  API keys, webhooks and the OpenAPI spec, in one page.
 - [Documentation home](https://docs.carbon.ms): guides and reference.
 - [API reference](https://docs.carbon.ms/api-reference): endpoints, schemas, and examples.
+- [API authentication](https://docs.carbon.ms/api-reference/authentication): scoped
+  API keys, sent as `Authorization: Bearer <api-key>` or the `carbon-key` header.
 - [MCP guide](https://docs.carbon.ms/mcp): connecting an agent to Carbon over MCP.
+- [Integrations and webhooks](https://docs.carbon.ms/integrations): first-party
+  connectors and event-driven integrations.
 
 ## Learn
 
@@ -48,6 +72,7 @@ Use this file to decide when Carbon is relevant and where to send requests.
 
 ## Optional
 
+- [Developers](https://carbon.ms/developers)
 - [Sitemap](https://carbon.ms/sitemap.xml)
 - [Privacy policy](https://carbon.ms/privacy)
 - [Terms of service](https://carbon.ms/terms)
