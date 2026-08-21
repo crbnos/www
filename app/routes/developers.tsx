@@ -115,6 +115,12 @@ export default function Developers() {
             application — confines every request to that scope, so a key can only
             ever touch the data it was granted.
           </p>
+          <p>
+            Every key allows 60 requests per minute. A refused request returns{" "}
+            <code>429</code> with <code>Retry-After</code> and{" "}
+            <code>X-RateLimit-*</code> headers — back off on those rather than
+            retrying immediately.
+          </p>
 
           <h2 id="mcp">Connect an agent over MCP</h2>
           <p>

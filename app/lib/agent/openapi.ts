@@ -537,7 +537,7 @@ export function buildOpenApiDocument(): OpenApiDocument {
         "",
         "**Authentication.** Create a scoped API key in Settings → API Keys and send it as `Authorization: Bearer <api-key>`, or in the `carbon-key` header. A key belongs to one company and carries an explicit set of module permissions; row-level security in the database — not just the application — confines every request to that scope.",
         "",
-        "**Rate limiting.** Each key carries its own allowance and window (`1m`, `1h` or `1d`), stored on the key. Requests over it are refused with `429`; back off rather than retrying immediately.",
+        "**Rate limiting.** Every key allows 60 requests per minute. The limit is platform-controlled, not configurable per key. A refused request returns `429` with `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` and `Retry-After` — wait out `Retry-After` rather than retrying immediately.",
         "",
         "**Querying.** The API is PostgREST-shaped: filter with `?column=eq.value`, choose columns with `select`, sort with `order`, page with `limit`/`offset`, and embed relations inside `select`. There are no `/{id}` paths — address a single row with `?id=eq.<id>`.",
         "",
@@ -591,7 +591,7 @@ export function buildOpenApiDocument(): OpenApiDocument {
           "The key resolved but its scopes do not permit this action on this resource.",
         ),
         TooManyRequests: errorResponse(
-          "The key exceeded its allowance for the current window. Wait for the window to roll over.",
+          "The key exceeded its allowance of 60 requests per minute. `Retry-After` and the `X-RateLimit-*` headers say when to try again.",
         ),
       },
     },
