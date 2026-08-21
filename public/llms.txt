@@ -37,12 +37,24 @@ Public, unauthenticated, CORS-open.
 - [MCP manifest](https://carbon.ms/.well-known/mcp.json): the Carbon MCP server's
   transport (Streamable HTTP), endpoint, and authentication. Mirrored at
   [/mcp.json](https://carbon.ms/mcp.json).
+- [OAuth authorization server metadata](https://carbon.ms/.well-known/oauth-authorization-server):
+  RFC 8414 metadata for the Carbon authorization server (redirects to
+  app.carbon.ms, which is the issuer). Protected-resource metadata (RFC 9728) is
+  at [/.well-known/oauth-protected-resource](https://carbon.ms/.well-known/oauth-protected-resource).
 - [Sitemap](https://carbon.ms/sitemap.xml): every page on this site.
 
 Every page on carbon.ms is available as Markdown. Send `Accept: text/markdown`,
 or append `.md` to the path (`https://carbon.ms/pricing.md`). Responses carry
 `Vary: Accept, Accept-Encoding`, and a nonexistent path returns a real HTTP 404
 with a Markdown body listing where to look next.
+
+## API versioning
+
+The OpenAPI document is versioned by `info.version` (semver) and served from a
+stable URL. A breaking change to a published operation bumps the MAJOR; additive
+changes bump the MINOR. The REST API carries no version segment in its URL today
+— resources are addressed directly (`/item`, `/salesOrder`) — so pin the spec
+version you built against and diff `info.version` before upgrading.
 
 ## Documentation
 

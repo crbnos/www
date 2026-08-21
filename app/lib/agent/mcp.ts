@@ -8,7 +8,7 @@
  * keys a validator would reject.
  */
 
-import { DOCS_URL, MCP_URL, REPO_URL, SITE_URL } from "./site";
+import { DOCS_URL, MCP_URL, OAUTH_METADATA, REPO_URL, SITE_URL } from "./site";
 
 const SERVER_JSON_SCHEMA =
   "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json";
@@ -99,8 +99,15 @@ export function buildMcpManifest() {
         authentication: {
           schemes: ["bearer", "oauth2"],
           /** RFC 9728 metadata, served by the app that hosts the MCP endpoint. */
-          protectedResourceMetadata:
-            "https://app.carbon.ms/.well-known/oauth-protected-resource",
+          protectedResourceMetadata: OAUTH_METADATA.protectedResource,
+          authorizationServerMetadata: OAUTH_METADATA.authorizationServer,
+          /**
+           * An unauthenticated `initialize` is EXPECTED to return 401 with a
+           * `WWW-Authenticate` header naming the metadata above — that is the
+           * discovery handshake, not a failure. A scanner that reads a 401 as a
+           * broken server is misreading a working one.
+           */
+          unauthenticatedInitializeReturns: 401,
           scopeModel:
             "A key is scoped to one company and to explicit module permissions; row-level security in the database enforces the same boundary as the app.",
         },

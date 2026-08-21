@@ -1,10 +1,12 @@
 import type { MetaFunction } from "react-router";
 import {
+  API_VERSIONING,
   APP_URL,
   DEVELOPER_RESOURCES,
   DOCS_URL,
   internalHref,
   MCP_URL,
+  OAUTH_METADATA,
   REST_URL,
   SITE_URL,
 } from "~/lib/agent/site";
@@ -122,6 +124,35 @@ export default function Developers() {
             <code>X-RateLimit-*</code> headers — back off on those rather than
             retrying immediately.
           </p>
+
+          <h2 id="oauth">OAuth 2.0</h2>
+          <p>
+            An agent that cannot hold a long-lived key can obtain a token
+            instead. <a href={APP_URL}>{APP_URL}</a> is the authorization server;
+            its metadata is published at{" "}
+            <a href="/.well-known/oauth-authorization-server">
+              <code>/.well-known/oauth-authorization-server</code>
+            </a>{" "}
+            (RFC 8414), and protected-resource metadata at{" "}
+            <a href="/.well-known/oauth-protected-resource">
+              <code>/.well-known/oauth-protected-resource</code>
+            </a>{" "}
+            (RFC 9728). Both paths on this domain redirect to the app, so either
+            origin resolves.
+          </p>
+          <p>
+            The MCP endpoint returns <code>401</code> with{" "}
+            <code>WWW-Authenticate: Bearer resource_metadata="&hellip;"</code>{" "}
+            pointing at the same document — the discovery path a compliant MCP
+            client follows on its own.
+          </p>
+
+          <h2 id="versioning">Versioning and deprecation</h2>
+          <ul>
+            {API_VERSIONING.rules.map((rule) => (
+              <li key={rule}>{rule}</li>
+            ))}
+          </ul>
 
           <h2 id="mcp">Connect an agent over MCP</h2>
           <p>
