@@ -201,6 +201,10 @@ msgstr "Meilleur système ERP/MRP/MES que j'ai jamais vu au cours d'une carrièr
 msgid "Bill of Materials"
 msgstr "Nomenclature"
 
+#: app/routes/_index.tsx:280
+msgid "Billing"
+msgstr ""
+
 #: app/components/footer.tsx:48
 msgid "Blog"
 msgstr "Blog"
@@ -1309,10 +1313,6 @@ msgstr "Systèmes remplacés"
 #: app/routes/_index.tsx:277
 msgid "Tasks"
 msgstr "Tâches"
-
-#: app/routes/_index.tsx:280
-msgid "Taxes"
-msgstr "Taxes"
 
 #: app/routes/pricing.tsx:47
 msgid "Technical support"

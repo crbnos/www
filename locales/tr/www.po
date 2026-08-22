@@ -201,6 +201,10 @@ msgstr "Gördüğüm en iyi ERP/MRP/MES sistemi - 22 yıllık savunma ve otomoti
 msgid "Bill of Materials"
 msgstr "Malzeme Listesi"
 
+#: app/routes/_index.tsx:280
+msgid "Billing"
+msgstr ""
+
 #: app/components/footer.tsx:48
 msgid "Blog"
 msgstr "Blog"
@@ -1309,10 +1313,6 @@ msgstr "Değiştirilen sistemler"
 #: app/routes/_index.tsx:277
 msgid "Tasks"
 msgstr "Görevler"
-
-#: app/routes/_index.tsx:280
-msgid "Taxes"
-msgstr "Vergiler"
 
 #: app/routes/pricing.tsx:47
 msgid "Technical support"

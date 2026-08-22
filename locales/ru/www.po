@@ -201,6 +201,10 @@ msgstr "Лучшая система ERP/MRP/MES, которую я когда-л
 msgid "Bill of Materials"
 msgstr "Спецификация материалов"
 
+#: app/routes/_index.tsx:280
+msgid "Billing"
+msgstr ""
+
 #: app/components/footer.tsx:48
 msgid "Blog"
 msgstr "Блог"
@@ -1309,10 +1313,6 @@ msgstr "Заменяемые системы"
 #: app/routes/_index.tsx:277
 msgid "Tasks"
 msgstr "Задачи"
-
-#: app/routes/_index.tsx:280
-msgid "Taxes"
-msgstr "Налоги"
 
 #: app/routes/pricing.tsx:47
 msgid "Technical support"

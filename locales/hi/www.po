@@ -201,6 +201,10 @@ msgstr "मैंने रक्षा और ऑटोमोटिव मे�
 msgid "Bill of Materials"
 msgstr "सामग्री की सूची"
 
+#: app/routes/_index.tsx:280
+msgid "Billing"
+msgstr ""
+
 #: app/components/footer.tsx:48
 msgid "Blog"
 msgstr "ब्लॉग"
@@ -1309,10 +1313,6 @@ msgstr "सिस्टम प्रतिस्थापित"
 #: app/routes/_index.tsx:277
 msgid "Tasks"
 msgstr "कार्य"
-
-#: app/routes/_index.tsx:280
-msgid "Taxes"
-msgstr "कर"
 
 #: app/routes/pricing.tsx:47
 msgid "Technical support"

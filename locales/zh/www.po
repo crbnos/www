@@ -201,6 +201,10 @@ msgstr "我在国防和汽车领域22年职业生涯中见过的最好的ERP/MRP
 msgid "Bill of Materials"
 msgstr "物料清单"
 
+#: app/routes/_index.tsx:280
+msgid "Billing"
+msgstr ""
+
 #: app/components/footer.tsx:48
 msgid "Blog"
 msgstr "博客"
@@ -1309,10 +1313,6 @@ msgstr "替换系统"
 #: app/routes/_index.tsx:277
 msgid "Tasks"
 msgstr "任务"
-
-#: app/routes/_index.tsx:280
-msgid "Taxes"
-msgstr "税收"
 
 #: app/routes/pricing.tsx:47
 msgid "Technical support"

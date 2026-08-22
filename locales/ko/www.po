@@ -201,6 +201,10 @@ msgstr "국방 및 자동차 분야의 22년 경력에서 본 최고의 ERP/MRP/
 msgid "Bill of Materials"
 msgstr "자재 명세서"
 
+#: app/routes/_index.tsx:280
+msgid "Billing"
+msgstr ""
+
 #: app/components/footer.tsx:48
 msgid "Blog"
 msgstr "블로그"
@@ -1309,10 +1313,6 @@ msgstr "시스템 교체됨"
 #: app/routes/_index.tsx:277
 msgid "Tasks"
 msgstr "작업"
-
-#: app/routes/_index.tsx:280
-msgid "Taxes"
-msgstr "세금"
 
 #: app/routes/pricing.tsx:47
 msgid "Technical support"

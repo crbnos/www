@@ -277,7 +277,7 @@ const integrations = [
 	{ name: "Jira", kind: msg`Tasks` },
 	{ name: "Slack", kind: msg`Chat` },
 	{ name: "Paperless Parts", kind: msg`Quoting` },
-	{ name: "Avalara", kind: msg`Taxes` },
+	{ name: "Stripe", kind: msg`Billing` },
 	{ name: "Rillet", kind: msg`Finance` },
 	{ name: "Xero", kind: msg`Finance` },
 	{ name: "Epson", kind: msg`Printer` },
