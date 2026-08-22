@@ -421,6 +421,10 @@ function CyclingWord() {
 					<AnimatePresence onExitComplete={() => setIsAnimating(false)}>
 						<motion.span
 							key={word}
+							// role="img" makes aria-label valid here (aria-label is
+							// prohibited on a plain generic span) and lets AT announce the
+							// whole word once, while the per-letter spans stay aria-hidden.
+							role="img"
 							aria-label={word}
 							initial={{ opacity: 0, y: 10 }}
 							animate={{ opacity: 1, y: 0 }}

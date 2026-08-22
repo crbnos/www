@@ -1,7 +1,6 @@
 /** biome-ignore-all lint/suspicious/noArrayIndexKey: <explanation> */
 "use carbon";
 import { useLingui } from "@lingui/react/macro";
-import * as TabsPrimitive from "@radix-ui/react-tabs";
 import { Check, Copy } from "lucide-react";
 import { Highlight, Prism, type PrismTheme } from "prism-react-renderer";
 import { useEffect, useState } from "react";
@@ -26,8 +25,6 @@ const csharpGrammar = {
 };
 
 Object.assign(Prism.languages, { csharp: csharpGrammar });
-
-const Tabs = TabsPrimitive.Root;
 
 const darkEditorTheme = {
 	plain: {
@@ -447,23 +444,29 @@ const languages: { name: Language }[] = [
 
 const LanguageTrigger = ({
 	className,
-	value,
+	active,
 	children,
 	...props
-}: React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>) => (
-	<TabsPrimitive.Trigger
-		value={value}
+}: React.ComponentPropsWithoutRef<"button"> & { active: boolean }) => (
+	<button
+		type="button"
+		// This is a toggle button group, not Radix Tabs: the code panel it drives
+		// is rendered outside this control, so Tabs would emit an aria-controls
+		// pointing at a panel that doesn't exist (an invalid ARIA value). A button
+		// with aria-pressed is the correct, self-contained pattern here.
+		aria-pressed={active}
 		className={cn(
-			"inline-flex items-center justify-center whitespace-nowrap px-4 py-2.5 font-mono text-[13px] transition-colors",
+			"inline-flex items-center justify-center whitespace-nowrap px-4 py-2.5 font-mono text-[13px] transition-colors cursor-pointer",
 			"disabled:pointer-events-none disabled:opacity-50",
-			"text-muted-foreground hover:text-foreground",
-			"data-[state=active]:bg-card data-[state=active]:text-foreground data-[state=active]:shadow-[inset_0_2px_0] data-[state=active]:shadow-secondary",
+			active
+				? "bg-card text-foreground shadow-[inset_0_2px_0] shadow-secondary"
+				: "text-muted-foreground hover:text-foreground",
 			className,
 		)}
 		{...props}
 	>
 		{children}
-	</TabsPrimitive.Trigger>
+	</button>
 );
 
 function CodeEditor({
@@ -623,19 +626,23 @@ export function CodeExamples({ className }: { className?: string }) {
 				className,
 			)}
 		>
-			<Tabs
-				defaultValue={language}
-				onValueChange={(l) => setLanguage(l as Language)}
+			<div
+				role="group"
+				aria-label="API language"
 				className="relative flex items-end h-14 border-b border-border bg-background"
 			>
-				<TabsPrimitive.List className="flex items-end overflow-x-auto">
+				<div className="flex items-end overflow-x-auto">
 					{languages.map(({ name }) => (
-						<LanguageTrigger key={name} value={name}>
+						<LanguageTrigger
+							key={name}
+							active={language === name}
+							onClick={() => setLanguage(name)}
+						>
 							{name}
 						</LanguageTrigger>
 					))}
-				</TabsPrimitive.List>
-			</Tabs>
+				</div>
+			</div>
 
 			<div className="flex flex-col lg:flex-row overflow-x-auto min-h-[420px]">
 				<SnippetSwitcher
