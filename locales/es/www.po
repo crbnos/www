@@ -203,7 +203,7 @@ msgstr "Lista de Materiales"
 
 #: app/routes/_index.tsx:280
 msgid "Billing"
-msgstr ""
+msgstr "Facturación"
 
 #: app/components/footer.tsx:48
 msgid "Blog"
@@ -382,7 +382,7 @@ msgstr "Copiar"
 
 #: app/components/logo-menu.tsx:66
 msgid "Copy .SVG"
-msgstr ""
+msgstr "Copiar .SVG"
 
 #: app/components/code-examples.tsx:534
 msgid "Copy code snippet"
@@ -842,7 +842,7 @@ msgstr "Documentación de MCP"
 
 #: app/components/logo-menu.tsx:71
 msgid "Media Kit"
-msgstr ""
+msgstr "Kit de Medios"
 
 #: app/routes/_index.tsx:246
 msgid "Medical devices"

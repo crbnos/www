@@ -203,7 +203,7 @@ msgstr "자재 명세서"
 
 #: app/routes/_index.tsx:280
 msgid "Billing"
-msgstr ""
+msgstr "청구"
 
 #: app/components/footer.tsx:48
 msgid "Blog"
@@ -382,7 +382,7 @@ msgstr "복사"
 
 #: app/components/logo-menu.tsx:66
 msgid "Copy .SVG"
-msgstr ""
+msgstr ".SVG 복사"
 
 #: app/components/code-examples.tsx:534
 msgid "Copy code snippet"
@@ -842,7 +842,7 @@ msgstr "MCP 문서"
 
 #: app/components/logo-menu.tsx:71
 msgid "Media Kit"
-msgstr ""
+msgstr "미디어 키트"
 
 #: app/routes/_index.tsx:246
 msgid "Medical devices"
