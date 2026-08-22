@@ -40,6 +40,16 @@ export const config = { runtime: "edge" };
 
 export function links() {
 	return [
+		// Preload the above-the-fold Archivo subset so the browser fetches it in
+		// parallel with the stylesheet instead of discovering it after the CSS
+		// parses. Self-hosted, so no cross-origin preconnect is needed.
+		{
+			rel: "preload",
+			as: "font",
+			type: "font/woff2",
+			href: "/fonts/archivo/archivo-latin.woff2",
+			crossOrigin: "anonymous",
+		},
 		{ rel: "stylesheet", href: Tailwind },
 		{
 			rel: "icon",
@@ -313,9 +323,12 @@ function Document({
 	return (
 		<html lang="en" className={`${mode} h-full overflow-x-hidden w-[100dvw]`}>
 			<head>
-				<ClientHintCheck />
+				{/* charset must be within the first 1024 bytes of the document, so it
+				    comes before the ClientHintCheck script, which would otherwise push
+				    it past the limit and trip Lighthouse's "charset too late" audit. */}
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<ClientHintCheck />
 				<Meta />
 				<title>{title}</title>
 				<Links />

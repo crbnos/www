@@ -75,7 +75,13 @@ export function Footer() {
             </div>
           </div>
           <div className="flex col-span-1">
-            <img src="/logos/itar.svg" className="h-20 dark:invert" />
+            <img
+              src="/logos/itar.svg"
+              alt="ITAR registered"
+              width={179}
+              height={73}
+              className="h-20 w-auto dark:invert"
+            />
           </div>
         </div>
       </div>
