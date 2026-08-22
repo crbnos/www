@@ -201,6 +201,10 @@ msgstr "मैंने रक्षा और ऑटोमोटिव मे�
 msgid "Bill of Materials"
 msgstr "सामग्री की सूची"
 
+#: app/routes/_index.tsx:280
+msgid "Billing"
+msgstr "बिलिंग"
+
 #: app/components/footer.tsx:48
 msgid "Blog"
 msgstr "ब्लॉग"
@@ -378,7 +382,7 @@ msgstr "कॉपी"
 
 #: app/components/logo-menu.tsx:66
 msgid "Copy .SVG"
-msgstr ""
+msgstr "कॉपी .SVG"
 
 #: app/components/code-examples.tsx:534
 msgid "Copy code snippet"
@@ -838,7 +842,7 @@ msgstr "MCP डॉक्स"
 
 #: app/components/logo-menu.tsx:71
 msgid "Media Kit"
-msgstr ""
+msgstr "मीडिया किट"
 
 #: app/routes/_index.tsx:246
 msgid "Medical devices"
@@ -1309,10 +1313,6 @@ msgstr "सिस्टम प्रतिस्थापित"
 #: app/routes/_index.tsx:277
 msgid "Tasks"
 msgstr "कार्य"
-
-#: app/routes/_index.tsx:280
-msgid "Taxes"
-msgstr "कर"
 
 #: app/routes/pricing.tsx:47
 msgid "Technical support"

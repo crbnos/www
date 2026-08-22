@@ -201,6 +201,10 @@ msgstr "Gördüğüm en iyi ERP/MRP/MES sistemi - 22 yıllık savunma ve otomoti
 msgid "Bill of Materials"
 msgstr "Malzeme Listesi"
 
+#: app/routes/_index.tsx:280
+msgid "Billing"
+msgstr "Faturalama"
+
 #: app/components/footer.tsx:48
 msgid "Blog"
 msgstr "Blog"
@@ -378,7 +382,7 @@ msgstr "Kopyala"
 
 #: app/components/logo-menu.tsx:66
 msgid "Copy .SVG"
-msgstr ""
+msgstr ".SVG'yi Kopyala"
 
 #: app/components/code-examples.tsx:534
 msgid "Copy code snippet"
@@ -838,7 +842,7 @@ msgstr "MCP Belgeleri"
 
 #: app/components/logo-menu.tsx:71
 msgid "Media Kit"
-msgstr ""
+msgstr "Medya Kiti"
 
 #: app/routes/_index.tsx:246
 msgid "Medical devices"
@@ -1309,10 +1313,6 @@ msgstr "Değiştirilen sistemler"
 #: app/routes/_index.tsx:277
 msgid "Tasks"
 msgstr "Görevler"
-
-#: app/routes/_index.tsx:280
-msgid "Taxes"
-msgstr "Vergiler"
 
 #: app/routes/pricing.tsx:47
 msgid "Technical support"

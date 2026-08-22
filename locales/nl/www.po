@@ -201,6 +201,10 @@ msgstr "Beste ERP/MRP/MES-systeem dat ik in een 22-jarige carrière in de defens
 msgid "Bill of Materials"
 msgstr "Stuklijst"
 
+#: app/routes/_index.tsx:280
+msgid "Billing"
+msgstr "Facturering"
+
 #: app/components/footer.tsx:48
 msgid "Blog"
 msgstr "Blog"
@@ -378,7 +382,7 @@ msgstr "Kopiëren"
 
 #: app/components/logo-menu.tsx:66
 msgid "Copy .SVG"
-msgstr ""
+msgstr "Kopieer .SVG"
 
 #: app/components/code-examples.tsx:534
 msgid "Copy code snippet"
@@ -838,7 +842,7 @@ msgstr "MCP Docs"
 
 #: app/components/logo-menu.tsx:71
 msgid "Media Kit"
-msgstr ""
+msgstr "Mediakit"
 
 #: app/routes/_index.tsx:246
 msgid "Medical devices"
@@ -1309,10 +1313,6 @@ msgstr "Systemen vervangen"
 #: app/routes/_index.tsx:277
 msgid "Tasks"
 msgstr "Taken"
-
-#: app/routes/_index.tsx:280
-msgid "Taxes"
-msgstr "Belastingen"
 
 #: app/routes/pricing.tsx:47
 msgid "Technical support"

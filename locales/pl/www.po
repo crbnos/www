@@ -201,6 +201,10 @@ msgstr "Najlepszy system ERP/MRP/MES, jaki kiedykolwiek widziałem w 22-letniej 
 msgid "Bill of Materials"
 msgstr "Zestawienie materiałów"
 
+#: app/routes/_index.tsx:280
+msgid "Billing"
+msgstr "Rozliczenia"
+
 #: app/components/footer.tsx:48
 msgid "Blog"
 msgstr "Blog"
@@ -378,7 +382,7 @@ msgstr "Kopiuj"
 
 #: app/components/logo-menu.tsx:66
 msgid "Copy .SVG"
-msgstr ""
+msgstr "Kopiuj .SVG"
 
 #: app/components/code-examples.tsx:534
 msgid "Copy code snippet"
@@ -838,7 +842,7 @@ msgstr "Dokumentacja MCP"
 
 #: app/components/logo-menu.tsx:71
 msgid "Media Kit"
-msgstr ""
+msgstr "Zestaw mediów"
 
 #: app/routes/_index.tsx:246
 msgid "Medical devices"
@@ -1309,10 +1313,6 @@ msgstr "Systemy zastąpione"
 #: app/routes/_index.tsx:277
 msgid "Tasks"
 msgstr "Zadania"
-
-#: app/routes/_index.tsx:280
-msgid "Taxes"
-msgstr "Podatki"
 
 #: app/routes/pricing.tsx:47
 msgid "Technical support"

@@ -201,6 +201,10 @@ msgstr "我在国防和汽车领域22年职业生涯中见过的最好的ERP/MRP
 msgid "Bill of Materials"
 msgstr "物料清单"
 
+#: app/routes/_index.tsx:280
+msgid "Billing"
+msgstr "账单"
+
 #: app/components/footer.tsx:48
 msgid "Blog"
 msgstr "博客"
@@ -378,7 +382,7 @@ msgstr "复制"
 
 #: app/components/logo-menu.tsx:66
 msgid "Copy .SVG"
-msgstr ""
+msgstr "复制 .SVG"
 
 #: app/components/code-examples.tsx:534
 msgid "Copy code snippet"
@@ -838,7 +842,7 @@ msgstr "MCP 文档"
 
 #: app/components/logo-menu.tsx:71
 msgid "Media Kit"
-msgstr ""
+msgstr "媒体资料包"
 
 #: app/routes/_index.tsx:246
 msgid "Medical devices"
@@ -1309,10 +1313,6 @@ msgstr "替换系统"
 #: app/routes/_index.tsx:277
 msgid "Tasks"
 msgstr "任务"
-
-#: app/routes/_index.tsx:280
-msgid "Taxes"
-msgstr "税收"
 
 #: app/routes/pricing.tsx:47
 msgid "Technical support"
