@@ -369,7 +369,7 @@ const FULCRUM: Comparison = {
   metaDescription:
     "Fulcrum and Carbon both replace legacy manufacturing software with something modern. Carbon adds source availability, an API-first and agent-ready platform, self-host/ITAR, and published pricing.",
   subheadline:
-    "Fulcrum and Carbon both replace legacy manufacturing software with something modern. The difference is ownership and reach: Carbon is source-available and API-first, unifies ERP, MRP, MES and QMS on one data model, and ships agent-ready automation and live capacity planning — with pricing you can read on the website.",
+    "Fulcrum and Carbon both replace legacy manufacturing software with something modern — but Fulcrum runs the shop floor and syncs the books to a separate system like QuickBooks. Carbon unifies ERP, MRP, MES and QMS — with native accounting and job costing — on one open, API-first data model, with pricing you can read on the website.",
   stats: CARBON_STATS,
   groups: [
     {
@@ -388,7 +388,12 @@ const FULCRUM: Comparison = {
         {
           label: "ERP + MES + QMS unified",
           carbon: "One schema, one record",
-          competitor: "ERP/MRP with shop-floor features",
+          competitor: "MRP + MES; accounting lives elsewhere",
+        },
+        {
+          label: "Native accounting & GL",
+          carbon: "Built in — GL, AP/AR and job costing",
+          competitor: "No native GL; syncs to QuickBooks",
         },
       ],
     },
@@ -465,16 +470,16 @@ const FULCRUM: Comparison = {
   outgrowingTitle: "Why teams pick Carbon over Fulcrum",
   outgrowing: [
     {
+      title: "Your books live in another system",
+      body: "Fulcrum runs the floor but keeps the ledger in QuickBooks, so cost, inventory and accounting never fully reconcile. In Carbon, accounting and job costing are native — they roll up from the same records as production.",
+    },
+    {
       title: "You don't want to be locked in",
       body: "Fulcrum is proprietary and cloud-only. Carbon is source-available — self-host it, extend it, and keep your data in a Postgres model you own.",
     },
     {
       title: "You want pricing you can read",
       body: "Fulcrum is quote-based and sold on revenue, with no public trial. Carbon publishes per-user pricing and a 30-day free trial — evaluate it before you talk to anyone.",
-    },
-    {
-      title: "You need configuration and CAD in the box",
-      body: "Carbon ships a parametric configurator and a native 3D/STEP viewer, so engineering and quoting live where the work does — not in a separate tool.",
     },
   ],
   reasonsTitle: "Why manufacturers choose Carbon",
