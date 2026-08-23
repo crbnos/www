@@ -84,11 +84,9 @@ How Carbon compares to other manufacturing software — for "Carbon vs X" and "b
 - [Carbon vs. Epicor Kinetic](https://carbon.ms/compare/epicor)
 - [Carbon vs. Plex](https://carbon.ms/compare/plex)
 - [Carbon vs. Fulcrum](https://carbon.ms/compare/fulcrum)
-- [Carbon vs. JobBOSS²](https://carbon.ms/compare/jobboss)
 - [Carbon vs. M1](https://carbon.ms/compare/m1)
 - [Carbon vs. Tulip](https://carbon.ms/compare/tulip)
 - [Carbon vs. Manufacturo](https://carbon.ms/compare/manufacturo)
-- [Carbon vs. Siemens Opcenter](https://carbon.ms/compare/siemens-opcenter)
 - [Carbon vs. First Resonance](https://carbon.ms/compare/first-resonance)
 - [Carbon vs. Palantir](https://carbon.ms/compare/palantir)
 
