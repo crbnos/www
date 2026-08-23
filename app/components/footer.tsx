@@ -55,7 +55,7 @@ export function Footer() {
               <Trans>Product</Trans>
             </p>
             <div className="col-span-2 -mx-1 flex flex-wrap gap-2 sm:flex-col">
-              <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="/compare"><Trans>Compare</Trans></Link>
+              <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="/compare/build-it-yourself"><Trans>Build vs. buy</Trans></Link>
               <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="/developers"><Trans>Developers</Trans></Link>
               <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="https://docs.carbon.ms"><Trans>Documentation</Trans></Link>
               <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="https://learn.carbon.ms"><Trans>Learning</Trans></Link>

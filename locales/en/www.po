@@ -226,6 +226,10 @@ msgstr "Brand Assets"
 msgid "Build <0/><1/>at the speed of software."
 msgstr "Build <0/><1/>at the speed of software."
 
+#: app/components/footer.tsx:58
+msgid "Build vs. buy"
+msgstr "Build vs. buy"
+
 #: app/routes/pricing.tsx:38
 msgid "Business"
 msgstr "Business"
@@ -318,10 +322,6 @@ msgstr "Company"
 #: app/routes/contact.tsx:194
 msgid "Company Name"
 msgstr "Company Name"
-
-#: app/components/footer.tsx:58
-msgid "Compare"
-msgstr "Compare"
 
 #: app/components/wizard-form.tsx:349
 msgid "Complete"

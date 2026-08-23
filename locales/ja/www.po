@@ -226,6 +226,10 @@ msgstr "ブランドアセット"
 msgid "Build <0/><1/>at the speed of software."
 msgstr "Build <0/><1/>ソフトウェアのスピードで。"
 
+#: app/components/footer.tsx:58
+msgid "Build vs. buy"
+msgstr ""
+
 #: app/routes/pricing.tsx:38
 msgid "Business"
 msgstr "ビジネス"
@@ -318,10 +322,6 @@ msgstr "会社"
 #: app/routes/contact.tsx:194
 msgid "Company Name"
 msgstr "会社名"
-
-#: app/components/footer.tsx:58
-msgid "Compare"
-msgstr ""
 
 #: app/components/wizard-form.tsx:349
 msgid "Complete"

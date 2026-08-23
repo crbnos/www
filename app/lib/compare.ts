@@ -68,7 +68,7 @@ const CARBON_STATS: Comparison["stats"] = [
   { value: "4-in-1", label: "ERP, MRP, MES & QMS on one data model" },
   { value: "1 month", label: "implementations" },
   { value: "30 days", label: "free trial, no sales call" },
-  { value: "Open", label: "source-available & self-hostable" },
+  { value: "Yours", label: "full source-code ownership" },
 ];
 
 /** Reasons repeat with light tailoring — they are Carbon's core story. */
@@ -165,7 +165,11 @@ const NETSUITE: Comparison = {
       title: "Platform & ownership",
       rows: [
         { label: "Deployment", carbon: "Cloud or self-host", competitor: "Cloud only" },
-        { label: "Source-available / no lock-in", carbon: true, competitor: false },
+        {
+          label: "Full ownership of the code",
+          carbon: "Yes — the entire codebase is yours",
+          competitor: "No — proprietary",
+        },
         {
           label: "API coverage",
           carbon: "Full backend over REST — every table",
@@ -293,7 +297,11 @@ const MANUFACTURO: Comparison = {
           carbon: "Cloud or self-host",
           competitor: "Cloud, private or on-prem (vendor-managed)",
         },
-        { label: "Source-available / no lock-in", carbon: true, competitor: false },
+        {
+          label: "Full ownership of the code",
+          carbon: "Yes — the entire codebase is yours",
+          competitor: "No — proprietary",
+        },
         {
           label: "API coverage",
           carbon: "Full backend over REST — every table",
@@ -419,7 +427,11 @@ const FULCRUM: Comparison = {
       title: "Platform & ownership",
       rows: [
         { label: "Deployment", carbon: "Cloud or self-host", competitor: "Cloud only" },
-        { label: "Source-available / no lock-in", carbon: true, competitor: false },
+        {
+          label: "Full ownership of the code",
+          carbon: "Yes — the entire codebase is yours",
+          competitor: "No — proprietary",
+        },
         {
           label: "Own your data model",
           carbon: "Open Postgres you control",
@@ -590,7 +602,11 @@ const SAP_B1: Comparison = {
           carbon: "Cloud or self-host",
           competitor: "On-prem or partner-hosted cloud",
         },
-        { label: "Source-available / no lock-in", carbon: true, competitor: false },
+        {
+          label: "Full ownership of the code",
+          carbon: "Yes — the entire codebase is yours",
+          competitor: "No — proprietary",
+        },
         {
           label: "API coverage",
           carbon: "Full backend over REST — every table",
@@ -720,7 +736,11 @@ const OPCENTER: Comparison = {
           carbon: "Cloud or self-host (open source)",
           competitor: "On-prem / private cloud / Opcenter X SaaS",
         },
-        { label: "Source-available / no lock-in", carbon: true, competitor: false },
+        {
+          label: "Full ownership of the code",
+          carbon: "Yes — the entire codebase is yours",
+          competitor: "No — proprietary",
+        },
         {
           label: "API coverage",
           carbon: "Full backend over REST — every table",
@@ -844,7 +864,11 @@ const EPICOR: Comparison = {
           carbon: "Cloud or self-host",
           competitor: "Cloud/Azure; on-prem innovation ends ~2028",
         },
-        { label: "Source-available / no lock-in", carbon: true, competitor: false },
+        {
+          label: "Full ownership of the code",
+          carbon: "Yes — the entire codebase is yours",
+          competitor: "No — proprietary",
+        },
         {
           label: "API coverage",
           carbon: "Full backend over REST — every table",
@@ -972,7 +996,11 @@ const M1: Comparison = {
           carbon: "Cloud or self-host",
           competitor: "M1 Cloud or on-prem; Windows client",
         },
-        { label: "Source-available / no lock-in", carbon: true, competitor: false },
+        {
+          label: "Full ownership of the code",
+          carbon: "Yes — the entire codebase is yours",
+          competitor: "No — proprietary",
+        },
         {
           label: "API coverage",
           carbon: "Full backend over REST — every table",
@@ -1100,7 +1128,11 @@ const TULIP: Comparison = {
           carbon: "One unified Postgres schema",
           competitor: "App-scoped Tables + connectors to your systems",
         },
-        { label: "Source-available / no lock-in", carbon: true, competitor: false },
+        {
+          label: "Full ownership of the code",
+          carbon: "Yes — the entire codebase is yours",
+          competitor: "No — proprietary",
+        },
         {
           label: "API coverage",
           carbon: "Full backend over REST — every table",
@@ -1222,7 +1254,11 @@ const PLEX: Comparison = {
           carbon: "Cloud or self-host",
           competitor: "Cloud-only SaaS; no on-prem",
         },
-        { label: "Source-available / no lock-in", carbon: true, competitor: false },
+        {
+          label: "Full ownership of the code",
+          carbon: "Yes — the entire codebase is yours",
+          competitor: "No — proprietary",
+        },
         {
           label: "API coverage",
           carbon: "Full backend over REST — every table",
@@ -1339,7 +1375,11 @@ const FIRST_RESONANCE: Comparison = {
           carbon: "Cloud or self-host",
           competitor: "Cloud SaaS only (AWS/GovCloud)",
         },
-        { label: "Source-available / no lock-in", carbon: true, competitor: false },
+        {
+          label: "Full ownership of the code",
+          carbon: "Yes — the entire codebase is yours",
+          competitor: "No — proprietary",
+        },
         {
           label: "API coverage",
           carbon: "Full backend over REST — every table",
@@ -1472,7 +1512,11 @@ const JOBBOSS: Comparison = {
           carbon: "Cloud or self-host",
           competitor: "SaaS, hosted, or on-prem",
         },
-        { label: "Source-available / no lock-in", carbon: true, competitor: false },
+        {
+          label: "Full ownership of the code",
+          carbon: "Yes — the entire codebase is yours",
+          competitor: "No — proprietary",
+        },
         {
           label: "API coverage",
           carbon: "Full backend over REST — every table",
@@ -1613,7 +1657,11 @@ const PALANTIR: Comparison = {
           carbon: "One finished Postgres schema",
           competitor: "An ontology you define over your systems",
         },
-        { label: "Source-available / no lock-in", carbon: true, competitor: false },
+        {
+          label: "Full ownership of the code",
+          carbon: "Yes — the entire codebase is yours",
+          competitor: "No — proprietary",
+        },
         {
           label: "API coverage",
           carbon: "Full backend over REST — every table",
@@ -1697,6 +1745,138 @@ const PALANTIR: Comparison = {
 };
 
 // ---------------------------------------------------------------------------
+// Building it yourself
+// ---------------------------------------------------------------------------
+
+const BUILD: Comparison = {
+  slug: "build-it-yourself",
+  competitor: "Building it yourself",
+  competitorFull: "Building it yourself",
+  category: "The build-vs-buy decision",
+  headline: "Carbon vs. building it yourself",
+  metaTitle: "Carbon vs. building your own ERP/MES — buy vs. build",
+  metaDescription:
+    "Building your own manufacturing ERP/MES gives you control but costs years and a standing engineering team. Carbon gives you the same control — full source-code ownership — without building it: a finished platform, live in days, on published pricing.",
+  subheadline:
+    "The most common reason teams build their own ERP or MES is control — they want to own it and shape it to their process. Carbon gives you that same control: the full source code is yours to run, audit and extend. The difference is you start from a finished manufacturing platform instead of a blank repo and a multi-year roadmap.",
+  stats: CARBON_STATS,
+  groups: [
+    {
+      title: "Scope & fit",
+      rows: [
+        {
+          label: "What it is",
+          carbon: "A finished platform — ERP, MRP, MES, QMS",
+          competitor: "A blank repo and a multi-year roadmap",
+        },
+        {
+          label: "Time to first value",
+          carbon: "Live in days",
+          competitor: "12–24 months to a usable v1",
+        },
+        {
+          label: "Manufacturing model",
+          carbon: "Proven schema out of the box",
+          competitor: "You design every table from scratch",
+        },
+        {
+          label: "Coverage on day one",
+          carbon: "BOMs, routing, MRP, QMS, traceability, costing, accounting",
+          competitor: "Every module built from zero",
+        },
+      ],
+    },
+    {
+      title: "Ownership & control",
+      rows: [
+        {
+          label: "Full ownership of the code",
+          carbon: "Yes — the entire codebase is yours",
+          competitor: "Yes — but you write and own every line",
+        },
+        {
+          label: "Customize & extend",
+          carbon: "Fork the source; add over REST & MCP",
+          competitor: "Total — it's all yours to build",
+        },
+        {
+          label: "Own your data model",
+          carbon: "Open Postgres you control",
+          competitor: "Yours — once you've built it",
+        },
+        {
+          label: "Run it anywhere (incl. ITAR/GovCloud)",
+          carbon: "Ready to self-host",
+          competitor: "Yours to host, secure and certify",
+        },
+      ],
+    },
+    {
+      title: "Cost & risk",
+      rows: [
+        {
+          label: "Upfront investment",
+          carbon: "$40–$100 / user / mo",
+          competitor: "A standing engineering team, indefinitely",
+        },
+        {
+          label: "Ongoing maintenance",
+          carbon: "Included — updates, security, backups",
+          competitor: "Yours forever",
+        },
+        {
+          label: "Risk of never shipping",
+          carbon: "Shipping today",
+          competitor: "High — most in-house builds stall or sprawl",
+        },
+        {
+          label: "Compliance (ITAR / CMMC)",
+          carbon: "Ready",
+          competitor: "Design, build and certify it yourself",
+        },
+      ],
+    },
+  ],
+  whereItFitsTitle: "Where building it yourself still fits",
+  whereItFits:
+    "Building your own makes sense if manufacturing software is your product, or your process is so singular that no system could model it. For everyone else, the reason to build — owning and controlling your stack — is exactly what Carbon gives you without the multi-year bill: the full source code is yours from day one.",
+  outgrowingTitle: "Reasons not to build it yourself",
+  outgrowing: [
+    {
+      title: "The reason to build is ownership",
+      body: "You want to own and control your stack. With Carbon you already do — the full source code is yours — so building from scratch buys you nothing you don't already get.",
+    },
+    {
+      title: "Your engineers should build your product",
+      body: "Every month spent on an in-house ERP is a month not spent on what you sell. Carbon frees the team to build the thing customers actually pay for.",
+    },
+    {
+      title: "Most in-house builds never finish",
+      body: "ERP/MES is a moving target — new parts, processes and compliance. Carbon ships today and keeps evolving, without a permanent internal software project.",
+    },
+  ],
+  reasonsTitle: "Why manufacturers choose Carbon",
+  reasons: [
+    {
+      title: "Own it without building it",
+      body: "Carbon is the one manufacturing system that hands you the full source code. You get the ownership and control that drives teams to build — without the blank repo or the multi-year roadmap.",
+    },
+    {
+      title: "Live in days, not years",
+      body: "Start from a finished ERP, MRP, MES and QMS on one data model, and extend it over the API and a hosted MCP server when you need to.",
+    },
+    {
+      title: "Someone else maintains the plumbing",
+      body: "Updates, security and backups are handled. Your engineers extend the parts that make you different instead of maintaining an ERP.",
+    },
+    {
+      title: "Priced like software, not a project",
+      body: "Published, per-user pricing and a 30-day free trial — not several salaries a year with an uncertain finish line.",
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
 
 const COMPARISONS: Comparison[] = [
   NETSUITE,
@@ -1711,6 +1891,7 @@ const COMPARISONS: Comparison[] = [
   OPCENTER,
   FIRST_RESONANCE,
   PALANTIR,
+  BUILD,
 ];
 
 const BY_SLUG = new Map(COMPARISONS.map((c) => [c.slug, c]));

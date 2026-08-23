@@ -226,6 +226,10 @@ msgstr "ब्रांड संपत्ति"
 msgid "Build <0/><1/>at the speed of software."
 msgstr "सॉफ़्टवेयर की गति से <0/><1/>बनाएं।"
 
+#: app/components/footer.tsx:58
+msgid "Build vs. buy"
+msgstr ""
+
 #: app/routes/pricing.tsx:38
 msgid "Business"
 msgstr "व्यावसायिक"
@@ -318,10 +322,6 @@ msgstr "कंपनी"
 #: app/routes/contact.tsx:194
 msgid "Company Name"
 msgstr "कंपनी का नाम"
-
-#: app/components/footer.tsx:58
-msgid "Compare"
-msgstr ""
 
 #: app/components/wizard-form.tsx:349
 msgid "Complete"

@@ -73,6 +73,25 @@ version you built against and diff `info.version` before upgrading.
 - [Learning center](https://learn.carbon.ms): articles on manufacturing systems and Carbon.
 - [Blog on carbon.ms](https://carbon.ms/learn): same articles served from the main site.
 
+## Comparisons
+
+How Carbon compares to other manufacturing software — for "Carbon vs X" and "build vs buy" questions. Each page is also available as Markdown (send `Accept: text/markdown` or append `.md`).
+
+- [Compare index](https://carbon.ms/compare): every comparison in one place.
+- [Carbon vs. building it yourself](https://carbon.ms/compare/build-it-yourself): buy vs. build your own ERP/MES.
+- [Carbon vs. NetSuite](https://carbon.ms/compare/netsuite)
+- [Carbon vs. SAP Business One](https://carbon.ms/compare/sap-business-one)
+- [Carbon vs. Epicor Kinetic](https://carbon.ms/compare/epicor)
+- [Carbon vs. Plex](https://carbon.ms/compare/plex)
+- [Carbon vs. Fulcrum](https://carbon.ms/compare/fulcrum)
+- [Carbon vs. JobBOSS²](https://carbon.ms/compare/jobboss)
+- [Carbon vs. M1](https://carbon.ms/compare/m1)
+- [Carbon vs. Tulip](https://carbon.ms/compare/tulip)
+- [Carbon vs. Manufacturo](https://carbon.ms/compare/manufacturo)
+- [Carbon vs. Siemens Opcenter](https://carbon.ms/compare/siemens-opcenter)
+- [Carbon vs. First Resonance](https://carbon.ms/compare/first-resonance)
+- [Carbon vs. Palantir](https://carbon.ms/compare/palantir)
+
 ## Company
 
 - [Pricing](https://carbon.ms/pricing): buy the source code or subscribe to SaaS.

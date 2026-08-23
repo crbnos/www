@@ -226,6 +226,10 @@ msgstr "Фирменные материалы"
 msgid "Build <0/><1/>at the speed of software."
 msgstr "Строительство <0/><1/>со скоростью программного обеспечения."
 
+#: app/components/footer.tsx:58
+msgid "Build vs. buy"
+msgstr ""
+
 #: app/routes/pricing.tsx:38
 msgid "Business"
 msgstr "Бизнес"
@@ -318,10 +322,6 @@ msgstr "Компания"
 #: app/routes/contact.tsx:194
 msgid "Company Name"
 msgstr "Название компании"
-
-#: app/components/footer.tsx:58
-msgid "Compare"
-msgstr ""
 
 #: app/components/wizard-form.tsx:349
 msgid "Complete"
