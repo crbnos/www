@@ -1816,7 +1816,7 @@ const BUILD: Comparison = {
       rows: [
         {
           label: "Upfront investment",
-          carbon: "$40–$100 / user / mo",
+          carbon: "Significantly less than a programmer",
           competitor: "A standing engineering team, indefinitely",
         },
         {
