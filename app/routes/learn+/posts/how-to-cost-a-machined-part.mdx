@@ -1,0 +1,163 @@
+---
+title: "How to Cost a Machined Part (Worked Example)"
+publishedAt: "2026-07-18"
+summary: "A step-by-step guide to machine shop costing: material, setup, cycle time, and overhead, worked through real numbers on an actual bracket, ending in a defensible price."
+tag: "How-to"
+author: "chase"
+---
+
+To cost a machined part, you add up five things: raw material (with a scrap allowance), setup time amortized over the lot, cycle time at each operation's machine-hour rate, any outside processing, and overhead — then apply margin to reach a price. That's the whole formula. What trips shops up isn't the math, it's skipping steps or blending numbers that should stay separate. Below is the full machine shop costing calculation worked on a real bracket, operation by operation, with a cost-breakdown table you can copy.
+
+## The five inputs every machined-part cost needs
+
+Before you touch a calculator, you need:
+
+1. **Material** — the raw stock consumed per part, priced by weight or length, plus a realistic scrap allowance.
+2. **Setup time and a labor rate** — the fixed time to prepare each work center before the first good part, independent of lot size.
+3. **Run time and a machine-hour rate** — the per-piece cycle time at each operation, priced against that specific work center's fully loaded rate.
+4. **Outside processing** — anything sent out (anodize, heat treat, plating) priced at the vendor's quote.
+5. **Overhead and margin** — the shop-level costs a machine-hour rate doesn't capture, plus the profit you need to stay in business.
+
+Skip any one of these and you'll systematically over- or under-price every job that doesn't look exactly like your last one.
+
+## Step 1: Start from the routing, not the drawing
+
+You can't cost a part from a drawing alone — you cost the routing: the specific sequence of operations, work centers, and standard times it takes to build it. If that routing doesn't exist yet, or exists only in an estimator's head, build it first. We cover exactly how in [Setting up routings: work centers, operations, and standard times](/learn/setting-up-routings-work-centers). Every number below comes straight from a routing built that way.
+
+The part: **BRK-200**, a machined aluminum bracket — the same subassembly from our [bill of materials walkthrough](/learn/what-is-a-bill-of-materials) — quoted for a lot of 50. Its routing has three operations: saw the blank, mill the features on a 3-axis VMC, and deburr/inspect.
+
+## Step 2: Price the material
+
+BRK-200 consumes 0.8 lb of 6061-T6 aluminum bar stock per part. At $4.25/lb, raw material cost is:
+
+0.8 lb × $4.25/lb = **$3.40**
+
+Real cutting always loses some material to kerf, tool breakage, and the occasional scrapped part. Add a 5% scrap allowance:
+
+$3.40 × 1.05 = **$3.57 per part**
+
+Skip the scrap allowance and you're quoting a lab-perfect process that doesn't exist on your shop floor.
+
+## Step 3: Amortize setup cost over the lot
+
+Setup time is spent once per job, not once per part — a full setup to zero-in a fixture and qualify the first article costs the same whether you're running 5 parts or 500. You divide it across the lot.
+
+| Op | Work center | Rate | Setup time | Setup cost (lot of 50) | Setup cost/part |
+|---|---|---|---|---|---|
+| 10 | SAW-01 (bandsaw) | $65/hr | 10 min | $10.83 | $0.22 |
+| 20 | VMC-03 (3-axis mill) | $95/hr | 35 min | $55.42 | $1.11 |
+| 30 | BENCH-01 (deburr/inspect) | $45/hr | 0 min | $0.00 | $0.00 |
+| **Total** | | | | **$66.25** | **$1.33** |
+
+Notice the VMC setup dwarfs the others — that's typical. Milling setups (fixturing, tool offsets, first-article verification) usually carry most of a job's total setup cost, which is exactly why lot size matters so much for machined parts (more on that below).
+
+## Step 4: Cost cycle time with a machine-hour rate
+
+This is the step people botch most: pricing every machine at one flat "shop rate." A manual bandsaw and a 3-axis CNC mill do not cost the same amount to run per hour — the mill carries far more depreciation, tooling wear, and power draw. Each work center needs its own **machine-hour rate**: a blended rate covering machine depreciation, tooling, consumables, facility overhead allocated to that machine, and the loaded labor cost of the operator while it's running. If you haven't built these rates yet, [our machine-hour rate calculator and guide](/learn/machine-hour-rate-calculator) walks through deriving one correctly instead of guessing.
+
+With rates in hand, cycle cost is just run time × rate:
+
+| Op | Work center | Rate | Run time/part | Run cost/part |
+|---|---|---|---|---|
+| 10 | SAW-01 | $65/hr | 1.5 min | $1.63 |
+| 20 | VMC-03 | $95/hr | 8.4 min | $13.30 |
+| 30 | BENCH-01 | $45/hr | 2.5 min | $1.88 |
+| **Total** | | | | **$16.81** |
+
+The milling operation alone accounts for nearly 80% of run cost — the single biggest lever if you're trying to reduce this part's price is cutting VMC cycle time, not haggling over the bandsaw rate.
+
+## Step 5: Add outside processing
+
+BRK-200 gets anodized after machining. The vendor quotes $1.85 per part for the lot, which you carry straight through as a pass-through direct cost — no markup logic needed at this stage, though some shops add a handling margin on outside processing, which is a legitimate policy choice, just be consistent about it.
+
+## Step 6: Roll up direct cost, then apply overhead
+
+Add material, setup, run time, and outside processing:
+
+$3.57 + $1.33 + $16.81 + $1.85 = **$23.56 direct cost per part**
+
+Your machine-hour rates already absorb the overhead tied directly to running that machine. What they don't capture is general and administrative cost — quoting, quality, sales, facilities not allocated to a specific work center, administrative labor. Most shops apply this as a percentage of direct cost, commonly 10–20% depending on how much is already baked into the machine rates. At 15%:
+
+$23.56 × 0.15 = **$3.53**
+
+Total cost: $23.56 + $3.53 = **$27.09 per part**
+
+## Step 7: Add margin to reach price
+
+Decide whether you're targeting a margin on price or a markup on cost — they are not the same number, and confusing them quietly erodes profitability. A 35% margin *on price* means:
+
+Price = Cost ÷ (1 − margin) = $27.09 ÷ 0.65 = **$41.68**
+
+(A 35% *markup on cost*, by contrast, would be $27.09 × 1.35 = $36.57 — a materially lower price for the same "35%." Know which one your accounting actually uses.)
+
+## The full cost breakdown
+
+| Cost element | Amount/part |
+|---|---|
+| Material (0.8 lb 6061-T6 @ $4.25/lb, + 5% scrap) | $3.57 |
+| Setup (amortized over lot of 50) | $1.33 |
+| Run time (all three operations) | $16.81 |
+| Outside processing (anodize) | $1.85 |
+| **Direct cost subtotal** | **$23.56** |
+| Overhead (15% of direct cost) | $3.53 |
+| **Total cost** | **$27.09** |
+| Margin (35% of price) | $14.59 |
+| **Quoted price per part** | **$41.68** |
+| **Lot price (qty 50)** | **$2,084.00** |
+
+## Why quantity changes everything
+
+Run the same part at a lot of 200 instead of 50. Material, run cost, and outside processing per part don't move — but setup dilutes:
+
+$66.25 total setup ÷ 200 = **$0.33/part** (down from $1.33)
+
+Direct cost drops to $3.57 + $0.33 + $16.81 + $1.85 = $22.56. Overhead at 15% is $3.38, total cost $25.94, and price at a 35% margin falls to **$39.91** — about 4% lower, entirely because setup got spread further. If your quoting process doesn't recompute setup allocation at every quantity break, you're either overcharging on large lots or losing money on small ones.
+
+## Common mistakes that undercost (or overprice) a job
+
+- **One blended shop rate for every machine.** A $95/hr mill and a $45/hr bench get treated as interchangeable, which overprices simple work and underprices complex work.
+- **Forgetting to amortize setup**, or quoting only cycle time — fine for a 1,000-piece run, ruinous on a 10-piece prototype order.
+- **Mixing up margin-on-price and markup-on-cost** without realizing they diverge as the percentage grows.
+- **Letting standard cost go stale** after a tooling change, a rate increase, or a routing revision — see [BOM revision control](/learn/bom-revision-control) for how changes should flow through to cost.
+- **Ignoring real scrap and yield**, which understates material cost on every quote until a bad run makes it obvious.
+
+## Instant quoting tools vs. owning your costing model
+
+Tools like Paperless Parts and similar CAM-based instant quoting platforms do something genuinely useful: they recognize geometry from a 3D model and estimate cycle time automatically, which is a real advantage for a shop drowning in inbound RFQs that need a same-day turnaround. That's a legitimate strength worth taking seriously if quote volume is your bottleneck.
+
+But the underlying math those tools run is exactly what's in this article — material, setup, cycle time at a machine-hour rate, overhead, margin. The real question isn't whether a tool can estimate cycle time faster than an estimator; it's whether that resulting quote then lives in the same system that runs the job, so the actual labor and machine time captured on the work order gets reconciled back against what you quoted. A quote that's disconnected from job execution never tells you whether you were right. We cover the full quoting workflow, including how to protect margin from RFQ to accepted quote, in [Job shop quoting: RFQ to margin-protected quote](/learn/job-shop-quoting-rfq-to-quote).
+
+## How Carbon handles machined-part costing
+
+Carbon builds this exact calculation directly into the routing and job record instead of a separate spreadsheet:
+
+- **Per-work-center machine-hour rates**, not one blended shop rate, applied automatically to whatever operation a job runs through.
+- **Standard cost from the routing, actual cost from the job.** Because Carbon is ERP, MRP, MES, and QMS on one Postgres data model, the same routing that generates a standard cost estimate also captures actual labor and machine time as the work order runs — so you can see variance, not just a guess.
+- **Quantity-aware quoting.** Setup amortization recalculates automatically at every quantity break instead of a hand-adjusted spreadsheet formula.
+- **Open source and API-first.** The full costing and job-cost data model is in the public repo (github.com/crbnos/carbon) and reachable over a REST API (rest.carbon.ms), so you can pull actual-vs-standard cost data into your own reporting instead of being limited to a canned report.
+
+## Frequently asked questions
+
+### How do you calculate machine shop costing?
+
+Add material cost (with a scrap allowance), setup cost amortized over the lot, run time priced at each operation's machine-hour rate, and any outside processing. That total is your direct cost; apply an overhead percentage and your target margin to reach a price.
+
+### What is a machine-hour rate?
+
+A machine-hour rate is the fully loaded cost to run a specific work center for one hour — combining depreciation, tooling, consumables, facility overhead allocated to that machine, and loaded operator labor. Each work center should have its own rate rather than one shop-wide number.
+
+### Should setup cost be spread over the whole lot or charged per part?
+
+Spread it over the lot. Setup happens once per job regardless of quantity, so dividing the total setup cost by the lot size gives an accurate per-part figure that automatically gets cheaper at higher volumes.
+
+### What margin should a machine shop target?
+
+There's no universal number — it depends on your overhead structure, market, and risk on the job — but the more important discipline is knowing whether your target is margin-on-price or markup-on-cost, since the two produce meaningfully different prices at the same stated percentage.
+
+### Why did my quoted price change when the quantity changed?
+
+Because setup cost is fixed per job but spread across a variable number of parts. Material and run-time costs per part stay roughly constant across quantities; setup cost per part drops as lot size grows, which is why unit prices fall on larger orders even though nothing about the process changed.
+
+## Price your next job with real numbers
+
+If your quotes are built on a spreadsheet that doesn't separate setup from cycle time, or uses one shop rate for every machine, it's worth seeing what routing-driven costing looks like end to end. [Try Carbon free for 30 days](/pricing) at https://app.carbon.ms, or read the costing and job data model yourself on [GitHub](https://github.com/crbnos/carbon).

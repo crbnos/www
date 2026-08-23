@@ -1,0 +1,119 @@
+---
+title: "Odoo Manufacturing Review (2026): Where It Fits, Where It Breaks"
+publishedAt: "2026-08-09"
+summary: "An honest odoo manufacturing review: what the Manufacturing and MRP apps do well, and exactly where they break down for real discrete production."
+tag: "Odoo"
+author: "chase"
+---
+
+Odoo's Manufacturing app is the most widely deployed open-source production module in the world, and for good reason: it's cheap to start, it covers the basics of a bill of materials and a work order, and it plugs into one of the largest all-in-one business suites on the market. It is also, in our experience running and replacing it in real shops, a system that starts to strain the moment a factory gets more complicated than "make one thing, in one place, on one shift." This odoo manufacturing review covers both halves honestly: the real strengths, and the specific points where discrete and regulated manufacturers hit a wall.
+
+## What Odoo Manufacturing actually is
+
+Odoo is a modular business suite — CRM, sales, accounting, inventory, and dozens of other apps — built on a shared Postgres database, with Manufacturing (MRP) as one app among many. You get:
+
+- Bills of materials (single-level and multi-level) with routing operations
+- Manufacturing orders (MOs) that consume components and produce finished goods
+- Basic work centers with capacity and time tracking
+- Kanban-based reordering rules and simple MRP runs
+- A shop-floor tablet view for operators to log time and quantities
+- Barcode scanning for receipts, moves, and manufacturing confirmations
+
+For a company that needs to track "we bought parts, we assembled them, we sold the result," this is a genuinely capable, low-friction starting point — and it's why so many small shops start on Odoo.
+
+## Where Odoo Manufacturing genuinely earns its reputation
+
+Being fair here matters, because a credible teardown is more useful than a hit piece.
+
+**Breadth of the suite.** If you also need CRM, e-commerce, point of sale, HR, and accounting, Odoo covers all of it in one login with a consistent UI. Few competitors match that surface area at any price.
+
+**Price of entry.** The free Community edition and low-cost Enterprise apps mean a two-person startup can get a working BOM-to-MO flow running in an afternoon, often for less than the cost of a single seat of legacy ERP.
+
+**Ecosystem and talent supply.** Odoo has a large partner network, a large developer community, and thousands of community modules. If you need a custom connector or a implementation partner in most major markets, you can find one.
+
+**Genuine open source at the core.** Odoo Community is released under the LGPLv3, and the core is real, forkable, self-hostable code — not a stripped demo. That matters if you value auditability and independence from a single vendor's roadmap.
+
+**Fast iteration for simple BOMs.** For make-to-stock or light assemble-to-order work with shallow bills of materials, the MO flow is quick to learn and quick to operate.
+
+## Where it breaks for real discrete and regulated manufacturing
+
+The pattern we see repeatedly, in shops migrating off Odoo, is that the module was fine at pilot scale and started failing at production scale — usually 6 to 18 months in, once volume, mix, or a customer audit exposed the gaps.
+
+### 1. Scheduling is infinite-capacity by default
+
+Odoo's manufacturing orders schedule against work center *time*, not true finite capacity across competing jobs, tooling, and labor simultaneously. Enterprise added a Gantt-style planning view, but it is still fundamentally a visualization and manual-drag tool, not a constraint-based finite scheduler that automatically sequences dozens of jobs against real bottlenecks. For a single-cell shop this is tolerable. For a high-mix job shop juggling 40 open work orders across 12 machines, it means a planner is doing the sequencing math in their head — see our explainer on [finite capacity scheduling](/learn/what-is-finite-capacity-scheduling) for what "real" scheduling actually requires.
+
+### 2. Quality management is shallow
+
+Odoo's Quality app handles basic inspection checkpoints and quality alerts. It does not natively give you a controlled, revision-linked non-conformance workflow, a CAPA system tied to root-cause analysis, or the kind of first-article inspection record a AS9100 or ISO 13485 auditor expects to see traced to a specific lot and routing revision. Shops in aerospace, defense, or medical device work typically end up bolting on a separate QMS — which reintroduces the two-systems problem Odoo was supposed to solve. Our guide on [what a QMS in manufacturing](/learn/what-is-a-qms-in-manufacturing) actually needs to do is a useful checklist against Odoo's built-in Quality app.
+
+### 3. Traceability and genealogy are transaction logs, not a real digital thread
+
+Lot and serial tracking exists, but building a true "as-built" record — this serial number, made from these lots, on this routing revision, inspected by this operator, on this date — requires stitching together several modules and often custom reports. For recall-grade genealogy this is workable but brittle; see [lot and serial traceability](/learn/what-is-lot-serial-traceability) for what a purpose-built system captures by default.
+
+### 4. Costing and accounting depth
+
+Odoo's inventory valuation and manufacturing costing work for standard cost or average cost scenarios, but real job costing — actual labor, machine time, and overhead rolled up per work order and reconciled to the general ledger — takes configuration and, frequently, a partner. Native accounting is genuinely available in Odoo (unlike some competitors), which is a real strength; the gap is specifically in *manufacturing* cost visibility down to the job.
+
+### 5. Customization and upgrade friction compound over time
+
+Because Odoo's business model depends heavily on partner customization, most real deployments accumulate custom modules and view overrides. Those customizations are exactly what breaks on major version upgrades — a pattern common enough that we wrote a dedicated piece on [why Odoo implementations fail](/learn/why-odoo-implementations-fail) and a companion on the [upgrade problems](/learn/odoo-upgrade-problems) specifically.
+
+### 6. It's a generic ERP with a manufacturing app bolted on
+
+This is the structural point underneath all the others. Odoo was built as a general business suite first; manufacturing is one app among 30+. That's a rational design if you're a distributor or a services business. For a company whose entire value chain — quoting, routing, work orders, quality, traceability — revolves around production, a system built manufacturing-out tends to fit better than one built suite-in. We go deeper on this philosophical difference in [Carbon vs Odoo](/learn/carbon-vs-odoo-open-source-erp).
+
+## A quick scorecard
+
+| Capability | Odoo Manufacturing | What real discrete/regulated mfg needs |
+|---|---|---|
+| BOM & routing basics | Strong | Strong |
+| Finite capacity scheduling | Manual Gantt, not constraint-solved | Automatic, constraint-based sequencing |
+| Quality/NCR/CAPA | Basic checkpoints | Closed-loop CAPA tied to routing revision |
+| Traceability/genealogy | Possible, multi-module | Native, queryable digital thread |
+| Job costing | Configuration-heavy | Native, per-work-order actuals |
+| API coverage | XML-RPC/JSON-RPC, broad but generic | Full REST coverage of every table |
+| Upgrade path | Partner-dependent, customization risk | Versioned, low-friction |
+| Price of entry | Very low | Low, transparent |
+
+## A worked example: where the scheduling gap actually shows up
+
+It's easier to see why "manual Gantt" and "constraint-based scheduling" aren't the same thing with numbers attached. Say a job shop has 12 CNC machines and 40 open work orders in a given week, and three of those machines share a single certified operator. In Odoo, the planner opens the Gantt view and drags each manufacturing order onto a work center, checking by eye whether two orders requiring the same operator overlap, whether tooling changeover time is accounted for, and whether a rush order can be slotted in without silently blowing a due date three jobs downstream. Every new rush order or machine breakdown means re-checking the board by hand.
+
+A finite-capacity scheduling engine takes the same 40 work orders, the operator certifications, the tooling constraints, and the due dates, and computes a sequence automatically — then re-solves in seconds when a rush order or a machine down event changes the constraints. That's the difference between a *visualization* of your schedule and an actual *solver* for it. At 5 work orders a week this difference barely matters. At 40, it's the difference between a planner spending twenty minutes a day and a planner spending most of their morning re-sequencing a whiteboard.
+
+## Who should still choose Odoo
+
+To be direct about it: if your production is single-cell, low-mix, and you also need CRM, e-commerce, and HR in the same login, Odoo remains a rational choice, and no amount of manufacturing-native architecture elsewhere changes that math. The mistake we see most often isn't choosing Odoo — it's choosing Odoo for a job shop or a regulated manufacturer whose actual bottlenecks are scheduling, quality, and traceability, and discovering the gap only after a year of customization spend.
+
+## How Carbon approaches the same problems
+
+Carbon is also open-source — the difference is where it starts. Instead of a general business suite with a manufacturing app attached, Carbon is built manufacturing-first: production and work orders, finite-capacity scheduling, quality, inventory, purchasing, sales, and native accounting and job costing on one Postgres data model, with every table reachable over a REST API (rest.carbon.ms) and a hosted MCP server so AI agents can read and act on live shop data. Pricing is published rather than quoted — Starter at $40/user/month, Business at $100/user/month with the full API and accounting stack — and most implementations take about a month rather than a multi-quarter partner engagement, because there isn't a stack of custom modules to reconcile on every upgrade.
+
+That doesn't make Odoo wrong for every company — if your business is distribution-plus-light-assembly and you value the breadth of the suite, it's a reasonable choice. But if quality, traceability, and finite scheduling are core to your operation, it's worth seeing the [Carbon vs Odoo comparison](/compare/odoo) side by side before you commit a year of implementation time to either one.
+
+## Frequently asked questions
+
+### Is Odoo good for manufacturing?
+
+It's good for simple, low-mix manufacturing and for companies that also want CRM, sales, and accounting in one suite. It becomes harder to justify once you need finite-capacity scheduling, deep quality/CAPA workflows, or audit-grade traceability, where purpose-built manufacturing systems pull ahead.
+
+### Does Odoo support finite capacity scheduling?
+
+Not out of the box. Odoo Enterprise includes a Gantt-style planning view for manually sequencing manufacturing orders, but it does not automatically solve for finite capacity across machines, labor, and tooling the way a dedicated scheduling engine does.
+
+### Can Odoo pass an AS9100 or ISO 13485 audit?
+
+Companies do run Odoo in certified environments, but usually with significant customization or a bolted-on quality system, because the native Quality app doesn't natively provide closed-loop CAPA or revision-linked inspection records out of the box.
+
+### Is Odoo Manufacturing free?
+
+The Community edition, including basic Manufacturing, is free and open source (LGPLv3). Many manufacturing-relevant features — like advanced quality, maintenance, and some reporting — sit in paid Enterprise apps. See our [Community vs Enterprise breakdown](/learn/odoo-community-vs-enterprise) for specifics.
+
+### What's a good Odoo alternative for manufacturers?
+
+It depends on your mix and compliance needs. We cover the field, including Carbon, in [Best Odoo alternatives for manufacturers](/learn/best-odoo-alternatives-for-manufacturers).
+
+## Try it yourself
+
+If you're evaluating Odoo against something built manufacturing-first, the fastest way to know is to run your own BOM and routing through both. Carbon offers a [30-day free trial](/pricing), you can start at https://app.carbon.ms, or read the source on [GitHub](https://github.com/crbnos/carbon) before you commit.

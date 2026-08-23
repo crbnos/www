@@ -1,0 +1,90 @@
+---
+title: "Medical Device Manufacturing Software (ISO 13485 + Traceability)"
+publishedAt: "2026-06-28"
+summary: "A buyer's guide to medical device manufacturing software: ISO 13485, 21 CFR Part 11, DHR/DMR, UDI, and full traceability — and how the real options compare."
+tag: "Industry guides"
+author: "chase"
+---
+
+Medical device manufacturing software has to do two jobs at once that most industrial software treats as separate: run production (BOMs, routings, work orders, purchasing, costing) and produce a defensible quality record for every unit you ship (DHR, DMR, CAPA, traceability, electronic signatures). Buy a system that only does one of those well, and you'll spend the gap — usually discovered during a notified body audit or an FDA inspection — manually reconciling a production system against a bolted-on quality tool that doesn't share its data.
+
+This guide covers what the regulations actually require of your software, the realistic options on the market today, and where the honest tradeoffs are.
+
+## What the regulations actually require
+
+Nobody certifies a specific software product for medical device manufacturing. Instead, three overlapping requirements shape what your system needs to produce on demand:
+
+- **ISO 13485** requires document control, a device master record (DMR) — the definitive spec for how a device is built — and a device history record (DHR) proving each unit or lot was actually built to that spec, plus CAPA and risk management tied to production. We cover the clause-by-clause mapping in [ISO 13485 QMS: what medical device makers need from software](/learn/iso-13485-qms-software).
+- **21 CFR Part 11** governs electronic records and signatures for FDA-regulated manufacturers: audit trails that can't be edited after the fact, validated electronic signatures with the same legal weight as a wet signature, and access controls that prove who did what and when. If your DHR is electronic, Part 11 is not optional — see [21 CFR Part 11 & electronic DHRs](/learn/21-cfr-part-11-electronic-dhr) for what "compliant" actually means in practice.
+- **UDI (Unique Device Identification)** requires most devices to carry a standardized identifier and be submitted to the FDA's GUDID database, which means your system needs to generate, print, and record UDI data as part of the normal production flow — not as a spreadsheet exercise before submission.
+
+Underneath all three sits one non-negotiable capability: **full lot and serial traceability**, forward from raw material to finished device and backward from a complaint to the exact components, operators, and inspections involved. We go deep on how that genealogy actually works in [lot and serial traceability, explained](/learn/what-is-lot-serial-traceability).
+
+## Where medical device manufacturing actually breaks
+
+Device makers rarely fail on the production side — the parts get made. What breaks is the paper trail connecting the parts to the record. Three patterns show up constantly:
+
+1. **The DHR is assembled after the fact.** Someone pulls a BOM from one system, inspection results from a spreadsheet, and lot numbers from a third, then stitches them into a packet the week before an audit. Any inconsistency between what was actually built and what the packet says is a finding.
+2. **Quality and production don't share part numbers or lot numbers.** A nonconformance raised in the QMS references a lot number that has to be manually cross-referenced against inventory, because the QMS and the ERP are two different products that were never designed to agree.
+3. **Electronic signatures exist, but the audit trail underneath them doesn't hold up.** Part 11 doesn't just require a signature — it requires that the record it's attached to can't be silently altered afterward, and that the system was validated to do what you're relying on it to do.
+
+## The real options for medical device makers
+
+| Option | What it's good at | Where it falls short for device makers |
+|---|---|---|
+| **Spreadsheets + shared drives** | Zero cost to start; totally flexible | No referential integrity, no enforced revision control, DHRs assembled by hand — doesn't scale past a handful of SKUs or low volume |
+| **Standalone QMS (Greenlight Guru, MasterControl, QT9 QMS)** | Purpose-built for ISO 13485/Part 11 workflows: CAPA, document control, complaint handling | Not a production system — BOMs, work orders, inventory, and costing live elsewhere, so lot genealogy has to be manually reconciled between two products |
+| **PLM/QMS combos (Arena, Propel)** | Strong design history file and change control, good engineering-to-quality handoff | Still not a production/MRP system; you're typically running a third tool (or spreadsheets) for shop floor execution and inventory |
+| **Legacy manufacturing ERP (Epicor, QAD, Made2Manage)** | Mature MRP, real production scheduling, established in regulated industries | Quality is usually a shallow add-on module; implementations are long and expensive; often not source-available, so validating the software itself under clause 4.1.6 means trusting the vendor's word |
+| **Generic cloud ERP (NetSuite, Business Central)** | Fast to deploy, good financials, familiar to accounting teams | Manufacturing and quality are add-on modules or third-party add-ons stitched on top — traceability and DHR generation are rarely native |
+| **Carbon** | ERP + MRP + MES + QMS on one Postgres data model, so DHR, DMR, and traceability are queries against the same production data — not a separate reconciliation step. Source-available and self-hostable. | Fewer years in medical device than the legacy incumbents — but under clause 4.1.6 you validate the software's actual behavior, not the vendor's age, and because the source is inspectable that validation rests on what the system provably does rather than a black box you take on trust |
+
+None of these is a wrong answer in every case. A well-run standalone QMS paired with a disciplined ERP can pass audits — it just requires more manual discipline to keep the two systems in agreement, and that discipline is exactly what erodes under production pressure.
+
+## Why "ERP and QMS on one data model" matters here specifically
+
+The core problem with bolt-on quality software isn't that it's badly built — several of the standalone QMS products above are genuinely good at document control and CAPA workflows. The problem is structural: if your production system and your quality system are two separate databases, someone has to keep the lot numbers, part numbers, and work order references in sync between them by hand, forever. That reconciliation work is invisible until an auditor asks a question your system can't answer without three people and an afternoon.
+
+When ERP, MRP, MES, and QMS run on one data model, a DHR isn't assembled — it's generated by running a query against the same work orders, lot records, and inspection results that were used to actually build the unit. A nonconformance raised on an inspection can automatically hold the affected lot in inventory before it ships, because "inventory" and "quality" are the same tables, not two systems calling an integration.
+
+## Requirements checklist before you buy
+
+- Does the system generate a DHR from live production data, or does someone assemble it manually from multiple sources?
+- Is lot/serial traceability bidirectional (forward from material, backward from complaint) down to the level your device class requires — component-level for implantables?
+- Does document control enforce revision — can an obsolete work instruction actually be used on the floor, or is it blocked?
+- Are electronic signatures and the underlying audit trail validated to Part 11, with a tamper-evident history, not just a signature field?
+- Can the system produce and track UDI data as part of the normal production record?
+- Is CAPA linked to the actual work orders and lots affected, or is it a free-text field disconnected from production?
+- If the system is self-hosted or source-available, can you actually inspect what it does for your own software validation record — or are you validating a black box?
+
+## How Carbon fits
+
+Carbon runs ERP, MRP, MES, and QMS on one Postgres data model, so a device's DHR is a query against the same work order, lot, and inspection data used to build the unit — not a document assembled from three disconnected tools. Document control, nonconformances, CAPA, and training records reference the same part and work order IDs used on the shop floor, so traceability runs forward and backward without re-keying data. Every table is reachable over a [REST API](/developers), which means a nonconformance raised during inspection can automatically place a hold on the affected lot in inventory. Carbon is source-available and self-hostable — useful for the software validation requirement in clause 4.1.6, since you can inspect what the system actually does rather than take a vendor's word for it. Implementations typically run around a month, versus the multi-month timelines common with legacy manufacturing ERP.
+
+For the clause-by-clause ISO 13485 mapping, read [ISO 13485 QMS: what medical device makers need from software](/learn/iso-13485-qms-software). If your electronic records also need to satisfy FDA Part 11, see [21 CFR Part 11 & electronic DHRs](/learn/21-cfr-part-11-electronic-dhr).
+
+## Frequently asked questions
+
+### Is there software certified for ISO 13485 or FDA compliance?
+
+No. Neither ISO 13485 nor the FDA certifies specific software products. What matters is whether your validated system produces the required records (DMR, DHR, traceability, CAPA) and, for Part 11, maintains a compliant electronic audit trail and signatures.
+
+### Can I run a medical device shop on a standalone QMS plus a separate ERP?
+
+Yes, and many companies do — but every lot number, part number, and work order reference has to be kept consistent by hand between the two systems, which is exactly the manual reconciliation that tends to fail under audit pressure or production growth.
+
+### Do small or early-stage device startups need this level of software before they're profitable?
+
+If you're pursuing CE marking or FDA clearance, yes, effectively — ISO 13485 or an equivalent quality system is required regardless of company size, and the record-keeping habits are much cheaper to build in from the start than to retrofit before a first audit.
+
+### What's the difference between UDI and lot/serial traceability?
+
+UDI is a standardized identifier submitted to a regulatory database (GUDID) so a device can be uniquely identified in commerce. Lot/serial traceability is the internal genealogy — which raw material lots, operations, and inspections went into a specific unit — that your traceability system has to maintain regardless of UDI.
+
+### Why does self-hosting matter for a medical device manufacturer?
+
+Self-hosting lets you control where production and quality data physically live, which matters for data residency requirements some device makers face, and it lets you validate the actual software (not a black-box SaaS product) against your own software validation procedure under clause 4.1.6.
+
+## Try Carbon's ERP + QMS on real data
+
+If your DHRs are still stitched together from a QMS tool, a spreadsheet, and your ERP's inventory screen, [try Carbon free for 30 days](/pricing) at https://app.carbon.ms and see traceability, document control, and CAPA running against the same production data your devices are built from. Prefer to inspect the system first? The source is on [GitHub](https://github.com/crbnos/carbon).

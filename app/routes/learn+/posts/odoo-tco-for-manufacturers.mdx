@@ -1,0 +1,88 @@
+---
+title: "The Real Cost of 'Free' ERP: Odoo TCO for a 50-Person Manufacturer"
+publishedAt: "2026-08-03"
+summary: "An honest, worked 3-year Odoo total cost of ownership example for a 50-person manufacturer — licenses, hosting, implementation and maintenance."
+tag: "Odoo"
+author: "chase"
+---
+
+Odoo pricing headlines with a free Community edition, and that's true as far as it goes — the Community codebase costs nothing to download and run. But "free ERP" and "free total cost of ownership" are different claims, and for a manufacturer, the gap between them is usually the whole story. Once you add the Enterprise apps that manufacturing actually needs, hosting, implementation, and ongoing maintenance, a realistic three-year total cost looks nothing like the sticker price.
+
+This article builds a worked example, clearly labeled as illustrative, not an official Odoo quote — every shop's numbers will differ based on partner rates, hosting choice, and how much gets customized. The goal is to show you the categories that belong in a TCO calculation so you can build your own honest number, whatever ERP you're evaluating.
+
+## Why "free" undersells the real cost
+
+Odoo Community (LGPL, free) covers core inventory, basic manufacturing (MRP), and CRM/sales at no license cost. But the manufacturing capabilities most shops actually need — Quality, PLM/engineering change orders, Shop Floor (MES-style execution), and finite capacity scheduling — sit behind Odoo Enterprise, priced per user per month. We cover the specific feature gap between the two tiers in [Odoo Community vs Enterprise for manufacturers](/learn/odoo-community-vs-enterprise); the short version is that most manufacturers past a handful of users end up on Enterprise, because Community's manufacturing app is intentionally lighter.
+
+Enterprise list pricing has historically run in roughly the $31–$76 per user per month range depending on plan and commitment, before implementation and hosting are added — and that's before accounting for the additional apps often needed to close manufacturing-specific gaps, like a frePPLe integration for finite scheduling. So the honest starting point for a TCO comparison isn't "free vs. paid" — it's "Odoo Enterprise's published range vs. everything else that goes with it."
+
+## The categories a real TCO includes
+
+1. **Per-user licensing** — Enterprise seats for everyone who touches the system: office staff, planners, and often shop-floor users if you want Shop Floor app access.
+2. **Hosting** — Odoo Online (Odoo's managed SaaS), Odoo.sh (Odoo's PaaS), or self-hosted infrastructure you run and patch yourself.
+3. **Implementation / partner hours** — configuration, data migration, training, and testing, typically billed by a certified partner at an hourly or project rate.
+4. **Customization** — the custom modules built to close manufacturing-specific gaps (finite scheduling, custom costing, integrations).
+5. **Ongoing maintenance** — the recurring upgrade tax we cover in [Odoo upgrade problems](/learn/odoo-upgrade-problems): re-validating customizations against each new major version.
+6. **Training and internal admin time** — often unbudgeted, always real: someone on staff becomes the de facto Odoo administrator.
+
+## Worked example: a 50-person manufacturer, three years
+
+Assume a 50-person discrete manufacturer where 20 people need full ERP seats (planning, purchasing, sales, accounting, quality) and 20 shop-floor operators need lighter execution access. This is an illustrative example built to show the shape of the calculation — treat every number as a placeholder for your own quotes, not a benchmark.
+
+| Cost category | Year 1 | Year 2 | Year 3 | 3-yr total |
+|---|---|---|---|---|
+| Enterprise licenses (20 full seats @ ~$55/user/mo) | $13,200 | $13,200 | $13,200 | $39,600 |
+| Shop Floor app (20 operator seats @ ~$35/user/mo) | $8,400 | $8,400 | $8,400 | $25,200 |
+| Hosting (Odoo.sh, mid tier) | $3,600 | $3,600 | $3,600 | $10,800 |
+| Implementation (partner-led, ~300 hrs @ $150/hr) | $45,000 | — | — | $45,000 |
+| Custom modules (finite scheduling, costing, ~150 hrs) | $22,500 | — | — | $22,500 |
+| Annual upgrade / maintenance tax (partner hrs) | — | $15,000 | $18,000 | $33,000 |
+| Internal admin time (0.25 FTE, loaded) | $18,000 | $18,000 | $18,000 | $54,000 |
+| **Total** | **$110,700** | **$58,200** | **$61,200** | **$230,100** |
+
+That works out to roughly **$1,534 per user per year, averaged across all 40 seats over three years** — a very different number from "Community is free," and one that's easy to miss if the TCO conversation stops at license price. Your own numbers will move based on partner rate, how much customization your process actually needs, and whether you self-host instead of using Odoo.sh — but the categories, and the fact that implementation and maintenance dwarf licensing in year one, tend to hold across shops we've talked to evaluating Odoo.
+
+## Comparing to Carbon's published pricing
+
+Carbon's pricing is public and doesn't require a sales call to see: **Starter is $40/user/month** (managed cloud, core ERP/MES/QMS), and **Business is $100/user/month** (adds support, full API/webhooks, native accounting, audit logging, and the advanced feature set, with a 5-user minimum). Enterprise — self-host or managed, with a forward-deployed engineer, migration help, SSO/SAML, and ITAR-capable deployment — is quote-based, the same way any deployment with those requirements would be.
+
+The structural difference from the Odoo example above isn't the headline per-user number — it's what's included in it. Business-tier Carbon includes finite capacity scheduling, MES, and QMS as the core product, not an Enterprise add-on plus a frePPLe integration plus a custom CAPA module. And because implementations are typically around a month rather than a multi-month partner engagement, the large one-time implementation and customization line items in the table above shrink substantially — not to zero (data migration and process mapping are real work regardless of platform), but the customization line in particular tends to be far smaller because less has to be built to reach feature parity.
+
+If you want to build your own comparison, the [Carbon pricing page](/pricing) has the full published breakdown, and [Odoo Community vs Enterprise for manufacturers](/learn/odoo-community-vs-enterprise) has the detailed feature gap that determines which Odoo tier — and which price — your process actually requires. For a sense of what TCO can look like on the other end of the market, see [what SAP actually costs a 50-person machine shop](/learn/what-sap-costs-a-50-person-machine-shop).
+
+## Where self-hosting changes the math
+
+Self-hosting Odoo instead of using Odoo.sh or Odoo Online removes the hosting subscription line item, but it doesn't remove hosting cost — it converts it into infrastructure, security patching, backups, and uptime monitoring that your own team (or a hired DevOps contractor) now owns. For a 50-person manufacturer without existing infrastructure staff, that's typically a wash at best: the subscription fee gets replaced by server costs plus a fraction of an engineer's time, and the shop now carries operational risk — a failed backup, a missed security patch, an unplanned outage during a production shift — that a managed offering would otherwise absorb. Self-hosting can genuinely lower TCO for organizations that already run infrastructure at scale and can spread that fixed cost across many systems; it rarely does for a standalone 50-person shop evaluating ERP for the first time.
+
+This is worth stating plainly because "self-hosted, so it's free" is a common assumption in open-source ERP evaluations, and it understates the real cost the same way "Community is free" does. The honest comparison isn't licensing cost vs. self-hosting cost — it's total operational burden, wherever it lands.
+
+## How to build your own honest TCO
+
+1. **Get real quotes, not list prices**, for both licensing and implementation — partner rates and scope vary enormously.
+2. **Count every seat that needs access**, including shop-floor users, not just office staff.
+3. **Ask explicitly what's Enterprise-only** for your required manufacturing capabilities (Quality, PLM, Shop Floor, finite scheduling) and price those apps in from the start.
+4. **Budget a recurring line for upgrades**, not just the initial build — treat it as an annual cost, not a one-time risk.
+5. **Include your own team's time**, not just vendor invoices — someone will spend real hours administering and troubleshooting the system.
+6. **Run the same exercise for every vendor you're evaluating**, including Carbon — a fair TCO comparison uses the same categories and the same honesty about what's included, for every option on the table.
+
+## Frequently asked questions
+
+### Is Odoo Community actually free to run?
+
+The software license costs nothing, but running it in production still requires hosting, implementation, and ongoing maintenance — none of which are free. For manufacturing specifically, Community's lighter MRP app often isn't sufficient once a shop needs real quality management, engineering change control, or finite scheduling, which pushes the decision toward paid Enterprise.
+
+### What's the biggest hidden cost in an Odoo manufacturing implementation?
+
+Implementation and customization hours, by a wide margin, especially in year one. License cost is usually the smallest line item in a realistic three-year total, not the largest.
+
+### How does Odoo's TCO compare to a legacy ERP like SAP?
+
+Directionally lower for most SMB manufacturers, but the gap is narrower than the license price difference suggests once Enterprise apps, partner implementation, and customization are included. See [what SAP actually costs a 50-person machine shop](/learn/what-sap-costs-a-50-person-machine-shop) for the comparison on the higher end of the market.
+
+### Does self-hosting Odoo lower TCO?
+
+It can lower the hosting line item and remove Odoo Online/Odoo.sh subscription fees, but it shifts infrastructure management, security patching, and backups onto your own team — a real cost that's easy to under-budget.
+
+## See the numbers for your own shop
+
+The clearest way to compare total cost is to see what's actually included at each price point. [Check Carbon's published pricing](/pricing), or [start a free 30-day trial](https://app.carbon.ms) and see how much of your manufacturing process is covered without adding a single custom module or third-party integration.

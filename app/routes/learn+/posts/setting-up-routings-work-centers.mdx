@@ -1,0 +1,125 @@
+---
+title: "Setting Up Routings: Work Centers, Operations, and Standard Times"
+publishedAt: "2026-07-15"
+summary: "A step-by-step guide to manufacturing routing setup: defining work centers, sequencing operations, and setting standard times that power scheduling and costing."
+tag: "How-to"
+author: "chase"
+---
+
+Manufacturing routing setup means three things done in order: define your work centers with their available capacity and a cost rate, list the operations a part passes through in sequence, and assign a setup time and run time to each operation at each work center. That data — not the drawing, not the BOM — is what your scheduler sequences against and what your cost system prices against. Get it right once and two other systems get materially better for free; get it wrong and both quietly produce bad numbers indefinitely.
+
+This is a step-by-step walkthrough, with a worked routing on a real part, of how to set one up properly.
+
+## What a routing is, and why a sloppy one breaks two other systems
+
+A routing is the ordered set of operations, work centers, and standard times a part goes through from raw material to finished good — the manufacturing equivalent of the BOM's "what," describing "how" and "how long." It's also the traveler an operator follows on the shop floor; see [What is a router / job traveler?](/learn/what-is-a-router-traveler) for how that document gets used in production.
+
+Two systems consume routing data directly:
+
+- **Scheduling** needs to know which work center each operation runs on, how long setup and run take, and in what sequence, to build a feasible finite-capacity plan.
+- **Costing** needs the same setup and run times, priced against each work center's rate, to produce an accurate standard cost.
+
+If the routing blends setup and run into one guessed number, or points to the wrong work center, both downstream systems inherit the error — a scheduler will build an infeasible plan, and a cost estimate will be wrong in a way nobody catches until the job comes in over budget.
+
+## Step 1: Define your work centers
+
+A work center is a schedulable, costable unit — a machine, a manual workstation, or a labor pool — distinct from the specific physical machine, in case you have several interchangeable ones. For each work center, capture:
+
+- **Name/ID** — a short, consistent identifier (SAW-01, VMC-03).
+- **Resource type** — machine, labor, or both (a CNC mill needs an operator present; a manual deburr bench is pure labor).
+- **Available capacity** — hours per shift, number of shifts, and a realistic efficiency percentage (few work centers run at 100% of nameplate capacity once you account for tool changes, minor stoppages, and material handling).
+- **Cost rate** — a $/hour machine-hour rate blending depreciation, tooling, consumables, allocated facility overhead, and loaded operator labor while it runs. Building this rate correctly (not just an hourly wage) is its own exercise — see [Machine-hour rate calculator + guide](/learn/machine-hour-rate-calculator).
+
+Worked example — three work centers for a machined bracket:
+
+| Work center | Type | Rate | Capacity |
+|---|---|---|---|
+| SAW-01 | Machine + labor | $65/hr | 1 shift, 8 hr/day |
+| VMC-03 | Machine + labor | $95/hr | 2 shifts, 16 hr/day |
+| BENCH-01 | Labor only | $45/hr | 1 shift, 8 hr/day |
+
+## Step 2: Break the part into operations
+
+An operation is a discrete step performed at one work center, in a defined position in the sequence. For each operation, define an operation number, a short description, the work center it runs on, and its position relative to the operations before and after it.
+
+Number operations in increments of ten (10, 20, 30…) rather than sequentially (1, 2, 3…). If you later discover you need an inspection step between the current op 20 and op 30, you insert it as op 25 without renumbering everything downstream — a small convention that saves real friction over a part's life.
+
+Worked example — **BRK-200**, a machined aluminum bracket (the same part costed in [How to cost a machined part](/learn/how-to-cost-a-machined-part)):
+
+| Op | Description | Work center |
+|---|---|---|
+| 10 | Saw blank from bar stock | SAW-01 |
+| 20 | Mill features (3-axis) | VMC-03 |
+| 30 | Deburr and inspect | BENCH-01 |
+
+## Step 3: Set standard times — setup and run, kept separate
+
+This is the step that most determines whether your routing is actually useful downstream. Setup time is the time to prepare a work center — fixturing, tool changes, zeroing, first-article verification — incurred once per job regardless of quantity. Run time is the per-piece (or per-hundred-piece) time once the operation is actually producing parts. Blend the two into a single "time per part" and you lose the ability to model lot-size sensitivity correctly in both scheduling and costing — a job of 5 and a job of 500 do not scale the same way if setup is baked into a per-piece number.
+
+Standard times come from one of three sources, in increasing order of rigor:
+
+1. **Historical actuals** — average completed run times from prior work orders on the same or a similar part. The most practical starting point for most shops, since the data already exists.
+2. **Time study** — direct stopwatch observation of a representative run, useful for new parts with no history.
+3. **Engineered standards** (e.g., MTM-based predetermined time systems) — used in high-volume, highly repetitive environments where the investment in formal time study pays for itself; overkill for most low-volume job shop work.
+
+Whichever source you use, write down where the number came from and revisit it after the process changes — a stale standard time is worse than an honest estimate, because it looks authoritative.
+
+Worked example — standard times for BRK-200's three operations:
+
+| Op | Work center | Setup time | Run time (per part) |
+|---|---|---|---|
+| 10 | SAW-01 | 10 min | 1.5 min |
+| 20 | VMC-03 | 35 min | 8.4 min |
+| 30 | BENCH-01 | 0 min | 2.5 min |
+
+Notice that op 20's setup (35 minutes) dwarfs the other two combined — a realistic pattern, since fixturing and tool-offset work on a CNC mill is almost always the dominant setup cost in a machined-part routing. That's exactly the number this article's costing companion piece uses to show how setup gets amortized across a lot.
+
+## Step 4: Attach the routing to the part and keep it under revision control
+
+The routing should live alongside the BOM as a controlled, versioned object tied to the part revision — not a document maintained separately from engineering changes. When a BOM revision changes a component in a way that affects the process (a different fastener requiring a different tool, a material change requiring a different feed rate), the routing should change through the same controlled process. See [BOM revision control without breaking production](/learn/bom-revision-control) for how effectivity dates and engineering change orders keep routing and BOM changes synchronized instead of drifting apart.
+
+## Step 5: Validate the routing against a real work order
+
+Standard times are estimates until they're checked against reality. Run the routing on an actual work order, and compare the operator-reported actual time (captured on the traveler — again, see [What is a router / job traveler?](/learn/what-is-a-router-traveler)) against the standard. A consistent gap in either direction — actuals always running longer, or shorter, than standard — means the standard needs adjusting, not that the operator is under- or over-performing. This feedback loop is what keeps a routing accurate over the life of the part, rather than a one-time guess that quietly diverges from reality.
+
+## Why this data powers scheduling
+
+A finite-capacity scheduler can only build an achievable plan if it knows, for every job, which work centers are involved, in what order, and for how long each will occupy that resource. Feed it setup and run times that are blended, missing, or wrong, and the resulting schedule looks precise while being fiction. [What is production planning?](/learn/what-is-production-planning) covers how routing data feeds into the broader planning process, including how finite capacity scheduling uses exactly this information to sequence work against real constraints.
+
+## Why this data powers costing
+
+The same three operations above are the exact ones used to build BRK-200's full cost, operation by operation — setup amortized over the lot, run time priced at each work center's machine-hour rate. [How to cost a machined part](/learn/how-to-cost-a-machined-part) walks that calculation through to a finished quote using this precise routing, which is the clearest demonstration of why routing setup isn't a documentation exercise — it's the input both your quote and your schedule are actually built from.
+
+## Common mistakes when setting up routings
+
+- **Blending setup and run into a single "time per part" number**, which breaks lot-size sensitivity in costing and produces false precision in scheduling.
+- **Sequential operation numbering with no gaps** (1, 2, 3…), which makes inserting a missed step later painful and error-prone.
+- **One blanket shop rate for every work center**, instead of a rate that reflects what each machine or labor pool actually costs to run.
+- **Never revisiting standard times** after a tooling upgrade, a fixture redesign, or a material change — the routing keeps quoting a process that no longer exists.
+- **Leaving outside processing off the routing** entirely. Vendor operations (anodize, heat treat, plating) should still appear as a step with a cost and a lead time, even if you're not scheduling internal capacity against it.
+
+## Frequently asked questions
+
+### What is a routing in manufacturing?
+
+A routing is the ordered list of operations, work centers, and standard setup and run times a part or assembly goes through from raw material to finished good. It's the primary input for both production scheduling and job costing.
+
+### What's the difference between a work center and a machine?
+
+A work center is a schedulable, costable resource — which may be a specific machine, a labor pool, or a combination of both — used for planning and cost purposes. A shop may have multiple identical machines assigned to one work center, or split a single flexible machine across several work centers depending on the operation.
+
+### What's the difference between setup time and run time?
+
+Setup time is incurred once per job to prepare the work center (fixturing, tool changes, first-article verification), regardless of how many parts are made. Run time is the time per piece once the operation is actively producing parts. Keeping them separate is essential for accurate costing and scheduling across different lot sizes.
+
+### How do you determine standard times for a new operation?
+
+The most practical approach for most shops is averaging historical actuals from similar prior jobs. For a genuinely new process with no history, direct time study (stopwatch observation of a representative run) is the next step; formal engineered time standards are typically reserved for high-volume, highly repetitive production.
+
+### Does every part need its own routing?
+
+Yes, in the sense that every part needs a defined path through operations and work centers before it can be scheduled or costed accurately — even a simple one-operation part benefits from having its setup and run time formally captured rather than estimated on the fly for every quote.
+
+## Build routings that actually power your shop
+
+If your routings today are a rough guess in a quoting spreadsheet rather than structured data feeding scheduling and costing, it's worth seeing what a routing-driven system looks like end to end. [Try Carbon free for 30 days](/pricing) at https://app.carbon.ms, or look at how routings, work centers, and standard times are modeled on [GitHub](https://github.com/crbnos/carbon).

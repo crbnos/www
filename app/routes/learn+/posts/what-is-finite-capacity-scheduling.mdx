@@ -1,0 +1,100 @@
+---
+title: "What Is Finite Capacity Scheduling?"
+publishedAt: "2026-08-11"
+summary: "Finite capacity scheduling explained: how it differs from infinite capacity, a worked example, and why many popular ERPs schedule around this limitation."
+tag: "Manufacturing basics"
+author: "chase"
+---
+
+Finite capacity scheduling is production scheduling that respects the actual number of hours each machine, cell, or person has available — so a schedule can never assign more work to a resource than it physically has time to run. The alternative, infinite capacity scheduling, ignores that constraint and will happily stack twenty hours of work onto an eight-hour shift, producing a schedule that looks complete on screen and is impossible on the floor.
+
+If you've ever pulled up a schedule that says a machine is due to finish three jobs "today" when it can only physically run one, you've seen infinite capacity scheduling in action. Understanding the difference matters because it's one of the most consequential — and least discussed — decisions baked into how your ERP or MRP system actually calculates dates.
+
+## Infinite vs. finite capacity, in plain terms
+
+**Infinite capacity scheduling** treats every work center as if it has unlimited hours. When you plan a job, the system schedules each operation to start the moment the previous operation finishes and the required material is available — full stop. It never checks whether the work center is already committed to other jobs during that window. The math is simple and fast, but the output is a schedule of *dates*, not a schedule of *reality*.
+
+**Finite capacity scheduling** checks each work center's actual available hours — accounting for shift patterns, planned downtime, and everything else already queued against it — before assigning a start time. If a machine is already booked solid through Thursday, a new job's operation on that machine gets scheduled for Friday, not "as soon as the material shows up."
+
+The difference sounds small until you look at what each one produces for the same set of jobs.
+
+## A worked example
+
+Say a machine shop runs one CNC mill, available 8 hours per day, and needs to schedule three jobs that all require that mill:
+
+| Job | Milling hours required | Due date |
+|---|---|---|
+| Job A | 5 hrs | Day 1 |
+| Job B | 6 hrs | Day 1 |
+| Job C | 4 hrs | Day 2 |
+
+**Infinite capacity** looks at each job independently against its material availability and due date, and schedules all three to start on Day 1, because nothing in the calculation checks whether the mill is already busy. The schedule reports all three jobs as "on track" for Day 1 — a physical impossibility, since Job A and Job B alone already require 11 hours on an 8-hour machine.
+
+**Finite capacity** looks at the mill's actual 8-hour window per day and sequences the work against it. Using a simple priority (say, due date, then order entered):
+
+- Day 1: Job A runs (5 hrs), then Job B starts and gets 3 of its 6 hours in (8 hrs used, day full).
+- Day 2: Job B finishes its remaining 3 hours (3 hrs used), then Job C runs its 4 hours (7 hrs used, day full).
+- Job C — due Day 2 — actually finishes on Day 2, just barely. Job B slips past its Day 1 due date.
+
+That's not a better answer than the infinite-capacity version — it's an *honest* one. It tells the planner, today, that Job B is going to be late unless something changes: overtime, an outside process, reprioritization, or pushing Job C. Infinite capacity scheduling would have hidden that conflict until Job B's due date arrived and it simply wasn't done.
+
+This is the core value proposition of finite capacity scheduling: it converts capacity problems from a surprise on the due date into a decision you can make in advance.
+
+## Why this matters for real planning decisions
+
+A schedule you can't trust doesn't just cause late shipments — it erodes every decision built on top of it:
+
+- **Quoting new work.** If your system can't tell you a work center is already booked, you'll quote a delivery date that was never achievable the moment you promised it.
+- **Purchasing timing.** MRP-driven purchase timing assumes production will consume material roughly when scheduled. If the schedule is fictional, materials show up early and sit as extra WIP, or late and stall a job that was never really going to start on time anyway.
+- **Overtime and outsourcing decisions.** Finite capacity scheduling surfaces bottlenecks early enough to actually do something about them — authorize overtime, send an operation outside, or renegotiate a due date — instead of discovering the conflict the morning a job is due.
+- **Trust in the schedule.** Once planners and supervisors learn a system's dates are aspirational rather than real, they stop trusting it and go back to spreadsheets and whiteboards, which defeats the purpose of having a scheduling system at all.
+
+For the broader planning layer this sits inside — how demand turns into a production plan in the first place — see [what production planning is](/learn/what-is-production-planning), and for shops juggling many different parts through the same limited machines, see [production scheduling for high-mix, low-volume shops](/learn/production-scheduling-high-mix-low-volume).
+
+## Why this is a real limitation in popular ERPs
+
+This isn't a niche technical detail — it's a genuine gap in some of the most widely deployed manufacturing ERPs. Odoo Manufacturing, for example, schedules using infinite capacity by default: it calculates operation dates based on lead times and predecessor completion, without checking whether the assigned work center actually has open hours in that window. Finite capacity scheduling in Odoo requires additional configuration and, in practice, still doesn't behave like a true finite-capacity scheduler out of the box for most manufacturers. See our [Odoo Manufacturing review](/learn/odoo-manufacturing-review) for a fuller assessment of where Odoo's production module holds up and where it doesn't.
+
+That gap matters more as a shop's mix gets more complex. A single-product line with generous lead times can often get away with infinite capacity scheduling — there's enough slack that the fiction rarely bites. A job shop running dozens of different parts through a handful of shared machines cannot; the whole value of a schedule is telling you, honestly, which machine is the constraint this week.
+
+## What to look for when evaluating a system
+
+| Question | Why it matters |
+|---|---|
+| Does the schedule check work center hours, or just lead times and dependencies? | This is the infinite vs. finite question directly. |
+| Can it show a bottleneck before the due date, not just after it's missed? | Finite capacity's whole value is early warning. |
+| Does it account for planned downtime, shift patterns, and existing commitments? | A finite scheduler that ignores maintenance windows isn't actually finite. |
+| Can a planner re-sequence or override the schedule when priorities change? | Automated sequencing needs a manual override for judgment calls (a hot job, a customer escalation). |
+| Does rescheduling one job automatically reflow the jobs behind it? | Manual rescheduling of a whole queue after one change doesn't scale past a handful of jobs. |
+
+## How Carbon approaches capacity
+
+Carbon schedules against each work center's actual available capacity rather than assuming unlimited hours, so a schedule reflects what a machine or cell can genuinely absorb — not just what the math of lead times implies. Because scheduling, work orders, and work center capacity all live on the same Postgres data model as the rest of the ERP, a change to a routing's standard time or a work center's available hours reflects in the schedule immediately, instead of requiring a separate scheduling module to be resynced.
+
+That matters most for exactly the shops where infinite capacity scheduling breaks down fastest: high-mix, make-to-order manufacturers where a handful of shared machines are the real constraint on the business. If you're setting up the work centers, operations, and standard times a finite scheduler needs in the first place, see [setting up routings: work centers, operations, standard times](/learn/setting-up-routings-work-centers).
+
+## Frequently asked questions
+
+### Is finite capacity scheduling the same as finite loading?
+
+Yes, the terms are used interchangeably. Both describe scheduling that respects a resource's actual available capacity rather than treating it as unlimited.
+
+### Does finite capacity scheduling guarantee an accurate schedule?
+
+No — it guarantees a *feasible* one, which is different. It won't schedule more hours onto a machine than the machine has, but the schedule is still only as good as the standard times, priorities, and downtime assumptions behind it.
+
+### Why do some ERPs default to infinite capacity?
+
+Infinite capacity is computationally simpler and was historically good enough for shops with generous lead times and low mix. As manufacturers moved toward more make-to-order, high-mix work, the gap between "scheduled" and "actually possible" became too costly to ignore, which is why finite scheduling matters more today than it did a generation ago.
+
+### Can I run finite capacity scheduling in a spreadsheet?
+
+For a handful of jobs and one or two machines, sure — manually. It stops scaling almost immediately once you have more than a few work centers and jobs competing for them, which is exactly the point at which a real MRP/MES system pays for itself.
+
+### How does finite capacity scheduling relate to MRP?
+
+MRP determines *what* to make and buy and by roughly when, based on demand and lead times. Finite capacity scheduling determines *whether* the shop floor can actually execute that plan given real machine availability. See [what MRP is, with a worked example](/learn/what-is-mrp) for the planning side of that equation.
+
+## Try it yourself
+
+If you want a schedule that reflects what your machines can actually do — not just what the math of lead times implies — [try Carbon free for 30 days](/pricing), or look at the [source on GitHub](https://github.com/crbnos/carbon) to see how capacity and scheduling are modeled.

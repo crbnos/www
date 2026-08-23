@@ -1,0 +1,203 @@
+---
+title: "How We Model Multi-Level BOMs in Postgres"
+publishedAt: "2026-07-03"
+summary: "A concrete Postgres data model for multi-level BOMs: parts, BOM lines, revisions and effectivity, a recursive CTE for explosion, and cycle prevention."
+tag: "Developer"
+author: "chase"
+---
+
+A multi-level bill of materials is a directed graph — parts pointing to the sub-parts they're built from — and Postgres has almost everything you need to model and query that graph natively: a relational schema for the structure, `numeric` for quantities that must never round, and `WITH RECURSIVE` for exploding the tree without leaving the database. This post walks through the actual schema we use, the recursive query that explodes a BOM to any depth, and the two failure modes — cycles and bad effectivity handling — that will burn you if you skip them.
+
+This is an engineering post, not a conceptual one. If you want the plain-English definition of a BOM first, see [What Is a Bill of Materials?](/learn/what-is-a-bill-of-materials). Everything below assumes you already know what a BOM is and want to know how to store and query one correctly.
+
+## The core schema: parts, revisions, and lines
+
+The mistake most first attempts make is putting the BOM directly on the part: a `parent_part_id` / `child_part_id` table with a quantity column. That works until the first engineering change order, at which point you need to know what the BOM *was* on every job you've already shipped, not just what it is today. So the structure needs a layer between "part" and "BOM line" for revision and effectivity:
+
+```sql
+create table part (
+  id            uuid primary key default gen_random_uuid(),
+  part_number   text not null unique,
+  description   text,
+  uom           text not null default 'ea',   -- base unit of measure
+  make_or_buy   text not null default 'make'  -- 'make' | 'buy'
+);
+
+create table bom_revision (
+  id               uuid primary key default gen_random_uuid(),
+  parent_part_id   uuid not null references part(id),
+  revision         text not null,              -- 'A', 'B', 'C', ...
+  status           text not null default 'draft'
+                     check (status in ('draft', 'released', 'obsolete')),
+  effective_date   date not null,
+  obsolete_date    date,                        -- null = still active
+  unique (parent_part_id, revision)
+);
+
+create table bom_line (
+  id               uuid primary key default gen_random_uuid(),
+  bom_revision_id  uuid not null references bom_revision(id) on delete cascade,
+  line_number      int not null,
+  child_part_id    uuid not null references part(id),
+  quantity_per     numeric(14, 6) not null check (quantity_per > 0),
+  uom              text not null,
+  scrap_percent    numeric(5, 2) not null default 0,
+  unique (bom_revision_id, line_number)
+);
+```
+
+Three decisions here matter more than they look:
+
+**`quantity_per` is `numeric`, not `float`.** A machined bracket needing 0.1 as a chemical ratio, or a fastener needing 4 per assembly, has to multiply cleanly across ten levels of explosion without floating-point drift. `numeric(14, 6)` gives six decimal places of precision — enough for chemistry-style quantity-per ratios — and exact arithmetic, at the cost of being slightly slower than `float8`. For BOM math, correctness wins that trade every time.
+
+**Revisions are a separate row, not a column on `part`.** `bom_revision` lets a part have multiple named revisions (`A`, `B`, `C`) with independent line sets, so `bom_line` rows are always scoped to one immutable revision rather than being mutated in place. Once revision `A` is released, its lines don't change — a new revision `B` is created instead, and effectivity dates control which one applies when. This is the same principle covered in [BOM revision control without breaking production](/learn/bom-revision-control): never edit a released BOM's lines; supersede it.
+
+**Effectivity is a date range, not a boolean "active" flag.** `effective_date` and `obsolete_date` let you answer "what was the BOM for this part on the day this job was released" — required for any regulated or lot-traceable environment, and useful even outside one, because a customer complaint six months from now will ask exactly that question.
+
+## Preventing cycles
+
+A BOM is only valid if it's a DAG (directed acyclic graph) — no part can, directly or transitively, contain itself. Postgres won't stop you from inserting a cycle with a plain foreign key; `bom_line.child_part_id` referencing `part.id` says nothing about whether that child's own BOM eventually loops back to the parent.
+
+The cheapest real check is a trigger that walks the proposed child's existing BOM before allowing the insert, using the same recursive traversal as explosion (below), and rejects the write if the parent shows up in the child's descendant set:
+
+```sql
+create or replace function bom_line_prevent_cycle()
+returns trigger as $$
+declare
+  ancestor_part_id uuid;
+begin
+  select br.parent_part_id into ancestor_part_id
+  from bom_revision br
+  where br.id = new.bom_revision_id;
+
+  if exists (
+    with recursive descendants as (
+      select new.child_part_id as part_id
+      union all
+      select bl.child_part_id
+      from descendants d
+      join bom_revision br on br.parent_part_id = d.part_id
+      join bom_line bl on bl.bom_revision_id = br.id
+    )
+    select 1 from descendants where part_id = ancestor_part_id
+  ) then
+    raise exception 'BOM cycle detected: % is already an ancestor of %',
+      ancestor_part_id, new.child_part_id;
+  end if;
+
+  return new;
+end;
+$$ language plpgsql;
+
+create trigger trg_bom_line_prevent_cycle
+  before insert or update on bom_line
+  for each row execute function bom_line_prevent_cycle();
+```
+
+This runs on every write instead of only at explosion time, which matters: you want a cycle rejected at the moment an engineer saves a bad BOM line, not discovered three weeks later when MRP explosion recurses forever. It's also why explosion queries should defend themselves too (next section) — trust, but verify, especially against data loaded by a migration or an API client that bypassed the trigger.
+
+## Exploding the BOM: the recursive CTE
+
+This is the query that answers "how many of every single component, at every level, do I need to build N of the top-level part" — the same explosion MRP runs against every open demand. See [What Is MRP?](/learn/what-is-mrp) for the planning calculation this feeds; here's the SQL that does the structural part:
+
+```sql
+with recursive exploded as (
+  -- anchor: direct children of the part we're exploding, at a given date
+  select
+    bl.child_part_id,
+    bl.quantity_per * (1 + bl.scrap_percent / 100.0) as quantity_per,
+    1 as level,
+    array[br.parent_part_id] as path
+  from bom_revision br
+  join bom_line bl on bl.bom_revision_id = br.id
+  where br.parent_part_id = $1                -- top-level part
+    and br.status = 'released'
+    and $2 between br.effective_date and coalesce(br.obsolete_date, 'infinity')
+
+  union all
+
+  -- recursive step: children of children, quantities compounding down
+  select
+    bl.child_part_id,
+    e.quantity_per * bl.quantity_per * (1 + bl.scrap_percent / 100.0),
+    e.level + 1,
+    e.path || bl.child_part_id
+  from exploded e
+  join bom_revision br
+    on br.parent_part_id = e.child_part_id
+   and br.status = 'released'
+   and $2 between br.effective_date and coalesce(br.obsolete_date, 'infinity')
+  join bom_line bl on bl.bom_revision_id = br.id
+  where not bl.child_part_id = any(e.path)     -- cycle guard, belt and suspenders
+)
+select
+  p.part_number,
+  p.uom,
+  min(exploded.level) as first_seen_level,
+  sum(exploded.quantity_per) as total_quantity_per_top_level_unit
+from exploded
+join part p on p.id = exploded.child_part_id
+group by p.part_number, p.uom
+order by first_seen_level, total_quantity_per_top_level_unit desc;
+```
+
+Three things worth pointing out for anyone adapting this:
+
+**The `path` array does double duty.** It's the cycle guard (`where not bl.child_part_id = any(e.path)`) even though the trigger above should have made cycles impossible — defense in depth is cheap here and expensive to skip if a bad row ever gets in via direct SQL or a bulk import. It also lets you reconstruct the actual assembly path for any component if you need to show "this fastener is used via Sub-Assembly B, not Sub-Assembly A."
+
+**The same part can appear at multiple levels, and that's correct, not a bug.** A common fastener might be a direct child of the top-level assembly *and* buried three levels down in a sub-assembly. The final `group by` with `sum(quantity_per)` correctly aggregates total demand for that part across every path it appears in — which is exactly what purchasing needs to know, regardless of which sub-assembly is "responsible" for the demand.
+
+**Scrap percent compounds multiplicatively down the tree**, matching physical reality: if each of three levels scraps 2%, the top-level unit needs slightly more than 6% extra of the bottom-level part, not exactly 6%, because scrap at level 2 applies to material that already absorbed scrap at level 1.
+
+## Indexing for explosion performance
+
+The recursive query above does a join per level against `bom_revision` and `bom_line`, filtered by `parent_part_id` and the effectivity window. For it to stay fast at real BOM depths (5-10 levels is common in machined-and-assembled products; more in electronics), index the columns the recursive step actually filters and joins on:
+
+```sql
+create index idx_bom_revision_parent on bom_revision (parent_part_id, status, effective_date, obsolete_date);
+create index idx_bom_line_revision on bom_line (bom_revision_id);
+```
+
+Without the composite index on `bom_revision`, each recursive step does a sequential scan looking for the active revision of the current level's part, and that cost multiplies by fan-out at every level — the difference between a sub-10ms explosion and a query that visibly hangs on anything with real breadth.
+
+## Where this breaks down without database support
+
+Two things are easy to get wrong if you build this logic in application code instead of the database:
+
+- **Unit-of-measure mismatches silently corrupting quantity_per.** If a BOM line's `uom` doesn't match the child part's base `uom` (feet of wire vs. each spool, for instance), the quantity is meaningless without a conversion factor. Either enforce `uom` matching at the line level or maintain a `uom_conversion` table and apply it explicitly in the explosion query — never assume the units line up.
+- **Explosion running N+1 queries per level in application code.** It's tempting to explode a BOM by looping in the application layer, one query per level. That's correct but slow, and it's exactly the problem `WITH RECURSIVE` exists to solve in a single round trip. Push the traversal into the database.
+
+## How Carbon models this
+
+Carbon's production schema follows this same shape — parts, revisioned BOM headers, and BOM lines with quantity-per and effectivity — on the same Postgres database that backs inventory, purchasing, and job costing, so a BOM explosion isn't a separate ETL step syncing from a PLM system:
+
+- **Multi-level BOM explosion runs natively in Postgres**, feeding MRP netting and job costing off the same structure, rather than flattening the BOM into a cache table that drifts from the source.
+- **Revisions and effectivity are first-class**, so a job started under revision A keeps its exact structure even after revision B is released — required for lot traceability and for answering "what did we actually build" months later.
+- **The schema is open source** (github.com/crbnos/carbon) — worth reading directly if you're designing your own BOM model and want to see how quantity-per, scrap, and revision effectivity are handled end to end in production code, not just in a blog post.
+- **Every BOM table is reachable over the REST API** (rest.carbon.ms), so CAD tools and external systems can read or write BOM structure programmatically. See [API-first ERP](/learn/api-first-erp) for what that unlocks beyond the UI.
+
+## Frequently asked questions
+
+### What's the best way to model a multi-level BOM in a relational database?
+
+Three tables: a `part` table for items, a revision table (`bom_revision`) that scopes a named, dated version of a parent part's structure, and a line table (`bom_line`) that references a revision and a child part with a quantity-per. Keep revisions immutable once released and supersede them rather than editing lines in place.
+
+### How do you explode a BOM in Postgres without recursive application code?
+
+Use a `WITH RECURSIVE` common table expression: an anchor query selects direct children, and a recursive term joins the result back to `bom_line`/`bom_revision` one level deeper each iteration, compounding quantity-per as it goes, until no more children are found.
+
+### How do you prevent circular BOM references?
+
+Enforce it at write time with a trigger that walks the proposed child part's existing descendant tree and rejects the insert if the parent appears in it, and defend the explosion query itself with a `path` array so any cycle that slips through terminates instead of recursing forever.
+
+### Why use `numeric` instead of `float` for BOM quantities?
+
+Quantity-per values compound multiplicatively across many levels during explosion. Floating-point rounding error accumulates across that many multiplications and can produce a materially wrong purchase quantity; `numeric` performs exact decimal arithmetic at a modest performance cost that's almost always worth paying for planning correctness.
+
+### How do BOM revisions and effectivity dates work together?
+
+Each `bom_revision` row carries an `effective_date` and optional `obsolete_date`. A query for "the BOM as of date X" filters revisions where X falls in that range and where status is released, which lets you reconstruct the exact structure that was active for any historical job, not just the current one.
+
+## See this schema running against real data
+
+If you're designing your own BOM model, it's worth comparing notes against a production implementation. [Read Carbon's schema on GitHub](https://github.com/crbnos/carbon), or [try Carbon free for 30 days](/pricing) at https://app.carbon.ms and query your own BOM structure directly through the API.

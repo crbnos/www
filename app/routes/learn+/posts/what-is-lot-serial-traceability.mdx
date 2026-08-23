@@ -1,0 +1,102 @@
+---
+title: "Lot & Serial Traceability in Manufacturing, Explained"
+publishedAt: "2026-08-14"
+summary: "Lot traceability and serial tracking in manufacturing, explained with a worked recall example: genealogy, forward and backward trace, and what to record."
+tag: "Manufacturing basics"
+author: "chase"
+---
+
+Lot traceability and serial tracking are how a manufacturer answers two questions on demand: which raw materials and processes went into a specific finished unit (backward trace), and which finished units and customers were touched by a specific batch of material or a specific process event (forward trace). Get either question wrong — or worse, be unable to answer it at all — and a single bad material lot can turn into an unbounded recall instead of a contained one.
+
+This matters most in aerospace, defense, and medical device manufacturing, where traceability isn't optional, but the underlying discipline pays off in any shop that wants to know, quickly and confidently, the scope of a problem.
+
+## Lot Traceability vs. Serial Traceability
+
+| | Lot traceability | Serial traceability |
+|---|---|---|
+| Granularity | A batch of material or units sharing a common attribute (same heat, same production run, same date code) | A single, individually identified unit |
+| Typical use | Raw material (bar stock, resin, chemicals), high-volume consumables | High-value, safety-critical, or regulated end items |
+| Identifier | Lot number / batch number | Serial number, unique per unit |
+| Question it answers well | "What else used this batch of material?" | "What is the complete history of this exact unit?" |
+| Common industries | Machining, food, chemicals, electronics components | Aerospace structures, implantable medical devices, firearms, engines |
+
+Most manufacturers use both at once: raw material tracked by lot, finished assemblies tracked by serial, with the genealogy connecting the two. A single serialized landing gear bracket, for example, might consume material from three different aluminum lots and pass through two outside-process lots (heat treat, anodize) — the serial number is the anchor, and the lot numbers are what it's built from.
+
+## Genealogy: How Traceability Actually Works
+
+Genealogy is the parent-child chain that links what went into a unit to the unit itself, following the [bill of materials](/learn/what-is-a-bill-of-materials) structure. At each level of assembly, the system (or the traveler, if manual) records which specific lot or serial of each component was consumed:
+
+```
+Finished assembly (Serial: SN-88231)
+├── Machined bracket (Lot: L-4471, from raw material Lot: RM-2291)
+├── Fastener kit (Lot: F-9910)
+└── Sub-assembly (Serial: SN-77104)
+    ├── PCB (Lot: PCB-6602)
+    └── Housing (Lot: H-3345)
+```
+
+Every consumption event — a raw material lot being issued to a work order, a sub-assembly's serial being installed into a parent — is a link in that chain. Break any link (an operator issues material without recording the lot) and the genealogy has a gap that no amount of paperwork upstream or downstream can repair.
+
+## Forward Trace vs. Backward Trace
+
+- **Backward trace** starts from a finished unit and asks: what materials, lots, operations, and equipment went into it? This is what a customer or auditor asks for when qualifying a specific serial number, or investigating a field failure.
+- **Forward trace** starts from a material lot, a piece of equipment, or a process event and asks: what finished units were affected? This is what drives a recall's scope — and getting it wrong in either direction is expensive: too narrow, and a bad unit ships; too broad, and you're scrapping or recalling good product unnecessarily.
+
+## Worked Example: Tracing a Contaminated Raw Material Lot Forward
+
+A supplier notifies you that raw material Lot RM-2291 (304 stainless bar stock) failed a certification re-check after shipment — the actual chemistry was slightly out of spec. Here's the forward trace, step by step:
+
+1. **Query the lot:** Lot RM-2291 was received on March 3 and issued to five work orders between March 4 and March 11.
+2. **Identify consuming work orders:** WO-2201, WO-2204, WO-2209, WO-2215, and WO-2218 — a total of 340 machined parts across two part numbers.
+3. **Identify downstream assemblies:** Of those 340 parts, 310 were consumed into 62 finished assemblies (5 parts per assembly); 30 parts remain in raw finished-goods inventory, unassembled.
+4. **Identify shipped units:** 48 of the 62 assemblies have shipped, to three customers, with recorded serial numbers SN-88201 through SN-88248 (with gaps for units that failed final inspection for unrelated reasons).
+5. **Scope the containment:** hold the 30 unassembled parts and 14 unshipped assemblies immediately; notify the three customers with the exact serial number list for the 48 shipped units; do not touch any work order or serial number outside this list.
+
+Without genealogy, step 5 becomes "we're not sure which parts used that material, so we're recalling everything from that date range" — a customer relationship problem and a cost problem, not just a quality problem. This is also the exact scenario [NADCAP](/learn/nadcap-explained) audits are designed to verify a supplier can execute.
+
+## What a Traceability Record Must Capture
+
+| Field | Why it's required |
+|---|---|
+| Lot/serial number issued and consumed | The core genealogy link |
+| Quantity consumed per work order | Bounds exactly how much of a lot went where |
+| Date and operator of the consumption event | Ties the record to a specific point in the process |
+| Supplier lot/certificate reference | Connects your internal lot to the incoming material's origin |
+| Outside-process lot (heat treat, plating, coating) | Outside processes are a common, easily missed genealogy gap |
+| Disposition of any nonconforming units in the chain | Links traceability to the [QMS](/learn/what-is-a-qms-in-manufacturing) nonconformance record |
+
+## Regulatory Drivers
+
+- **Aerospace/defense:** AS9100 and NADCAP require documented lot genealogy and control of special processes (heat treat, NDT, plating) — see [NADCAP explained](/learn/nadcap-explained).
+- **Medical devices:** the FDA's Unique Device Identification (UDI) rule and device history record requirements make serial-level traceability effectively mandatory for many device classes — see [21 CFR Part 11 and electronic DHRs](/learn/21-cfr-part-11-electronic-dhr).
+- **Automotive:** IATF 16949 requires traceability sufficient to support a targeted recall rather than a blanket one.
+- **Food and pharma:** lot traceability is a baseline regulatory requirement (FDA, FSMA) independent of any voluntary certification.
+
+## Where Spreadsheet Traceability Fails
+
+Tracking lots and serials in a spreadsheet works until the genealogy needs to span more than one or two levels of assembly, or until two people update the same sheet at once. The forward-trace example above required five queries across work orders, assemblies, and shipments — each one a manual VLOOKUP in a spreadsheet world, each one a place a typo in a lot number silently breaks the chain. A system that enforces lot/serial capture at the point of consumption (rather than as an after-the-fact reconciliation) is what makes a two-hour forward trace possible in minutes.
+
+## How Carbon Handles Lot & Serial Traceability
+
+Carbon captures lot and serial consumption as a normal part of issuing material and completing operations — the genealogy is a byproduct of running the job, not a separate system operators have to remember to update. Because traceability data lives in the same Postgres data model as work orders, inventory, and quality records, a forward trace like the one above is a query against live data, not a multi-system reconciliation, and it's reachable over the [REST API](/developers) for reporting or integration with a customer's own systems. That matters directly for shops carrying AS9100, NADCAP, or ISO 13485 obligations, and Carbon's self-hosted, ITAR-capable deployment option keeps that traceability data inside your own environment when a contract requires it.
+
+## Frequently asked questions
+
+### What is the difference between lot traceability and serial traceability?
+Lot traceability tracks a batch of material or units sharing an attribute like a production run or heat number; serial traceability tracks a single, individually identified unit. Most manufacturers combine both across a single product's genealogy.
+
+### What is forward vs. backward traceability?
+Backward trace starts at a finished unit and works back to the materials and processes used. Forward trace starts at a material lot or process event and works forward to every finished unit it touched — forward trace is what determines a recall's scope.
+
+### What information does a lot number need to capture?
+At minimum: the lot identifier, quantity received or produced, the source (supplier lot/certificate or internal work order), and every subsequent work order or assembly that consumed it.
+
+### Is serial traceability required by law?
+It depends on the industry. Medical devices are subject to FDA UDI and device history record requirements; aerospace and defense suppliers typically require it contractually through AS9100/NADCAP flow-downs rather than by statute. Check your specific customer and regulatory requirements.
+
+### Can outside processes (heat treat, plating) break traceability?
+Yes — this is one of the most common gaps. If the lot or serial identity isn't carried through an outside process and reconciled on return, the genealogy chain breaks at that step even if everything before and after it is well documented.
+
+## Build traceability into the process, not on top of it
+
+Try Carbon free for 30 days and see lot and serial genealogy captured automatically as material moves through your shop — [start free](/pricing) or [review the source on GitHub](https://github.com/crbnos/carbon).

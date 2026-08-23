@@ -1,0 +1,106 @@
+---
+title: "Why ERP Implementations Fail (and How to Beat the Odds)"
+publishedAt: "2026-07-28"
+summary: "Industry research puts ERP implementation failure rates at 50-75%. Here are the real causes and the concrete tactics that de-risk a manufacturing rollout."
+tag: "SAP & enterprise ERP"
+author: "chase"
+---
+
+ERP implementation failure isn't rare — it's closer to the norm. Multiple industry surveys over the last decade have put the failure rate (projects that go over budget, miss deadlines by a wide margin, or get abandoned before go-live) somewhere between 50% and 75%. For a manufacturer, "failure" rarely means the software vanishes; it means you're eighteen months and seven figures into a project that still can't run a clean MRP, closes the books late every month, and has a shop floor quietly working from spreadsheets because nobody trusts the system yet.
+
+The causes are well documented and, honestly, repetitive — the same five or six mistakes show up in failure post-mortems across industries and decades. What's changed recently is that there are now concrete, low-risk ways to avoid several of them, mostly by favoring software you can actually test-drive and extend yourself before you're locked into a multi-year contract. This article covers the real reasons ERP implementations fail and what to do differently.
+
+## The six causes that show up in almost every failure
+
+### 1. Poor or unmigrated data
+
+Every ERP failure post-mortem eventually gets here. Item masters with duplicate part numbers, BOMs that were "close enough" in the old system, inventory counts that were never accurate to begin with — none of that gets fixed by a new ERP. It gets exposed by one. Teams that treat data cleanup as a two-week checkbox before go-live are the ones who spend the first six months post-launch firefighting phantom stock-outs and MRP suggestions nobody trusts.
+
+**Fix:** budget real time — often 20-30% of total project time — for data audit and cleanup before cutover, not during it. Reconcile the item master and open BOMs first; everything else depends on those being right.
+
+### 2. Over-customization
+
+The instinct to make the new ERP replicate every quirk of the old process is understandable and almost always a mistake. Heavy customization does three damaging things at once: it multiplies implementation time and cost, it makes every future upgrade a re-testing project (this is the core reason [Odoo implementations fail](/learn/why-odoo-implementations-fail) and the reason SAP shops dread version upgrades), and it locks you to whichever consultant or integrator wrote the customizations, since nobody else can safely touch them.
+
+**Fix:** adopt the vendor's standard workflow wherever it's merely "different," and reserve custom work for the handful of processes that are genuinely a competitive advantage. If you can't articulate why a customization matters commercially, don't build it.
+
+### 3. Big-bang cutovers
+
+Switching every department, every plant, and every process to the new system on a single go-live date maximizes the blast radius of anything that goes wrong. It also means the first time your team encounters real production data at real volume in the new system is the same day you've committed to running the business on it.
+
+**Fix:** phase the rollout — by module, by plant, or by product line — and run a genuine parallel or pilot period on a subset of real orders before the full cutover. A one-month phased implementation on a real BOM catches problems a big-bang go-live doesn't surface until it's expensive.
+
+### 4. No executive owner
+
+ERP projects that are delegated entirely to IT or to a mid-level project manager, with the CEO or COO checking in only for status updates, consistently underperform. ERP touches how every department works; when there's no executive with the authority to force a cross-department decision (which department's process becomes the standard, which customization gets cut, which go-live date is real), those decisions stall or get made by default — usually badly.
+
+**Fix:** name a single executive sponsor with real decision authority, not just visibility, and make them accountable for the project's outcome, not its vendor selection.
+
+### 5. Vendor and implementer lock-in
+
+Many ERP contracts effectively transfer control of your own operational data to a vendor and its certified implementation partners. If the only people who can modify your system, extend it, or even export your data cleanly are the original integrator, you've traded a software decision for a long-term dependency — and that dependency is expensive to unwind years later when the vendor's roadmap stops matching your needs.
+
+**Fix:** before signing, confirm you can get your data out in a usable form, that your own team (or any qualified developer) can build against a documented API, and ideally that you can see or self-host the underlying system rather than depending entirely on one vendor's infrastructure.
+
+### 6. Unclear requirements
+
+"We need an ERP that handles manufacturing" is not a requirements document. Projects that skip a real requirements phase — mapping actual routings, actual approval chains, actual reporting needs — end up discovering requirements during user acceptance testing, which is the most expensive place to discover them. This is also how projects end up buying far more (or less) system than they need, a mistake we cover in detail in [what SAP actually costs a 50-person machine shop](/learn/what-sap-costs-a-50-person-machine-shop).
+
+**Fix:** document your top 20 real workflows — not features, workflows — with the people who actually run them, before evaluating vendors. Score vendors against those workflows, not against a generic feature checklist.
+
+## The pattern behind the pattern
+
+Look at those six causes together and a pattern emerges: nearly all of them are made worse by long feedback loops. Big-bang cutovers, unclear requirements, and vendor lock-in are all failure modes that stay hidden until it's expensive to fix them, because the traditional ERP buying process — sales call, scoping, quote, contract, then months of implementation before anyone touches real data — doesn't give you a way to find out early that something is wrong.
+
+The single highest-leverage change you can make to your odds of success is compressing that feedback loop: get real users touching real data in the actual system as early and as cheaply as possible.
+
+## How to de-risk your implementation
+
+- **Self-serve trial before contract.** If a vendor requires a sales call before you can see pricing or touch the product, you cannot pilot cheaply — you're committing before you've validated fit. Favor vendors with a genuine self-serve trial on real data.
+- **Phase, don't big-bang.** Roll out by plant, product line, or module, and treat the first phase as a real test of your data and your process assumptions, not a formality.
+- **Own your data and your extension points.** A documented, complete API — not a curated subset of endpoints — means your own developers (or a contractor of your choosing) can build integrations and reports without waiting on the vendor's roadmap or a certified partner's calendar. This is the core argument in [API-first ERP: what a real manufacturing API enables](/learn/api-first-erp).
+- **Keep a credible exit.** Systems you can self-host, or whose source you can inspect, give you real leverage in a vendor relationship — you're not stuck if support degrades or pricing changes, because migrating is a technical project, not a legal fight to extract your own data.
+- **Name an executive owner on day one.** Not a project manager who reports status — an executive who can make binding cross-department calls.
+- **Clean the data first.** Reconcile the item master and BOMs before cutover, not after.
+- **Cut customization to the minimum defensible set.** If you can't name the commercial reason for a customization, standardize instead.
+
+## A pre-implementation checklist
+
+- [ ] Executive sponsor named, with real decision authority
+- [ ] Top 20 workflows documented with the people who run them
+- [ ] Item master and open BOMs audited and cleaned
+- [ ] Customization list limited to workflows with a clear commercial justification
+- [ ] Rollout phased by plant, line, or module — no single big-bang date
+- [ ] Data export and API access confirmed in writing before signing
+- [ ] Self-serve trial or pilot run on real orders before full commitment
+- [ ] Exit path (data portability, self-host option, or source access) understood before contract
+
+## How Carbon is built around these lessons
+
+Carbon was designed with several of these failure modes in mind rather than left to an implementation partner to work around. Because the system runs on a single Postgres data model instead of separately-configured modules, there's no module-reconciliation phase where ERP, MRP, MES, and QMS drift out of sync — one of the more common places big-bang implementations quietly fail. Every table and workflow is reachable over a documented REST API and a hosted MCP server, so your own team can extend or integrate the system without waiting on a certified partner. The full source is available on [GitHub](https://github.com/crbnos/carbon), and you can self-host in your own environment if you want full data control — including GovCloud/ITAR-capable Enterprise deployments. Pricing is published (Starter $40/user/month, Business $100/user/month), there's no sales call required to start, and you get a genuine 30-day free trial to pilot against real orders before committing. Typical implementations run about a month, which is short enough to phase naturally rather than force a big-bang cutover.
+
+## Frequently asked questions
+
+### What percentage of ERP implementations fail?
+
+Industry surveys and consulting-firm research over the past decade commonly cite failure rates (over budget, significantly delayed, or abandoned) in the 50-75% range, though methodology and the definition of "failure" vary by study.
+
+### What is the single biggest cause of ERP implementation failure?
+
+There's no single cause in every case, but poor data quality and unclear requirements are the two most frequently cited root causes — both are usually visible before the project starts, which is why a real requirements and data-cleanup phase matters more than most companies budget for it.
+
+### How long should a manufacturing ERP implementation take?
+
+Traditional ERP implementations for SMB manufacturers commonly run 6-18 months with an integrator. Modern, API-first platforms with a unified data model can reasonably target about a month for a phased implementation, since there's less module-to-module reconciliation.
+
+### Does self-hosting reduce implementation risk?
+
+Self-hosting doesn't reduce implementation risk on its own, but it does reduce long-term vendor-lock-in risk, and combined with source availability it gives you a credible exit and full control over your own data — both of which matter if a vendor relationship or roadmap changes years after go-live.
+
+### Can a small manufacturer avoid hiring an implementation partner entirely?
+
+For simpler, more standardized systems with a documented API and a self-serve trial, yes — many small manufacturers implement without a dedicated systems integrator, particularly when the vendor's own workflow is adopted with minimal customization. Complex, heavily customized rollouts still usually benefit from experienced help.
+
+## Beat the odds
+
+The fastest way to validate fit before you commit real budget is to run your own orders through the system. Carbon offers a [30-day free trial](/pricing) at [app.carbon.ms](https://app.carbon.ms) with no sales call required, and the full source is on [GitHub](https://github.com/crbnos/carbon) if you want to see exactly what you'd be depending on before you sign anything.

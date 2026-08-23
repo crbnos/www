@@ -1,0 +1,133 @@
+---
+title: "BOM Revision Control Without Breaking Production (ECOs)"
+publishedAt: "2026-07-17"
+summary: "How BOM revision control actually works: the engineering change order process, effectivity dates, WIP handling, and obsolete stock disposition, explained step by step."
+tag: "How-to"
+author: "chase"
+---
+
+BOM revision control means every change to a bill of materials moves through a formal engineering change order (ECO) with an effectivity date and explicit disposition instructions — so work orders already in progress keep building against the revision that was correct when they started, while new orders automatically pick up the new one. That's the entire mechanism. Nearly every "PLM integration" pitch you'll hear from an ERP vendor reduces to whether their system actually does this, or whether it just lets you overwrite a BOM and hope nothing was mid-build when you did it.
+
+This guide walks the real ECO process end to end — draft, review, effectivity, WIP handling, and obsolete stock — with a worked example on an actual part change, not an abstract flowchart.
+
+## What actually breaks when BOM revision control is missing
+
+Without a controlled process, an engineer edits the BOM in place the moment a change is approved. Here's what that does downstream:
+
+- **Work orders already released and kitted** now reference a BOM that no longer matches the parts physically sitting at the workstation.
+- **MRP** starts planning purchase orders against the new revision immediately, potentially ordering a replacement part before the old one is used up, or leaving a shortage on jobs still building to the old spec.
+- **Receiving inspection and quality** have no record of which revision a given serial number was actually built to — which matters enormously the first time a customer asks for as-built documentation or a nonconformance investigation.
+- **Engineering and the shop floor drift apart** silently, because there's no gate forcing a review before the change takes effect.
+
+The fix isn't more paperwork for its own sake — it's a small number of deliberate steps that keep the BOM, the work orders, and the inventory in sync.
+
+## The ECO workflow, step by step
+
+### 1. Engineering change request (ECR)
+
+Anyone — engineering, quality, purchasing, a supplier notice of discontinuance — can raise a change request. A usable ECR captures: the reason (obsolescence, cost reduction, a quality escape, a customer-driven spec change), the affected item(s), the proposed change, and any supporting redlines or drawings. This is a request, not an approved change — nothing in production or purchasing should move yet.
+
+### 2. Impact assessment
+
+Before anyone approves anything, someone has to answer: which BOMs and routings reference this item, which open work orders are currently in progress against it, which open purchase orders would be affected, and what the cost impact is. This step is where most informal processes fail — without a system that can actually query "everywhere this component appears," impact assessment becomes a manual search through spreadsheets, and something gets missed.
+
+### 3. Review and approval
+
+The ECR routes to whoever needs to sign off — typically engineering (does the change meet the spec), quality (does it affect a controlled characteristic or require re-qualification), and purchasing (can the new item be sourced in time, at what cost). For customer-furnished designs, the customer may need to approve as well. Only after approval does the change become an ECO with an assigned number.
+
+### 4. Set effectivity
+
+This is the step that actually protects production. The ECO doesn't take effect the moment it's approved — it takes effect on a defined trigger:
+
+- **Date-effective**: the change applies to any work order released on or after a specific date. Most common for general manufacturing.
+- **Serial-effective**: the change applies starting at a specific unit serial number. Common in aerospace and defense, where as-built records are tied to serials, not calendar dates.
+- **Lot-effective**: the change applies starting with a specific production lot. Common in batch and process-adjacent industries.
+
+### 5. Implementation
+
+Create a **new BOM revision** — never edit the old one in place. The prior revision stays exactly as it was, queryable forever, because work orders already built against it need to remain traceable to what they actually contain. The routing gets updated if the operation sequence or standard times change too (see [Setting up routings](/learn/setting-up-routings-work-centers) if you haven't formalized that side yet), and standard cost is recalculated against the new revision.
+
+### 6. WIP handling
+
+This is where the effectivity date earns its keep. Work orders released before the effective date keep building to the old revision; anything released after picks up the new one automatically. Nobody manually decides this order by order — it falls out of the rule you set in step 4.
+
+### 7. Obsolete stock disposition
+
+The ECO must say explicitly what happens to remaining inventory of the outgoing component: use it up on remaining work orders still building to the old revision, return it to the vendor, scrap it, or route it through MRB (material review board) for an engineering-approved use-up decision. Silence on this point is how obsolete parts sit in inventory for years, or worse, get picked onto the wrong job by accident.
+
+### 8. Closure
+
+Once the change is fully implemented and disposition is complete, the ECO closes. The as-built record for every unit built along the way should be able to answer, permanently, which revision it was actually built to — the foundation of what we cover in [What is a digital thread?](/learn/what-is-a-digital-thread).
+
+## Worked example: swapping a connector across an effectivity date
+
+Take the **HRN-300 wire harness** from our [bill of materials walkthrough](/learn/what-is-a-bill-of-materials) — Revision A calls for a **CONN-JST4** 4-pin connector. The supplier issues a discontinuance notice, and engineering raises **ECO-2026-0143**: replace CONN-JST4 with a functionally equivalent **CONN-MOLEX4S** on a new BOM Revision B.
+
+The ECO is approved with a date-effectivity of **2026-08-01**. Here's what happens to work orders around that date:
+
+| Work order | Released | BOM revision built | Connector used |
+|---|---|---|---|
+| WO-4471 | 2026-07-20 | Rev A | CONN-JST4 |
+| WO-4488 | 2026-07-27 | Rev A (already released, in progress) | CONN-JST4 |
+| WO-4502 | 2026-08-03 | Rev B | CONN-MOLEX4S |
+
+Neither open work order gets disrupted — they finish exactly as kitted, against the revision that was effective when they were released. Only orders released on or after August 1 pick up the new connector, with no one manually re-checking each job.
+
+**Stock disposition:** at approval, 340 units of CONN-JST4 are on hand. The ECO specifies: 220 get consumed on the already-released work orders still building to Rev A; of the 120 remaining, 40 are retained as approved service/repair stock for fielded Rev-A units (a legitimate use-up under an MRB decision), and the remaining 80 are returned to the distributor for restocking credit rather than scrapped outright. That disposition line is written into the ECO itself — not left for someone in inventory to guess later.
+
+## Date-effective vs. serial-effective vs. lot-effective
+
+| Effectivity type | Trigger | Typical use |
+|---|---|---|
+| Date-effective | Calendar date | General manufacturing, make-to-stock, most commercial products |
+| Serial-effective | Specific unit serial number | Aerospace, defense, medical devices — anywhere as-built traceability is tied to serials |
+| Lot-effective | Specific production lot | Batch manufacturing, chemical/process-adjacent discrete work |
+
+Serial-effectivity is stricter and more auditable, but it requires your system to actually track which serial a given work order will produce before it's built — not every ERP can do this cleanly, which is one of the real gaps we cover in [Odoo's manufacturing review](/learn/odoo-manufacturing-review) and similar teardowns.
+
+## Common failure modes
+
+- **Editing the BOM in place instead of revisioning it.** This destroys the ability to answer "what did we actually build" for anything already shipped.
+- **Skipping impact assessment.** Purchasing discovers the change when a PO for an obsolete part gets rejected at receiving, not before.
+- **Setting an effective date without checking WIP.** Parts get pulled mid-build because nobody checked what was already kitted.
+- **Running ECOs through email or a shared spreadsheet** instead of a system tied to the actual BOM and work order records, so the "as-built" answer is really just someone's memory.
+- **No disposition instruction for obsolete stock**, which is how warehouses accumulate years of dead inventory nobody's authorized to move.
+
+## Why this is a data problem as much as a process problem
+
+A documented ECO process on paper only works if the underlying system can actually answer the query that makes the whole thing safe: "show me every open work order, and which BOM revision each one is pinned to, as of right now." That requires BOM revisions to be first-class, queryable, date-stamped records — not a single mutable BOM table that gets overwritten on every change. If you're pulling BOM data from CAD or a PLM tool into your ERP, that same versioning discipline needs to survive the sync; see [From CAD to BOM: Onshape → ERP sync](/learn/cad-to-bom-onshape-erp-sync) for how that handoff should work in practice.
+
+## How Carbon handles BOM revision control
+
+Carbon treats BOM revisions as versioned records on the same Postgres data model as work orders, inventory, and cost — not a document workflow bolted on separately:
+
+- **Every BOM change creates a new revision with full history.** The prior revision is never overwritten, so you can always answer what a specific serial or work order was actually built against.
+- **Work orders pin to the revision effective at release**, and effectivity can be set by date. Because ERP, MRP, and MES share one data model, that pin is enforced automatically — a released work order doesn't silently pick up a later change.
+- **The as-built record is native**, not reconstructed after the fact — feeding directly into the kind of digital thread covered in [What is a digital thread?](/learn/what-is-a-digital-thread).
+- **Open source and API-reachable.** The full BOM revision model is in the public repo (github.com/crbnos/carbon) and exposed over a REST API (rest.carbon.ms), so a PLM system or a CAD sync job can read or write revisions programmatically instead of being limited to manual entry.
+
+## Frequently asked questions
+
+### What is an engineering change order (ECO)?
+
+An ECO is the approved, formally tracked instruction to modify a bill of materials, routing, or specification — including what's changing, why, who approved it, when it takes effect, and how existing inventory and work orders should be handled.
+
+### What's the difference between date-effective and serial-effective BOM changes?
+
+Date-effective changes apply to any work order released on or after a set calendar date. Serial-effective changes apply starting at a specific unit serial number, which is common in aerospace, defense, and medical device manufacturing where as-built records are tied to serials rather than dates.
+
+### How do you handle WIP when a BOM revision changes mid-build?
+
+Work orders already released before the effectivity date continue building to the prior revision; only orders released after the effective date pick up the new one. This should happen automatically based on the release date and effectivity rule, not through manual review of every open job.
+
+### Do I need PLM software to do BOM revision control?
+
+No — the core requirement is that your BOM lives as versioned, date-stamped records with an approval and effectivity step, which a properly configured ERP/MRP system can provide natively. PLM adds value for complex CAD-driven design collaboration, but it isn't a prerequisite for controlled revisions.
+
+### What happens to obsolete stock after an ECO?
+
+The ECO should specify disposition explicitly: use up remaining stock on work orders still building to the old revision, return it to the vendor, scrap it, or route it through a material review board (MRB) for an approved exception. Leaving this unspecified is how obsolete inventory accumulates.
+
+## Keep your BOMs and your shop floor in sync
+
+If ECOs at your shop live in email threads and a BOM gets edited in place the moment someone approves a change, it's worth seeing what versioned BOM revisions tied directly to work orders and inventory look like. [Try Carbon free for 30 days](/pricing) at https://app.carbon.ms, or inspect the BOM revision model yourself on [GitHub](https://github.com/crbnos/carbon).

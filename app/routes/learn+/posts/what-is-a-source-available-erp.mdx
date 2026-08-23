@@ -1,0 +1,106 @@
+---
+title: "What Is a Source-Available ERP? (And What It Means for Buyers)"
+publishedAt: "2026-07-07"
+summary: "Source-available ERP explained: how it differs from open source and proprietary software, the licensing spectrum, and the concrete buyer benefits — audit, self-host, no lock-in."
+tag: "Developer"
+author: "chase"
+---
+
+A source-available ERP is one where the actual application code is published and readable — and typically usable, modifiable, and self-hostable for your own operations — but the license may restrict specific commercial uses, most commonly reselling it as a competing hosted product. It sits between fully proprietary software (you get a login, never the code) and fully open source (you get the code plus broad rights to redistribute and relicense it). For a manufacturer choosing an ERP, that middle position is not a technicality — it's the difference between trusting a vendor's word and being able to verify what the system does yourself.
+
+## The licensing spectrum, precisely
+
+"Open" is not binary, and the labels get used loosely enough that it's worth defining each point on the spectrum before evaluating any specific product.
+
+| Model | Can you read the code? | Can you self-host? | Can you modify it? | Can you resell a hosted version? |
+|---|---|---|---|---|
+| Proprietary | No | No (vendor-hosted only, or costly on-prem license) | No | No |
+| Source-available (e.g. BSL, "fair source") | Yes | Usually yes, for your own use | Usually yes, for your own use | Usually no — restricted for a period or entirely |
+| Open source, permissive (MIT, Apache 2.0) | Yes | Yes | Yes | Yes |
+| Open source, copyleft (GPL, AGPL) | Yes | Yes | Yes, if you share modifications | Yes, but AGPL requires sharing changes even for hosted (SaaS) use |
+
+The practical distinction that matters most to a manufacturer: **source-available and open source both give you the code and the ability to self-host and audit it.** The difference between them is almost entirely about what happens if you or someone else wants to turn the software into a *competing commercial product* — a question most manufacturing buyers never actually face. So for the uses a manufacturer actually has — read the logic, audit it, self-host it, extend it, keep running it if the vendor relationship ends — a source-available ERP gives you the same rights that matter. What the license adds is a funded business behind the code, which is the difference between an ERP that's still actively maintained in five years and a "pure" open-source project that went quiet after its maintainers moved on.
+
+## What "source-available" is not
+
+It's worth being precise about what the label doesn't promise, because vague claims erode trust faster than a clear-eyed one:
+
+- **It doesn't mean free.** Source-available vendors commonly charge for managed hosting, support, and advanced features, same as open source vendors do. The code being visible doesn't mean the product is a charity.
+- **It doesn't mean unlimited rights.** Read the actual license file in the repo. Terms vary — some convert to a fully permissive license after a time delay, some never do, some restrict only specific competitive uses.
+- **It doesn't automatically mean actively maintained.** A published repo with no recent commits is a red flag regardless of license — check commit history and release cadence as part of due diligence, the same way you would for any open source dependency.
+
+## Why manufacturers should care about this distinction specifically
+
+ERP is the system of record for inventory, cost, and — for regulated manufacturers — quality and traceability data. That makes the licensing model a real risk factor, not an ideological preference:
+
+### Audit
+
+For AS9100, ISO 13485, or CMMC-relevant shops, "trust us" isn't sufficient for a system that produces your quality and compliance records. Source-available code lets your own engineers or a third-party auditor read exactly how a calculation (say, MRP netting, or a nonconformance workflow) is implemented, rather than relying on a vendor's documentation being complete and accurate.
+
+### Self-host
+
+A closed vendor can end-of-life a product, get acquired, or change pricing with no recourse but to migrate. Self-hosting a source-available or open source ERP means the software keeps running under your control even if the vendor relationship ends — you're not dependent on their infrastructure decisions. For regulated and defense manufacturers specifically, self-hosting can also be a data-residency requirement; see [Self-hosting an ERP in an ITAR environment](/learn/self-hosting-an-erp-in-an-itar-environment).
+
+### No lock-in
+
+Proprietary ERPs often make data export deliberately difficult, and customizations are typically locked to the vendor's proprietary scripting layer, which doesn't travel if you leave. With source-available code and a documented API, your data model is visible and your integrations are built against a stable, inspectable schema rather than an opaque one.
+
+### Extend
+
+Closed ERPs sell customization back to you through expensive professional-services engagements, often billed by the hour with unpredictable scope. With the source and an API in hand, your own developers — or any contractor — can extend the system directly: a custom report, a webhook to a machine controller, a script against the same schema the core product uses.
+
+```bash
+git clone https://github.com/crbnos/carbon
+cd carbon
+# read the actual planning, quality, and API logic before you trust it with production data
+```
+
+## Comparing the three models directly
+
+| Concern | Proprietary ERP | Source-available ERP | Fully open source ERP |
+|---|---|---|---|
+| Can you verify the calculation logic? | No | Yes | Yes |
+| Can you self-host? | Rarely, or only at high on-prem license cost | Typically yes | Yes |
+| Risk if vendor is acquired or shuts down | High — you may lose access entirely | Low — code and data stay yours | Low |
+| Who can build a competing hosted product from it? | No one (not even legally relevant) | Restricted, per license terms | Anyone |
+| Typical customization path | Vendor professional services | Your team, the API, or the vendor | Your team, the API, or a fork |
+
+Neither source-available nor open source is strictly "more open" than the other in every dimension — they trade off differently. What both share, and what separates them from proprietary software, is that a buyer isn't taking the vendor's description of the system on faith.
+
+## A buyer's due-diligence checklist
+
+Before treating any vendor's "open" or "source-available" claim as a buying signal, verify it directly rather than taking the marketing page's word for it:
+
+1. **Find the actual license file** in the repository (usually `LICENSE` or `LICENSE.md` at the root) and read it, not the blog post announcing it. Vendors sometimes use "open source" loosely to mean "we published some code," which isn't the same as an OSI-approved license.
+2. **Check what's actually in the repo.** Some vendors publish a thin plugin or SDK as "open source" while the core application — the part that actually runs your operations — stays closed. Confirm the published code is the real product, not a decorative subset.
+3. **Try to self-host it.** Clone the repo and attempt a local setup before you need to. If the documented self-host path is broken, undocumented, or quietly requires a paid services engagement, the license terms are academic.
+4. **Look at commit and release history.** A healthy cadence of commits, tagged releases, and responded-to issues is a better signal of a living product than any license text.
+5. **Ask what happens if the vendor disappears.** With source-available or open source, you should be able to answer "we keep running our self-hosted instance and fork if needed." If the honest answer is "we'd lose everything," the license claim isn't providing the protection it implies.
+
+Running through this list takes an afternoon and tells you more than any comparison chart — including this one.
+
+## How Carbon applies this
+
+Carbon is source-available: the full application — ERP, MRP, MES, and QMS on one Postgres data model — is public on GitHub (github.com/crbnos/carbon), self-hostable including in GovCloud/ITAR-capable configurations on Enterprise, and extendable through a REST API that reaches every table, not a curated subset (see [API-first ERP](/learn/api-first-erp)). Pricing is published rather than gated behind a sales call: Starter at $40/user/mo for managed cloud, Business at $100/user/mo with the API, webhooks, and audit logging unlocked, and Enterprise for self-hosted and compliance-heavy deployments. If you're comparing that model against building your own system from scratch, see [Carbon vs. building it yourself](/compare/build-it-yourself); if you're comparing it against the broader open-source MES landscape, see [Open source MES: what exists in 2026](/learn/open-source-mes).
+
+## Frequently asked questions
+
+### Is source-available the same as open source?
+
+No. Both publish the source code, but open source licenses (as defined by the Open Source Initiative) grant broad rights to modify, redistribute, and even relicense the software. Source-available licenses publish the code and typically permit self-hosting and modification for your own use, but may restrict specific commercial uses like reselling a competing hosted version.
+
+### Can I modify a source-available ERP for my own manufacturing operation?
+
+In most source-available licenses, yes — modifying the software for your own internal use is exactly the use case these licenses are designed to permit. The restrictions typically target reselling a hosted version as a competing commercial product, not internal use or customization.
+
+### Why would a vendor choose source-available over fully open source?
+
+It lets the vendor publish the code for transparency and self-hosting while keeping a sustainable business around it — so the project stays funded, actively maintained, and supported. For a buyer, that longevity is the point: the common failure mode of fully open-source ERP isn't a license dispute, it's a project that stalls when its maintainers lose the funding to keep going. Source-available preserves the audit, self-host, and no-lock-in benefits while keeping someone on the hook to keep shipping.
+
+### Does a source-available license affect ITAR or CMMC compliance?
+
+Not directly — export control and cybersecurity compliance depend on where and how the software is deployed and how data is handled, not on the license type. What source-available licensing typically enables is self-hosting in a controlled environment, which is often a practical requirement for ITAR and CMMC posture. See [ITAR compliance for manufacturers](/learn/itar-compliance-for-manufacturers) and [CMMC 2.0 for small defense manufacturers](/learn/cmmc-for-small-defense-manufacturers).
+
+## Read the code before you commit to the system of record
+
+If you're evaluating ERP for a regulated or growing manufacturing operation, don't take licensing claims at face value — read the actual repository. [Browse Carbon on GitHub](https://github.com/crbnos/carbon), check the API reference at [docs.carbon.ms](https://docs.carbon.ms), or [start a free 30-day trial](/pricing) at https://app.carbon.ms.

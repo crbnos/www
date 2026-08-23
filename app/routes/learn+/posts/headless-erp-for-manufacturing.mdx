@@ -1,0 +1,101 @@
+---
+title: "Headless ERP for Manufacturing, Explained"
+publishedAt: "2026-07-04"
+summary: "What headless ERP means for manufacturers: decoupling the UI from a fully API'd backend, when it matters, and how it differs from a traditional monolith."
+tag: "Developer"
+author: "chase"
+---
+
+Headless ERP means the system's data and business logic are exposed through an API first, with the UI treated as one client among several rather than the only way in. For manufacturers, that distinction stops being academic the moment you need a kiosk on the shop floor, a customer portal, a nightly sync to a customer's MRP system, or an AI agent that has to read a job's status without a human clicking through five screens to find it.
+
+The term comes from headless CMS (Contentful, Sanity) and headless commerce (Shopify's Storefront API, Commercetools), where the pattern is well established: separate the content/data layer from the presentation layer so any number of front ends — web, mobile, kiosk, voice — can consume the same source of truth. Manufacturing ERP is arriving at the same architecture later, and for the same reason: the number of things that need to read and write production data is growing faster than any single UI team can build screens for.
+
+## What "headless" actually means in an ERP context
+
+A headless system has three properties, and it's worth being precise because the term gets used loosely:
+
+1. **Every capability is reachable through an API**, not just a read-only reporting export. If a human can create a work order, allocate inventory, or close a purchase order in the UI, a script can do the same thing through the API — same validation, same permissions, same result.
+2. **The API is the contract, not an afterthought.** In a traditional monolith, the API (if one exists) is usually a thin layer bolted onto the UI's internal logic, covering whatever a systems integrator asked for. In a headless design, the API *is* the product; the shipped UI is simply the first, best-supported client of it.
+3. **The UI is replaceable without touching the data model.** You can build a second UI — a tablet app for the floor, a supplier-facing portal, an internal dashboard — against the same API without forking the backend or reverse-engineering undocumented tables.
+
+Headless is not the same as "has an API." Plenty of ERPs have an API that covers 20-30% of what the UI can do — usually reads, rarely writes, and almost never the workflow-heavy stuff like routing a nonconformance or releasing a work order. A headless system's API surface matches its UI's surface, because the UI is built on the same API everyone else uses. See [API-first ERP](/learn/api-first-erp) for what a full API surface enables in more detail.
+
+## Why this matters more in manufacturing than in most software categories
+
+Manufacturing data has an unusually large number of legitimate consumers, each of which wants a different interface:
+
+- **The shop floor** wants a large-format kiosk or a tablet mounted at a work center — big touch targets, minimal navigation, often no keyboard.
+- **Purchasing and planning** want dense, sortable tables and bulk actions — the opposite UI from the floor.
+- **Customers** placing orders through a portal want a stripped-down subset: their orders, their quotes, nothing internal.
+- **Suppliers** want visibility into open POs and expected receipts, not the rest of the ERP.
+- **Engineering tools** — CAD, PLM, quoting calculators — want to push BOM and routing changes in without a person retyping them.
+- **AI agents** increasingly want to query job status, inventory levels, or quality holds programmatically and, in some cases, take action (release a hold, create a purchase requisition) on a human's behalf. See [Building AI agents for your factory: MCP + manufacturing](/learn/mcp-for-manufacturing).
+
+A monolithic ERP forces every one of these consumers through the same screen designed for the primary user (usually a planner or accountant), or forces a systems integrator to build and maintain a custom bridge for each one — a shop-floor kiosk app, a customer portal, a supplier integration — each hand-rolled against whatever partial API the vendor exposes, each breaking separately on every upgrade.
+
+## Headless vs. monolithic: what actually changes
+
+| | Monolithic ERP | Headless / API-first ERP |
+|---|---|---|
+| Primary interface | The vendor's UI, full stop | Any client — vendor UI, custom app, kiosk, agent |
+| API coverage | Often partial, read-heavy | Matches the UI 1:1; writes and workflows included |
+| Adding a new client (kiosk, portal) | Custom integration project, often paid | Build against the existing API |
+| Upgrades | Custom integrations can break silently | API is a versioned contract; UI and clients evolve independently |
+| AI agent access | Usually none, or a bolted-on export | Native — same API surface an agent uses to act, not just read |
+| Who can build on it | The vendor, or an expensive integrator | Any developer with API docs |
+
+The practical tell for whether an ERP is actually headless: try to do something non-trivial — release a work order, post a receipt, close a nonconformance — through the API alone, without the vendor's UI open in another tab. If it can't be done, or requires an undocumented workaround, the system has an API, but it isn't headless.
+
+## Where a headless model matters, concretely
+
+**Shop-floor kiosks.** A router/traveler screen (see [What Is a Router / Job Traveler?](/learn/what-is-a-router-traveler)) built for a wall-mounted tablet needs to show almost none of what a planner's screen shows. A headless backend lets that kiosk be a thin, purpose-built client instead of a cut-down version of the main app.
+
+**CAD-to-ERP sync.** Engineering tools like Onshape or SolidWorks PDM can push BOM and routing updates directly into the ERP's data model as soon as a design is released, instead of a person re-keying a parts list. This only works if BOM creation and revision are first-class API operations, not UI-only features. See [From CAD to BOM: Onshape → ERP sync](/learn/cad-to-bom-onshape-erp-sync).
+
+**Customer and supplier portals.** A customer checking order status, or a supplier confirming a ship date, doesn't need — and shouldn't have — access to the internal ERP UI. A headless backend lets you build a narrow, branded portal against the same live data, with its own auth and its own permission scope.
+
+**AI agents acting on production data.** An agent that answers "which jobs are behind schedule" or drafts a purchase requisition when inventory drops below reorder point needs the same write access a human planner has, exposed in a way a model can call reliably. That requires the ERP's actions — not just its reports — to exist as API operations.
+
+## What to check before calling a vendor's ERP "headless"
+
+- Does the API cover **writes and workflow transitions**, not just read-only exports? Can you create a job, not just list existing ones?
+- Is the API **documented and versioned** publicly, or only available under an NDA and a professional-services engagement?
+- Does the **vendor's own UI use the same API** you'd be given, or does it have privileged internal endpoints you can't reach? (If the vendor's UI is faster or more capable than what's documented for you, it's not truly headless — it's a monolith with a public read API bolted on.)
+- Can a **third-party client** — a kiosk framework, a low-code tool, an AI agent's tool-calling layer — authenticate and act without special vendor cooperation?
+
+## How Carbon is built headless
+
+Carbon is built API-first from the schema up, on a single Postgres data model shared by ERP, MRP, MES, and QMS — there's no separate reporting database or read-only export layer bolted on after the fact:
+
+- **Every table and capability is reachable over the REST API** (rest.carbon.ms), including writes: creating work orders, posting receipts, releasing quality holds, updating a BOM. The shipped web app is a client of that same API, not a privileged front end with extra access.
+- **A hosted MCP server** lets AI agents (Claude, ChatGPT, Cursor) query and act on live manufacturing data using the same permission model as a human user — a direct application of the headless model to the newest class of "client."
+- **Open source.** Because the schema and API implementation are public on GitHub, you can verify exactly what's reachable through the API rather than taking a sales deck's word for it.
+- **Self-hostable**, so a headless architecture doesn't require trusting a third party's uptime for a mission-critical kiosk or portal built on top of it.
+
+If you're evaluating whether to build a custom shop-floor client, a customer portal, or an agent integration on top of an ERP, the honest test is whether you can build it entirely against the documented API — see [What is a source-available ERP?](/learn/what-is-a-source-available-erp) for the related question of whether you can also read the source behind that API.
+
+## Frequently asked questions
+
+### What does "headless ERP" mean?
+
+Headless ERP means the system's data and business logic are fully exposed through an API, and the vendor's own UI is just one client of that API rather than the only way to interact with the system. Any number of additional interfaces — kiosks, portals, agents — can be built on the same backend.
+
+### Is headless ERP the same as API-first ERP?
+
+They're closely related. API-first describes how the system is built (API as the primary contract, UI built on top of it). Headless describes the resulting architecture (UI decoupled from backend, replaceable without touching the data model). A truly API-first ERP is headless by construction.
+
+### Do I need headless ERP if I only use the vendor's UI?
+
+Not necessarily today — but manufacturers rarely stay single-UI for long. Shop-floor kiosks, customer portals, CAD sync, and AI agents are increasingly standard requests. Choosing a headless system up front avoids a costly re-platform when one of those needs shows up.
+
+### How do I test whether an ERP is really headless before buying?
+
+Ask the vendor to demonstrate a write operation — creating a job, posting a receipt, releasing a hold — through the documented API alone, with no UI involved. If that requires a professional-services engagement or isn't possible, the system isn't headless in practice, whatever the marketing says.
+
+### Does headless ERP cost more to implement?
+
+It shouldn't cost more to adopt as a buyer, since the vendor's own UI already runs on the API. It can reduce total cost over time, because custom clients (kiosks, portals, integrations) are built against a documented, stable API instead of a fragile, vendor-specific workaround.
+
+## See it working against a real API
+
+The best way to evaluate a headless claim is to hit the API directly. [Try Carbon free for 30 days](/pricing) at https://app.carbon.ms and call rest.carbon.ms against your own data, or read the schema and API implementation on [GitHub](https://github.com/crbnos/carbon).

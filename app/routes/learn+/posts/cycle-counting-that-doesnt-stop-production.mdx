@@ -1,0 +1,105 @@
+---
+title: "Cycle Counting That Doesn't Stop Production"
+publishedAt: "2026-07-13"
+summary: "Cycle counting best practices for manufacturers: ABC classification, count frequency by class, variance tolerances, and a workflow that never halts the floor."
+tag: "How-to"
+author: "chase"
+---
+
+Cycle counting is the practice of counting a small slice of inventory continuously — a handful of bins or SKUs every day — instead of shutting the plant down once a year for a full physical count. Done right, it produces more accurate inventory than an annual count ever does, and it never requires stopping a work center to do it. Done wrong, it's either a checkbox exercise that doesn't catch real variance, or a slow-motion version of the annual count that quietly disrupts production one aisle at a time.
+
+This is a cycle counting best practices guide written for a production floor, not a warehouse-only DC: ABC classification with a worked example, how to set count frequency and tolerance from that classification, and a count workflow designed around the constraint that generic inventory advice usually ignores — you cannot freeze the floor to count it.
+
+## Why an annual physical inventory doesn't work on a shop floor
+
+An annual count treats every SKU identically: count everything, once, usually during a production shutdown. That has two problems specific to manufacturing. First, a $40,000 casting and a box of $0.03 washers get exactly the same counting attention, which is a poor use of labor. Second, a full shutdown count only tells you your inventory was accurate on one day of the year — errors introduced in month two go undetected and uncorrected for ten months, compounding into bad MRP netting, false stockouts, and reorder points calculated against numbers nobody trusts. [What Is MRP?](/learn/what-is-mrp) depends entirely on accurate on-hand quantities; a netting calculation is only as good as the inventory record it starts from.
+
+## ABC classification: counting the right items at the right frequency
+
+ABC classification ranks items by annual dollar usage (unit cost × annual volume, not just cost or just volume) and groups them into three tiers. A small number of high-value items usually account for most of the dollar volume — the classic 80/20 pattern — and that concentration is the whole justification for counting different items at different frequencies.
+
+**Worked example.** Ten SKUs, $500,000 in combined annual usage value:
+
+| Item | Annual usage value | % of total | Cumulative % | Class |
+|---|---|---|---|---|
+| SKU-1 | $180,000 | 36.0% | 36.0% | A |
+| SKU-2 | $120,000 | 24.0% | 60.0% | A |
+| SKU-3 | $70,000 | 14.0% | 74.0% | A |
+| SKU-4 | $50,000 | 10.0% | 84.0% | B |
+| SKU-5 | $30,000 | 6.0% | 90.0% | B |
+| SKU-6 | $20,000 | 4.0% | 94.0% | B |
+| SKU-7 | $12,000 | 2.4% | 96.4% | C |
+| SKU-8 | $8,000 | 1.6% | 98.0% | C |
+| SKU-9 | $6,000 | 1.2% | 99.2% | C |
+| SKU-10 | $4,000 | 0.8% | 100.0% | C |
+
+Sort by descending usage value, run a cumulative percentage, and draw class lines at policy thresholds — commonly A up to ~80% cumulative, B up to ~95%, C for the remainder. Here, three SKUs (30% of the item count) drive 74% of the dollar value; four SKUs (40% of the item count) drive just 6%. That imbalance is why counting every item the same number of times per year wastes effort on the tail and under-protects the head.
+
+## Setting count frequency from ABC class
+
+| Class | % of value (example) | % of SKUs (example) | Count frequency | Counts per item per year |
+|---|---|---|---|---|
+| A | 74% | 30% | Monthly | 12 |
+| B | 20% | 30% | Quarterly | 4 |
+| C | 6% | 40% | Semiannual | 2 |
+
+A-class items also deserve a second layer of scrutiny beyond frequency: they're the items most worth counting at natural trigger points — right after a receipt, right before a large job pull — rather than only on a fixed calendar.
+
+## Tolerance thresholds: when a variance needs investigation
+
+A tolerance is the variance a class is allowed to show before it triggers root-cause investigation instead of a routine adjustment. Tighter tolerances on A items reflect that a 5% miss on a $180,000 SKU is a much bigger dollar problem than a 5% miss on a $4,000 one:
+
+| Class | Suggested quantity tolerance | Action if exceeded |
+|---|---|---|
+| A | ±2% | Investigate before adjusting; recount if possible |
+| B | ±5% | Investigate if variance recurs on the same item |
+| C | ±10% | Adjust and log; investigate only if it recurs |
+
+Tolerances should also carry a dollar floor — a 10% variance on a box of washers isn't worth investigating even though it clears the percentage threshold. The point of a tolerance isn't to excuse errors; it's to route investigation time to the variances that are actually worth an hour of a supervisor's attention.
+
+## A count workflow that doesn't stop production
+
+The habit that actually differentiates good cycle counting from a slow annual count in disguise is scope: freeze the transaction activity for the specific bin or location being counted, not the plant.
+
+1. **Count by location, in rotation** — assign a subset of bins or aisles to count each day, cycling through the whole facility over the count period implied by each class's frequency, rather than attempting a full-facility sweep at once.
+2. **Count during natural pauses** — shift changeover, a lull between jobs at a specific work center, or first thing before the morning pull — instead of scheduling a dedicated stoppage.
+3. **Use blind counts** — the counter enters what they physically count without seeing the system's expected quantity first, which prevents the counter from unconsciously counting to match the number on the screen.
+4. **Freeze only the location being counted** — put a short transaction hold on the specific bin, not the item's other locations or the rest of the floor, so production elsewhere continues uninterrupted.
+5. **Count, then release the hold immediately** — the goal is minutes of hold per location, not hours.
+
+## Reconciliation: root-causing variance instead of just adjusting it
+
+A count that doesn't match the system record isn't automatically wrong on the physical side. Before posting an adjustment, check the usual sources of a false variance: an in-transit receipt or issue that hadn't posted yet, a unit-of-measure conversion error, a mis-pick charged to the wrong job, or a transaction posted to the wrong bin. Only after ruling those out should the variance become an inventory adjustment with a reason code.
+
+The more valuable output of cycle counting isn't the individual adjustment — it's the trend. Track variances by item, by location, and by who counted or transacted them. A single miscount is noise; the same SKU drifting negative every month points to a real process problem, often unrecorded scrap at a specific work center or a receiving step that's skipping a transaction. [Double-entry inventory, explained](/learn/double-entry-inventory-explained) covers why every inventory movement should be a transaction with a traceable source and destination — that discipline is what makes root-causing a variance possible instead of guessing.
+
+## How Carbon supports cycle counting
+
+Carbon treats inventory accuracy as infrastructure for everything else in the system, not a side task:
+
+- **ABC-aware count scheduling** against real on-hand and location data, so count frequency can follow dollar usage rather than a flat calendar for every SKU.
+- **Location-level holds**, not plant-wide freezes — a count in progress on one bin doesn't block transactions anywhere else.
+- **Blind count entry**, with the expected quantity hidden until the physical count is submitted.
+- **Full transaction lineage.** Because Carbon's inventory ledger is double-entry — every movement has a source and destination — reconciling a variance means tracing real transactions instead of guessing where a number went missing.
+- **Same-day visibility into planning.** Because inventory, MRP, and purchasing share one data model, a posted count adjustment is reflected in the very next MRP run, keeping [reorder points](/learn/safety-stock-and-reorder-points) built on numbers that are actually current.
+
+## Frequently asked questions
+
+### What is ABC cycle counting?
+It's a method of classifying inventory into A, B, and C tiers by annual dollar usage, then counting each tier at a different frequency — more often for high-value A items, less often for low-value C items — instead of counting everything on the same schedule.
+
+### How often should you cycle count?
+A common starting point is monthly for A items, quarterly for B items, and semiannual for C items, adjusted based on how often variances actually show up once you have a few cycles of data.
+
+### What's an acceptable inventory count variance?
+Tolerances typically tighten with item value — around ±2% for A items, ±5% for B items, and ±10% for C items — paired with a dollar floor so trivial variances on cheap items don't trigger unnecessary investigation.
+
+### Do you need to stop production to cycle count?
+No. Effective cycle counting freezes only the specific bin or location being counted, for the few minutes the count takes, and schedules counts around natural pauses rather than a dedicated plant-wide stoppage.
+
+### Is cycle counting a replacement for an annual physical inventory?
+For most manufacturers, a disciplined cycle count program makes a full annual physical unnecessary, since accuracy is checked continuously rather than once a year. Some auditors or lenders still require a periodic full count regardless of how good cycle count results are — check your specific requirements.
+
+## Count without a shutdown
+
+If cycle counting still means a production hold and a clipboard, it's worth seeing what ABC-scheduled, location-level counting looks like against your own inventory. [Try Carbon free for 30 days](/pricing) at https://app.carbon.ms, or review the inventory ledger's source on [GitHub](https://github.com/crbnos/carbon).

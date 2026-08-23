@@ -1,0 +1,96 @@
+---
+title: "CMMC 2.0 for Small Defense Manufacturers"
+publishedAt: "2026-07-23"
+summary: "CMMC for manufacturers explained: the three CMMC 2.0 levels, how they map to NIST 800-171, and what a small defense supplier actually has to do."
+tag: "Compliance"
+author: "chase"
+---
+
+CMMC for manufacturers boils down to one question a contracting officer or prime now expects you to answer with evidence, not a promise: can you prove you protect Controlled Unclassified Information (CUI) to the standard the Department of Defense requires? CMMC 2.0 replaced years of self-attested "yes, we follow NIST 800-171" with a structured framework of three levels, defined assessment types, and a phased rollout that's steadily making certification a condition of contract award rather than a nice-to-have.
+
+This guide covers what CMMC 2.0 actually requires, exactly how it relates to NIST SP 800-171, and the practical steps a small defense manufacturer needs to take — including a checklist you can start working through now, before a prime asks for your score.
+
+## What CMMC 2.0 is, and why it exists
+
+The **Cybersecurity Maturity Model Certification (CMMC)** is the Department of Defense's framework for verifying that companies in the Defense Industrial Base (DIB) adequately protect **Federal Contract Information (FCI)** and **Controlled Unclassified Information (CUI)**. It exists because the original approach — contractors self-attesting compliance with DFARS 252.204-7012's requirement to implement NIST SP 800-171 — produced widespread, unverified gaps. CMMC 2.0 streamlined an earlier, more complex five-level model down to three levels and tied verification directly to existing NIST standards instead of a bespoke maturity model, with contract requirements phasing in over several years as the rule takes effect across new DoD solicitations.
+
+## The three CMMC 2.0 levels
+
+| Level | Who it applies to | Standard | Assessment |
+|---|---|---|---|
+| **Level 1 — Foundational** | Contractors handling FCI only | 15 basic safeguarding requirements from FAR 52.204-21 | Annual self-assessment |
+| **Level 2 — Advanced** | Contractors handling CUI | 110 security requirements aligned to NIST SP 800-171 | Annual self-assessment for most; third-party (C3PAO) assessment every 3 years for contracts involving higher-priority CUI, with annual affirmation |
+| **Level 3 — Expert** | Contractors on the highest-priority programs | NIST SP 800-171 plus a subset of NIST SP 800-172 enhanced requirements | Government-led assessment (DIBCAC) |
+
+**FCI** is information provided by or generated for the government under a contract that isn't intended for public release — the baseline that applies to nearly any DoD contract. **CUI** is a more sensitive category: unclassified information that still requires safeguarding under law, regulation, or government-wide policy — technical drawings, specifications, and unclassified export-controlled data are common examples in manufacturing. Most small manufacturers doing real defense subcontract work, rather than pure commercial-item supply, land at **Level 2**, because drawings, specs, and technical data marked CUI flow down from primes as a normal part of the work.
+
+## How CMMC relates to NIST 800-171
+
+CMMC Level 2 is not a new set of controls — it's a verification mechanism layered on top of the **110 security requirements already defined in NIST SP 800-171 Rev 2**, spanning 14 control families: access control, awareness and training, audit and accountability, configuration management, identification and authentication, incident response, maintenance, media protection, personnel security, physical protection, risk assessment, security assessment, system and communications protection, and system and information integrity. If you've already built a System Security Plan (SSP) against 800-171 for DFARS 252.204-7012, that work is your CMMC Level 2 foundation — CMMC adds the assessment and certification layer (self-assessment score in SPRS, or third-party C3PAO assessment) that verifies the SSP reflects what's actually implemented, rather than what's merely documented.
+
+## What a small shop actually has to do
+
+1. **Scope your CUI/FCI boundary.** Identify exactly which systems, networks, and personnel touch CUI — your ERP, PLM, email, file shares, and any system where a drawing or spec marked CUI could land. Systems outside this boundary are out of scope for the full control set, which is why scoping carefully (rather than defaulting to "everything is in scope") controls cost.
+2. **Decide whether to enclave.** Many small manufacturers isolate CUI-handling systems into a dedicated network segment or enclave, rather than applying the full 110-control set to the entire company network — this is usually the single biggest cost lever in a CMMC program.
+3. **Choose systems that can actually live inside your compliance boundary.** A multi-tenant SaaS ERP that can't be scoped, audited, or hosted within your enclave adds risk to your assessment; a system you can self-host inside your own controlled environment is easier to defend to an assessor.
+4. **Build and maintain a System Security Plan (SSP)** documenting exactly how each of the 110 requirements is implemented.
+5. **Maintain a Plan of Action & Milestones (POA&M)** for any requirement not yet fully implemented, with real dates — POA&Ms are allowed but time-limited and monitored, not a permanent substitute for compliance.
+6. **Implement the technical controls**: multi-factor authentication in scope, encryption of CUI at rest and in transit, unique user IDs and least-privilege access, centralized audit logging, and documented incident response procedures.
+7. **Conduct the required self-assessment** and submit your score to the **Supplier Performance Risk System (SPRS)** — increasingly a prerequisite for contract award even before a formal C3PAO assessment is required.
+8. **Schedule a third-party (C3PAO) assessment** if your specific contracts require Level 2 certification rather than self-assessment.
+9. **Flow CMMC requirements down to your own subcontractors and suppliers**, the same way your prime flowed them down to you — see [DFARS flowdowns explained](/learn/dfars-flowdowns-explained) for how that obligation moves through the supply chain regardless of your tier.
+
+## CMMC readiness checklist
+
+- Identify every place CUI lives today (drawings, specs, work instructions, ERP records, email, shared drives).
+- Define your CUI enclave/network boundary and document why systems outside it are excluded.
+- Choose an ERP/MES/QMS deployment that can be hosted inside your compliance boundary — self-hosted or a controlled environment you can fully audit — rather than an uncontrolled multi-tenant SaaS.
+- Enforce multi-factor authentication for every account with access to in-scope systems.
+- Encrypt CUI at rest and in transit using validated cryptography.
+- Implement least-privilege access control with unique user IDs — no shared logins on systems touching CUI.
+- Turn on centralized audit logging for access to CUI-scoped systems and retain logs per your SSP.
+- Document a written System Security Plan (SSP) mapped control-by-control to NIST SP 800-171.
+- Maintain a Plan of Action & Milestones (POA&M) with real, tracked remediation dates for open gaps.
+- Run and document your annual self-assessment, and submit the score to SPRS.
+- Confirm whether your active or upcoming contracts require third-party C3PAO assessment, and schedule it with lead time — C3PAO capacity is limited.
+- Flow CMMC and NIST 800-171 requirements down to subcontractors and suppliers who touch CUI on your behalf.
+
+## Why the ERP decision matters for CMMC
+
+Manufacturing ERPs are frequently in-scope for CMMC because they hold exactly the kind of data the framework protects — customer drawings, specs, and technical data attached to purchase orders and work orders. A multi-tenant SaaS ERP you can't fully scope, whose subprocessors and support access you can't fully see, adds an unresolved variable to your SSP that a C3PAO assessor will ask about directly. A self-hosted or source-available system you deploy inside your own enclave removes that unresolved variable — the same argument that applies to ITAR-controlled technical data. See [ITAR compliance for manufacturers](/learn/itar-compliance-for-manufacturers) for how these two obligations overlap when your work is both CUI-bearing and ITAR-controlled, and [self-hosting an ERP in an ITAR environment](/learn/self-hosting-an-erp-in-an-itar-environment) for the concrete deployment patterns.
+
+## How Carbon supports a CMMC program
+
+- **Self-hostable inside your own enclave or GovCloud environment** on Enterprise plans, so your ERP can live inside your CMMC scope boundary instead of adding an unscoped third party to it.
+- **Role-based access control and audit logging** built into the same data model as production, purchasing, and quality — the access control and audit trail evidence an SSP and C3PAO assessment both require.
+- **Open source**, so your security team or a third-party assessor can inspect exactly how access control, encryption, and logging are implemented, rather than relying on a vendor's compliance narrative.
+- **One data model for ERP, MES, and QMS**, reducing the number of separate systems (and separate scoping decisions) that touch CUI in the first place.
+- **Enterprise support** for migrations and forward-deployed engineering, so self-hosting inside your CMMC boundary doesn't mean building the deployment alone.
+
+Carbon doesn't replace your SSP, your POA&M, or your C3PAO assessment — those remain your responsibility as the certified entity. What it removes is an unscoped, opaque SaaS dependency sitting in the middle of your compliance boundary.
+
+## Frequently asked questions
+
+### What CMMC level does a small machine shop need?
+
+If you only handle Federal Contract Information (FCI) and never receive CUI, Level 1 self-assessment may be sufficient. Most small manufacturers doing subcontract work involving drawings or specs marked CUI need Level 2, which aligns to the full NIST SP 800-171 control set.
+
+### Is CMMC the same as NIST 800-171?
+
+No, but they're closely related. NIST SP 800-171 defines the 110 security requirements. CMMC Level 2 is the DoD's verification framework built on top of those same requirements, adding a defined assessment method (self-assessment or third-party C3PAO) and a certification record in SPRS.
+
+### Can I use a POA&M to pass a CMMC assessment with open gaps?
+
+A limited POA&M is allowed for certain requirements under CMMC's scoring rules, but it isn't unlimited or permanent — it requires real remediation dates and doesn't cover every control, so it shouldn't be treated as a way to defer compliance indefinitely.
+
+### Does CMMC apply if I'm a subcontractor, not the prime?
+
+Yes. CMMC requirements flow down contractually to subcontractors at any tier who handle FCI or CUI as part of the work, regardless of whether you hold a direct contract with the DoD.
+
+### How much does CMMC compliance cost a small shop?
+
+It varies enormously based on your current security maturity and how tightly you can scope your CUI boundary — enclaving CUI-handling systems into a smaller, well-controlled environment is the most effective way small manufacturers control cost, rather than applying the full control set company-wide.
+
+## Build your CMMC boundary on infrastructure you control
+
+If your ERP is inside your CMMC scope, it's worth evaluating a system you can self-host, audit, and control access to directly, instead of trusting an opaque SaaS vendor's compliance claims. [Try Carbon free for 30 days](/pricing) at https://app.carbon.ms, or review the access control and data model on [GitHub](https://github.com/crbnos/carbon).

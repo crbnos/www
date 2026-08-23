@@ -1,0 +1,101 @@
+---
+title: "Odoo Community vs Enterprise for Manufacturers: What 'Free' Includes"
+publishedAt: "2026-08-08"
+summary: "Odoo Community vs Enterprise for manufacturers: a clear feature table of what's actually free, what's paywalled, and the odoo free limitations that matter."
+tag: "Odoo"
+author: "chase"
+---
+
+Odoo Community, the free and open-source edition, gives manufacturers a real bill-of-materials-to-manufacturing-order flow at zero license cost. But several features that discrete manufacturers assume are "part of MRP" — advanced quality, maintenance, work center Gantt planning, and some reporting — are Enterprise-only. This is the practical odoo community vs enterprise breakdown for manufacturers, with the specific gaps that trip people up after they've already started implementing.
+
+## The licensing split, briefly
+
+Odoo ships two editions on the same codebase:
+
+- **Community** — LGPLv3, free, self-hosted only (no official Odoo-hosted Community). Core apps including base Sales, Inventory, and Manufacturing.
+- **Enterprise** — proprietary license, per-user subscription, available self-hosted or on Odoo's own cloud (Odoo.sh or Odoo Online). Adds a large set of apps and features layered on top of Community, including several manufacturing-relevant ones.
+
+This is a meaningfully different model from a fully open-core product: Enterprise isn't just support and hosting, it's additional proprietary modules you cannot legally run without a paid subscription, and Odoo's own licensing terms require an Enterprise subscription for the full duration you run those modules, not just at purchase time.
+
+## What manufacturers actually lose in Community
+
+Here's the feature table that matters if you're a discrete manufacturer, not a generic retailer, evaluating "free" Odoo.
+
+| Capability | Community (free) | Enterprise (paid) |
+|---|---|---|
+| Basic BOM & manufacturing orders | Yes | Yes |
+| Work orders & routing operations | Yes | Yes |
+| Basic inventory & reordering rules | Yes | Yes |
+| Shop-floor tablet / barcode MO confirmation | Limited | Full tablet view with quality checks |
+| Work center Gantt / capacity planning | No | Yes |
+| Preventive/corrective Maintenance app | No | Yes |
+| Quality control points & quality alerts | No | Yes |
+| Subcontracting (outsourced operations) | No | Yes |
+| Advanced reporting / MRP forecast reports | Limited | Yes |
+| Multi-company / multi-warehouse at scale | Limited | Yes |
+| Native accounting (full) | No (Invoicing only) | Yes |
+| Studio (no-code customization) | No | Yes (paid add-on) |
+| Official mobile app | No | Yes |
+| Odoo.sh / official cloud hosting | No | Yes |
+
+The pattern is consistent: Community gives you the transactional core — create a BOM, issue an MO, consume components — while nearly everything that makes manufacturing *manageable at scale* (scheduling visibility, quality, maintenance, subcontracting) sits behind the Enterprise wall.
+
+## Why the split exists
+
+It helps to understand why Odoo draws the line where it does, rather than treating it as arbitrary. Odoo's business model relies on Enterprise subscriptions and partner implementation revenue to fund ongoing development of the platform, including Community itself. Features that are relatively easy to self-serve with generic business logic (basic BOMs, basic reordering) stay in Community as an acquisition funnel; features that require deeper, manufacturing-specific engineering and that scale customers are more willing to pay for (quality, maintenance, advanced planning) sit in Enterprise. That's a coherent commercial strategy — it just means "free" Odoo is genuinely free for a narrower slice of manufacturing than the marketing sometimes implies, and it's worth budgeting for the Enterprise apps you'll actually need before you count on Community carrying you through production scale.
+
+## The two gaps that hurt the most
+
+**Quality control.** This is the one that surprises people most. Community has no quality module at all — no inspection checkpoints, no quality alerts, nothing. If you need any documented inspection step, even a simple pass/fail gate before a work order closes, you need Enterprise (or a third-party app, or custom code). For regulated manufacturers this isn't optional; see our [QMS in manufacturing](/learn/what-is-a-qms-in-manufacturing) explainer for the baseline capability any production quality system needs.
+
+**Accounting.** Community includes Invoicing (issue and track invoices) but not full double-entry Accounting — no bank reconciliation, no financial statements, no proper chart-of-accounts-driven ledger. For a manufacturer, that means your job costs and your books live in different systems, or you upgrade to Enterprise specifically to get accounting, at which point "free" ERP has a real per-user monthly cost.
+
+## What Enterprise actually costs
+
+Odoo's own published pricing model charges per app and per user, with a discount for bundling multiple apps (their "one app free" tier is a common trial pattern, but running Manufacturing plus Inventory plus Quality plus Accounting together moves you into the paid multi-app tier quickly). The number that matters for budgeting isn't the sticker price of one app — it's the bundle you actually need as a manufacturer: Manufacturing + Inventory + Purchase + Sales + Accounting + Quality, each priced per user, per month. We break down the real math, including implementation and customization cost, in [the real cost of 'free' ERP: Odoo TCO](/learn/odoo-tco-for-manufacturers).
+
+## Self-hosting doesn't get you out of the Enterprise fee
+
+A common misconception: "I'll just self-host to avoid subscription costs." Self-hosting avoids Odoo's cloud hosting fee, but it does not avoid the Enterprise license fee — the Enterprise apps require an active Enterprise subscription regardless of where you run them. Self-hosting Community is genuinely free; self-hosting Enterprise still requires the per-user Enterprise subscription. This is a different model from source-available software where self-hosting the full feature set carries no separate license fee — see [what is a source-available ERP](/learn/what-is-a-source-available-erp) for that distinction in plain terms.
+
+## How Carbon's model differs
+
+Carbon is also open-source, but the split isn't "free core, paywalled manufacturing features." Carbon's tiers separate by *scale and support*, not by *withholding manufacturing capability*: Starter ($40/user/month) already includes basic ERP/MES/QMS — quality is not an upsell. Business ($100/user/month, 5-user minimum) adds full API/webhook access, native accounting, audit logging, and the complete set of advanced features. Enterprise adds self-hosting support, forward-deployed engineering, SSO/SAML, and ITAR-capable deployment for regulated manufacturers — infrastructure and support needs, not core manufacturing functionality gated behind a wall. And because Carbon's full source is available on [GitHub](https://github.com/crbnos/carbon), you can inspect exactly what you're running at any tier before you commit budget to it.
+
+If you're comparing the two head to head, see the fuller philosophical and technical comparison in [Carbon vs Odoo: two open-source ERPs, two philosophies](/learn/carbon-vs-odoo-open-source-erp).
+
+## A practical decision framework
+
+Ask these questions before you commit to Community:
+
+1. **Do you need any documented quality inspection step?** If yes, you need Enterprise or a bolt-on QMS from day one — budget for it now, not after your first customer audit.
+2. **Do you need your books and your job costs in the same system?** If yes, Community's Invoicing-only accounting won't get you there.
+3. **Do you have more than a handful of work centers competing for capacity?** If yes, you'll want the Gantt planning view, which is Enterprise-only.
+4. **Do you subcontract any operations?** Community has no subcontracting workflow; you'll be tracking outsourced steps manually.
+5. **What's your realistic per-user cost once you add the apps you actually need?** Price the bundle, not the single "free app," before you decide Odoo is the cheap option.
+
+## Frequently asked questions
+
+### Is Odoo Community free forever?
+
+Yes, Community is released under LGPLv3 and free to self-host indefinitely. There is no license fee for Community, though you're responsible for your own hosting, maintenance, and any custom development.
+
+### What manufacturing features are missing from Odoo Community?
+
+The biggest gaps are quality control (no module at all in Community), maintenance management, work center Gantt/capacity planning, subcontracting, and full double-entry accounting — all Enterprise-only.
+
+### Can I self-host Odoo Enterprise to save money?
+
+Self-hosting avoids Odoo's cloud hosting fee but not the per-user Enterprise license subscription, which is required regardless of where the software runs.
+
+### Does Odoo Community include accounting?
+
+No — Community includes Invoicing (issuing and tracking invoices) but not full Accounting with bank reconciliation and financial statements. Full Accounting is an Enterprise app.
+
+### Is there an open-source ERP that includes quality and accounting without an upsell?
+
+Carbon includes quality management and native accounting in its published pricing tiers rather than as a separate paywalled app — see the [Carbon vs Odoo comparison](/compare/odoo) for a side-by-side.
+
+## Try it yourself
+
+Before you budget around a "free" ERP that gets expensive once you add the apps manufacturing actually requires, price out the real alternative. Carbon publishes its pricing at [/pricing](/pricing), offers a 30-day free trial at https://app.carbon.ms, and its full source is on [GitHub](https://github.com/crbnos/carbon) if you want to read the code before you read the invoice.

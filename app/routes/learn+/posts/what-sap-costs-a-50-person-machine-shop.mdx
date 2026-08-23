@@ -1,0 +1,117 @@
+---
+title: "What SAP Actually Costs a 50-Person Machine Shop"
+publishedAt: "2026-07-31"
+summary: "SAP Business One pricing isn't public. Here's an illustrative all-in cost model for a 50-person machine shop — licenses, VAR implementation, add-ons, and maintenance."
+tag: "SAP & enterprise ERP"
+author: "chase"
+---
+
+SAP doesn't publish a price list for SAP Business One, and that opacity is itself the most important fact for a small manufacturer to know before starting an evaluation. Every quote — licenses, implementation, and add-ons like Beas Manufacturing or Produmex — runs through a value-added reseller (VAR), and the total varies by region, reseller, and negotiating leverage. Below is an illustrative, clearly-labeled cost model for a 50-person machine shop, built from the cost categories every B1 buyer actually encounters, so you can ask your VAR sharper questions instead of walking in blind.
+
+**Everything dollar figure below is an example for illustration, not a quote from SAP or a Carbon-verified number.** Treat it as a framework for the questions to ask, not a bid.
+
+## Why SAP Business One pricing is opaque by design
+
+SAP Business One is sold exclusively through certified VARs — SAP doesn't sell it direct, and it doesn't list per-user pricing on its website. This isn't unusual for enterprise software, but it has real consequences for a small manufacturer trying to budget:
+
+- You can't comparison-shop without multiple sales calls, each requiring a discovery meeting before you see a number.
+- The same license can be quoted differently by two VARs in the same city, based on their margin structure and the services they bundle in.
+- Add-ons like Beas Manufacturing and Produmex are licensed and quoted separately, by a different vendor than the one selling you B1 itself — so your "SAP quote" is really at least two vendors' quotes stitched together.
+- Maintenance and support terms (commonly quoted as an annual percentage of license value, a structure typical across enterprise software) are easy to skim past during a sales conversation and expensive to discover later.
+
+None of this makes SAP Business One a bad product — it makes it a product whose true cost only becomes visible once you've assembled every line item yourself. That's the exercise below.
+
+## Building the cost model: what actually gets billed
+
+A realistic SAP Business One deployment for a 50-person machine shop has five cost categories:
+
+1. **User licenses** — typically split between full transactional users (who create orders, post journal entries, run MRP) and limited/logistics users (who mostly view or perform narrow tasks like time entry). Commonly reported per-user costs across SAP B1 deployments range roughly **$95–$250 per user per month**, depending on license tier, region, and whether it's cloud-hosted or on-premise.
+2. **VAR implementation services** — discovery, configuration, data migration, and training, billed by the VAR. For a first ERP implementation with real manufacturing requirements, this commonly runs as a multiple of the first year's license cost rather than a flat fee.
+3. **Manufacturing add-ons** — Beas Manufacturing for shop-floor execution and finite scheduling, Produmex for warehouse execution, each with its own license fee on top of B1 itself.
+4. **Annual maintenance/support** — enterprise software maintenance contracts are commonly priced around 18–22% of license value per year industry-wide; SAP ecosystem products are typically in that range.
+5. **Ongoing customization and change requests** — the VAR relationship doesn't end at go-live. Report changes, new users, workflow tweaks, and version upgrades typically continue as billable VAR time.
+
+### Illustrative example: 50-person shop, worked out
+
+Assume the shop needs 20 full transactional users (production, purchasing, sales, accounting) and 30 limited/logistics users (operators, warehouse, basic time entry) — a common split for a job shop this size.
+
+| Cost category | Illustrative estimate | Notes |
+|---|---|---|
+| Full user licenses (20 × ~$180/user/mo) | ~$43,200/yr | Mid-point of commonly reported range |
+| Limited user licenses (30 × ~$110/user/mo) | ~$39,600/yr | Logistics/limited-use tier |
+| **License subtotal, year 1** | **~$82,800** | |
+| Beas Manufacturing add-on (per-user, ~20 shop users) | ~$15,000–$30,000/yr | Separate vendor, separate contract |
+| Produmex warehouse add-on | ~$8,000–$15,000/yr | Separate vendor, separate contract |
+| VAR implementation (one-time) | ~$60,000–$150,000 | Discovery, config, data migration, training |
+| Annual maintenance/support (~20% of license value) | ~$16,500/yr | Typical enterprise software structure |
+| **Illustrative year-1 all-in** | **~$180,000–$280,000** | License + add-ons + implementation + maintenance |
+| **Illustrative ongoing annual (year 2+)** | **~$95,000–$135,000** | License + add-ons + maintenance, before change requests |
+
+Two things to notice. First, the manufacturing add-ons — the part of the system a 50-person machine shop actually needs to run the floor — aren't in SAP's own license line at all; they're a second (and sometimes third) vendor relationship layered on top. Second, the implementation cost is a range wide enough to swing the entire first-year number by tens of thousands of dollars, because it's set by your specific VAR's rate card, not a published price.
+
+## What this looks like against published pricing
+
+Carbon publishes pricing on its [pricing page](/pricing): Starter at $40/user/month for managed cloud with basic ERP/MES/QMS, and Business at $100/user/month (5-user minimum) including support, full API/webhook access, native accounting, audit logging, and every advanced feature — no separate add-on licenses for shop-floor execution or quality, because MES and QMS are part of the core product on the same data model as the rest of the system.
+
+| | Illustrative SAP B1 (50 users, year 1) | Carbon Business (50 users) |
+|---|---|---|
+| Manufacturing execution (MES) | Separate add-on (Beas) | Included |
+| Quality management | Separate add-on/system | Included |
+| Warehouse execution | Separate add-on (Produmex) | Included |
+| Implementation | VAR-quoted, one-time | Self-serve; typically ~1 month |
+| Pricing visibility | Not published | Published: $100/user/mo |
+| **Year 1, 50 users** | **~$180,000–$280,000 (illustrative)** | **$60,000 ($100 × 50 × 12)** |
+
+That's not an apples-to-apples comparison of every feature — SAP Business One's financial depth and global VAR network are real and covered honestly in [our full B1 review](/learn/sap-business-one-for-small-manufacturers). It is an apples-to-apples comparison of what it costs to get MRP, MES, and QMS running for 50 people on each platform, which is the specific gap a small manufacturer needs priced out before committing.
+
+## The costs that show up after go-live
+
+The year-1 and steady-state numbers above cover the predictable line items. In practice, a handful of costs tend to surface only after implementation, and they're worth budgeting for even though no VAR quote will show them up front:
+
+- **Change requests.** Adding a new report, a new approval step, or a new field to a form is rarely free once you're past the initial statement of work — it's billed as VAR consulting time, at whatever hourly rate is in your contract.
+- **New-user onboarding.** Every seat you add later comes at the same per-user rate as your original license, plus whatever training the VAR bills for getting that person productive on the classic interface.
+- **Version upgrades.** When SAP ships a new B1 release, Beas and Produmex each need to be recertified against it by their own vendors before you can safely upgrade — which sometimes means waiting on a third party's timeline, or paying for expedited compatibility work.
+- **Add-on license true-ups.** If your headcount on the shop floor grows, Beas and Produmex licensing typically grows with it, on a separate renewal cycle from your core B1 contract.
+- **Multi-vendor support triage.** When something breaks, the first troubleshooting step is often figuring out whether the issue is in B1, Beas, Produmex, or the integration between them — and coordinating three support desks costs time even when none of them charge for the ticket itself.
+
+None of these costs are unique to SAP; any multi-vendor enterprise stack accumulates them. The point is that a single license-and-implementation quote — the number most shops budget against — rarely represents the full run-rate two or three years in.
+
+## Questions to ask your VAR before you sign
+
+If you're already deep in a SAP Business One evaluation, these are the questions that turn an opaque quote into a comparable one:
+
+- What is the per-user license cost, broken down by license tier (full vs. limited), and is it perpetual or subscription?
+- Is Beas Manufacturing or Produmex required for our use case, and what is that license cost — quoted by whom, and under what contract?
+- What is the annual maintenance percentage, and does it increase over time?
+- What is included in the implementation quote, and what's billed separately as a change request afterward?
+- Who provides support after go-live — the VAR, SAP directly, or the add-on vendor — and what are the response-time commitments?
+
+## How Carbon avoids this problem structurally
+
+Carbon's pricing model exists specifically to remove the VAR-quote step: $40 or $100 per user per month, published, with a 30-day free trial you can start without a sales call. Because MRP, MES, and QMS are native — not third-party add-ons — there's no second vendor's license to negotiate once you've settled on a platform. For a deeper look at how "free" or opaquely-priced ERP options compare on total cost of ownership, see [The Real Cost of 'Free' ERP: Odoo TCO](/learn/odoo-tco-for-manufacturers).
+
+## Frequently asked questions
+
+### How much does SAP Business One cost per user?
+
+SAP doesn't publish per-user pricing; it's quoted through a VAR and commonly reported in the range of $95–$250 per user per month depending on license tier, region, and deployment model. Treat any published range, including this one, as a starting point for VAR conversations, not a quote.
+
+### Does the SAP Business One price include manufacturing execution (MES) functionality?
+
+No. Native B1 includes only a basic Production module (BOM, work orders, backflushing). Real shop-floor execution and finite scheduling require Beas Manufacturing, a separate add-on with its own license cost.
+
+### Why is SAP Business One implementation so expensive?
+
+Implementation is billed by the VAR for discovery, configuration, data migration, and training, and the scope — and therefore the price — varies significantly by reseller and by how much customization the shop needs. There's no fixed implementation fee across the SAP B1 ecosystem.
+
+### Is there a cheaper alternative to SAP Business One for a small machine shop?
+
+Yes — several, ranging from other SMB ERPs to manufacturing-native platforms with published pricing. See [Best SAP Alternatives for SMB Manufacturers](/learn/best-sap-alternatives-for-smb-manufacturers) for a fuller comparison, and [our SAP Business One review](/learn/sap-business-one-for-small-manufacturers) for where B1 itself still fits.
+
+### What does Carbon cost for a 50-person shop?
+
+Carbon's Business plan is $100 per user per month, published on the [pricing page](/pricing), which works out to $60,000 per year for 50 users — with MRP, MES, and QMS included, not licensed separately.
+
+## See the published price for yourself
+
+If opaque quoting is the part of ERP shopping you're trying to avoid, Carbon's pricing is on the [pricing page](/pricing) with no sales call required — start a 30-day free trial, or explore the [source code on GitHub](https://github.com/crbnos/carbon) before you commit to anything.
