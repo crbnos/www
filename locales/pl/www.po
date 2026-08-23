@@ -319,6 +319,10 @@ msgstr "Firma"
 msgid "Company Name"
 msgstr "Nazwa firmy"
 
+#: app/components/footer.tsx:58
+msgid "Compare"
+msgstr ""
+
 #: app/components/wizard-form.tsx:349
 msgid "Complete"
 msgstr "Ukończ"
@@ -468,7 +472,7 @@ msgstr "Popyt i prognoza"
 msgid "Developer guides and API reference"
 msgstr "Przewodniki dla deweloperów i dokumentacja API"
 
-#: app/components/footer.tsx:58
+#: app/components/footer.tsx:59
 #: app/components/header.tsx:95
 #: app/components/header.tsx:232
 msgid "Developers"
@@ -491,7 +495,7 @@ msgstr "Discord"
 msgid "Docs"
 msgstr "Dokumentacja"
 
-#: app/components/footer.tsx:59
+#: app/components/footer.tsx:60
 #: app/components/header.tsx:45
 msgid "Documentation"
 msgstr "Dokumentacja"
@@ -763,7 +767,7 @@ msgstr "Robocizna, złom i przeróbki"
 msgid "Lead times & buffers"
 msgstr "Czasy realizacji i bufory"
 
-#: app/components/footer.tsx:60
+#: app/components/footer.tsx:61
 msgid "Learning"
 msgstr "Nauka"
 
@@ -783,7 +787,7 @@ msgstr "Starszy ERP"
 msgid "Legacy ERPs were built for accountants in the 1990s."
 msgstr "Starsze systemy ERP były budowane dla księgowych w latach dziewięćdziesiątych."
 
-#: app/components/footer.tsx:69
+#: app/components/footer.tsx:70
 msgid "Legal"
 msgstr "Prawne"
 
@@ -791,7 +795,7 @@ msgstr "Prawne"
 msgid "Let us handle the infrastructure for you"
 msgstr "Pozwól nam obsługiwać infrastrukturę za Ciebie"
 
-#: app/components/footer.tsx:61
+#: app/components/footer.tsx:62
 msgid "License"
 msgstr "Licencja"
 
@@ -989,7 +993,7 @@ msgstr "Proszę podać swoje dane kontaktowe, aby ukończyć proces"
 msgid "POs & receipts"
 msgstr "ZO i paragony"
 
-#: app/components/footer.tsx:62
+#: app/components/footer.tsx:63
 #: app/components/header.tsx:89
 #: app/components/header.tsx:221
 msgid "Pricing"
@@ -1001,7 +1005,7 @@ msgstr "Cennik"
 msgid "Printer"
 msgstr "Drukarka"
 
-#: app/components/footer.tsx:72
+#: app/components/footer.tsx:73
 msgid "Privacy"
 msgstr "Prywatność"
 
@@ -1248,7 +1252,7 @@ msgstr "Oprogramowanie jako usługa"
 msgid "Source available"
 msgstr "Źródło dostępne"
 
-#: app/components/footer.tsx:63
+#: app/components/footer.tsx:64
 msgid "Source Code"
 msgstr "Kod źródłowy"
 
@@ -1318,7 +1322,7 @@ msgstr "Zadania"
 msgid "Technical support"
 msgstr "Wsparcie techniczne"
 
-#: app/components/footer.tsx:73
+#: app/components/footer.tsx:74
 msgid "Terms"
 msgstr "Warunki"
 
