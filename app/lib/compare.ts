@@ -205,7 +205,7 @@ const NETSUITE: Comparison = {
   ],
   whereItFitsTitle: "Where NetSuite still fits",
   whereItFits:
-    "If your center of gravity is finance — many legal entities, heavy multi-currency consolidation, or a distribution or services business where the shop floor is secondary — NetSuite is a proven system of record. If the product is the point, Carbon is built for the way you actually make it.",
+    "If your center of gravity is finance — many legal entities, heavy multi-currency consolidation, or a distribution or services business where the shop floor is secondary — NetSuite is a proven system of record. If manufacturing is the point, Carbon is built for the way you actually make it.",
   outgrowingTitle: "You may be outgrowing NetSuite if…",
   outgrowing: [
     {
@@ -1480,6 +1480,306 @@ const PALANTIR: Comparison = {
 };
 
 // ---------------------------------------------------------------------------
+// Odoo
+// ---------------------------------------------------------------------------
+
+const ODOO: Comparison = {
+  slug: "odoo",
+  competitor: "Odoo",
+  competitorFull: "Odoo (Community & Enterprise)",
+  category: "All-in-one business suite",
+  headline: "Carbon vs. Odoo",
+  metaTitle: "Carbon vs. Odoo — manufacturing-native vs. an all-in-one suite",
+  metaDescription:
+    "Odoo is an open, all-in-one business suite where manufacturing is one app among dozens — and Quality, PLM and Shop Floor sit behind paid Enterprise. Carbon is manufacturing-native: ERP, MRP, MES and QMS on one model, with finite capacity planning, deep traceability and a native 3D/STEP viewer.",
+  subheadline:
+    "Odoo grew up as a sales, CRM, ecommerce and accounting suite — it even dropped the “ERP” from its name to sell CRM and websites — and manufacturing is one app among dozens. It shows on the floor: Odoo's own team says it “provides MRP instead of finite capacity,” so real shops bolt on a third-party scheduler, a third-party quality app, and custom code they re-validate on every upgrade. Carbon is manufacturing-native — ERP, MRP, MES and QMS on one model, with finite planning, nested BOMs and real quality built in.",
+  stats: CARBON_STATS,
+  groups: [
+    {
+      title: "Scope & fit",
+      rows: [
+        {
+          label: "What it is",
+          carbon: "Manufacturing ERP + MRP + MES + QMS on one model",
+          competitor: "Sales, CRM, ecommerce & accounting suite; manufacturing is one app",
+        },
+        {
+          label: "Built for",
+          carbon: "Discrete manufacturers, from prototype to rate production",
+          competitor: "SMBs across many departments — sales, ecommerce, accounting, light manufacturing",
+        },
+        {
+          label: "Manufacturing focus",
+          carbon: "The whole product",
+          competitor: "One app among ~80; depth needs paid Enterprise plus add-ons",
+        },
+      ],
+    },
+    {
+      title: "Manufacturing depth",
+      rows: [
+        {
+          label: "Finite capacity planning",
+          carbon: "Live finite planning; updates as the floor reports",
+          competitor: "Infinite-capacity MRP; finite scheduling needs a bolt-on (frePPLe)",
+        },
+        {
+          label: "Shop-floor execution (MES)",
+          carbon: "Full MES on the same model",
+          competitor: "Shop Floor app — Enterprise-only; lighter than a dedicated MES",
+        },
+        {
+          label: "Quality (QMS)",
+          carbon: "Nonconformance, CAPA, dispositions, calibration, first-article",
+          competitor: "Control points & alerts (Enterprise); no native CAPA/FAI — build & validate it yourself",
+        },
+        {
+          label: "Multi-level BOM & traceability",
+          carbon: "Nested BOMs with full as-built genealogy",
+          competitor: "Multi-level & phantom BOMs; deep nesting strains planning — tuning advice is to flatten them",
+        },
+        {
+          label: "PLM / engineering change (ECO)",
+          carbon: "Built in",
+          competitor: "PLM / ECOs — Enterprise-only",
+        },
+        {
+          label: "Product configurator (CPQ)",
+          carbon: "Parametric BoM, routing and price per order",
+          competitor: "Attribute-based product variants, not parametric",
+        },
+        { label: "3D CAD / STEP viewer", carbon: true, competitor: false },
+      ],
+    },
+    {
+      title: "Platform & openness",
+      rows: [
+        {
+          label: "Source & licensing",
+          carbon: "Open source; the entire codebase is yours",
+          competitor: "Open core: Community (LGPL) free; manufacturing depth needs paid Enterprise",
+        },
+        {
+          label: "Deployment",
+          carbon: "Cloud or self-host",
+          competitor: "Odoo Online, Odoo.sh or self-host",
+        },
+        {
+          label: "API coverage",
+          carbon: "Full backend over REST — every table",
+          competitor: "XML-RPC / JSON-RPC; newer JSON-2 API; external API on the Custom plan only",
+        },
+        {
+          label: "AI / agent-ready (MCP)",
+          carbon: "Hosted MCP over the full backend, read & write",
+          competitor: "No official MCP (third-party add-ons); native AI is Enterprise",
+        },
+        {
+          label: "ITAR / GovCloud / CMMC",
+          carbon: "ITAR, GovCloud & CMMC / NIST 800-171 ready",
+          competitor: "Not offered natively",
+        },
+      ],
+    },
+    {
+      title: "Getting started",
+      rows: [
+        {
+          label: "Implementation",
+          carbon: "Self-serve; live in days",
+          competitor: "Partner-led config that often turns into customization",
+        },
+        {
+          label: "Pricing",
+          carbon: "$40–$100 / user / mo, published",
+          competitor: "Community free; Enterprise ~$31–$76 / user / mo; manufacturing stack needs Enterprise",
+        },
+      ],
+    },
+  ],
+  whereItFitsTitle: "Where Odoo still fits",
+  whereItFits:
+    "Odoo is an excellent broad SMB suite — if you want CRM, ecommerce, accounting, inventory and light assembly on one open platform, few things match its breadth or price, and it's a capable light-manufacturing tool. Carbon is the better fit when manufacturing is the point: when nested BOMs, finite scheduling, real quality and as-built traceability are the job, not a module you configure.",
+  outgrowingTitle: "You may be outgrowing Odoo if…",
+  outgrowing: [
+    {
+      title: "You're paying Enterprise and still bolting things on",
+      body: "Manufacturing depth is Enterprise-only — and even then, finite scheduling means adding frePPLe, real quality means a third-party CAPA app, and complex work means custom code. Carbon ships MES, MRP and QMS as the core product, on one model.",
+    },
+    {
+      title: "The schedule can't see the machine",
+      body: "Odoo's own team says it “provides MRP instead of finite capacity,” so nothing stops it booking three jobs onto one work center on the same day. Carbon plans against real capacity and updates the moment the floor reports.",
+    },
+    {
+      title: "Deep BOMs fight the planner",
+      body: "On multi-level products, component demand can surface days before the deadline, and the standard tuning advice is to flatten the BOM. Carbon runs nested BOMs with full as-built genealogy — no simplifying the product to fit the tool.",
+    },
+  ],
+  reasonsTitle: "Why manufacturers choose Carbon",
+  reasons: [
+    {
+      title: "Manufacturing-native, not one app in a sales suite",
+      body: "Odoo's roots and strongest apps are CRM, ecommerce and accounting; Carbon is built around the part, the BoM and the routing, with finite planning, MES and QMS as the core — not an Enterprise app plus a frePPLe integration plus a third-party CAPA module.",
+    },
+    ...carbonReasons("No Enterprise paywall").slice(1),
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// ERPNext
+// ---------------------------------------------------------------------------
+
+const ERPNEXT: Comparison = {
+  slug: "erpnext",
+  competitor: "ERPNext",
+  competitorFull: "ERPNext (Frappe)",
+  category: "Open-source all-in-one ERP",
+  headline: "Carbon vs. ERPNext",
+  metaTitle: "Carbon vs. ERPNext — manufacturing-native vs. an open all-in-one ERP",
+  metaDescription:
+    "ERPNext is a free, open-source all-in-one ERP with a great REST API — and manufacturing is one module among many. Carbon is manufacturing-native: ERP, MRP, MES and QMS on one model, with finite capacity planning, a real QMS, as-built traceability, a parametric configurator and a native 3D/STEP viewer.",
+  subheadline:
+    "ERPNext is a genuinely good open-source ERP — free, fully self-hostable, with an auto-generated REST API over everything — where manufacturing is one module in a broad suite. Carbon is manufacturing-native: ERP, MRP, MES and QMS on one model, so finite capacity planning, deep quality, as-built genealogy and a parametric configurator are the product, not a module you extend.",
+  stats: CARBON_STATS,
+  groups: [
+    {
+      title: "Scope & fit",
+      rows: [
+        {
+          label: "What it is",
+          carbon: "Manufacturing ERP + MRP + MES + QMS on one model",
+          competitor: "Open-source all-in-one ERP; manufacturing is one module",
+        },
+        {
+          label: "Built for",
+          carbon: "Discrete manufacturers, from prototype to rate production",
+          competitor: "SMBs wanting broad ERP breadth on a budget",
+        },
+        {
+          label: "Manufacturing focus",
+          carbon: "The whole product",
+          competitor: "One module among accounting, CRM, HR, stock, ecommerce…",
+        },
+      ],
+    },
+    {
+      title: "Manufacturing depth",
+      rows: [
+        {
+          label: "Finite capacity planning",
+          carbon: "Live finite planning; updates as the floor reports",
+          competitor: "Basic same-day capacity allocation; no APS, Gantt or what-if",
+        },
+        {
+          label: "Shop-floor execution (MES)",
+          carbon: "Full MES on the same model",
+          competitor: "Job Cards + basic Visual Plant Floor; no first-party operator app",
+        },
+        {
+          label: "Quality (QMS)",
+          carbon: "Nonconformance, CAPA, dispositions, calibration, first-article",
+          competitor: "Inspections + ISO-goal tracking; no native CAPA engine, calibration or FAI",
+        },
+        {
+          label: "Multi-level BOM & traceability",
+          carbon: "Nested BOMs with full as-built genealogy",
+          competitor: "Multi-level BOMs & batch/serial; deep as-built genealogy is limited",
+        },
+        {
+          label: "Product configurator (CPQ)",
+          carbon: "Parametric BoM, routing and price per order",
+          competitor: "Item variants (attributes), not parametric",
+        },
+        { label: "3D CAD / STEP viewer", carbon: true, competitor: false },
+      ],
+    },
+    {
+      title: "Platform & openness",
+      rows: [
+        {
+          label: "Source & licensing",
+          carbon: "Open source; the entire codebase is yours",
+          competitor: "Open source (GPLv3), fully free — like Carbon",
+        },
+        {
+          label: "Deployment",
+          carbon: "Cloud or self-host",
+          competitor: "Self-host free; Frappe Cloud (managed)",
+        },
+        {
+          label: "API coverage",
+          carbon: "Full backend over REST — every table",
+          competitor: "Auto-generated REST over every DocType — genuinely strong",
+        },
+        {
+          label: "AI / agent-ready (MCP)",
+          carbon: "First-party hosted MCP over the full backend",
+          competitor: "Community MCP servers; no official first-party MCP",
+        },
+        {
+          label: "ITAR / GovCloud / CMMC",
+          carbon: "ITAR, GovCloud & CMMC / NIST 800-171 ready",
+          competitor: "Not offered natively",
+        },
+      ],
+    },
+    {
+      title: "Getting started",
+      rows: [
+        {
+          label: "Implementation",
+          carbon: "Self-serve; live in days",
+          competitor: "Self-host + partner setup; Linux/dev skills to run",
+        },
+        {
+          label: "Pricing",
+          carbon: "$40–$100 / user / mo, published",
+          competitor: "Free self-hosted; Frappe Cloud is usage-based",
+        },
+      ],
+    },
+  ],
+  whereItFitsTitle: "Where ERPNext still fits",
+  whereItFits:
+    "ERPNext is a real achievement: a free, fully open-source ERP with genuine breadth — accounting, inventory, CRM, HR, purchasing and light manufacturing — and one of the best auto-generated REST APIs in the category. If budget is tight, breadth matters more than manufacturing depth, and you have the developers to run and extend it, it's an excellent choice. Carbon is for teams whose center of gravity is the factory, where finite scheduling, deep quality and as-built traceability need to be native, not assembled.",
+  outgrowingTitle: "You may be outgrowing ERPNext if…",
+  outgrowing: [
+    {
+      title: "Scheduling can't see real capacity",
+      body: "ERPNext does basic same-day allocation — no APS, no Gantt, no what-if. Carbon plans against finite capacity and updates the moment the floor reports.",
+    },
+    {
+      title: "Quality is a tracker, not a system",
+      body: "ERPNext has inspections and ISO-goal tracking, but no native CAPA engine, calibration or first-article. Carbon ships a real QMS on the same model as production.",
+    },
+    {
+      title: "Traceability stops short of as-built",
+      body: "Batch and serial tracking are there, but deep multi-level genealogy for complex assemblies isn't ERPNext's strength. Carbon carries full as-built genealogy through nested BOMs.",
+    },
+  ],
+  reasonsTitle: "Why manufacturers choose Carbon",
+  reasons: [
+    {
+      title: "Manufacturing-native, not one module of many",
+      body: "ERPNext is a broad ERP with a manufacturing module; Carbon is built around the part, the BoM and the routing, with quality, MES and planning as the core — so manufacturing depth is designed in, not assembled.",
+    },
+    {
+      title: "The depth ERPNext leaves to you",
+      body: "Finite capacity planning, a real QMS (CAPA, calibration, first-article), a parametric configurator and a native 3D/STEP viewer ship in the box — where ERPNext needs customization or add-ons.",
+    },
+    {
+      title: "Open, and agent-ready",
+      body: "Like ERPNext, Carbon is open source with a full REST API. It adds a first-party hosted MCP server over the whole backend, so you can point Claude, ChatGPT or Cursor at live manufacturing data — plus CMMC / NIST 800-171 readiness for defense work.",
+    },
+    {
+      title: "Live capacity planning",
+      body: "Capacity and demand forecasts update the moment the floor reports progress — not on the next planning run — so the plan you're looking at is the plan that's true.",
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
 // Building it yourself
 // ---------------------------------------------------------------------------
 
@@ -1624,6 +1924,8 @@ const COMPARISONS: Comparison[] = [
   TULIP,
   FIRST_RESONANCE,
   PALANTIR,
+  ODOO,
+  ERPNEXT,
   BUILD,
 ];
 

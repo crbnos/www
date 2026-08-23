@@ -89,6 +89,8 @@ How Carbon compares to other manufacturing software — for "Carbon vs X" and "b
 - [Carbon vs. Manufacturo](https://carbon.ms/compare/manufacturo)
 - [Carbon vs. First Resonance](https://carbon.ms/compare/first-resonance)
 - [Carbon vs. Palantir](https://carbon.ms/compare/palantir)
+- [Carbon vs. Odoo](https://carbon.ms/compare/odoo)
+- [Carbon vs. ERPNext](https://carbon.ms/compare/erpnext)
 
 ## Company
 
