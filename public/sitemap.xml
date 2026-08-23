@@ -76,6 +76,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://carbon.ms/compare/odoo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://carbon.ms/compare/erpnext</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://carbon.ms/compare/build-it-yourself</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

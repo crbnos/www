@@ -14,6 +14,18 @@ type Pages = {
   "/": {
     params: {};
   };
+  "/.well-known/mcp.json": {
+    params: {};
+  };
+  "/.well-known/oauth-authorization-server": {
+    params: {};
+  };
+  "/.well-known/oauth-protected-resource": {
+    params: {};
+  };
+  "/.well-known/openapi.json": {
+    params: {};
+  };
   "/about": {
     params: {};
   };
@@ -26,7 +38,18 @@ type Pages = {
   "/brand": {
     params: {};
   };
+  "/compare/:competitor": {
+    params: {
+      "competitor": string;
+    };
+  };
+  "/compare": {
+    params: {};
+  };
   "/contact": {
+    params: {};
+  };
+  "/developers": {
     params: {};
   };
   "/learn": {
@@ -36,6 +59,15 @@ type Pages = {
     params: {
       "slug": string;
     };
+  };
+  "/mcp.json": {
+    params: {};
+  };
+  "/openapi.json": {
+    params: {};
+  };
+  "/openapi.yaml": {
+    params: {};
   };
   "/pricing": {
     params: {};
@@ -57,7 +89,23 @@ type Pages = {
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/about" | "/api/status" | "/api/try" | "/brand" | "/contact" | "/learn" | "/learn/:slug" | "/pricing" | "/privacy" | "/sales" | "/subprocessors" | "/terms";
+    page: "/" | "/.well-known/mcp.json" | "/.well-known/oauth-authorization-server" | "/.well-known/oauth-protected-resource" | "/.well-known/openapi.json" | "/about" | "/api/status" | "/api/try" | "/brand" | "/compare/:competitor" | "/compare" | "/contact" | "/developers" | "/learn" | "/learn/:slug" | "/mcp.json" | "/openapi.json" | "/openapi.yaml" | "/pricing" | "/privacy" | "/sales" | "/subprocessors" | "/terms";
+  };
+  "routes/[.]well-known.mcp[.]json.ts": {
+    id: "routes/[.]well-known.mcp[.]json";
+    page: "/.well-known/mcp.json";
+  };
+  "routes/[.]well-known.oauth-authorization-server.ts": {
+    id: "routes/[.]well-known.oauth-authorization-server";
+    page: "/.well-known/oauth-authorization-server";
+  };
+  "routes/[.]well-known.oauth-protected-resource.ts": {
+    id: "routes/[.]well-known.oauth-protected-resource";
+    page: "/.well-known/oauth-protected-resource";
+  };
+  "routes/[.]well-known.openapi[.]json.ts": {
+    id: "routes/[.]well-known.openapi[.]json";
+    page: "/.well-known/openapi.json";
   };
   "routes/_index.tsx": {
     id: "routes/_index";
@@ -79,9 +127,21 @@ type RouteFiles = {
     id: "routes/brand";
     page: "/brand";
   };
+  "routes/compare+/$competitor.tsx": {
+    id: "routes/compare+/$competitor";
+    page: "/compare/:competitor";
+  };
+  "routes/compare+/_index.tsx": {
+    id: "routes/compare+/_index";
+    page: "/compare";
+  };
   "routes/contact.tsx": {
     id: "routes/contact";
     page: "/contact";
+  };
+  "routes/developers.tsx": {
+    id: "routes/developers";
+    page: "/developers";
   };
   "routes/learn+/_layout.tsx": {
     id: "routes/learn+/_layout";
@@ -94,6 +154,18 @@ type RouteFiles = {
   "routes/learn+/_index.tsx": {
     id: "routes/learn+/_index";
     page: "/learn";
+  };
+  "routes/mcp[.]json.ts": {
+    id: "routes/mcp[.]json";
+    page: "/mcp.json";
+  };
+  "routes/openapi[.]json.ts": {
+    id: "routes/openapi[.]json";
+    page: "/openapi.json";
+  };
+  "routes/openapi[.]yaml.ts": {
+    id: "routes/openapi[.]yaml";
+    page: "/openapi.yaml";
   };
   "routes/pricing.tsx": {
     id: "routes/pricing";
@@ -119,15 +191,25 @@ type RouteFiles = {
 
 type RouteModules = {
   "root": typeof import("./app/root.tsx");
+  "routes/[.]well-known.mcp[.]json": typeof import("./app/routes/[.]well-known.mcp[.]json.ts");
+  "routes/[.]well-known.oauth-authorization-server": typeof import("./app/routes/[.]well-known.oauth-authorization-server.ts");
+  "routes/[.]well-known.oauth-protected-resource": typeof import("./app/routes/[.]well-known.oauth-protected-resource.ts");
+  "routes/[.]well-known.openapi[.]json": typeof import("./app/routes/[.]well-known.openapi[.]json.ts");
   "routes/_index": typeof import("./app/routes/_index.tsx");
   "routes/about": typeof import("./app/routes/about.tsx");
   "routes/api+/status": typeof import("./app/routes/api+/status.tsx");
   "routes/api+/try": typeof import("./app/routes/api+/try.tsx");
   "routes/brand": typeof import("./app/routes/brand.tsx");
+  "routes/compare+/$competitor": typeof import("./app/routes/compare+/$competitor.tsx");
+  "routes/compare+/_index": typeof import("./app/routes/compare+/_index.tsx");
   "routes/contact": typeof import("./app/routes/contact.tsx");
+  "routes/developers": typeof import("./app/routes/developers.tsx");
   "routes/learn+/_layout": typeof import("./app/routes/learn+/_layout.tsx");
   "routes/learn+/$slug": typeof import("./app/routes/learn+/$slug.tsx");
   "routes/learn+/_index": typeof import("./app/routes/learn+/_index.tsx");
+  "routes/mcp[.]json": typeof import("./app/routes/mcp[.]json.ts");
+  "routes/openapi[.]json": typeof import("./app/routes/openapi[.]json.ts");
+  "routes/openapi[.]yaml": typeof import("./app/routes/openapi[.]yaml.ts");
   "routes/pricing": typeof import("./app/routes/pricing.tsx");
   "routes/privacy": typeof import("./app/routes/privacy.tsx");
   "routes/sales": typeof import("./app/routes/sales.tsx");
