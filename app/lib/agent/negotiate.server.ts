@@ -9,6 +9,11 @@
 
 import { getBlogPosts } from "../blog.server";
 import {
+  comparisonMarkdown,
+  comparisonsIndexMarkdown,
+  getComparison,
+} from "../compare";
+import {
   acceptsHtmlExplicitly,
   MARKDOWN_CONTENT_TYPE,
   mergeVary,
@@ -18,8 +23,10 @@ import {
 import { blogIndexMarkdown, blogPostMarkdown } from "./blog";
 import { notFoundMarkdown } from "./not-found";
 import { getAgentPage, resolveMarkdownPath } from "./pages";
+import { SITE_URL } from "./site";
 
 const BLOG_ROOT = "/learn";
+const COMPARE_ROOT = "/compare";
 
 /** Resolve a canonical path to Markdown, consulting blog data only when needed. */
 export async function markdownForPath(path: string): Promise<string | null> {
@@ -31,6 +38,14 @@ export async function markdownForPath(path: string): Promise<string | null> {
     const slug = path.slice(`${BLOG_ROOT}/`.length);
     const post = posts.find((entry) => entry.slug === slug);
     return post ? blogPostMarkdown(post) : null;
+  }
+
+  if (path === COMPARE_ROOT || path.startsWith(`${COMPARE_ROOT}/`)) {
+    if (path === COMPARE_ROOT) return comparisonsIndexMarkdown(SITE_URL);
+
+    const slug = path.slice(`${COMPARE_ROOT}/`.length);
+    const comparison = getComparison(slug);
+    return comparison ? comparisonMarkdown(comparison, SITE_URL) : null;
   }
 
   return getAgentPage(path)?.markdown ?? null;

@@ -226,6 +226,10 @@ msgstr "Фирменные материалы"
 msgid "Build <0/><1/>at the speed of software."
 msgstr "Строительство <0/><1/>со скоростью программного обеспечения."
 
+#: app/components/footer.tsx:58
+msgid "Build vs. buy"
+msgstr ""
+
 #: app/routes/pricing.tsx:38
 msgid "Business"
 msgstr "Бизнес"
@@ -468,7 +472,7 @@ msgstr "Спрос и прогноз"
 msgid "Developer guides and API reference"
 msgstr "Руководства разработчика и справочник API"
 
-#: app/components/footer.tsx:58
+#: app/components/footer.tsx:59
 #: app/components/header.tsx:95
 #: app/components/header.tsx:232
 msgid "Developers"
@@ -491,7 +495,7 @@ msgstr "Discord"
 msgid "Docs"
 msgstr "Документация"
 
-#: app/components/footer.tsx:59
+#: app/components/footer.tsx:60
 #: app/components/header.tsx:45
 msgid "Documentation"
 msgstr "Документация"
@@ -763,7 +767,7 @@ msgstr "Труд, брак и доработка"
 msgid "Lead times & buffers"
 msgstr "Сроки поставки и буферы"
 
-#: app/components/footer.tsx:60
+#: app/components/footer.tsx:61
 msgid "Learning"
 msgstr "Обучение"
 
@@ -783,7 +787,7 @@ msgstr "Legacy ERP"
 msgid "Legacy ERPs were built for accountants in the 1990s."
 msgstr "Унаследованные ERP были разработаны для бухгалтеров в 1990-х годах."
 
-#: app/components/footer.tsx:69
+#: app/components/footer.tsx:70
 msgid "Legal"
 msgstr "Юридическая информация"
 
@@ -791,7 +795,7 @@ msgstr "Юридическая информация"
 msgid "Let us handle the infrastructure for you"
 msgstr "Позвольте нам управлять инфраструктурой для вас"
 
-#: app/components/footer.tsx:61
+#: app/components/footer.tsx:62
 msgid "License"
 msgstr "Лицензия"
 
@@ -989,7 +993,7 @@ msgstr "Пожалуйста, предоставьте свои контактн
 msgid "POs & receipts"
 msgstr "ПО и квитанции"
 
-#: app/components/footer.tsx:62
+#: app/components/footer.tsx:63
 #: app/components/header.tsx:89
 #: app/components/header.tsx:221
 msgid "Pricing"
@@ -1001,7 +1005,7 @@ msgstr "Цены"
 msgid "Printer"
 msgstr "Принтер"
 
-#: app/components/footer.tsx:72
+#: app/components/footer.tsx:73
 msgid "Privacy"
 msgstr "Конфиденциальность"
 
@@ -1248,7 +1252,7 @@ msgstr "Программное обеспечение как услуга"
 msgid "Source available"
 msgstr "Исходный код доступен"
 
-#: app/components/footer.tsx:63
+#: app/components/footer.tsx:64
 msgid "Source Code"
 msgstr "Исходный код"
 
@@ -1318,7 +1322,7 @@ msgstr "Задачи"
 msgid "Technical support"
 msgstr "Техническая поддержка"
 
-#: app/components/footer.tsx:73
+#: app/components/footer.tsx:74
 msgid "Terms"
 msgstr "Условия"
 

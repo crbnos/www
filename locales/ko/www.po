@@ -226,6 +226,10 @@ msgstr "브랜드 자산"
 msgid "Build <0/><1/>at the speed of software."
 msgstr "소프트웨어 속도로 <0/><1/>구축하세요."
 
+#: app/components/footer.tsx:58
+msgid "Build vs. buy"
+msgstr ""
+
 #: app/routes/pricing.tsx:38
 msgid "Business"
 msgstr "비즈니스"
@@ -468,7 +472,7 @@ msgstr "수요 및 예측"
 msgid "Developer guides and API reference"
 msgstr "개발자 가이드 및 API 참조"
 
-#: app/components/footer.tsx:58
+#: app/components/footer.tsx:59
 #: app/components/header.tsx:95
 #: app/components/header.tsx:232
 msgid "Developers"
@@ -491,7 +495,7 @@ msgstr "Discord"
 msgid "Docs"
 msgstr "문서"
 
-#: app/components/footer.tsx:59
+#: app/components/footer.tsx:60
 #: app/components/header.tsx:45
 msgid "Documentation"
 msgstr "문서"
@@ -763,7 +767,7 @@ msgstr "인건비, 스크랩 및 재작업"
 msgid "Lead times & buffers"
 msgstr "리드 타임 및 버퍼"
 
-#: app/components/footer.tsx:60
+#: app/components/footer.tsx:61
 msgid "Learning"
 msgstr "학습"
 
@@ -783,7 +787,7 @@ msgstr "레거시 ERP"
 msgid "Legacy ERPs were built for accountants in the 1990s."
 msgstr "레거시 ERP는 1990년대에 회계담당자를 위해 만들어졌습니다."
 
-#: app/components/footer.tsx:69
+#: app/components/footer.tsx:70
 msgid "Legal"
 msgstr "법적"
 
@@ -791,7 +795,7 @@ msgstr "법적"
 msgid "Let us handle the infrastructure for you"
 msgstr "인프라를 저희가 관리해드립니다"
 
-#: app/components/footer.tsx:61
+#: app/components/footer.tsx:62
 msgid "License"
 msgstr "라이선스"
 
@@ -989,7 +993,7 @@ msgstr "프로세스를 완료하기 위해 연락처 정보를 제공해주세�
 msgid "POs & receipts"
 msgstr "PO 및 영수증"
 
-#: app/components/footer.tsx:62
+#: app/components/footer.tsx:63
 #: app/components/header.tsx:89
 #: app/components/header.tsx:221
 msgid "Pricing"
@@ -1001,7 +1005,7 @@ msgstr "가격"
 msgid "Printer"
 msgstr "프린터"
 
-#: app/components/footer.tsx:72
+#: app/components/footer.tsx:73
 msgid "Privacy"
 msgstr "개인정보 보호"
 
@@ -1248,7 +1252,7 @@ msgstr "Software as a Service"
 msgid "Source available"
 msgstr "소스 사용 가능"
 
-#: app/components/footer.tsx:63
+#: app/components/footer.tsx:64
 msgid "Source Code"
 msgstr "소스 코드"
 
@@ -1318,7 +1322,7 @@ msgstr "작업"
 msgid "Technical support"
 msgstr "기술 지원"
 
-#: app/components/footer.tsx:73
+#: app/components/footer.tsx:74
 msgid "Terms"
 msgstr "약관"
 

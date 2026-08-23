@@ -226,6 +226,10 @@ msgstr "Marka Varlıkları"
 msgid "Build <0/><1/>at the speed of software."
 msgstr "Yazılım hızında <0/><1/>oluşturun."
 
+#: app/components/footer.tsx:58
+msgid "Build vs. buy"
+msgstr ""
+
 #: app/routes/pricing.tsx:38
 msgid "Business"
 msgstr "İşletme"
@@ -468,7 +472,7 @@ msgstr "Talep ve Tahmin"
 msgid "Developer guides and API reference"
 msgstr "Geliştirici kılavuzları ve API referansı"
 
-#: app/components/footer.tsx:58
+#: app/components/footer.tsx:59
 #: app/components/header.tsx:95
 #: app/components/header.tsx:232
 msgid "Developers"
@@ -491,7 +495,7 @@ msgstr "Discord"
 msgid "Docs"
 msgstr "Dokümanlar"
 
-#: app/components/footer.tsx:59
+#: app/components/footer.tsx:60
 #: app/components/header.tsx:45
 msgid "Documentation"
 msgstr "Belgeler"
@@ -763,7 +767,7 @@ msgstr "İşçilik, hurda ve yeniden işleme"
 msgid "Lead times & buffers"
 msgstr "Teslim Süreleri ve Tamponlar"
 
-#: app/components/footer.tsx:60
+#: app/components/footer.tsx:61
 msgid "Learning"
 msgstr "Öğrenme"
 
@@ -783,7 +787,7 @@ msgstr "Eski ERP"
 msgid "Legacy ERPs were built for accountants in the 1990s."
 msgstr "Eski ERP'ler, 1990'larda muhasebeciler için tasarlandı."
 
-#: app/components/footer.tsx:69
+#: app/components/footer.tsx:70
 msgid "Legal"
 msgstr "Yasal"
 
@@ -791,7 +795,7 @@ msgstr "Yasal"
 msgid "Let us handle the infrastructure for you"
 msgstr "Altyapıyı sizin için biz yönetelim"
 
-#: app/components/footer.tsx:61
+#: app/components/footer.tsx:62
 msgid "License"
 msgstr "Lisans"
 
@@ -989,7 +993,7 @@ msgstr "Lütfen işlemi tamamlamak için iletişim bilgilerinizi sağlayın"
 msgid "POs & receipts"
 msgstr "PO'lar & Faturalar"
 
-#: app/components/footer.tsx:62
+#: app/components/footer.tsx:63
 #: app/components/header.tsx:89
 #: app/components/header.tsx:221
 msgid "Pricing"
@@ -1001,7 +1005,7 @@ msgstr "Fiyatlandırma"
 msgid "Printer"
 msgstr "Yazıcı"
 
-#: app/components/footer.tsx:72
+#: app/components/footer.tsx:73
 msgid "Privacy"
 msgstr "Gizlilik"
 
@@ -1248,7 +1252,7 @@ msgstr "Hizmet Olarak Yazılım"
 msgid "Source available"
 msgstr "Kaynak mevcut"
 
-#: app/components/footer.tsx:63
+#: app/components/footer.tsx:64
 msgid "Source Code"
 msgstr "Kaynak Kodu"
 
@@ -1318,7 +1322,7 @@ msgstr "Görevler"
 msgid "Technical support"
 msgstr "Teknik destek"
 
-#: app/components/footer.tsx:73
+#: app/components/footer.tsx:74
 msgid "Terms"
 msgstr "Şartlar"
 

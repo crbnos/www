@@ -226,6 +226,10 @@ msgstr "ब्रांड संपत्ति"
 msgid "Build <0/><1/>at the speed of software."
 msgstr "सॉफ़्टवेयर की गति से <0/><1/>बनाएं।"
 
+#: app/components/footer.tsx:58
+msgid "Build vs. buy"
+msgstr ""
+
 #: app/routes/pricing.tsx:38
 msgid "Business"
 msgstr "व्यावसायिक"
@@ -468,7 +472,7 @@ msgstr "मांग और पूर्वानुमान"
 msgid "Developer guides and API reference"
 msgstr "डेवलपर गाइड और API संदर्भ"
 
-#: app/components/footer.tsx:58
+#: app/components/footer.tsx:59
 #: app/components/header.tsx:95
 #: app/components/header.tsx:232
 msgid "Developers"
@@ -491,7 +495,7 @@ msgstr "Discord"
 msgid "Docs"
 msgstr "डॉक्स"
 
-#: app/components/footer.tsx:59
+#: app/components/footer.tsx:60
 #: app/components/header.tsx:45
 msgid "Documentation"
 msgstr "दस्तावेज़"
@@ -763,7 +767,7 @@ msgstr "श्रम, स्क्रैप और पुनर्कार्�
 msgid "Lead times & buffers"
 msgstr "लीड समय और बफर"
 
-#: app/components/footer.tsx:60
+#: app/components/footer.tsx:61
 msgid "Learning"
 msgstr "सीखना"
 
@@ -783,7 +787,7 @@ msgstr "विरासत ERP"
 msgid "Legacy ERPs were built for accountants in the 1990s."
 msgstr "विरासत ERPs 1990 के दशक में लेखाकारों के लिए बनाए गए थे।"
 
-#: app/components/footer.tsx:69
+#: app/components/footer.tsx:70
 msgid "Legal"
 msgstr "कानूनी"
 
@@ -791,7 +795,7 @@ msgstr "कानूनी"
 msgid "Let us handle the infrastructure for you"
 msgstr "हमें आपके लिए बुनियादी ढांचे को संभालने दें"
 
-#: app/components/footer.tsx:61
+#: app/components/footer.tsx:62
 msgid "License"
 msgstr "लाइसेंस"
 
@@ -989,7 +993,7 @@ msgstr "कृपया प्रक्रिया को पूरा कर�
 msgid "POs & receipts"
 msgstr "PO और रसीदें"
 
-#: app/components/footer.tsx:62
+#: app/components/footer.tsx:63
 #: app/components/header.tsx:89
 #: app/components/header.tsx:221
 msgid "Pricing"
@@ -1001,7 +1005,7 @@ msgstr "मूल्य निर्धारण"
 msgid "Printer"
 msgstr "प्रिंटर"
 
-#: app/components/footer.tsx:72
+#: app/components/footer.tsx:73
 msgid "Privacy"
 msgstr "गोपनीयता"
 
@@ -1248,7 +1252,7 @@ msgstr "सॉफ्टवेयर एज़ ए सर्विस"
 msgid "Source available"
 msgstr "स्रोत उपलब्ध"
 
-#: app/components/footer.tsx:63
+#: app/components/footer.tsx:64
 msgid "Source Code"
 msgstr "स्रोत कोड"
 
@@ -1318,7 +1322,7 @@ msgstr "कार्य"
 msgid "Technical support"
 msgstr "तकनीकी समर्थन"
 
-#: app/components/footer.tsx:73
+#: app/components/footer.tsx:74
 msgid "Terms"
 msgstr "शर्तें"
 

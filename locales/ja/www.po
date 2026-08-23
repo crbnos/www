@@ -226,6 +226,10 @@ msgstr "ブランドアセット"
 msgid "Build <0/><1/>at the speed of software."
 msgstr "Build <0/><1/>ソフトウェアのスピードで。"
 
+#: app/components/footer.tsx:58
+msgid "Build vs. buy"
+msgstr ""
+
 #: app/routes/pricing.tsx:38
 msgid "Business"
 msgstr "ビジネス"
@@ -468,7 +472,7 @@ msgstr "需要と予測"
 msgid "Developer guides and API reference"
 msgstr "開発者ガイドとAPIリファレンス"
 
-#: app/components/footer.tsx:58
+#: app/components/footer.tsx:59
 #: app/components/header.tsx:95
 #: app/components/header.tsx:232
 msgid "Developers"
@@ -491,7 +495,7 @@ msgstr "Discord"
 msgid "Docs"
 msgstr "ドキュメント"
 
-#: app/components/footer.tsx:59
+#: app/components/footer.tsx:60
 #: app/components/header.tsx:45
 msgid "Documentation"
 msgstr "ドキュメント"
@@ -763,7 +767,7 @@ msgstr "労務、スクラップ、再加工"
 msgid "Lead times & buffers"
 msgstr "リードタイムとバッファ"
 
-#: app/components/footer.tsx:60
+#: app/components/footer.tsx:61
 msgid "Learning"
 msgstr "学習"
 
@@ -783,7 +787,7 @@ msgstr "レガシーERP"
 msgid "Legacy ERPs were built for accountants in the 1990s."
 msgstr "従来のERPは1990年代に会計士向けに構築されました。"
 
-#: app/components/footer.tsx:69
+#: app/components/footer.tsx:70
 msgid "Legal"
 msgstr "法務"
 
@@ -791,7 +795,7 @@ msgstr "法務"
 msgid "Let us handle the infrastructure for you"
 msgstr "インフラストラクチャの管理はお任せください"
 
-#: app/components/footer.tsx:61
+#: app/components/footer.tsx:62
 msgid "License"
 msgstr "ライセンス"
 
@@ -989,7 +993,7 @@ msgstr "プロセスを完了するために、ご連絡先の詳細をご入力
 msgid "POs & receipts"
 msgstr "PO&領収書"
 
-#: app/components/footer.tsx:62
+#: app/components/footer.tsx:63
 #: app/components/header.tsx:89
 #: app/components/header.tsx:221
 msgid "Pricing"
@@ -1001,7 +1005,7 @@ msgstr "料金"
 msgid "Printer"
 msgstr "プリンター"
 
-#: app/components/footer.tsx:72
+#: app/components/footer.tsx:73
 msgid "Privacy"
 msgstr "プライバシー"
 
@@ -1248,7 +1252,7 @@ msgstr "Software as a Service"
 msgid "Source available"
 msgstr "ソース入手可能"
 
-#: app/components/footer.tsx:63
+#: app/components/footer.tsx:64
 msgid "Source Code"
 msgstr "ソースコード"
 
@@ -1318,7 +1322,7 @@ msgstr "タスク"
 msgid "Technical support"
 msgstr "技術サポート"
 
-#: app/components/footer.tsx:73
+#: app/components/footer.tsx:74
 msgid "Terms"
 msgstr "利用規約"
 

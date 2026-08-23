@@ -226,6 +226,10 @@ msgstr "Merkidentiteit"
 msgid "Build <0/><1/>at the speed of software."
 msgstr "Build <0/><1/>met de snelheid van software."
 
+#: app/components/footer.tsx:58
+msgid "Build vs. buy"
+msgstr ""
+
 #: app/routes/pricing.tsx:38
 msgid "Business"
 msgstr "Zakelijk"
@@ -468,7 +472,7 @@ msgstr "Vraag & prognose"
 msgid "Developer guides and API reference"
 msgstr "Ontwikkelaarshandleidingen en API-referentie"
 
-#: app/components/footer.tsx:58
+#: app/components/footer.tsx:59
 #: app/components/header.tsx:95
 #: app/components/header.tsx:232
 msgid "Developers"
@@ -491,7 +495,7 @@ msgstr "Discord"
 msgid "Docs"
 msgstr "Docs"
 
-#: app/components/footer.tsx:59
+#: app/components/footer.tsx:60
 #: app/components/header.tsx:45
 msgid "Documentation"
 msgstr "Documentatie"
@@ -763,7 +767,7 @@ msgstr "Arbeid, uitval & herbewerking"
 msgid "Lead times & buffers"
 msgstr "Doorlooptijden & buffers"
 
-#: app/components/footer.tsx:60
+#: app/components/footer.tsx:61
 msgid "Learning"
 msgstr "Leren"
 
@@ -783,7 +787,7 @@ msgstr "Legacy ERP"
 msgid "Legacy ERPs were built for accountants in the 1990s."
 msgstr "Verouderde ERPs werden gebouwd voor boekhoudkundigen in de jaren 90."
 
-#: app/components/footer.tsx:69
+#: app/components/footer.tsx:70
 msgid "Legal"
 msgstr "Juridisch"
 
@@ -791,7 +795,7 @@ msgstr "Juridisch"
 msgid "Let us handle the infrastructure for you"
 msgstr "Laat ons de infrastructuur voor u beheren"
 
-#: app/components/footer.tsx:61
+#: app/components/footer.tsx:62
 msgid "License"
 msgstr "Licentie"
 
@@ -989,7 +993,7 @@ msgstr "Geef alstublieft uw contactgegevens op om het proces af te ronden"
 msgid "POs & receipts"
 msgstr "PO's & ontvangsten"
 
-#: app/components/footer.tsx:62
+#: app/components/footer.tsx:63
 #: app/components/header.tsx:89
 #: app/components/header.tsx:221
 msgid "Pricing"
@@ -1001,7 +1005,7 @@ msgstr "Prijzen"
 msgid "Printer"
 msgstr "Printer"
 
-#: app/components/footer.tsx:72
+#: app/components/footer.tsx:73
 msgid "Privacy"
 msgstr "Privacy"
 
@@ -1248,7 +1252,7 @@ msgstr "Software as a Service"
 msgid "Source available"
 msgstr "Bron beschikbaar"
 
-#: app/components/footer.tsx:63
+#: app/components/footer.tsx:64
 msgid "Source Code"
 msgstr "Broncode"
 
@@ -1318,7 +1322,7 @@ msgstr "Taken"
 msgid "Technical support"
 msgstr "Technische ondersteuning"
 
-#: app/components/footer.tsx:73
+#: app/components/footer.tsx:74
 msgid "Terms"
 msgstr "Voorwaarden"
 

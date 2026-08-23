@@ -226,6 +226,10 @@ msgstr "品牌资产"
 msgid "Build <0/><1/>at the speed of software."
 msgstr "以软件的速度 <0/><1/>构建。"
 
+#: app/components/footer.tsx:58
+msgid "Build vs. buy"
+msgstr ""
+
 #: app/routes/pricing.tsx:38
 msgid "Business"
 msgstr "商业"
@@ -468,7 +472,7 @@ msgstr "需求和预测"
 msgid "Developer guides and API reference"
 msgstr "开发者指南和 API 参考"
 
-#: app/components/footer.tsx:58
+#: app/components/footer.tsx:59
 #: app/components/header.tsx:95
 #: app/components/header.tsx:232
 msgid "Developers"
@@ -491,7 +495,7 @@ msgstr "Discord"
 msgid "Docs"
 msgstr "文档"
 
-#: app/components/footer.tsx:59
+#: app/components/footer.tsx:60
 #: app/components/header.tsx:45
 msgid "Documentation"
 msgstr "文档"
@@ -763,7 +767,7 @@ msgstr "人工、废品和返工"
 msgid "Lead times & buffers"
 msgstr "交货期和缓冲"
 
-#: app/components/footer.tsx:60
+#: app/components/footer.tsx:61
 msgid "Learning"
 msgstr "学习"
 
@@ -783,7 +787,7 @@ msgstr "传统 ERP"
 msgid "Legacy ERPs were built for accountants in the 1990s."
 msgstr "传统ERP系统是为1990年代的会计师开发的。"
 
-#: app/components/footer.tsx:69
+#: app/components/footer.tsx:70
 msgid "Legal"
 msgstr "法律"
 
@@ -791,7 +795,7 @@ msgstr "法律"
 msgid "Let us handle the infrastructure for you"
 msgstr "让我们为您处理基础设施"
 
-#: app/components/footer.tsx:61
+#: app/components/footer.tsx:62
 msgid "License"
 msgstr "许可证"
 
@@ -989,7 +993,7 @@ msgstr "请提供您的联系方式以完成该流程"
 msgid "POs & receipts"
 msgstr "采购订单和收据"
 
-#: app/components/footer.tsx:62
+#: app/components/footer.tsx:63
 #: app/components/header.tsx:89
 #: app/components/header.tsx:221
 msgid "Pricing"
@@ -1001,7 +1005,7 @@ msgstr "定价"
 msgid "Printer"
 msgstr "打印机"
 
-#: app/components/footer.tsx:72
+#: app/components/footer.tsx:73
 msgid "Privacy"
 msgstr "隐私"
 
@@ -1248,7 +1252,7 @@ msgstr "软件即服务"
 msgid "Source available"
 msgstr "源代码可用"
 
-#: app/components/footer.tsx:63
+#: app/components/footer.tsx:64
 msgid "Source Code"
 msgstr "源代码"
 
@@ -1318,7 +1322,7 @@ msgstr "任务"
 msgid "Technical support"
 msgstr "技术支持"
 
-#: app/components/footer.tsx:73
+#: app/components/footer.tsx:74
 msgid "Terms"
 msgstr "条款"
 
