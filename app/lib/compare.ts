@@ -80,7 +80,7 @@ function carbonReasons(closing: string): CompareCard[] {
     },
     {
       title: "Open and API-first",
-      body: "The source is yours: run Carbon in the cloud or self-host it, with no lock-in. The whole backend — every table and capability, not a curated subset — is reachable over the REST API and a hosted MCP server your agents can read and act on.",
+      body: "The source is yours: run Carbon in the cloud or self-host it, with no lock-in. The whole backend — every table and capability, not a curated subset — is open over REST and MCP, so you point the best agents (Claude, ChatGPT, Cursor) at your live data instead of being boxed into a vendor's built-in assistant.",
     },
     {
       title: "Live capacity planning",
@@ -120,7 +120,7 @@ const NETSUITE: Comparison = {
         },
         {
           label: "Built for",
-          carbon: "Discrete, make-to-order manufacturers and job shops",
+          carbon: "Discrete manufacturers, from prototype to rate production",
           competitor: "Multi-entity finance, distribution and services",
         },
         {
@@ -218,7 +218,13 @@ const NETSUITE: Comparison = {
     },
   ],
   reasonsTitle: "Why manufacturers choose Carbon",
-  reasons: carbonReasons("No implementation army"),
+  reasons: [
+    {
+      title: "Manufacturing-first, not finance-first",
+      body: "NetSuite starts from the ledger and bolts manufacturing on as modules. Carbon starts from the part — the BoM, the routing, the operation — with accounting rolling up from what actually happens on the floor.",
+    },
+    ...carbonReasons("No implementation army").slice(1),
+  ],
 };
 
 // ---------------------------------------------------------------------------
@@ -248,7 +254,7 @@ const MANUFACTURO: Comparison = {
         },
         {
           label: "Built for",
-          carbon: "Discrete, regulated make-to-order manufacturers",
+          carbon: "Regulated discrete manufacturing, prototype to rate production",
           competitor: "High-mix regulated discrete manufacturing",
         },
         {
@@ -261,7 +267,7 @@ const MANUFACTURO: Comparison = {
     {
       title: "What's inside the platform",
       rows: [
-        { label: "Financials, GL, AP/AR", carbon: true, competitor: false },
+        { label: "Accounting, GL & job costing", carbon: true, competitor: false },
         { label: "Purchasing / procure-to-pay", carbon: true, competitor: false },
         { label: "Sales orders & quoting", carbon: true, competitor: false },
         {
@@ -343,7 +349,7 @@ const MANUFACTURO: Comparison = {
   reasons: [
     {
       title: "The ERP is already inside",
-      body: "No separate back office to license and integrate. Financials, purchasing, inventory, sales and planning ship with the shop floor, on one data model.",
+      body: "No separate back office to license and integrate. Accounting, job and product costing, purchasing, inventory and planning ship with the shop floor — so cost rolls up from the operation automatically, on one data model.",
     },
     ...carbonReasons("No integration to maintain").slice(1),
   ],
@@ -425,9 +431,9 @@ const FULCRUM: Comparison = {
           competitor: "Fulcrum MCP (curated tools)",
         },
         {
-          label: "Native AI",
-          carbon: "Agent-ready over MCP",
-          competitor: "Archie (chat + actions)",
+          label: "Choice of AI agent",
+          carbon: "Bring any agent — Claude, ChatGPT, Cursor",
+          competitor: "Archie only — the vendor's model & limits",
         },
         {
           label: "ITAR / GovCloud / CMMC",
@@ -497,7 +503,7 @@ function erpInsideReasons(closing: string): CompareCard[] {
   return [
     {
       title: "The ERP is already inside",
-      body: "No separate back office to license and integrate. Financials, purchasing, inventory, sales and planning ship with the shop floor, on one data model.",
+      body: "No separate back office to license and integrate. Accounting, job and product costing, purchasing, inventory and planning ship with the shop floor — so cost rolls up from the operation automatically, on one data model.",
     },
     ...carbonReasons(closing).slice(1),
   ];
@@ -530,7 +536,7 @@ const SAP_B1: Comparison = {
         },
         {
           label: "Built for",
-          carbon: "Discrete, make-to-order manufacturers and job shops",
+          carbon: "Discrete manufacturers, from prototype to rate production",
           competitor: "SMB distribution and light or mixed manufacturing",
         },
         {
@@ -632,7 +638,13 @@ const SAP_B1: Comparison = {
     },
   ],
   reasonsTitle: "Why manufacturers choose Carbon",
-  reasons: carbonReasons("No VAR, no add-on stack"),
+  reasons: [
+    {
+      title: "Manufacturing-first, not finance-first",
+      body: "SAP Business One starts from distribution and financials; the factory arrives as add-ons like Beas and Produmex. Carbon starts from the part and the process, with the ledger built on top of real production.",
+    },
+    ...carbonReasons("No VAR, no add-on stack").slice(1),
+  ],
 };
 
 // ---------------------------------------------------------------------------
@@ -662,7 +674,7 @@ const OPCENTER: Comparison = {
         },
         {
           label: "Built for",
-          carbon: "Discrete make-to-order manufacturers and job shops",
+          carbon: "Discrete manufacturers, from prototype to rate production",
           competitor: "Large, multi-plant regulated production",
         },
         {
@@ -786,7 +798,7 @@ const EPICOR: Comparison = {
         },
         {
           label: "Built for",
-          carbon: "Discrete make-to-order manufacturers and job shops",
+          carbon: "Discrete manufacturers, from prototype to rate production",
           competitor: "Mid-to-large discrete / mixed-mode / ETO",
         },
         {
@@ -1042,7 +1054,7 @@ const TULIP: Comparison = {
           competitor: "No — requires a separate ERP",
         },
         {
-          label: "ERP: financials, purchasing, sales",
+          label: "Accounting, costing & purchasing",
           carbon: true,
           competitor: false,
         },
@@ -1135,7 +1147,7 @@ const TULIP: Comparison = {
   reasons: [
     {
       title: "A complete system, not a layer",
-      body: "Carbon is the system of record — ERP, MRP, MES and QMS on one model — so the floor, inventory, orders and ledger are the same data, not apps wired to someone else's ERP.",
+      body: "Carbon is the system of record — ERP, MRP, MES and QMS on one model — so the floor, inventory, orders, costing and ledger are the same data, not apps wired to someone else's ERP.",
     },
     ...carbonReasons("Published pricing, ERP included").slice(1),
   ],
@@ -1153,9 +1165,9 @@ const PLEX: Comparison = {
   headline: "Carbon vs. Plex",
   metaTitle: "Carbon vs. Plex — open and right-sized vs. an enterprise suite",
   metaDescription:
-    "Plex (by Rockwell) is a mature cloud ERP+MES for high-volume plants — capable, closed and quote-priced. Carbon is open and self-hostable, exposes the full backend over API and MCP, and is right-sized for make-to-order shops.",
+    "Plex (by Rockwell) is a mature cloud ERP+MES for high-volume plants — capable, closed and quote-priced. Carbon is open and self-hostable, exposes the full backend over API and MCP, and runs high-volume assembly and prototype parts in one system.",
   subheadline:
-    "Plex (by Rockwell) is a mature cloud ERP+MES built for high-volume, repetitive plants — capable, closed, cloud-only, and priced by quote. Carbon is open and self-hostable, exposes the whole backend over API and MCP, and is right-sized for make-to-order manufacturers and job shops.",
+    "Plex (by Rockwell) is a mature cloud ERP+MES built for high-volume, repetitive plants — capable, closed, cloud-only, and priced by quote. Carbon is open and self-hostable, exposes the whole backend over API and MCP, and runs high-volume assembly and prototype parts on one model — without the enterprise weight or lock-in.",
   stats: CARBON_STATS,
   groups: [
     {
@@ -1168,13 +1180,13 @@ const PLEX: Comparison = {
         },
         {
           label: "Built for",
-          carbon: "Discrete make-to-order manufacturers and job shops",
+          carbon: "Discrete manufacturers, from prototype to rate production",
           competitor: "High-volume, repetitive discrete & process (automotive)",
         },
         {
-          label: "Small-shop fit",
-          carbon: "Right-sized for small and mid job shops",
-          competitor: "Explicitly not for very small shops",
+          label: "Volume range",
+          carbon: "High-volume assembly and prototype parts in one system",
+          competitor: "High-volume plants; not built for small runs",
         },
       ],
     },
@@ -1241,12 +1253,12 @@ const PLEX: Comparison = {
   ],
   whereItFitsTitle: "Where Plex still fits",
   whereItFits:
-    "For a Tier-1 or Tier-2 automotive supplier running high-volume lines across plants, Plex is a mature, proven cloud ERP+MES backed by Rockwell's automation ecosystem. Carbon is for make-to-order manufacturers and job shops that want the same unified model — open, self-hostable, and transparently priced — without the enterprise weight.",
+    "For a Tier-1 or Tier-2 automotive supplier running high-volume lines across plants, Plex is a mature, proven cloud ERP+MES backed by Rockwell's automation ecosystem. Carbon gives you the same unified model — open, self-hostable, and transparently priced — running high-volume assembly and prototype parts side by side, without the enterprise weight or lock-in.",
   outgrowingTitle: "You may be outgrowing Plex if…",
   outgrowing: [
     {
-      title: "You're too small for it",
-      body: "Plex is built for high-volume, multi-plant production and says so. Carbon is right-sized for make-to-order shops and scales up with you.",
+      title: "You run more than high-volume lines",
+      body: "Plex is built for high-volume, multi-plant production and says so. Carbon runs those same lines and the prototype and low-volume work beside them — one model, any volume.",
     },
     {
       title: "Cloud-only, closed, and quoted",
@@ -1288,7 +1300,7 @@ const FIRST_RESONANCE: Comparison = {
         },
         {
           label: "Built for",
-          carbon: "Discrete make-to-order manufacturers, job shops, aerospace/defense",
+          carbon: "Aerospace, defense and complex hardware, at any volume",
           competitor: "Hardtech scale-ups (space, eVTOL, robotics)",
         },
         {
@@ -1304,7 +1316,7 @@ const FIRST_RESONANCE: Comparison = {
         { label: "Work instructions / travelers", carbon: true, competitor: true },
         { label: "As-built / serial traceability", carbon: true, competitor: true },
         { label: "Quality (QMS)", carbon: true, competitor: true },
-        { label: "Financials, GL, AP/AR", carbon: true, competitor: false },
+        { label: "Accounting, GL & job costing", carbon: true, competitor: false },
         {
           label: "MRP & live capacity planning",
           carbon: "Built in; updates as the floor reports",
@@ -1538,7 +1550,7 @@ const PALANTIR: Comparison = {
         },
         {
           label: "Built for",
-          carbon: "Discrete make-to-order manufacturers and job shops",
+          carbon: "Discrete manufacturers, from prototype to rate production",
           competitor: "Large enterprise & defense; cross-system integration",
         },
         {
