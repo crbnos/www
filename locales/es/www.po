@@ -122,8 +122,8 @@ msgid "API Docs"
 msgstr "Documentación de API"
 
 #: app/routes/about.tsx:42
-msgid "API-first, realtime subscriptions, simple scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
-msgstr "API-first, suscripciones en tiempo real, programación simple y 1,000 pequeños detalles para que el uso de un ERP valga la pena."
+msgid "API-first, realtime subscriptions, forward/finite scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
+msgstr ""
 
 #: app/routes/_index.tsx:131
 msgid "API-first, with first-class MCP"

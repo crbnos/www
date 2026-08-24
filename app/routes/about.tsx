@@ -40,7 +40,7 @@ export default function About() {
 
 					<p className="leading-[1.8] text-foreground text-pretty">
 						<Trans>
-							API-first, realtime subscriptions, simple scheduling, and 1,000
+							API-first, realtime subscriptions, forward/finite scheduling, and 1,000
 							little details to make the juice of using an ERP worth the squeeze.
 						</Trans>
 					</p>

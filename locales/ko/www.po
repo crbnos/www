@@ -122,8 +122,8 @@ msgid "API Docs"
 msgstr "API 문서"
 
 #: app/routes/about.tsx:42
-msgid "API-first, realtime subscriptions, simple scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
-msgstr "API 우선, 실시간 구독, 간단한 일정 관리, 그리고 ERP 사용의 가치를 만드는 1,000가지 작은 세부 사항들."
+msgid "API-first, realtime subscriptions, forward/finite scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
+msgstr ""
 
 #: app/routes/_index.tsx:131
 msgid "API-first, with first-class MCP"
