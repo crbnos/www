@@ -55,10 +55,18 @@ export const SUPPORT_EMAIL = "support@carbon.ms";
 export const INFO_EMAIL = "info@carbon.ms";
 
 export const ORGANIZATION = {
-  name: "Carbon",
+  name: "Carbon Manufacturing Systems",
+  alternateName: ["Carbon", "Carbon ERP"],
   legalName: "Carbon Manufacturing Systems Corporation",
   description:
-    "Carbon is an API-first operating system for manufacturing that gives you full access to the source code, so you have complete control.",
+    "Carbon is the engineering-first operating system for manufacturers: ERP, MRP, MES and QMS on one live model of your factory. Open-source and API-first.",
+  foundingDate: "2022",
+  founder: [
+    { "@type": "Person", name: "Brad Barbin" },
+    { "@type": "Person", name: "Chase Foster" },
+  ],
+  /** NAICS 513210 — Software Publishers. */
+  naics: "513210",
   /**
    * Carbon has no published street address. schema.org allows a PostalAddress
    * with only the fields you can state truthfully, and an incomplete-but-true
@@ -74,6 +82,8 @@ export const ORGANIZATION = {
     "https://github.com/crbnos",
     "https://x.com/carbon_ms",
     "https://www.linkedin.com/company/carbon-manufacturing-systems",
+    "https://www.wikidata.org/wiki/Q141165693",
+    "https://www.youtube.com/@CarbonManufacturingSystems",
   ],
 } as const;
 
