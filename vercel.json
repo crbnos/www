@@ -1,6 +1,41 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
+    {
+      "source": "/docs",
+      "destination": "https://docs.carbon.ms",
+      "permanent": true
+    },
+    {
+      "source": "/docs/:path*",
+      "destination": "https://docs.carbon.ms/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/api",
+      "destination": "https://docs.carbon.ms/api-reference",
+      "permanent": true
+    },
+    {
+      "source": "/openapi",
+      "destination": "/openapi.json",
+      "permanent": true
+    },
+    {
+      "source": "/auth",
+      "destination": "https://docs.carbon.ms/api-reference/authentication",
+      "permanent": true
+    },
+    {
+      "source": "/webhooks",
+      "destination": "https://docs.carbon.ms/integrations",
+      "permanent": true
+    },
+    {
+      "source": "/mcp",
+      "destination": "https://docs.carbon.ms/mcp",
+      "permanent": true
+    },
     { "source": "/oss", "destination": "/about", "permanent": true },
     {
       "source": "/ownership",
