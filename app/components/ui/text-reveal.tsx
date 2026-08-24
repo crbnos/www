@@ -48,7 +48,7 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
   if (isMobile) {
     return (
       <div className={cn("relative z-0 py-32", className)}>
-        <div className="mx-auto max-w-4xl w-form-sm px-4">
+        <div className="mx-auto w-full max-w-form-sm px-4">
           {processedParagraphs.map((paragraph, pIndex) => (
             <p
               key={pIndex}
@@ -78,7 +78,7 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
     <div ref={targetRef} className={cn("relative z-0 h-[200dvh]", className)}>
       <div
         className={
-          "sticky top-0 mx-auto flex h-[50%] max-w-4xl flex-col items-center bg-transparent py-[20dvh] w-form-sm md:w-form-md lg:w-form-lg px-4 "
+          "sticky top-0 mx-auto flex h-[50%] w-full max-w-form-sm md:max-w-form-md lg:max-w-form-lg flex-col items-center bg-transparent py-[20dvh] px-4 "
         }
       >
         {processedParagraphs.map((paragraph, pIndex) => {

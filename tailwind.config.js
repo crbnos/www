@@ -9,7 +9,10 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: "2rem",
+			padding: {
+				DEFAULT: "1.25rem",
+				sm: "2rem",
+			},
 			screens: {
 				"2xl": "1400px",
 			},
@@ -88,6 +91,11 @@ export default {
 				display: ["Archivo", "Barlow Semi Condensed", ...fontFamily.sans],
 			},
 			width: {
+				"form-sm": "360px",
+				"form-md": "580px",
+				"form-lg": "680px",
+			},
+			maxWidth: {
 				"form-sm": "360px",
 				"form-md": "580px",
 				"form-lg": "680px",

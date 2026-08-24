@@ -166,6 +166,16 @@
   @apply rounded-lg;
 }
 
+/* Markdown tables in articles routinely have more columns than a phone is wide.
+   Let the table scroll horizontally within the column instead of forcing the
+   whole page to overflow. `display: block` is what makes overflow-x take. */
+.prose table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
 .mode-transitioning,
 .mode-transitioning *,
 .mode-transitioning *::before,
