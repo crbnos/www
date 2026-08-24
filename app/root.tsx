@@ -154,11 +154,15 @@ export const meta: MetaFunction = ({ data }) => {
 				"@type": "Organization",
 				"@id": `${siteUrl}/#organization`,
 				name: ORGANIZATION.name,
+				alternateName: [...ORGANIZATION.alternateName],
 				legalName: ORGANIZATION.legalName,
 				url: siteUrl,
 				logo: `${siteUrl}/brand/carbon-mark-light.svg`,
 				description: ORGANIZATION.description,
 				email: INFO_EMAIL,
+				foundingDate: ORGANIZATION.foundingDate,
+				founder: ORGANIZATION.founder.map((person) => ({ ...person })),
+				naics: ORGANIZATION.naics,
 				sameAs: [...ORGANIZATION.sameAs],
 				address: {
 					"@type": "PostalAddress",
@@ -199,6 +203,7 @@ export const meta: MetaFunction = ({ data }) => {
 			{
 				"@type": "SoftwareApplication",
 				name: "Carbon",
+				alternateName: "Carbon ERP",
 				applicationCategory: "BusinessApplication",
 				applicationSubCategory: "ERP",
 				operatingSystem: "Web, Self-hosted",
@@ -270,7 +275,7 @@ export const meta: MetaFunction = ({ data }) => {
 		},
 		{
 			property: "og:site_name",
-			content: "Carbon",
+			content: "Carbon Manufacturing Systems",
 		},
 		{
 			property: "og:title",
@@ -278,8 +283,7 @@ export const meta: MetaFunction = ({ data }) => {
 		},
 		{
 			property: "og:description",
-			content:
-				"Carbon is an API-first operating system for manufacturing that gives you full access to the source code, so you have complete control.",
+			content: ORGANIZATION.description,
 		},
 		{
 			property: "og:image",
@@ -291,7 +295,7 @@ export const meta: MetaFunction = ({ data }) => {
 		},
 		{
 			name: "twitter:site",
-			content: "@carbonos",
+			content: "@carbon_ms",
 		},
 		{
 			name: "twitter:title",
