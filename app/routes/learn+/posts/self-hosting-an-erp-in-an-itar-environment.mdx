@@ -1,0 +1,123 @@
+---
+title: "Self-hosting an ERP in an ITAR environment"
+publishedAt: "2026-07-02"
+summary: "A reference architecture for self-hosting an ERP under ITAR: US-person access control, network isolation, GovCloud, backups, and audit logging."
+tag: "Developer"
+author: "chase"
+---
+
+Self-hosting an ERP under ITAR means running the application and its database inside infrastructure you control, with access restricted to U.S. persons, isolated from unrestricted networks, and backed by an audit trail that can survive a DDTC inquiry. It is more operational work than clicking "sign up" on a SaaS ERP, and that trade-off is real. But for a manufacturer whose technical data is itself export-controlled, self-hosting is often the only architecture that lets engineering, quoting, and production data live in the same system without a compliance officer vetoing the plan.
+
+This is a reference architecture, not a sales pitch: the goal is to lay out what "self-hosted ERP under ITAR" requires in practice, so you can evaluate any vendor's claim, including Carbon's, against a concrete standard instead of a checkbox on a compliance matrix.
+
+## Why ITAR pushes manufacturers toward self-hosting in the first place
+
+ITAR (the International Traffic in Arms Regulations) controls "technical data" related to defense articles: drawings, specifications, technical manuals, and in many cases the BOM, routing, and quality records that describe how a controlled part is made. Under ITAR, granting a foreign person access to that data (even unintentionally, even an engineer at your SaaS vendor's support desk) is an unauthorized export requiring a license or an exemption.
+
+That's the constraint that self-hosting exists to satisfy: control over exactly whose hands (and which country's infrastructure) touch the data, at all times, without depending on a vendor's internal access controls, employee nationality mix, or subprocessor list. [ITAR compliance for manufacturers](/learn/itar-compliance-for-manufacturers) covers the regulation itself in depth; this post is about the infrastructure decision that follows from it.
+
+The standard skepticism about self-hosting is fair: it shifts patching, backups, and uptime onto your own team, and a self-hosted system with no dedicated ops capacity can end up less secure than a well-run SaaS platform, not more. Since ITAR data usually leaves self-hosting non-optional, the answer is to build the reference architecture properly, which is the rest of this post.
+
+## The reference architecture
+
+At a high level, a compliant self-hosted ERP deployment has five layers. Each one closes a specific gap that "just install it on a server" leaves open.
+
+### 1. Compute: GovCloud or an equivalent isolated region
+
+AWS GovCloud (US) and Azure Government are built for exactly this: physically and logically isolated regions where access is restricted to vetted U.S. persons, and where the provider contractually commits to ITAR-aligned operational controls. Running your ERP's compute and database in one of these regions, rather than a standard commercial region, removes an entire category of risk: a cloud provider employee outside the U.S. who could otherwise touch the underlying infrastructure.
+
+This matters even if your ERP is otherwise well-architected, because infrastructure-level access (hypervisor admin, storage layer, network fabric) sits below anything the application can control. GovCloud closes that gap at the provider level so your application-level controls aren't undermined by it.
+
+### 2. Identity: U.S.-person-only access, enforced technically
+
+"We only hire U.S. persons for this team" is a policy. A compliant deployment enforces it technically:
+
+- SSO/SAML tied to an identity provider where every account is provisioned by HR/compliance with citizenship or permanent-resident status verified before the account exists.
+- Role-based access scoped tightly, so engineering drawings and BOMs are visible only to roles that need them, not to the entire ERP user base by default.
+- No shared or generic accounts. Every session traces to one verified person.
+- MFA enforced on every account with access to controlled technical data, no exceptions for convenience.
+
+The failure mode this prevents is usually not malicious. It's a well-meaning IT admin adding a contractor or an offshore support engineer to a group that has broader access than intended, because nothing in the system stopped it.
+
+### 3. Network: isolation from unrestricted internet paths
+
+Two things need to be true simultaneously: authorized U.S. persons can reach the system, and nobody else can, including automated scanning, opportunistic attackers, and (the ITAR-specific concern) access paths that could route through infrastructure outside U.S. control.
+
+- VPN or private connectivity (AWS Direct Connect / Azure ExpressRoute) rather than a public-internet login page, where the deployment's risk profile calls for it.
+- Network segmentation between the ERP environment and any lower-trust segment of the corporate network (guest Wi-Fi, general office IT).
+- No default public database endpoints: the database should not be reachable outside the application tier under any circumstance, self-hosted or not.
+
+### 4. Data: encryption, backups, and retention that don't leak scope
+
+- **Encryption at rest and in transit** using keys you control (customer-managed keys in GovCloud/Gov Azure), not a shared platform default.
+- **Backups stored inside the same isolated boundary.** A backup that lands in a standard commercial region or an unmanaged third-party backup service re-creates the exact exposure the rest of the architecture was built to close. Backup location is one of the most commonly missed items in ITAR self-hosting reviews.
+- **Retention policy that matches your compliance obligations**, not only your storage budget. DFARS and CMMC contracts often specify minimum retention for quality and traceability records that outlasts a default 30- or 90-day backup window. See [CMMC 2.0 for small defense manufacturers](/learn/cmmc-for-small-defense-manufacturers) for how this overlaps with CMMC's own logging and retention expectations.
+
+### 5. Audit: a trail that survives a DDTC inquiry
+
+If DDTC (the Directorate of Defense Trade Controls) ever asks who accessed a specific technical data record and when, "we believe only U.S. persons had access" is not an answer; a system-generated, tamper-evident log is. A compliant deployment logs:
+
+- Every authentication event, successful and failed.
+- Every read and write to records classified as technical data, not just a generic "user logged in" event.
+- Administrative actions: permission changes, new accounts, role changes.
+- Logs shipped to storage the application itself can't alter, so a compromised or malicious insider can't cover their tracks by editing the log that would catch them.
+
+## Self-hosted vs. managed cloud: what changes under ITAR
+
+| Layer | Managed SaaS (standard) | Self-hosted (this reference architecture) |
+|---|---|---|
+| Who can access infrastructure | Vendor's global support/ops staff | Your own vetted U.S.-person team only |
+| Data residency | Vendor's chosen region(s), often not GovCloud | You choose GovCloud / Gov Azure explicitly |
+| Network exposure | Vendor's shared multi-tenant edge | You control VPN/private connectivity |
+| Backup location | Vendor-managed, often opaque to you | Inside your own isolated boundary |
+| Audit trail ownership | Vendor's logs, on their retention schedule | Your logs, on your retention schedule |
+| Operational burden | Low: vendor patches and runs it | Real: your team owns uptime, patching, backups |
+| Source visibility | Usually none | Full, if the ERP is source-available |
+
+That last row is why the deployment model and the licensing model are related questions, not separate ones: self-hosting a closed-source ERP means running a black box inside your controlled boundary. You can lock down the network around it, but you can't verify what the application itself does with the data. Self-hosting a source-available ERP means you can audit the actual code handling technical data, not just the perimeter around it. See [What is a source-available ERP?](/learn/what-is-a-source-available-erp) for that distinction in full.
+
+## Where teams underestimate the effort
+
+Be honest with your own team about what self-hosting commits you to, because underestimating it is the real risk, not self-hosting itself:
+
+- **Patching cadence.** Someone has to apply security patches to the OS, database, and application on a schedule, not "eventually." A missed patch on an ITAR-scoped system is a finding in an audit, not just a maintenance backlog item.
+- **On-call for uptime.** Production scheduling and quality records living in a system nobody is watching at 2am is a business risk independent of ITAR.
+- **Backup restore testing.** A backup you've never restored is a hypothesis, not a backup. Test restores on a schedule.
+- **Staffing continuity.** If the one person who understands the deployment leaves, does the compliance posture survive? Document the architecture, not just the fact that it exists.
+
+None of this is a reason to avoid self-hosting where ITAR requires it. It's a reason to budget real operational capacity for it, or to choose a vendor that offers a forward-deployed engineer or managed self-hosted option that carries some of that load without giving up the compliance posture.
+
+## How Carbon supports this architecture
+
+Carbon is built to be deployed this way on Enterprise plans, because the manufacturers who need it, aerospace and defense suppliers in particular, can't accept a black-box SaaS default:
+
+- **Self-hostable in your own environment**, including GovCloud/ITAR-capable configurations, rather than being SaaS-only with no alternative.
+- **Source-available on GitHub** (github.com/crbnos/carbon), so the code running inside your isolated boundary can be reviewed, not just trusted.
+- **API-first**, so audit logging, identity integration, and network controls can be layered on using your own infrastructure and identity provider rather than being locked to whatever the vendor built in.
+- **Enterprise plans include a forward-deployed engineer** to help stand up the reference architecture above correctly the first time, rather than a manufacturer's ops team discovering the gaps during an audit.
+
+## Frequently asked questions
+
+### Does ITAR require self-hosting an ERP?
+
+ITAR doesn't name specific software architectures, but it does require that technical data only be accessible to authorized U.S. persons and not exported abroad without a license. In practice, many manufacturers find that a standard multi-tenant SaaS ERP can't give them enough control or visibility over who and what infrastructure touches that data, which pushes the decision toward self-hosting or a dedicated, GovCloud-hosted single-tenant deployment.
+
+### What's the difference between GovCloud and a regular cloud region for ITAR?
+
+GovCloud regions (AWS GovCloud, Azure Government) restrict operational access to vetted U.S. persons and are built around contractual and physical controls aligned with ITAR and similar regulations. A standard commercial cloud region has no such restriction on who can operate the underlying infrastructure, even if your application-level access controls are strong.
+
+### Can a self-hosted ERP still be too risky for ITAR data?
+
+Yes. Self-hosting closes the gaps described in this reference architecture only if it's built to it. A server in a standard commercial cloud region, with a shared admin account and no audit logging, is not meaningfully more compliant than SaaS; it moves the same gaps onto a team with less experience closing them.
+
+### Is source-available software required for ITAR self-hosting?
+
+Not required by regulation, but it materially strengthens the compliance case. Self-hosting closes the network and access perimeter around the application; source availability lets you verify what the application itself does with technical data, rather than trusting a closed-source vendor's claims about it.
+
+### How does self-hosting under ITAR affect implementation timeline?
+
+It adds real setup time relative to a pure SaaS signup. Provisioning GovCloud infrastructure, wiring identity and network controls, and validating backups typically adds weeks, not months, when a vendor supports the deployment directly, versus months when a manufacturer is building the entire reference architecture from scratch with no vendor support.
+
+## Talk to us about your ITAR deployment
+
+If you're evaluating a self-hosted ERP for an ITAR or CMMC-scoped environment, [see Carbon's Enterprise options](/pricing), review the source directly on [GitHub](https://github.com/crbnos/carbon), or start with a 30-day trial at https://app.carbon.ms to evaluate the application itself before committing to a deployment architecture.

@@ -1,0 +1,112 @@
+---
+title: "Open source MES: what exists in 2026 and how to evaluate it"
+publishedAt: "2026-07-08"
+summary: "A practical survey of open source MES options in 2026: what's real, what's abandoned, and the criteria (license, API, data model, self-host) that matter."
+tag: "Developer"
+author: "chase"
+---
+
+Open source MES is a smaller category than open source ERP, and searching for it turns up more forum threads asking "does this exist?" than production-grade software. It does exist, but the field is thin, several of the well-known names are dormant or under-maintained, and most manufacturers evaluating "open source MES" are asking a broader question: can I get execution-layer software (routings, work orders, machine data, quality holds) without being locked into a closed vendor, and can I trust it enough to run my floor on it. This article covers what MES is, what's available as open or source-available software in 2026, and the evaluation criteria that separate a real option from a GitHub repo that hasn't been touched in three years.
+
+## MES, defined, before you evaluate anything
+
+A Manufacturing Execution System sits between planning (ERP/MRP, which decides what and when to build) and the machines and people building it. MES tracks:
+
+- **Work order execution:** start/stop, labor and machine time against an operation, quantity completed/scrapped.
+- **Routings and travelers:** the sequence of operations a job moves through, and the paperwork or digital record that follows it.
+- **Real-time status:** what's running, what's down, what's queued, on which work center.
+- **Quality gates at the operation level:** in-process inspections, holds, nonconformance capture tied to the specific job and operation.
+- **Data collection:** labor time, machine cycle time, scrap, and (in more capable systems) machine connectivity for automatic cycle counting.
+
+If a tool doesn't touch the floor (doesn't know which operation a job is on right now), it isn't MES, no matter how good its planning is. For the full breakdown of where MES starts and ERP/MRP planning ends, see [What Is a Manufacturing Execution System (MES)?](/learn/what-is-mes) and, for how QMS overlaps with both, [MES vs. ERP vs. QMS](/learn/mes-vs-erp-vs-qms).
+
+## Why "open source MES" is a sparse search
+
+A few structural reasons the category is smaller than open source ERP or open source CRM:
+
+1. **MES has historically been sold bundled with hardware.** Machine builders, PLC vendors, and SCADA companies packaged execution software with their equipment, which kept it proprietary and expensive by design. There was no incentive to open it.
+2. **The buyer is often not a developer.** Plant managers and quality engineers evaluate MES, and they typically don't search GitHub. They search "MES software" and land on sales pages, so open projects get less visibility even when they exist.
+3. **Real MES needs breadth most side projects can't sustain.** A router, a traveler, an operation timer, and a quality hold that all agree with each other and with inventory is a lot of connected surface area to build and keep working, harder to maintain as a hobby project than a single-purpose tool.
+4. **Most "open source MES" results are ERP or MRP projects with an MES module bolted on**, or point tools (a barcode scanning app, a machine-monitoring dashboard) that solve one slice of execution but aren't a system of record.
+
+## What actually exists
+
+Being direct about the landscape, without inventing detail about projects we haven't audited in depth:
+
+| Category | What you'll find | Caveat |
+|---|---|---|
+| ERP suites with an MES module | Larger open source ERP projects sometimes ship a manufacturing/MES module alongside inventory and accounting | Often thinner than dedicated MES; good for basic work-order tracking, weak on real-time floor data and machine connectivity |
+| Point tools | Barcode/scan apps, single-machine OEE dashboards, standalone traveler generators | Solve one problem well but require you to integrate them yourself with planning and quality; you own the glue code |
+| Academic / research projects | University or lab-originated MES cores, sometimes tied to a specific standard (ISA-95) | Valuable as reference implementations, rarely production-hardened or actively maintained |
+| Source-available operating systems for manufacturing | A newer category: the full ERP + MRP + MES + QMS on one data model, complete source published and self-hostable under a source-available license | Carbon is in this category (see below) |
+
+The pattern worth internalizing: most of what surfaces under "open source MES" is either narrower than a real system of record, or is an ERP project wearing an MES label. That's not a criticism of any specific project; it reflects how hard full-scope MES is to build and maintain in the open. If you want the terminology precise before you go further, [What is a source-available ERP?](/learn/what-is-a-source-available-erp) draws the line between open source, source-available, and proprietary, a distinction that matters as much for MES as for ERP.
+
+## Evaluation criteria that predict whether it'll work
+
+Whatever you're looking at (a pure MES, an ERP with an MES module, or a source-available platform), evaluate against these, in order:
+
+### 1. License, precisely
+
+"Open source" is not one thing. Read the actual license, not the marketing copy:
+
+- **Permissive (MIT, Apache 2.0):** you can modify, redistribute, even relicense your fork. Maximal freedom, but no obligation on anyone (including the original maintainer) to keep contributing.
+- **Copyleft (GPL, AGPL):** modifications you distribute must also be open. AGPL specifically closes the "SaaS loophole," so running a modified version as a hosted service still triggers the share-back requirement.
+- **Source-available (BSL, "fair source", etc.):** source is public and typically self-hostable and modifiable for your own use; the only thing usually restricted is reselling it as a competing hosted product. For running your own floor, that gives you the rights that matter (read, audit, self-host, extend) while the licensing keeps the project commercially funded, which is what keeps it maintained. The abandonment risk of a "pure" open-source project with no business behind it is often the bigger threat to a shop floor than a resale clause it will never invoke.
+
+None of these is universally "better." The right choice depends on whether you need to modify and redistribute, or only need to read, audit, and self-host.
+
+### 2. Does the API cover everything, or a curated subset
+
+A lot of MES and ERP products expose an API for a handful of "integration-friendly" objects (usually inventory and sales orders) and leave routings, operation timers, and quality records unreachable. If you plan to connect machines, build a custom dashboard, or eventually wire up an AI agent, confirm the API surface matches the data model, not a marketing subset of it. See [API-first ERP: what a real manufacturing API enables](/learn/api-first-erp) for what "every table reachable" looks like in practice, and check the docs directly:
+
+```http
+GET https://rest.carbon.ms/v1/production/operations
+GET https://rest.carbon.ms/v1/quality/nonconformances
+```
+
+### 3. Is the data model coherent across execution and everything around it
+
+MES that keeps its own copy of the item master, its own routing structure, and its own quality records (synced nightly with ERP) will drift. Ask: does a scrapped part on the floor immediately affect inventory and MRP's next planning run, or does it wait for a batch job? One shared schema (commonly Postgres in modern stacks) beats "integrated" systems stitched together with sync jobs.
+
+### 4. Can you self-host it, today, without a services contract
+
+Clone the repo, read the setup docs, and try to stand up a working instance yourself. If self-hosting requires a paid implementation partner to even attempt, it isn't meaningfully self-hostable regardless of the license.
+
+### 5. Is there a real community and commit history
+
+Check the last commit date, open issue response times, and whether releases are shipping. A repo with a compelling README and no commits in eighteen months is a warning sign, not a foundation.
+
+## How Carbon fits
+
+Carbon is a source-available operating system for manufacturing: ERP, MRP, MES, and QMS on one Postgres data model, not four systems stitched together:
+
+- **Full source on GitHub** (github.com/crbnos/carbon). Routings, operation timers, quality holds, and the planning engine are all readable and auditable, not a black box you're asked to trust. The commit history and release cadence are public too, so the "is this actively maintained?" question above answers itself.
+- **Self-host or managed SaaS.** Enterprise self-hosting supports GovCloud and ITAR-capable environments; see [Self-hosting an ERP in an ITAR environment](/learn/self-hosting-an-erp-in-an-itar-environment).
+- **Every table, one API.** Work orders, routings, operations, and nonconformances are reachable over the same REST API (rest.carbon.ms) as inventory and sales, not a curated integration subset.
+- **A hosted MCP server** so agents can read live shop-floor status and act on it directly. See [Building AI agents for your factory: MCP + manufacturing](/learn/mcp-for-manufacturing).
+- **Published pricing, no sales call required to see the number**: Starter at $40/user/mo, Business at $100/user/mo with the API and webhooks unlocked.
+
+Run Carbon through the same five criteria above and it clears all of them: a readable license, an API that reaches every table rather than a curated subset, one coherent data model instead of synced silos, a self-host path you can stand up yourself, and a live commit history. That's the bar the rest of the category should be held to. Apply it evenly and see what's left standing.
+
+## Frequently asked questions
+
+### Is there a truly open source MES available today?
+
+A few projects exist, mostly as modules within larger open source ERP suites or as narrower point tools (scanning apps, OEE dashboards) rather than full execution systems. Coverage and maintenance activity vary widely, so evaluate license, API completeness, and commit history individually rather than assuming any project labeled "open source MES" covers the full scope.
+
+### What's the difference between open source and source-available MES?
+
+Open source licenses (MIT, Apache, GPL) grant broad rights to modify and redistribute, with copyleft licenses requiring derivative works to stay open. Source-available licenses publish the code and typically allow self-hosting and modification for your own use, but may restrict reselling it as a competing hosted service. Read the specific license text. The labels alone don't tell you enough.
+
+### Can I build MES myself instead of buying or adopting an open source option?
+
+Yes, and some shops do, but a real MES touches routings, quality, labor tracking, and inventory in ways that compound in complexity. If you're weighing that build against adopting something, see how [Carbon compares to building it yourself](/compare/build-it-yourself) for a concrete breakdown of what a build costs beyond the initial version.
+
+### Does open source MES mean no support?
+
+Not necessarily. Source-available and open source products increasingly offer paid support tiers alongside free self-hosting. The code being open doesn't preclude a vendor selling implementation help, hosting, or an SLA on top of it.
+
+## See the execution layer's source before you commit to it
+
+If you're evaluating MES options, the fastest way to judge one is to read its routing, operation-timer, and quality-hold logic directly rather than take a sales deck's word for it. [Browse Carbon's source on GitHub](https://github.com/crbnos/carbon), read the API docs at [docs.carbon.ms](https://docs.carbon.ms), or [try Carbon free for 30 days](/pricing) at https://app.carbon.ms.

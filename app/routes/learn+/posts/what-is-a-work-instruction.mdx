@@ -1,0 +1,93 @@
+---
+title: "What is a work instruction? (+ how to write great ones)"
+publishedAt: "2026-08-13"
+summary: "A practical guide to writing digital work instructions operators actually follow: structure, examples, and how to move from paper to digital."
+tag: "Manufacturing basics"
+author: "chase"
+---
+
+A work instruction is a step-by-step document that tells an operator exactly how to perform one operation on the shop floor: what to set up, what to do in what order, what to check, and what "done correctly" looks like. It's the layer of detail below a router or traveler, which tells you *which* operations happen and in what sequence but not *how* to execute any single one of them.
+
+Good work instructions are the difference between a process that lives in one senior operator's head and a process that survives turnover, cross-training, and a second shift. Bad ones (vague, out of date, or buried in a binder nobody opens) get ignored, and operators fall back on tribal knowledge and memory, which is what causes variation, scrap, and audit findings.
+
+## What a work instruction contains
+
+At minimum, a work instruction for a manufacturing operation should include:
+
+1. **Identification.** Part number, revision, operation number, and which routing/traveler it belongs to.
+2. **Setup.** Fixture, tooling, program number, machine or work center, required PPE.
+3. **Step-by-step procedure.** Numbered steps in the order they're performed, written at the level of detail a competent-but-unfamiliar operator needs.
+4. **Inspection criteria.** What to measure, with what tool, against what tolerance, and at what frequency (first-piece, in-process, last-piece).
+5. **Visual references.** Photos, diagrams, or a 3D model showing correct orientation, critical features, or common defects to avoid.
+6. **Standard time.** The expected cycle or run time, used for both scheduling and performance tracking.
+7. **Safety and quality notes.** Anything that isn't obvious from the steps alone (hold points, torque specs, cure times, hazards).
+
+A work instruction is not a substitute for training or a statement of intent. It's an operational document that should let a reasonably competent operator produce a conforming part without asking someone else how to do it.
+
+## Work instructions vs. routers vs. SOPs
+
+These three terms get used interchangeably on shop floors, but they answer different questions:
+
+| Document | Question it answers | Scope |
+|---|---|---|
+| Router / traveler | Which operations happen, in what order, at which work centers? | Whole job, all operations |
+| Work instruction | How exactly is this one operation performed? | Single operation |
+| SOP (standard operating procedure) | How is this general process performed, independent of any one job? | Cross-job, e.g. "how we calibrate calipers" |
+
+A router might say "Op 30: Deburr." The work instruction for Op 30 says which deburring tool to use, which edges get broken, to what radius, and how to verify it. If you want the full breakdown of routers and travelers, see [what a router / job traveler is](/learn/what-is-a-router-traveler) and, for the operations and time standards that feed a router in the first place, [setting up routings, work centers, and standard times](/learn/setting-up-routings-work-centers).
+
+## How to write a work instruction operators will follow
+
+**Write it at the workstation, not at a desk.** The biggest failure mode is a work instruction written from memory or a CAD model, by someone who hasn't stood at the machine in months. Stand at the machine and run the operation, then write down what you do, including the fixture nudge and the "make sure it's seated" step nobody puts in the official version.
+
+**One action per step.** "Load part into fixture, clamp, and start cycle" is three steps disguised as one. If something can go wrong at a specific point, it needs its own numbered line, which is also where you attach an inspection check or a photo.
+
+**Show, don't only tell.** A photo of the correct part orientation in the fixture prevents more scrap than a paragraph describing it. For complex geometry, a 3D model the operator can rotate beats a 2D drawing snippet; this is one reason a native **3D/STEP CAD viewer** attached to the work order (not a separate PDM login) matters more than it sounds like it should.
+
+**Put the tolerance next to the step, not in a separate spec sheet.** If Step 6 is "drill 4x Ø0.201 holes," the position and diameter tolerance belongs on that line, not three documents away in a drawing the operator has to go find.
+
+**Version it, and make the version visible on the floor.** A work instruction with no revision date is a liability during an [AS9100 or ISO audit](/learn/as9100-for-small-shops): auditors check that the instruction at the workstation matches the current released revision, not a printout from eighteen months ago.
+
+**Pilot it before you release it.** Hand it to an operator who hasn't run that job before and watch them try to follow it cold. Every place they hesitate or ask a question is a gap in the instruction, not a gap in their competence.
+
+## Paper vs. digital work instructions
+
+Paper work instructions are cheap to start and easy to print, which is why almost every shop begins there. They also have three structural problems that don't show up until you scale past a handful of parts:
+
+- **Revision control breaks down.** Someone updates the master file but the laminated sheet at the machine is still Rev B. There's no reliable way to guarantee the floor is always looking at the current version without someone physically walking around swapping paper.
+- **They're disconnected from the job.** A binder doesn't know which work order is running, so it can't show the operator the specific quantity, due date, or lot/serial numbers they need to record.
+- **Data capture is manual and lossy.** If the work instruction says "record the torque value," that number lives on a paper traveler until someone keys it in later, if they key it in at all. That gap is what shows up as a missing signature during an [electronic DHR review under 21 CFR Part 11](/learn/21-cfr-part-11-electronic-dhr).
+
+Digital work instructions fix this by attaching the instruction directly to the work order in the MES, so the operator always sees the current revision, in context, with the right part and quantity already loaded. Done well, digital work instructions also become the capture point for the data you need anyway: time on task, quantities completed and scrapped, in-process measurements, and operator sign-off, feeding traceability and job costing without a second data-entry step.
+
+## How Carbon handles work instructions
+
+Carbon attaches work instructions directly to each operation in the routing, so they travel with the job automatically, with no separate document control system to keep in sync with production. Because Carbon includes a native 3D/STEP viewer, an operator can rotate the actual model at the workstation instead of squinting at a printed isometric view, and because the same instruction lives on the same operation the operator is clocked into, time and quantity data flow straight into job costing and scheduling without re-entry.
+
+Because Carbon is built on one data model across ERP, MES, and QMS, a revision to a work instruction is a single edit that immediately reflects on every open work order using that operation, with no reprinting and no reconciling versions across systems. If you're comparing this to how a general-purpose MES handles instructions, [MES vs. ERP vs. QMS](/learn/mes-vs-erp-vs-qms) walks through where each system's responsibilities start and stop, and [what a manufacturing execution system actually does](/learn/what-is-mes) covers the broader MES layer that work instructions live inside.
+
+## Frequently asked questions
+
+### What's the difference between a work instruction and an SOP?
+
+A work instruction covers one specific operation on one specific part or job. An SOP covers a general process that applies across many jobs: for example, "how we perform incoming inspection" rather than "how we inspect this specific bracket at Op 20."
+
+### Do work instructions need to be approved documents under ISO 9001 or AS9100?
+
+Yes. Under most quality systems, work instructions are controlled documents: they need a revision level, an approval record, and a process for making sure only the current revision is in use on the floor. This is one of the most common audit findings in shops still on paper.
+
+### How detailed should a work instruction be?
+
+Detailed enough that a competent operator unfamiliar with that specific job could run it correctly without asking questions, but not so detailed that it insults an experienced operator's competence or becomes tedious to follow. Photos and inspection criteria at the right step matter more than long prose.
+
+### Can work instructions include video?
+
+Yes, and for complex assembly or setup operations a short video often communicates more than photos or text, especially for motions that are hard to describe (a specific wire-routing path, a torque sequence). Digital work instruction tools make embedding video straightforward; paper can't.
+
+### Who should write work instructions, engineering or the operators who run the job?
+
+Both, ideally. Engineering defines the requirements (tolerances, sequence, safety); the operators who run the job catch the practical details engineering misses. The best work instructions are drafted by engineering and validated by having an experienced operator run the process against the draft before it's released.
+
+## Try it yourself
+
+If you want work instructions that live on the work order instead of in a binder, [try Carbon free for 30 days](/pricing) (no sales call, cancel anytime), or explore the [source on GitHub](https://github.com/crbnos/carbon) to see how routings, operations, and instructions are modeled.

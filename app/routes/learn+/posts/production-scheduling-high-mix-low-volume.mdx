@@ -1,0 +1,113 @@
+---
+title: "Production scheduling for high-mix, low-volume shops"
+publishedAt: "2026-07-16"
+summary: "A practical guide to production scheduling for high-mix, low-volume shops: finding the bottleneck, grouping setups, and sequencing under finite capacity, with worked numbers."
+tag: "How-to"
+author: "chase"
+---
+
+Production scheduling for high-mix, low-volume (HMLV) manufacturing means sequencing many different jobs with different routings through a small set of shared, setup-heavy resources under real capacity limits. The practical fix is to identify the true bottleneck, sequence it to minimize changeovers, and let everything else flow around that fixed point. Below is how that works, including a worked example showing the difference between scheduling by due date alone and scheduling around the constraint.
+
+## Why generic scheduling breaks in an HMLV shop
+
+Most scheduling advice, and most ERP scheduling modules, assume something HMLV shops don't have: a stable product mix running through a roughly fixed sequence of operations. In a high-mix, low-volume job shop:
+
+- **Setup is a large share of total time.** When lot sizes are small, the fixed cost of changing over a machine competes with the run time itself, sometimes exceeding it.
+- **Multiple jobs compete for the same few constrained resources.** A handful of critical machines (a 5-axis mill, a specific heat-treat oven, one qualified welder) end up in the middle of nearly every job's routing.
+- **Priorities change daily.** A rush order, a customer escalation, or a late material delivery reshuffles the plan constantly, and a static schedule is stale within hours.
+- **Routings vary job to job.** There's no single line to balance; each job's path through the shop is different, so line-balancing techniques built for repetitive manufacturing don't transfer.
+
+An ERP that schedules against infinite work-center capacity, treating every machine as always available, hands you a plan that looks complete and is wrong the moment two jobs need the same machine on the same day. See [What is finite capacity scheduling?](/learn/what-is-finite-capacity-scheduling) for the distinction in more detail.
+
+## Step 1: Identify the true bottleneck
+
+Before sequencing anything, find the resource that constrains your output: usually the work center with the highest utilization, the longest standing queue, or the one that shows up in the routing of nearly every job. In most job shops this is one or two machines: a 5-axis or multi-axis mill, a specific inspection station, a bonding/curing oven with fixed cycle times. Everything else typically has slack; these one or two resources don't.
+
+This isn't a one-time exercise. As mix shifts (a new customer's parts route differently, a machine goes down for maintenance), the bottleneck can move. But at any given time, there's almost always a dominant constraint, and it deserves outsized planning attention.
+
+## Step 2: Schedule the bottleneck first, then work outward
+
+This is the core idea behind Theory of Constraints' drum-buffer-rope method, and it applies directly to job shop scheduling: the bottleneck sets the pace for the entire operation (the "drum"). You release material ahead of it with a time buffer so it never starves for work, and you pace everything downstream to what the bottleneck produces rather than scheduling it independently against its own due dates.
+
+In practice: don't try to build a perfectly optimized schedule for every work center simultaneously. Build a good sequence for the bottleneck, and let non-constrained resources absorb the variability. Because they have slack capacity, a suboptimal sequence there rarely threatens the overall due date.
+
+## Step 3: Sequence the bottleneck to minimize setup
+
+Sequencing purely by due date (earliest-due-date, or EDD) is intuitive but ignores changeover cost. In a setup-heavy shop, that cost is often the difference between finishing a shift's work on time and spilling into overtime. The worked example below runs a single bottleneck resource, a shared CNC mill, with five queued jobs in an 8-hour (480-minute) shift.
+
+| Job | Family | Setup | Run time | Due |
+|---|---|---|---|---|
+| 101 | Bracket (Fam A) | 35 min | 60 min | Day 2 |
+| 102 | Shaft (Fam B) | 50 min | 45 min | Day 1 (rush) |
+| 103 | Bracket (Fam A) | 35 min | 90 min | Day 3 |
+| 104 | Housing (Fam C) | 40 min | 75 min | Day 2 |
+| 105 | Bracket (Fam A) | 35 min | 50 min | Day 4 |
+
+**Sequenced strictly in the order received (101, 102, 103, 104, 105):** the family alternates every job (A, B, A, C, A), so every setup is a full changeover.
+
+Total setup: 35 + 50 + 35 + 40 + 35 = **195 minutes**
+Total run: 60 + 45 + 90 + 75 + 50 = **320 minutes**
+Total time: **515 minutes**, 35 minutes over an 8-hour shift, meaning overtime or a slip to the next day.
+
+**Bottleneck-focused sequencing:** pull the urgent job (102) to the front so it protects the due date that matters, then group the remaining Family-A jobs back to back. When the same fixture and tool package are already loaded, a same-family changeover takes a quick touch-up (say, 8 minutes to swap stock) instead of a full 35-minute setup.
+
+Sequence: 102 → 101 → 103 → 105 → 104
+
+Total setup: 50 + 35 + 8 + 8 + 40 = **141 minutes**
+Total run: 45 + 60 + 90 + 50 + 75 = **320 minutes** (unchanged; grouping doesn't touch run time)
+Total time: **461 minutes**, which fits inside the 480-minute shift with 19 minutes to spare, and the rush job finishes first.
+
+Same five jobs, same total run time. A **54-minute (28%) reduction in setup**, from sequencing alone, is the difference between finishing on schedule and paying overtime.
+
+## Step 4: Protect the sequence with a buffer
+
+In an HMLV shop the sequence you build this morning will get disrupted before lunch. Rather than lock in an exact schedule for every non-bottleneck resource, build a modest time buffer of released work ahead of the bottleneck so it never sits idle waiting on upstream operations. The buffer absorbs the normal noise of a job shop (a late material delivery, a machine hiccup) without requiring a full replan every time something shifts.
+
+## Step 5: Replan around the bottleneck when priorities shift
+
+When a rush job lands, you don't re-sequence the entire shop. You re-sequence the bottleneck, insert the rush job at the right point, and let the buffer and slack elsewhere absorb the ripple. This is why focusing planning effort on the constraint pays off: it's the one place a change requires deliberate re-optimization.
+
+## Step 6: Feed the schedule from a real routing
+
+None of this works if the underlying routing data is wrong. A scheduler can sequence correctly only if it knows the true setup time, run time, and work center for every operation. If your routings are informal or inconsistent, start with [Setting up routings: work centers, operations, and standard times](/learn/setting-up-routings-work-centers) before expecting a scheduling tool (manual or automated) to produce a trustworthy plan.
+
+## When manual sequencing stops scaling
+
+The five-job example above is manageable on a whiteboard. Past roughly 15 to 20 concurrent open jobs across more than a handful of shared resources, the combinatorics of "which sequence minimizes setup while still hitting every due date" outgrow what a planner can do reliably by hand, especially when priorities change daily. That's the point where **finite capacity scheduling** software, which continuously solves this sequencing problem against real constraints instead of a static Gantt chart, starts paying for itself. See [What is production planning?](/learn/what-is-production-planning) for how scheduling fits into the broader planning process, and [What is finite capacity scheduling?](/learn/what-is-finite-capacity-scheduling) for what the software needs to model to do this correctly.
+
+## Common mistakes
+
+- **Sequencing by due date alone**, ignoring setup cost. The EDD approach above missed the shift deadline by 35 minutes for jobs with plenty of due-date slack.
+- **Treating every work center as equally important**, spending planning effort optimizing resources that have slack capacity while the constraint gets whatever sequence is left over.
+- **No real-time visibility into the bottleneck's queue**, so a planner reacts to problems a shift late instead of seeing them coming.
+- **Re-sequencing in a spreadsheet** that's already stale by the next shift change, because nothing in it reflects what happened on the floor today.
+
+## How Carbon approaches HMLV scheduling
+
+Carbon's scheduling runs on real finite capacity rather than an infinite-capacity assumption. It sequences jobs against actual work center availability, standard setup and run times from the routing, and current shop-floor status, because production, routing, and inventory all live on the same data model instead of a scheduling tool bolted onto a separate ERP export. A rush job inserted into the queue gets sequenced against real constraints immediately, not reconciled by hand against a spreadsheet a planner maintains.
+
+## Frequently asked questions
+
+### What is high-mix, low-volume manufacturing?
+
+High-mix, low-volume (HMLV) manufacturing is production characterized by many different part numbers, each in relatively small quantities, typically with varying routings and a heavy proportion of setup time relative to run time. It's common in job shops, contract manufacturers, and make-to-order production.
+
+### What scheduling method works best for HMLV shops?
+
+A bottleneck-focused approach works best: identify the true constrained resource, sequence it to minimize setup changeovers while still protecting real due-date priorities, and let non-constrained resources absorb the resulting variability rather than trying to optimize every machine simultaneously.
+
+### What is a bottleneck in production scheduling?
+
+A bottleneck is the resource whose available capacity is closest to (or below) demand: the constraint that determines the maximum throughput of the entire operation, regardless of how much slack capacity exists elsewhere.
+
+### Can a spreadsheet handle HMLV scheduling?
+
+For a small number of concurrent jobs and a handful of resources, yes. Past roughly 15 to 20 open jobs with shifting priorities, the sequencing math becomes too complex to solve reliably by hand every time a rush order or delay hits, which is when finite capacity scheduling software starts to pay off.
+
+### What's the difference between finite and infinite capacity scheduling?
+
+Infinite capacity scheduling assumes a resource is always available and schedules jobs against ideal lead times. Finite capacity scheduling accounts for actual, limited availability of machines and labor, sequencing jobs against real constraints so the resulting plan is achievable rather than aspirational.
+
+## Schedule against reality
+
+If your current schedule is a whiteboard or a spreadsheet that's out of date by the afternoon shift, it's worth seeing what finite-capacity scheduling tied to your routings and shop floor looks like. [Try Carbon free for 30 days](/pricing) at https://app.carbon.ms, or explore the scheduling engine's source on [GitHub](https://github.com/crbnos/carbon).

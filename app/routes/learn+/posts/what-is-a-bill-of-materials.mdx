@@ -1,0 +1,122 @@
+---
+title: "What is a bill of materials (BOM)? Types and free template"
+publishedAt: "2026-08-18"
+summary: "What is a bill of materials? A plain-English guide to BOM meaning, the main BOM types (EBOM, MBOM, phantom, configurable), a worked example, and a free template."
+tag: "Manufacturing basics"
+author: "chase"
+---
+
+A bill of materials (BOM) is the structured list of every part, subassembly, raw material, and quantity needed to build one unit of a product: the recipe your ERP, MRP, and shop floor all read from. Get the BOM wrong and everything downstream breaks: purchasing buys the wrong quantity, MRP plans against a phantom shortage, and the traveler sends an operator to grab a part that was superseded two revisions ago.
+
+This guide covers what a bill of materials contains, the BOM types you'll run into (single-level, multi-level, EBOM vs. MBOM, phantom, configurable), a fully worked multi-level example with real numbers, and a template you can copy today.
+
+## BOM meaning: what's in one
+
+At minimum, a BOM row has:
+
+- **Parent item.** The assembly or finished good the BOM belongs to.
+- **Component item.** The part, subassembly, or raw material consumed.
+- **Quantity per.** How many (or how much) of the component one unit of the parent needs.
+- **Unit of measure.** Each, inches, kilograms, liters, sheets.
+- **Reference designator** (electronics). Where on the assembly the part goes, e.g. R14, C22.
+- **Effective/revision date.** When this line becomes valid, tied to the BOM's revision.
+- **Scrap/yield factor** (optional). An allowance for known process loss, e.g. 2% scrap on a stamped bracket.
+
+A BOM is not a parts list scribbled on a drawing. A parts list tells you what's in the assembly; a BOM tells a planning system how much of each component to buy or build, at what level, and by when. That distinction is what makes MRP possible at all; see [What Is MRP?](/learn/what-is-mrp) for how the BOM feeds the calculation.
+
+## BOM types
+
+### Single-level vs. multi-level BOM
+
+A **single-level BOM** lists only the direct components of one parent, one layer deep. A **multi-level BOM** (also called an indented BOM) shows the full explosion: subassemblies and their own components, nested as far down as raw material. Most real products need multi-level BOMs because subassemblies (a wiring harness, a welded frame, a purchased gearbox with its own spec) are themselves built or sourced from other components.
+
+### Engineering BOM (EBOM) vs. manufacturing BOM (MBOM)
+
+- **EBOM** reflects how engineering designed the product, organized by function, often generated straight from CAD. It documents what the product *is*.
+- **MBOM** reflects how the shop actually builds it, organized by assembly sequence, including shop-only items like adhesives, fasteners not called out on the drawing, kitting bags, and process consumables. It documents what production *does*.
+
+The two rarely match line-for-line, and that's normal. The failure mode is not reconciling them: engineering releases a change to the EBOM and manufacturing keeps building off a stale MBOM. This is exactly the seam that [BOM revision control](/learn/bom-revision-control) exists to close.
+
+### Phantom BOM
+
+A **phantom item** is a subassembly that exists in the BOM structure for planning and documentation purposes but is never stocked or built as a standalone unit; it's consumed straight into its parent during the same operation. MRP "sees through" a phantom: it doesn't generate a separate work order or stocking transaction for it, but instead explodes its components directly into the parent's requirements. Phantoms are common for sub-builds like a fastener kit or a sub-harness that only ever gets built inline.
+
+### Configurable (variant) BOM
+
+A configurable BOM uses rules (options, parameters, or a configurator) to generate the correct BOM and routing per order, instead of maintaining a separate static BOM for every SKU variant. This matters most for make-to-order and engineer-to-order shops with high part-number proliferation: a fastener torque spec, a motor size, or a paint color shouldn't require a hand-cloned BOM every time a customer picks an option. A parametric configurator resolves the BOM (and routing, and price) from the rules at order entry instead.
+
+## Worked example: multi-level BOM for a bracket assembly
+
+Say you build a **Sensor Mount Assembly** (top-level parent, quantity 1 per order). Its full multi-level BOM, indented to show explosion depth:
+
+| Level | Item | Description | Qty per parent | UOM |
+|---|---|---|---|---|
+| 0 | SMA-100 | Sensor Mount Assembly | 1 | ea |
+| .1 | BRK-200 | Machined Bracket (subassembly) | 1 | ea |
+| ..1 | RM-AL6061 | 6061-T6 aluminum bar stock | 0.8 | lb |
+| ..2 | HW-M4X12 | M4 x 12mm socket cap screw | 4 | ea |
+| .2 | HRN-300 | Wire Harness (subassembly) | 1 | ea |
+| ..1 | WIRE-22AWG | 22 AWG hookup wire | 0.3 | ft |
+| ..2 | CONN-JST4 | 4-pin JST connector | 1 | ea |
+| .3 | SEN-400 | Purchased proximity sensor | 1 | ea |
+| .4 | LBL-500 | Serial number label | 1 | ea |
+
+To build 10 Sensor Mount Assemblies, the *gross* requirement for M4 screws is 10 × 1 × 4 = 40; quantity per multiplies at every level of the explosion. This is the mechanic MRP automates for every level, every component, on every open demand simultaneously. If you want to see the full gross-to-net math including on-hand inventory, open orders, and lead-time offsetting, [What Is MRP?](/learn/what-is-mrp) works this exact bracket assembly through a complete MRP run.
+
+## Free BOM template: the columns to include
+
+You don't need software to start; you need the right columns. A usable BOM spreadsheet template includes:
+
+1. **Parent item number and revision**
+2. **Level** (0 for top, .1/.2 for direct children, ..1 for grandchildren)
+3. **Component item number**
+4. **Component description**
+5. **Quantity per parent**
+6. **Unit of measure**
+7. **Reference designator** (if applicable)
+8. **Make or buy**
+9. **Scrap/yield %**
+10. **Effective date / revision**
+11. **Notes** (approved alternates, substitution rules)
+
+That structure works fine in a spreadsheet for a handful of low-complexity products. It breaks down once you have real revision history, multiple effective BOMs in flight for different customer orders, or parent-child relationships more than three or four levels deep. Spreadsheets don't enforce referential integrity, so a renamed component silently orphans every BOM that referenced it. That's the point at which most shops move the BOM into their ERP/MRP system rather than a shared file.
+
+## How BOM structure is stored (and why it matters)
+
+Under the hood, a multi-level BOM is a directed graph: each component row points to a parent, and a parent can itself be a component somewhere else. Getting this right in a relational database (recursive queries to explode or implode a structure arbitrarily deep, without recomputing the whole tree on every read) is a real engineering problem, not just a data-entry one. We wrote up how Carbon models this directly in Postgres, including the recursive CTEs behind BOM explosion, in [How we model multi-level BOMs in Postgres](/learn/modeling-multi-level-boms-in-postgres), useful reading if you're evaluating whether a system's BOM engine will hold up past a few hundred SKUs.
+
+## How Carbon handles BOMs
+
+Carbon treats the BOM as a first-class, versioned object on the same Postgres data model as inventory, purchasing, work orders, and cost, not a document bolted onto the side of the ERP. Concretely:
+
+- **Multi-level BOMs with full revision history.** Every BOM change is tracked; production always builds against the BOM revision that was effective when the order was released, and engineering can release a new revision without silently changing what's already in progress. See [BOM revision control](/learn/bom-revision-control) for how effective-dated revisions and ECOs work together.
+- **One BOM feeds MRP, costing, and the traveler.** Because ERP, MRP, MES, and QMS share one data model, the same BOM that MRP explodes for purchasing also drives job costing (actual vs. standard cost per component) and appears on the router/traveler the operator works from, with no separate BOM export into a planning tool or a paper traveler that drifts out of sync. See [MES vs. ERP vs. QMS](/learn/mes-vs-erp-vs-qms) for how those systems divide the work.
+- **Parametric configurator for variant BOMs.** For configured products, Carbon resolves the BOM, routing, and price from a rule set at order entry instead of requiring a cloned static BOM per variant.
+- **Every BOM table reachable over API.** Because Carbon is API-first (rest.carbon.ms) and ships a hosted MCP server, you can pull, diff, or bulk-update BOM structures programmatically (sync from CAD, validate against a PLM system, or hand a live BOM to an AI agent) instead of being limited to a UI export. Read more at [API-first ERP](/learn/api-first-erp).
+- **Open source.** The full BOM data model is in the public repo (github.com/crbnos/carbon), so you can inspect exactly how structure, revisions, and effective dates are modeled before you commit to it.
+
+## Frequently asked questions
+
+### What is a bill of materials in simple terms?
+
+A bill of materials is the complete, structured list of every part and quantity needed to build one unit of a product: the input a planning system uses to know what to buy, build, and in what amounts.
+
+### What's the difference between a BOM and a parts list?
+
+A parts list enumerates what's in an assembly. A BOM adds the structure a planning system needs to act on it: quantity per, unit of measure, level in the assembly hierarchy, and effective revision.
+
+### What is a phantom BOM used for?
+
+A phantom BOM is a subassembly that's consumed directly into its parent during the same build step rather than stocked separately. MRP explodes through it to the components below instead of planning a separate work order for it.
+
+### Do I need software to manage a BOM, or is a spreadsheet enough?
+
+A spreadsheet works for simple, low-revision products. Once you have multi-level structures, frequent engineering changes, or need the BOM to drive purchasing and costing automatically, most shops move to an ERP/MRP system because spreadsheets don't enforce revision integrity or connect to downstream planning.
+
+### What's the difference between EBOM and MBOM?
+
+The EBOM reflects how engineering designed the product, typically generated from CAD. The MBOM reflects how the shop actually builds it, including shop-only items like fasteners, adhesives, and consumables not shown on the drawing.
+
+## Get your BOMs under control
+
+If your BOMs live in spreadsheets that drift from what's actually being built, it's worth seeing what a versioned, multi-level BOM engine connected directly to MRP, costing, and the shop floor looks like. [Try Carbon free for 30 days](/pricing) at https://app.carbon.ms, or browse the BOM data model yourself on [GitHub](https://github.com/crbnos/carbon).

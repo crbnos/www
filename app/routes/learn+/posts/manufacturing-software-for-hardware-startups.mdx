@@ -1,0 +1,94 @@
+---
+title: "Manufacturing software for hardware startups"
+publishedAt: "2026-06-30"
+summary: "What hardware startups need from manufacturing software: BOM, NPI, supplier management, traceability, and a fast, API-first setup."
+tag: "Industry guides"
+author: "chase"
+---
+
+Manufacturing software for hardware startups has to solve a problem that neither spreadsheets nor legacy ERP were built for: a product that changes weekly during NPI, a BOM that might be three levels deep one month and fifteen the next, and a small team that can't spend a quarter on implementation before shipping the first hundred units. Get this wrong and you either stay in spreadsheets past the point they can hold together, or you buy enterprise ERP that assumes a stable product and a dedicated ops headcount you don't have yet. This guide covers what a hardware startup needs at each stage, why the two common defaults both fail, and how to think about staged adoption.
+
+## What a hardware startup needs, stage by stage
+
+The requirements aren't static; they change as a company moves from prototype to volume production, and the right tool has to hold up at every stage without a rebuild in between.
+
+- **A real, version-controlled BOM.** A structured, multi-level bill of materials with revision history, not a spreadsheet copied and renamed "v3_final_FINAL", so an engineering change is traceable and doesn't silently break a build in progress. See [What Is a Bill of Materials?](/learn/what-is-a-bill-of-materials) and [BOM revision control without breaking production](/learn/bom-revision-control).
+- **NPI (new product introduction) support.** Tracking engineering builds, DVT/EVT/PVT stages, and the gap between an as-designed BOM and what got built, because early builds rarely match the CAD exactly, and someone needs a record of what changed and why.
+- **CAD-to-BOM sync.** Most hardware teams design in Onshape, SolidWorks, or Fusion; manually re-entering a BOM every revision is a guaranteed source of build errors. See [From CAD to BOM: Onshape → ERP sync](/learn/cad-to-bom-onshape-erp-sync).
+- **Supplier and purchasing management** that handles the reality of early-stage sourcing: long lead times on castings and custom parts, minimum order quantities that don't match your volume yet, and multiple quotes per part while you qualify vendors.
+- **Traceability from day one**, even before it's legally required. If a batch of parts fails, you need to know which lot, which supplier, and which build it went into; waiting until a customer or a regulator demands it is too late to retrofit.
+- **Fast setup and low overhead.** A 10-20 person startup can't dedicate a full-time systems administrator to configuring ERP. Setup needs to be measured in days or weeks, not quarters.
+- **A real API.** Hardware startups increasingly want to connect a quoting form, a support tool, or an internal dashboard to production data, and eventually an AI agent that can answer "how many units can we build this week" without a human digging through three systems.
+
+## Why spreadsheets fail first
+
+Spreadsheets are the honest starting point for every hardware company; they're flexible and free, and for a single prototype BOM they work fine. They fail predictably once a few things happen at once: the BOM grows past one level of sub-assemblies, more than one person needs to edit it concurrently, or you need to answer "what's our actual build cost" instead of "what's our BOM cost" (the two diverge fast once scrap, rework, and labor enter the picture). At that point a spreadsheet becomes a set of conflicting copies that nobody fully trusts, usually discovered during a customer audit or a failed build, which is the worst possible time to find out.
+
+## Why legacy ERP fails next
+
+The second failure mode is choosing legacy ERP too early, or with the wrong expectations. SAP Business One, NetSuite, and similar systems are built around the assumption of a relatively stable product and a company big enough to staff an implementation. For a startup still iterating on hardware weekly, that mismatch shows up as:
+
+- **Implementation timelines measured in months**, during which the product itself may go through another full revision.
+- **Rigid change control** designed for a company that changes a BOM a few times a year, not weekly during EVT/DVT.
+- **Sales-gated pricing and multi-year contracts**, which is a hard ask for a company that doesn't yet know its own headcount trajectory. See [GROW with SAP vs. actually growing: ERP for hardware startups](/learn/grow-with-sap-for-hardware-startups) for a deeper look at this specific mismatch.
+- **Consultant-dependent configuration**, which burns runway a startup would rather spend on engineering.
+
+The honest conclusion: legacy ERP is early rather than wrong. Most of these systems make more sense once a product and its BOM have stabilized in production, the stage most hardware startups aren't in yet when they first go looking for "manufacturing software."
+
+## Staged adoption: what to run at each phase
+
+| Stage | Typical need | Reasonable tool |
+|---|---|---|
+| Prototype / EVT | Single BOM, informal builds, few suppliers | Spreadsheet or lightweight PLM, acceptable short-term |
+| DVT / PVT | Multi-level BOM, engineering change tracking, real supplier quotes | A system with version-controlled BOM and basic purchasing (this is where spreadsheets typically break) |
+| Early production (first 100s of units) | NPI-to-production BOM reconciliation, lot traceability, real job/build costing | Full ERP/MRP with native traceability, ideally API-accessible |
+| Scaling production | Multi-site or contract manufacturer coordination, quality records, supplier scorecards | Same system as above, now integrated with quoting, CRM, or AI tooling via API |
+
+The mistake to avoid is picking a tool that's right for one stage and wrong for the next, then facing a painful migration during a production ramp, the worst possible time to be reconciling two systems' worth of BOM history. That argues for choosing a system early that can grow with production volume without a re-platform, even if you don't use its deeper MES or QMS capabilities on day one.
+
+## The honest vendor landscape
+
+**Airtable / spreadsheets** are the default starting point and are fine for a single prototype. They have no real inventory, purchasing, or traceability model, and every hardware company eventually outgrows them; the only question is whether that happens before or after a costly build mistake.
+
+**Arena / PLM-first tools** (now part of PTC) are strong on document and revision control for engineering, which matters a lot during NPI. They're PLM tools first, though: inventory, purchasing, and production execution typically need a separate ERP connected alongside, which reintroduces the sync problem once you're building at volume.
+
+**Katana** is a popular, affordably priced cloud MRP aimed at small manufacturers, with a clean UI and reasonable BOM and inventory handling. It's a fine fit for simple, relatively stable BOMs; deeper NPI tracking, native quality, and complex multi-level assemblies with configuration options are thinner.
+
+**NetSuite / SAP Business One** offer real depth once a company has stabilized, but carry the implementation timeline and sales-gated pricing described above, usually a mismatch for a startup still in NPI.
+
+**Carbon** is built for this handoff: API-first, source-available ERP + MRP + MES + QMS on one Postgres data model, with a parametric configurator that can resolve BOM, routing, and price per order, useful for hardware products with option variants. Because quoting, purchasing, inventory, and traceability share one data model, a startup can start using it during DVT/PVT for BOM and purchasing, then grow into full MES and QMS at volume without migrating data between systems. Setup is fast (typical implementations run about a month), pricing is published ($40/user/month Starter, $100/user/month Business), and every table is reachable over a REST API and hosted MCP server, useful for a startup that wants to connect Onshape, a support tool, or an internal dashboard without waiting on a vendor's roadmap.
+
+## How Carbon fits a hardware startup specifically
+
+- **Version-controlled, multi-level BOM** with engineering change tracking, so an NPI revision doesn't silently break a build already in progress. See [BOM revision control](/learn/bom-revision-control).
+- **CAD sync support** for connecting a BOM directly to the source design file, cutting down on manual re-entry errors during frequent EVT/DVT revisions.
+- **Supplier and purchasing management** built for real early-stage sourcing: multiple quotes per part, MOQ tracking, and lead-time visibility feeding directly into MRP.
+- **Lot and serial traceability from the first build**, so if something fails in the field, you can trace it back to a specific supplier lot without retrofitting a quality system under pressure.
+- **API-first and open source.** Every table is reachable over rest.carbon.ms and a hosted MCP server, and the full source is on GitHub, a fit for startups that want to automate reporting, connect internal tools, or eventually let an AI agent query build status directly. See [API-first ERP](/learn/api-first-erp).
+- **One system from prototype through scaled production.** A startup doesn't need to migrate off Carbon when it graduates from a handful of prototype builds to real production volume; the same data model and API carry forward, including a path to self-hosting or GovCloud deployment if the product moves into defense or regulated work. See [ERP/MES for space & defense startups](/learn/erp-mes-for-space-and-defense-startups) if that's your trajectory.
+
+## Frequently asked questions
+
+### What software should a hardware startup use before it has real production volume?
+
+A lightweight, version-controlled BOM and purchasing system is usually enough before volume production; the goal is avoiding spreadsheet chaos, not adopting full MES/QMS capability you won't use yet. What matters most is choosing a system that can grow into full production use without a migration later.
+
+### When should a hardware startup move off spreadsheets?
+
+Typically once the BOM grows past a single level of sub-assemblies, more than one person needs to edit it, or you need real purchasing and lead-time tracking against actual supplier quotes, usually somewhere around DVT or the first pilot production run.
+
+### Is legacy ERP like SAP or NetSuite ever right for a hardware startup?
+
+It can be, once the product and BOM have stabilized and the company has the headcount to support a real implementation. Adopting it during active NPI, when the BOM is still changing weekly, usually creates more friction than it solves.
+
+### How does Carbon handle a BOM that changes every week during development?
+
+Carbon tracks BOM revisions with full history, so each engineering change is recorded rather than overwriting the prior version silently. Combined with CAD sync, this keeps the as-built record accurate even during frequent early-stage iteration.
+
+### Does manufacturing software matter before I have a contract manufacturer?
+
+Yes. Even in-house prototype and pilot builds benefit from a real BOM, purchasing record, and lot traceability, both to avoid build mistakes and because a CM will eventually want clean BOM and supplier data handed off, not a spreadsheet history to reconstruct.
+
+## Try it during your next build
+
+If you're planning your next DVT or PVT run and want to see what a real, version-controlled BOM and purchasing system looks like against your own parts, [try Carbon free for 30 days](/pricing) at https://app.carbon.ms, or review the data model on [GitHub](https://github.com/crbnos/carbon) before you commit.

@@ -1,0 +1,150 @@
+---
+title: "What is MRP? Material requirements planning with a worked example"
+publishedAt: "2026-08-19"
+summary: "What is MRP? A plain-English explanation of material requirements planning, worked on a real multi-level BOM: gross to net, lead time, lot sizing."
+tag: "Manufacturing basics"
+author: "chase"
+---
+
+MRP (material requirements planning) is the calculation that turns a demand (a sales order, a forecast, a production schedule) into a time-phased plan of exactly what to buy and what to build, in what quantities, by what dates. It does this by exploding the bill of materials for every level of a product structure, netting out what you already have on hand or on order, and offsetting each requirement by lead time so the right material shows up when it's needed, not before and not after.
+
+Most articles on "what is MRP" stop at that definition. This one works the math on a real multi-level BOM, so you can see what an MRP engine computes and why a spreadsheet falls short the moment you have more than one level of structure.
+
+## The MRP inputs
+
+MRP needs four things to run:
+
+1. **The master production schedule (MPS):** what you're committed to building and by when, usually driven by sales orders and/or forecast.
+2. **The bill of materials (BOM):** the multi-level structure of what each parent item is made of. See [What Is a Bill of Materials?](/learn/what-is-a-bill-of-materials) for the structure itself.
+3. **Inventory records:** on-hand quantity, quantity already allocated, and open supply (purchase orders and work orders already in progress) for every item.
+4. **Item master data:** lead time, lot-sizing rule, and safety stock for every item.
+
+From those four inputs, MRP produces, for every item at every level of every BOM, the **planned order releases** (what to release, how much, and when) for both purchased and manufactured items.
+
+## The MRP logic, step by step
+
+For each item, level by level, starting at the top of the BOM and working down:
+
+1. **Gross requirements:** total demand for the item in each time period (from the MPS at the top level, or from planned/released parent orders at lower levels, multiplied by quantity-per).
+2. **Scheduled receipts:** quantity already on order (PO or work order) due to arrive in each period.
+3. **Projected on-hand:** running balance of prior on-hand + scheduled receipts − gross requirements.
+4. **Net requirements:** the shortfall in any period where projected on-hand would go negative (or below safety stock).
+5. **Planned order receipts:** net requirement rounded up to the lot-sizing rule (lot-for-lot, fixed order quantity, or min/max).
+6. **Planned order releases:** the planned order receipt pushed backward by the item's lead time. This is the "when do I actually need to hit the button" date.
+
+That's the whole engine. The concept is simple; doing it by hand across dozens of levels and hundreds of items is tedious, which is why it's automated.
+
+## Worked example: MRP on a multi-level BOM
+
+We'll use the **Sensor Mount Assembly (SMA-100)** BOM from [What Is a Bill of Materials?](/learn/what-is-a-bill-of-materials):
+
+| Level | Item | Qty per parent | Lead time | Lot rule |
+|---|---|---|---|---|
+| 0 | SMA-100 Sensor Mount Assembly | 1 | 1 week (assemble) | Lot-for-lot |
+| .1 | BRK-200 Machined Bracket | 1 | 2 weeks (machine) | Lot-for-lot |
+| ..2 | HW-M4X12 Socket cap screw | 4 | 1 week (buy) | Min order qty 200 |
+| .3 | SEN-400 Proximity sensor | 1 | 4 weeks (buy) | Lot-for-lot |
+
+**Demand:** a sales order requires **50 units of SMA-100 due in week 10**.
+
+### Level 0: SMA-100 (Sensor Mount Assembly)
+
+| | Week 6 | Week 7 | Week 8 | Week 9 | Week 10 |
+|---|---|---|---|---|---|
+| Gross requirement | | | | | 50 |
+| On-hand (start: 6) | | | | | |
+| Projected on-hand | 6 | 6 | 6 | 6 | -44 |
+| Net requirement | | | | | 44 |
+| Planned order receipt | | | | | 44 |
+| Planned order release | | | | 44 | |
+
+On-hand of 6 nets the gross requirement of 50 down to a **net requirement of 44**. Lot-for-lot means the planned order receipt equals net requirement exactly, with no rounding up. With a 1-week assembly lead time, the receipt in week 10 must be *released* in week 9. That release, 44 units of SMA-100, becomes the gross requirement driving every component below it.
+
+### Level 1: BRK-200 (Machined Bracket), qty-per = 1
+
+Gross requirement = 44 (parent release) × 1 = **44**, needed by week 9 (when the parent release happens, the bracket must be *in stock* by then, not just started).
+
+| | Week 5 | Week 6 | Week 7 | Week 8 | Week 9 |
+|---|---|---|---|---|---|
+| Gross requirement | | | | | 44 |
+| On-hand (start: 4) | | | | | |
+| Projected on-hand | 4 | 4 | 4 | 4 | -40 |
+| Net requirement | | | | | 40 |
+| Planned order receipt | | | | | 40 |
+| Planned order release | | | 40 | | |
+
+4 on hand nets to a requirement of 40. With a 2-week machining lead time, the order must be **released in week 7** to receive 40 brackets by week 9.
+
+### Level 2: HW-M4X12 (Socket cap screw), qty-per = 4
+
+Gross requirement = 40 (bracket release) × 4 = **160**, needed by week 7.
+
+| | Week 3 | Week 4 | Week 5 | Week 6 | Week 7 |
+|---|---|---|---|---|---|
+| Gross requirement | | | | | 160 |
+| On-hand (start: 30) | | | | | |
+| Projected on-hand | 30 | 30 | 30 | 30 | -130 |
+| Net requirement | | | | | 130 |
+| Planned order receipt (min 200) | | | | | 200 |
+| Planned order release | | | | 200 | |
+
+This is where **lot sizing** changes the answer: the net requirement is 130, but the screw's minimum order quantity is 200, so the planned receipt rounds up to 200, leaving 70 in projected on-hand carried forward for the next demand. With a 1-week buy lead time, the PO releases in week 6.
+
+### Level 1: SEN-400 (Proximity sensor), qty-per = 1
+
+Gross requirement = 44 × 1 = **44**, needed by week 9. On-hand is 0, so net requirement is 44, lot-for-lot receipt of 44. But the sensor has a **4-week purchase lead time**, so the PO must release in **week 5**, four weeks earlier than the bracket screws even though both support the same week-10 shipment. This is why lead-time offsetting matters: without it, you'd place every purchase order on the same day and find out four weeks later that the long-lead item is going to be late.
+
+### The planned order summary MRP produces
+
+| Item | Planned release | Release week | Receipt week |
+|---|---|---|---|
+| SMA-100 (assemble) | 44 | 9 | 10 |
+| BRK-200 (machine) | 40 | 7 | 9 |
+| SEN-400 (buy) | 44 | 5 | 9 |
+| HW-M4X12 (buy) | 200 | 6 | 7 |
+
+That table, generated for every item every time demand changes, is what MRP is. Change the sales order to 80 units, or push it two weeks earlier, and every one of those rows has to be recalculated across the entire structure. A spreadsheet cannot keep up once you have more than a handful of SKUs with real lead times. The arithmetic isn't the hard part; re-running it correctly, for everything, every time something changes, is.
+
+## MRP vs. a reorder point
+
+A simple reorder point ("buy more when stock drops below X") works for independent demand, items whose consumption doesn't depend on what else you're building, like shop supplies. MRP exists because most manufacturing demand is **dependent**: the bracket's screws are only needed because the bracket is needed, which is only needed because the assembly is needed. Reorder points ignore that dependency and tend to either overstock (safety margin at every level, compounding) or run dry right when a big order lands. See [Safety stock and reorder points](/learn/safety-stock-and-reorder-points) for when reorder-point logic is still the right tool, usually for MRO and low-value C-class items where the planning overhead of dependent demand isn't worth it.
+
+## MRP and purchasing for make-to-order shops
+
+For make-to-order and engineer-to-order manufacturers, MRP is the difference between a purchasing team reacting to shortages and one buying against a plan that already accounts for every open sales order's real due date. [MRP-driven purchasing for make-to-order](/learn/mrp-driven-purchasing-make-to-order) goes deeper on running MRP against firm customer orders rather than a forecast.
+
+## How Carbon runs MRP
+
+Carbon runs the full gross-to-net, lead-time-offset, lot-sized MRP calculation described above natively, against the same Postgres data model as inventory, purchasing, sales orders, and job costing:
+
+- **Same-day MRP regeneration.** Because ERP, MRP, MES, and QMS share one data model rather than syncing between separate systems, a sales order change or an inventory receipt is visible to the next MRP run immediately, not after an overnight batch or a nightly integration sync.
+- **Full multi-level explosion with lot-sizing rules per item.** Lot-for-lot, min/max, and fixed order quantity are configured per item, exactly as shown in the worked example above.
+- **Planned orders convert with one click** into purchase orders or work orders, pre-populated with supplier, quantity, and need-by date. The buyer reviews the plan rather than re-deriving it.
+- **API access to every planning table.** Because Carbon is API-first (rest.carbon.ms), planned orders, net requirements, and lead times are queryable programmatically, useful for shops that want to feed MRP output into a custom dashboard or an AI agent via Carbon's hosted MCP server. See [API-first ERP](/learn/api-first-erp).
+- **Open source.** The MRP calculation itself is in the public repo (github.com/crbnos/carbon) if you want to verify exactly how netting, lot sizing, and lead-time offset are implemented before trusting it with your plan.
+
+## Frequently asked questions
+
+### What does MRP stand for and what does it calculate?
+
+MRP stands for material requirements planning. It calculates what to buy and build, in what quantities, and by what dates, by exploding a bill of materials against demand, netting out on-hand and on-order inventory, and offsetting each requirement by lead time.
+
+### What is the MRP calculation formula?
+
+Net requirement = gross requirement − (on-hand + scheduled receipts), calculated period by period. MRP then rounds the net requirement to the item's lot-sizing rule to become a planned order receipt, and offsets that receipt backward by lead time to set the planned order release date.
+
+### What's the difference between MRP and ERP?
+
+MRP is the planning calculation itself. ERP is the broader system of record (sales orders, inventory, purchasing, accounting) that MRP draws its inputs from and writes its outputs back into. See [MES vs. ERP vs. QMS](/learn/mes-vs-erp-vs-qms) for how MRP fits alongside the other core systems.
+
+### Why does lot sizing matter in MRP?
+
+Lot sizing rounds a net requirement up to a practical order quantity: a supplier minimum, a standard pack size, or a fixed batch. Skipping this step produces technically correct but unusable orders, like a purchase order for 37 screws when the supplier sells in boxes of 100.
+
+### Can I run MRP in a spreadsheet?
+
+Yes, for a small number of items with shallow BOM structure and stable lead times. It breaks down once you have multi-level BOMs, frequent demand changes, or dozens of items with different lot-sizing rules, because every change requires re-deriving the entire netting and offset calculation by hand.
+
+## Run a real MRP plan on your own BOMs
+
+If you're planning material in a spreadsheet, or waiting on an overnight MRP batch from a legacy ERP, see the calculation run live against your actual bills of material. [Try Carbon free for 30 days](/pricing) at https://app.carbon.ms, or review the planning engine's source on [GitHub](https://github.com/crbnos/carbon).

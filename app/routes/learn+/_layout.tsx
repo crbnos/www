@@ -17,7 +17,7 @@ export default function Layout() {
 						</AnimatedShinyText>
 					</div>
 				</Link>
-				<div className="w-form-sm md:w-form-md lg:w-form-lg py-36">
+				<div className="w-full max-w-form-sm md:max-w-form-md lg:max-w-form-lg py-36">
 					<Outlet />
 				</div>
 			</div>

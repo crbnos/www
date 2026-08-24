@@ -1,0 +1,113 @@
+---
+title: "Syncing Onshape with your ERP: from CAD to BOM"
+publishedAt: "2026-07-10"
+summary: "How to sync Onshape with your ERP so the design BOM and manufacturing BOM stay aligned through revisions, without manual re-entry or spreadsheet drift."
+tag: "How-to"
+author: "chase"
+---
+
+The handoff from CAD to a bill of materials is where most manufacturing data goes stale. An engineer revises a part in Onshape, the part number and revision update in the CAD system, and unless something actively propagates that change, the ERP's BOM keeps quoting, planning, and buying against the old revision. Syncing Onshape with your ERP means treating the CAD BOM (EBOM) and the manufacturing BOM (MBOM) as two views of the same structure, kept consistent by an integration rather than by someone remembering to update a spreadsheet.
+
+This is a practical guide to that sync: what has to move between the two systems, where EBOM and MBOM diverge on purpose, how revisions and configurations complicate the handoff, and what a real integration looks like versus manual export/import.
+
+## Why CAD-to-BOM breaks in practice
+
+A CAD system and an ERP solve different problems, and that's exactly why they disagree by default:
+
+- **Onshape (or any CAD tool) owns geometry and the engineering structure**: what parts exist, how they're constrained, what revision they're on, and which configuration of a parametric part is active.
+- **The ERP owns the manufacturing structure**: what you build and buy, in what sequence, with what routing, using which approved supplier and which inventory location.
+
+Those two structures are related but not identical. A single CAD assembly might explode into a manufacturing BOM that adds shop consumables (adhesive, fasteners bought in bulk, not modeled in CAD), collapses some CAD sub-assemblies into one purchased item, or splits one CAD part into multiple manufacturing operations. When engineering and manufacturing data live in separate systems with no sync, three failure modes show up almost immediately:
+
+1. **Revision drift.** Engineering releases Rev C. Manufacturing is still quoting and buying against Rev B because nobody pushed the update, or pushed it into only one of the two systems.
+2. **Part number mismatches.** CAD assigns its own part numbering (or none at all, if the team is using Onshape's document/version IDs informally); the ERP has a separate item master. Without a mapping, someone has to manually reconcile which CAD part is which ERP item, every time.
+3. **Configuration ambiguity.** A parametric CAD part (say, a bracket that's a family of 12 length variants) needs to resolve to a specific ERP item and BOM before it can be quoted or planned. If that resolution is manual, it's also inconsistent: two people mapping the same configuration to two different item numbers.
+
+None of these are exotic edge cases. They're the default behavior of two unconnected systems, and they get worse, not better, as revision count and product complexity grow.
+
+## EBOM vs. MBOM: what needs to sync
+
+Before building or buying an integration, it helps to be precise about what "sync" means, because EBOM and MBOM are supposed to differ in places.
+
+| | EBOM (engineering BOM) | MBOM (manufacturing BOM) |
+|---|---|---|
+| Source of truth | CAD system (Onshape) | ERP |
+| Structure reflects | How the product is designed | How the product is built and bought |
+| Includes | Every modeled part and sub-assembly | Modeled parts + shop consumables, packaging, phantom assemblies |
+| Revision driver | Engineering change (design intent) | Engineering change *and* manufacturing process change (new supplier, new routing) |
+| Granularity | Can be finer (a weldment shown as multiple bodies) | Often coarser (the weldment is one purchased or fabricated item) |
+
+The sync that matters isn't "make the MBOM identical to the EBOM." It's making sure every EBOM change that affects what's built or bought is reflected in the MBOM within a known, short time, with a clear trail of what changed and why. A good integration keeps those structures related and traceable without forcing them to be the same shape.
+
+## What a real Onshape-to-ERP integration does
+
+At minimum, an integration needs to move four things reliably:
+
+1. **Part identity mapping.** Every Onshape part and assembly (identified by its document, workspace, and part ID) maps to exactly one ERP item number. This mapping has to survive renames in either system: match on a stable ID, not on part name or description text, which people edit.
+2. **Revision state.** When a part's revision changes in Onshape (a new released version), the ERP needs to know: is this part actively in use on open work orders or quotes, and if so, does the revision change require an engineering change order before it takes effect on the shop floor? See [BOM revision control without breaking production](/learn/bom-revision-control) for how ECOs should gate a revision bump from reaching active jobs.
+3. **Structure (parent-child quantities).** The assembly tree (what's a child of what, and how many) needs to flow from CAD into the ERP's BOM, at the level of granularity the ERP wants (which, per the table above, may be coarser than CAD).
+4. **Configuration resolution.** If a part is parametric in Onshape, the integration needs to resolve a specific configuration (a specific length, a specific hole pattern) to a specific ERP item before that item can carry cost, lead time, and routing data. This is the same resolution problem a [parametric configurator](/learn/what-is-a-digital-thread) solves on the sales/quoting side: CAD-to-ERP sync and configure-price-quote are the same underlying problem viewed from opposite ends of the order.
+
+### A worked example
+
+Say an engineer in Onshape releases Rev C of a machined bracket (BRK-200), changing a hole diameter from 4mm to 5mm to accommodate a new fastener. A real sync does this, step by step:
+
+1. Onshape fires a release event (via its REST API or webhook) carrying the part ID, the new revision, and the updated model/STEP file.
+2. The integration matches BRK-200's Onshape part ID to the ERP item BRK-200, with no manual lookup, because the mapping was established once, when the item was first created.
+3. The ERP checks whether BRK-200 is used on any open work orders or unshipped quotes at the old revision. If it is, the revision change is held pending an ECO rather than silently overwriting the active BOM, exactly the ECO gate described in [BOM revision control](/learn/bom-revision-control).
+4. Once approved, the ERP's BOM record for BRK-200 updates: new revision tag, new STEP model attached for shop-floor reference, and (if the hole change affects the routing, say a different drill bit) a routing update is flagged for review rather than assumed.
+5. Purchasing and planning now see the current revision the next time MRP runs, because the BOM and the planning engine share the same underlying data rather than a nightly export.
+
+The failure mode this prevents: a machinist pulling up a work instruction for BRK-200 and seeing the Rev B drawing with the 4mm hole, three weeks after engineering moved on, because nobody pushed the update past the CAD system's own PDM.
+
+## Manual export/import vs. a real integration
+
+Most shops start with manual CAD-to-ERP handoff and hit a ceiling. It's worth being honest about where that ceiling is.
+
+| | Manual export/import | API-based sync |
+|---|---|---|
+| Trigger | Someone remembers to export | Automatic on release event |
+| Revision awareness | None; spreadsheet reflects whatever was exported last | Tracked; can gate against active work orders |
+| Part number mapping | Manual, error-prone at scale | Stable ID mapping, maintained once |
+| STEP/3D model access on the shop floor | Separate file, often outdated | Model attached to the ERP item, viewable at the work center |
+| Effort to maintain | Grows linearly with part count and revision frequency | Roughly flat once integration is built |
+| Failure visibility | Silent; nobody knows the BOM is stale until a build fails | Explicit; held pending ECO, or flagged on mismatch |
+
+The manual approach isn't wrong for a five-part product with revisions twice a year. It becomes the wrong approach exactly when revision frequency and part count both grow, which is most of the time a shop is trying to scale.
+
+## How Carbon syncs Onshape with your BOM
+
+Carbon integrates directly with Onshape so the CAD structure and the manufacturing BOM stay connected without a manual export step:
+
+- **Native Onshape integration.** Carbon pulls part identity, revision, and structure directly from Onshape via its API, using the same stable part IDs described above, with no re-keying part numbers by hand.
+- **Native 3D/STEP viewer.** Because Carbon stores the CAD-derived model alongside the ERP item, the shop floor views the current STEP model directly on the work order or work instruction (the same place operators already look for routing and quality data) rather than in a separate PDM viewer that may not be on the current revision.
+- **Revision-aware BOMs on one data model.** Because BOM, work orders, purchasing, and inventory all live in the same Postgres data model rather than syncing between separate ERP and MES tools, a revision update is visible to planning and purchasing the moment it's approved. See [What is a digital thread?](/learn/what-is-a-digital-thread) for how that single-data-model approach extends from CAD through as-built records.
+- **BOM structure with types.** Carbon's BOM model supports the EBOM/MBOM distinction directly: phantom items, purchased sub-assemblies, and manufactured items are typed explicitly rather than forced into a single flat structure. See [What is a bill of materials?](/learn/what-is-a-bill-of-materials) for the underlying BOM types.
+- **API and MCP access.** Because Carbon is API-first (rest.carbon.ms), a custom Onshape webhook handler, a CI pipeline, or an AI agent via Carbon's hosted MCP server can all read and write BOM structure programmatically, rather than being limited to whatever sync a vendor pre-built.
+- **Open source.** The BOM and integration logic is in the public repo (github.com/crbnos/carbon), so you can verify exactly how revision matching and structure mapping work before depending on them for production releases.
+
+## Frequently asked questions
+
+### What's the difference between an EBOM and an MBOM?
+
+An EBOM (engineering BOM) reflects how a product is designed, sourced from CAD. An MBOM (manufacturing BOM) reflects how it's built and bought, and can be coarser or add items (consumables, packaging) that never appear in CAD. A good integration keeps them related and traceable, not identical.
+
+### Does Onshape have a native ERP integration?
+
+Onshape exposes a REST API and webhooks that third-party systems, including ERPs, use to pull part identity, revision, and structure data. Whether that produces a real sync depends on what the ERP does with that data: matching stable part IDs, gating revisions behind an ECO, and updating routing where relevant, rather than a one-time export.
+
+### How do configurable (parametric) Onshape parts map to ERP items?
+
+Each specific configuration (a specific length, hole pattern, or variant) needs to resolve to one ERP item before it can carry lead time, cost, and routing. This is the same resolution a parametric configurator performs on the sales side, and it should happen automatically rather than through manual mapping for every new configuration.
+
+### What happens if a CAD revision changes a part that's on an open work order?
+
+A well-built sync holds the revision update behind an engineering change order rather than silently overwriting the active BOM, so a machinist building to the old revision isn't handed a mid-build change without review. See [BOM revision control without breaking production](/learn/bom-revision-control) for the ECO gate pattern.
+
+### Can I sync Onshape with a spreadsheet-based BOM process?
+
+You can export Onshape data manually into a spreadsheet, but it won't stay synced: there's no mechanism to catch a revision change automatically, and part number mapping has to be redone by hand each time. It works for very low part counts and low revision frequency; it doesn't scale past that.
+
+## See the CAD-to-BOM sync running on your own parts
+
+If your BOM currently lives one export behind your CAD system, it's worth seeing what a live Onshape integration looks like against your own assemblies. [Try Carbon free for 30 days](/pricing) at https://app.carbon.ms, or review the integration and BOM source on [GitHub](https://github.com/crbnos/carbon).

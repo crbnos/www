@@ -1,0 +1,85 @@
+---
+title: "Double-entry inventory explained for manufacturers"
+publishedAt: "2026-08-02"
+summary: "What double-entry inventory means, why treating locations as accounts gives accurate valuation, and how it differs from a simple stock ledger."
+tag: "Odoo"
+author: "chase"
+---
+
+Double-entry inventory means every stock movement is recorded as a transfer between two locations, a source and a destination, the same way double-entry bookkeeping records every financial transaction as a debit and a credit that must balance. Instead of a single stock-on-hand number that gets incremented or decremented, every unit of inventory always has a location, and every change in that location is a transaction with two sides: where it came from and where it went.
+
+That modeling choice is bigger than it looks. It separates an inventory system that can tell you what happened from one that can only tell you what currently exists. For a manufacturer trying to get accurate costing, traceability, and financial valuation out of the same data, that separation decides whether the numbers can be trusted.
+
+## The problem with single-entry stock tracking
+
+The simplest inventory model is a single number per SKU: quantity on hand. A receipt adds to it, a shipment subtracts from it, an adjustment corrects it when a cycle count disagrees. This works for a basic retail stockroom, but it breaks down fast in manufacturing, for a specific reason: it has no memory of *where* stock is or *why* it moved, only what the current total is.
+
+That missing history causes real problems:
+
+- **You can't tell "in transit" from "gone."** If a part left the warehouse for the shop floor, single-entry tracking decrements the warehouse count and keeps no record that the part now exists somewhere else, in a specific quantity, at a specific point in the process.
+- **Valuation gets murky.** If raw material, WIP, and finished goods aren't distinct locations with their own balances, you have to reconstruct the accounting value of "inventory" on your balance sheet instead of reading it directly from the transaction history.
+- **Reconciliation turns into investigation.** When a cycle count disagrees with the system, single-entry tracking gives you a discrepancy and no trail. You reconstruct what happened from other records, because the inventory ledger never recorded a "from" and a "to."
+- **Scrap, rework, and consumption look identical.** A quantity decrease could mean the material was consumed into a work order, scrapped, or miscounted. A single running total cannot tell those apart after the fact.
+
+## How double-entry inventory fixes this
+
+Double-entry inventory solves all four problems with one structural change: **every location, including "nowhere" states like scrap, customer, and vendor, is an account, and every stock movement is a transaction between two accounts that must balance.**
+
+Concretely:
+
+- **Receiving** a purchase order is a transfer from the *vendor* location to *raw material inventory*.
+- **Issuing material to a work order** is a transfer from *raw material inventory* to *WIP* (work in process).
+- **Completing a production order** is a transfer from *WIP* to *finished goods*, often net of scrap.
+- **Scrapping a part** is a transfer from wherever it was to a *scrap* location, recorded as a reason-coded transaction rather than a silent decrement.
+- **Shipping to a customer** is a transfer from *finished goods* to the *customer* location.
+
+Because every movement has both a source and a destination, and because the total quantity of a part across all locations must reconcile at any point in time, the ledger is self-checking in a way a single running total never is. When something doesn't balance, that is a signal something is wrong, flagged for you rather than a mystery you investigate from scratch.
+
+### A worked example
+
+Say a shop receives 100 units of a raw casting, issues 40 into a work order, scraps 2 during machining, and completes 38 finished units to stock. In a double-entry model, that's four transactions, each with a source and destination:
+
+| Transaction | From | To | Qty |
+|---|---|---|---|
+| Receipt | Vendor | Raw material | 100 |
+| Issue to WO | Raw material | WIP | 40 |
+| Scrap | WIP | Scrap | 2 |
+| Completion | WIP | Finished goods | 38 |
+
+At any moment, you can sum every account's transactions and get an exact balance: raw material shows 60 on hand, WIP shows 0 (40 in, 40 out), scrap shows 2, and finished goods shows 38. Every number comes directly from the transaction log. Nobody manually decremented a total, and nobody reverse-engineered a figure from a mismatch.
+
+This is also why double-entry inventory gives you accurate valuation almost for free. Each transaction can carry a cost (the casting's standard or actual cost, labor and overhead applied during the WIP stage), so the value of inventory in any location at any time is the sum of the transactions that landed there. It applies the same discipline that makes double-entry bookkeeping produce a trustworthy balance sheet, now to physical stock instead of dollars.
+
+## Why manufacturers need this
+
+Retailers can often use simpler stock tracking because their inventory doesn't transform. A unit that comes in is (mostly) the unit that ships out. Manufacturing inventory transforms constantly: raw material becomes WIP becomes a finished assembly, often through multiple operations, with scrap and rework along the way. Without a location-and-transaction model, basic questions get hard to answer with precision: How much is tied up in WIP right now? What did this completed unit cost, given the material and labor that went into it? Where is a given lot at this moment?
+
+Double-entry inventory also underpins reliable [lot and serial traceability](/learn/what-is-a-router-traveler) and clean [cycle counting](/learn/cycle-counting-that-doesnt-stop-production): because every movement is a discrete, reason-coded transaction, you can trace a lot's full path forward and backward through every location it touched, and you can reconcile a physical count against an exact expected balance rather than a vague running total. It also makes [MRP](/learn/what-is-mrp) trustworthy: material requirements planning is only as good as the on-hand and in-transit quantities it plans against, and those quantities are only as good as the ledger that produced them.
+
+## Where the idea came from
+
+Odoo popularized the "SERP" (single-entry vs. double-entry) framing in the ERP world and deserves real credit for making the concept legible to a broad audience. It is a useful way to explain why a good inventory system behaves the way it does. Double-entry inventory is a data-modeling pattern, not a proprietary feature or a specific product's licensing tier. Any system built around locations-as-accounts and moves-as-transactions gets the same properties: self-checking balances, accurate valuation, and a full audit trail.
+
+Carbon models inventory this way natively, as part of a single Postgres data model shared across ERP, MRP, MES, and QMS. The same transaction log that drives inventory valuation also drives traceability and quality holds, rather than three separate systems maintaining three separate views of "what happened to this part." Every transaction is reachable over Carbon's REST API and MCP server, so you can query it programmatically. Pulling a real-time WIP balance, a lot's full movement history, or a valuation snapshot doesn't require a special report; it's the same data an agent or a custom dashboard reads directly. If you're comparing how different manufacturing platforms handle inventory movement and valuation, the [Carbon vs. Odoo comparison](/compare/odoo) covers the wider platform differences, including how MES and QMS sit on the same model as inventory in Carbon versus as separate Enterprise apps in Odoo.
+
+## Frequently asked questions
+
+### Is double-entry inventory the same as double-entry bookkeeping?
+
+They share the same underlying idea, that every transaction has two balanced sides, applied to different domains. Double-entry bookkeeping tracks money moving between financial accounts (debits and credits); double-entry inventory tracks physical quantity moving between locations (source and destination). Well-designed systems often connect the two, so a physical stock move can also generate the corresponding accounting entry.
+
+### Does double-entry inventory make transactions slower to record?
+
+Not meaningfully in a well-built system. The "second side" of the transaction is usually implicit in the action itself (receiving from a vendor, issuing to a work order) rather than something a user enters twice. The benefit shows up later, in trustworthy reporting and reconciliation, rather than as extra data-entry burden upfront.
+
+### What's the difference between double-entry inventory and a simple audit log?
+
+An audit log records that something changed. Double-entry inventory requires every change to be a balanced transfer between two locations, which makes the resulting balances self-checking. You can sum the ledger and know it's internally consistent, rather than only knowing that events landed somewhere.
+
+### Can double-entry inventory catch cycle count errors before they happen?
+
+It doesn't prevent physical miscounts, but it makes them far easier to catch and diagnose, because the system balance you check against comes from a complete, reason-coded transaction history rather than a single running total nobody can fully explain.
+
+## See it in a real system
+
+Carbon's inventory, MES, and QMS run on this transaction model as part of one Postgres data model. You can see how a part moves from receipt to finished goods, with full costing and traceability, by [trying Carbon free for 30 days](/pricing) or exploring the schema directly on [GitHub](https://github.com/crbnos/carbon).

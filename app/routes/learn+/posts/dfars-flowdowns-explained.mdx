@@ -1,0 +1,100 @@
+---
+title: "DFARS flowdowns explained for small defense manufacturers"
+publishedAt: "2026-07-21"
+summary: "DFARS compliance for manufacturers explained: what 252.204-7012 flowdown clauses require, what counts as CUI, and how NIST 800-171 and CMMC fit together."
+tag: "Compliance"
+author: "chase"
+---
+
+A DFARS flowdown clause is a contractual requirement that your prime contractor is obligated to pass down to you, its subcontractor, because the government imposed it on the prime and the prime can't satisfy it without your cooperation. For most small manufacturers in the defense supply chain, the flowdown that changes how you run your shop is DFARS 252.204-7012 (safeguarding covered defense information and reporting cyber incidents), and it arrives, almost always, as a paragraph buried in a purchase order with no explanation of what it means for your machines, your ERP, or your file server.
+
+This is a gap in most manufacturing-software content: dfars compliance manufacturer searches mostly return legal explainers written for contracts lawyers. The shop owner who got a PO with a flowdown clause needs to know, concretely, what to do about their systems.
+
+## What DFARS flowdowns are
+
+The Defense Federal Acquisition Regulation Supplement (DFARS) is the Department of Defense's addendum to the Federal Acquisition Regulation. When DoD awards a prime contract, certain DFARS clauses apply to every tier of subcontractor that touches the work, not only the prime. DFARS requires the prime to "flow down" those clauses into its subcontracts, and each subcontractor to flow them down again to its own suppliers. You don't need to be a prime contractor, or even know who the end customer is, to be bound by DFARS. You need a PO that references it.
+
+The clause that matters most for manufacturing systems is **DFARS 252.204-7012**, "Safeguarding Covered Defense Information and Cyber Incident Reporting." It requires two things:
+
+1. **Implement NIST SP 800-171** on any information system that processes, stores, or transmits covered defense information (CDI).
+2. **Report cyber incidents** to the DoD within 72 hours of discovery, and preserve forensic data for at least 90 days.
+
+## What counts as covered defense information
+
+CDI is unclassified information that requires safeguarding, and in practice it's the same thing as Controlled Unclassified Information (CUI) when it touches a DoD contract. For a manufacturer, CDI/CUI commonly shows up as:
+
+- Technical drawings, specs, and models marked with export control or distribution restrictions
+- Engineering data provided by the customer to make a part (a print stamped "Distribution Statement C" or similar)
+- Government contract information tied to the specific program
+- Test and inspection data required by the contract that reveals design or performance details
+
+Not everything you handle for a defense customer is CUI. A purchase order number and a delivery date usually aren't. A print with a distribution statement, or data explicitly marked CUI/CDI by the customer, usually is. When it's ambiguous, the marking on the document and the language in the contract's DD Form or SOW govern. Ask your customer's contracting officer if a document isn't marked and you're not sure.
+
+## NIST 800-171: what the flowdown requires you to do
+
+NIST SP 800-171 defines 110 security requirements across 14 families, aimed at protecting CUI on non-federal systems. The families that most affect a manufacturing environment:
+
+| Control family | What it covers | Where it shows up on the shop floor |
+|---|---|---|
+| Access control | Who can see/edit CUI, least privilege | User roles in ERP/PLM, shared logins are a common finding |
+| Audit and accountability | Logging who did what, when | Audit trails on document access, work order changes |
+| Configuration management | Controlled baseline for systems handling CUI | Change control on the software that stores drawings/specs |
+| Identification and authentication | Verifying users before granting access | MFA, unique user IDs, no shared shop-floor terminals logged in as "operator" |
+| Media protection | Controlling and disposing of media containing CUI | USB drive policy, secure disposal of old hard drives |
+| Physical protection | Limiting physical access to systems/facilities with CUI | Locked server rooms, visitor logs, badge access |
+| System and communications protection | Encrypting CUI in transit and at rest | TLS, encrypted storage, network segmentation |
+| Incident response | Detecting and reporting incidents within 72 hours | A documented incident response plan rather than a stated intent |
+
+Self-assessing against these 110 controls and documenting the result in a System Security Plan (SSP) and Plan of Action & Milestones (POA&M) is what NIST 800-171 compliance means in practice today. CMMC 2.0 formalizes third-party verification of the same control set for many contracts going forward. See [CMMC for small defense manufacturers](/learn/cmmc-for-small-defense-manufacturers) for how the certification tiers map to 800-171.
+
+## A practical flowdown checklist for small suppliers
+
+When a flowdown clause lands on your desk, work through this in order:
+
+1. **Identify what's CUI/CDI on the contract.** Check document markings and ask the customer if unclear.
+2. **Scope which systems touch that data.** Your ERP, PLM/CAD storage, email, file shares, and anywhere prints or specs get copied.
+3. **Reduce the scope where you can.** The fewer systems that touch CUI, the smaller your compliance burden. Isolating CUI to a small number of well-controlled systems usually costs less than locking down everything.
+4. **Run a self-assessment against the 110 NIST 800-171 controls** and document gaps.
+5. **Write the SSP and POA&M.** These are required even before full compliance, showing what's in place and the plan to close gaps.
+6. **Fix access control and logging first.** These are the most commonly failed controls and usually the cheapest to fix.
+7. **Confirm your incident response plan can hit the 72-hour DoD reporting window** and that you know where to report (DIBNet).
+8. **Push the same flowdown to your own suppliers** if you subcontract any part of the work. The obligation doesn't stop at your shop.
+
+## Where DFARS, ITAR, and CMMC overlap and diverge
+
+These three are distinct:
+
+- **ITAR** controls the export of defense articles and technical data to foreign persons. It governs *who* can access data, based on nationality, regardless of cybersecurity posture. See [ITAR compliance for manufacturers](/learn/itar-compliance-for-manufacturers).
+- **DFARS 252.204-7012 / NIST 800-171** is about *how securely* you handle CUI, regardless of who's accessing it.
+- **CMMC** is the DoD's certification framework for verifying NIST 800-171 compliance (and, at higher levels, additional requirements). It is the enforcement mechanism rather than a separate technical standard.
+
+A shop can be DFARS/NIST 800-171 compliant and still have an ITAR problem if a foreign national employee has system access, or vice versa. Treat them as related but separate checklists.
+
+## The manufacturing-software angle: where systems fail
+
+Most DFARS/CUI failures in small shops trace back to the same handful of system-design problems: CUI-marked drawings sitting on a shared drive with no access logging, a shop ERP with one shared login for the whole floor, no audit trail on who opened or changed a work order, and backups or cloud storage with unclear data residency. These are basic system-hygiene gaps that a modern ERP/MES should provide by default, not bolt on after a flowdown clause forces the issue.
+
+## How Carbon fits a DFARS-bound supply chain
+
+Carbon is audit-ready for NIST 800-171. The software-side controls the standard requires ship in the core platform rather than a paid add-on tier: role-based access control, audit logging on records and documents, and encrypted data in transit and at rest. The 110 controls are still yours to implement and document in your SSP, since no software makes an organization "compliant" on its own, but the ones your system of record is responsible for are in place and ready to evidence to an assessor. Because Carbon is source-available and can be self-hosted in your own environment (including GovCloud and ITAR-capable configurations on Enterprise), you control where CUI-marked drawings, specs, and work order data reside, which simplifies the "where does CDI live" question in your System Security Plan. See [self-hosting an ERP in an ITAR environment](/learn/self-hosting-an-erp-in-an-itar-environment) for the deployment mechanics behind that. Running production, purchasing, and document control on one data model gives you a single queryable audit trail instead of one split across a shop-floor system and a separate document repository.
+
+## Frequently asked questions
+
+### What is a DFARS flowdown clause?
+A contractual requirement the government imposes on a prime contractor that the prime is obligated to pass down ("flow down") to subcontractors at every tier, because the requirement can't be satisfied without the subcontractor's cooperation. This is most commonly DFARS 252.204-7012 for safeguarding CUI.
+
+### Do I need to comply with DFARS if I'm a small second-tier subcontractor?
+Yes, if your purchase order includes the flowdown clause and you handle covered defense information, the size or tier of your company doesn't exempt you. The obligation follows the data rather than the contract value.
+
+### What's the difference between CUI and classified information?
+CUI is unclassified information that still requires safeguarding due to law, regulation, or government policy. Classified information is a separate, higher-tier control regime. Most manufacturing CDI is CUI, not classified.
+
+### How fast do I have to report a cyber incident under DFARS 252.204-7012?
+Within 72 hours of discovery, reported to the DoD via DIBNet, along with preserving relevant forensic data for at least 90 days for potential DoD review.
+
+### Does being DFARS compliant mean I'm also ITAR compliant?
+No. DFARS/NIST 800-171 governs data security; ITAR governs who (by nationality) can access defense articles and technical data. You need both assessments. They check different things.
+
+## Try Carbon on your defense supply chain data
+
+If a flowdown clause landed on your desk and you're evaluating whether your current systems can support it, [try Carbon free for 30 days](/pricing) or read the source on [GitHub](https://github.com/crbnos/carbon) to see how access control, audit logging, and self-hosted deployment work before you commit.

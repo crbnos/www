@@ -1,0 +1,109 @@
+---
+title: "API-first ERP: what a real manufacturing API enables"
+publishedAt: "2026-07-06"
+summary: "What API-first ERP means for manufacturers: full backend coverage over REST, not a curated integration subset, plus the integrations it enables."
+tag: "Developer"
+author: "chase"
+---
+
+API-first ERP means every capability of the system is reachable over a documented API, not a marketing-selected subset of "integration-friendly" objects, and the vendor treats that API as a first-class product surface rather than an afterthought bolted onto a UI-first application. For manufacturers, that distinction determines whether you can connect machines, build custom dashboards, sync CAD data, and eventually hand an AI agent real work, or whether you're stuck exporting CSVs and hoping nothing changes.
+
+## What "API-first" means, concretely
+
+Most ERPs have *an* API. Very few are API-first. The difference shows up in a handful of specific, checkable ways:
+
+- Coverage, not curation. An API-first system exposes the same schema the application itself is built on: every table, not a curated integration layer covering sales orders and inventory while leaving routings, quality records, and job costing unreachable.
+- Webhooks, not polling. If the only way to know something changed is to poll an endpoint on a timer, you're building a sync job, not an integration. API-first systems push events (a work order completed, a purchase order received, a nonconformance opened) so downstream systems react immediately.
+- The API is the same one the product's own UI uses. When the frontend and third-party integrations hit the same endpoints, the API can't silently fall behind the product, because the vendor's own application exercises it constantly.
+- The vendor documents and versions the API like a product, with a stated deprecation and versioning policy, not a set of endpoints you discover by inspecting network traffic.
+
+## What this enables
+
+The point of API-first is the integrations and workflows that become possible once every capability is reachable, not the architecture for its own sake:
+
+### Machine and equipment integration
+
+A machine controller or PLC gateway can write cycle times, machine status, and completed-quantity data directly into a work order, rather than an operator keying it in at a terminal at the end of a shift. This closes the loop between what's happening on the floor and what the system of record shows.
+
+### Custom dashboards and reporting
+
+A plant manager who wants a specific OEE view, or a controller who wants a job-costing rollup that doesn't exist in any canned report, can query the underlying tables directly instead of waiting for a vendor feature request or exporting to a spreadsheet weekly.
+
+### CAD and PLM sync
+
+An integration can push bill of materials and routing data generated in CAD (or a PLM system) into ERP programmatically when an engineering change is released, instead of a person re-keying part numbers and quantities by hand, which is the exact failure mode most BOM errors trace back to. See [From CAD to BOM: Onshape to ERP sync](/learn/cad-to-bom-onshape-erp-sync) for a worked example of that pattern.
+
+### Customer and supplier portals
+
+Order status, quote requests, and shipment tracking can be exposed to customers or pulled from suppliers without giving them a login to the internal system, by building a thin portal against the same API your own team uses.
+
+### Agent and automation readiness
+
+Increasingly, the "integration" is an AI agent that needs to read live inventory, check a job's status, or create a purchase order on request, not a fixed dashboard at all. That only works if the underlying capability is exposed as a callable, well-defined API in the first place. See [Building AI agents for your factory: MCP + manufacturing](/learn/mcp-for-manufacturing) for how shops are implementing this.
+
+## A concrete example
+
+Say a shop wants a Slack notification whenever a work order is flagged with a quality hold, with the message including the part number, operation, and the nonconformance description, routed automatically rather than a person checking a screen. With webhooks and a full API, that's an endpoint plus a small handler:
+
+```json
+{
+  "event": "nonconformance.created",
+  "workOrderId": "WO-10245",
+  "operation": "CNC Mill – OP20",
+  "partNumber": "BRK-200",
+  "description": "Bore diameter out of tolerance, +0.004in"
+}
+```
+
+```bash
+curl -s https://rest.carbon.ms/v1/quality/nonconformances/latest \
+  -H "Authorization: Bearer $CARBON_API_KEY"
+```
+
+Without full API coverage of the quality module specifically, this integration is impossible no matter how good the rest of the API is. That's why "does it have an API" is the wrong question, and "does the API cover this specific table" is the right one.
+
+## API-first vs. "has an API": a checklist
+
+| Question | API-first | Has-an-API (subset) |
+|---|---|---|
+| Are routings and operations queryable? | Yes | Often no |
+| Are quality/nonconformance records queryable? | Yes | Often no |
+| Are webhooks available for state changes? | Yes | Often polling-only, or absent |
+| Is the API the same one powering the vendor's own UI? | Yes | Often a separate, thinner layer |
+| Is there a public, versioned reference doc? | Yes | Sometimes partial or sales-gated |
+
+Before committing to an ERP for a build that depends on integration, ask the vendor directly: "can I reach every table this way, or only these specific ones?" The answer tells you more than any feature list.
+
+## How Carbon is built API-first
+
+Carbon exposes its entire backend, not a subset, over a documented REST API at rest.carbon.ms, because the API and the product UI are built against the same schema rather than a separate integration layer maintained on a different cadence:
+
+- **Full table coverage**: work orders, routings, operations, inventory, purchasing, sales orders, quoting, accounting, and quality, all reachable the same way.
+- **Webhooks** for state changes, so downstream systems and automations react in real time instead of polling.
+- **A hosted MCP server** on top of the same API, so AI agents like Claude, ChatGPT, and Cursor can read and act on live manufacturing data without a custom integration layer per agent.
+- **Open source on GitHub** (github.com/crbnos/carbon), so the exact API implementation, not just the docs, is inspectable.
+- Full reference documentation at [docs.carbon.ms](https://docs.carbon.ms) and a developer overview at [/developers](/developers).
+
+This is the same foundation [headless ERP](/learn/headless-erp-for-manufacturing) depends on: a headless deployment is only possible if the API covers everything the UI does.
+
+## Frequently asked questions
+
+### What does "API-first ERP" mean in practice?
+
+It means every capability of the ERP (every table and workflow, not a curated integration subset) is reachable over a documented, versioned API, and the vendor's own product UI exercises that API rather than maintaining it as a secondary layer.
+
+### How is an API-first ERP different from one that just "has an API"?
+
+Most ERPs expose an API for a handful of common objects like sales orders and inventory. API-first ERPs expose the full schema, including routings, quality records, and job costing, and typically add webhooks for real-time events rather than requiring polling.
+
+### Do I need to be a developer to benefit from an API-first ERP?
+
+No. Most users interact with the product UI like any ERP. The benefit shows up when you need something the UI doesn't provide out of the box: a custom report, a machine integration, a portal, or an AI agent workflow. An API-first system makes those additions possible without vendor professional services.
+
+### What's the relationship between API-first and MCP for AI agents?
+
+MCP (Model Context Protocol) is a standard way for AI agents to call an API. A manufacturing MCP server is only as capable as the underlying API it wraps: if the API doesn't expose a capability, no amount of MCP tooling can make it available to an agent. API-first is the prerequisite; MCP is the interface layer on top of it. See [MCP for manufacturing](/learn/mcp-for-manufacturing).
+
+## Build against a real manufacturing API
+
+If you're evaluating ERP for a build that depends on integration (machine connectivity, CAD sync, a custom portal, or an agent workflow), test the API directly rather than trust a feature list. Explore the reference docs at [docs.carbon.ms](https://docs.carbon.ms), read the source on [GitHub](https://github.com/crbnos/carbon), visit [/developers](/developers), or [try Carbon free for 30 days](/pricing) at https://app.carbon.ms.

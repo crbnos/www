@@ -1,0 +1,121 @@
+---
+title: "Safety stock and reorder point formulas, worked with real numbers"
+publishedAt: "2026-07-12"
+summary: "The real safety stock formula and reorder point calculation, worked with actual numbers for demand variability, lead-time variability, and service levels."
+tag: "How-to"
+author: "chase"
+---
+
+A reorder point is the on-hand quantity that triggers a new order: **ROP = average demand during lead time + safety stock.** Safety stock is the buffer sized to absorb variability in demand and lead time at a chosen service level, and it has a real formula rather than a gut-feel percentage padded on top of average usage. This article works both formulas with actual numbers, including the version that most "safety stock formula" explainers skip: the one that accounts for lead-time variability, which in job shops and multi-supplier environments is often a bigger risk than demand variability itself.
+
+## What a reorder point is actually protecting against
+
+Average demand during lead time tells you how much you'll consume while waiting for a replenishment order to arrive, assuming everything goes exactly as planned. Nothing goes exactly as planned: daily demand fluctuates, and supplier lead time fluctuates. Safety stock exists to cover the gap between the average case and a worse-than-average case, chosen deliberately rather than left to chance. Set it too low and you stock out whenever demand or lead time runs even slightly hot; set it too high and you're carrying working capital that earns nothing while it sits on a shelf.
+
+## The reorder point formula
+
+**ROP = (average demand per period × average lead time) + safety stock**
+
+The first term is straightforward: if you use 40 units a day and lead time is 10 days, you'll consume roughly 400 units waiting for the next order. The question worth getting right is how much safety stock to add on top of that 400, and that's where the real formula matters.
+
+## The safety stock formula (and why "add a buffer" isn't a formula)
+
+### Simple case: only demand varies, lead time is fixed
+
+**SS = Z × σd × √LT**
+
+Where:
+- **Z** = the service-level factor (see table below)
+- **σd** = standard deviation of demand per period
+- **LT** = lead time, in the same period units as demand
+
+### Real case: both demand and lead time vary
+
+Most purchased manufacturing inputs don't have a fixed lead time. A supplier quotes 10 days but sometimes ships in 7 and sometimes in 16. Ignoring that variability understates the buffer you need:
+
+**SS = Z × √((LT × σd²) + (d² × σLT²))**
+
+Where, in addition to the terms above:
+- **d** = average demand per period
+- **σLT** = standard deviation of lead time
+
+## Choosing a service level
+
+The service-level factor Z comes from the standard normal distribution and sets how much of the demand-during-lead-time distribution you want covered before you risk a stockout:
+
+| Target service level | Z |
+|---|---|
+| 90% | 1.28 |
+| 95% | 1.65 |
+| 97.5% | 1.96 |
+| 99% | 2.33 |
+| 99.9% | 3.09 |
+
+Higher service levels cost *more than* proportionally more, because Z grows faster than the service level itself near the top of the curve. That's the mathematical reason chasing 99.9% availability on a C-class item is rarely worth it; see the ABC framing in [Cycle counting that doesn't stop production](/learn/cycle-counting-that-doesnt-stop-production) for how to decide which items deserve that spend.
+
+## Worked example: computing safety stock and ROP
+
+A component has:
+
+- Average daily demand, **d = 40 units**
+- Standard deviation of daily demand, **σd = 8 units**
+- Average lead time, **LT = 10 days**
+- Standard deviation of lead time, **σLT = 2 days**
+- Target service level: **95% (Z = 1.65)**
+
+**Simple formula (demand variability only), for comparison:**
+
+SS = 1.65 × 8 × √10 = 1.65 × 8 × 3.16 = 41.7 ≈ **42 units**
+
+ROP = (40 × 10) + 42 = **442 units**
+
+**Real formula (demand and lead-time variability):**
+
+SS = 1.65 × √((10 × 8²) + (40² × 2²)) = 1.65 × √(640 + 6,400) = 1.65 × √7,040 = 1.65 × 83.9 ≈ **138 units**
+
+ROP = (40 × 10) + 138 = **538 units**
+
+The gap is the point: ignoring lead-time variability on this item understates safety stock by roughly 96 units, more than double. For a supplier with stable, contracted lead times, the simple formula is close enough. For anything sourced from a machine shop, a forge, or an overseas supplier with real transit variance, the lead-time term usually dominates the demand term.
+
+**How service level changes the buffer**, holding demand and lead-time variability fixed:
+
+| Service level | Z | Safety stock | Reorder point |
+|---|---|---|---|
+| 90% | 1.28 | 107 | 507 |
+| 95% | 1.65 | 138 | 538 |
+| 97.5% | 1.96 | 164 | 564 |
+| 99% | 2.33 | 196 | 596 |
+
+## Where reorder points break down: dependent demand
+
+Reorder points and safety stock formulas assume **independent demand**: consumption that doesn't depend on what else is being built, like MRO supplies or common hardware used across many jobs. Most manufactured components have **dependent demand**: a bracket's screws are needed only because the bracket is needed, which is needed only because a specific parent assembly is needed. Running a reorder point on a dependent-demand item ignores that linkage and tends to either overstock at every level (safety margin compounding up the structure) or stock out right when a large order lands, because a reorder point has no visibility into what's been sold. [What Is MRP?](/learn/what-is-mrp) plans dependent demand correctly by exploding the BOM against real orders instead of averaging historical usage. The practical rule: use MRP-driven planned orders for components tied to a BOM, and reserve reorder-point logic for true independent-demand items. See [MRP-driven purchasing for make-to-order](/learn/mrp-driven-purchasing-make-to-order) for how the two coexist in one purchasing plan.
+
+## How Carbon calculates and monitors reorder points
+
+Carbon computes safety stock and reorder points using the same formulas in this article, against live inventory and purchasing data rather than a spreadsheet that goes stale the day it's built:
+
+- **Per-item service levels**, so an A-class flight-critical part and a C-class shop supply don't share the same buffer logic.
+- **Demand and lead-time variability calculated from actual transaction history** in the same Postgres data model as purchasing and receiving, not a manually maintained assumption.
+- **Reorder points feed MRP directly** for independent-demand items, while dependent-demand items run full MRP netting instead; both live in the same planning run.
+- **Open source math.** The exact safety stock and reorder point calculations are in the public repo on [GitHub](https://github.com/crbnos/carbon), so you can verify the formula before trusting it with working capital decisions.
+
+## Frequently asked questions
+
+### What is the safety stock formula?
+For demand variability alone: SS = Z × σd × √LT. When lead time also varies (the more realistic case for most purchased manufacturing inputs): SS = Z × √((LT × σd²) + (d² × σLT²)), where Z is the service-level factor, σd is demand variability, d is average demand, LT is average lead time, and σLT is lead-time variability.
+
+### What is the reorder point calculation?
+ROP = (average demand per period × average lead time) + safety stock. The first term covers expected consumption while waiting for a new order; safety stock covers the variability on top of that expectation.
+
+### How do I pick a Z-value for a target service level?
+Z comes from the standard normal distribution: 1.28 for 90%, 1.65 for 95%, 1.96 for 97.5%, and 2.33 for 99%. Higher targets require disproportionately more safety stock, since Z accelerates faster than the service level itself near the top of the curve.
+
+### Does lead-time variability really matter that much?
+Often more than demand variability does. In the worked example above, accounting for a lead time that varies by only ±2 days more than tripled the required safety stock compared to assuming a fixed lead time, a common result whenever a supplier's delivery reliability is inconsistent.
+
+### Should every item use a reorder point?
+No. Reorder points are appropriate for independent-demand items like MRO and common hardware. Components tied to a bill of materials have dependent demand and should be planned through MRP, which nets against actual orders instead of historical averages.
+
+## Stop guessing at safety stock
+
+If your safety stock numbers are inherited from a spreadsheet nobody's revisited since the item was set up, it's worth recalculating them against real demand and lead-time variance. [Try Carbon free for 30 days](/pricing) at https://app.carbon.ms, or review the calculation on [GitHub](https://github.com/crbnos/carbon).

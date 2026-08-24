@@ -65,7 +65,7 @@ describe("negotiateMarkdown", () => {
 
   it("serves a blog post's own source markdown", async () => {
     const response = await negotiateMarkdown(
-      request("/learn/why-we-are-open-sourcing-carbon.md"),
+      request("/learn/what-is-mrp.md"),
       404,
     );
     expect(response?.status).toBe(200);
@@ -80,7 +80,7 @@ describe("negotiateMarkdown", () => {
       200,
     );
     expect(await response?.text()).toContain(
-      "carbon.ms/learn/why-we-are-open-sourcing-carbon",
+      "carbon.ms/learn/what-is-mrp",
     );
   });
 

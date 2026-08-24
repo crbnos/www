@@ -1,0 +1,91 @@
+---
+title: "ITAR compliance for manufacturers: software, data residency, and self-hosting"
+publishedAt: "2026-07-26"
+summary: "What an ITAR compliant ERP requires: access control, technical data handling, data residency, and why self-hosting is the strongest architecture for it."
+tag: "Compliance"
+author: "chase"
+---
+
+If you design, build, or export defense articles, defense services, or the technical data behind them, the International Traffic in Arms Regulations (ITAR) reach past your shipping department. They govern every system that stores, displays, or transmits that technical data, including your ERP. An ITAR compliant ERP is an architecture decision about who can reach your data, where it physically lives, and who can prove it.
+
+This guide covers what ITAR requires of your software, the ways typical multi-tenant cloud ERP creates ITAR risk, and why self-hosting (or choosing a source-available system you can run yourself) is one of the few architectural arguments that answers the regulation instead of working around it.
+
+## What ITAR regulates
+
+ITAR (22 CFR 120-130) is administered by the U.S. Department of State's Directorate of Defense Trade Controls (DDTC) under the Arms Export Control Act. It controls the export of **defense articles** and **defense services** listed on the **U.S. Munitions List (USML)**, and, for software, it controls **technical data**: drawings, specifications, BOMs, process sheets, source code, and manufacturing know-how associated with a USML item.
+
+The part that catches manufacturers off guard is the **deemed export** rule. Under ITAR, giving a foreign person access to controlled technical data is treated as an export to that person's home country, even if the foreign person never leaves your building and the data never crosses a physical border. A support engineer at your ERP vendor who happens to be a non-U.S. person, sitting in an office outside the U.S. and remoting into your instance to fix a bug, can be a deemed export the moment your data becomes visible to them. This is why "the cloud is fine as long as the data center is in the U.S." is an incomplete answer: data residency matters, but so does who can *see* the data, regardless of where the server sits.
+
+## Who this applies to
+
+ITAR applies more broadly than most small and mid-size manufacturers expect. You don't have to be a prime defense contractor. If you manufacture a part that appears on the USML, or you receive USML technical data from a customer or prime to quote or build against, you are very likely a **manufacturer or exporter of defense articles** under ITAR and must register with DDTC, separate from and in addition to any CMMC or DFARS obligations tied to a specific DoD contract. It is entirely possible to be ITAR-regulated without being a "defense contractor" in the traditional sense.
+
+## What ITAR requires of your systems
+
+The requirements that touch your ERP, MES, and PDM/PLM systems:
+
+- **Access limited to authorized U.S. persons.** A "U.S. person" under ITAR is a U.S. citizen, lawful permanent resident, or protected individual, not someone physically located in the U.S. Your system needs role-based access control granular enough to restrict controlled technical data to authorized U.S. persons, not everyone with a login.
+- **Technical data marking and segregation.** Drawings, routings, specs, and quality records containing controlled technical data need to be identifiable and separable from non-controlled data, so access decisions can be enforced rather than applied to an entire database indiscriminately.
+- **No unauthorized re-export.** Hosting, backup, support, or subprocessor arrangements that put technical data in front of a foreign person or move it outside the U.S. without a license are a violation, even if unintentional. This includes cloud vendor support staff, offshore development teams, and backup infrastructure in other countries.
+- **Recordkeeping.** ITAR requires records related to registration, licensing, and technical data transfers be retained for a minimum of 5 years, and be producible on request.
+- **Physical and information security.** Reasonable, documented controls to prevent unauthorized access, consistent with the sensitivity of the data: encryption at rest and in transit, audit logging, and physical security over any on-premise infrastructure.
+- **Employee and visitor screening.** Knowing who is a U.S. person before granting system access, and controlling facility access so foreign nationals (employees, visitors, contractors) don't gain visual or physical access to controlled technical data.
+
+None of this is exotic security practice; it's what most competent IT teams already do. The problem is that a typical multi-tenant SaaS ERP makes almost none of it verifiable by the customer.
+
+## Why cloud ERP struggles here
+
+Most cloud ERP vendors can tell you their data center region. Very few can tell you, with an auditable answer, exactly which named individuals, and which nationalities, have production database access at any given moment, including subprocessors, on-call support engineers, and offshore development teams. Standard SaaS terms of service are written to permit the vendor to use whatever personnel and subprocessors it wants to run the service, which is reasonable for a CRM and disqualifying for a system holding USML technical data. Even ERP vendors marketed as "government cloud" or "GovCloud-hosted" are frequently describing infrastructure region, not the nationality and access scope of the people who operate the application layer on top of it.
+
+## The self-hosting argument
+
+Self-hosting (or running a source-available system in your own environment) makes an argument almost no multi-tenant cloud ERP can make: **you control every variable ITAR cares about, directly.**
+
+| Control ITAR cares about | Typical multi-tenant SaaS ERP | Self-hosted / source-available ERP |
+|---|---|---|
+| Physical data location | Vendor's region, often not contractually guaranteed | You choose the facility (on-prem, your own GovCloud tenancy, air-gapped) |
+| Who has system/database access | Vendor's staff and subprocessors, often undisclosed | Your own employees, screened and access-controlled by you |
+| Ability to fully air-gap | Not possible by definition | Possible |
+| Source code auditability | Closed; you trust the vendor's claims | Open; your security team can inspect the actual code |
+| Support engineer access to your data | Often required for troubleshooting | Optional, and you control it when granted |
+| Evidence you can hand an auditor or DDTC | Vendor's compliance attestations (SOC 2, etc.) | Your own system, your own logs, your own personnel records |
+
+Self-hosting doesn't automatically make you ITAR compliant. Compliance is a program of registration, classification, access control, and process, not a deployment mode. But it removes the largest unknown in the equation: a third party's infrastructure, personnel, and subprocessor chain that you cannot fully see or control. For a deeper walkthrough of the deployment patterns (network segmentation, identity, backup strategy), see [Self-hosting an ERP in an ITAR environment](/learn/self-hosting-an-erp-in-an-itar-environment).
+
+## Where CMMC and DFARS fit in
+
+If your ITAR-controlled work is also performed under a DoD contract, you're very likely also subject to **CMMC 2.0** and the **DFARS 252.204-7012** safeguarding clause, which independently require NIST SP 800-171 controls over Controlled Unclassified Information (CUI). ITAR and CMMC/DFARS overlap heavily in practice: access control, encryption, audit logging, and personnel screening satisfy pieces of both. But they are legally distinct obligations with different regulators (DDTC vs. DoD) and different scopes (defense articles/technical data vs. CUI on a covered contract). See [CMMC 2.0 for small defense manufacturers](/learn/cmmc-for-small-defense-manufacturers) for the control-by-control breakdown, and [DFARS flowdowns explained](/learn/dfars-flowdowns-explained) for how these obligations get pushed down your supply chain regardless of your contract tier.
+
+## How Carbon fits an ITAR-controlled environment
+
+Carbon runs either way: managed SaaS for shops without ITAR exposure, or fully self-hosted for shops that need it:
+
+- **Self-hostable, including in your own GovCloud or air-gapped environment**, available on Enterprise plans. You choose the infrastructure, region, and network posture, not a shared multi-tenant cluster.
+- **Source-available.** The full application and data model are in the public repo (github.com/crbnos/carbon), so your security team can inspect exactly how access control, audit logging, and data storage work before you commit any controlled data to it, rather than taking a vendor's compliance narrative on faith.
+- **Audit-ready for CMMC / NIST 800-171.** The platform implements the access control, audit logging, and encryption controls that overlap with ITAR's technical-data safeguards, giving self-hosted customers a base to build their program on.
+- **One data model for ERP, MES, and QMS**, so controlled technical data (drawings, routings, quality records) isn't scattered across a separate PLM tool, a shared drive, and a spreadsheet, each with its own access model to secure and audit.
+- **Enterprise support includes forward-deployed engineering and migration help**, so a self-hosted deployment doesn't mean you're on your own for implementation.
+
+Carbon itself is not a substitute for your DDTC registration, technical data classification, or export compliance program; that responsibility stays with you. Carbon provides an architecture where the *system* isn't the weak link in that program.
+
+## Frequently asked questions
+
+### Is there such a thing as an "ITAR certified" ERP?
+
+No. ITAR doesn't certify software products; it regulates companies and the export of controlled data. No accreditation body stamps an ERP "ITAR compliant." What matters is whether the deployment (infrastructure, access control, personnel) that the software runs in satisfies your compliance obligations, which is why self-hosted deployments are easier to defend than a vendor's marketing claim.
+
+### Does data residency in the U.S. alone satisfy ITAR?
+
+No. Data residency addresses where the data sits, but ITAR's deemed export rule also cares about *who can access* it, regardless of physical location. A U.S.-based server operated by a team that includes non-U.S. persons with data access can still create a deemed export exposure.
+
+### Do I need ITAR compliance if I'm not a defense contractor?
+
+Possibly yes. ITAR applies to anyone who manufactures, exports, or handles technical data for items on the U.S. Munitions List, which can include subcontractors and suppliers several tiers removed from a prime, and companies that never directly hold a DoD contract.
+
+### Can a small manufacturer realistically self-host an ERP?
+
+Yes, particularly with a source-available system designed for it. It requires more upfront IT ownership than clicking "sign up" on a SaaS product, but for shops with real ITAR exposure, that ownership is exactly what closes the compliance gap a multi-tenant SaaS vendor can't close for you.
+
+## Get an architecture that fits your compliance posture
+
+If ITAR, CMMC, or data residency requirements are shaping your next ERP decision, it's worth evaluating a system built to be self-hosted and inspected rather than only trusted. [Try Carbon free for 30 days](/pricing) at https://app.carbon.ms, or review the source directly on [GitHub](https://github.com/crbnos/carbon) before you commit any controlled data to it.

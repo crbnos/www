@@ -1,0 +1,123 @@
+---
+title: "FAI and AS9102 forms: the process, the forms, and a free template"
+publishedAt: "2026-07-24"
+summary: "What first article inspection and AS9102 actually require: Forms 1, 2, and 3 explained, the FAI process, common mistakes, and a usable template."
+tag: "Compliance"
+author: "chase"
+---
+
+A first article inspection (FAI) is a complete, documented verification that a first production run of a part meets every requirement on its engineering drawing, before you commit to building the rest of the order. In aerospace, that documentation has to follow the structure defined by **AS9102**. Get the forms wrong, skip a characteristic, or forget to redo the FAI after an engineering change, and you can fail a customer audit on a part that's dimensionally fine, because the paperwork doesn't hold up.
+
+This guide explains what AS9102 actually requires, walks through Forms 1, 2, and 3 in plain English, covers the mistakes that get FAIs rejected, and lays out the fields you need in a usable FAI template.
+
+## What FAI and AS9102 actually are
+
+A **first article inspection** verifies, with objective evidence, that a representative first unit produced by a given process (using production tooling, methods, and rates) conforms to every requirement on the design record. It is a complete characteristic-by-characteristic verification of one part, not a sample inspection or an SPC data point.
+
+**AS9102** ("Aerospace First Article Inspection Requirement") is the standard published by the SAE that defines the required format and content for FAI documentation across the aerospace supply chain. Before AS9102 existed, every prime had its own FAI form and every supplier maintained a different template per customer. AS9102 standardized the structure so an FAI package means the same thing regardless of which OEM is receiving it.
+
+## When an FAI is required
+
+An FAI (or a re-FAI) is triggered by:
+
+- **A new part number** entering production for the first time.
+- **A new supplier or new manufacturing location** producing an existing part.
+- **A change in manufacturing process, tooling, or method** that could affect the part's characteristics: a new fixture, a different machine, a changed heat treat process.
+- **An engineering change** that affects form, fit, or function.
+- **A natural break in production**, typically defined as a lapse of two years or more since the part was last produced (or per customer-specific requirements).
+- **Partial FAI**, when only some characteristics are affected by a change. A delta FAI covers those characteristics rather than the full part.
+
+Skipping an FAI in any of these situations, or reusing a stale one, is one of the most common findings in a customer audit.
+
+## The three AS9102 forms
+
+### Form 1: Part Number Accountability
+
+Form 1 identifies *what* is being inspected and *why*. It captures the part number and revision, the FAI's reason code (initial, full re-accomplishment, partial), the serial or lot number of the part inspected, the customer and purchase order reference, and a summary of whether the part passed. Think of Form 1 as the cover sheet that ties the whole FAI package together.
+
+### Form 2: Product Accountability: raw material, specifications, and special processes
+
+Form 2 documents the *inputs* that went into the part, not the dimensions. It lists every raw material, specification, and special process (heat treat, plating, NDT, welding) called out on the drawing, along with the certification or evidence that each was actually performed and conforms to spec. If a special process is required, this is where the certificate reference (often traceable to a [NADCAP](/learn/nadcap-explained)-accredited source) belongs.
+
+### Form 3: Characteristic Accountability, Verification, and Compatibility Evaluation
+
+Form 3 is the heart of the FAI: a line-by-line record of **every characteristic** on the drawing, ballooned and numbered, with the design requirement, the actual measured result, the inspection method used, and a pass/fail determination for each one. This is the form auditors scrutinize most closely, because it's the direct evidence that the part was measured against every callout, including notes, GD&T callouts, surface finish, and material specifications, not only the obvious dimensions.
+
+## The FAI process, step by step
+
+1. **Balloon the drawing.** Assign a sequential number to every characteristic on the design record (every dimension, tolerance, note, and GD&T callout) so each balloon number maps directly to a line on Form 3.
+2. **Plan the inspection.** Determine the inspection method and equipment for each characteristic (CMM, calipers, gauge, visual, functional test).
+3. **Produce the first article** using actual production tooling, methods, and process parameters, not a prototype process that won't represent ongoing production.
+4. **Measure and record every characteristic** against its balloon number on Form 3, with actual results, not a checkmark.
+5. **Gather objective evidence** for Form 2: material certifications, special process certificates, and any required test reports.
+6. **Complete Form 1** with the summary disposition and reason for the FAI.
+7. **Review and approve** internally before submission, and route to the customer if their contract requires FAI submission and approval prior to shipment.
+8. **File the complete package** and link it to the part's traceability record, so it can be retrieved instantly on the specific lot or serial an auditor asks about.
+
+## Common FAI mistakes
+
+- **Incomplete characteristic capture.** Ballooning only the "important-looking" dimensions and skipping notes, general tolerances, or GD&T callouts. Form 3 needs every characteristic, not a subjective subset.
+- **Missing material or special process certification.** Form 2 without a traceable certificate for every called-out material or special process is an automatic finding.
+- **Not re-doing the FAI after an engineering change.** Building against a stale FAI that predates a revision change is one of the most common customer audit findings.
+- **Inspecting a production part instead of a true first article.** The measured part has to be the actual first unit off the qualified process, not a hand-selected "best" unit pulled later from a production run.
+- **Documenting the wrong drawing revision.** The ballooned drawing and the Form 3 requirements have to match the revision that was actually effective when the part was produced.
+- **No link back to a nonconformance.** If a characteristic fails, the FAI package needs a clear reference to the resulting nonconformance and disposition, not a silently corrected number.
+- **Doing the FAI once and never revisiting it.** Full or partial re-FAI triggers apply for the life of the part number, not only at initial qualification.
+
+## A usable FAI / AS9102 template: the fields you need
+
+Whether you build this in a spreadsheet or a system, a complete FAI record needs:
+
+1. **Part number and revision**
+2. **FAI reason** (initial / full re-accomplishment / partial, with reason code)
+3. **Part serial or lot number inspected**
+4. **Customer and purchase order reference**
+5. **Drawing revision and reference to the ballooned drawing**
+6. **Characteristic number** (matches the drawing balloon)
+7. **Characteristic description / requirement**
+8. **Design nominal and tolerance**
+9. **Actual measured result**
+10. **Inspection method and gauge/equipment used**
+11. **Inspector name and date**
+12. **Material certification reference**
+13. **Special process certification reference** (heat treat, plating, NDT, etc.)
+14. **Nonconformance reference**, if the characteristic failed
+15. **Approval signatures** (internal quality, and customer where contractually required)
+
+That structure is exactly what Forms 1 through 3 require, and a spreadsheet with these columns is a legitimate starting point for a low-volume shop. It becomes a liability once you have dozens of active part numbers, because nothing enforces that the ballooned drawing, the actual routing, and the FAI record stay in sync as revisions change.
+
+## How Carbon handles FAI and traceability
+
+Carbon keeps FAI, routing, and quality records on the same data model as the part and job they belong to, rather than as a standalone form disconnected from production:
+
+- **FAI records link directly to the part revision, work order, and lot/serial** that produced the inspected unit, so retrieving the FAI package for any shipped part is instant instead of a file-folder search. See [Lot & serial traceability, explained](/learn/what-is-lot-serial-traceability) for how that genealogy is modeled end to end.
+- **Characteristics and special requirements live on the router**, so the same data that defines what an operator inspects also populates the Form 3 characteristic list, with no re-typing of a ballooned drawing into a separate spreadsheet.
+- **Material and special process certifications attach directly to the job**, giving Form 2 objective evidence a direct source instead of a separate document archive.
+- **Costing and FAI share the same job record**, so the cost of a first article (setup time, scrap, inspection labor) is visible alongside the part, which matters when [costing a machined part](/learn/how-to-cost-a-machined-part) that required significant first-article effort.
+- **Open source.** The traceability and quality data model is public on GitHub, so you can verify exactly how FAI records are structured before relying on it for a customer audit.
+
+## Frequently asked questions
+
+### What's the difference between FAI and a regular inspection?
+
+A regular inspection typically samples or checks key dimensions on an ongoing basis. An FAI is a one-time, complete verification of every characteristic on the drawing for a first unit off a qualified process. It establishes that the process itself is capable of producing a conforming part.
+
+### Do I need a full FAI or a partial (delta) FAI?
+
+A full FAI covers every characteristic and is required for a genuinely new part or process. A partial (delta) FAI covers only the characteristics affected by a specific engineering change, and is acceptable when the rest of the part's characteristics are unaffected and already have a valid full FAI on file.
+
+### Who has to approve an FAI: my internal quality team, or the customer too?
+
+It depends on the contract. Many aerospace customers require FAI package submission and formal customer approval before production ships, especially for new suppliers or safety-critical parts; others accept internal approval with the package available on request.
+
+### How long should I keep FAI records?
+
+Most aerospace quality systems require FAI records be retained for the life of the part plus a defined retention period after last shipment, consistent with your broader quality record retention policy. Check your customer's specific flow-down requirements, since they vary.
+
+### Does AS9102 apply outside aerospace?
+
+AS9102 is written for aerospace, but the underlying discipline, complete characteristic verification before production ramp, is used informally in other regulated industries like medical device manufacturing, even where the specific form structure isn't contractually required.
+
+## Stop rebuilding FAI packages from scratch
+
+If your FAI process still means re-typing a ballooned drawing into a fresh spreadsheet for every part, it's worth seeing what FAI records connected directly to your routing, lot traceability, and job costing look like. [Try Carbon free for 30 days](/pricing) at https://app.carbon.ms, or review the traceability data model on [GitHub](https://github.com/crbnos/carbon).

@@ -1,0 +1,113 @@
+---
+title: "What is production planning? (with finite capacity)"
+publishedAt: "2026-08-16"
+summary: "What is production planning? How shops turn demand into a schedule, the math behind finite capacity, and a worked example with real numbers."
+tag: "Manufacturing basics"
+author: "chase"
+---
+
+Production planning is the process of deciding what to make, how much, and when, translating demand (forecasts, sales orders, or both) into a schedule that respects material availability and shop capacity. Done well, it separates a shop that hits ship dates from one that's constantly expediting. Done as a spreadsheet guess, it assumes infinite capacity, and the schedule falls apart the first week a machine goes down or a hot job jumps the queue.
+
+This article covers what production planning decides, the math that separates real (finite-capacity) planning from a wish list, and a worked example you can adapt with your own numbers.
+
+## What production planning decides
+
+Production planning operates at three horizons, each answering a different question:
+
+| Horizon | Question it answers | Typical unit | Owner |
+|---|---|---|---|
+| Sales & operations planning (S&OP) | How much total capacity, headcount, and material do we need over the next 3-12 months? | Product family, month | Ops leadership |
+| Master production schedule (MPS) | What end items/top-level assemblies do we build, and in what quantity, over the next weeks? | End item, week | Planning |
+| Detailed / finite-capacity scheduling | Which job runs on which machine, in what order, starting when? | Work order + operation, hour/day | Scheduler / production control |
+
+Most "what is production planning" confusion comes from conflating these levels. MRP (see [what is MRP](/learn/what-is-mrp)) sits between the second and third rows. It explodes the master schedule into material and work order requirements, but by default assumes every operation can start the moment material and the prior operation are done, with no regard for whether the machine is free. That's infinite-capacity thinking, and finite capacity scheduling closes that gap.
+
+## Infinite vs. finite capacity planning
+
+| | Infinite capacity (classic MRP) | Finite capacity |
+|---|---|---|
+| Assumption | Every work center has unlimited hours available | Every work center has a real, finite number of hours per period |
+| Output | "This job needs to start on the 12th" | "This job starts on the 12th at 2:00 PM, right after job #4471 on Mill 3" |
+| What it catches | Material shortages | Material shortages *and* capacity overloads |
+| Failure mode | Schedule looks fine on paper, then three jobs need the same machine on the same day | Schedule pushes the third job to the next available slot automatically |
+| Best for | Rough-cut, long-horizon planning | Day-to-day dispatch and realistic due-date commitments |
+
+Neither is wrong on its own. S&OP and rough-cut capacity planning are supposed to be approximate. The mistake is running your detailed shop-floor schedule on infinite-capacity math and being surprised when it's wrong. For a deeper treatment of the scheduling engine itself, see [what is finite capacity scheduling](/learn/what-is-finite-capacity-scheduling).
+
+## A worked example: scheduling with finite capacity
+
+Take a work center: three CNC mills, one shift, five days a week, 8 hours a shift.
+
+**Available capacity**
+- Machines: 3
+- Hours per machine per week: 8 hrs × 5 days = 40 hrs
+- Gross capacity: 3 × 40 = 120 machine-hours/week
+- Efficiency factor (setup, tool changes, minor downtime): 85%
+- **Net available capacity: 120 × 0.85 = 102 machine-hours/week**
+
+**Demand for the week.** Five jobs are due, each with a required run time on this work center:
+
+| Job | Qty | Cycle time/pc | Setup | Total time needed |
+|---|---|---|---|---|
+| WO-1042 | 200 | 6 min | 0.5 hr | 20.5 hrs |
+| WO-1043 | 150 | 12 min | 1.0 hr | 31.0 hrs |
+| WO-1044 | 400 | 4 min | 0.75 hr | 27.4 hrs |
+| WO-1045 | 100 | 15 min | 1.5 hr | 26.5 hrs |
+| WO-1046 | 80 | 8 min | 0.5 hr | 11.2 hrs |
+
+Total demand: 20.5 + 31.0 + 27.4 + 26.5 + 11.2 = **116.6 hours**
+
+Against 102 available hours, this work center is overloaded by 14.6 hours, about a third of a shift on one machine. An infinite-capacity plan would schedule all five jobs to start on time and let the shop discover the overload when job WO-1046 sits in queue on Friday. A finite-capacity scheduler does the arithmetic up front and gives production control real choices before the week starts:
+
+- Push WO-1046 (the lowest-priority or latest-due job) into next week; it fits in 11.2 hrs of slack elsewhere.
+- Authorize 15 hours of overtime on one mill.
+- Outsource or offload one operation from WO-1043 (its 1.0 hr setup is the single biggest chunk) to a fourth machine or a partner shop.
+- Resequence by due date and let the true finish time fall where it falls, and tell the customer for WO-1046 now, not Friday afternoon.
+
+That's what finite capacity scheduling does in one example: it converts a capacity problem you'd discover on the floor into a decision you make at your desk, days earlier.
+
+## Key production planning formulas
+
+| Metric | Formula | Why it matters |
+|---|---|---|
+| Available capacity | Machines × hours/period × efficiency % | The real ceiling for finite scheduling |
+| Utilization | Hours scheduled ÷ hours available | Above ~85-90% sustained, a work center has no slack for expediting |
+| Takt time | Available production time ÷ customer demand (units) | The pace you must produce at to meet demand exactly |
+| Load vs. capacity gap | Hours required − hours available | Positive means overload; drives the decisions above |
+
+**Takt time example:** if a line has 420 available minutes/day (7 hrs after breaks) and customer demand is 140 units/day, takt time = 420 ÷ 140 = **3 minutes/unit**. If your actual cycle time is 3.4 minutes, you are structurally behind demand regardless of how good the schedule looks. That's a process problem, not a scheduling problem.
+
+## Common production planning methods
+
+- **MRP-driven (push):** plan generates work orders and purchase orders from the master schedule; good for make-to-order and engineer-to-order with variable BOMs.
+- **Kanban/pull:** downstream consumption signals upstream replenishment; strong for high-volume, repetitive production with stable demand.
+- **Finite-capacity/dispatch:** sequences known work orders against real machine calendars; strongest for high-mix, low-volume job shops (see [production scheduling for high-mix, low-volume shops](/learn/production-scheduling-high-mix-low-volume)).
+- **Theory of Constraints (drum-buffer-rope):** schedule the bottleneck first, buffer ahead of it, and let everything else subordinate to its pace.
+
+Most real shops blend these: MRP to generate the work, finite scheduling to sequence it, with a kanban loop for high-runner raw materials.
+
+## Where production planning breaks down in spreadsheets
+
+A spreadsheet can hold a master schedule. It cannot hold a live picture of machine calendars, in-progress operations, and material shortages updating at once. By the time someone re-pivots the sheet, a machine has gone down or a hot job has been dropped in. The failure mode is the same every time: the schedule is accurate on the day it's built and wrong within 48 hours. Purpose-built scheduling and MES systems exist to close that gap. See [what is MRP](/learn/what-is-mrp) for how the material side of the same problem is solved.
+
+## How Carbon handles production planning
+
+Carbon runs production planning, MRP, and finite-capacity scheduling against the same live data as inventory and purchasing, so a scheduling decision (bump a job, add overtime, split a run across two machines) immediately reflects updated material needs and due dates, instead of requiring a separate re-plan in a different tool. Because Carbon exposes the whole data model over a [REST API](/developers), planners can pull live capacity and load numbers into their own dashboards, or let an agent connected via Carbon's [MCP server](/developers) flag overloads automatically. Most shops are running real jobs through Carbon within about a month of starting implementation.
+
+## Frequently asked questions
+
+### What is the difference between production planning and production scheduling?
+Planning decides what to build and roughly when, at the master-schedule level. Scheduling assigns specific work orders to specific machines and times, respecting real capacity. Planning without finite scheduling is where overload problems hide.
+
+### What is finite capacity in production planning?
+It means the plan respects the actual number of machine-hours (or labor-hours) available in a period, rather than assuming unlimited capacity. It's the difference between a schedule that looks correct and one that's actually achievable.
+
+### Does MRP do production planning?
+MRP handles the material side: what to make and buy, and by when, based on the BOM and lead times. It typically assumes infinite capacity unless paired with a finite-capacity scheduling engine, which handles the machine/labor side.
+
+### How do I calculate available capacity for a work center?
+Multiply the number of resources (machines or people) by hours per period, then apply an efficiency factor to account for setup, minor downtime, and changeovers. See the worked example above for the full calculation.
+
+## Plan against real capacity, not a spreadsheet
+
+If your production plan is still a spreadsheet that goes stale by Wednesday, [try Carbon free for 30 days](/pricing) and run your next week's schedule against real, finite machine capacity. The source is also open on [GitHub](https://github.com/crbnos/carbon) if you want to see how the scheduling engine works.

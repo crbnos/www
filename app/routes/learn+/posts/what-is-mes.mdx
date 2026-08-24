@@ -1,0 +1,100 @@
+---
+title: "What is a manufacturing execution system (MES)?"
+publishedAt: "2026-08-20"
+summary: "What is MES? A plain-English guide to the manufacturing execution system, walking one work order from traveler to shipment, and how it differs from ERP."
+tag: "Manufacturing basics"
+author: "chase"
+---
+
+A manufacturing execution system (MES) is the software layer that manages and tracks production as it happens on the shop floor. It converts a planned work order into real-time instructions, captures labor and machine time as work is performed, and records the results (quantities, scrap, quality data, serial numbers) as they occur, not after the fact. If ERP and MRP decide *what* should be built and *when*, MES is the system that runs while the work is being built and reports what happened.
+
+ISA-95, the industry standard that scopes MES, defines it as the system between enterprise planning (ERP) and plant floor control (PLCs, SCADA), responsible for dispatching production, tracking work in process, and collecting performance data. That definition is accurate but abstract. The clearest way to understand MES is to follow one work order through it from release to shipment.
+
+## Walking a work order through MES
+
+Say a shop needs to build 25 units of a machined bracket assembly against a customer order due in two weeks.
+
+1. **Work order release.** MRP or a planner releases the work order, which carries the routing (the sequence of operations: mill, deburr, inspect, assemble) and the BOM (what components each unit consumes). See [What Is MRP?](/learn/what-is-mrp) for how the order got sized and dated in the first place.
+2. **Router/traveler generation.** MES generates the job traveler, the document (paper or digital) that follows the job through each operation, listing the routing steps, standard times, and any required work instructions or inspection points. See [What Is a Router / Job Traveler?](/learn/what-is-a-router-traveler) for what a good traveler contains.
+3. **Dispatch to the work center.** The operator at the first operation (milling) sees the job in their queue, prioritized against everything else scheduled at that work center.
+4. **Clock in / labor and machine time capture.** The operator starts the job in MES, which begins tracking actual time against the operation's standard time. This is the raw data that job costing and future estimates depend on.
+5. **Work instructions at the point of use.** Before or during the operation, the operator can pull up the current-revision work instruction directly at the machine, rather than relying on institutional memory or a printed sheet that might reference an obsolete revision. See [What Is a Work Instruction?](/learn/what-is-a-work-instruction).
+6. **In-process quality capture.** At the deburr-and-inspect step, the operator records measurements or a pass/fail against the inspection plan. A failed part gets flagged as nonconforming right there, not discovered three operations later.
+7. **Move to next operation.** Completed quantity moves to assembly; the traveler updates on its own so the next operator (and the planner watching the schedule) sees real, current status instead of a verbal "it's almost done."
+8. **Completion and backflush.** When the last operation closes, MES records finished quantity, backflushes the components consumed against the BOM, and posts actual labor/machine time and scrap. That data feeds real (not standard-only) job cost.
+9. **Ship.** The finished, traceable unit, with its full operation history, inspection results, and (if required) lot/serial genealogy, is ready to ship.
+
+That end-to-end thread (traveler, labor capture, quality capture, backflush, genealogy) is what MES means in practice. Everything else (dashboards, OEE, andon boards) sits on top of that core loop.
+
+## What shops need vs. the textbook definition
+
+The ISA-95 definition of MES is broad enough to include almost anything between planning and the machine controller, which is why vendors stretch the label to cover very different products. A shop evaluating MES is asking about a narrower, more concrete set of capabilities:
+
+| Capability | What it answers |
+|---|---|
+| Work order dispatch | What should this work center run next, and in what priority? |
+| Labor/time tracking | How much actual time did this job take, by operation? |
+| WIP tracking | Where, physically and in-process, is this job right now? |
+| Quality capture | Did this part pass its in-process inspection, and who signed off? |
+| Traceability | If a defect is found later, which lots/serials and operators does it trace back to? |
+| Downtime/OEE | How much of scheduled machine time was actually productive? |
+
+A shop running paper travelers and a whiteboard has none of this in a queryable form. Every answer requires walking the floor or calling someone. MES makes those answers live and queryable instead of tribal knowledge.
+
+## OEE and downtime: the metric MES makes possible
+
+Overall equipment effectiveness (OEE), the product of availability, performance, and quality, is one of the most cited MES outputs, and it shows why MES has to capture data continuously rather than at job completion. Availability requires knowing when a machine was running versus down, which means capturing start/stop and downtime-reason codes in real time, not just the finished quantity at the end of a shift. Performance requires comparing actual cycle time to standard cycle time per operation, which requires the same labor/machine time capture used for job costing. Quality requires the in-process inspection data described above. A shop that only records finished quantity at day's end can calculate a rough yield, but it cannot calculate OEE or diagnose why a work center is underperforming (downtime, slow cycles, or scrap) because it never captured the underlying event stream.
+
+## MES vs. ERP: where the line is
+
+The most common confusion is thinking MES and ERP compete for the same job. They don't. They operate on different time horizons and different data:
+
+| | ERP | MES |
+|---|---|---|
+| Time horizon | Days to months (plan) | Minutes to hours (execute) |
+| Core question | What should we build, buy, and bill? | What is actually happening right now on the floor? |
+| Primary data | Orders, BOMs, routings, costs, invoices | Actual labor time, actual scrap, actual quantities, inspection results |
+| Typical output | A released work order | A completed, traceable, costed work order |
+
+ERP hands MES a plan; MES hands ERP what happened, which feeds job costing, inventory updates, and the next planning cycle. Neither replaces the other. For the full three-way breakdown including where quality management fits, see [MES vs. ERP vs. QMS](/learn/mes-vs-erp-vs-qms).
+
+## Why MES and ERP are usually separate systems (and the problem that causes)
+
+Historically, shops bought ERP and MES from different vendors, often years apart, because ERP vendors were slow to build shop-floor execution and MES vendors focused on the floor with no accounting or purchasing. Most shops today run two systems that don't share a data model, connected by a middleware integration, a nightly batch sync, or a person re-keying data between them. Every seam in that chain is a place where the traveler says one thing and the ERP's inventory says another.
+
+## How Carbon does MES
+
+Carbon runs the entire work-order-to-shipment loop described above as one module of a single system, on the same Postgres data model as sales orders, purchasing, inventory, and accounting. It is not a bolted-on shop-floor add-in synced to the ERP overnight:
+
+- **Live traveler, not paper.** Operators work from a digital router/traveler that always reflects the current released revision, with current-revision work instructions attached at each operation.
+- **Real-time labor and quantity capture** posts directly to job cost. Actual vs. standard variance is visible the moment a job closes, not at month-end close.
+- **In-process quality lives in the same schema:** inspection points, nonconformance flagging, and lot/serial genealogy sit alongside the work order itself, which makes MES-vs-QMS a false choice on Carbon. See [What Is a QMS in Manufacturing?](/learn/what-is-a-qms-in-manufacturing).
+- **Backflush and inventory update happen in the same transaction** as operation completion, with no separate WIP reconciliation step.
+- **API and MCP access to shop-floor data.** Every work order, operation, and quality record is reachable over Carbon's REST API (rest.carbon.ms) and hosted MCP server, so a floor dashboard, a supplier portal, or an AI agent can read live production status instead of a nightly export.
+- **Open source.** The execution engine is in the public repo (github.com/crbnos/carbon), so you can see exactly how dispatch, backflush, and traceability are implemented.
+
+## Frequently asked questions
+
+### What does MES stand for?
+
+MES stands for manufacturing execution system, the software that manages and tracks production as it happens on the shop floor, between planning (ERP/MRP) and the machine controller.
+
+### Is MES the same as ERP?
+
+No. ERP plans and records the business transaction (orders, costs, invoices); MES executes and tracks the production event (labor time, quantities, quality results) that fulfills that plan. They operate on different time horizons and typically exchange data continuously.
+
+### Do small shops need MES, or is it only for large manufacturers?
+
+Any shop tracking work orders on paper or in spreadsheets is doing MES's job manually. The value (real-time WIP visibility, accurate job cost, traceability) scales down to small shops as much as it scales up. The barrier has historically been cost and implementation time, not shop size.
+
+### What's the difference between MES and a job traveler?
+
+A job traveler is the document (paper or digital) that follows a work order through its operations. MES is the system that generates, updates, and captures data against that traveler in real time. The traveler is an artifact MES produces, not a separate system.
+
+### Does MES replace quality management (QMS)?
+
+Not by itself, though the two overlap at in-process inspection. A full QMS also covers document control, CAPA, supplier quality, and audits beyond what happens during a single work order. See [What Is a QMS in Manufacturing?](/learn/what-is-a-qms-in-manufacturing) for the boundary.
+
+## See MES running on real work orders
+
+If your shop floor still runs on paper travelers or a system that doesn't talk to your ERP, see what a unified execution loop looks like end to end. [Try Carbon free for 30 days](/pricing) at https://app.carbon.ms, or explore the execution engine's source on [GitHub](https://github.com/crbnos/carbon).

@@ -1,0 +1,85 @@
+---
+title: "Odoo upgrade problems: why customizations break every version"
+publishedAt: "2026-08-04"
+summary: "Why Odoo upgrade issues keep recurring, what the migration tax actually costs, and how a stable REST API changes the equation."
+tag: "Odoo"
+author: "chase"
+---
+
+Odoo upgrade issues follow a predictable pattern: the base platform moves forward every year, your customizations don't move with it automatically, and the gap between the two becomes your problem to close again on every major version. This is a structural consequence of how deep customization works in a monolithic application where your extensions live inside the same codebase as the platform itself, not a bug in Odoo's release process.
+
+If you're mid-implementation or already live on Odoo, understanding why this happens, and what mitigates it, matters more than any single upgrade guide, because the pattern repeats every 12 to 18 months for as long as you run the platform.
+
+## Why customizations break on upgrade
+
+Odoo ships a new major version annually. Each release can change model fields, method signatures, view inheritance chains, and the ORM behavior that custom modules depend on. When your customization was written as a Python module that inherits from and extends Odoo's own classes (the standard, supported way to customize Odoo), it is, by design, tightly coupled to the exact shape of the version it was written against.
+
+That coupling is invisible until you try to upgrade. A custom module that adds a field to the manufacturing order, overrides a costing method, or hooks into a workflow signal can silently break, partially break, or fail to install against the next major version, because the parent class it extends changed shape. Community forums and partner post-mortems describe the same experience: the more a shop customized Community or Enterprise to fit its process, the more manual rework each upgrade requires. Inheritance chains need re-validating, deprecated APIs need replacing, and views that extended a screen Odoo redesigned need rebuilding.
+
+This is separate from, and compounds, the general implementation risk we cover in [Why Odoo implementations fail](/learn/why-odoo-implementations-fail). An implementation can go well and still leave you with an upgrade problem a year later, because the customizations that made the initial go-live successful for your specific process are exactly the ones an upgrade puts at risk.
+
+## The migration tax, concretely
+
+Call it the migration tax: the recurring cost of keeping custom code working across versions, paid whether or not the upgrade adds anything you need. It shows up in a few concrete ways:
+
+- **Partner hours, again.** The same partner (or a new one, at a discovery-call premium) has to re-read and re-validate every custom module against the new version's API surface before the upgrade can go ahead.
+- **Regression testing.** Every customized workflow (costing, scheduling exceptions, custom approval chains) needs re-testing end to end, because a passing test suite on the old version tells you nothing about the new one.
+- **Deferred upgrades.** Faced with this cost, many shops skip versions, staying on an older release rather than paying the migration tax annually. That solves the short-term cost problem and creates a bigger one: the gap between your version and current grows, security patches and official support lapse sooner, and the eventual forced upgrade (often triggered by a hosting or Enterprise Odoo Online end-of-life date) has to cross more version jumps at once.
+- **Odoo Online's forced cadence.** Odoo Online (Odoo's own SaaS) has historically required customers to stay closer to current versions than self-hosted or Odoo.sh deployments, which removes the "just don't upgrade" option for that hosting tier specifically.
+
+None of this means the customizations were a mistake. Often they encoded a real business requirement the base product didn't cover. It means the requirement now has a recurring maintenance bill attached, indefinitely.
+
+## Illustrative example: what one upgrade cycle can cost
+
+The exact numbers below are an illustrative example, not a benchmark or a real customer's invoice. Actual costs vary hugely by partner rate, number of customizations, and version gap.
+
+| Line item | Example estimate |
+|---|---|
+| Partner discovery + upgrade scoping | 10 to 20 hrs |
+| Re-validating custom modules (say, 6 modules) | 30 to 80 hrs |
+| Regression testing customized workflows | 20 to 40 hrs |
+| Data migration / schema changes | 15 to 30 hrs |
+| Total, at an illustrative $150/hr partner rate | $11,250 to $25,500 |
+
+Multiply that by every major version you cross, and by however many years you run the platform, and the "free" open-source base license starts looking different once upgrade labor is part of the total cost of ownership.
+
+## What mitigates this
+
+A few practices reduce upgrade pain, short of leaving the platform:
+
+1. **Minimize server-side inheritance.** Prefer configuration (new fields via Studio, workflow rules, automated actions) over custom Python where the requirement allows it. Configuration tends to survive upgrades better than code that overrides core methods.
+2. **Keep a customization registry.** A living document of every custom module, what business requirement it serves, and which core models/methods it touches turns "re-validate everything" into "re-validate these twelve specific things."
+3. **Upgrade on a fixed cadence, not opportunistically.** Skipping versions to save money now reliably costs more later, because the eventual jump spans more changes at once.
+4. **Isolate integrations behind a stable interface.** If external systems talk to Odoo through a thin, versioned API layer you control, an internal refactor is less likely to break the outside world. The upgrade risk stays contained to the module, rather than spreading to everything downstream.
+
+That last point describes the architecture problem underneath all of this: the tighter your extensions are woven into the platform's internals, the more every internal change becomes your change too.
+
+## The upgrade-safe alternative: extend over a stable API
+
+The structural fix is not needing deep internal customization to extend the system in the first place, rather than a better upgrade process. That's the premise behind [API-first ERP](/learn/api-first-erp): if every capability of the system is reachable over a REST API and treated as a stable, public interface, you extend the platform by building against that interface rather than by modifying the platform's internals.
+
+Carbon is built this way from the start. Every table in Carbon's Postgres data model is exposed over a REST API (rest.carbon.ms) and a hosted MCP server: the full backend, not a curated subset picked to look good in a sales deck. Because Carbon is also source-available, if you need to modify core behavior, you're changing your own copy of a codebase you can see in full, with version history you control, rather than waiting on a partner's read of what changed upstream. And because most extension happens over the stable API surface (a scheduling rule that reads live data and writes back a decision, a custom costing report, an integration with a CAD tool or a customer portal), an internal Carbon release doesn't threaten it the way an Odoo major version threatens a module that inherited from Odoo's internal classes.
+
+We lay out the fuller platform comparison, including pricing and deployment, on the [Carbon vs. Odoo comparison page](/compare/odoo). The upgrade-specific claim is narrower and worth stating precisely: building against a public, stable API is more upgrade-resilient than extending a monolith's internal class hierarchy, because the interface you depend on is the one designed to stay stable, not an implementation detail that happened to be reachable.
+
+## Frequently asked questions
+
+### Do all Odoo customizations break on every upgrade?
+
+Not all, and not necessarily completely. Configuration done through supported tools (Studio fields, automated actions, standard workflow settings) tends to survive upgrades reasonably well. Deep customizations that override core Python methods or inherit from internal classes are the ones most likely to require rework, because they depend on implementation details that Odoo is free to change between major versions.
+
+### How often does Odoo release major versions?
+
+Odoo has followed roughly an annual major-version cadence. Each version can be a real upgrade project for a customized instance, not a drop-in update. That's why many shops budget for upgrades as a recurring line item, not a one-time event.
+
+### Can I just stay on an old Odoo version indefinitely?
+
+You can, but official support and security patches for older versions eventually lapse, and Odoo Online specifically has enforced upgrades on a shorter timeline than self-hosted deployments. Staying on an old version defers the migration tax; it doesn't eliminate it, and the eventual multi-version jump tends to cost more than staying current would have.
+
+### Is this upgrade problem unique to Odoo?
+
+No. Any sufficiently customized monolithic application faces some version of this tension, and we cover the broader pattern in [why ERP implementations fail](/learn/why-erp-implementations-fail). Odoo's specific exposure comes from how common deep Python customization is in its ecosystem, combined with an annual major-version cadence.
+
+## Try an upgrade-safe alternative
+
+If recurring upgrade cost is part of what's driving your ERP evaluation, it's worth seeing what building on a stable, full-coverage REST API feels like in practice. [Try Carbon free for 30 days](/pricing), browse the API and MCP docs at [docs.carbon.ms](https://docs.carbon.ms), or read the source directly on [GitHub](https://github.com/crbnos/carbon).

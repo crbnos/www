@@ -1,0 +1,95 @@
+---
+title: "21 CFR Part 11 for an electronic device history record (DHR)"
+publishedAt: "2026-07-20"
+summary: "21 CFR Part 11 compliance for an electronic device history record: audit trails, e-signatures, and access controls a manufacturing system needs."
+tag: "Compliance"
+author: "chase"
+---
+
+21 CFR Part 11 is the FDA regulation that governs when electronic records and electronic signatures can substitute for paper records and handwritten signatures. For a device manufacturer replacing paper travelers with an electronic device history record (DHR), Part 11 compliance means three concrete things: every relevant record change has a secure, time-stamped audit trail; every electronic signature is attributable to one specific person and can't be reused or forged; and access to the system is controlled and verified. Get those three things right and an electronic DHR is a stronger record than paper ever was, while meeting Part 11.
+
+Most 21 cfr part 11 compliance content targets IT and regulatory teams evaluating software in the abstract. This is the version for the manufacturing floor: what has to be true about the system generating your device history record, item by item.
+
+## What Part 11 covers
+
+Part 11 applies whenever a company chooses to use electronic records or electronic signatures to meet an FDA record-keeping requirement. For device makers, that includes the device history record required under the Quality System Regulation (21 CFR 820) / ISO 13485. Part 11 doesn't require you to go electronic. It defines the conditions under which an electronic DHR is acceptable in place of the paper traveler, signed inspection sheet, and filed lot record it replaces.
+
+The regulation splits into two halves: requirements for **electronic records** (subpart B) and requirements for **electronic signatures** (subpart C). Both matter for a DHR, because a DHR is a record, and the sign-offs on it (operator completed, inspector accepted, quality released) are signatures.
+
+## Electronic record requirements that touch a DHR
+
+| Requirement (Part 11) | What it means | What a DHR system needs |
+|---|---|---|
+| System validation | The system must be validated to ensure accuracy, reliability, and consistent performance | Documented validation of the platform, revalidated on significant changes |
+| Ability to generate accurate copies | Records must be reproducible for inspection, review, and FDA copying | Export/print a complete DHR in human-readable form on demand |
+| Record protection | Records must be protected to enable accurate retrieval throughout the retention period | Backups, retention policy matching device record requirements (typically device lifetime + 2 years, or longer per your quality system) |
+| Access limited to authorized individuals | Only authorized users can create, modify, or delete records | Role-based access control, unique logins, no shared credentials |
+| Secure, computer-generated, time-stamped audit trails | Changes to a record are logged automatically, not manually, without obscuring the original entry | System-generated audit trail on every field change, retained as long as the record itself |
+| Operational system checks | The system enforces the correct sequence of steps and events | Workflow enforcement: you can't record a final inspection before the operations it depends on are complete |
+| Authority checks | The system verifies a user's authority before allowing an action | Permission checks tied to role, not just login |
+| Device checks (as appropriate) | Verifying the validity of the source of data input | Restricting who can key results from which terminal/device |
+
+The audit trail requirement is the one that trips up systems retrofitted for Part 11 after the fact: the system has to generate it automatically, timestamp it, and preserve the original entry when a value is changed rather than overwrite it. "Who changed this inspection result, from what value, to what value, and when" has to be answerable without asking anyone.
+
+## Electronic signature requirements
+
+Under Part 11, an electronic signature is more than a checkbox or a typed name: it's a legally binding act, as rigorous as a handwritten signature. The requirements:
+
+- Uniquely identifies one individual and is never reused or reassigned to anyone else.
+- Requires two distinct identification components (e.g., a user ID and password) for the first signing in a session, with at least one component re-entered for subsequent signings in the same continuous session.
+- Is permanently linked to its record so the signature can't be copied, transferred, or applied to falsify a different record.
+- Displays the signer's printed name, the date and time of signing, and the meaning of the signature (reviewed, approved, released) alongside the record.
+- Is backed by written certification to the FDA (once, at first use) that electronic signatures are the legally binding equivalent of handwritten signatures.
+
+For a DHR, this shows up at every sign-off point: an operator signing off that an operation was completed, an inspector signing an acceptance record, and quality signing the final release. Each of those has to carry a distinct "meaning" (completed, accepted, released), not a generic "approved" stamp that doesn't say what was being attested to.
+
+## Building an electronic DHR that meets Part 11: a checklist
+
+- [ ] Each DHR record ties to a specific part number, revision, and lot/serial number
+- [ ] Every field capturing a quality-relevant value (dimension, torque, test result) is entered directly by the person performing the operation, not transcribed later
+- [ ] Every signature captures signer identity, timestamp, and the specific meaning of that signature (completed / inspected / released)
+- [ ] Changes to any signed or submitted value create a new audit trail entry rather than overwriting the original
+- [ ] The system enforces sequence, so a step can't be signed off before its prerequisite steps are complete
+- [ ] Access is role-based, with unique credentials per user and no shared shop-floor logins
+- [ ] A complete, human-readable DHR can be exported or printed on demand for an FDA inspector
+- [ ] The platform itself has a documented validation record, revalidated when the system changes materially
+- [ ] Retention meets or exceeds your quality system's DHR retention requirement
+
+## A worked example: one traveler line, two ways
+
+Say an operator completes a torque-to-spec operation on a surgical instrument component, and the spec calls for 12 in-lb ± 1 in-lb.
+
+**Paper traveler:** the operator writes "12.2" on the traveler and initials it. A supervisor later re-keys the value into a spreadsheet for the DHR file. If the value gets mis-transcribed as "1.22," nothing catches it until, potentially, a failure investigation months later.
+
+**Electronic DHR:** the operator enters 12.2 directly into the system at the workstation, which validates it against the 12±1 spec in real time and flags it before the operator moves to the next step. The entry carries the operator's authenticated identity and a timestamp automatically, with no re-keying, no transcription step, and no separate spreadsheet to reconcile against the "real" record.
+
+The second version does more than clear Part 11 on a technicality: it removes the exact failure mode (manual transcription) that produces most real-world DHR discrepancies.
+
+## Why this belongs in the same system as production
+
+A recurring failure pattern: a QMS module generates the DHR, but the production data (what lot was consumed, which operator ran the step, what the routing said the spec should be) lives in a separate ERP or MES. Every DHR then requires cross-referencing two systems that don't share a data model, and Part 11's requirement for an accurate, complete record depends on that cross-reference being done correctly, every time, forever. See [what is lot and serial traceability](/learn/what-is-lot-serial-traceability) for how traceability data has to connect back to the exact production record a DHR describes.
+
+## How Carbon supports Part 11 electronic DHRs
+
+Carbon generates the device history record from the same production data it uses to run the work order. The person doing the work captures lot consumption, operation completion, inspection results, and signatures once, on the same Postgres data model as the rest of the shop. Every change to a signed or submitted record creates a system-generated audit trail entry rather than overwriting the original value, and role-based access control ties signatures to individual, authenticated users rather than shared logins. Because Carbon is source-available, you can base your Part 11 validation effort on inspecting real behavior rather than trusting a vendor's black-box claims. For the broader ISO 13485 context these DHRs sit inside, see [ISO 13485 QMS software requirements](/learn/iso-13485-qms-software) and [medical device manufacturing software](/learn/medical-device-manufacturing-software).
+
+## Frequently asked questions
+
+### Does 21 CFR Part 11 require electronic records?
+No. Part 11 doesn't mandate going electronic; it defines the conditions (audit trails, e-signatures, access control, validation) under which electronic records and signatures are acceptable substitutes for paper.
+
+### What's the difference between an electronic signature and a digital signature under Part 11?
+An electronic signature is any compliant electronic means of signing (typically two-factor: user ID plus password). A digital signature uses cryptographic methods (like PKI) to bind identity to a record. Part 11 accepts either, as long as the underlying requirements (uniqueness, non-reassignment, linkage to the record) are met.
+
+### How long do device history records need to be retained?
+Under 21 CFR 820.180, DHRs must be retained for a period equivalent to the design and expected life of the device, and in no case less than two years from the date of release for commercial distribution. Check your specific quality system procedure for the applicable retention period.
+
+### Can a spreadsheet be Part 11 compliant?
+Technically yes, if it has validated access controls, audit trails, and electronic signature controls meeting all of subpart B and C. In practice, general-purpose spreadsheet tools rarely meet the audit trail and signature-linkage requirements without significant custom controls layered on top.
+
+### Does Part 11 apply outside the US?
+Part 11 is an FDA regulation, so it applies to records supporting FDA submissions and quality systems, but EU MDR and other regulators have similar electronic record/signature expectations. Building to Part 11's standard generally satisfies the intent of both.
+
+## Try Carbon's electronic DHR on real production data
+
+If your device history records are still assembled from a paper traveler and a separate spreadsheet, [try Carbon free for 30 days](/pricing) and see audit trails, e-signatures, and DHR generation running against the same work order data your devices are built from. Prefer to review the validation surface yourself first? The source is on [GitHub](https://github.com/crbnos/carbon).

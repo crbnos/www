@@ -1,0 +1,102 @@
+---
+title: "What is a QMS in manufacturing? A practical guide"
+publishedAt: "2026-08-17"
+summary: "What is a QMS in manufacturing? A quality management system controls documents, nonconformances, CAPA, and audits so defects get caught and fixed."
+tag: "Manufacturing basics"
+author: "chase"
+---
+
+A quality management system (QMS) in manufacturing is the set of processes, records, and software that a shop uses to make sure parts conform to spec, defects get caught and root-caused, and every quality decision is documented well enough to survive an audit. It's the connective tissue between your incoming inspection, work orders, nonconformance process, and corrective actions, not a single feature.
+
+For unregulated shops, a QMS can be a lightweight set of habits: a checklist, a spreadsheet, a binder of signed travelers. For anyone selling into aerospace, defense, or medical device supply chains, a QMS is a contractual requirement: your customer's quality clause references a standard (ISO 9001, AS9100, ISO 13485), and an auditor will eventually ask to see the paper trail. Understanding what a QMS is, concretely, is the first step to building one that holds up.
+
+## What a quality management system manages
+
+Strip away the acronyms and a manufacturing QMS answers five questions, every time a part moves through the shop:
+
+1. **Is this the right way to make it?** Controlled work instructions, drawings, and specs.
+2. **Did we make it right?** Inspection results, first article data, in-process checks.
+3. **What do we do when we didn't?** Nonconformance reporting and disposition (use-as-is, rework, scrap, return to supplier).
+4. **Why did it happen, and how do we stop it recurring?** Root cause analysis and corrective/preventive action (CAPA).
+5. **Can we prove all of the above happened, on this specific part, six months from now?** Records, revisions, and traceability.
+
+A QMS is the system, procedural and digital, that keeps those five answers consistent, current, and auditable across every job, operator, and shift.
+
+## The core pillars of a manufacturing QMS
+
+| Pillar | What it controls | Typical record |
+|---|---|---|
+| Document control | Revision level, approval, and distribution of drawings, specs, and work instructions | Controlled document register, ECO log |
+| Nonconformance management | What happens when a part or process fails to meet spec | NCR (nonconformance report), disposition |
+| CAPA | Root cause and the fix that prevents recurrence | 8D, 5-why, corrective action log |
+| Internal & external audits | Whether the system is actually being followed | Audit schedule, findings, closure evidence |
+| Training & competency | Whether operators are qualified for the operations they run | Training matrix, certification records |
+| Supplier quality | Incoming material and outsourced-process conformance | Certs of conformance, incoming inspection records |
+| Calibration | Whether measurement equipment can be trusted | Cal schedule, gage R&R, cal certificates |
+
+Every ISO 9001-family standard (9001, AS9100, ISO 13485, IATF 16949) is built around some version of this same list; the differences are in emphasis and rigor, not structure. AS9100 adds first article inspection and counterfeit-parts controls; ISO 13485 adds design controls and device history records; IATF adds APQP and PPAP. If you're selling into aerospace specifically, see our [AS9100 audit checklist](/learn/as9100-for-small-shops); for medical device makers, see [what ISO 13485 requires from software](/learn/iso-13485-qms-software).
+
+## Nonconformance to CAPA: a worked example
+
+Say a CNC shop runs 500 brackets and, during final inspection, the inspector finds 12 parts with a bore diameter of 0.2510 in. against a spec of 0.2500 in. ± 0.0005 in.
+
+- **Nonconformance rate:** 12 ÷ 500 = 2.4%
+- **NCR opened:** part number, operation, quantity affected, measured value vs. spec, inspector, date.
+- **Disposition:** engineering reviews the 12 parts. At 0.2510 in. the bore is oversized but the mating pin is a slip fit up to 0.2515 in., so engineering dispositions the parts "use as is" with a documented rationale rather than scrap or rework.
+- **Root cause:** the CAPA team pulls the tool offset log and finds the reamer was not compensated after a mid-run tool change. Root cause: missing in-process check after tool changes.
+- **Corrective action:** add a mandatory dimensional check to the router immediately after any tool change on that operation, and update the work instruction.
+- **Preventive action:** review the other 40 active routers that use reaming operations for the same gap.
+- **Effectiveness check:** re-audit the operation after 30 days / the next 5 runs to confirm the nonconformance rate drops to zero.
+
+That entire chain (NCR → disposition → root cause → corrective action → effectiveness check) is what an auditor checks for when they "pull a thread" during a QMS audit. If any link is missing or undocumented, it's a finding.
+
+## Document control: revisions, approvals, and effectivity
+
+The most common audit finding in small and mid-size shops isn't a bad part. It's an operator running a job from an uncontrolled or superseded print. Document control has to answer three things for every controlled document:
+
+- **What revision is current**, and who approved it and when.
+- **Where it's distributed** (or, in a digital system, that there's only one place it can be viewed, which eliminates the distribution question entirely).
+- **When it became effective**, so you can prove which revision applied to a specific work order or serial number.
+
+This is where a QMS bolted onto a shared drive or a binder starts to strain: revision control by filename ("bracket-rev-c-FINAL-v2.pdf") is exactly the failure mode auditors are trained to find.
+
+## Audits: internal, customer, and certification
+
+A QMS supports three kinds of audits, and the same records need to serve all three:
+
+| Audit type | Who runs it | What it checks |
+|---|---|---|
+| Internal audit | Your own quality team | Whether the QMS procedures are actually followed day to day |
+| Customer audit | Your customer's supplier quality engineer | Whether you can make their part conformant and prove it |
+| Certification/surveillance audit | Accredited third-party auditor (for ISO 9001, AS9100, ISO 13485) | Whether the documented system meets the standard's clauses |
+
+A well-run QMS treats internal audits as a rehearsal for the other two: the same NCR log, CAPA log, and training matrix should answer every auditor's questions without special preparation.
+
+## QMS vs. a quality module bolted onto an ERP
+
+Many ERPs offer a quality "module" that amounts to a checkbox and a free-text field on a work order. The gap shows up under audit pressure: can you pull every nonconformance tied to a specific supplier lot, across every work order, in one query? Can you show a CAPA's effectiveness check tied to the work orders it affected? If quality data lives in a system that doesn't share a data model with production and inventory, someone is re-keying part numbers, lot numbers, and work order numbers between systems, and that gap is where records go stale or disagree. See [MES vs. ERP vs. QMS](/learn/mes-vs-erp-vs-qms) for how the three systems typically divide responsibility.
+
+## How Carbon handles QMS
+
+Carbon runs quality on the same Postgres data model as production, inventory, and purchasing, so nonconformances, CAPA, document control, and training records reference the same work orders, lots, and part numbers used on the shop floor, not a shadow copy of them. Because every table is reachable over a [REST API](/developers), a nonconformance raised on the floor can trigger a hold on inventory or a block on shipping automatically, and audit evidence (document revisions, sign-offs, effectiveness checks) is queryable rather than filed away in a binder. Carbon is audit-ready for CMMC/NIST 800-171: the platform implements the access-control, audit-logging, and encryption controls the standard requires. It's also self-hostable, including in ITAR-capable environments on Enterprise, which matters if your QMS has to satisfy a defense or aerospace customer's flow-down requirements as well as your own.
+
+## Frequently asked questions
+
+### What does QMS stand for in manufacturing?
+Quality management system: the documented processes and records a manufacturer uses to control product quality, from incoming material through final inspection and after a part ships.
+
+### Is ISO 9001 the same thing as a QMS?
+No. ISO 9001 is a standard that specifies requirements for a QMS. A QMS is the actual system a company runs; ISO 9001 certification means a third party has verified that system meets the standard.
+
+### Do small shops need a formal QMS?
+Only if a customer contract or industry (aerospace, defense, medical) requires it, or if the shop is losing money to rework and scrap it can't explain. Below that threshold, a lightweight version of the same pillars (document control, an NCR log, a simple CAPA process) still pays for itself.
+
+### What's the difference between a QMS and MES quality features?
+An MES tracks execution in real time (what's running, where, and how long it took). A QMS governs whether what was made is acceptable and what happens when it isn't. Modern platforms increasingly combine both. See [MES vs. ERP vs. QMS](/learn/mes-vs-erp-vs-qms) for the full breakdown.
+
+### What's the difference between a nonconformance and a CAPA?
+A nonconformance (NCR) documents a single instance of a part or process failing to meet spec, plus its disposition. A CAPA is the broader investigation into why it happened and the corrective/preventive action taken. One CAPA can be opened in response to a pattern across multiple NCRs.
+
+## Try Carbon's QMS on real data
+
+If your quality process is still living in a binder or a disconnected module, [try Carbon free for 30 days](/pricing) and see nonconformances, CAPA, and document control running against the same data as your work orders and inventory. Prefer to look under the hood first? The source is on [GitHub](https://github.com/crbnos/carbon).

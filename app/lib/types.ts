@@ -32,4 +32,9 @@ export const authors: Record<string, Author> = {
     avatar: "/faces/brad.webp",
     title: "Co-Founder",
   },
+  chase: {
+    name: "Chase Foster",
+    avatar: "/faces/chase.png",
+    title: "Co-Founder and CEO",
+  },
 } as const;

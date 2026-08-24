@@ -1,0 +1,78 @@
+---
+title: "What is a digital thread, from CAD to as-built"
+publishedAt: "2026-08-10"
+summary: "What a digital thread in manufacturing is: the connected CAD-to-BOM-to-routing-to-as-built chain, why it breaks, and how to build one."
+tag: "Manufacturing basics"
+author: "chase"
+---
+
+A digital thread is the connected, traceable chain of data that links a product's design to its manufacturing plan to the record of how a specific unit was built. A CAD model flows into a bill of materials, the BOM flows into a routing, the routing generates work orders, and the work orders capture an as-built record. Every link in that chain stays connected to the same underlying part, revision, and unit instead of becoming a disconnected copy the moment it crosses into the next system.
+
+The term gets used loosely, so define what makes a thread a *thread* rather than a set of systems that each hold some of the data. A digital thread means you can start at a CAD model and trace forward to every unit ever built from it, or start at a specific serial number on a customer's dock and trace backward to the exact drawing revision, routing, and operator sign-offs that produced it, without manually reconciling five different systems to do it.
+
+## The CAD → BOM → routing → as-built chain
+
+A digital thread for a manufactured part runs through four stages:
+
+1. **CAD (design).** The 3D model and drawing define the part's geometry, tolerances, and revision. This is where engineering intent lives.
+2. **BOM (what it's made of).** The bill of materials defines every component and quantity needed. It usually starts as an Engineering BOM (EBOM) reflecting design structure, then gets reconciled into a Manufacturing BOM (MBOM) reflecting build sequence. See [what a bill of materials is](/learn/what-is-a-bill-of-materials) for the difference between BOM types.
+3. **Routing (how it's built).** The routing defines the sequence of operations, work centers, and standard times required to turn the BOM into a finished unit. See [what a router / job traveler is](/learn/what-is-a-router-traveler).
+4. **As-built (what happened).** The work order execution record captures reality as it diverges (or doesn't) from the plan: lot and serial numbers consumed, operator sign-offs, in-process inspection results, actual times. See [lot & serial traceability, explained](/learn/what-is-lot-serial-traceability).
+
+A true digital thread means a revision change at step 1 is visible at step 4. You can tell which serial numbers were built against Rev C versus Rev D. And a nonconformance discovered at step 4 traces back to the exact drawing, BOM line, and routing operation involved, not "the part number, sometime last quarter."
+
+## Where the thread usually breaks
+
+Most shops don't lack data. They lack a *connected* thread. The data exists, stranded in separate systems that reference each other by nothing more durable than a part number typed into two places.
+
+- CAD to BOM gets re-keyed by hand. Engineering releases a model in CAD/PLM, and someone re-types the component list into the ERP as a new BOM. Every re-key is a chance to transpose a quantity or miss a revision.
+- BOM to routing runs disconnected from the part. The routing lives in a separate module or spreadsheet, referenced by part number rather than by a specific BOM revision, so when the BOM changes, nothing forces anyone to check the routing against it.
+- Routing to as-built gets captured on paper. Someone prints the traveler, fills it out by hand, and files it. The as-built record exists but isn't queryable, so reconstructing what happened means pulling a physical folder.
+- Revision changes don't propagate. An ECO updates the drawing, but WIP already released against the old revision has no clean way to show which units are affected. See [BOM revision control without breaking production](/learn/bom-revision-control) for how to handle this without a work stoppage.
+
+Each of these breaks is survivable on its own. Together, they're why a recall, an audit, or a customer's "what did you build for us in March" question turns into a multi-day fire drill instead of a query.
+
+## Why the digital thread matters beyond compliance
+
+People often frame digital thread as a defense and aerospace compliance requirement, and it matters there, but the payoff also shows up in ordinary daily operations:
+
+- **Faster root cause.** When a customer reports a failure, tracing back to the exact lot, operator, machine, and drawing revision in minutes instead of days shrinks both the investigation and the blast radius of the corrective action.
+- **Confident engineering changes.** Engineering can see which open work orders and which field units a proposed change affects before releasing it, instead of finding out after the fact.
+- **Real job costing.** As-built data (actual time, scrap, and rework) feeding back into cost records makes [standard cost](/learn/how-to-cost-a-machined-part) numbers trustworthy rather than aspirational.
+- **Fewer transcription errors.** Every manual re-key between CAD, ERP, and the shop floor is a place where a dimension, quantity, or revision letter can get typed wrong. A connected thread removes the re-key itself, not only the record-keeping burden.
+
+## Digital thread and regulated manufacturing
+
+For aerospace, defense, and medical device manufacturers, a digital thread is close to a hard requirement, even where no single regulation uses the exact term. AS9100's configuration management requirements, 21 CFR Part 820's Device History Record requirements, and DFARS cybersecurity/traceability flowdowns all assume you can answer "show me how this unit was built, against what design, by whom" with a query rather than an investigation. See [AS9100 for small shops](/learn/as9100-for-small-shops), [21 CFR Part 11 & electronic DHRs](/learn/21-cfr-part-11-electronic-dhr), and [ITAR compliance for manufacturers](/learn/itar-compliance-for-manufacturers) for how those requirements translate into system design.
+
+## How Carbon builds the thread
+
+Carbon's Onshape integration pulls CAD models and BOM structure directly into the ERP, so a released assembly in Onshape becomes a BOM in Carbon without manual re-entry. Because Carbon includes a native 3D/STEP viewer, that same model shows up on the shop floor at the work order rather than locked in a CAD seat nobody on the floor can open. See [from CAD to BOM: Onshape to ERP sync](/learn/cad-to-bom-onshape-erp-sync) for the mechanics of that integration.
+
+From there, the thread stays connected because ERP, MRP, MES, and QMS all run on one Postgres data model rather than separate systems stitched together with exports and imports. A BOM, its routing, its work orders, and its as-built quality records reference the same underlying part and revision. Tracing from a CAD change forward to affected serial numbers, or from a customer complaint backward to the drawing revision that produced it, is a query against one database rather than a reconciliation project across three. Every table is reachable over a REST API (rest.carbon.ms), so the thread is programmatically accessible: build your own traceability reports, or let an AI agent query it directly through Carbon's hosted MCP server. See [API-first ERP: what a real manufacturing API enables](/learn/api-first-erp) for what that unlocks in practice.
+
+## Frequently asked questions
+
+### Is a digital thread the same thing as PLM?
+
+No. PLM (Product Lifecycle Management) typically manages design data on its own: CAD, revisions, engineering change. A digital thread extends that connection through manufacturing execution and into the as-built record, which most PLM systems don't own.
+
+### Do I need a digital thread if I'm not in aerospace or defense?
+
+The compliance pressure is highest in regulated industries, but the operational benefits apply to any manufacturer with more than a handful of parts and revisions: faster root cause, fewer transcription errors, trustworthy job costs.
+
+### What's the difference between a digital thread and a digital twin?
+
+A digital thread is the connected chain of data across a product's lifecycle (design, plan, build, as-built). A digital twin is typically a simulated model of a specific physical asset or process, often used to predict behavior. They're related concepts but answer different questions: a thread is about traceable data, a twin is about simulation.
+
+### Can I build a digital thread with a mix of separate CAD, ERP, and MES tools?
+
+Yes, with integration work, but every integration point is a place the thread can break when one system updates its schema or API. A single data model that covers CAD-linked BOMs, routings, and execution reduces the number of seams that can fail.
+
+### Where does traceability data (lot/serial) fit into a digital thread?
+
+Lot and serial traceability is the as-built end of the thread. It lets you connect a specific physical unit back through its routing and BOM to its design. See [lot & serial traceability, explained](/learn/what-is-lot-serial-traceability) for the mechanics.
+
+## Try it yourself
+
+If you want CAD, BOM, routing, and as-built records connected on one data model instead of stitched together after the fact, [try Carbon free for 30 days](/pricing), or explore the [source on GitHub](https://github.com/crbnos/carbon) to see how the thread is modeled end to end.

@@ -1,0 +1,115 @@
+---
+title: "ERP for machine shops: a 2026 buyer's guide"
+publishedAt: "2026-07-01"
+summary: "ERP for machine shops: quoting, routing, machine-hour costing, and scheduling, compared across ProShop, JobBOSS, Global Shop, Fulcrum, Odoo, and Carbon."
+tag: "Industry guides"
+author: "chase"
+---
+
+An ERP for machine shops has to do something most general-purpose business software never has to: turn a spinning tool, a fixture, and an operator's time into an accurate cost, in real time, across dozens of jobs running at once. Accounting-first ERPs and generic MRP tools treat a job shop like a repetitive manufacturer with a stable BOM, when the work is closer to running a different small factory for every work order. This guide covers what a machine shop needs, how the major vendors compare, and where an open alternative like Carbon fits.
+
+## What a machine shop needs from an ERP
+
+Machine shops, whatever the mix of CNC, swiss, EDM, and multi-axis work, share a set of requirements that don't show up on a generic ERP feature list:
+
+- **Fast, accurate quoting.** Most shops quote against an RFQ with a drawing rather than a catalog SKU. The system needs to estimate machine time, material, setup, and outside processing (heat treat, plating, anodize) fast enough to turn quotes around same-day without guessing margin away. See [Job shop quoting: RFQ to margin-protected quote](/learn/job-shop-quoting-rfq-to-quote) for the math.
+- **Routing and work centers that reflect real machines.** A router needs to model setup time, cycle time, and machine-specific capability, since a 5-axis job can't be assigned to any open machine. A generic "operation 10, operation 20" placeholder won't do.
+- **Machine-hour rate costing.** Job cost has to roll up machine time and labor against a real machine-hour rate. An average shop rate hides which jobs make money. [How to cost a machined part](/learn/how-to-cost-a-machined-part) walks through this calculation on a real part.
+- **Finite capacity scheduling.** With dozens of jobs competing for the same five machines, a shop needs to see real load by work center. An infinite-capacity Gantt chart assumes every machine has unlimited hours.
+- **Traceability.** Aerospace and medical work (AS9100, ISO 13485) requires lot and material certs traced from raw stock to finished part, plus first article inspection records that survive an audit.
+- **Inventory that holds up.** Raw bar stock, WIP, tooling, and finished goods all need real quantities, not a spreadsheet reconciled once a month.
+- **Purchasing tied to jobs**, so a late outside-process vendor shows up as a schedule risk on the job it affects instead of a surprise the day it's due.
+
+Most job shops start on QuickBooks plus spreadsheets and hit a wall around 15-30 employees, when the number of open jobs makes manual scheduling and costing untenable. At that point, the choice is which ERP fits a machine shop's workflow instead of forcing one designed for a different kind of manufacturer.
+
+## The vendor landscape
+
+### ProShop
+
+ProShop is built by machinists, for machinists, and it shows. The quality management and work instruction tooling (especially for AS9100 shops) is some of the most detailed in this list, with traveler and document control built around job-shop workflows. The tradeoff is that ProShop is quote-based and implementation-heavy, and while it covers quality and shop floor well, native financials and accounting are thinner, so many shops run it alongside a separate accounting package.
+
+**Best for:** AS9100/aerospace machine shops that prioritize quality documentation and traveler control above all else.
+
+### JobBOSS² (ECI)
+
+JobBOSS² has been a job-shop staple for decades and covers quoting, scheduling, and job costing with depth accumulated over a long product life. It's a known quantity with a large installed base of machine shops, which means plenty of implementation partners and peer knowledge. The tradeoff is a dated architecture and UI by 2026 standards, quote-based pricing, and an API and integration story that lags newer platforms. Extending it usually means working through ECI's partner ecosystem rather than a documented public API.
+
+**Best for:** established shops that want a long-proven, job-shop-specific tool and aren't prioritizing API extensibility.
+
+### Global Shop Solutions
+
+Global Shop is a broad, all-in-one ERP with real manufacturing depth: scheduling, shop floor data collection, and CRM in one system, aimed at small-to-mid shops that want a single vendor for everything. It's a solid generalist choice for a shop that wants one system to own the whole workflow. The limitation is that breadth comes with complexity. Implementations run longer than lighter-weight competitors, pricing is quote-based, and it's an on-premise-lineage product now offered as cloud, which shows in parts of the UI.
+
+**Best for:** shops that want one vendor covering ERP, MES, and CRM and are willing to invest in a longer implementation.
+
+### Fulcrum
+
+Fulcrum is a modern, well-designed MES/ERP built for job shops, with strong scheduling visualization, a public REST API, and an in-app AI assistant. It's one of the more thoughtfully built tools for shop-floor teams in this category. The tradeoff is scope. Fulcrum leans on integrations for deeper accounting and quality management, so a shop that wants native, audited financials and QMS in the same system as production may still need to connect a separate package.
+
+**Best for:** shops that prioritize scheduling usability and are comfortable integrating accounting and quality separately.
+
+### Odoo
+
+Odoo's appeal for a machine shop is cost and breadth: a free Community edition, a large app ecosystem, and a real manufacturing module. The catch is that Odoo's roots are in discrete, repetitive manufacturing rather than job-shop quoting and machine-hour costing. Finite scheduling needs a third-party app (frePPLe), and configuring accurate machine-hour job costing takes real customization work. Shops that go this route often end up building the job-shop-specific parts themselves. See our [build-it-yourself comparison](/compare/build-it-yourself) for what that costs in engineering time.
+
+**Best for:** shops with in-house technical capacity that want a free, self-hosted starting point and are willing to build job-shop-specific costing on top.
+
+### Carbon
+
+Carbon is an API-first, source-available operating system for manufacturing: ERP, MRP, MES, and QMS on one Postgres data model. For a machine shop, that means quoting, routing, machine-hour costing, scheduling, purchasing, and lot traceability all read and write the same underlying data instead of syncing between a quoting tool, a scheduling tool, and an accounting package. Every table is reachable over a documented REST API (rest.carbon.ms) and a hosted MCP server, so a shop can connect its CAM software, a customer RFQ portal, or an AI agent to live job data without a systems integrator. Pricing is published: Starter at $40/user/month, Business at $100/user/month, with a 30-day free trial and no sales call required.
+
+**Best for:** machine shops that want quoting-to-cash and shop floor to quality on one modern, API-accessible system, or that want the option to self-host for AS9100/ITAR-adjacent work.
+
+## Side-by-side comparison
+
+| | ProShop | JobBOSS² | Global Shop | Fulcrum | Odoo | Carbon |
+|---|---|---|---|---|---|---|
+| Pricing model | Quote-based | Quote-based | Quote-based | Quote-based | Free (Community) / quote (Enterprise) | Published, per-user |
+| Machine-hour rate costing | Yes | Yes | Yes | Yes | Manual setup | Yes |
+| Finite capacity scheduling | Yes | Yes | Yes | Yes | No (needs frePPLe) | Yes |
+| Native QMS / AS9100 support | Strong | Basic | Basic | Limited | Add-on | Yes |
+| Native accounting | Limited | Yes | Yes | Limited (integrates out) | Yes | Yes |
+| Full API over entire data model | No | Limited | Limited | Partial | Partial (ORM-based) | Yes (REST + hosted MCP) |
+| Self-host option | No | No | Limited | No | Yes (Community) | Yes, incl. GovCloud/ITAR |
+| Self-serve trial | No | No | No | Limited | Yes (self-host) | Yes, 30 days |
+
+## What breaks in a job shop implementation
+
+The failure mode is consistent across these tools. The shop runs the software the way it shipped out of the box, then discovers six months in that estimating doesn't reflect real machine-hour rates, or that the router doesn't capture setup versus cycle time separately, so every job cost looks the same regardless of how much changeover it required. The fix is a system where quoting, routing, and time capture share one data model, so a quote's assumed machine-hour rate is the same number the job's cost rolls up against. Unified architecture solves that problem, and module-stitched ERP tends to reintroduce it through integration lag.
+
+## How Carbon fits a machine shop's workflow
+
+Carbon was built around this quote-to-cash-to-quality loop:
+
+- **Quoting draws from the same routing and machine-hour data used in production**, so a quoted machine-hour rate and a job's rolled-up cost are apples to apples instead of two separate estimates reconciled after the fact.
+- **Routing models real work centers and machines**, with setup time and cycle time captured separately, so utilization and true job cost are visible per machine rather than averaged across the shop.
+- **Finite capacity scheduling** shows real load against real machine availability, so you see a rush job's impact on the whole schedule before you commit to a due date.
+- **Lot and serial traceability, plus first article inspection records**, live in the same system a part was quoted and routed in, with no separate quality database to reconcile for an AS9100 audit.
+- **Native purchasing and inventory** track raw stock, outside processing, and finished goods against the jobs that consume them, so a late heat-treat vendor shows up as a schedule risk automatically.
+- **Open source and API-first.** The full source is on GitHub, and every table (quotes, routings, machine-hour rates, job costs) is queryable over a documented REST API and hosted MCP server, so a shop can connect CAM software or build custom reporting without waiting on a vendor's integration roadmap.
+
+## Frequently asked questions
+
+### What's the difference between MES and ERP for a machine shop?
+
+ERP covers the business side: quoting, sales orders, purchasing, and accounting. MES covers shop floor execution: routing, time capture, and machine status. Most machine shops eventually need both connected, which is why systems that unify them on one data model avoid the sync problems of running separate tools. See [MES vs. ERP vs. QMS](/learn/mes-vs-erp-vs-qms) for the full breakdown.
+
+### How much does ERP for a machine shop typically cost?
+
+Legacy job-shop ERP (ProShop, JobBOSS², Global Shop) is quote-based and typically runs from a few hundred to over a thousand dollars per user per month once implementation is included. Carbon publishes pricing directly: Starter is $40/user/month and Business is $100/user/month, both with a 30-day free trial.
+
+### Do I need AS9100 support built into my ERP?
+
+If you sell into aerospace, you need first article inspection records, lot traceability, and document control that will survive an audit, whether that's native to your ERP or a connected system. Native QMS avoids reconciling two systems' records during an audit. See [AS9100 for small shops](/learn/as9100-for-small-shops) for what the audit checks.
+
+### Can a small machine shop build its own system instead of buying ERP?
+
+Some shops with in-house engineering talent build custom quoting or scheduling tools on top of a database or a generalist ERP like Odoo. It can work, but it's an ongoing engineering commitment rather than a one-time build. See our [build-it-yourself comparison](/compare/build-it-yourself) for the tradeoffs in cost and maintenance burden.
+
+### How long does it take to implement ERP in a machine shop?
+
+Traditional job-shop ERP implementations commonly run 3-9 months once you include configuration and data migration. Carbon implementations typically take about a month, since quoting, routing, scheduling, and quality already share one data model rather than needing to be configured and connected separately.
+
+## See it running on your own routings
+
+The best way to evaluate any of these systems is to load in a real router and a real machine-hour rate and quote an actual part. [Try Carbon free for 30 days](/pricing) at https://app.carbon.ms, or review the quoting and job-costing engine's source on [GitHub](https://github.com/crbnos/carbon).
