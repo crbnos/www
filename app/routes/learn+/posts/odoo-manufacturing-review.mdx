@@ -1,16 +1,16 @@
 ---
-title: "Odoo Manufacturing Review (2026): Where It Fits, Where It Breaks"
+title: "Odoo manufacturing review (2026): where it fits and where it breaks"
 publishedAt: "2026-08-09"
 summary: "An honest odoo manufacturing review: what the Manufacturing and MRP apps do well, and exactly where they break down for real discrete production."
 tag: "Odoo"
 author: "chase"
 ---
 
-Odoo's Manufacturing app is the most widely deployed open-source production module in the world, and for good reason: it's cheap to start, it covers the basics of a bill of materials and a work order, and it plugs into one of the largest all-in-one business suites on the market. It is also, in our experience running and replacing it in real shops, a system that starts to strain the moment a factory gets more complicated than "make one thing, in one place, on one shift." This odoo manufacturing review covers both halves honestly: the real strengths, and the specific points where discrete and regulated manufacturers hit a wall.
+Odoo's Manufacturing app is the most widely deployed open-source production module in the world, and for good reason: it's cheap to start, it covers the basics of a bill of materials and a work order, and it plugs into one of the largest all-in-one business suites on the market. It is also, in our experience running and replacing it in real shops, a system that starts to strain the moment a factory gets more complicated than "make one thing, in one place, on one shift." This odoo manufacturing review covers both halves: the real strengths, and the specific points where discrete and regulated manufacturers hit a wall.
 
-## What Odoo Manufacturing actually is
+## What Odoo Manufacturing is
 
-Odoo is a modular business suite — CRM, sales, accounting, inventory, and dozens of other apps — built on a shared Postgres database, with Manufacturing (MRP) as one app among many. You get:
+Odoo is a modular business suite (CRM, sales, accounting, inventory, and dozens of other apps) built on a shared Postgres database, with Manufacturing (MRP) as one app among many. You get:
 
 - Bills of materials (single-level and multi-level) with routing operations
 - Manufacturing orders (MOs) that consume components and produce finished goods
@@ -19,9 +19,9 @@ Odoo is a modular business suite — CRM, sales, accounting, inventory, and doze
 - A shop-floor tablet view for operators to log time and quantities
 - Barcode scanning for receipts, moves, and manufacturing confirmations
 
-For a company that needs to track "we bought parts, we assembled them, we sold the result," this is a genuinely capable, low-friction starting point — and it's why so many small shops start on Odoo.
+For a company that needs to track "we bought parts, we assembled them, we sold the result," this is a capable, low-friction starting point, and it's why so many small shops start on Odoo.
 
-## Where Odoo Manufacturing genuinely earns its reputation
+## Where Odoo Manufacturing earns its reputation
 
 Being fair here matters, because a credible teardown is more useful than a hit piece.
 
@@ -31,13 +31,13 @@ Being fair here matters, because a credible teardown is more useful than a hit p
 
 **Ecosystem and talent supply.** Odoo has a large partner network, a large developer community, and thousands of community modules. If you need a custom connector or a implementation partner in most major markets, you can find one.
 
-**Genuine open source at the core.** Odoo Community is released under the LGPLv3, and the core is real, forkable, self-hostable code — not a stripped demo. That matters if you value auditability and independence from a single vendor's roadmap.
+**Genuine open source at the core.** Odoo Community is released under the LGPLv3, and the core is real, forkable, self-hostable code, not a stripped demo. That matters if you value auditability and independence from a single vendor's roadmap.
 
 **Fast iteration for simple BOMs.** For make-to-stock or light assemble-to-order work with shallow bills of materials, the MO flow is quick to learn and quick to operate.
 
 ## Where it breaks for real discrete and regulated manufacturing
 
-The pattern we see repeatedly, in shops migrating off Odoo, is that the module was fine at pilot scale and started failing at production scale — usually 6 to 18 months in, once volume, mix, or a customer audit exposed the gaps.
+The pattern we see repeatedly, in shops migrating off Odoo, is that the module was fine at pilot scale and started failing at production scale, usually 6 to 18 months in, once volume, mix, or a customer audit exposed the gaps.
 
 ### 1. Scheduling is infinite-capacity by default
 

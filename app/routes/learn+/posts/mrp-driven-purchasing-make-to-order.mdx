@@ -1,14 +1,14 @@
 ---
-title: "MRP-Driven Purchasing for Make-to-Order Shops"
+title: "MRP-driven purchasing for make-to-order shops"
 publishedAt: "2026-07-14"
 summary: "How MRP purchasing turns make-to-order demand into planned purchase orders, with lead-time offsetting and lot-sizing math worked on a real job."
 tag: "How-to"
 author: "chase"
 ---
 
-MRP-driven purchasing means letting the MRP engine — not a buyer's gut feel, not a reorder point — decide what to buy, how much, and by what date, by netting firm demand against on-hand and on-order inventory and offsetting the result by each supplier's lead time. For a make-to-order shop, where most purchases exist to fill one specific, dated sales order rather than to top off a stocking level, this is the difference between purchasing against a plan and purchasing against panic.
+MRP-driven purchasing means letting the MRP engine decide what to buy, how much, and by what date, rather than a buyer's gut feel or a reorder point. It nets firm demand against on-hand and on-order inventory and offsets the result by each supplier's lead time. For a make-to-order shop, where most purchases exist to fill one specific, dated sales order rather than to top off a stocking level, this is the difference between purchasing against a plan and purchasing against panic.
 
-This article works through exactly how MRP turns a firm make-to-order demand into planned purchase orders — the netting, the lead-time offset, and the lot-sizing rules that round a net requirement into a quantity a supplier will actually sell you — with a full worked example, and covers where make-to-order purchasing genuinely differs from make-to-stock.
+This article works through how MRP turns a firm make-to-order demand into planned purchase orders: the netting, the lead-time offset, and the lot-sizing rules that round a net requirement into a quantity a supplier will sell you. It uses a full worked example and covers where make-to-order purchasing differs from make-to-stock.
 
 ## How MRP-driven purchasing works, from demand to planned PO
 
@@ -16,26 +16,26 @@ The mechanics are the same MRP netting logic used everywhere in the plant, appli
 
 1. Demand enters as a firm sales order line, with a required ship date, rather than a forecast.
 2. The bill of materials is exploded down to the purchased-item level, multiplying the parent build quantity by quantity-per to produce a **gross requirement** for each raw material or purchased component.
-3. The gross requirement nets against on-hand inventory and any purchase orders already placed, producing a **net requirement**. That on-hand number is only trustworthy if every receipt, issue, and adjustment behind it was recorded as a real transaction rather than a periodic guess — see [Double-entry inventory, explained](/learn/double-entry-inventory-explained) for how that ledger discipline works.
+3. The gross requirement nets against on-hand inventory and any purchase orders already placed, producing a **net requirement**. That on-hand number is only trustworthy if every receipt, issue, and adjustment behind it was recorded as a real transaction rather than a periodic guess. See [Double-entry inventory, explained](/learn/double-entry-inventory-explained) for how that ledger discipline works.
 4. The net requirement is rounded up according to the item's **lot-sizing rule**.
-5. The resulting planned order receipt is offset backward by the supplier's **lead time**, producing the planned order release date — the date a buyer actually needs to place the PO to hit the ship date.
+5. The resulting planned order receipt is offset backward by the supplier's **lead time**, producing the planned order release date: the date a buyer needs to place the PO to hit the ship date.
 
 For the full gross-to-net mechanics run across a multi-level BOM, see [What Is MRP?](/learn/what-is-mrp), which works this logic in detail on a manufactured assembly. This article picks up specifically at the purchasing decision.
 
-## Lead-time offsetting: buying against the calendar, not against the shortage
+## Lead-time offsetting: buying against the calendar
 
-Lead-time offsetting is the step that separates MRP purchasing from "buy more when it looks low." Every purchased item's planned release date is calculated backward from when it's actually needed, using that item's own lead time — not a plant-wide rule of thumb. In a make-to-stock business, getting this wrong costs you a stockout that a forecast miss partly excuses. In a make-to-order business, the date that matters is a committed customer ship date, and there's no forecast to blame: a raw material that shows up late doesn't move a planning number, it moves the truck.
+Lead-time offsetting is the step that separates MRP purchasing from "buy more when it looks low." Every purchased item's planned release date is calculated backward from when it's needed, using that item's own lead time, not a plant-wide rule of thumb. In a make-to-stock business, getting this wrong costs you a stockout that a forecast miss partly excuses. In a make-to-order business, the date that matters is a committed customer ship date, and there's no forecast to blame: a raw material that shows up late delays the shipment itself.
 
-Offsetting also has a cash-flow dimension that's easy to ignore. Order too early relative to true need and you're carrying inventory — and the cash it represents — for weeks before it's consumed. Order right at the calculated release date and you get the shortest possible cash-to-consumption gap without risking the ship date. This is the entire argument for calculating release dates per item rather than ordering everything the day the sales order is booked.
+Offsetting also has a cash-flow dimension that's easy to ignore. Order too early relative to true need and you're carrying inventory (and the cash it represents) for weeks before it's consumed. Order right at the calculated release date and you get the shortest possible cash-to-consumption gap without risking the ship date. This is the whole argument for calculating release dates per item rather than ordering everything the day the sales order is booked.
 
 ## Lot-sizing rules that turn a net requirement into a real order
 
-A net requirement is rarely the quantity you actually order. Four rules commonly apply, and they can combine:
+A net requirement is rarely the quantity you order. Four rules commonly apply, and they can combine:
 
-- **Lot-for-lot** — order exactly the net requirement. Best for expensive, job-specific raw material that has no reuse value if it's left over.
-- **Minimum order quantity (MOQ)** — a supplier-imposed floor. The planned order rounds up to the MOQ even when the net requirement is smaller.
-- **Order multiple / pack size** — the supplier sells in fixed increments (a box of 100, a mult of 50 lb), and the planned order rounds up to the nearest multiple.
-- **Fixed order quantity** — a standing batch size regardless of net requirement, common for hardware shared across many jobs.
+- **Lot-for-lot:** order exactly the net requirement. Best for expensive, job-specific raw material that has no reuse value if it's left over.
+- **Minimum order quantity (MOQ):** a supplier-imposed floor. The planned order rounds up to the MOQ even when the net requirement is smaller.
+- **Order multiple / pack size:** the supplier sells in fixed increments (a box of 100, a mult of 50 lb), and the planned order rounds up to the nearest multiple.
+- **Fixed order quantity:** a standing batch size regardless of net requirement, common for hardware shared across many jobs.
 
 When more than one rule applies to the same item, MRP has to satisfy all of them at once: round up to the multiple, then check the result still clears the MOQ, and use whichever constraint produces the larger valid quantity.
 
@@ -69,15 +69,15 @@ A shop has a firm sales order for **20 units of a custom weldment assembly, due 
 | Purchase lead time | 3 days |
 | **Planned order release** | **Day 37** (40 − 3) |
 
-Both components support the identical day-40 need date, but their planned release dates are **twelve days apart**. Place both purchase orders on the same day — say, whenever the sales order was booked — and one of two things happens: the plate arrives twelve days earlier than it needs to (cash sitting on a shelf for nearly two weeks), or, if a buyer waits and treats both items the same, the plate is ordered too late and the ship date slips. That gap is exactly why lead-time offsetting has to run per item, not per job.
+Both components support the identical day-40 need date, but their planned release dates are **twelve days apart**. Place both purchase orders on the same day (say, whenever the sales order was booked) and one of two things happens: the plate arrives twelve days earlier than it needs to (cash sitting on a shelf for nearly two weeks), or, if a buyer waits and treats both items the same, the plate is ordered too late and the ship date slips. That gap is why lead-time offsetting has to run per item, not per job.
 
-## Make-to-order vs. make-to-stock purchasing: what actually changes
+## Make-to-order vs. make-to-stock purchasing: what changes
 
 The netting logic is identical; what feeds it is not.
 
 In **make-to-stock**, gross requirements come from a forecast plus a planned safety stock target at the finished-good level, and purchasing runs continuously against a rolling plan even before a specific customer order exists. See [Safety stock and reorder points](/learn/safety-stock-and-reorder-points) for how that buffer is sized.
 
-In **make-to-order**, gross requirements come from firm sales order lines, and there is usually no finished-good safety stock — every unit in the plan is already spoken for. That doesn't mean safety stock disappears entirely: long-lead purchased raw material often still carries its own buffer, because a customer's ship date is far less forgiving than a forecast miss, and a single missed material delivery can strand a job that was otherwise on schedule.
+In **make-to-order**, gross requirements come from firm sales order lines, and there is usually no finished-good safety stock, since every unit in the plan is already spoken for. That doesn't mean safety stock disappears entirely: long-lead purchased raw material often still carries its own buffer, because a customer's ship date is far less forgiving than a forecast miss, and a single missed material delivery can strand a job that was otherwise on schedule.
 
 Engineer-to-order adds a further wrinkle: the bill of materials itself may not exist in final form until the quote converts to an order. Shops running configurable products shrink the gap between order entry and the first planned purchase order by resolving the BOM and routing automatically at the moment the order is placed, rather than waiting on an engineer to hand-build a BOM before MRP has anything to explode.
 
@@ -85,36 +85,36 @@ Engineer-to-order adds a further wrinkle: the bill of materials itself may not e
 
 Two failure modes show up repeatedly:
 
-- **System nervousness.** Every small change to a sales order date or quantity reruns the netting and can shift planned release dates by days. If buyers re-react to every shift, they're placing and cancelling orders constantly. Firm/planning time fences — a window inside which planned orders won't automatically re-slide — keep the plan stable close to execution.
-- **Treating every planned order as automatic.** A planned order is a recommendation, not a commitment. Buyers should review an exception report — planned orders inside lead time, past-due releases, orders where the supplier's actual lead time has drifted from the system's assumption — rather than re-litigating every open line every day.
+- **System nervousness.** Every small change to a sales order date or quantity reruns the netting and can shift planned release dates by days. If buyers re-react to every shift, they're placing and cancelling orders constantly. Firm/planning time fences (a window inside which planned orders won't automatically re-slide) keep the plan stable close to execution.
+- **Treating every planned order as automatic.** A planned order is a recommendation, not a commitment. Buyers should review an exception report (planned orders inside lead time, past-due releases, orders where the supplier's actual lead time has drifted from the system's assumption) rather than re-litigating every open line every day.
 
 ## How Carbon runs MRP-driven purchasing
 
-Carbon calculates planned purchase orders the way this article describes — full gross-to-net, lead-time offset, lot-sized — natively against the same Postgres data model as sales orders, inventory, and job costing:
+Carbon calculates planned purchase orders the way this article describes (full gross-to-net, lead-time offset, lot-sized) natively against the same Postgres data model as sales orders, inventory, and job costing:
 
 - **Same-day replanning.** Because sales orders, inventory, and purchasing share one data model, a changed ship date or a received PO is reflected in the very next MRP run, not an overnight batch.
 - **Lot-sizing rules per item.** Lot-for-lot, minimum order quantity, order multiple, and fixed order quantity are configured per item, exactly as in the worked example above.
-- **One-click conversion.** A planned order becomes a real purchase order pre-populated with supplier, quantity, and need-by date — the buyer reviews the plan instead of re-deriving it.
+- **One-click conversion.** A planned order becomes a real purchase order pre-populated with supplier, quantity, and need-by date. The buyer reviews the plan instead of re-deriving it.
 - **Parametric configurator.** For engineer-to-order and configurable products, Carbon resolves the BOM and routing per order, so MRP has something real to explode the moment an order is placed rather than after manual BOM entry.
 - **Open, API-first access.** Every planning table is reachable over Carbon's REST API (rest.carbon.ms), and the full MRP calculation is public on [GitHub](https://github.com/crbnos/carbon), so a buying team can verify or extend the exception logic rather than trust it blind.
 
 ## Frequently asked questions
 
 ### What is MRP-driven purchasing?
-It's the practice of generating purchase orders directly from an MRP netting calculation — gross requirement minus on-hand and on-order, rounded to a lot-sizing rule, offset backward by lead time — instead of from a reorder point or manual judgment call.
+It's the practice of generating purchase orders directly from an MRP netting calculation (gross requirement minus on-hand and on-order, rounded to a lot-sizing rule, offset backward by lead time) instead of from a reorder point or manual judgment call.
 
 ### How does lead-time offsetting affect purchase order timing?
 Each purchased item's planned release date is calculated as its need date minus its own lead time. Items with longer lead times release earlier than items needed on the same date but sourced faster, which is why two components supporting the same job can have very different order dates.
 
 ### What's the difference between a minimum order quantity and an order multiple?
-An MOQ is a floor — the smallest quantity a supplier will sell, regardless of what you actually need. An order multiple is an increment — the supplier only sells in fixed pack sizes above whatever floor applies. A planned order has to satisfy both at once.
+An MOQ is a floor: the smallest quantity a supplier will sell, regardless of what you need. An order multiple is an increment: the supplier only sells in fixed pack sizes above whatever floor applies. A planned order has to satisfy both at once.
 
 ### Does make-to-order purchasing still need safety stock?
 Finished-good safety stock is usually unnecessary in pure MTO, since every unit is already tied to an order. Long-lead purchased raw materials often still carry a buffer, since a late delivery threatens a firm ship date with no forecast slack to absorb it.
 
 ### Why do MRP-driven purchase orders release on different dates for the same job?
-Because release date is a function of each item's individual lead time offset from the same need date, not a single "order everything now" decision — see the worked example above, where a twelve-day lead-time gap between two components produces a twelve-day gap in release dates.
+Because release date is a function of each item's individual lead time offset from the same need date, not a single "order everything now" decision. See the worked example above, where a twelve-day lead-time gap between two components produces a twelve-day gap in release dates.
 
-## Buy against a real plan, not a guess
+## Buy against a real plan
 
 If purchasing decisions are still coming from a spreadsheet, a reorder point, or a buyer's memory of what's usually late, it's worth seeing lead-time-offset, lot-sized MRP purchasing run against your actual make-to-order backlog. [Try Carbon free for 30 days](/pricing) at https://app.carbon.ms, or review the planning and purchasing engine's source on [GitHub](https://github.com/crbnos/carbon).

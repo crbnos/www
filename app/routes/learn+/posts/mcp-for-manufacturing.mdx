@@ -1,33 +1,33 @@
 ---
-title: "Building AI Agents for Your Factory: MCP + Manufacturing"
+title: "MCP for manufacturing: build AI agents for your factory"
 publishedAt: "2026-07-05"
 summary: "What Model Context Protocol (MCP) is, why manufacturing needs it, and how a real manufacturing MCP server lets AI agents read and act on live shop data."
 tag: "Developer"
 author: "chase"
 ---
 
-Model Context Protocol (MCP) is an open standard for connecting AI models to external tools and data — a common interface so an agent like Claude, ChatGPT, or Cursor can call "check inventory for part BRK-200" or "create a purchase order" against a real system, instead of the developer hand-rolling a bespoke integration for every model and every tool. For manufacturing specifically, MCP matters because most valuable agent tasks — checking a job's status, flagging a late purchase order, drafting a quote from a BOM — require live, current shop-floor and back-office data, not a static document an agent was trained on.
+Model Context Protocol (MCP) is an open standard for connecting AI models to external tools and data: a common interface so an agent like Claude, ChatGPT, or Cursor can call "check inventory for part BRK-200" or "create a purchase order" against a real system, instead of the developer hand-rolling a bespoke integration for every model and every tool. For manufacturing, MCP matters because most valuable agent tasks (checking a job's status, flagging a late purchase order, drafting a quote from a BOM) need live, current shop-floor and back-office data, not a static document an agent was trained on.
 
-## What MCP actually is
+## What MCP is
 
-Before MCP, connecting an AI model to your own data meant one of two things: pasting context into a prompt manually, or writing a custom integration — often a different one per model provider — that translated the model's function-calling format into your API's actual calls. MCP standardizes that translation layer. An MCP server:
+Before MCP, connecting an AI model to your own data meant one of two things: pasting context into a prompt by hand, or writing a custom integration (often a different one per model provider) that translated the model's function-calling format into your API's actual calls. MCP standardizes that translation layer. An MCP server:
 
 - **Exposes a defined set of tools** (e.g., `get_inventory_level`, `create_purchase_order`, `get_work_order_status`) with typed inputs and outputs.
-- **Speaks a common protocol** any MCP-compatible client — Claude, ChatGPT, Cursor, or a custom agent framework — can call without a bespoke integration per model.
-- **Separates "what the agent can do" from "how the model reasons.**" The model decides when to call a tool; the MCP server decides what that tool is actually allowed to do and returns real data back.
+- **Speaks a common protocol** that any MCP-compatible client (Claude, ChatGPT, Cursor, or a custom agent framework) can call without a bespoke integration per model.
+- **Separates "what the agent can do" from "how the model reasons.**" The model decides when to call a tool; the MCP server decides what that tool is allowed to do and returns real data back.
 
-The result: build the MCP server once, against your real system, and any MCP-compatible agent can use it — you're not maintaining a separate integration for every AI product a customer or employee happens to prefer.
+The result: build the MCP server once, against your real system, and any MCP-compatible agent can use it. You're not maintaining a separate integration for every AI product a customer or employee happens to prefer.
 
 ## Why manufacturing needs this specifically
 
-General-purpose AI agents are good at reasoning, drafting, and summarizing — but they don't know your current inventory, your open work orders, or which purchase order is late, because that data lives in your ERP/MES/QMS, not in the model's training data. A manufacturing MCP server closes that gap by giving an agent a defined, safe way to read and act on:
+General-purpose AI agents are good at reasoning, drafting, and summarizing, but they don't know your current inventory, your open work orders, or which purchase order is late, because that data lives in your ERP/MES/QMS, not in the model's training data. A manufacturing MCP server closes that gap by giving an agent a defined, safe way to read and act on:
 
-- **Live inventory** — on-hand quantity, allocated quantity, reorder status for a specific item.
-- **Work order and job status** — what operation a job is on, whether it's on schedule, whether it's flagged for a quality hold.
-- **Purchasing** — open POs, expected receipt dates, supplier lead times.
-- **Quoting and BOM data** — pulling a bill of materials to draft a quote, or checking cost roll-ups.
+- **Live inventory:** on-hand quantity, allocated quantity, reorder status for a specific item.
+- **Work order and job status:** what operation a job is on, whether it's on schedule, whether it's flagged for a quality hold.
+- **Purchasing:** open POs, expected receipt dates, supplier lead times.
+- **Quoting and BOM data:** pulling a bill of materials to draft a quote, or checking cost roll-ups.
 
-Without MCP (or an equivalent custom integration), an agent working on manufacturing questions is limited to what a person pastes in manually — which defeats the point of an agent that's supposed to act autonomously on current information.
+Without MCP (or an equivalent custom integration), an agent working on manufacturing questions is limited to what a person pastes in by hand, which defeats the point of an agent that's supposed to act autonomously on current information.
 
 ## What a manufacturing agent workflow looks like
 
@@ -35,10 +35,10 @@ A concrete example: a purchasing agent tasked with flagging at-risk deliveries. 
 
 1. Agent calls a tool to list open purchase orders with a due date in the next 7 days.
 2. Agent calls a tool to check each supplier's on-time delivery history.
-3. Agent cross-references against open work orders that depend on those POs (via MRP output — see [What Is MRP?](/learn/what-is-mrp) for how planned orders link back to demand).
-4. Agent drafts a summary — or, with write permissions, creates a follow-up task or sends a message — flagging the two or three POs genuinely at risk, instead of a person manually checking a dozen PO detail pages.
+3. Agent cross-references against open work orders that depend on those POs (via MRP output; see [What Is MRP?](/learn/what-is-mrp) for how planned orders link back to demand).
+4. Agent drafts a summary (or, with write permissions, creates a follow-up task or sends a message) flagging the two or three POs at risk, instead of a person checking a dozen PO detail pages by hand.
 
-None of this is speculative capability — it's the direct consequence of exposing the underlying data model as callable tools, which is exactly what MCP formalizes.
+None of this is speculative capability. It's the direct consequence of exposing the underlying data model as callable tools, which is what MCP formalizes.
 
 ```json
 {
@@ -49,27 +49,27 @@ None of this is speculative capability — it's the direct consequence of exposi
 
 ## Security and scope: the part teams skip
 
-An MCP server that can create purchase orders or release work orders is not a toy — it's a production integration point, and it needs to be treated with the same access controls as any other API client:
+An MCP server that can create purchase orders or release work orders is a production integration point, and it needs the same access controls as any other API client:
 
 - **Scope tools narrowly.** A read-only inventory-check tool and a purchase-order-creation tool should be separately permissioned, not bundled behind one blanket "manufacturing access" grant.
-- **Authenticate the agent like any API client** — API keys or OAuth tied to a specific user or service account, not a shared credential.
+- **Authenticate the agent like any API client:** API keys or OAuth tied to a specific user or service account, not a shared credential.
 - **Log every agent-initiated action** the same way you'd log a human user's changes, so a mistaken or hallucinated action is traceable and reversible.
 - **Start read-only.** Most manufacturers get real value from an agent that can check status and draft summaries well before they're ready to let one create purchase orders or release work orders unsupervised.
 
-This is the same discipline that applies to any API-first system — see [API-first ERP: what a real manufacturing API enables](/learn/api-first-erp) for the underlying principle that a manufacturing MCP server is only as capable, and only as safe, as the API and permission model it wraps.
+This is the same discipline that applies to any API-first system; see [API-first ERP: what a real manufacturing API enables](/learn/api-first-erp) for the underlying principle that a manufacturing MCP server is only as capable, and only as safe, as the API and permission model it wraps.
 
 ## The current state of manufacturing MCP servers
 
-As of 2026, dedicated manufacturing MCP servers are rare. Most ERP and MES vendors either have no MCP offering, or expose a thin read-only layer covering a handful of objects — the same "curated subset" problem that shows up in traditional APIs, just wearing a newer protocol. A manufacturing MCP server is only useful in proportion to how much of the real data model it exposes; a server that can check one inventory field but can't see routings, quality holds, or purchasing is a demo, not a tool an agent can actually rely on for real work.
+As of 2026, dedicated manufacturing MCP servers are rare. Most ERP and MES vendors either have no MCP offering, or expose a thin read-only layer covering a handful of objects, the same "curated subset" problem that shows up in traditional APIs, wearing a newer protocol. A manufacturing MCP server is only useful in proportion to how much of the real data model it exposes; a server that can check one inventory field but can't see routings, quality holds, or purchasing is a demo, not a tool an agent can rely on for real work.
 
 ## How Carbon implements this
 
-Carbon ships a hosted MCP server built directly on top of its own API-first REST layer (rest.carbon.ms) — because the API already exposes every table, the MCP server can expose real coverage rather than a curated demo:
+Carbon ships a hosted MCP server built directly on top of its own API-first REST layer (rest.carbon.ms). Because the API already exposes every table, the MCP server can expose real coverage rather than a curated demo:
 
 - **Read and act on live data**: inventory, work orders, purchase orders, quotes, and quality records are all reachable through MCP tools, not a narrow subset.
-- **Works with Claude, ChatGPT, Cursor**, and any other MCP-compatible client — no per-model integration required.
+- **Works with Claude, ChatGPT, Cursor**, and any other MCP-compatible client, with no per-model integration required.
 - **Built on the same open-source codebase** as the rest of Carbon (github.com/crbnos/carbon), so the tool definitions and permission model are auditable, not opaque.
-- **Same permission model as the API** — an agent's access is scoped the same way a human API user's would be, so read-only or narrowly-scoped agent access is a configuration choice, not a missing feature.
+- **Same permission model as the API.** An agent's access is scoped the same way a human API user's would be, so read-only or narrowly-scoped agent access is a configuration choice, not a missing feature.
 
 See the developer overview at [/developers](/developers) and the API/MCP reference at [docs.carbon.ms](https://docs.carbon.ms) for the current tool list.
 
@@ -77,19 +77,19 @@ See the developer overview at [/developers](/developers) and the API/MCP referen
 
 ### What is MCP in simple terms?
 
-Model Context Protocol is a standard way for an AI model to call tools and read data from an external system — like an ERP — without a custom integration being built separately for every AI product. It defines how tools are described, called, and how results come back.
+Model Context Protocol is a standard way for an AI model to call tools and read data from an external system such as an ERP, without building a custom integration separately for every AI product. It defines how tools are described, called, and how results come back.
 
 ### Why can't I just ask ChatGPT about my inventory directly?
 
-A general-purpose AI model has no access to your company's live data by default — it only knows what's in its training data or what's pasted into the conversation. An MCP server (or an equivalent API integration) is what actually connects the model to your real, current inventory, work orders, and purchasing data.
+A general-purpose AI model has no access to your company's live data by default; it only knows what's in its training data or what's pasted into the conversation. An MCP server (or an equivalent API integration) is what connects the model to your real, current inventory, work orders, and purchasing data.
 
 ### Is it safe to let an AI agent create purchase orders in my ERP?
 
-It can be, if the integration is scoped correctly — narrow tool permissions, authenticated per user or service account, and logged the same way any API-initiated change would be. Most manufacturers start with read-only agent access and expand to write actions once they trust the workflow.
+It can be, if the integration is scoped correctly: narrow tool permissions, authenticated per user or service account, and logged the same way any API-initiated change would be. Most manufacturers start with read-only agent access and expand to write actions once they trust the workflow.
 
 ### Does using MCP require switching ERP systems?
 
-Not necessarily — if your current ERP exposes a full API, an MCP server can potentially be built on top of it. In practice, though, most ERPs expose only a partial API, which limits how much of the real workflow an MCP server built on top of it can actually cover.
+Not necessarily. If your current ERP exposes a full API, you can potentially build an MCP server on top of it. In practice, most ERPs expose only a partial API, which limits how much of the real workflow an MCP server built on top of it can cover.
 
 ## Give your agents real shop-floor data
 

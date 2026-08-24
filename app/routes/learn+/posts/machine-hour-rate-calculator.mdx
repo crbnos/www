@@ -1,12 +1,12 @@
 ---
-title: "Machine-Hour Rate: How to Calculate It (Free Guide)"
+title: "Machine hour rate: how to calculate it (free guide)"
 publishedAt: "2026-07-09"
 summary: "The full machine hour rate calculation, formula by formula, with a worked example: depreciation, space, power, maintenance, labor, and overhead over productive hours."
 tag: "How-to"
 author: "chase"
 ---
 
-A machine hour rate is the cost of running one specific machine for one hour, all-in — not just labor, not just power, but depreciation, floor space, energy, maintenance, and allocated overhead divided by the hours that machine actually produces in a year. The machine hour rate calculation is: (depreciation + space cost + power cost + maintenance + labor + overhead) ÷ productive hours per year. Get the numerator components right and the denominator right, and you have a defensible number to quote from, cost a job against, and compare machines with. Get either wrong — most shops get the denominator wrong — and every quote built on it is wrong in the same direction, quietly, for years.
+A machine hour rate is the all-in cost of running one specific machine for one hour: not just labor or power, but depreciation, floor space, energy, maintenance, and allocated overhead divided by the hours that machine produces in a year. The machine hour rate calculation is: (depreciation + space cost + power cost + maintenance + labor + overhead) ÷ productive hours per year. Get the numerator components and the denominator right, and you have a defensible number to quote from, cost a job against, and compare machines with. Get either wrong (most shops get the denominator wrong) and every quote built on it is wrong in the same direction, for years.
 
 This guide walks through each cost component with its own formula, works a full example on a real CNC mill from purchase price to final rate, and covers the mistakes that make machine hour rates unreliable in practice.
 
@@ -14,7 +14,7 @@ This guide walks through each cost component with its own formula, works a full 
 
 **Machine hour rate = (Depreciation + Space + Power + Maintenance + Labor + Overhead) ÷ Productive hours per year**
 
-Every term on top is an *annual* cost for that specific machine. The denominator is the number of hours per year the machine is actually cutting chips — not the number of hours the building is open. That distinction is the single most common source of error, and it's covered in its own section below before the worked example, because it changes the answer more than any other input.
+Every term on top is an *annual* cost for that specific machine. The denominator is the number of hours per year the machine is cutting chips, not the number of hours the building is open. That distinction is the most common source of error, and it gets its own section below before the worked example, because it changes the answer more than any other input.
 
 ## The six cost components
 
@@ -32,7 +32,7 @@ The machine's share of rent, utilities, and facility overhead, based on the floo
 
 **Annual space cost = Machine footprint (sq ft) × Facility cost per sq ft per year**
 
-Facility cost per square foot should include rent or mortgage, property tax, building insurance, and general utilities not already captured under power below — a fully loaded occupancy cost, not just base rent.
+Facility cost per square foot should include rent or mortgage, property tax, building insurance, and general utilities not already captured under power below, a fully loaded occupancy cost rather than base rent.
 
 ### 3. Power
 
@@ -40,7 +40,7 @@ The machine's actual energy draw, not the building's average.
 
 **Annual power cost = Average kW draw × Annual run hours × Cost per kWh**
 
-Average draw should reflect real cutting load, not nameplate maximum — a spindle motor's rated power is rarely its sustained draw. If you don't have a power meter on the machine, a rough estimate at 40–60% of nameplate for typical machining work is a reasonable starting point until you can measure it.
+Average draw should reflect real cutting load, not nameplate maximum; a spindle motor's rated power is rarely its sustained draw. If you don't have a power meter on the machine, a rough estimate at 40 to 60% of nameplate for typical machining work is a reasonable starting point until you can measure it.
 
 ### 4. Maintenance
 
@@ -50,11 +50,11 @@ Preventive maintenance contracts, consumable maintenance parts (coolant, filters
 
 ### 5. Labor
 
-Whether labor belongs in the machine hour rate depends on what the rate is for. A **machine-only rate** excludes labor and is used to compare equipment or to cost unattended run time (a machine running lights-out). A **fully burdened rate** includes the operator's loaded cost (wages plus payroll taxes and benefits) for the hours they attend the machine:
+Whether labor belongs in the machine hour rate depends on what the rate is for. A machine-only rate excludes labor; use it to compare equipment or to cost unattended run time (a machine running lights-out). A fully burdened rate includes the operator's loaded cost (wages plus payroll taxes and benefits) for the hours they attend the machine:
 
 **Annual labor cost = Operator loaded hourly rate × Hours attended per year**
 
-If one operator tends multiple machines, allocate their loaded cost across those machines by attended time, not evenly — a machine that needs constant attention shouldn't carry the same labor allocation as one that runs unattended for most of its cycle.
+If one operator tends multiple machines, allocate their loaded cost across those machines by attended time rather than evenly. A machine that needs constant attention shouldn't carry the same labor allocation as one that runs unattended for most of its cycle.
 
 ### 6. Overhead
 
@@ -66,7 +66,7 @@ For a deeper treatment of how overhead allocation flows into a full part cost (n
 
 ## Getting the denominator right: productive hours
 
-This is where machine hour rates most often go wrong. There are three different hour counts, and using the wrong one changes the rate by 30–50%:
+This is where machine hour rates most often go wrong. There are three different hour counts, and using the wrong one changes the rate by 30 to 50%:
 
 | Hour count | What it measures | Typical value (2-shift shop) |
 |---|---|---|
@@ -74,11 +74,11 @@ This is where machine hour rates most often go wrong. There are three different 
 | Available hours | Hours the shop is scheduled to run | 4,000 (2 shifts × 8 hrs × 5 days × 50 weeks) |
 | Productive hours | Available hours minus downtime, changeovers, planned maintenance | 3,200 (available × 80% utilization) |
 
-The machine hour rate calculation must use **productive hours** — the hours the machine is actually cutting and earning its keep. Using available hours instead of productive hours understates the true cost per hour, because it spreads the same fixed costs over more hours than the machine actually delivers, and every quote built on that understated rate erodes margin on real jobs. A realistic utilization rate for a well-run job shop is 75–85%; for a shop still working out changeover and scheduling discipline, it can be well below that. If you don't know your actual utilization, measure it for a month before trusting a rate built on an assumed number — see [Setting up routings: work centers, operations, standard times](/learn/setting-up-routings-work-centers) for how standard times and actual run data get captured at the work-center level.
+The machine hour rate calculation must use **productive hours**, the hours the machine is cutting and earning its keep. Using available hours instead understates the true cost per hour, because it spreads the same fixed costs over more hours than the machine delivers, and every quote built on that understated rate erodes margin on real jobs. A realistic utilization rate for a well-run job shop is 75 to 85%; for a shop still working out changeover and scheduling discipline, it can run well below that. If you don't know your utilization, measure it for a month before trusting a rate built on an assumed number; see [Setting up routings: work centers, operations, standard times](/learn/setting-up-routings-work-centers) for how standard times and actual run data get captured at the work-center level.
 
 ## Worked example: a CNC mill
 
-Say your shop runs a 3-axis CNC mill with the following inputs. All numbers below are an illustrative example, not a benchmark — substitute your own facility, equipment, and rate figures.
+Say your shop runs a 3-axis CNC mill with the following inputs. All numbers below are an illustrative example, not a benchmark; substitute your own facility, equipment, and rate figures.
 
 **Machine and facility inputs:**
 
@@ -97,11 +97,11 @@ Say your shop runs a 3-axis CNC mill with the following inputs. All numbers belo
 | Available hours | 4,000/year |
 | Utilization | 80% |
 
-**Step 1 — productive hours:**
+**Step 1: productive hours**
 
 **4,000 available hours × 0.80 utilization = 3,200 productive hours/year**
 
-**Step 2 — each cost component:**
+**Step 2: each cost component**
 
 | Component | Calculation | Annual cost |
 |---|---|---|
@@ -114,37 +114,37 @@ Say your shop runs a 3-axis CNC mill with the following inputs. All numbers belo
 | Labor | $35/hr × 3,200 hrs | $112,000 |
 | **Total (fully burdened)** | | **$161,020** |
 
-**Step 3 — the rates:**
+**Step 3: the rates**
 
 **Machine-only rate = $49,020 ÷ 3,200 hrs = $15.32/hr**
 
 **Fully burdened rate = $161,020 ÷ 3,200 hrs = $50.32/hr**
 
-The machine-only rate is what you'd use to compare this mill against a competing quote for the same equipment, or to cost unattended cycle time. The fully burdened rate — $50.32/hr in this example — is the number that actually belongs in a job quote, because it reflects the true, all-in cost of an hour on that machine including the person running it.
+The machine-only rate is what you'd use to compare this mill against a competing quote for the same equipment, or to cost unattended cycle time. The fully burdened rate ($50.32/hr in this example) is the number that belongs in a job quote, because it reflects the all-in cost of an hour on that machine including the person running it.
 
 ## Machine rate vs. shop rate vs. blended rate
 
 Not every shop calculates a rate per machine. Three approaches are common, in increasing order of accuracy and decreasing order of simplicity:
 
-- **Single shop rate.** One blended rate across all equipment. Fast to set up, but it overcharges jobs that run on cheap machines and undercharges jobs that tie up your most expensive equipment — a five-axis mill and a manual lathe should never carry the same hourly rate.
+- **Single shop rate.** One blended rate across all equipment. Fast to set up, but it overcharges jobs that run on cheap machines and undercharges jobs that tie up your most expensive equipment; a five-axis mill and a manual lathe should never carry the same hourly rate.
 - **Work-center rate.** A rate per work center or machine class (all 3-axis mills together, all manual lathes together). A reasonable middle ground for shops with several machines of a similar type.
-- **Per-machine rate.** The calculation above, run individually for each piece of equipment. Most accurate, and the only approach that correctly prices jobs that specifically require your most (or least) expensive machine. This is the level of detail [job shop quoting](/learn/job-shop-quoting-rfq-to-quote) needs to protect margin on RFQs that specify particular equipment or tolerances.
+- **Per-machine rate.** The calculation above, run individually for each piece of equipment. Most accurate, and the only approach that correctly prices jobs that require your most (or least) expensive machine. This is the level of detail [job shop quoting](/learn/job-shop-quoting-rfq-to-quote) needs to protect margin on RFQs that specify particular equipment or tolerances.
 
 ## How Carbon calculates and applies machine hour rates
 
-Carbon computes machine hour rates as part of its native job costing, on the same data as scheduling, routings, and purchasing — not as a separate spreadsheet that has to be kept in sync:
+Carbon computes machine hour rates as part of its native job costing, on the same data as scheduling, routings, and purchasing, rather than a separate spreadsheet that has to be kept in sync:
 
 - **Per-work-center rates**, built from the same cost components above, so quoting and job costing use the actual cost of the specific machine and work center a job runs on rather than one blended shop rate. See [Setting up routings: work centers, operations, standard times](/learn/setting-up-routings-work-centers) for how routings tie standard time to a work center's rate.
-- **Real utilization data**, because Carbon's scheduling and production tracking run on the same data model as costing — productive hours can be based on actual logged run time rather than an assumed utilization percentage.
+- **Real utilization data**, because Carbon's scheduling and production tracking run on the same data model as costing, so productive hours can be based on actual logged run time rather than an assumed utilization percentage.
 - **Rates flow straight into quoting.** [Job shop quoting: RFQ to margin-protected quote](/learn/job-shop-quoting-rfq-to-quote) covers how a quote is built from routing time × work-center rate, automatically, rather than an estimator re-deriving machine cost by hand for every RFQ.
-- **API access to every cost input.** Because Carbon is API-first (rest.carbon.ms), depreciation schedules, utilization figures, and computed rates are queryable and exportable — useful if finance wants to audit the numbers behind a quote.
+- **API access to every cost input.** Because Carbon is API-first (rest.carbon.ms), depreciation schedules, utilization figures, and computed rates are queryable and exportable, useful if finance wants to audit the numbers behind a quote.
 - **Open source.** The costing logic itself is in the public repo (github.com/crbnos/carbon), so you can verify exactly how rates are computed before trusting them for pricing.
 
 ## Frequently asked questions
 
 ### What is a good machine hour rate for a CNC machine?
 
-There's no universal figure — it depends on purchase price, facility costs, local electricity rates, and utilization, all of which vary widely by region and equipment. A five-axis mill can easily run $80–150/hr fully burdened; a manual lathe with low depreciation might run $25–40/hr. Calculate your own using the formula above rather than borrowing an industry average.
+There's no universal figure; it depends on purchase price, facility costs, local electricity rates, and utilization, all of which vary widely by region and equipment. A five-axis mill can run $80 to $150/hr fully burdened; a manual lathe with low depreciation might run $25 to $40/hr. Calculate your own using the formula above rather than borrowing an industry average.
 
 ### Should machine hour rate include labor?
 
@@ -152,15 +152,15 @@ It depends on the use. A machine-only rate (excluding labor) is useful for compa
 
 ### What's the difference between available hours and productive hours?
 
-Available hours are the hours the shop is scheduled to operate. Productive hours are available hours minus downtime, changeovers, and planned maintenance — the hours the machine is actually cutting. Using available hours instead of productive hours in the denominator understates the true machine hour rate, often by 20% or more.
+Available hours are the hours the shop is scheduled to operate. Productive hours are available hours minus downtime, changeovers, and planned maintenance, the hours the machine is cutting. Using available hours instead of productive hours in the denominator understates the true machine hour rate, often by 20% or more.
 
 ### How often should I recalculate machine hour rates?
 
-At minimum annually, since depreciation, facility costs, and utility rates all change. Recalculate sooner if utilization changes meaningfully — adding a second shift or a major new customer changes productive hours enough to shift the rate.
+At minimum annually, since depreciation, facility costs, and utility rates all change. Recalculate sooner if utilization changes meaningfully: adding a second shift or a major new customer changes productive hours enough to shift the rate.
 
 ### Does a higher machine hour rate mean a less efficient shop?
 
-Not necessarily. A high rate can simply reflect an expensive, capable machine (five-axis, live tooling, high accuracy) that lets you win work a cheaper machine can't do at all. The rate is a cost input to quoting, not a scorecard — what matters is whether the jobs quoted against that rate stay profitable.
+Not necessarily. A high rate can reflect an expensive, capable machine (five-axis, live tooling, high accuracy) that lets you win work a cheaper machine can't do at all. The rate is a cost input to quoting rather than a scorecard; what matters is whether the jobs quoted against that rate stay profitable.
 
 ## Calculate real machine hour rates on your own shop's data
 

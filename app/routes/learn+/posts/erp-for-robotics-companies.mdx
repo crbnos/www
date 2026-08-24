@@ -1,28 +1,28 @@
 ---
-title: "ERP for Robotics Companies: A Buyer's Guide"
+title: "ERP for robotics companies: a buyer's guide"
 publishedAt: "2026-06-27"
-summary: "ERP for robotics companies has to handle deep electromechanical BOMs, firmware revisions, mixed make/buy, and service — here's how the real options compare."
+summary: "ERP for robotics companies has to handle deep electromechanical BOMs, firmware revisions, mixed make/buy, and service. See how the options compare."
 tag: "Industry guides"
 author: "chase"
 ---
 
-Robotics companies sit in an uncomfortable gap in the ERP market. They're not a pure job shop (they build complex, multi-level assemblies with their own part numbers, not just customer-supplied prints), and they're not a pure electronics house either (mechanical structure, wiring harnesses, purchased motors, gearboxes, and sensors all have to come together with firmware that has its own revision history). Most ERP for robotics companies gets evaluated by people who assume "manufacturing software" means one of a handful of well-known machine-shop or electronics tools, and none of them were actually built for a product that's simultaneously a mechanical assembly, a wiring harness, and an embedded system.
+Robotics companies sit in an uncomfortable gap in the ERP market. A robot is more than a job-shop part: it's a complex, multi-level assembly with its own part numbers, not a customer-supplied print. It's also more than an electronics board: mechanical structure, wiring harnesses, purchased motors, gearboxes, and sensors have to come together with firmware that carries its own revision history. Most robotics teams evaluate ERP alongside people who assume "manufacturing software" means one of a handful of well-known machine-shop or electronics tools. None of those tools were built for a product that is at once a mechanical assembly, a wiring harness, and an embedded system.
 
-This guide covers what robotics companies actually need from ERP, why the category is underserved, and how the realistic options compare.
+This guide covers what robotics companies need from ERP, why the category is underserved, and how the options compare.
 
 ## What makes robotics ERP requirements different
 
 A mobile robot, robotic arm, or automated system typically combines characteristics that most ERPs handle individually but rarely together:
 
-- **Deep, multi-level electromechanical BOMs.** A single robot might have five or six levels of assembly — chassis, drivetrain subassembly, sensor pod, wiring harness, control electronics, and the top-level integration — each with its own make/buy mix. This is a different problem from a flat electronics BOM or a simple machined-part BOM. If you haven't nailed down BOM structure basics, [What Is a Bill of Materials?](/learn/what-is-a-bill-of-materials) covers the EBOM/MBOM distinction and multi-level explosion that robotics BOMs depend on.
-- **Firmware and configuration as part of the build record.** Which firmware version, calibration file, or configuration profile got loaded onto a specific unit at a specific serial number is production data, not just an engineering artifact — and most ERPs have no field for it at all.
-- **NPI velocity.** Robotics companies revise hardware fast, especially pre-Series B. A BOM or routing that's still accurate six weeks after it's released is a good outcome. Systems built around infrequent, slow-moving revisions (or that require a formal change board for every tweak) create friction exactly when speed matters most.
-- **Mixed make/buy at every level.** A robotics BOM might have machined brackets you make in-house, PCBAs bought from a contract manufacturer, and off-the-shelf actuators and sensors bought as-is — often all under the same subassembly.
+- **Deep, multi-level electromechanical BOMs.** A single robot might have five or six levels of assembly (chassis, drivetrain subassembly, sensor pod, wiring harness, control electronics, and the top-level integration), each with its own make/buy mix. That is a different problem from a flat electronics BOM or a simple machined-part BOM. If you haven't nailed down BOM structure basics, [What Is a Bill of Materials?](/learn/what-is-a-bill-of-materials) covers the EBOM/MBOM distinction and multi-level explosion that robotics BOMs depend on.
+- **Firmware and configuration as part of the build record.** Which firmware version, calibration file, or configuration profile got loaded onto a specific unit at a specific serial number is production data, not an engineering artifact, and most ERPs have no field for it at all.
+- **NPI velocity.** Robotics companies revise hardware fast, especially pre-Series B. A BOM or routing that stays accurate six weeks after release is a good outcome. Systems built around infrequent, slow-moving revisions, or that require a formal change board for every tweak, create friction when speed matters most.
+- **Mixed make/buy at every level.** A robotics BOM might have machined brackets you make in-house, PCBAs bought from a contract manufacturer, and off-the-shelf actuators and sensors bought as-is, often all under the same subassembly.
 - **Service and spares after the sale.** Once robots are deployed, service and spares parts management becomes its own discipline: which serial number is in the field, what its build config was, and what spare parts and revisions are compatible with it.
 
 ## Why robotics is an underserved ICP
 
-Most ERP vendors built their manufacturing logic around one of a few archetypes: discrete machine shops, process manufacturers, or pure electronics assemblers. Robotics companies don't fit cleanly into any of them, so they end up either forcing a mechanical-focused ERP to handle electronics (weak reference designator and AVL support), forcing an electronics-focused tool to handle deep mechanical structure (shallow BOM levels, no routing depth), or stitching together a PLM tool for engineering, a spreadsheet for BOM management, and a separate MES-lite tool for the floor — none of which share a data model.
+Most ERP vendors built their manufacturing logic around one of a few archetypes: discrete machine shops, process manufacturers, or pure electronics assemblers. Robotics companies don't fit cleanly into any of them, so they end up either forcing a mechanical-focused ERP to handle electronics (weak reference designator and AVL support), forcing an electronics-focused tool to handle deep mechanical structure (shallow BOM levels, no routing depth), or stitching together a PLM tool for engineering, a spreadsheet for BOM management, and a separate MES-lite tool for the floor, none of which share a data model.
 
 The market response has mostly been generic MRP tools aimed at "hardware startups" broadly, which is directionally right but doesn't address the specific combination robotics companies deal with: mechanical + electrical + firmware + service, in one product's BOM.
 
@@ -32,31 +32,31 @@ The market response has mostly been generic MRP tools aimed at "hardware startup
 |---|---|---|
 | **Spreadsheets + a PDM/PLM tool for CAD** | Fast to start, matches engineering's existing CAD workflow | No connection between engineering BOM and what production actually buys/builds; multi-level explosion and MRP math done by hand |
 | **Lightweight MRP for makers (Katana, MRPeasy)** | Easy to set up, reasonable inventory tracking for simpler products | BOM depth and configuration/serial tracking are thin; not designed for deep electromechanical structures or firmware-level build records |
-| **General small-business ERP (Odoo, NetSuite)** | Broad functionality, familiar to finance teams, large ecosystem | Manufacturing modules are generalist — no first-class handling of mixed mechanical/electrical BOMs, firmware revisions, or serialized field service |
+| **General small-business ERP (Odoo, NetSuite)** | Broad functionality, familiar to finance teams, large ecosystem | Manufacturing modules are generalist, with no first-class handling of mixed mechanical/electrical BOMs, firmware revisions, or serialized field service |
 | **Legacy discrete manufacturing ERP (Epicor, Global Shop, IQMS/DELMIAWorks)** | Mature MRP and scheduling, proven at scale in machine shops | Built around one manufacturing archetype (typically machining or fabrication); electronics and firmware are afterthoughts; long, expensive implementations |
-| **PLM-first tools (Arena, Duro)** | Strong engineering change control and BOM authoring | Not a production or MRP system — you still need something else to run purchasing, work orders, and shop floor execution |
-| **Carbon** | ERP + MRP + MES + QMS on one data model with deep multi-level BOMs, serial/lot tracking, and an open API to sync from CAD; source-available and self-hostable | Younger than the legacy incumbents — but those decades were built around a single archetype (machining *or* electronics), which is exactly why they can't model a robot cleanly; Carbon's firmware, calibration, and spares fields are configured against one data model rather than special-ordered as a customization |
+| **PLM-first tools (Arena, Duro)** | Strong engineering change control and BOM authoring | Not a production or MRP system, so you still need something else to run purchasing, work orders, and shop floor execution |
+| **Carbon** | ERP + MRP + MES + QMS on one data model with deep multi-level BOMs, serial/lot tracking, and an open API to sync from CAD; source-available and self-hostable | Younger than the legacy incumbents, but those decades were built around a single archetype (machining *or* electronics), which is why they can't model a robot cleanly; Carbon's firmware, calibration, and spares fields are configured against one data model rather than special-ordered as a customization |
 
-There's no dominant, purpose-built "robotics ERP" on the market today — that's the point. The realistic choice is between a generalist tool you adapt, a legacy tool built for a different archetype, or a modern, API-first platform flexible enough to model the combination robotics companies actually need.
+No dominant, purpose-built "robotics ERP" exists on the market today. Your options come down to a generalist tool you adapt, a legacy tool built for a different archetype, or a modern, API-first platform flexible enough to model the combination robotics companies need.
 
-## What to actually evaluate
+## What to evaluate
 
 - **BOM depth and mixed structure.** Can the system handle five-plus levels of explosion with make and buy items freely mixed at any level, without hitting an artificial limit designed around simpler products?
-- **CAD-to-BOM sync.** Does engineering's CAD tool (Onshape, SolidWorks, etc.) have to be manually re-keyed into the ERP's BOM every revision, or is there a real sync path? See [From CAD to BOM: Onshape → ERP sync](/learn/cad-to-bom-onshape-erp-sync) for what that actually looks like end to end.
+- **CAD-to-BOM sync.** Does engineering's CAD tool (Onshape, SolidWorks, etc.) have to be manually re-keyed into the ERP's BOM every revision, or is there a real sync path? See [From CAD to BOM: Onshape → ERP sync](/learn/cad-to-bom-onshape-erp-sync) for what that looks like end to end.
 - **Serialized build records with firmware/config fields.** Can you attach firmware version, calibration data, or configuration profile to a specific serial number as part of the production record, not a side spreadsheet?
 - **Revision speed.** How much process does it take to release a BOM or routing change? A system that requires a formal ECO board for every tweak will fight your NPI velocity.
-- **API access.** Robotics companies tend to have more custom tooling (test rigs, calibration stations, field telemetry) than most manufacturers — an ERP that's only usable through its UI becomes a bottleneck. [Manufacturing software for hardware startups](/learn/manufacturing-software-for-hardware-startups) covers the broader case for API-first tooling at this stage of company.
-- **Service and spares path.** Once units ship, can the same system track which serial number is in the field, its build configuration, and compatible spares — or does that become a second system?
+- **API access.** Robotics companies tend to have more custom tooling (test rigs, calibration stations, field telemetry) than most manufacturers, and an ERP that's only usable through its UI becomes a bottleneck. [Manufacturing software for hardware startups](/learn/manufacturing-software-for-hardware-startups) covers the broader case for API-first tooling at this stage of company.
+- **Service and spares path.** Once units ship, can the same system track which serial number is in the field, its build configuration, and compatible spares, or does that become a second system?
 
 ## How Carbon fits
 
-Carbon is built around one Postgres data model spanning ERP, MRP, MES, and QMS, which is what lets it handle a robotics BOM's actual shape: unlimited-depth multi-level structure, make and buy items mixed freely, and reference designators for the electrical side sitting next to routings and standard times for the mechanical side. Serial and lot tracking is native, so a build record can carry firmware version, calibration data, or configuration notes against a specific unit rather than a separate spreadsheet nobody keeps current. Because every table is reachable over a [REST API](/developers) and a hosted MCP server, robotics teams can sync BOMs directly from CAD, feed test-rig or calibration data back into the build record, or connect field telemetry to the serial number that shipped it — the kind of integration a closed, UI-only ERP simply won't support. Carbon is source-available and self-hostable, which also matters for robotics companies selling into defense or regulated markets where data residency and software inspection are real requirements. Implementations typically run about a month, which matters for teams still iterating on hardware every quarter.
+Carbon is built around one Postgres data model spanning ERP, MRP, MES, and QMS, which lets it handle a robotics BOM's shape: unlimited-depth multi-level structure, make and buy items mixed freely, and reference designators for the electrical side sitting next to routings and standard times for the mechanical side. Serial and lot tracking is native, so a build record can carry firmware version, calibration data, or configuration notes against a specific unit rather than a separate spreadsheet nobody keeps current. Because every table is reachable over a [REST API](/developers) and a hosted MCP server, robotics teams can sync BOMs directly from CAD, feed test-rig or calibration data back into the build record, or connect field telemetry to the serial number that shipped it. A closed, UI-only ERP won't support that kind of integration. Carbon is source-available and self-hostable, which matters for robotics companies selling into defense or regulated markets where data residency and software inspection are real requirements. Implementations typically run about a month, which matters for teams still iterating on hardware every quarter.
 
 ## Frequently asked questions
 
 ### Is there ERP software built specifically for robotics companies?
 
-Not really — robotics sits at the intersection of mechanical, electrical, and firmware manufacturing, and most ERP vendors were built around one of those archetypes individually. The realistic choice today is a flexible, API-first platform configured for the combination, rather than an off-the-shelf "robotics ERP."
+Not really. Robotics sits at the intersection of mechanical, electrical, and firmware manufacturing, and most ERP vendors were built around one of those archetypes. The practical option today is a flexible, API-first platform configured for the combination, rather than an off-the-shelf "robotics ERP."
 
 ### Can I use a spreadsheet-based BOM for a robotics product?
 
@@ -68,11 +68,11 @@ An electronics BOM is typically one or two levels with a strong focus on referen
 
 ### Does firmware belong in the ERP or a separate system?
 
-The firmware file and its source usually live in a version control system (git), but which firmware version was loaded onto a specific serial number at build time is production data that belongs in the same record as the rest of that unit's build — otherwise you can't answer basic field-support questions without cross-referencing multiple systems.
+The firmware file and its source usually live in a version control system (git), but which firmware version was loaded onto a specific serial number at build time is production data that belongs in the same record as the rest of that unit's build. Otherwise you can't answer basic field-support questions without cross-referencing multiple systems.
 
 ### What ERP feature matters most for a robotics startup pre-scale?
 
-API access and revision speed. Robotics companies iterate on hardware fast and often have custom tooling (test rigs, calibration stations) that needs to talk to the ERP — a closed, UI-only system becomes the bottleneck well before manufacturing volume does.
+API access and revision speed. Robotics companies iterate on hardware fast and often have custom tooling (test rigs, calibration stations) that needs to talk to the ERP, and a closed, UI-only system becomes the bottleneck well before manufacturing volume does.
 
 ## Try Carbon on your actual BOM
 

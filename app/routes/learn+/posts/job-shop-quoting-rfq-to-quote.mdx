@@ -1,58 +1,58 @@
 ---
-title: "Job Shop Quoting: From RFQ to a Margin-Protected Quote"
+title: "Job shop quoting: from RFQ to a margin-protected quote"
 publishedAt: "2026-07-11"
 summary: "A complete job shop quoting process from RFQ intake to a margin-protected quote, with the actual costing and pricing math worked at three quantity breaks."
 tag: "How-to"
 author: "chase"
 ---
 
-A job shop's quoting process only does its job if the price that goes out the door is the price the shop actually meant to send — protected margin at every quantity break, not a number a sales rep eyeballed under deadline pressure. That requires a repeatable sequence: intake the RFQ completely, cost the job for real, apply margin as a formula rather than a feeling, quote clear terms, follow up on a schedule, and track the win or loss so the next quote is better calibrated than this one.
+A job shop's quoting process works when the price that goes out the door is the price the shop meant to send, with protected margin at every quantity break rather than a number a sales rep eyeballed under deadline pressure. That takes a repeatable sequence: intake the RFQ completely, cost the job for real, apply margin as a formula, quote clear terms, follow up on a schedule, and track the win or loss so the next quote is better calibrated than this one.
 
-This article walks the full job shop quoting process end to end, with a worked costing and pricing example at three quantity breaks, and covers where shops most often bleed margin without noticing — usually at the exact moment a customer asks "what if we order more?"
+This article walks the full job shop quoting process end to end, with a worked costing and pricing example at three quantity breaks. It also covers where shops most often bleed margin without noticing, usually at the moment a customer asks "what if we order more?"
 
 ## The quoting workflow, end to end
 
-1. **RFQ intake** — capture everything the costing step needs before estimating anything.
-2. **Costing** — material, machine time, labor, setup, and outside processing, per part.
-3. **Margin** — a formula applied to true cost, not a discount applied to a round number.
-4. **Terms** — lead time, payment terms, tooling ownership, and quote validity, stated clearly.
-5. **Follow-up** — a defined cadence, not "wait and see."
-6. **Win/loss tracking** — feed the outcome back into future costing and pricing decisions.
+1. **RFQ intake:** capture everything the costing step needs before estimating anything.
+2. **Costing:** material, machine time, labor, setup, and outside processing, per part.
+3. **Margin:** a formula applied to true cost rather than a discount on a round number.
+4. **Terms:** lead time, payment terms, tooling ownership, and quote validity, stated clearly.
+5. **Follow-up:** a defined cadence instead of wait and see.
+6. **Win/loss tracking:** feed the outcome back into future costing and pricing decisions.
 
-## Step 1: RFQ intake — what you need before you can cost anything
+## Step 1: RFQ intake, what you need before costing
 
-A quote is only as good as the RFQ behind it. At minimum, intake needs: the part model or drawing (with revision), material and finish specification, quantity (and any quantity breaks the customer wants priced), required tolerances, any special inspection or certification requirements (first article, material cert, source inspection), target need-by date, and whether tooling is customer-supplied or shop-built. Missing any of these forces an assumption into the cost model, and assumptions are exactly where margin leaks in later. For configurable or CAD-driven parts, capturing the model itself — not just a PDF — also sets up the BOM and routing work the next step depends on; see [From CAD to BOM: Onshape → ERP sync](/learn/cad-to-bom-onshape-erp-sync) for how that handoff works when the geometry itself needs to become a costed structure.
+A quote is only as good as the RFQ behind it. At minimum, intake needs: the part model or drawing (with revision), material and finish specification, quantity (and any quantity breaks the customer wants priced), required tolerances, any special inspection or certification requirements (first article, material cert, source inspection), target need-by date, and whether tooling is customer-supplied or shop-built. Missing any of these forces an assumption into the cost model, and assumptions are where margin leaks in later. For configurable or CAD-driven parts, capturing the model itself (not just a PDF) also sets up the BOM and routing work the next step depends on; see [From CAD to BOM: Onshape → ERP sync](/learn/cad-to-bom-onshape-erp-sync) for how that handoff works when the geometry needs to become a costed structure.
 
 ## Step 2: Costing the job
 
-Real part costing means summing every driver of cost per part, not applying a rule of thumb to material cost alone:
+Real part costing sums every driver of cost per part rather than applying a rule of thumb to material cost alone:
 
-- **Material** — raw stock cost, including scrap allowance.
-- **Machine time** — cycle time on each operation, priced at that machine's real hourly rate.
-- **Setup** — fixture and programming time, amortized across the lot.
-- **Outside processing** — plating, heat treat, anodize, or any step the shop doesn't perform in-house.
+- **Material:** raw stock cost, including scrap allowance.
+- **Machine time:** cycle time on each operation, priced at that machine's real hourly rate.
+- **Setup:** fixture and programming time, amortized across the lot.
+- **Outside processing:** plating, heat treat, anodize, or any step the shop doesn't perform in-house.
 
 The machine time line is where most quoting errors originate, because a shop-wide "burden rate" hides real differences between a manual mill and a five-axis machining center. [How to cost a machined part](/learn/how-to-cost-a-machined-part) walks the full per-part costing method, and [Machine-hour rate calculator + guide](/learn/machine-hour-rate-calculator) covers how to build an accurate hourly rate per machine rather than one blended shop rate that overcharges simple jobs and undercharges complex ones.
 
 ## Step 3: Applying margin without guessing
 
-Margin should be calculated as a percentage of the sale price, not a markup on cost, because the two produce different numbers and only one of them guarantees the margin percentage you think you're quoting:
+Calculate margin as a percentage of the sale price rather than a markup on cost. The two produce different numbers, and only one guarantees the margin percentage you think you're quoting:
 
 **Price = Cost ÷ (1 − target margin %)**
 
-A 35% *markup* on a $23.58 cost gives a price of $31.83 — but that's only a 26% margin on the sale price, not 35%. A 35% *margin* target gives $23.58 ÷ 0.65 = $36.28. Confusing the two is one of the most common, least visible ways a shop quotes lower margin than it intends to.
+A 35% *markup* on a $23.58 cost gives a price of $31.83, but that's only a 26% margin on the sale price. A 35% *margin* target gives $23.58 ÷ 0.65 = $36.28. Confusing the two is one of the most common and least visible ways a shop quotes lower margin than it intends to.
 
-## Step 4: Terms, lead time, and the parts of a quote buyers actually read
+## Step 4: Terms, lead time, and the parts of a quote buyers read
 
-Beyond price, a complete quote states: lead time from PO receipt to ship, payment terms (net 30 is standard; net 15 or deposit-on-order for new customers or high-material-cost jobs), FOB point, who owns any shop-built tooling and whether it's a separate line item, and — critically — a quote expiration date. Material and machine-time costs move; a quote with no expiration is a standing offer to eat a price increase between quoting and PO.
+Beyond price, a complete quote states: lead time from PO receipt to ship, payment terms (net 30 is standard; net 15 or deposit-on-order for new customers or high-material-cost jobs), FOB point, who owns any shop-built tooling and whether it's a separate line item, and a quote expiration date. Material and machine-time costs move; a quote with no expiration is a standing offer to eat a price increase between quoting and PO.
 
 ## Step 5: Follow-up cadence
 
-A quote that goes silent gets forgotten, not necessarily lost. A simple cadence works better than reactive follow-up: a check-in near the one-third mark of the quote's validity window, a second at roughly two-thirds, and a final touch a few days before expiration offering to requote if timing has changed. The purpose isn't pressure — it's staying in front of the buyer at the moments a decision is most likely to be made, and getting a clean win, loss, or "not now" answer instead of an RFQ that quietly dies in someone's inbox.
+A quote that goes silent gets forgotten, not necessarily lost. A defined cadence works better than reactive follow-up: a check-in near the one-third mark of the quote's validity window, a second at roughly two-thirds, and a final touch a few days before expiration offering to requote if timing has changed. The purpose is to stay in front of the buyer at the moments a decision is most likely to get made, and to get a clean win, loss, or "not now" answer instead of an RFQ that dies in someone's inbox.
 
 ## Step 6: Win/loss tracking
 
-Every quote should resolve to a logged outcome: won, lost (and to whom, if known), or expired with no decision. Tracked over enough quotes, this data answers questions gut feel can't: win rate by margin band, by part family, by customer, and by whoever built the quote. A shop winning nearly 100% of quotes at a given margin is very likely underpriced; a shop losing the majority of quotes above a certain margin threshold has real evidence of where the market actually is, rather than an assumption. That evidence should update the margin targets and costing assumptions used on the next round of RFQs — including labor rates and machine-hour rates that may have drifted since they were last checked.
+Every quote should resolve to a logged outcome: won, lost (and to whom, if known), or expired with no decision. Tracked over enough quotes, this data answers questions gut feel can't: win rate by margin band, by part family, by customer, and by whoever built the quote. A shop winning nearly 100% of quotes at a given margin is probably underpriced; a shop losing most quotes above a certain margin threshold has evidence of where the market is rather than an assumption. Use that evidence to update the margin targets and costing assumptions on the next round of RFQs, including labor rates and machine-hour rates that may have drifted since they were last checked.
 
 ## Worked example: RFQ to a margin-protected quote
 
@@ -70,7 +70,7 @@ An RFQ arrives for a machined aluminum bracket, quantity 100, with pricing also 
 
 At a 35% target margin: **Price = $23.58 ÷ 0.65 = $36.28/part.** For 100 units: **$3,628.00.**
 
-**The quantity breaks — recosting, not discounting:**
+**The quantity breaks: recost, don't discount.**
 
 The only cost driver that changes with quantity here is setup, since it's a fixed 1.5 hours amortized over more parts. Material and machine time per part don't change. Recomputing at each break, holding the same 35% margin:
 
@@ -80,22 +80,22 @@ The only cost driver that changes with quantity here is setup, since it's a fixe
 | 250 | $0.51 | $22.81 | $35.09 | $8,772.50 |
 | 500 | $0.26 | $22.56 | $34.71 | $17,355.00 |
 
-Notice what this table protects against: price per part legitimately drops at higher quantity (setup amortizes further), but it drops by exactly as much as true cost drops — not by whatever a customer expects a "volume discount" to look like. A common quoting mistake is discounting the per-unit price at higher quantities by a round number (say, 10%) without re-running the cost model, which quietly erodes margin below 35% at every quantity break rather than holding it steady.
+This table protects margin at the breaks: price per part drops at higher quantity because setup amortizes further, but it drops by only as much as true cost drops, not by whatever a customer expects a "volume discount" to look like. A common quoting mistake is discounting the per-unit price at higher quantities by a round number (say, 10%) without re-running the cost model, which erodes margin below 35% at every quantity break rather than holding it steady.
 
 ## Where job shops lose money on quotes
 
-Two opposite failure modes both cost real margin. **Underpricing** shows up as a near-100% win rate at a given margin band — a shop that never loses a quote is almost never testing the top of what the market will pay. **Overpricing with padding** shows up as vanishing win rates and a sales team compensating by discounting off the quoted price at the negotiation stage, which reintroduces the exact markup-vs-margin confusion described above, usually without recomputing true cost at all. Both are solvable with the same fix: cost every job for real, apply margin as a formula, and use win/loss data — not intuition — to tell you which side of the line you're on.
+Two opposite failure modes both cost margin. Underpricing shows up as a near-100% win rate at a given margin band; a shop that never loses a quote isn't testing the top of what the market will pay. Overpricing with padding shows up as vanishing win rates and a sales team compensating by discounting off the quoted price at the negotiation stage, which reintroduces the markup-vs-margin confusion described above, usually without recomputing true cost at all. Both have the same fix: cost every job for real, apply margin as a formula, and use win/loss data rather than intuition to tell you which side of the line you're on.
 
-Purpose-built RFQ and quoting tools — Paperless Parts is the best known — do the DFM-aware, automated-costing part of step 1 and 2 genuinely well for CNC and sheet metal work, and are a real productivity gain over a manual RFQ inbox. Where that value tends to cap out is the handoff afterward: a quote that's won still needs to become a job costed against real machine-hour rates, purchased material tracked and received, and actuals compared back against what was quoted — work that lives in the ERP, not the quoting tool, and that's often where the integration gap between the two systems shows up.
+Purpose-built RFQ and quoting tools (Paperless Parts is the best known) do the DFM-aware, automated-costing part of steps 1 and 2 well for CNC and sheet metal work, and they beat a manual RFQ inbox on productivity. That value tends to cap out at the handoff afterward: a won quote still needs to become a job costed against real machine-hour rates, purchased material tracked and received, and actuals compared back against what was quoted. That work lives in the ERP, not the quoting tool, which is often where the integration gap between the two systems shows up.
 
 ## How Carbon handles job shop quoting
 
 Carbon keeps quoting inside the same system as costing, job execution, and accounting, rather than as a separate tool that hands off to an ERP after the win:
 
-- **Quotes cost against the same machine-hour rates and routing data** used in production, so a quoted cost and an actual cost are directly comparable after the job runs — no separate spreadsheet to reconcile.
-- **The parametric configurator resolves BOM and routing automatically** for configurable parts, shrinking the RFQ-to-quote cycle on jobs that would otherwise need manual engineering time before a cost model can even be built.
-- **Native job costing and accounting** mean margin is calculated against real, current overhead and labor rates rather than a burden rate set once and left stale.
-- **API-first access** (rest.carbon.ms) makes win/loss and margin data queryable for real analysis rather than trapped in a quoting tool's own dashboard — see [API-first ERP](/learn/api-first-erp) for what that unlocks.
+- **Quotes cost against the same machine-hour rates and routing data** used in production, so a quoted cost and an actual cost are directly comparable after the job runs, with no separate spreadsheet to reconcile.
+- **The parametric configurator resolves BOM and routing automatically** for configurable parts, shrinking the RFQ-to-quote cycle on jobs that would otherwise need manual engineering time before a cost model can be built.
+- **Native job costing and accounting** calculate margin against real, current overhead and labor rates rather than a burden rate set once and left stale.
+- **API-first access** (rest.carbon.ms) makes win/loss and margin data queryable for analysis rather than trapped in a quoting tool's own dashboard; see [API-first ERP](/learn/api-first-erp) for what that unlocks.
 
 ## Frequently asked questions
 
@@ -103,17 +103,17 @@ Carbon keeps quoting inside the same system as costing, job execution, and accou
 RFQ intake, costing (material, machine time, setup, outside processing), applying margin, stating terms and lead time, following up on a defined cadence, and logging the win or loss to calibrate future quotes.
 
 ### How do you calculate margin on a machined part quote?
-Divide total cost by (1 − target margin percentage) to get price: Price = Cost ÷ (1 − margin%). Applying margin as a markup on cost instead produces a lower actual margin than intended — a 35% markup yields roughly a 26% margin, not 35%.
+Divide total cost by (1 − target margin percentage) to get price: Price = Cost ÷ (1 − margin%). Applying margin as a markup on cost instead produces a lower margin than intended: a 35% markup yields roughly a 26% margin, not 35%.
 
 ### Should quoted price stay the same at higher quantities?
-No, but it should only drop by as much as true per-part cost drops — typically from setup amortizing over more units — not by an arbitrary volume-discount percentage applied without recosting.
+It can drop, but only by as much as true per-part cost drops, typically from setup amortizing over more units, not by an arbitrary volume-discount percentage applied without recosting.
 
 ### How long should a machining quote stay valid?
 Commonly 30 to 60 days, stated explicitly on the quote, since material and machine-time costs can move enough in that window to erode margin on an open-ended offer.
 
 ### What's the difference between quoting software and an ERP with quoting?
-Standalone quoting tools are often strong at fast, DFM-aware RFQ costing but hand off to a separate ERP once a job is won. An ERP with quoting built in keeps the quoted cost, the actual job cost, and the accounting in one system, so margin performance can be checked after the fact instead of assumed.
+Standalone quoting tools are often strong at fast, DFM-aware RFQ costing but hand off to a separate ERP once a job is won. An ERP with quoting built in keeps the quoted cost, the actual job cost, and the accounting in one system, so you can check margin performance after the fact instead of assuming it.
 
-## Quote with margin you can actually trust
+## Quote with margin you can trust
 
-If quoting still means a spreadsheet that's disconnected from what a job actually costs to run, it's worth seeing quoting, job costing, and actuals live in one system. [Try Carbon free for 30 days](/pricing) at https://app.carbon.ms, or review the costing engine's source on [GitHub](https://github.com/crbnos/carbon).
+If quoting still means a spreadsheet disconnected from what a job costs to run, it's worth seeing quoting, job costing, and actuals live in one system. [Try Carbon free for 30 days](/pricing) at https://app.carbon.ms, or review the costing engine's source on [GitHub](https://github.com/crbnos/carbon).

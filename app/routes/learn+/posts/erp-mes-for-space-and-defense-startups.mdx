@@ -1,72 +1,72 @@
 ---
-title: "ERP/MES for Space & Defense Startups"
+title: "ERP and MES for space and defense startups"
 publishedAt: "2026-06-29"
-summary: "What ERP for defense manufacturers and MES for space startups actually requires — ITAR, AS9100, traceability, and rapid iteration — plus why self-host and source-available options matter."
+summary: "ERP for defense manufacturers and MES for space startups: ITAR, AS9100, traceability, rapid iteration, and why self-host and source-available matter."
 tag: "Industry guides"
 author: "chase"
 ---
 
-ERP and MES for space and defense startups have to satisfy two demands that pull in opposite directions on most systems: the compliance rigor of ITAR, AS9100, and traceability that a legacy defense contractor takes for granted, and the rapid, weekly-iteration pace of a startup that's still changing its hardware. Most systems are built for one or the other — heavyweight compliance-focused ERP that assumes a stable, mature product, or fast-moving startup tools that never had to think about export control. This guide covers what actually matters for this vertical and how to evaluate the (small) set of systems that take both seriously.
+ERP and MES for space and defense startups have to satisfy two demands that pull in opposite directions on most systems: the compliance rigor of ITAR, AS9100, and traceability that a legacy defense contractor takes for granted, and the weekly-iteration pace of a startup that's still changing its hardware. Most systems handle one or the other. You get heavyweight compliance-focused ERP that assumes a stable, mature product, or fast-moving startup tools that never had to think about export control. This guide covers what matters for this vertical and how to evaluate the small set of systems that take both seriously.
 
 ## The special demands of space and defense manufacturing
 
 ### ITAR and export control
 
-If your hardware or technical data is subject to the International Traffic in Arms Regulations, you need to control who can access design data, BOMs, and production records — including where that data physically lives and who (by citizenship) can touch it. This isn't a checkbox; it's an architectural constraint that shapes your entire software stack, not just one system. See [ITAR compliance for manufacturers](/learn/itar-compliance-for-manufacturers) for the full requirements.
+If your hardware or technical data is subject to the International Traffic in Arms Regulations, you need to control who can access design data, BOMs, and production records, including where that data physically lives and who (by citizenship) can touch it. This is an architectural constraint that shapes your whole software stack, not one system. See [ITAR compliance for manufacturers](/learn/itar-compliance-for-manufacturers) for the full requirements.
 
 ### AS9100 quality management
 
-Space and defense hardware overwhelmingly needs to satisfy AS9100 (the aerospace-specific extension of ISO 9001), which means first article inspection (FAI/AS9102), document-controlled work instructions, calibrated tooling records, and a nonconformance process that produces an audit trail — not a promise that "we're careful." See [AS9100 for small shops](/learn/as9100-for-small-shops) for what the audit actually checks.
+Space and defense hardware overwhelmingly needs to satisfy AS9100 (the aerospace-specific extension of ISO 9001). That means first article inspection (FAI/AS9102), document-controlled work instructions, calibrated tooling records, and a nonconformance process that produces an audit trail rather than a promise that "we're careful." See [AS9100 for small shops](/learn/as9100-for-small-shops) for what the audit checks.
 
 ### End-to-end traceability
 
-A single lot of raw material or a single supplier's non-conformance needs to be traceable to every part it touched, forward to every assembly and every customer. This is table stakes for aerospace generally, but the stakes are higher in defense and space where a failure can mean a program review, not just a warranty claim. See [Lot & serial traceability, explained](/learn/what-is-lot-serial-traceability).
+A single lot of raw material or a single supplier's non-conformance needs to be traceable to every part it touched, forward to every assembly and every customer. This is table stakes for aerospace, but the stakes are higher in defense and space, where a failure can mean a program review instead of a warranty claim. See [Lot and serial traceability, explained](/learn/what-is-lot-serial-traceability).
 
 ### Rapid iteration on hardware that's still changing
 
-Unlike a mature defense prime running a stable, decades-old part number, a space or defense startup is often iterating on hardware weekly or monthly — new engine revision, new avionics board, new structural part — while still needing every build to be traceable and every change controlled. Legacy defense-contractor tooling, built around slow-moving, long-lifecycle programs, tends to make each change expensive to process. A startup needs change control that doesn't cost a week of paperwork every time a part revs.
+Unlike a mature defense prime running a stable, decades-old part number, a space or defense startup often iterates on hardware weekly or monthly (a new engine revision, a new avionics board, a new structural part) while still needing every build to be traceable and every change controlled. Legacy defense-contractor tooling, built around slow-moving, long-lifecycle programs, makes each change expensive to process. A startup needs change control that doesn't cost a week of paperwork every time a part revs.
 
 ### Government and prime customer requirements
 
-CMMC 2.0 and DFARS flowdowns increasingly show up in contracts even for smaller subcontractors and suppliers, which means cybersecurity controls (and the ability to demonstrate them) aren't optional once you're selling to a prime or directly to a DoD program. See [CMMC 2.0 for small defense manufacturers](/learn/cmmc-for-small-defense-manufacturers) and [DFARS flowdowns explained](/learn/dfars-flowdowns-explained).
+CMMC 2.0 and DFARS flowdowns increasingly show up in contracts even for smaller subcontractors and suppliers. Once you're selling to a prime or directly to a DoD program, cybersecurity controls (and the ability to demonstrate them) aren't optional. See [CMMC 2.0 for small defense manufacturers](/learn/cmmc-for-small-defense-manufacturers) and [DFARS flowdowns explained](/learn/dfars-flowdowns-explained).
 
 ## Why self-host and source-available matter here specifically
 
-For most manufacturers, "can I self-host this?" is a preference. For space and defense, it's frequently the deciding factor. ITAR technical data controls are dramatically easier to satisfy when your ERP/MES runs in an environment you control — your own cloud tenant, a GovCloud region, or on-premise — than when it lives in a vendor's shared multi-tenant SaaS with data residency and access controls you have to take on faith. A vendor's SOC 2 report answers a different question than "can I prove, to an auditor, exactly who and what had access to this technical data."
+For most manufacturers, "can I self-host this?" is a preference. For space and defense, it's often the deciding factor. ITAR technical data controls are far easier to satisfy when your ERP/MES runs in an environment you control (your own cloud tenant, a GovCloud region, or on-premise) than when it lives in a vendor's shared multi-tenant SaaS with data residency and access controls you have to take on faith. A vendor's SOC 2 report answers a different question than "can I prove, to an auditor, exactly who and what had access to this technical data."
 
-Source-available software adds a second layer: when the actual code your production and quality data flows through is inspectable, a security or compliance review doesn't have to stop at a vendor's word. For a startup pursuing CMMC or preparing for an ITAR-heavy contract, being able to point an auditor or a customer's security team at the actual implementation — not just a compliance whitepaper — shortens due diligence meaningfully. See [Self-hosting an ERP in an ITAR environment](/learn/self-hosting-an-erp-in-an-itar-environment) for the practical setup considerations.
+Source-available software adds a second layer. When you can inspect the code your production and quality data flows through, a security or compliance review doesn't have to stop at a vendor's word. For a startup pursuing CMMC or preparing for an ITAR-heavy contract, pointing an auditor or a customer's security team at the implementation itself, rather than a compliance whitepaper, shortens due diligence. See [Self-hosting an ERP in an ITAR environment](/learn/self-hosting-an-erp-in-an-itar-environment) for the practical setup considerations.
 
-## The honest vendor landscape
+## The vendor landscape
 
 ### First Resonance (ION Factory OS)
 
-First Resonance built ION specifically for hardware/aerospace startups, and it's a credible, well-regarded MES for NPI-to-production workflows and traceability — a real option worth evaluating. Where the decision actually turns is the axes this vertical weights most heavily. ION is proprietary and vendor-hosted, so a team that needs to self-host in a controlled or GovCloud environment for ITAR, point a security reviewer at the actual source, or run quality and production on a single data model is weighing a different set of tradeoffs than ION is built to make. That's the same ground Carbon is built for — see [Carbon vs. First Resonance](/compare/first-resonance) for the feature-by-feature breakdown.
+First Resonance built ION specifically for hardware/aerospace startups, and it's a credible, well-regarded MES for NPI-to-production workflows and traceability. It's worth evaluating. The decision turns on the axes this vertical weights most heavily. ION is proprietary and vendor-hosted, so a team that needs to self-host in a controlled or GovCloud environment for ITAR, point a security reviewer at the source, or run quality and production on a single data model is weighing a different set of tradeoffs than ION is built to make. That's the ground Carbon is built for. See [Carbon vs. First Resonance](/compare/first-resonance) for the feature-by-feature breakdown.
 
-**Best for:** hardware/aerospace startups that want a purpose-built MES from a team that has already solved this specific workflow.
+**Best for:** hardware/aerospace startups that want a purpose-built MES from a team that has already solved this workflow.
 
 ### Propel / Arena PLM
 
-These PLM-first tools are strong on document and engineering-change control, which matters for AS9100 and ITAR technical data governance. They're PLM tools first, though, not full ERP/MES — inventory, purchasing, and shop floor execution typically need a connected system, which reintroduces the multi-system traceability problem this vertical can least afford.
+These PLM-first tools are strong on document and engineering-change control, which matters for AS9100 and ITAR technical data governance. They're PLM tools, not full ERP/MES, so inventory, purchasing, and shop floor execution typically need a connected system. That reintroduces the multi-system traceability problem this vertical can least afford.
 
 **Best for:** teams that need best-in-class engineering document control and are prepared to integrate a separate ERP/MES for production.
 
 ### Traditional aerospace ERP (IFS, Infor, Epicor)
 
-These systems have decades of aerospace and defense manufacturing depth, including mature AS9100 and government contract accounting support. They're proven at scale for established primes and mid-tier suppliers. For an early-stage startup, the tradeoffs are the same ones legacy ERP always carries: long, partner-led implementations, quote-based pricing, and configuration built around a stable, mature product line rather than weekly hardware iteration.
+These systems have decades of aerospace and defense manufacturing depth, including mature AS9100 and government contract accounting support. They're proven at scale for established primes and mid-tier suppliers. For an early-stage startup, the tradeoffs are the ones legacy ERP always carries: long, partner-led implementations, quote-based pricing, and configuration built around a stable, mature product line rather than weekly hardware iteration.
 
 **Best for:** established aerospace/defense manufacturers with mature product lines and the budget for a traditional implementation.
 
 ### Odoo (self-hosted)
 
-Odoo Community is genuinely self-hostable and free, which appeals to a compliance-conscious startup that wants full control of its environment. The gap is depth: native QMS with AS9102/FAI support is limited without Enterprise add-ons or heavy customization, and Odoo wasn't designed with export-control access segmentation in mind — a startup would be building significant compliance tooling on top rather than getting it out of the box.
+Odoo Community is self-hostable and free, which appeals to a compliance-conscious startup that wants full control of its environment. The gap is depth: native QMS with AS9102/FAI support is limited without Enterprise add-ons or heavy customization, and Odoo wasn't designed with export-control access segmentation in mind. A startup would be building compliance tooling on top rather than getting it out of the box.
 
 **Best for:** technically capable teams that want to self-host something free and are prepared to build compliance and quality tooling on top.
 
 ### Carbon
 
-Carbon is an API-first, source-available ERP + MRP + MES + QMS on one Postgres data model, deployable as managed SaaS or self-hosted — including GovCloud-capable Enterprise deployments for ITAR-sensitive work. Because quality (FAI, nonconformance, document control), traceability, and production execution share one data model rather than syncing between separate PLM, ERP, and quality systems, an auditor or prime customer reviewing your traceability doesn't have to reconcile records across tools. The full source is on GitHub, which shortens security and compliance review for defense-adjacent customers. Pricing is published for Starter and Business tiers, with Enterprise (self-host/GovCloud, forward-deployed engineer support) available for teams that need it.
+Carbon is an API-first, source-available ERP + MRP + MES + QMS on one Postgres data model, deployable as managed SaaS or self-hosted, including GovCloud-capable Enterprise deployments for ITAR-sensitive work. Quality (FAI, nonconformance, document control), traceability, and production execution share one data model rather than syncing between separate PLM, ERP, and quality systems, so an auditor or prime customer reviewing your traceability doesn't have to reconcile records across tools. The full source is on GitHub, which shortens security and compliance review for defense-adjacent customers. Pricing is published for Starter and Business tiers, with Enterprise (self-host/GovCloud, forward-deployed engineer support) available for teams that need it.
 
-**Best for:** space and defense startups that want unified ERP/MES/QMS with a genuine self-host/GovCloud path and want to inspect the source before trusting it with export-controlled data.
+**Best for:** space and defense startups that want unified ERP/MES/QMS with a real self-host/GovCloud path and want to inspect the source before trusting it with export-controlled data.
 
 ## Side-by-side comparison
 
@@ -80,41 +80,41 @@ Carbon is an API-first, source-available ERP + MRP + MES + QMS on one Postgres d
 | Published pricing | No | No | No | Free (Community) | Yes |
 | Public REST API / MCP for AI agents | Limited | Limited | Limited | Partial (ORM-based) | Yes (REST + hosted MCP) |
 
-## What to actually prioritize when evaluating
+## How to prioritize when evaluating
 
-Rank your requirements in this order: first, whatever your specific ITAR/export-control obligations require for data residency and access control (this eliminates options, it doesn't just rank them); second, whether the system unifies quality and traceability with production so an audit doesn't require reconciling multiple tools; third, whether the vendor can move at your iteration speed rather than assuming a stable product; and only then, cost and polish. A system that's cheaper but forces you to bolt together PLM, ERP, and quality separately will cost more in engineering time and audit risk than it saves in license fees.
+Rank your requirements in this order. First, whatever your ITAR/export-control obligations require for data residency and access control, which eliminates options rather than ranking them. Second, whether the system unifies quality and traceability with production so an audit doesn't require reconciling multiple tools. Third, whether the vendor can move at your iteration speed rather than assuming a stable product. Then cost and polish. A system that's cheaper but forces you to bolt together PLM, ERP, and quality separately will cost more in engineering time and audit risk than it saves in license fees.
 
 ## How Carbon fits space and defense startups
 
-- **Self-host or GovCloud deployment on Enterprise**, so ITAR technical data can live in an environment you control rather than a vendor's shared multi-tenant cloud. See [Self-hosting an ERP in an ITAR environment](/learn/self-hosting-an-erp-in-an-itar-environment).
-- **Native QMS with FAI/AS9102 and nonconformance workflows** on the same data model as production, so audit records don't require reconciling a separate quality system.
-- **Full lot and serial traceability** from raw material through finished assembly, queryable directly rather than reconstructed from spreadsheets during a program review.
-- **Fast, versioned BOM and routing changes** built for hardware that's still iterating, without the change-control overhead of legacy aerospace ERP built for stable, decades-old part numbers.
-- **Source-available on GitHub**, letting your security team or a prime's compliance reviewer inspect the actual implementation rather than relying solely on a compliance whitepaper.
-- **API-first**, so program status, traceability records, and inventory are queryable programmatically — useful for a startup building its own compliance dashboards or connecting an AI agent via Carbon's hosted MCP server to answer production questions without a manual data pull.
+- Self-host or GovCloud deployment on Enterprise, so ITAR technical data can live in an environment you control rather than a vendor's shared multi-tenant cloud. See [Self-hosting an ERP in an ITAR environment](/learn/self-hosting-an-erp-in-an-itar-environment).
+- Native QMS with FAI/AS9102 and nonconformance workflows on the same data model as production, so audit records don't require reconciling a separate quality system.
+- Full lot and serial traceability from raw material through finished assembly, queryable directly rather than reconstructed from spreadsheets during a program review.
+- Fast, versioned BOM and routing changes built for hardware that's still iterating, without the change-control overhead of legacy aerospace ERP built for stable, decades-old part numbers.
+- Source-available on GitHub, so your security team or a prime's compliance reviewer can inspect the implementation rather than relying on a compliance whitepaper.
+- API-first, so program status, traceability records, and inventory are queryable programmatically. That helps a startup building its own compliance dashboards or connecting an AI agent via Carbon's hosted MCP server to answer production questions without a manual data pull.
 
 ## Frequently asked questions
 
 ### Does ERP software itself need to be ITAR-compliant?
 
-ITAR governs the export of technical data and defense articles, not software certification directly — but where and how your ERP stores and grants access to that data has to satisfy ITAR's access-control requirements. Self-hosting or a GovCloud deployment is the most direct way to keep that control in your own hands. See [ITAR compliance for manufacturers](/learn/itar-compliance-for-manufacturers).
+ITAR governs the export of technical data and defense articles, not software certification directly. Where and how your ERP stores and grants access to that data still has to satisfy ITAR's access-control requirements. Self-hosting or a GovCloud deployment is the most direct way to keep that control in your own hands. See [ITAR compliance for manufacturers](/learn/itar-compliance-for-manufacturers).
 
 ### What's the difference between MES and PLM for a hardware startup?
 
-PLM manages the engineering record — CAD, documents, and change control. MES manages shop floor execution — routing, work orders, and time capture. Space and defense startups often need both, and keeping them on one data model avoids the traceability gaps that show up when engineering and production records live in separate systems.
+PLM manages the engineering record: CAD, documents, and change control. MES manages shop floor execution: routing, work orders, and time capture. Space and defense startups often need both, and keeping them on one data model avoids the traceability gaps that show up when engineering and production records live in separate systems.
 
 ### Is First Resonance the only option built specifically for this niche?
 
-First Resonance is a well-established, purpose-built option for hardware/aerospace startups and worth evaluating directly. Carbon covers the same unified ERP/MES/QMS ground but adds a genuine self-host/GovCloud path and a source-available codebase — which is the deciding factor for ITAR-sensitive teams that need to control or inspect their own deployment. See [Carbon vs. First Resonance](/compare/first-resonance) for the side-by-side.
+First Resonance is a well-established, purpose-built option for hardware/aerospace startups and worth evaluating directly. Carbon covers the same unified ERP/MES/QMS ground but adds a self-host/GovCloud path and a source-available codebase, which is the deciding factor for ITAR-sensitive teams that need to control or inspect their own deployment. See [Carbon vs. First Resonance](/compare/first-resonance) for the side-by-side.
 
 ### Do I need AS9100 certification before I can sell to a prime or the DoD?
 
-Requirements vary by contract and customer, but many primes require AS9100 or at least a documented quality system before qualifying a new supplier. Building traceability and FAI processes into your systems early — before certification is required — makes the eventual audit far less disruptive. See [AS9100 for small shops](/learn/as9100-for-small-shops).
+Requirements vary by contract and customer, but many primes require AS9100 or at least a documented quality system before qualifying a new supplier. Building traceability and FAI processes into your systems early, before certification is required, makes the eventual audit far less disruptive. See [AS9100 for small shops](/learn/as9100-for-small-shops).
 
 ### Can a small space or defense startup realistically self-host its ERP?
 
-Yes, and for ITAR-sensitive work it's often the more practical path rather than the harder one, since it removes ambiguity about data residency and access. Carbon's Enterprise tier includes GovCloud-capable self-hosting with forward-deployed engineer support specifically for this scenario.
+Yes, and for ITAR-sensitive work it's often the more practical path, since it removes ambiguity about data residency and access. Carbon's Enterprise tier includes GovCloud-capable self-hosting with forward-deployed engineer support for this scenario.
 
 ## Evaluate it against your own compliance requirements
 
-If you're weighing ERP/MES options against ITAR, AS9100, or CMMC requirements, it's worth reviewing the actual source before you commit data to it. [Try Carbon free for 30 days](/pricing) at https://app.carbon.ms, or review the codebase directly on [GitHub](https://github.com/crbnos/carbon).
+If you're weighing ERP/MES options against ITAR, AS9100, or CMMC requirements, review the source before you commit data to it. [Try Carbon free for 30 days](/pricing) at https://app.carbon.ms, or review the codebase directly on [GitHub](https://github.com/crbnos/carbon).

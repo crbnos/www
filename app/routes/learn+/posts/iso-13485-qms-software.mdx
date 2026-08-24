@@ -1,30 +1,30 @@
 ---
-title: "ISO 13485 QMS: What Medical Device Makers Need From Software"
+title: "ISO 13485 QMS software: what medical device makers need"
 publishedAt: "2026-07-22"
-summary: "ISO 13485 software requirements explained: document control, DHR/DMR, traceability, CAPA, and risk management — and why bolt-on QMS tools fall short."
+summary: "ISO 13485 software requirements: document control, DHR/DMR, traceability, CAPA, and risk management, and why bolt-on QMS tools fall short."
 tag: "Compliance"
 author: "chase"
 ---
 
-ISO 13485 does not mandate a specific piece of software. What it mandates is a set of outcomes — controlled documents, a device master record and device history record for every unit, full traceability, closed-loop CAPA, and documented risk management — that are extremely hard to produce reliably from spreadsheets, shared drives, and a disconnected quality module once you're shipping real volume. Understanding iso 13485 software requirements means translating the standard's clauses into the fields, records, and workflows your production system actually needs to hold.
+ISO 13485 does not mandate a specific piece of software. It mandates a set of outcomes: controlled documents, a device master record and device history record for every unit, full traceability, closed-loop CAPA, and documented risk management. Those outcomes are hard to produce reliably from spreadsheets, shared drives, and a disconnected quality module once you're shipping real volume. Meeting ISO 13485 software requirements means translating the standard's clauses into the fields, records, and workflows your production system needs to hold.
 
-This matters more than it might seem, because most medical device makers don't fail an audit on a design flaw — they fail on the paper trail. An auditor pulls a device history record, asks to see the nonconformance tied to a lot, and finds the DHR was hand-assembled from three systems the week before the audit. That's a finding, even if the device itself was fine.
+Most medical device makers don't fail an audit on a design flaw. They fail on the paper trail. An auditor pulls a device history record, asks to see the nonconformance tied to a lot, and finds the DHR was hand-assembled from three systems the week before the audit. That's a finding, even if the device itself was fine.
 
-## What ISO 13485 Actually Requires From Software
+## What ISO 13485 requires from software
 
-ISO 13485:2016 doesn't have a chapter called "software requirements." Instead, several clauses have direct, unavoidable implications for whatever system you use to run production and quality:
+ISO 13485:2016 has no chapter called "software requirements." Several clauses have direct implications for whatever system you use to run production and quality:
 
-- **Clause 4.2.4/4.2.5 — Document and record control.** Controlled documents (specs, work instructions, drawings) need defined revision levels, approval before use, and a way to prevent obsolete versions from being used. Records need to stay legible, identifiable, and retrievable for the retention period.
-- **Clause 4.2.3 — Device master record (DMR) equivalent.** You need a definitive, current specification for how each device is made: BOM, routing, acceptance criteria, packaging, labeling.
-- **Clause 7.5.1 / 7.5.8 — Device history record (DHR) and identification.** For each unit or batch, you need a record proving it was made according to the DMR, including the components used, the operations performed, who performed them, and the inspection results.
-- **Clause 7.5.9 — Traceability.** Devices (and for implantable devices, components) must be traceable, typically down to lot or serial number, from raw material through distribution — and reversible, so you can start from a complaint and trace back to the exact production record.
-- **Clause 8.2.2 / 8.5 — Internal audit and CAPA.** Nonconformances need investigation, root cause, corrective action, and an effectiveness check, all tied to the affected units.
-- **Clause 7.1 / ISO 14971 — Risk management.** Risk controls identified during design have to be traceable to the production and inspection steps that actually enforce them.
-- **Clause 4.1.6 — Validation of software used in the QMS.** If you use software to run any of the above processes, you have to validate that the software does what you're relying on it to do, and revalidate it when it changes.
+- **Clause 4.2.4/4.2.5, document and record control.** Controlled documents (specs, work instructions, drawings) need defined revision levels, approval before use, and a way to prevent obsolete versions from being used. Records need to stay legible, identifiable, and retrievable for the retention period.
+- **Clause 4.2.3, device master record (DMR) equivalent.** You need a definitive, current specification for how each device is made: BOM, routing, acceptance criteria, packaging, labeling.
+- **Clause 7.5.1 / 7.5.8, device history record (DHR) and identification.** For each unit or batch, you need a record proving it was made according to the DMR, including the components used, the operations performed, who performed them, and the inspection results.
+- **Clause 7.5.9, traceability.** Devices (and for implantable devices, components) must be traceable, typically down to lot or serial number, from raw material through distribution, and reversible, so you can start from a complaint and trace back to the exact production record.
+- **Clause 8.2.2 / 8.5, internal audit and CAPA.** Nonconformances need investigation, root cause, corrective action, and an effectiveness check, all tied to the affected units.
+- **Clause 7.1 / ISO 14971, risk management.** Risk controls identified during design have to trace to the production and inspection steps that enforce them.
+- **Clause 4.1.6, validation of software used in the QMS.** If you use software to run any of the above processes, you have to validate that the software does what you're relying on it to do, and revalidate it when it changes.
 
-None of this requires a specific vendor. It requires a system where these records exist, connect to each other, and can be produced on demand — not reconstructed under audit pressure. For the broader case on what a QMS covers outside the medical-device-specific clauses, see [what is a QMS in manufacturing](/learn/what-is-a-qms-in-manufacturing).
+None of this requires a specific vendor. It requires a system where these records exist, connect to each other, and can be produced on demand rather than reconstructed under audit pressure. For what a QMS covers outside the medical-device-specific clauses, see [what is a QMS in manufacturing](/learn/what-is-a-qms-in-manufacturing).
 
-## ISO 13485 Clause-to-Software Mapping
+## ISO 13485 clause-to-software mapping
 
 | Clause area | What it requires | What software needs to produce |
 |---|---|---|
@@ -36,7 +36,7 @@ None of this requires a specific vendor. It requires a system where these record
 | Risk management (7.1, ISO 14971) | Risk controls carried into production | Risk control measures mapped to routing steps and inspection criteria |
 | Software validation (4.1.6) | Software used in the QMS is fit for purpose | Validation record for the platform itself, revalidated on significant change |
 
-## The Device History Record, Concretely
+## The device history record, concretely
 
 A DHR that will survive an audit needs, at minimum:
 
@@ -48,40 +48,40 @@ A DHR that will survive an audit needs, at minimum:
 - Any deviations, including a note that the deviation was reviewed and disposed
 - Traceable link to the component lots consumed
 
-If you can produce that packet by running a query instead of assembling it from a shared drive, three separate spreadsheets, and someone's memory, your DHR process is doing its job. If it takes a full day of someone's time per audit request, it isn't — and that gap is exactly what a notified body auditor is trained to probe.
+If you can produce that packet by running a query instead of assembling it from a shared drive, three separate spreadsheets, and someone's memory, your DHR process is doing its job. If it takes a full day of someone's time per audit request, it isn't, and that gap is what a notified body auditor is trained to probe.
 
-## Traceability: Forward and Backward
+## Traceability, forward and backward
 
-ISO 13485 traceability has to work in both directions. Forward traceability answers: "if this raw material lot is found to be defective, which finished devices contain it?" Backward traceability answers: "we have a complaint on this specific device — what components, operators, and inspections were involved in making it?" Both questions have to resolve to an exact answer, not an approximation, especially for implantable and life-sustaining devices where the standard requires component-level traceability, not just finished-unit traceability. See [lot and serial traceability, explained](/learn/what-is-lot-serial-traceability) for how genealogy is actually structured underneath these queries.
+ISO 13485 traceability has to work in both directions. Forward traceability answers: "if this raw material lot is found to be defective, which finished devices contain it?" Backward traceability answers: "we have a complaint on this specific device, so what components, operators, and inspections were involved in making it?" Both questions have to resolve to an exact answer rather than an approximation, especially for implantable and life-sustaining devices where the standard requires component-level traceability, not just finished-unit traceability. See [lot and serial traceability, explained](/learn/what-is-lot-serial-traceability) for how genealogy is structured underneath these queries.
 
-## CAPA and Risk: Closing the Loop
+## CAPA and risk: closing the loop
 
-A nonconformance on a medical device isn't just a scrap-or-rework decision — it has to be evaluated against the risk analysis for that device. If a dimensional nonconformance touches a feature that was flagged as a risk control in the design history file, the CAPA has to reference that risk analysis, not just the immediate defect. This is where quality systems that live separately from engineering data start to strain: the risk file lives in one tool, the NCR lives in another, and connecting them under audit pressure means someone manually cross-referencing document numbers.
+A nonconformance on a medical device is more than a scrap-or-rework decision. It has to be evaluated against the risk analysis for that device. If a dimensional nonconformance touches a feature that was flagged as a risk control in the design history file, the CAPA has to reference that risk analysis, not just the immediate defect. Quality systems that live separately from engineering data start to strain here: the risk file lives in one tool, the NCR lives in another, and connecting them under audit pressure means someone cross-referencing document numbers by hand.
 
-## Why a Bolt-On QMS Creates Audit Risk
+## Why a bolt-on QMS creates audit risk
 
-Most ERPs sold to device makers treat quality as an add-on module: a free-text nonconformance field, a document repository with no enforcement, and no real link between a lot number in inventory and a lot number in the quality record. That gap doesn't show up in daily operation — it shows up exactly when you need it not to: during a design change, a recall investigation, or a notified body audit, when someone has to manually reconcile part numbers, lot numbers, and work order numbers across systems that don't share a data model. Every manual reconciliation step is a place a DHR can silently disagree with the production record it's supposed to describe.
+Most ERPs sold to device makers treat quality as an add-on module: a free-text nonconformance field, a document repository with no enforcement, and no link between a lot number in inventory and a lot number in the quality record. That gap doesn't show up in daily operation. It shows up when you need it not to: during a design change, a recall investigation, or a notified body audit, when someone has to reconcile part numbers, lot numbers, and work order numbers by hand across systems that don't share a data model. Every manual reconciliation step is a place a DHR can silently disagree with the production record it's supposed to describe.
 
-## How Carbon Handles ISO 13485
+## How Carbon handles ISO 13485
 
-Carbon runs ERP, MES, and QMS on one Postgres data model, so a device's DHR isn't assembled after the fact — it's a query against the same work orders, lot records, inspection results, and document revisions that were used to build the unit. Document control, nonconformances, CAPA, and training records reference the same part numbers and work order IDs used on the shop floor, so traceability runs forward and backward without re-keying data between a production system and a separate quality tool. Because every table is reachable over a [REST API](/developers), a nonconformance raised during an inspection can automatically hold the affected lot in inventory before it ships. Carbon is source-available and self-hostable, which also matters for the software validation requirement in clause 4.1.6 — you can see exactly what the system does rather than validating a black box. For the broader software picture for device makers, see [medical device manufacturing software](/learn/medical-device-manufacturing-software); if your DHR process also needs to satisfy FDA 21 CFR Part 11 electronic record requirements, see [21 CFR Part 11 and electronic DHRs](/learn/21-cfr-part-11-electronic-dhr).
+Carbon runs ERP, MES, and QMS on one Postgres data model, so a device's DHR isn't assembled after the fact. It's a query against the same work orders, lot records, inspection results, and document revisions used to build the unit. Document control, nonconformances, CAPA, and training records reference the same part numbers and work order IDs used on the shop floor, so traceability runs forward and backward without re-keying data between a production system and a separate quality tool. Because every table is reachable over a [REST API](/developers), a nonconformance raised during an inspection can automatically hold the affected lot in inventory before it ships. Carbon is source-available and self-hostable, which also matters for the software validation requirement in clause 4.1.6: you can see exactly what the system does rather than validating a black box. For the broader software picture for device makers, see [medical device manufacturing software](/learn/medical-device-manufacturing-software); if your DHR process also needs to satisfy FDA 21 CFR Part 11 electronic record requirements, see [21 CFR Part 11 and electronic DHRs](/learn/21-cfr-part-11-electronic-dhr).
 
 ## Frequently asked questions
 
 ### Does ISO 13485 require specific software?
-No. ISO 13485 is software-agnostic — it specifies outcomes (document control, DHR/DMR, traceability, CAPA, risk management) that software can help meet, but any system used has to be validated under clause 4.1.6.
+No. ISO 13485 is software-agnostic. It specifies outcomes (document control, DHR/DMR, traceability, CAPA, risk management) that software can help meet, but any system used has to be validated under clause 4.1.6.
 
 ### What's the difference between a DMR and a DHR?
-A device master record (DMR) is the definitive specification for how a device is made — the "recipe." A device history record (DHR) is the proof that a specific unit or lot was actually made according to that recipe, including inspection results and any deviations.
+A device master record (DMR) is the definitive specification for how a device is made, the "recipe." A device history record (DHR) is the proof that a specific unit or lot was made according to that recipe, including inspection results and any deviations.
 
 ### Do small device startups need a full ISO 13485 QMS?
-If you're selling into markets that require CE marking or FDA clearance, yes — ISO 13485 (or an equivalent QMS meeting FDA's Quality System Regulation) is effectively mandatory, regardless of company size. Building the record-keeping habits early is cheaper than retrofitting them under audit pressure.
+If you're selling into markets that require CE marking or FDA clearance, yes. ISO 13485 (or an equivalent QMS meeting FDA's Quality System Regulation) is effectively mandatory, regardless of company size. Building the record-keeping habits early is cheaper than retrofitting them under audit pressure.
 
 ### How does traceability differ for implantable devices?
-ISO 13485 requires component-level traceability for implantable devices, not just finished-unit traceability — meaning the specific lots of raw material and purchased components used in a given unit have to be recorded and retrievable, not just the finished device's lot number.
+ISO 13485 requires component-level traceability for implantable devices, not just finished-unit traceability. The specific lots of raw material and purchased components used in a given unit have to be recorded and retrievable, not just the finished device's lot number.
 
 ### Can a spreadsheet-based QMS pass an ISO 13485 audit?
-It can, technically, but it's fragile at scale — every DHR has to be assembled by hand, and any inconsistency between the production record and the quality record is a finding waiting to happen. Most companies outgrow spreadsheet QMS as soon as volume or product complexity increases.
+It can, technically, but it's fragile at scale: every DHR has to be assembled by hand, and any inconsistency between the production record and the quality record is a finding waiting to happen. Most companies outgrow spreadsheet QMS as soon as volume or product complexity increases.
 
 ## Try Carbon's ERP + QMS on real data
 

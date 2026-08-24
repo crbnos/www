@@ -1,54 +1,54 @@
 ---
-title: "What Is a Router / Job Traveler? (+ Free Template)"
+title: "What is a router / job traveler? (+ free template)"
 publishedAt: "2026-08-15"
 summary: "What is a shop traveler? A practical guide to the manufacturing router and job traveler, the difference between them, and a free downloadable template."
 tag: "Manufacturing basics"
 author: "chase"
 ---
 
-A shop traveler (also called a job traveler or route sheet) is the document that physically or digitally accompanies a job through the shop, recording the sequence of operations, where each one happens, and what actually occurred at each step. A manufacturing router is closely related but distinct: it's the reusable definition of *how* a part is made — the operations, work centers, and standard times — that the traveler is generated from for a specific job. Get the distinction right and you'll set up both correctly instead of conflating a template with a record.
+A shop traveler (also called a job traveler or route sheet) is the document that physically or digitally accompanies a job through the shop, recording the sequence of operations, where each one happens, and what occurred at each step. A manufacturing router is related but distinct: it's the reusable definition of *how* a part is made (the operations, work centers, and standard times) that you generate a traveler from for a specific job. Get the distinction right and you'll set up both correctly instead of conflating a template with a record.
 
 If you've ever handed a folded piece of paper to an operator and watched them sign off each operation in pen, you've used a traveler. This guide covers what belongs on each document, a template you can copy directly, and where paper travelers cause the most damage.
 
-## Router vs. Traveler: Are They the Same Thing?
+## Router vs. traveler: are they the same thing?
 
-The terms get used interchangeably on shop floors, which causes real confusion when people are trying to fix a process. Here's the practical distinction:
+The terms get used interchangeably on shop floors, which causes confusion when people try to fix a process:
 
 | | Router (routing) | Job traveler |
 |---|---|---|
 | What it is | A reusable master definition of how a part is made | A job-specific instance generated from the router |
 | Tied to | A part number / revision | A specific work order, lot, or serial number |
 | Contains | Operation sequence, work centers, standard setup/run times | Router info + actual quantities, actual times, sign-offs, and inspection results |
-| Changes when | The manufacturing process changes (an ECO) | Never — it's a record of what happened on this job |
+| Changes when | The manufacturing process changes (an ECO) | Never; it's a record of what happened on this job |
 | Lives in | Engineering / manufacturing engineering | Shop floor, attached to the physical job or job packet |
 
-In other words: the router is the recipe, the traveler is the receipt. If you're setting up routers for the first time, see [setting up routings: work centers, operations, and standard times](/learn/setting-up-routings-work-centers) — this article focuses on the traveler side.
+The router is the recipe; the traveler is the receipt. If you're setting up routers for the first time, see [setting up routings: work centers, operations, and standard times](/learn/setting-up-routings-work-centers). This article focuses on the traveler side.
 
-## What Belongs on a Router
+## What belongs on a router
 
-A router is written once per part (per revision) and reused every time that part runs:
+You write a router once per part (per revision) and reuse it every time that part runs:
 
-- **Operation sequence number** (Op 10, Op 20, Op 30...) — leaving gaps lets you insert steps later without renumbering everything.
-- **Operation description** — specific enough that a new operator understands the step ("Mill pocket per Detail A" beats "Mill").
-- **Work center** — which machine or resource group the operation runs on.
-- **Standard setup time** and **standard run time per piece** — the basis for scheduling and costing.
+- **Operation sequence number** (Op 10, Op 20, Op 30...). Leaving gaps lets you insert steps later without renumbering everything.
+- **Operation description**, specific enough that a new operator understands the step ("Mill pocket per Detail A" beats "Mill").
+- **Work center**, the machine or resource group the operation runs on.
+- **Standard setup time** and **standard run time per piece**, the basis for scheduling and costing.
 - **Tooling and fixtures required.**
 - **Reference to the work instruction or inspection plan**, if one exists separately (see [what is a work instruction](/learn/what-is-a-work-instruction)).
 
-## What Belongs on a Job Traveler
+## What belongs on a job traveler
 
 A traveler starts as a copy of the router for a specific work order, then accumulates real data as the job moves:
 
 - Everything from the router (operation, work center, standard times) for reference.
 - **Work order / job number**, part number and revision, and quantity ordered.
 - **Lot or serial numbers** for material and/or finished units, where traceability applies.
-- **Quantity completed and quantity scrapped** at each operation, not just at the end.
+- **Quantity completed and quantity scrapped** at each operation, not only at the end.
 - **Operator name or ID** and the **actual date/time** each operation started and finished.
 - **Inspection requirement flag** and result (pass/fail, measured value) where the operation calls for one.
 - **Nonconformance reference**, if a part was flagged out of spec at that step.
-- **Sign-off** — a signature or digital confirmation that the operation was performed and, where required, inspected.
+- **Sign-off**, a signature or digital confirmation that the operation was performed and, where required, inspected.
 
-## Free Job Traveler Template
+## Free job traveler template
 
 Copy this table structure directly for a paper or spreadsheet traveler:
 
@@ -57,17 +57,17 @@ Copy this table structure directly for a paper or spreadsheet traveler:
 | 10 | Saw to length | Saw-1 | 0.25 | 0.5 | 250 | | | | | N | | |
 | 20 | Mill pocket per Detail A | Mill-3 | 1.0 | 4.2 | 250 | | | | | Y | | |
 | 30 | Deburr | Bench-1 | 0.1 | 0.8 | 250 | | | | | N | | |
-| 40 | Anodize (outside process) | Vendor | — | — | 250 | | | | | Y | | |
+| 40 | Anodize (outside process) | Vendor | n/a | n/a | 250 | | | | | Y | | |
 | 50 | Final inspection | QC-1 | 0.25 | 1.0 | 250 | | | | | Y | | |
 
-Add a header block with part number, revision, work order number, customer/order reference, lot/serial numbers, and due date — that block is what turns a generic router into a specific job's traveler.
+Add a header block with part number, revision, work order number, customer/order reference, lot/serial numbers, and due date. That block turns a generic router into a specific job's traveler.
 
-## Paper Travelers vs. Digital Travelers
+## Paper travelers vs. digital travelers
 
 | | Paper traveler | Digital traveler |
 |---|---|---|
 | Where status lives | On the paper, wherever it physically is | In the system, visible to everyone instantly |
-| Real-time visibility | None — you have to walk the floor to find the job | Full — status updates as operators log time |
+| Real-time visibility | None; you have to walk the floor to find the job | Full; status updates as operators log time |
 | Data entry errors | Illegible handwriting, missed fields | Required fields, dropdowns, barcode/lot scans |
 | Traceability | Manual filing, easy to lose | Searchable by part, lot, serial, or work order indefinitely |
 | Works offline | Yes, inherently | Depends on the system |
@@ -75,32 +75,32 @@ Add a header block with part number, revision, work order number, customer/order
 
 Paper travelers aren't wrong for a two-person shop. They become a liability the moment you need to answer "where is job 4471 right now" without walking the floor, or "which jobs used lot L-2291" during a recall.
 
-## Common Traveler Mistakes That Cause Shop-Floor Chaos
+## Common traveler mistakes that cause shop-floor chaos
 
-- **No unique traveler per job** — reusing a generic traveler across multiple work orders makes it impossible to trace which specific units went through which operations.
-- **Missing scrap quantities** — recording only "complete" quantities hides yield problems until the job is short at final inspection.
-- **Sign-off without inspection** — an operator initials the inspection box out of habit rather than actually measuring, which defeats the entire control.
-- **Lost paper** — a traveler that gets separated from its job means the job's history effectively didn't happen.
-- **Router drift** — operators quietly deviate from the router's sequence or times without updating it, so the "standard" times used for costing and scheduling are fiction.
+- **No unique traveler per job.** Reusing a generic traveler across multiple work orders makes it impossible to trace which units went through which operations.
+- **Missing scrap quantities.** Recording only "complete" quantities hides yield problems until the job is short at final inspection.
+- **Sign-off without inspection.** An operator initials the inspection box out of habit rather than measuring, which defeats the control.
+- **Lost paper.** A traveler that gets separated from its job means the job's history effectively didn't happen.
+- **Router drift.** Operators deviate from the router's sequence or times without updating it, so the "standard" times used for costing and scheduling are fiction.
 
-## How Carbon Handles Routers and Travelers
+## How Carbon handles routers and travelers
 
-Carbon generates a digital traveler automatically from the router the moment a work order is released, so operators log actual times, quantities, and scrap against the same operations engineering defined — no re-typing part numbers or work order numbers into a second system. Because inspection results and sign-offs write to the same Postgres data model as inventory and quality, a failed inspection can hold the lot automatically instead of relying on someone noticing a red mark on paper. It also means a job's status is queryable in real time over the [REST API](/developers) rather than requiring a walk to the floor. For the shop-floor execution layer this traveler lives in, see [what is MES](/learn/what-is-mes).
+Carbon generates a digital traveler automatically from the router the moment a work order is released, so operators log actual times, quantities, and scrap against the same operations engineering defined, with no re-typing of part numbers or work order numbers into a second system. Because inspection results and sign-offs write to the same Postgres data model as inventory and quality, a failed inspection can hold the lot automatically instead of relying on someone noticing a red mark on paper. A job's status is also queryable in real time over the [REST API](/developers) rather than requiring a walk to the floor. For the shop-floor execution layer this traveler lives in, see [what is MES](/learn/what-is-mes).
 
 ## Frequently asked questions
 
 ### Is a shop traveler the same as a router?
-No. A router is the reusable definition of how a part is made (operations, work centers, standard times). A traveler is the job-specific document — often generated from the router — that records what actually happened on a particular work order.
+No. A router is the reusable definition of how a part is made (operations, work centers, standard times). A traveler is the job-specific document, often generated from the router, that records what actually happened on a particular work order.
 
 ### What information should a job traveler always include?
 At minimum: work order number, part number/revision, quantity, the operation sequence with work centers, actual quantities completed and scrapped at each step, operator identification, and sign-offs where inspection is required.
 
 ### Can a digital traveler replace paper entirely?
-For most shops, yes — a digital traveler captures the same information with real-time visibility and no risk of the physical document being lost. Very small shops or fully offline environments sometimes keep paper as a backup.
+For most shops, yes: a digital traveler captures the same information with real-time visibility and no risk of the physical document being lost. Very small shops or fully offline environments sometimes keep paper as a backup.
 
 ### Do travelers matter for traceability and recalls?
-Yes — a properly filled traveler with lot/serial numbers is often the primary record used to trace which units were affected by a nonconforming material or process, and to bound a recall.
+Yes. A properly filled traveler with lot/serial numbers is often the primary record used to trace which units were affected by a nonconforming material or process, and to bound a recall.
 
 ## Digitize your travelers without losing the shop-floor simplicity
 
-Try Carbon free for 30 days and watch a traveler generate itself from your routing the moment a work order is released — [get started](/pricing) or [see the source on GitHub](https://github.com/crbnos/carbon).
+Try Carbon free for 30 days and watch a traveler generate itself from your routing the moment a work order is released. [Get started](/pricing) or [see the source on GitHub](https://github.com/crbnos/carbon).
