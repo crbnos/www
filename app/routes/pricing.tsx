@@ -1,9 +1,18 @@
 import { Trans, useLingui } from "@lingui/react/macro";
 import { Check } from "lucide-react";
 import { Link } from "react-router";
+import type { MetaFunction } from "react-router";
 import { Button } from "~/components/ui/button";
 import { GithubLogo } from "~/components/ui/github-logo";
+import { pageMeta } from "~/lib/seo";
 import { cn } from "~/lib/utils";
+
+export const meta: MetaFunction = ({ matches }) =>
+	pageMeta(matches, {
+		title: "Pricing",
+		description:
+			"Carbon pricing: Starter at $40/user/mo, Business at $100/user/mo with API access and support, and self-hosted Enterprise. ERP, MRP, MES and QMS on one system, with a 30-day free trial and no sales call.",
+	});
 
 const shell = "mx-auto w-full max-w-[1360px] px-6 sm:px-7";
 const eyebrow =

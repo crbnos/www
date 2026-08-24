@@ -1,7 +1,12 @@
 import { Trans, useLingui } from "@lingui/react/macro";
 import { Turnstile } from "@marsidev/react-turnstile";
 import { data, useFetcher, useLoaderData } from "react-router";
-import type { ActionFunctionArgs, LoaderFunctionArgs } from "react-router";
+import type {
+  ActionFunctionArgs,
+  LoaderFunctionArgs,
+  MetaFunction,
+} from "react-router";
+import { pageMeta } from "~/lib/seo";
 import { Ratelimit } from "@upstash/ratelimit";
 import { Check } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -13,6 +18,13 @@ import { useMode } from "~/hooks/useMode";
 import { getSlackClient } from "~/lib/slack.server";
 import { redis } from "~/lib/upstash.server";
 export const config = { runtime: "nodejs" };
+
+export const meta: MetaFunction = ({ matches }) =>
+  pageMeta(matches, {
+    title: "Contact",
+    description:
+      "Talk to Carbon Manufacturing Systems about pricing, self-hosting, migrations, SSO/SAML or ITAR compliance, or reach product support.",
+  });
 
 const ratelimit = new Ratelimit({
   redis,

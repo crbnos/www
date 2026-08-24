@@ -18,12 +18,24 @@ export const meta: MetaFunction = ({ matches }) =>
 export async function loader() {
   const posts = (await getBlogPosts()) || [];
   return data({
-    data: posts.sort((a, b) => {
-      if (new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)) {
-        return -1;
-      }
-      return 1;
-    }),
+    // Ship only the fields the preview cards render. Each BlogPost also carries
+    // the full rendered `html` and source `markdown`; serializing those for all
+    // ~56 posts pushed the index HTML past 1.7 MB, hurting LCP and wasting
+    // crawl budget on content already served at each /learn/<slug>.
+    data: posts
+      .map((post) => ({
+        slug: post.slug,
+        metadata: post.metadata,
+        author: post.author,
+      }))
+      .sort((a, b) => {
+        if (
+          new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
+        ) {
+          return -1;
+        }
+        return 1;
+      }),
   });
 }
 
@@ -32,14 +44,15 @@ export default function Blog() {
 
   return (
     <div className="flex flex-col">
-      <header className="mb-14">
-        <div className="font-mono text-[11px] uppercase leading-none tracking-[0.2em] text-muted-foreground">
-          Learning Center
-        </div>
-        <h1 className="mt-4 font-medium text-3xl tracking-tight">
+      {/* Page header, deliberately unlike an article card: no eyebrow (the
+          layout's floating "Learning Center" pill already labels the section),
+          a larger display-type title, a real subheadline, and a divider that
+          sets the intro apart from the list of guides below it. */}
+      <header className="mb-16 border-b border-border pb-10">
+        <h1 className="max-w-[20ch] font-display font-semibold text-4xl sm:text-5xl tracking-tight text-balance">
           Manufacturing systems, explained
         </h1>
-        <p className="mt-4 max-w-[60ch] text-muted-foreground leading-relaxed">
+        <p className="mt-6 max-w-[52ch] text-lg text-muted-foreground text-pretty">
           Practical guides to manufacturing ERP, MRP, MES and QMS — how the
           systems fit together, what they cost, and how to run production on
           them. Written for the people who actually build parts.

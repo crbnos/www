@@ -1,0 +1,56 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    { "source": "/oss", "destination": "/about", "permanent": true },
+    {
+      "source": "/ownership",
+      "destination": "/learn/what-is-a-source-available-erp",
+      "permanent": true
+    },
+    {
+      "source": "/license",
+      "destination": "/learn/what-is-a-source-available-erp",
+      "permanent": true
+    },
+    {
+      "source": "/learn/why-we-are-open-sourcing-carbon",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/learn/how-to-instant-quote",
+      "destination": "/learn/job-shop-quoting-rfq-to-quote",
+      "permanent": true
+    },
+    {
+      "source": "/learn/build-vs-buy",
+      "destination": "/learn/what-is-a-source-available-erp",
+      "permanent": true
+    },
+    {
+      "source": "/learn/build-custom-applications",
+      "destination": "/developers",
+      "permanent": true
+    },
+    {
+      "source": "/learn/configuration-is-all-you-need",
+      "destination": "/learn",
+      "permanent": true
+    },
+    {
+      "source": "/learn/vertically-integrated-stack",
+      "destination": "/learn",
+      "permanent": true
+    },
+    {
+      "source": "/learn/bridging-the-automation-gap",
+      "destination": "/learn",
+      "permanent": true
+    },
+    {
+      "source": "/learn/delightful-experience",
+      "destination": "/learn",
+      "permanent": true
+    }
+  ]
+}

@@ -1,3 +1,13 @@
+import type { MetaFunction } from "react-router";
+import { pageMeta } from "~/lib/seo";
+
+export const meta: MetaFunction = ({ matches }) =>
+  pageMeta(matches, {
+    title: "Privacy Policy",
+    description:
+      "How Carbon Manufacturing Systems collects, uses, and protects your personal data.",
+  });
+
 export default function Privacy() {
   return (
     <div className="flex flex-1 flex-col">

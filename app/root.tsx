@@ -156,7 +156,7 @@ export const meta: MetaFunction = ({ data }) => {
 				name: ORGANIZATION.name,
 				legalName: ORGANIZATION.legalName,
 				url: siteUrl,
-				logo: `${siteUrl}/brand/carbon-mark.svg`,
+				logo: `${siteUrl}/brand/carbon-mark-light.svg`,
 				description: ORGANIZATION.description,
 				email: INFO_EMAIL,
 				sameAs: [...ORGANIZATION.sameAs],
@@ -311,11 +311,9 @@ export const meta: MetaFunction = ({ data }) => {
 
 function Document({
 	children,
-	title = "Carbon",
 	mode = "light",
 }: {
 	children: ReactNode;
-	title?: string;
 	mode?: "light" | "dark";
 }) {
 	const { showWizard, setShowWizard } = useWizard();
@@ -329,8 +327,11 @@ function Document({
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<ClientHintCheck />
+				{/* `<Meta />` renders the one <title> from the route's meta
+				    descriptors. A separate hardcoded <title> here shipped a second,
+				    stale "Carbon" title on every page, which muddies Google's title
+				    selection — removed so each page has exactly one correct title. */}
 				<Meta />
-				<title>{title}</title>
 				<Links />
 			</head>
 			<body

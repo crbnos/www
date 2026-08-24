@@ -1,3 +1,13 @@
+import type { MetaFunction } from "react-router";
+import { pageMeta } from "~/lib/seo";
+
+export const meta: MetaFunction = ({ matches }) =>
+  pageMeta(matches, {
+    title: "Terms of Service",
+    description:
+      "The terms that govern your use of the Carbon Manufacturing Systems website and services.",
+  });
+
 export default function Terms() {
   return (
     <div className="flex flex-1 flex-col">

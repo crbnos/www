@@ -26,6 +26,10 @@ export default function About() {
 						</p>
 					</div>
 
+					<h1 className="mb-2 font-display text-3xl font-semibold tracking-[-0.02em] text-pretty sm:text-4xl">
+						<Trans>Why we built Carbon and open-sourced it</Trans>
+					</h1>
+
 					<p className="leading-[1.8] text-foreground text-pretty">
 						<Trans>
 							After spending nearly a decade building end-to-end systems for
