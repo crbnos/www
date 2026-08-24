@@ -1,12 +1,12 @@
 ---
-title: "The Manufacturing Systems Glossary (ERP, MRP, MES, QMS)"
+title: "Manufacturing systems glossary: ERP, MRP, MES, QMS"
 publishedAt: "2026-08-12"
-summary: "A manufacturing glossary covering ERP, MRP, MES, QMS and 50+ shop-floor and systems terms — BOM, routing, traveler, WIP, takt time, ECO, NCR, CAPA, and more."
+summary: "A manufacturing glossary covering ERP, MRP, MES, QMS and 50+ shop-floor terms: BOM, routing, traveler, WIP, takt time, ECO, NCR, CAPA, and more."
 tag: "Manufacturing basics"
 author: "chase"
 ---
 
-Manufacturing runs on acronyms, and half the confusion between vendors, auditors, and new hires comes down to people using the same word for different things (or different words for the same thing). This manufacturing glossary defines the terms you'll actually hit while evaluating or running an ERP, MRP, MES, or QMS — concise, plain-English, and cross-linked to deeper explanations where a term deserves one.
+Manufacturing runs on acronyms, and half the confusion between vendors, auditors, and new hires comes down to people using the same word for different things (or different words for the same thing). This manufacturing glossary defines the terms you'll hit while evaluating or running an ERP, MRP, MES, or QMS: concise, plain-English, and cross-linked to deeper explanations where a term deserves one.
 
 Terms are alphabetical. Bookmark this page; it's meant to be the reference you come back to, not something you read start to finish.
 
@@ -14,7 +14,7 @@ Terms are alphabetical. Bookmark this page; it's meant to be the reference you c
 
 ### AS9100
 
-The aerospace quality management standard, built on ISO 9001 with additional requirements for configuration management, risk management, and traceability. Most aerospace primes require their suppliers to hold AS9100 certification. See [AS9100 for small shops](/learn/as9100-for-small-shops) for what the audit actually checks.
+The aerospace quality management standard, built on ISO 9001 with additional requirements for configuration management, risk management, and traceability. Most aerospace primes require their suppliers to hold AS9100 certification. See [AS9100 for small shops](/learn/as9100-for-small-shops) for what the audit checks.
 
 ## B
 
@@ -24,7 +24,7 @@ Automatically deducting component inventory from stock when a parent item is com
 
 ### Bill of Materials (BOM)
 
-The structured list of every component, subassembly, and quantity required to build one unit of a parent item. A BOM can be single-level (just the immediate components) or multi-level (exploding down through every subassembly to raw material). See [what a bill of materials is](/learn/what-is-a-bill-of-materials) for types and a free template, and [how multi-level BOMs are modeled in Postgres](/learn/modeling-multi-level-boms-in-postgres) for the data-model view.
+The structured list of every component, subassembly, and quantity required to build one unit of a parent item. A BOM can be single-level (only the immediate components) or multi-level (exploding down through every subassembly to raw material). See [what a bill of materials is](/learn/what-is-a-bill-of-materials) for types and a free template, and [how multi-level BOMs are modeled in Postgres](/learn/modeling-multi-level-boms-in-postgres) for the data-model view.
 
 ### BOM revision / ECO
 
@@ -34,11 +34,11 @@ See **Engineering Change Order (ECO)**.
 
 ### CAPA (Corrective and Preventive Action)
 
-The formal process for investigating a nonconformance, fixing the immediate problem (correction), addressing the root cause so it doesn't recur (corrective action), and — ideally — preventing similar issues elsewhere (preventive action). CAPA records are a core requirement of ISO 9001, AS9100, and ISO 13485.
+The formal process for investigating a nonconformance, fixing the immediate problem (correction), addressing the root cause so it doesn't recur (corrective action), and, ideally, preventing similar issues elsewhere (preventive action). CAPA records are a core requirement of ISO 9001, AS9100, and ISO 13485.
 
 ### Capacity planning
 
-Matching the work you've committed to against the hours actually available on your machines and people. Done wrong (infinite capacity), it produces schedules that assume machines never run out of hours. See **Finite capacity scheduling** below and [what production planning is](/learn/what-is-production-planning).
+Matching the work you've committed to against the hours available on your machines and people. Done wrong (infinite capacity), it produces schedules that assume machines never run out of hours. See **Finite capacity scheduling** below and [what production planning is](/learn/what-is-production-planning).
 
 ### CMMC (Cybersecurity Maturity Model Certification)
 
@@ -52,11 +52,11 @@ The time it takes to complete one unit of production at a given operation, from 
 
 ### DFARS flowdowns
 
-Defense Federal Acquisition Regulation Supplement clauses that a prime contract passes down ("flows down") to subcontractors — covering cybersecurity, sourcing, and reporting obligations. See [DFARS flowdowns explained](/learn/dfars-flowdowns-explained).
+Defense Federal Acquisition Regulation Supplement clauses that a prime contract passes down ("flows down") to subcontractors, covering cybersecurity, sourcing, and reporting obligations. See [DFARS flowdowns explained](/learn/dfars-flowdowns-explained).
 
 ### DHR (Device History Record)
 
-In regulated medical device manufacturing, the complete record of a specific device as actually built — the as-run routing, inspection results, lot/serial data, and sign-offs, as required by 21 CFR Part 820. See [21 CFR Part 11 & electronic DHRs](/learn/21-cfr-part-11-electronic-dhr).
+In regulated medical device manufacturing, the complete record of a specific device as built: the as-run routing, inspection results, lot/serial data, and sign-offs, as required by 21 CFR Part 820. See [21 CFR Part 11 & electronic DHRs](/learn/21-cfr-part-11-electronic-dhr).
 
 ### DMR (Device Master Record)
 
@@ -70,11 +70,11 @@ The connected, traceable chain of data from CAD design through the BOM, routing,
 
 ### EBOM vs. MBOM
 
-The Engineering BOM (EBOM) reflects how a product is designed — organized by function, as it comes out of CAD/PLM. The Manufacturing BOM (MBOM) reflects how it's actually built — organized by assembly sequence, with shop-specific items like fasteners or packaging added. A system that can't reconcile the two forces manual re-entry between design and production.
+The Engineering BOM (EBOM) reflects how a product is designed, organized by function, as it comes out of CAD/PLM. The Manufacturing BOM (MBOM) reflects how it's built, organized by assembly sequence, with shop-specific items like fasteners or packaging added. A system that can't reconcile the two forces manual re-entry between design and production.
 
 ### ECO (Engineering Change Order)
 
-The controlled process and record for changing a released BOM, drawing, or routing — what's changing, why, who approved it, and what happens to WIP already in progress. See [BOM revision control without breaking production](/learn/bom-revision-control).
+The controlled process and record for changing a released BOM, drawing, or routing: what's changing, why, who approved it, and what happens to WIP already in progress. See [BOM revision control without breaking production](/learn/bom-revision-control).
 
 ## F
 
@@ -84,7 +84,7 @@ A complete, documented inspection of the first unit produced from a new or revis
 
 ### Finite capacity scheduling
 
-Scheduling that respects the actual available hours on each machine or work center, so a schedule can't overbook a resource beyond its real capacity. The alternative — infinite capacity — assumes unlimited hours and produces schedules that look fine on screen but are impossible on the floor. See [what finite capacity scheduling is](/learn/what-is-finite-capacity-scheduling).
+Scheduling that respects the actual available hours on each machine or work center, so a schedule can't overbook a resource beyond its real capacity. The alternative, infinite capacity, assumes unlimited hours and produces schedules that look fine on screen but are impossible on the floor. See [what finite capacity scheduling is](/learn/what-is-finite-capacity-scheduling).
 
 ## J
 
@@ -100,7 +100,7 @@ See **Traveler**.
 
 ### Kanban
 
-A pull-based signal (physical card or digital) that triggers replenishment of a component only when it's actually consumed, rather than on a fixed schedule.
+A pull-based signal (physical card or digital) that triggers replenishment of a component only when it's consumed, rather than on a fixed schedule.
 
 ### Kitting
 
@@ -110,7 +110,7 @@ Pre-staging all the components needed for a job or operation into one "kit" befo
 
 ### Lead time
 
-The total elapsed time from when a need is identified (a customer order, a purchase requisition) to when it's fulfilled — including queue time, not just the time actually spent processing. Contrast with cycle time.
+The total elapsed time from when a need is identified (a customer order, a purchase requisition) to when it's fulfilled, including queue time, not only the time spent processing. Contrast with cycle time.
 
 ### Lot traceability
 
@@ -120,7 +120,7 @@ Tracking a batch (lot) of material or product as a group, so that if one unit ha
 
 ### Machine hour rate
 
-The fully loaded cost per hour of running a specific machine or work center — depreciation, power, tooling, and labor allocated per hour — used to cost jobs and set quotes. See the [machine-hour rate calculator and guide](/learn/machine-hour-rate-calculator) and [how to cost a machined part](/learn/how-to-cost-a-machined-part).
+The fully loaded cost per hour of running a specific machine or work center (depreciation, power, tooling, and labor allocated per hour) used to cost jobs and set quotes. See the [machine-hour rate calculator and guide](/learn/machine-hour-rate-calculator) and [how to cost a machined part](/learn/how-to-cost-a-machined-part).
 
 ### Make-to-order (MTO)
 
@@ -136,11 +136,11 @@ The plan for what will be built and when, at the top level, that MRP explodes do
 
 ### MES (Manufacturing Execution System)
 
-The system of record for what's actually happening on the shop floor right now: work orders in progress, operator time, machine status, in-process quality data, and material consumption. See [what a manufacturing execution system is](/learn/what-is-mes) and [MES vs. ERP vs. QMS](/learn/mes-vs-erp-vs-qms) for how it relates to the other two.
+The system of record for what's happening on the shop floor right now: work orders in progress, operator time, machine status, in-process quality data, and material consumption. See [what a manufacturing execution system is](/learn/what-is-mes) and [MES vs. ERP vs. QMS](/learn/mes-vs-erp-vs-qms) for how it relates to the other two.
 
 ### MRP (Material Requirements Planning)
 
-The calculation engine that takes demand (sales orders, forecast), current inventory, and BOMs, and determines exactly what to make and buy, in what quantities, by when. See [what MRP is, with a worked example](/learn/what-is-mrp).
+The calculation engine that takes demand (sales orders, forecast), current inventory, and BOMs, and determines what to make and buy, in what quantities, by when. See [what MRP is, with a worked example](/learn/what-is-mrp).
 
 ## N
 
@@ -150,13 +150,13 @@ An industry-managed accreditation program for special processes (heat treat, wel
 
 ### NCR (Nonconformance Report)
 
-The record created when a part, material, or process fails to meet a requirement — documenting what failed, the disposition (scrap, rework, use-as-is, return), and the disposition authority. Usually the trigger that opens a CAPA if the issue is systemic.
+The record created when a part, material, or process fails to meet a requirement, documenting what failed, the disposition (scrap, rework, use-as-is, return), and the disposition authority. Usually the trigger that opens a CAPA if the issue is systemic.
 
 ## O
 
 ### OEE (Overall Equipment Effectiveness)
 
-A composite metric — availability × performance × quality — used to measure how effectively a machine or line is actually being used against its theoretical maximum.
+A composite metric (availability × performance × quality) used to measure how effectively a machine or line is being used against its theoretical maximum.
 
 ### Operation
 
@@ -170,13 +170,13 @@ A routing operation performed by an outside vendor (e.g., heat treat, plating, a
 
 ### Purchase order (PO)
 
-The commercial document issued to a supplier specifying what's being purchased, quantity, price, and delivery date — typically generated directly from MRP-calculated purchase requirements.
+The commercial document issued to a supplier specifying what's being purchased, quantity, price, and delivery date, typically generated directly from MRP-calculated purchase requirements.
 
 ## Q
 
 ### QMS (Quality Management System)
 
-The set of processes, records, and controls — NCRs, CAPAs, inspections, document control — that ensure products consistently meet requirements and that the organization can prove it. See [what a QMS in manufacturing is](/learn/what-is-a-qms-in-manufacturing).
+The set of processes, records, and controls (NCRs, CAPAs, inspections, document control) that ensure products consistently meet requirements and that the organization can prove it. See [what a QMS in manufacturing is](/learn/what-is-a-qms-in-manufacturing).
 
 ### Quality hold
 
@@ -190,11 +190,11 @@ The inventory level at which a new purchase or production order should be trigge
 
 ### Rework
 
-Additional processing performed on a nonconforming part to bring it into conformance, as opposed to scrapping it outright. Tracked separately from standard operations because it represents unplanned cost.
+Additional processing performed on a nonconforming part to bring it into conformance, as opposed to scrapping it outright. Tracked separately from standard operations because it is unplanned cost.
 
 ### Router / Routing
 
-The routing (or router) defines the sequence of operations, work centers, and standard times required to build a part — the "which steps, in what order, at what expected time" layer above individual work instructions. See [what a router / job traveler is](/learn/what-is-a-router-traveler) and [setting up routings: work centers, operations, standard times](/learn/setting-up-routings-work-centers).
+The routing (or router) defines the sequence of operations, work centers, and standard times required to build a part: the "which steps, in what order, at what expected time" layer above individual work instructions. See [what a router / job traveler is](/learn/what-is-a-router-traveler) and [setting up routings: work centers, operations, standard times](/learn/setting-up-routings-work-centers).
 
 ## S
 
@@ -208,11 +208,11 @@ Tracking an individual unit by a unique serial number through its entire product
 
 ### Setup time
 
-The time required to prepare a machine or work center for a specific job — tooling, fixturing, program load — before the first conforming part can be produced. Distinct from run time (the per-part cycle time once setup is complete).
+The time required to prepare a machine or work center for a specific job (tooling, fixturing, program load) before the first conforming part can be produced. Distinct from run time (the per-part cycle time once setup is complete).
 
 ### Shop floor control
 
-The broader discipline of managing work as it physically moves through the plant — releasing jobs, tracking status, reporting completions — that an MES exists to automate.
+The broader discipline of managing work as it physically moves through the plant (releasing jobs, tracking status, reporting completions) that an MES exists to automate.
 
 ### Standard cost
 
@@ -222,11 +222,11 @@ A predetermined cost (material, labor, overhead) assigned to an item, used to va
 
 ### Takt time
 
-The maximum time allowed per unit to keep pace with customer demand, calculated as available production time divided by required units. It's a target rate, not a measured cycle time — the two should converge in a well-balanced line.
+The maximum time allowed per unit to keep pace with customer demand, calculated as available production time divided by required units. It's a target rate rather than a measured cycle time; the two should converge in a well-balanced line.
 
 ### Traceability
 
-The ability to reconstruct, after the fact, exactly what materials, operations, equipment, and people were involved in producing a specific unit or lot. Traceability is what makes a recall containable instead of catastrophic. See [lot & serial traceability, explained](/learn/what-is-lot-serial-traceability) and [21 CFR Part 11 & electronic DHRs](/learn/21-cfr-part-11-electronic-dhr).
+The ability to reconstruct, after the fact, what materials, operations, equipment, and people were involved in producing a specific unit or lot. Traceability is what makes a recall containable instead of catastrophic. See [lot & serial traceability, explained](/learn/what-is-lot-serial-traceability) and [21 CFR Part 11 & electronic DHRs](/learn/21-cfr-part-11-electronic-dhr).
 
 ### Traveler
 
@@ -242,7 +242,7 @@ An arrangement where a supplier monitors and replenishes a customer's stock of t
 
 ### WIP (Work in Process)
 
-Inventory that has entered production but hasn't yet been completed as a finished item — material sitting at or between operations. High WIP hides scheduling and flow problems; it's one of the first numbers to check when a shop feels "busy but not productive."
+Inventory that has entered production but hasn't yet been completed as a finished item, material sitting at or between operations. High WIP hides scheduling and flow problems; it's one of the first numbers to check when a shop feels "busy but not productive."
 
 ### Work center
 
@@ -250,17 +250,17 @@ A specific machine, cell, or group of interchangeable resources where an operati
 
 ### Work instruction
 
-The step-by-step, operation-level document telling an operator exactly how to perform one operation — setup, sequence, inspection criteria — as opposed to the routing, which only says which operations happen. See [what a work instruction is (+ how to write great ones)](/learn/what-is-a-work-instruction).
+The step-by-step, operation-level document telling an operator how to perform one operation (setup, sequence, inspection criteria), as opposed to the routing, which only says which operations happen. See [what a work instruction is (+ how to write great ones)](/learn/what-is-a-work-instruction).
 
 ### Work order
 
-The authorization to produce a specific quantity of an item, by a specific date, following a specific routing and BOM — the unit of execution that MES tracks in real time.
+The authorization to produce a specific quantity of an item, by a specific date, following a specific routing and BOM: the unit of execution that MES tracks in real time.
 
 ## Y
 
 ### Yield
 
-The percentage of units produced that meet specification on the first pass, without rework or scrap — a core measure of process capability and a direct input to standard cost.
+The percentage of units produced that meet specification on the first pass, without rework or scrap: a core measure of process capability and a direct input to standard cost.
 
 ## Frequently asked questions
 
@@ -270,7 +270,7 @@ ERP is the system of record for the business (orders, inventory, accounting). MR
 
 ### Is a traveler the same thing as a router?
 
-Related but not identical. The router (or routing) is the template — the defined sequence of operations for a part. The traveler is the instance that travels with a specific job, recording what actually happened at each operation.
+Related but not identical. The router (or routing) is the template, the defined sequence of operations for a part. The traveler is the instance that travels with a specific job, recording what happened at each operation.
 
 ### What's the difference between an NCR and a CAPA?
 
@@ -278,7 +278,7 @@ An NCR documents a single nonconformance and its disposition. A CAPA is the broa
 
 ### Why does this glossary link to other articles instead of explaining everything in full here?
 
-Some terms — MRP, MES, BOM, traceability, finite capacity scheduling — deserve a full worked example, not three sentences. This page is the index; the linked articles are the depth.
+Some terms (MRP, MES, BOM, traceability, finite capacity scheduling) deserve a full worked example, not three sentences. This page is the index; the linked articles are the depth.
 
 ### Where should I start if I'm new to manufacturing systems?
 
@@ -286,4 +286,4 @@ Some terms — MRP, MES, BOM, traceability, finite capacity scheduling — deser
 
 ## Try it yourself
 
-Carbon runs ERP, MRP, MES, and QMS on one Postgres data model, so terms like BOM, routing, work order, and traceability aren't just concepts in a glossary — they're the same records viewed from different angles. [Try Carbon free for 30 days](/pricing), or explore the [source on GitHub](https://github.com/crbnos/carbon) to see how it's built.
+Carbon runs ERP, MRP, MES, and QMS on one Postgres data model, so terms like BOM, routing, work order, and traceability aren't only glossary concepts; they're the same records viewed from different angles. [Try Carbon free for 30 days](/pricing), or explore the [source on GitHub](https://github.com/crbnos/carbon) to see how it's built.

@@ -1,14 +1,14 @@
 ---
-title: "MES vs ERP vs QMS: How the Three Systems Differ (and Overlap)"
+title: "MES vs ERP vs QMS: how the three systems differ and overlap"
 publishedAt: "2026-08-21"
 summary: "MES vs ERP vs QMS explained: what each system actually owns, where they overlap, a comparison table, and why manufacturers end up buying all three."
 tag: "Manufacturing basics"
 author: "chase"
 ---
 
-ERP, MES, and QMS answer three different questions about the same manufacturing operation: ERP asks what should we build, buy, and bill; MES asks what is actually happening on the floor right now; and QMS asks can we prove this product meets spec, and can we trace it if it doesn't. Most manufacturers end up owning some version of all three — the real question isn't which one to pick, it's whether they share data or fight each other.
+ERP, MES, and QMS answer three different questions about the same manufacturing operation: ERP asks what should we build, buy, and bill; MES asks what is happening on the floor right now; and QMS asks can we prove this product meets spec, and can we trace it if it doesn't. Most manufacturers end up owning some version of all three. The real question is whether they share data or fight each other, not which one to pick.
 
-This confusion exists because every ERP vendor claims some MES capability, every MES vendor claims some ERP capability, and quality has historically been bolted onto whichever system had budget left over. No single incumbent owns a clean, honest answer to "what's the difference" — so here it is, with the actual boundaries and where they legitimately blur.
+This confusion exists because every ERP vendor claims some MES capability, every MES vendor claims some ERP capability, and quality has historically been bolted onto whichever system had budget left over. No single incumbent owns a clean, honest answer to "what's the difference," so here it is, with the actual boundaries and where they legitimately blur.
 
 ## ERP vs MES vs QMS: the core distinction
 
@@ -22,19 +22,19 @@ This confusion exists because every ERP vendor claims some MES capability, every
 
 Read the table left to right and the boundary is clean: ERP plans, MES executes, QMS certifies. The friction starts because those three activities happen on the *same work order*, often in the *same minute*, which is why real systems overlap at the seams.
 
-## Where ERP and MES genuinely overlap
+## Where ERP and MES overlap
 
-MRP — material requirements planning — sits inside ERP conceptually but its output (a released work order, dated and quantified) is the direct input to MES. And MES's output (actual labor time, actual scrap, actual quantities) has to flow back into ERP to update real job cost and inventory. If you've been asking "what is MRP" alongside this comparison, [What Is MRP?](/learn/what-is-mrp) works a full gross-to-net calculation so you can see exactly what that plan looks like before it becomes an MES work order.
+MRP (material requirements planning) sits inside ERP conceptually, but its output (a released work order, dated and quantified) is the direct input to MES. And MES's output (actual labor time, actual scrap, actual quantities) has to flow back into ERP to update real job cost and inventory. If you've been asking "what is MRP" alongside this comparison, [What Is MRP?](/learn/what-is-mrp) works a full gross-to-net calculation so you can see what that plan looks like before it becomes an MES work order.
 
-The practical overlap: work order dispatch, routing, and BOM consumption are jointly owned. ERP defines the routing and BOM; MES executes against them and reports back. When ERP and MES are separate products, this handoff is where things break — a work order changes in ERP after MES has already dispatched it, or MES completions don't sync to ERP inventory until an overnight batch runs, so the floor and the front office disagree about what's actually in stock.
+The practical overlap: work order dispatch, routing, and BOM consumption are jointly owned. ERP defines the routing and BOM; MES executes against them and reports back. When ERP and MES are separate products, this handoff is where things break: a work order changes in ERP after MES has already dispatched it, or MES completions don't sync to ERP inventory until an overnight batch runs, so the floor and the front office disagree about what's in stock.
 
-## Where MES and QMS genuinely overlap
+## Where MES and QMS overlap
 
-In-process inspection is the seam. When an operator measures a bracket at the deburr step and records pass/fail, is that an MES event (a step in the operation) or a QMS event (a quality record)? It's both — the inspection is *performed* as part of the routing (MES's job) and the *result* has to be retrievable as a compliance record months later during an audit (QMS's job). Vendors that treat these as two separate systems usually end up duplicating the inspection step: one entry in the execution system to move the job along, a second entry in the quality system to satisfy the auditor.
+In-process inspection is the seam. When an operator measures a bracket at the deburr step and records pass/fail, is that an MES event (a step in the operation) or a QMS event (a quality record)? It's both: the inspection is *performed* as part of the routing (MES's job) and the *result* has to be retrievable as a compliance record months later during an audit (QMS's job). Vendors that treat these as two separate systems usually end up duplicating the inspection step: one entry in the execution system to move the job along, a second entry in the quality system to satisfy the auditor.
 
-Traceability is the other overlap. A lot/serial genealogy record — which raw material lot went into which subassembly, built on which machine, by which operator, inspected by whom — is generated by MES execution but exists specifically to serve QMS's purpose: proving conformance and enabling a recall. See [Lot & Serial Traceability, explained](/learn/what-is-lot-serial-traceability) for how that chain is actually built.
+Traceability is the other overlap. A lot/serial genealogy record (which raw material lot went into which subassembly, built on which machine, by which operator, inspected by whom) is generated by MES execution but exists to serve QMS's purpose: proving conformance and enabling a recall. See [Lot & Serial Traceability, explained](/learn/what-is-lot-serial-traceability) for how that chain is built.
 
-## Where ERP and QMS genuinely overlap
+## Where ERP and QMS overlap
 
 Supplier quality is the clearest overlap: a purchase order (ERP) for a critical raw material needs an associated incoming inspection requirement and a certificate of conformance on file (QMS) before that material can be received into stock and consumed by MRP. Document control is the other: engineering documents, work instructions, and approved supplier lists are simultaneously ERP master data and QMS-controlled documents subject to revision approval.
 
@@ -42,61 +42,61 @@ Supplier quality is the clearest overlap: a purchase order (ERP) for a critical 
 
 When it's unclear which system "owns" a task, ask three questions in order:
 
-1. **Does it decide what should happen, before it happens?** That's ERP — a purchase order, a work order release, a price on a quote.
-2. **Does it record what actually happened, as it happened?** That's MES — actual labor time, actual quantity completed, actual machine downtime.
-3. **Does it exist to prove conformance or enable a recall, after the fact?** That's QMS — an inspection result retained as a compliance record, a CAPA, an audit trail.
+1. **Does it decide what should happen, before it happens?** That's ERP: a purchase order, a work order release, a price on a quote.
+2. **Does it record what actually happened, as it happened?** That's MES: actual labor time, actual quantity completed, actual machine downtime.
+3. **Does it exist to prove conformance or enable a recall, after the fact?** That's QMS: an inspection result retained as a compliance record, a CAPA, an audit trail.
 
-Most disputes about "is this an ERP feature or an MES feature" resolve quickly once you separate the *decision* from the *event* from the *record* — they're three different moments in the same work order's life, not three competing feature sets.
+Most disputes about "is this an ERP feature or an MES feature" resolve quickly once you separate the *decision* from the *event* from the *record*: they're three different moments in the same work order's life, not three competing feature sets.
 
 ## Why "just buy MES" or "just buy a QMS module" usually fails
 
 Point solutions optimize for their one question and treat the other two as an integration problem. A best-of-breed MES with no shared data model to ERP means job cost is always a day stale. A quality module bolted onto an ERP that has no real shop-floor execution means "quality data" is whatever an operator remembers to type into a form after the fact, disconnected from the actual operation timestamp. A standalone QMS with no MES underneath has no reliable source for the in-process data it's supposed to be certifying.
 
-This is also the core argument in [Why ERP implementations fail](/learn/why-erp-implementations-fail) and [Why Odoo implementations fail](/learn/why-odoo-implementations-fail): the failures usually trace back to exactly this seam — a plan, an execution, and a compliance record that were never designed to be the same data.
+This is also the core argument in [Why ERP implementations fail](/learn/why-erp-implementations-fail) and [Why Odoo implementations fail](/learn/why-odoo-implementations-fail): the failures usually trace back to this seam, a plan, an execution, and a compliance record that were never designed to be the same data.
 
 ## The case for one data model
 
-If ERP, MES, and QMS are really three views into the lifecycle of the same work order — planned, executed, certified — then the cleanest architecture is one where they're built on the same underlying data model rather than three databases synced by middleware. Concretely, that means:
+If ERP, MES, and QMS are three views into the lifecycle of the same work order (planned, executed, certified), then the cleanest architecture is one where they're built on the same underlying data model rather than three databases synced by middleware. Concretely, that means:
 
-- A work order's routing, BOM, and cost data (ERP) is the same row an operator dispatches against (MES) and the same row an inspection result attaches to (QMS) — not three records reconciled after the fact.
-- Job costing reflects *actual* labor, material, and scrap the moment a job closes, because MES completions post directly into the same ledger ERP reads from — no nightly batch, no CSV import.
+- A work order's routing, BOM, and cost data (ERP) is the same row an operator dispatches against (MES) and the same row an inspection result attaches to (QMS), not three records reconciled after the fact.
+- Job costing reflects *actual* labor, material, and scrap the moment a job closes, because MES completions post directly into the same ledger ERP reads from, with no nightly batch and no CSV import.
 - A nonconformance found on the floor (MES event) automatically creates a QMS record with full genealogy already attached, because the lot/serial and operation history already live in the same schema.
-- An auditor asking for a DHR (device history record) or an AS9102 first-article packet gets a report pulled from one system, not a reconciliation exercise across three exports. See [FAI & AS9102](/learn/fai-and-as9102-forms) and [21 CFR Part 11 & electronic DHRs](/learn/21-cfr-part-11-electronic-dhr) for what those records actually require.
+- An auditor asking for a DHR (device history record) or an AS9102 first-article packet gets a report pulled from one system, not a reconciliation exercise across three exports. See [FAI & AS9102](/learn/fai-and-as9102-forms) and [21 CFR Part 11 & electronic DHRs](/learn/21-cfr-part-11-electronic-dhr) for what those records require.
 
 ## How Carbon unifies ERP, MRP, MES, and QMS
 
-Carbon is built as ERP + MRP + MES + QMS on one Postgres data model — not three products stitched together with an integration layer:
+Carbon is built as ERP + MRP + MES + QMS on one Postgres data model, not three products stitched together with an integration layer:
 
-- **One work order, one record.** The same work order carries its plan (routing, BOM, cost) from ERP, its execution (dispatch, labor capture, backflush) from MES, and its quality record (inspection results, NCRs, genealogy) from QMS — no sync job connects them because they were never separate.
+- **One work order, one record.** The same work order carries its plan (routing, BOM, cost) from ERP, its execution (dispatch, labor capture, backflush) from MES, and its quality record (inspection results, NCRs, genealogy) from QMS; no sync job connects them because they were never separate.
 - **Real-time cost, not month-end reconciliation.** Because MES completions post directly against the same ledger, actual vs. standard cost variance is visible the day the job closes.
 - **Compliance records fall out of normal operation.** Traceability and inspection data required for AS9100, ISO 13485, or CMMC audits are a byproduct of running the work order, not a parallel data-entry burden. See [AS9100 for small shops](/learn/as9100-for-small-shops) and [ISO 13485 QMS software](/learn/iso-13485-qms-software).
-- **API-first across all three.** Every table — planning, execution, and quality — is reachable over Carbon's REST API (rest.carbon.ms) and hosted MCP server, so you can build a custom dashboard or hand an AI agent live production and quality data without waiting on a vendor integration. See [API-first ERP](/learn/api-first-erp).
-- **Open source and self-hostable**, including ITAR-capable self-hosted deployments on Enterprise — relevant if your QMS obligations include data residency requirements a managed SaaS-only vendor can't meet.
+- **API-first across all three.** Every table across planning, execution, and quality is reachable over Carbon's REST API (rest.carbon.ms) and hosted MCP server, so you can build a custom dashboard or hand an AI agent live production and quality data without waiting on a vendor integration. See [API-first ERP](/learn/api-first-erp).
+- **Open source and self-hostable**, including ITAR-capable self-hosted deployments on Enterprise, relevant if your QMS obligations include data residency requirements a managed SaaS-only vendor can't meet.
 
-If you're comparing this against a specific incumbent's version of "unified," see [Carbon vs. Odoo](/learn/carbon-vs-odoo-open-source-erp) or [SAP Business One for small manufacturers](/learn/sap-business-one-for-small-manufacturers) for how their MES/QMS story actually holds up.
+If you're comparing this against a specific incumbent's version of "unified," see [Carbon vs. Odoo](/learn/carbon-vs-odoo-open-source-erp) or [SAP Business One for small manufacturers](/learn/sap-business-one-for-small-manufacturers) for how their MES/QMS story holds up.
 
 ## Frequently asked questions
 
 ### What is the difference between MES and ERP?
 
-ERP plans and records the business transaction — orders, purchasing, invoicing, cost. MES executes and tracks the actual production event on the floor — labor time, quantities, WIP status — that fulfills that plan. ERP hands MES a plan; MES hands ERP the truth about what happened.
+ERP plans and records the business transaction: orders, purchasing, invoicing, cost. MES executes and tracks the actual production event on the floor (labor time, quantities, WIP status) that fulfills that plan. ERP hands MES a plan; MES hands ERP the truth about what happened.
 
 ### What is the difference between MES and QMS?
 
-MES tracks how a work order is executed on the floor. QMS tracks whether the result conforms to spec and can be proven/traced later. In-process inspection sits at the boundary of both — it's an execution step and a quality record at the same time.
+MES tracks how a work order is executed on the floor. QMS tracks whether the result conforms to spec and can be proven/traced later. In-process inspection sits at the boundary of both: it's an execution step and a quality record at the same time.
 
 ### Do I need all three systems, or can one replace the others?
 
-Every manufacturer needs all three functions — planning, execution, and quality — whether they're formal software systems or informal spreadsheets and paper. The choice isn't whether to have them, it's whether they share one data model or are reconciled by hand across separate systems.
+Every manufacturer needs all three functions (planning, execution, and quality), whether they're formal software systems or informal spreadsheets and paper. The choice is whether they share one data model or get reconciled by hand across separate systems, not whether to have them.
 
 ### Is MRP part of ERP or part of MES?
 
-MRP (material requirements planning) is conceptually part of ERP's planning function — it calculates what to buy and build. Its output, a released work order, is the direct input MES executes against. See [What Is MRP?](/learn/what-is-mrp) for the full calculation.
+MRP (material requirements planning) is conceptually part of ERP's planning function; it calculates what to buy and build. Its output, a released work order, is the direct input MES executes against. See [What Is MRP?](/learn/what-is-mrp) for the full calculation.
 
 ### What's an example of a manufacturer that needs all three tightly integrated?
 
-Any regulated discrete manufacturer — aerospace, defense, medical device — needs planning (ERP/MRP) accuracy, real-time execution data (MES) to catch problems in-process, and audit-ready traceability (QMS) simultaneously, because an auditor or customer can ask for a genealogy report on any shipped unit at any time.
+Any regulated discrete manufacturer (aerospace, defense, medical device) needs planning (ERP/MRP) accuracy, real-time execution data (MES) to catch problems in-process, and audit-ready traceability (QMS) simultaneously, because an auditor or customer can ask for a genealogy report on any shipped unit at any time.
 
 ## See one data model instead of three systems
 
-If your ERP, MES, and quality tracking currently live in separate tools that don't agree with each other, it's worth seeing what happens when they're the same underlying data. [Try Carbon free for 30 days](/pricing) at https://app.carbon.ms, or inspect how the data model is actually structured on [GitHub](https://github.com/crbnos/carbon).
+If your ERP, MES, and quality tracking currently live in separate tools that don't agree with each other, it's worth seeing what happens when they're the same underlying data. [Try Carbon free for 30 days](/pricing) at https://app.carbon.ms, or inspect how the data model is structured on [GitHub](https://github.com/crbnos/carbon).

@@ -47,7 +47,7 @@ We'll use the **Sensor Mount Assembly (SMA-100)** BOM from [What Is a Bill of Ma
 
 **Demand:** a sales order requires **50 units of SMA-100 due in week 10**.
 
-### Level 0 — SMA-100 (Sensor Mount Assembly)
+### Level 0: SMA-100 (Sensor Mount Assembly)
 
 | | Week 6 | Week 7 | Week 8 | Week 9 | Week 10 |
 |---|---|---|---|---|---|
@@ -60,7 +60,7 @@ We'll use the **Sensor Mount Assembly (SMA-100)** BOM from [What Is a Bill of Ma
 
 On-hand of 6 nets the gross requirement of 50 down to a **net requirement of 44**. Lot-for-lot means the planned order receipt equals net requirement exactly, with no rounding up. With a 1-week assembly lead time, the receipt in week 10 must be *released* in week 9. That release, 44 units of SMA-100, becomes the gross requirement driving every component below it.
 
-### Level 1 — BRK-200 (Machined Bracket), qty-per = 1
+### Level 1: BRK-200 (Machined Bracket), qty-per = 1
 
 Gross requirement = 44 (parent release) × 1 = **44**, needed by week 9 (when the parent release happens, the bracket must be *in stock* by then, not just started).
 
@@ -75,7 +75,7 @@ Gross requirement = 44 (parent release) × 1 = **44**, needed by week 9 (when th
 
 4 on hand nets to a requirement of 40. With a 2-week machining lead time, the order must be **released in week 7** to receive 40 brackets by week 9.
 
-### Level 2 — HW-M4X12 (Socket cap screw), qty-per = 4
+### Level 2: HW-M4X12 (Socket cap screw), qty-per = 4
 
 Gross requirement = 40 (bracket release) × 4 = **160**, needed by week 7.
 
@@ -90,7 +90,7 @@ Gross requirement = 40 (bracket release) × 4 = **160**, needed by week 7.
 
 This is where **lot sizing** changes the answer: the net requirement is 130, but the screw's minimum order quantity is 200, so the planned receipt rounds up to 200, leaving 70 in projected on-hand carried forward for the next demand. With a 1-week buy lead time, the PO releases in week 6.
 
-### Level 1 — SEN-400 (Proximity sensor), qty-per = 1
+### Level 1: SEN-400 (Proximity sensor), qty-per = 1
 
 Gross requirement = 44 × 1 = **44**, needed by week 9. On-hand is 0, so net requirement is 44, lot-for-lot receipt of 44. But the sensor has a **4-week purchase lead time**, so the PO must release in **week 5**, four weeks earlier than the bracket screws even though both support the same week-10 shipment. This is why lead-time offsetting matters: without it, you'd place every purchase order on the same day and find out four weeks later that the long-lead item is going to be late.
 
