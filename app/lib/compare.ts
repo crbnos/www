@@ -71,28 +71,6 @@ const CARBON_STATS: Comparison["stats"] = [
   { value: "Yours", label: "full source-code ownership" },
 ];
 
-/** Reasons repeat with light tailoring — they are Carbon's core story. */
-function carbonReasons(closing: string): CompareCard[] {
-  return [
-    {
-      title: "One system, one record",
-      body: "ERP, MRP, MES and QMS share a single data model. Quote, plan, buy, build, inspect and ship all write to the same record — there is nothing to integrate and nothing to reconcile.",
-    },
-    {
-      title: "Open and API-first",
-      body: "The source is yours: run Carbon in the cloud or self-host it, with no lock-in. The whole backend — every table and capability, not a curated subset — is open over REST and MCP, so you point the best agents (Claude, ChatGPT, Cursor) at your live data instead of being boxed into a vendor's built-in assistant.",
-    },
-    {
-      title: "Live capacity planning",
-      body: "Capacity and demand forecasts update the moment the floor reports progress — not on the next overnight run — so the plan you're looking at is the plan that's true.",
-    },
-    {
-      title: closing,
-      body: "Start free for 30 days with published, per-user pricing. No sales call, no six-figure implementation, no consultants required to make a change.",
-    },
-  ];
-}
-
 // ---------------------------------------------------------------------------
 // NetSuite
 // ---------------------------------------------------------------------------
@@ -105,7 +83,7 @@ const NETSUITE: Comparison = {
   headline: "Carbon vs. NetSuite",
   metaTitle: "Carbon vs. NetSuite — a manufacturing ERP comparison",
   metaDescription:
-    "NetSuite runs the back office; Carbon runs the factory. Compare Carbon — ERP, MES and QMS on one data model, open-source and API-first — against Oracle NetSuite for discrete, make-to-order manufacturers.",
+    "NetSuite runs the back office; Carbon runs the factory. Compare ERP, MES and QMS on one open, API-first data model for make-to-order manufacturers.",
   subheadline:
     "NetSuite is a finance-first ERP that bolts manufacturing on through add-ons. Carbon is manufacturing-native — ERP, MRP, MES and QMS on one data model — so quoting, planning, the shop floor, quality and accounting share one record instead of a chain of SuiteApps and integrations.",
   stats: CARBON_STATS,
@@ -227,7 +205,18 @@ const NETSUITE: Comparison = {
       title: "Manufacturing-first, not finance-first",
       body: "NetSuite starts from the ledger and bolts manufacturing on as modules. Carbon starts from the part — the BoM, the routing, the operation — with accounting rolling up from what actually happens on the floor.",
     },
-    ...carbonReasons("No implementation army").slice(1),
+    {
+      title: "Open and API-first",
+      body: "NetSuite opens a curated slice of itself through SuiteScript and SuiteTalk, and steers you to its built-in assistant. Carbon puts the whole backend — every table — on an open REST API and MCP, self-hostable, so you point Claude, ChatGPT or Cursor at your live data.",
+    },
+    {
+      title: "Live capacity planning",
+      body: "NetSuite plans on scheduled MRP runs. Carbon's capacity and demand update the moment the floor reports progress, so the plan you're looking at is the plan that's true.",
+    },
+    {
+      title: "No implementation army",
+      body: "NetSuite lands through a partner and a multi-month implementation. Carbon starts free for 30 days on published, per-user pricing — no sales call, no consultants required to make a change.",
+    },
   ],
 };
 
@@ -241,9 +230,9 @@ const MANUFACTURO: Comparison = {
   competitorFull: "Manufacturo (Andea)",
   category: "Cloud MES",
   headline: "Carbon vs. Manufacturo",
-  metaTitle: "Carbon vs. Manufacturo — one platform vs. an MES you integrate",
+  metaTitle: "Carbon vs. Manufacturo — one platform, not a bolt-on MES",
   metaDescription:
-    "Manufacturo executes the shop floor, then hands off to an ERP you buy and integrate separately. Carbon is ERP, MES and QMS on one data model — no seam between the floor and the back office.",
+    "Manufacturo executes the floor, then hands to a separate ERP. Carbon is ERP, MES and QMS on one data model — no seam between floor and back office.",
   subheadline:
     "Manufacturo is a modern MES: it executes the shop floor, then hands off to an ERP you buy and integrate separately. Carbon is ERP, MRP, MES and QMS on one data model — the same record from quote to shipped part — so there's no seam to build between the floor and the back office.",
   stats: CARBON_STATS,
@@ -359,7 +348,18 @@ const MANUFACTURO: Comparison = {
       title: "The ERP is already inside",
       body: "No separate back office to license and integrate. Accounting, job and product costing, purchasing, inventory and planning ship with the shop floor — so cost rolls up from the operation automatically, on one data model.",
     },
-    ...carbonReasons("No integration to maintain").slice(1),
+    {
+      title: "Open and API-first",
+      body: "Manufacturo executes the floor as a cloud MES; the record still lives in an ERP you buy and connect. Carbon keeps the whole backend on an open REST API and MCP, self-hostable, with no seam between the floor and the books.",
+    },
+    {
+      title: "Plan and execute on one model",
+      body: "Because ERP and MES are the same data, capacity and demand update the moment the floor reports progress — with no round-trip to a separate system of record.",
+    },
+    {
+      title: "No integration to maintain",
+      body: "Nothing to wire between MES and ERP, and nothing to re-test when either side updates. Start free for 30 days on published, per-user pricing.",
+    },
   ],
 };
 
@@ -373,9 +373,9 @@ const FULCRUM: Comparison = {
   competitorFull: "Fulcrum (Fulcrum Pro)",
   category: "Cloud manufacturing ERP",
   headline: "Carbon vs. Fulcrum",
-  metaTitle: "Carbon vs. Fulcrum — the open, API-first manufacturing platform",
+  metaTitle: "Carbon vs. Fulcrum — open, API-first manufacturing platform",
   metaDescription:
-    "Fulcrum and Carbon both replace legacy manufacturing software with something modern. Carbon adds source availability, an API-first and agent-ready platform, self-host/ITAR, and published pricing.",
+    "Fulcrum and Carbon both replace legacy manufacturing software. Carbon adds source availability, an API-first agent-ready platform, self-host and public pricing.",
   subheadline:
     "Fulcrum and Carbon both replace legacy manufacturing software with something modern — but Fulcrum runs the shop floor and syncs the books to a separate system like QuickBooks. Carbon unifies ERP, MRP, MES and QMS — with native accounting and job costing — on one open, API-first data model, with pricing you can read on the website.",
   stats: CARBON_STATS,
@@ -515,17 +515,6 @@ const FULCRUM: Comparison = {
   ],
 };
 
-/** Reasons for competitors that are MES-only and need a separate ERP. */
-function erpInsideReasons(closing: string): CompareCard[] {
-  return [
-    {
-      title: "The ERP is already inside",
-      body: "No separate back office to license and integrate. Accounting, job and product costing, purchasing, inventory and planning ship with the shop floor — so cost rolls up from the operation automatically, on one data model.",
-    },
-    ...carbonReasons(closing).slice(1),
-  ];
-}
-
 // ---------------------------------------------------------------------------
 // SAP Business One
 // ---------------------------------------------------------------------------
@@ -538,7 +527,7 @@ const SAP_B1: Comparison = {
   headline: "Carbon vs. SAP Business One",
   metaTitle: "Carbon vs. SAP Business One — manufacturing on one model",
   metaDescription:
-    "SAP Business One is an SMB ERP where real manufacturing depth comes from add-ons like Beas and Produmex. Carbon is manufacturing-native — ERP, MRP, MES and QMS on one open data model — with published pricing.",
+    "SAP Business One needs add-ons like Beas or Produmex for real manufacturing. Carbon is manufacturing-native — ERP, MRP, MES and QMS on one open model.",
   subheadline:
     "SAP Business One is a small-business ERP built around financials and distribution; real manufacturing depth comes from add-ons like Beas and Produmex. Carbon is manufacturing-native — ERP, MRP, MES and QMS on one data model — with no VAR, no add-on stack, and pricing you can read.",
   stats: CARBON_STATS,
@@ -664,7 +653,18 @@ const SAP_B1: Comparison = {
       title: "Manufacturing-first, not finance-first",
       body: "SAP Business One starts from distribution and financials; the factory arrives as add-ons like Beas and Produmex. Carbon starts from the part and the process, with the ledger built on top of real production.",
     },
-    ...carbonReasons("No VAR, no add-on stack").slice(1),
+    {
+      title: "Open and API-first",
+      body: "Business One exposes itself through the DI API and Service Layer, with real depth arriving via add-ons. Carbon puts the whole backend — every table — on an open REST API and MCP, self-hostable, so the best agents work against your live data.",
+    },
+    {
+      title: "Live capacity planning",
+      body: "In Business One, planning depth comes from add-ons like Beas. Carbon's finite capacity and demand are built in and update the moment the floor reports progress.",
+    },
+    {
+      title: "No VAR, no add-on stack",
+      body: "Business One is bought and implemented through a reseller, then extended with a stack of licensed add-ons. Carbon is self-serve: start free for 30 days on published, per-user pricing.",
+    },
   ],
 };
 
@@ -678,9 +678,9 @@ const EPICOR: Comparison = {
   competitorFull: "Epicor Kinetic",
   category: "Mid-market manufacturing ERP",
   headline: "Carbon vs. Epicor Kinetic",
-  metaTitle: "Carbon vs. Epicor Kinetic — open and API-first vs. a legacy ERP",
+  metaTitle: "Carbon vs. Epicor Kinetic — open, API-first vs. a legacy ERP",
   metaDescription:
-    "Epicor Kinetic is a deep, proprietary manufacturing ERP sold by quote and implemented over months, with on-prem innovation ending in 2028. Carbon matches the manufacturing model — open, API-first, self-hostable, published pricing.",
+    "Epicor Kinetic is a proprietary ERP sold by quote and implemented over months. Carbon matches the model — open, API-first, self-hostable, public pricing.",
   subheadline:
     "Epicor Kinetic is a deep, mature manufacturing ERP — and a proprietary one, sold by quote, implemented by partners over months, with on-prem innovation ending in 2028. Carbon matches the manufacturing model on an open, API-first platform you can self-host, with pricing on the website.",
   stats: CARBON_STATS,
@@ -793,7 +793,24 @@ const EPICOR: Comparison = {
     },
   ],
   reasonsTitle: "Why manufacturers choose Carbon",
-  reasons: carbonReasons("Modern and open"),
+  reasons: [
+    {
+      title: "One system instead of a module stack",
+      body: "Epicor Kinetic is assembled from modules and a separate CPQ product, licensed and configured tier by tier. Carbon ships ERP, MRP, MES, QMS and the configurator on one Postgres schema — nothing to bolt together, nothing to reconcile between modules.",
+    },
+    {
+      title: "Open and API-first",
+      body: "The whole backend is yours over REST and MCP — every table, not a curated integration surface — and you can self-host with no lock-in. Point the best agents (Claude, ChatGPT, Cursor) at your live data instead of a vendor's built-in assistant.",
+    },
+    {
+      title: "Live capacity planning, no APS project",
+      body: "Epicor's finite scheduling is deep and mature, but standing it up is a configuration effort of its own. Carbon's capacity and demand update the moment the floor reports progress — the plan is live out of the box.",
+    },
+    {
+      title: "Modern and open",
+      body: "Start free for 30 days on published, per-user pricing with a self-serve rollout — instead of a partner-led implementation and a negotiated quote.",
+    },
+  ],
 };
 
 // ---------------------------------------------------------------------------
@@ -808,7 +825,7 @@ const M1: Comparison = {
   headline: "Carbon vs. M1",
   metaTitle: "Carbon vs. M1 (ECI) — a modern, open manufacturing platform",
   metaDescription:
-    "ECI M1 is an established job-shop ERP with a Windows desktop client, dated UI and quote-based pricing. Carbon is a modern, open, API-first platform — ERP, MRP, MES and QMS on one model — with a hosted MCP server and published pricing.",
+    "ECI M1 is a job-shop ERP with a dated Windows client and quote pricing. Carbon is modern, open and API-first — ERP, MRP, MES and QMS on one model.",
   subheadline:
     "ECI M1 is an established job-shop ERP with a Windows desktop client, a dated interface, quote-based pricing, and AI that hasn't reached M1 yet. Carbon is a modern, open, API-first platform — ERP, MRP, MES and QMS on one model — with a hosted MCP server and pricing in the open.",
   stats: CARBON_STATS,
@@ -925,7 +942,24 @@ const M1: Comparison = {
     },
   ],
   reasonsTitle: "Why manufacturers choose Carbon",
-  reasons: carbonReasons("A modern web platform"),
+  reasons: [
+    {
+      title: "One record, quality included",
+      body: "M1 covers quoting, job costing and scheduling well, but quality lives in the uniPoint add-on. Carbon keeps ERP, MRP, MES and QMS on one data model, so an inspection writes to the same record as the job it came from.",
+    },
+    {
+      title: "A browser, not a desktop install",
+      body: "M1 runs a Windows-only desktop client on SQL Server. Carbon is a modern web app your team opens from any machine — nothing to install, image or VPN into, on the floor or off it.",
+    },
+    {
+      title: "Open and API-first",
+      body: "The entire backend is open over REST and MCP and yours to self-host, with no lock-in. Point Claude, ChatGPT or Cursor at your live data instead of a bundled assistant.",
+    },
+    {
+      title: "A modern web platform",
+      body: "Start free for 30 days on published, per-user pricing — no sales call, and no reseller required to make a change.",
+    },
+  ],
 };
 
 // ---------------------------------------------------------------------------
@@ -940,7 +974,7 @@ const TULIP: Comparison = {
   headline: "Carbon vs. Tulip",
   metaTitle: "Carbon vs. Tulip — a system of record, not just apps",
   metaDescription:
-    "Tulip is a no-code app builder for the shop floor, but not a system of record — you still bring an ERP. Carbon is the system of record: ERP, MRP, MES and QMS on one open model with the full backend on an API.",
+    "Tulip is a no-code app builder for the floor, not a system of record — you still bring an ERP. Carbon is the record: ERP, MRP, MES and QMS on one model.",
   subheadline:
     "Tulip is a no-code app builder for the shop floor — powerful for digitizing work instructions, but not a system of record. You still bring an ERP and wire it in. Carbon is the system of record: ERP, MRP, MES and QMS on one model, with the whole backend on an open API.",
   stats: CARBON_STATS,
@@ -1058,7 +1092,18 @@ const TULIP: Comparison = {
       title: "A complete system, not a layer",
       body: "Carbon is the system of record — ERP, MRP, MES and QMS on one model — so the floor, inventory, orders, costing and ledger are the same data, not apps wired to someone else's ERP.",
     },
-    ...carbonReasons("Published pricing, ERP included").slice(1),
+    {
+      title: "Open and API-first",
+      body: "Tulip builds frontline apps and connects out to your systems. Carbon is the system of record itself, with the whole backend — every table — on an open REST API and MCP, self-hostable and pointed at the best agents.",
+    },
+    {
+      title: "Live capacity planning",
+      body: "Tulip digitizes work instructions but doesn't run MRP or capacity. Carbon plans capacity and demand on the same model, updating the moment the floor reports progress.",
+    },
+    {
+      title: "Published pricing, ERP included",
+      body: "With Tulip you still buy and wire in an ERP. Carbon includes ERP, MRP, MES and QMS — start free for 30 days on published, per-user pricing.",
+    },
   ],
 };
 
@@ -1072,9 +1117,9 @@ const PLEX: Comparison = {
   competitorFull: "Plex (Rockwell Automation)",
   category: "Cloud ERP + MES suite",
   headline: "Carbon vs. Plex",
-  metaTitle: "Carbon vs. Plex — open and right-sized vs. an enterprise suite",
+  metaTitle: "Carbon vs. Plex — open, right-sized vs. an enterprise suite",
   metaDescription:
-    "Plex (by Rockwell) is a mature cloud ERP+MES for high-volume plants — capable, closed and quote-priced. Carbon is open and self-hostable, exposes the full backend over API and MCP, and runs high-volume assembly and prototype parts in one system.",
+    "Plex is a mature, closed, quote-priced cloud ERP+MES for high-volume plants. Carbon is open and self-hostable, with the full backend on API and MCP.",
   subheadline:
     "Plex (by Rockwell) is a mature cloud ERP+MES built for high-volume, repetitive plants — capable, closed, cloud-only, and priced by quote. Carbon is open and self-hostable, exposes the whole backend over API and MCP, and runs high-volume assembly and prototype parts on one model — without the enterprise weight or lock-in.",
   stats: CARBON_STATS,
@@ -1183,7 +1228,24 @@ const PLEX: Comparison = {
     },
   ],
   reasonsTitle: "Why manufacturers choose Carbon",
-  reasons: carbonReasons("Right-sized and open"),
+  reasons: [
+    {
+      title: "One system across every run size",
+      body: "Plex is built for high-volume, repetitive plants. Carbon runs high-volume assembly and one-off prototype parts on the same ERP, MRP, MES and QMS model, so mixed and low-volume work isn't a second-class fit.",
+    },
+    {
+      title: "Open and API-first",
+      body: "The whole backend is open over REST and MCP, with full source access and no lock-in. Run Carbon in the cloud or self-host it, and point the best agents (Claude, ChatGPT, Cursor) at your live data instead of a vendor's built-in assistant.",
+    },
+    {
+      title: "Live capacity planning built in",
+      body: "Plex plans demand through the separate DemandCaster module. Carbon's capacity and demand update the moment the floor reports progress — on the same record, with nothing extra to license.",
+    },
+    {
+      title: "Right-sized and open",
+      body: "Start free for 30 days on published, per-user pricing with a self-serve rollout — instead of an enterprise platform sized and priced for large plants.",
+    },
+  ],
 };
 
 // ---------------------------------------------------------------------------
@@ -1198,7 +1260,7 @@ const FIRST_RESONANCE: Comparison = {
   headline: "Carbon vs. First Resonance",
   metaTitle: "Carbon vs. First Resonance — ERP + MES on one open model",
   metaDescription:
-    "First Resonance's ION is a modern MES for hardware teams, but not a financial ERP — it leans on NetSuite for the books. Carbon is ERP, MRP, MES and QMS on one open model, self-hostable, with the full backend on API and MCP.",
+    "First Resonance's ION is a modern MES but not a financial ERP — it leans on NetSuite. Carbon is ERP, MRP, MES and QMS on one open, self-hostable model.",
   subheadline:
     "First Resonance's ION is a modern MES for hardware teams — strong on travelers and as-built traceability, but not a financial ERP, so it leans on NetSuite for the books. Carbon is ERP, MRP, MES and QMS on one open model, self-hostable, with the whole backend on an API and MCP.",
   stats: CARBON_STATS,
@@ -1304,7 +1366,24 @@ const FIRST_RESONANCE: Comparison = {
     },
   ],
   reasonsTitle: "Why manufacturers choose Carbon",
-  reasons: erpInsideReasons("Own your enclave"),
+  reasons: [
+    {
+      title: "ERP and MES on one model",
+      body: "ION runs travelers and as-built traceability, then leans on NetSuite for the books. Carbon is ERP, MRP, MES and QMS on one data model, so cost and the ledger roll up from the operation automatically — no second system to reconcile.",
+    },
+    {
+      title: "Open and API-first",
+      body: "Where ION gates its API behind a Pro tier and keeps its AI in-product, Carbon is open-source, with the whole backend over REST and a hosted MCP server, self-hostable and pointed at the best agents.",
+    },
+    {
+      title: "Live capacity planning",
+      body: "Beyond travelers and traceability, Carbon plans finite capacity and demand on the same record, updating the moment the floor reports progress.",
+    },
+    {
+      title: "Own your enclave",
+      body: "ION is cloud-only. Carbon can self-host — including CMMC / NIST 800-171 and GovCloud environments you control — and starts free for 30 days on published, per-user pricing.",
+    },
+  ],
 };
 
 // ---------------------------------------------------------------------------
@@ -1317,9 +1396,9 @@ const PALANTIR: Comparison = {
   competitorFull: "Palantir (Foundry + AIP)",
   category: "Data & ontology platform",
   headline: "Carbon vs. Palantir",
-  metaTitle: "Carbon vs. Palantir — a finished ERP vs. a build-your-own platform",
+  metaTitle: "Carbon vs. Palantir — a finished ERP vs. build-your-own",
   metaDescription:
-    "Palantir Foundry is a build-your-own data and ontology platform: you model every business object and workflow, at enterprise cost. Carbon ships the manufacturing model finished — ERP, MRP, MES and QMS on one open data model, with published pricing.",
+    "Palantir Foundry is a build-your-own platform you model at enterprise cost. Carbon ships manufacturing finished — ERP, MRP, MES and QMS, public pricing.",
   subheadline:
     "Palantir Foundry is a platform for modeling data and building operational apps — powerful, but you define every business object (the ontology) and build the workflows yourself, usually with forward-deployed engineers and an enterprise contract. Carbon ships the manufacturing model finished: ERP, MRP, MES and QMS on one open data model, running in days.",
   stats: CARBON_STATS,
@@ -1489,9 +1568,9 @@ const ODOO: Comparison = {
   competitorFull: "Odoo (Community & Enterprise)",
   category: "All-in-one business suite",
   headline: "Carbon vs. Odoo",
-  metaTitle: "Carbon vs. Odoo — manufacturing-native vs. an all-in-one suite",
+  metaTitle: "Carbon vs. Odoo — manufacturing-native vs. all-in-one suite",
   metaDescription:
-    "Odoo is an open, all-in-one business suite where manufacturing is one app among dozens — and Quality, PLM and Shop Floor sit behind paid Enterprise. Carbon is manufacturing-native: ERP, MRP, MES and QMS on one model, with finite capacity planning, deep traceability and a native 3D/STEP viewer.",
+    "In Odoo, manufacturing is one app and Quality/PLM/Shop Floor need paid Enterprise. Carbon is manufacturing-native: ERP, MRP, MES and QMS on one model.",
   subheadline:
     "Odoo grew up as a sales, CRM, ecommerce and accounting suite — it even dropped the “ERP” from its name to sell CRM and websites — and manufacturing is one app among dozens. It shows on the floor: Odoo's own team says it “provides MRP instead of finite capacity,” so real shops bolt on a third-party scheduler, a third-party quality app, and custom code they re-validate on every upgrade. Carbon is manufacturing-native — ERP, MRP, MES and QMS on one model, with finite planning, nested BOMs and real quality built in.",
   stats: CARBON_STATS,
@@ -1622,7 +1701,18 @@ const ODOO: Comparison = {
       title: "Manufacturing-native, not one app in a sales suite",
       body: "Odoo's roots and strongest apps are CRM, ecommerce and accounting; Carbon is built around the part, the BoM and the routing, with finite planning, MES and QMS as the core — not an Enterprise app plus a frePPLe integration plus a third-party CAPA module.",
     },
-    ...carbonReasons("No Enterprise paywall").slice(1),
+    {
+      title: "Open, with no Enterprise tier",
+      body: "Odoo is open-core: much of what a factory needs sits behind the paid Enterprise edition and third-party apps. Carbon's whole backend — every table — is open over REST and MCP with full source access, and there is no feature-gated tier above you.",
+    },
+    {
+      title: "Finite capacity, built in",
+      body: "Odoo's own team says it \"provides MRP instead of finite capacity,\" so shops bolt on a third-party scheduler. Carbon runs finite capacity planning natively, updating the moment the floor reports progress.",
+    },
+    {
+      title: "No Enterprise paywall",
+      body: "No Enterprise licence, and no frePPLe or third-party CAPA apps to re-validate on every upgrade. Start free for 30 days on published, per-user pricing, with the source yours.",
+    },
   ],
 };
 
@@ -1636,9 +1726,9 @@ const ERPNEXT: Comparison = {
   competitorFull: "ERPNext (Frappe)",
   category: "Open-source all-in-one ERP",
   headline: "Carbon vs. ERPNext",
-  metaTitle: "Carbon vs. ERPNext — manufacturing-native vs. an open all-in-one ERP",
+  metaTitle: "Carbon vs. ERPNext — manufacturing-native vs. all-in-one ERP",
   metaDescription:
-    "ERPNext is a free, open-source all-in-one ERP with a great REST API — and manufacturing is one module among many. Carbon is manufacturing-native: ERP, MRP, MES and QMS on one model, with finite capacity planning, a real QMS, as-built traceability, a parametric configurator and a native 3D/STEP viewer.",
+    "ERPNext is an open all-in-one ERP where manufacturing is one module. Carbon is manufacturing-native: ERP, MRP, MES and QMS with finite scheduling and a QMS.",
   subheadline:
     "ERPNext is a genuinely good open-source ERP — free, fully self-hostable, with an auto-generated REST API over everything — where manufacturing is one module in a broad suite. Carbon is manufacturing-native: ERP, MRP, MES and QMS on one model, so finite capacity planning, deep quality, as-built genealogy and a parametric configurator are the product, not a module you extend.",
   stats: CARBON_STATS,
@@ -1791,7 +1881,7 @@ const BUILD: Comparison = {
   headline: "Carbon vs. building it yourself",
   metaTitle: "Carbon vs. building your own ERP/MES — buy vs. build",
   metaDescription:
-    "Building your own manufacturing ERP/MES gives you control but costs years and a standing engineering team. Carbon gives you the same control — full source-code ownership — without building it: a finished platform, live in days, on published pricing.",
+    "Building your own ERP/MES costs years and a standing team. Carbon gives the same control — full source ownership — without building it, live in days.",
   subheadline:
     "The most common reason teams build their own ERP or MES is control — they want to own it and shape it to their process. Carbon gives you that same control: the full source code is yours to run, audit and extend. The difference is you start from a finished manufacturing platform instead of a blank repo and a multi-year roadmap.",
   stats: CARBON_STATS,

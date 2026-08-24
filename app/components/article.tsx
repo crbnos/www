@@ -10,7 +10,9 @@ type ArticleProps = {
       image?: string;
       publishedAt?: string;
     };
-    html: string;
+    // Optional: preview cards (the /learn index) omit the body to keep the
+    // page payload small. The full-article render below supplies it.
+    html?: string;
     author?: {
       name: string;
       avatar: string;
@@ -132,7 +134,7 @@ export function Article({ data, preview = false }: ArticleProps) {
         )}
         <div
           className="prose prose-md dark:prose-invert max-w-none mt-4"
-          dangerouslySetInnerHTML={{ __html: data.html }}
+          dangerouslySetInnerHTML={{ __html: data.html ?? "" }}
         />
         {data.author && (
           <div className="flex items-center gap-2 mt-12 pt-8 border-t border-border">

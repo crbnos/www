@@ -5,11 +5,25 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { Book, Check, ChevronRight, Copy, ImageIcon, X } from "lucide-react";
 import { type ReactNode, useEffect, useRef, useState } from "react";
 import { Link } from "react-router";
+import type { MetaFunction } from "react-router";
 import { AppCtaLabel } from "~/components/app-cta-label";
 import { CodeExamples } from "~/components/code-examples";
 import { Button } from "~/components/ui/button";
 import { ZoomableImage } from "~/components/zoomable-image";
 import { cn } from "~/lib/utils";
+import { pageMeta } from "~/lib/seo";
+
+// The home route shipped no `meta`, so it inherited root's default title
+// ("Carbon Manufacturing Systems") — a bare brand name with no keyword signal,
+// identical to /pricing, /contact and others. A keyword-led title that already
+// names the product (so `pageMeta` adds no suffix) gives the most important
+// page its own SERP entry.
+export const meta: MetaFunction = ({ matches }) =>
+	pageMeta(matches, {
+		title: "Carbon — Manufacturing ERP, MES & QMS on one system",
+		description:
+			"Carbon is the engineering-first operating system for manufacturers — ERP, MRP, MES and QMS on one live model of your factory. Open-source and API-first.",
+	});
 
 /* -------------------------------------------------------------------------- */
 /*  Content                                                                    */

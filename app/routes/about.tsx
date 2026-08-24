@@ -26,6 +26,10 @@ export default function About() {
 						</p>
 					</div>
 
+					<h1 className="mb-2 font-display text-3xl font-semibold tracking-[-0.02em] text-pretty sm:text-4xl">
+						<Trans>Why we built Carbon and open-sourced it</Trans>
+					</h1>
+
 					<p className="leading-[1.8] text-foreground text-pretty">
 						<Trans>
 							After spending nearly a decade building end-to-end systems for
@@ -36,7 +40,7 @@ export default function About() {
 
 					<p className="leading-[1.8] text-foreground text-pretty">
 						<Trans>
-							API-first, realtime subscriptions, simple scheduling, and 1,000
+							API-first, realtime subscriptions, forward/finite scheduling, and 1,000
 							little details to make the juice of using an ERP worth the squeeze.
 						</Trans>
 					</p>

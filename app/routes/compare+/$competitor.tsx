@@ -59,12 +59,37 @@ export const meta: MetaFunction<typeof loader> = ({ data, params, matches }) => 
   }
 
   const url = siteUrl ? `${siteUrl}/compare/${params.competitor}` : null;
+
+  // Breadcrumb trail (Home > Compare > Carbon vs. X). Breadcrumb rich results
+  // remain fully supported and give these comparison pages an explicit place
+  // in the site hierarchy — there is no comparison-specific schema type to add.
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Compare",
+        item: siteUrl ? `${siteUrl}/compare` : undefined,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: `Carbon vs. ${comparison.competitor}`,
+        item: url ?? undefined,
+      },
+    ],
+  };
+
   return pageMeta(matches, {
     title: comparison.metaTitle,
     description: comparison.metaDescription,
     extra: [
       { property: "og:url", content: url },
       { property: "og:type", content: "website" },
+      { "script:ld+json": breadcrumbSchema },
     ],
   });
 };

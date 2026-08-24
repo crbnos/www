@@ -1,6 +1,19 @@
 export type Metadata = {
   title: string;
+  /**
+   * Optional SEO `<title>` override. The full `title` doubles as the article's
+   * on-page H1, so a long, descriptive headline overflows the ~60-char SERP
+   * limit. `seoTitle` sets a shorter title tag without touching the visible
+   * headline; it falls back to `title` when absent.
+   */
+  seoTitle?: string;
   publishedAt: string;
+  /**
+   * Optional last-updated date (YYYY-MM-DD). When set, it feeds the
+   * BlogPosting `dateModified` so evergreen posts can emit a real freshness
+   * signal instead of reporting they were never touched after publish.
+   */
+  updatedAt?: string;
   summary: string;
   image?: string;
   tag: string;

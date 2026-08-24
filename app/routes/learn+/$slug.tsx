@@ -71,7 +71,7 @@ export const meta: MetaFunction = ({ data, params, matches }) => {
     description: post.metadata.summary,
     image: socialImageUrl,
     datePublished: post.metadata.publishedAt,
-    dateModified: post.metadata.publishedAt,
+    dateModified: post.metadata.updatedAt ?? post.metadata.publishedAt,
     inLanguage: "en",
     mainEntityOfPage: url ?? undefined,
     author: post.author
@@ -85,8 +85,35 @@ export const meta: MetaFunction = ({ data, params, matches }) => {
     publisher: siteUrl ? { "@id": `${siteUrl}/#organization` } : undefined,
   };
 
+  // Breadcrumb trail (Home > Learn > article). Breadcrumb rich results are
+  // still fully supported by Google, and these long-tail, two-levels-deep
+  // articles are exactly the pages that benefit from an explicit hierarchy.
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Learn",
+        item: siteUrl ? `${siteUrl}/learn` : undefined,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.metadata.title,
+        item: url ?? undefined,
+      },
+    ],
+  };
+
+  // `seoTitle` (when set) shortens only the <title> tag; the full `title` still
+  // renders as the article's H1 and as the BlogPosting/breadcrumb name above.
+  const seoTitle = post.metadata.seoTitle ?? post.metadata.title;
+
   return pageMeta(matches, {
-    title: `${post.metadata.title} | Carbon`,
+    title: `${seoTitle} | Carbon`,
     description: post.metadata.summary,
     extra: [
       { property: "og:url", content: url },
@@ -97,6 +124,7 @@ export const meta: MetaFunction = ({ data, params, matches }) => {
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: socialImageUrl },
       { "script:ld+json": articleSchema },
+      { "script:ld+json": breadcrumbSchema },
     ],
   });
 };

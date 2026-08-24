@@ -21,3 +21,9 @@ opencode.json
 
 # Conductor workspace scratch
 .context
+
+# Vendored claude-seo plugin (local tooling for `/seo`; not committed)
+.claude/plugins/
+.claude/skills/seo
+.claude/skills/seo-*
+.claude/agents/seo-*.md

@@ -19,7 +19,7 @@ export const meta: MetaFunction = ({ matches }) =>
   pageMeta(matches, {
     title: "Compare Carbon to other manufacturing software",
     description:
-      "How Carbon — an open-source, API-first manufacturing platform with ERP, MRP, MES and QMS on one data model — compares to NetSuite, Manufacturo, Fulcrum and other manufacturing software.",
+      "How Carbon — open-source, API-first, with ERP, MRP, MES and QMS on one data model — compares to NetSuite, Fulcrum, Odoo and other manufacturing software.",
   });
 
 export default function CompareIndex() {
