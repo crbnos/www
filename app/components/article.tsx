@@ -100,7 +100,7 @@ export function Article({ data, preview = false }: ArticleProps) {
             to={`/learn/${data.slug}`}
             className="text-sm font-medium text-secondary hover:underline"
           >
-            Read more
+            Read more<span className="sr-only">: {data.metadata.title}</span>
           </Link>
         </div>
       </article>
