@@ -123,7 +123,7 @@ msgstr "API डॉक्स"
 
 #: app/routes/about.tsx:42
 msgid "API-first, realtime subscriptions, forward/finite scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
-msgstr ""
+msgstr "API-first, रीयल-टाइम सदस्यताएं, आगे/सीमित शेड्यूलिंग, और ERP का उपयोग करने के रस को निचोड़ के लायक बनाने के लिए 1,000 छोटे विवरण।"
 
 #: app/routes/_index.tsx:131
 msgid "API-first, with first-class MCP"
@@ -228,7 +228,7 @@ msgstr "सॉफ़्टवेयर की गति से <0/><1/>बना
 
 #: app/components/footer.tsx:58
 msgid "Build vs. buy"
-msgstr ""
+msgstr "निर्माण बनाम खरीद"
 
 #: app/routes/pricing.tsx:47
 msgid "Business"
@@ -308,7 +308,7 @@ msgstr "बंद करें"
 
 #: app/routes/pricing.tsx:48
 msgid "Cloud + support"
-msgstr ""
+msgstr "Cloud + समर्थन"
 
 #: app/routes/about.tsx:106
 msgid "Co-Founder and CTO"
@@ -1416,7 +1416,7 @@ msgstr "क्या बनाना है, कब"
 
 #: app/routes/about.tsx:30
 msgid "Why we built Carbon and open-sourced it"
-msgstr ""
+msgstr "हमने Carbon को क्यों बनाया और इसे ओपन-सोर्स किया"
 
 #: app/routes/contact.tsx:191
 msgid "Work Email"

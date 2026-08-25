@@ -123,7 +123,7 @@ msgstr "Documentazione API"
 
 #: app/routes/about.tsx:42
 msgid "API-first, realtime subscriptions, forward/finite scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
-msgstr ""
+msgstr "API-first, sottoscrizioni in tempo reale, pianificazione forward/finite, e 1.000 piccoli dettagli per rendere l'utilizzo di un ERP degno della pena."
 
 #: app/routes/_index.tsx:131
 msgid "API-first, with first-class MCP"
@@ -228,7 +228,7 @@ msgstr "Costruisci <0/><1/>alla velocità del software."
 
 #: app/components/footer.tsx:58
 msgid "Build vs. buy"
-msgstr ""
+msgstr "Costruire vs. acquistare"
 
 #: app/routes/pricing.tsx:47
 msgid "Business"
@@ -308,7 +308,7 @@ msgstr "Chiudi"
 
 #: app/routes/pricing.tsx:48
 msgid "Cloud + support"
-msgstr ""
+msgstr "Cloud + supporto"
 
 #: app/routes/about.tsx:106
 msgid "Co-Founder and CTO"
@@ -1416,7 +1416,7 @@ msgstr "cosa fare, quando"
 
 #: app/routes/about.tsx:30
 msgid "Why we built Carbon and open-sourced it"
-msgstr ""
+msgstr "Perché abbiamo costruito Carbon e l'abbiamo reso open-source"
 
 #: app/routes/contact.tsx:191
 msgid "Work Email"

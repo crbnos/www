@@ -123,7 +123,7 @@ msgstr "API Dokümanları"
 
 #: app/routes/about.tsx:42
 msgid "API-first, realtime subscriptions, forward/finite scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
-msgstr ""
+msgstr "API-first, gerçek zamanlı abonelikler, ileri/sonlu planlama ve bir ERP kullanmanın zorluğuna değer katacak 1.000 küçük ayrıntı."
 
 #: app/routes/_index.tsx:131
 msgid "API-first, with first-class MCP"
@@ -228,7 +228,7 @@ msgstr "Yazılım hızında <0/><1/>oluşturun."
 
 #: app/components/footer.tsx:58
 msgid "Build vs. buy"
-msgstr ""
+msgstr "Geliştirme vs. Satın Alma"
 
 #: app/routes/pricing.tsx:47
 msgid "Business"
@@ -308,7 +308,7 @@ msgstr "Kapat"
 
 #: app/routes/pricing.tsx:48
 msgid "Cloud + support"
-msgstr ""
+msgstr "Bulut + Destek"
 
 #: app/routes/about.tsx:106
 msgid "Co-Founder and CTO"
@@ -1416,7 +1416,7 @@ msgstr "Ne yapılacak, Ne zaman"
 
 #: app/routes/about.tsx:30
 msgid "Why we built Carbon and open-sourced it"
-msgstr ""
+msgstr "Neden Carbon'u geliştirdik ve açık kaynaklı yaptık"
 
 #: app/routes/contact.tsx:191
 msgid "Work Email"
