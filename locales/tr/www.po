@@ -123,7 +123,7 @@ msgstr "API Dokümanları"
 
 #: app/routes/about.tsx:42
 msgid "API-first, realtime subscriptions, forward/finite scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
-msgstr ""
+msgstr "API-first, gerçek zamanlı abonelikler, ileri/sonlu planlama ve bir ERP kullanmanın zorluğuna değer katacak 1.000 küçük ayrıntı."
 
 #: app/routes/_index.tsx:131
 msgid "API-first, with first-class MCP"
@@ -228,7 +228,7 @@ msgstr "Yazılım hızında <0/><1/>oluşturun."
 
 #: app/components/footer.tsx:58
 msgid "Build vs. buy"
-msgstr ""
+msgstr "Geliştirme vs. Satın Alma"
 
 #: app/routes/pricing.tsx:47
 msgid "Business"
@@ -306,6 +306,10 @@ msgstr "Temiz Oda Operasyonları, Verim Analizi"
 msgid "Close"
 msgstr "Kapat"
 
+#: app/routes/pricing.tsx:48
+msgid "Cloud + support"
+msgstr "Bulut + Destek"
+
 #: app/routes/about.tsx:106
 msgid "Co-Founder and CTO"
 msgstr "Kurucu Ortağı ve CTO"
@@ -370,6 +374,7 @@ msgstr "İletişim Bilgileri"
 msgid "Contact Sales"
 msgstr "Satış ile İletişime Geçin"
 
+#: app/routes/pricing.tsx:52
 #: app/routes/pricing.tsx:67
 #: app/routes/pricing.tsx:69
 msgid "Contact us"
@@ -407,10 +412,6 @@ msgstr "Üretimi artıran markalı bir sipariş deneyimi oluşturun"
 #: app/routes/_index.tsx:1376
 msgid "Create a company, connect the MCP, release your first job today."
 msgstr "Bir şirket oluşturun, MCP'yi bağlayın, ilk işinizi bugün yayınlayın."
-
-#: app/routes/pricing.tsx:66
-msgid "Custom"
-msgstr "Özel"
 
 #: app/components/wizard-form.tsx:153
 msgid "Custom Development"
@@ -872,7 +873,7 @@ msgstr "İleti"
 msgid "money in, money out"
 msgstr "Parası giriş, parası çıkış"
 
-#: app/routes/pricing.tsx:48
+#: app/routes/pricing.tsx:66
 msgid "Most popular"
 msgstr "En Popüler"
 
@@ -1273,7 +1274,6 @@ msgid "Star on GitHub"
 msgstr "GitHub'da Yıldız Ekle"
 
 #: app/routes/pricing.tsx:34
-#: app/routes/pricing.tsx:52
 msgid "Start 30-day free trial"
 msgstr "30 günlük ücretsiz denemeyi başlat"
 
@@ -1416,7 +1416,7 @@ msgstr "Ne yapılacak, Ne zaman"
 
 #: app/routes/about.tsx:30
 msgid "Why we built Carbon and open-sourced it"
-msgstr ""
+msgstr "Neden Carbon'u geliştirdik ve açık kaynaklı yaptık"
 
 #: app/routes/contact.tsx:191
 msgid "Work Email"

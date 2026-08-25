@@ -123,7 +123,7 @@ msgstr "Documentation API"
 
 #: app/routes/about.tsx:42
 msgid "API-first, realtime subscriptions, forward/finite scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
-msgstr ""
+msgstr "API-first, abonnements en temps réel, planification avant/finie, et 1 000 petits détails qui rendent l'utilisation d'un ERP digne de l'effort."
 
 #: app/routes/_index.tsx:131
 msgid "API-first, with first-class MCP"
@@ -228,7 +228,7 @@ msgstr "Construire <0/><1/>à la vitesse du logiciel."
 
 #: app/components/footer.tsx:58
 msgid "Build vs. buy"
-msgstr ""
+msgstr "Construire ou acheter"
 
 #: app/routes/pricing.tsx:47
 msgid "Business"
@@ -306,6 +306,10 @@ msgstr "opérations de salle blanche, analytique de rendement"
 msgid "Close"
 msgstr "Fermer"
 
+#: app/routes/pricing.tsx:48
+msgid "Cloud + support"
+msgstr "Cloud + support"
+
 #: app/routes/about.tsx:106
 msgid "Co-Founder and CTO"
 msgstr "Co-fondateur et CTO"
@@ -370,6 +374,7 @@ msgstr "Informations de contact"
 msgid "Contact Sales"
 msgstr "Contactez les ventes"
 
+#: app/routes/pricing.tsx:52
 #: app/routes/pricing.tsx:67
 #: app/routes/pricing.tsx:69
 msgid "Contact us"
@@ -407,10 +412,6 @@ msgstr "Créer une expérience de commande personnalisée qui stimule la product
 #: app/routes/_index.tsx:1376
 msgid "Create a company, connect the MCP, release your first job today."
 msgstr "Créez une entreprise, connectez le MCP, libérez votre premier travail aujourd'hui."
-
-#: app/routes/pricing.tsx:66
-msgid "Custom"
-msgstr "Personnalisé"
 
 #: app/components/wizard-form.tsx:153
 msgid "Custom Development"
@@ -872,7 +873,7 @@ msgstr "Message"
 msgid "money in, money out"
 msgstr "argent entrant, argent sortant"
 
-#: app/routes/pricing.tsx:48
+#: app/routes/pricing.tsx:66
 msgid "Most popular"
 msgstr "Le plus populaire"
 
@@ -1273,7 +1274,6 @@ msgid "Star on GitHub"
 msgstr "Étoiler sur GitHub"
 
 #: app/routes/pricing.tsx:34
-#: app/routes/pricing.tsx:52
 msgid "Start 30-day free trial"
 msgstr "Commencer l'essai gratuit de 30 jours"
 
@@ -1416,7 +1416,7 @@ msgstr "quoi fabriquer, quand"
 
 #: app/routes/about.tsx:30
 msgid "Why we built Carbon and open-sourced it"
-msgstr ""
+msgstr "Pourquoi nous avons créé Carbon et l'avons mis en open source"
 
 #: app/routes/contact.tsx:191
 msgid "Work Email"
