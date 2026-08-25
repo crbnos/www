@@ -306,6 +306,10 @@ msgstr "cleanroom ops, yield analytics"
 msgid "Close"
 msgstr "Close"
 
+#: app/routes/pricing.tsx:48
+msgid "Cloud + support"
+msgstr "Cloud + support"
+
 #: app/routes/about.tsx:106
 msgid "Co-Founder and CTO"
 msgstr "Co-Founder and CTO"
@@ -370,6 +374,7 @@ msgstr "Contact Information"
 msgid "Contact Sales"
 msgstr "Contact Sales"
 
+#: app/routes/pricing.tsx:52
 #: app/routes/pricing.tsx:67
 #: app/routes/pricing.tsx:69
 msgid "Contact us"
@@ -407,10 +412,6 @@ msgstr "Create a branded ordering experience that drives production"
 #: app/routes/_index.tsx:1376
 msgid "Create a company, connect the MCP, release your first job today."
 msgstr "Create a company, connect the MCP, release your first job today."
-
-#: app/routes/pricing.tsx:66
-msgid "Custom"
-msgstr "Custom"
 
 #: app/components/wizard-form.tsx:153
 msgid "Custom Development"
@@ -872,7 +873,7 @@ msgstr "Message"
 msgid "money in, money out"
 msgstr "money in, money out"
 
-#: app/routes/pricing.tsx:48
+#: app/routes/pricing.tsx:66
 msgid "Most popular"
 msgstr "Most popular"
 
@@ -1273,7 +1274,6 @@ msgid "Star on GitHub"
 msgstr "Star on GitHub"
 
 #: app/routes/pricing.tsx:34
-#: app/routes/pricing.tsx:52
 msgid "Start 30-day free trial"
 msgstr "Start 30-day free trial"
 

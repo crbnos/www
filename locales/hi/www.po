@@ -306,6 +306,10 @@ msgstr "शुद्ध कक्ष ops, yield विश्लेषण"
 msgid "Close"
 msgstr "बंद करें"
 
+#: app/routes/pricing.tsx:48
+msgid "Cloud + support"
+msgstr ""
+
 #: app/routes/about.tsx:106
 msgid "Co-Founder and CTO"
 msgstr "सह-संस्थापक और CTO"
@@ -370,6 +374,7 @@ msgstr "संपर्क जानकारी"
 msgid "Contact Sales"
 msgstr "बिक्रय से संपर्क करें"
 
+#: app/routes/pricing.tsx:52
 #: app/routes/pricing.tsx:67
 #: app/routes/pricing.tsx:69
 msgid "Contact us"
@@ -407,10 +412,6 @@ msgstr "एक ब्रांडेड ऑर्डरिंग अनुभव
 #: app/routes/_index.tsx:1376
 msgid "Create a company, connect the MCP, release your first job today."
 msgstr "एक कंपनी बनाएं, MCP को कनेक्ट करें, आज अपनी पहली नौकरी जारी करें।"
-
-#: app/routes/pricing.tsx:66
-msgid "Custom"
-msgstr "कस्टम"
 
 #: app/components/wizard-form.tsx:153
 msgid "Custom Development"
@@ -872,7 +873,7 @@ msgstr "संदेश"
 msgid "money in, money out"
 msgstr "पैसा अंदर, पैसा बाहर"
 
-#: app/routes/pricing.tsx:48
+#: app/routes/pricing.tsx:66
 msgid "Most popular"
 msgstr "सबसे लोकप्रिय"
 
@@ -1273,7 +1274,6 @@ msgid "Star on GitHub"
 msgstr "GitHub पर स्टार करें"
 
 #: app/routes/pricing.tsx:34
-#: app/routes/pricing.tsx:52
 msgid "Start 30-day free trial"
 msgstr "30-दिन की निःशुल्क परीक्षण शुरू करें"
 

@@ -45,13 +45,13 @@ function usePlans() {
 		},
 		{
 			name: t`Business`,
-			tag: t`Most popular`,
+			tag: t`Cloud + support`,
 			description: t`A managed cloud-hosted version of Carbon that includes support and all advanced features`,
 			priceHeadline: "$100",
 			priceSubtext: t`/user/month`,
-			action: t`Start 30-day free trial`,
-			url: "https://app.carbon.ms",
-			featured: true,
+			action: t`Contact us`,
+			url: "/sales",
+			featured: false,
 			features: [
 				t`Technical support`,
 				t`API, webhooks, and integrations`,
@@ -63,13 +63,13 @@ function usePlans() {
 		},
 		{
 			name: t`Enterprise`,
-			tag: t`Custom`,
+			tag: t`Most popular`,
 			priceHeadline: t`Contact us`,
 			priceSubtext: "",
 			action: t`Contact us`,
 			url: "/sales",
 			description: t`A custom solution to meet your needs`,
-			featured: false,
+			featured: true,
 			features: [
 				t`Self-hosted or managed`,
 				t`Forward deployed engineer`,

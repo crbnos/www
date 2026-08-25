@@ -306,6 +306,10 @@ msgstr "Temiz Oda Operasyonları, Verim Analizi"
 msgid "Close"
 msgstr "Kapat"
 
+#: app/routes/pricing.tsx:48
+msgid "Cloud + support"
+msgstr ""
+
 #: app/routes/about.tsx:106
 msgid "Co-Founder and CTO"
 msgstr "Kurucu Ortağı ve CTO"
@@ -370,6 +374,7 @@ msgstr "İletişim Bilgileri"
 msgid "Contact Sales"
 msgstr "Satış ile İletişime Geçin"
 
+#: app/routes/pricing.tsx:52
 #: app/routes/pricing.tsx:67
 #: app/routes/pricing.tsx:69
 msgid "Contact us"
@@ -407,10 +412,6 @@ msgstr "Üretimi artıran markalı bir sipariş deneyimi oluşturun"
 #: app/routes/_index.tsx:1376
 msgid "Create a company, connect the MCP, release your first job today."
 msgstr "Bir şirket oluşturun, MCP'yi bağlayın, ilk işinizi bugün yayınlayın."
-
-#: app/routes/pricing.tsx:66
-msgid "Custom"
-msgstr "Özel"
 
 #: app/components/wizard-form.tsx:153
 msgid "Custom Development"
@@ -872,7 +873,7 @@ msgstr "İleti"
 msgid "money in, money out"
 msgstr "Parası giriş, parası çıkış"
 
-#: app/routes/pricing.tsx:48
+#: app/routes/pricing.tsx:66
 msgid "Most popular"
 msgstr "En Popüler"
 
@@ -1273,7 +1274,6 @@ msgid "Star on GitHub"
 msgstr "GitHub'da Yıldız Ekle"
 
 #: app/routes/pricing.tsx:34
-#: app/routes/pricing.tsx:52
 msgid "Start 30-day free trial"
 msgstr "30 günlük ücretsiz denemeyi başlat"
 

@@ -306,6 +306,10 @@ msgstr "정화실 운영, 수율 분석"
 msgid "Close"
 msgstr "닫기"
 
+#: app/routes/pricing.tsx:48
+msgid "Cloud + support"
+msgstr ""
+
 #: app/routes/about.tsx:106
 msgid "Co-Founder and CTO"
 msgstr "공동 창립자 및 CTO"
@@ -370,6 +374,7 @@ msgstr "연락처 정보"
 msgid "Contact Sales"
 msgstr "영업 문의"
 
+#: app/routes/pricing.tsx:52
 #: app/routes/pricing.tsx:67
 #: app/routes/pricing.tsx:69
 msgid "Contact us"
@@ -407,10 +412,6 @@ msgstr "브랜드화된 주문 경험을 만들어 생산을 촉진하세요"
 #: app/routes/_index.tsx:1376
 msgid "Create a company, connect the MCP, release your first job today."
 msgstr "회사를 만들고, MCP에 연결하고, 오늘 첫 번째 작업을 출시하세요."
-
-#: app/routes/pricing.tsx:66
-msgid "Custom"
-msgstr "사용자 지정"
 
 #: app/components/wizard-form.tsx:153
 msgid "Custom Development"
@@ -872,7 +873,7 @@ msgstr "메시지"
 msgid "money in, money out"
 msgstr "돈 들어옴, 돈 나감"
 
-#: app/routes/pricing.tsx:48
+#: app/routes/pricing.tsx:66
 msgid "Most popular"
 msgstr "가장 인기있는"
 
@@ -1273,7 +1274,6 @@ msgid "Star on GitHub"
 msgstr "GitHub에서 별 표시"
 
 #: app/routes/pricing.tsx:34
-#: app/routes/pricing.tsx:52
 msgid "Start 30-day free trial"
 msgstr "30일 무료 체험 시작"
 

@@ -306,6 +306,10 @@ msgstr "洁净室操作、产率分析"
 msgid "Close"
 msgstr "关闭"
 
+#: app/routes/pricing.tsx:48
+msgid "Cloud + support"
+msgstr ""
+
 #: app/routes/about.tsx:106
 msgid "Co-Founder and CTO"
 msgstr "联合创始人兼首席技术官"
@@ -370,6 +374,7 @@ msgstr "联系信息"
 msgid "Contact Sales"
 msgstr "联系销售"
 
+#: app/routes/pricing.tsx:52
 #: app/routes/pricing.tsx:67
 #: app/routes/pricing.tsx:69
 msgid "Contact us"
@@ -407,10 +412,6 @@ msgstr "创建品牌化的订购体验，推动生产"
 #: app/routes/_index.tsx:1376
 msgid "Create a company, connect the MCP, release your first job today."
 msgstr "创建公司、连接MCP、今天发布第一个作业。"
-
-#: app/routes/pricing.tsx:66
-msgid "Custom"
-msgstr "自定义"
 
 #: app/components/wizard-form.tsx:153
 msgid "Custom Development"
@@ -872,7 +873,7 @@ msgstr "消息"
 msgid "money in, money out"
 msgstr "进钱、出钱"
 
-#: app/routes/pricing.tsx:48
+#: app/routes/pricing.tsx:66
 msgid "Most popular"
 msgstr "最受欢迎"
 
@@ -1273,7 +1274,6 @@ msgid "Star on GitHub"
 msgstr "在 GitHub 上标星"
 
 #: app/routes/pricing.tsx:34
-#: app/routes/pricing.tsx:52
 msgid "Start 30-day free trial"
 msgstr "开始30天免费试用"
 

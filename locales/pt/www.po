@@ -306,6 +306,10 @@ msgstr "operações em sala limpa, análise de rendimento"
 msgid "Close"
 msgstr "Fechar"
 
+#: app/routes/pricing.tsx:48
+msgid "Cloud + support"
+msgstr ""
+
 #: app/routes/about.tsx:106
 msgid "Co-Founder and CTO"
 msgstr "Co-Fundador e CTO"
@@ -370,6 +374,7 @@ msgstr "Informações de Contato"
 msgid "Contact Sales"
 msgstr "Entre em contato com vendas"
 
+#: app/routes/pricing.tsx:52
 #: app/routes/pricing.tsx:67
 #: app/routes/pricing.tsx:69
 msgid "Contact us"
@@ -407,10 +412,6 @@ msgstr "Crie uma experiência de pedidos personalizada que impulsiona a produç�
 #: app/routes/_index.tsx:1376
 msgid "Create a company, connect the MCP, release your first job today."
 msgstr "Crie uma empresa, conecte o MCP, libere seu primeiro trabalho hoje."
-
-#: app/routes/pricing.tsx:66
-msgid "Custom"
-msgstr "Personalizado"
 
 #: app/components/wizard-form.tsx:153
 msgid "Custom Development"
@@ -872,7 +873,7 @@ msgstr "Mensagem"
 msgid "money in, money out"
 msgstr "dinheiro entra, dinheiro sai"
 
-#: app/routes/pricing.tsx:48
+#: app/routes/pricing.tsx:66
 msgid "Most popular"
 msgstr "Mais popular"
 
@@ -1273,7 +1274,6 @@ msgid "Star on GitHub"
 msgstr "Marcar com estrela no GitHub"
 
 #: app/routes/pricing.tsx:34
-#: app/routes/pricing.tsx:52
 msgid "Start 30-day free trial"
 msgstr "Iniciar avaliação gratuita de 30 dias"
 
