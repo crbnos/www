@@ -310,6 +310,10 @@ msgstr "Fermer"
 msgid "Cloud + support"
 msgstr "Cloud + support"
 
+#: app/routes/pricing.tsx:77
+msgid "CMMC compliant"
+msgstr ""
+
 #: app/routes/about.tsx:106
 msgid "Co-Founder and CTO"
 msgstr "Co-fondateur et CTO"
@@ -723,10 +727,6 @@ msgstr "ISO 13485"
 #: app/routes/_index.tsx:260
 msgid "ISO 13485, DHR, e-signatures"
 msgstr "ISO 13485, DHR, signatures électroniques"
-
-#: app/routes/pricing.tsx:77
-msgid "ITAR compliant"
-msgstr "Conforme à l'ITAR"
 
 #: app/routes/_index.tsx:278
 msgid "ITAR-ready deployment"

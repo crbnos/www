@@ -74,7 +74,7 @@ function usePlans() {
 				t`Self-hosted or managed`,
 				t`Forward deployed engineer`,
 				t`Customizations, training, and integrations`,
-				t`ITAR compliant`,
+				t`CMMC compliant`,
 				t`Full setup and migrations`,
 				t`SSO/SAML`,
 				t`Unlimited functional support`,

@@ -310,6 +310,10 @@ msgstr "닫기"
 msgid "Cloud + support"
 msgstr "클라우드 + 지원"
 
+#: app/routes/pricing.tsx:77
+msgid "CMMC compliant"
+msgstr ""
+
 #: app/routes/about.tsx:106
 msgid "Co-Founder and CTO"
 msgstr "공동 창립자 및 CTO"
@@ -723,10 +727,6 @@ msgstr "ISO 13485"
 #: app/routes/_index.tsx:260
 msgid "ISO 13485, DHR, e-signatures"
 msgstr "ISO 13485, DHR, 전자 서명"
-
-#: app/routes/pricing.tsx:77
-msgid "ITAR compliant"
-msgstr "ITAR 준수"
 
 #: app/routes/_index.tsx:278
 msgid "ITAR-ready deployment"
