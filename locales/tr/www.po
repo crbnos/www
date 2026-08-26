@@ -310,6 +310,10 @@ msgstr "Kapat"
 msgid "Cloud + support"
 msgstr "Bulut + Destek"
 
+#: app/routes/pricing.tsx:77
+msgid "CMMC compliant"
+msgstr ""
+
 #: app/routes/about.tsx:106
 msgid "Co-Founder and CTO"
 msgstr "Kurucu Ortağı ve CTO"
@@ -723,10 +727,6 @@ msgstr "ISO 13485"
 #: app/routes/_index.tsx:260
 msgid "ISO 13485, DHR, e-signatures"
 msgstr "ISO 13485, DHR, e-imzalar"
-
-#: app/routes/pricing.tsx:77
-msgid "ITAR compliant"
-msgstr "ITAR uyumlu"
 
 #: app/routes/_index.tsx:278
 msgid "ITAR-ready deployment"
