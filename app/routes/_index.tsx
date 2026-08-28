@@ -697,7 +697,7 @@ function Hero() {
 					</span>
 				</div>
 
-				<h1 className="mt-10 font-display font-semibold tracking-[-0.05em] leading-[0.9] text-balance text-[clamp(2.75rem,8vw,8.5rem)]">
+				<h1 className="mt-10 font-display font-semibold tracking-[-0.05em] leading-[0.9] text-balance text-[clamp(2.75rem,7.6vw,7.9rem)]">
 					<Trans>
 						Build <CyclingWord />
 						<br />
