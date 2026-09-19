@@ -45,26 +45,7 @@ type Customer = {
 // Brand names — never translated.
 const customers: Customer[] = [
 	{ name: "Minimal", logo: "/logos/minimal.svg", url: "https://minimal.tech" },
-	{ name: "Machenit", logo: "/logos/machenit.png", url: "https://machenit.com" },
-	{
-		name: "Black Cat Labs",
-		logo: "/logos/black-cat-labs.png",
-		url: "https://blackcatlabs.xyz",
-	},
-	{ name: "M3 Aerospace", logo: "/logos/m3.png", url: "https://m3-aerospace.com/" },
-	{ name: "Zero", logo: "/logos/zero.webp", url: "https://zerofarms.it" },
-	{
-		name: "Witty Machines",
-		logo: "/logos/witty-machines.svg",
-		url: "https://www.witty-machines.com/",
-	},
 	{ name: "Kform", logo: "/logos/kform.png", url: "https://kform.com/" },
-	{
-		name: "Allinol Technologies",
-		logo: "/logos/allinol.png",
-		url: "https://allinoltec.com",
-	},
-	{ name: "Saeki", logo: "/logos/saeki.svg", url: "https://saeki.ch/" },
 	{
 		name: "Sygnal",
 		logo: "/logos/sygnal.svg",
@@ -82,6 +63,26 @@ const customers: Customer[] = [
 		logo: "/logos/digital-metal.svg",
 		url: "https://www.digitalmetal.io/",
 	},
+	{ name: "Zero", logo: "/logos/zero.webp", url: "https://zerofarms.it" },
+	{
+		name: "Witty Machines",
+		logo: "/logos/witty-machines.svg",
+		url: "https://www.witty-machines.com/",
+	},
+	
+	{ name: "Machenit", logo: "/logos/machenit.png", url: "https://machenit.com" },
+	{
+		name: "Allinol Technologies",
+		logo: "/logos/allinol.png",
+		url: "https://allinoltec.com",
+	},
+	{ name: "Saeki", logo: "/logos/saeki.svg", url: "https://saeki.ch/" },
+	{
+		name: "Black Cat Labs",
+		logo: "/logos/black-cat-labs.png",
+		url: "https://blackcatlabs.xyz",
+	},
+	{ name: "M3 Aerospace", logo: "/logos/m3.png", url: "https://m3-aerospace.com/" },
 ];
 
 const heroWords: MessageDescriptor[] = [
