@@ -51,7 +51,7 @@ msgid "A typed TypeScript monorepo with one generated database type shared acros
 msgstr "Ein typisiertes TypeScript-Monorepo mit einem generierten Datenbanktyp, der über die App, die API und die KI-Tools gemeinsam genutzt wird. Bringen Sie Ihr eigenes LLM mit."
 
 #: app/components/header.tsx:69
-#: app/components/header.tsx:205
+#: app/components/header.tsx:195
 msgid "About"
 msgstr "Über"
 
@@ -380,8 +380,8 @@ msgstr "Kontakt"
 msgid "Contact Information"
 msgstr "Kontaktinformationen"
 
-#: app/components/header.tsx:152
-#: app/components/header.tsx:253
+#: app/components/header.tsx:142
+#: app/components/header.tsx:235
 #: app/routes/_index.tsx:1237
 msgid "Contact Sales"
 msgstr "Kontakt zum Vertrieb"
@@ -491,7 +491,7 @@ msgstr "Entwicklerhandbücher und API-Referenz"
 
 #: app/components/footer.tsx:59
 #: app/components/header.tsx:95
-#: app/components/header.tsx:230
+#: app/components/header.tsx:212
 msgid "Developers"
 msgstr "Entwickler"
 
@@ -1017,7 +1017,7 @@ msgstr "Bestellungen & Eingangsbestätigungen"
 
 #: app/components/footer.tsx:63
 #: app/components/header.tsx:79
-#: app/components/header.tsx:212
+#: app/components/header.tsx:202
 msgid "Pricing"
 msgstr "Preisgestaltung"
 
@@ -1163,8 +1163,6 @@ msgid "Rule-based BOM and routing generation"
 msgstr "Regelbasierte Stücklisten- und Routing-Generierung"
 
 #: app/components/footer.tsx:50
-#: app/components/header.tsx:124
-#: app/components/header.tsx:226
 msgid "Sales"
 msgstr "Vertrieb"
 
@@ -1194,7 +1192,7 @@ msgstr "Wählen Sie Ihre bevorzugte Hosting-Lösung"
 
 #: app/components/footer.tsx:64
 #: app/components/header.tsx:89
-#: app/components/header.tsx:219
+#: app/components/header.tsx:209
 #: app/routes/_index.tsx:1127
 msgid "Self-hosted"
 msgstr ""

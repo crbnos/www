@@ -51,7 +51,7 @@ msgid "A typed TypeScript monorepo with one generated database type shared acros
 msgstr "एक टाइप किया गया TypeScript मोनोरेपो जिसमें एक जनरेट की गई डेटाबेस प्रकार ऐप, API, और AI उपकरणों में साझा की जाती है। अपना LLM लाएं।"
 
 #: app/components/header.tsx:69
-#: app/components/header.tsx:205
+#: app/components/header.tsx:195
 msgid "About"
 msgstr "के बारे में"
 
@@ -380,8 +380,8 @@ msgstr "संपर्क"
 msgid "Contact Information"
 msgstr "संपर्क जानकारी"
 
-#: app/components/header.tsx:152
-#: app/components/header.tsx:253
+#: app/components/header.tsx:142
+#: app/components/header.tsx:235
 #: app/routes/_index.tsx:1237
 msgid "Contact Sales"
 msgstr "बिक्रय से संपर्क करें"
@@ -491,7 +491,7 @@ msgstr "डेवलपर गाइड और API संदर्भ"
 
 #: app/components/footer.tsx:59
 #: app/components/header.tsx:95
-#: app/components/header.tsx:230
+#: app/components/header.tsx:212
 msgid "Developers"
 msgstr "डेवलपर्स"
 
@@ -1017,7 +1017,7 @@ msgstr "PO और रसीदें"
 
 #: app/components/footer.tsx:63
 #: app/components/header.tsx:79
-#: app/components/header.tsx:212
+#: app/components/header.tsx:202
 msgid "Pricing"
 msgstr "मूल्य निर्धारण"
 
@@ -1163,8 +1163,6 @@ msgid "Rule-based BOM and routing generation"
 msgstr "नियम-आधारित BOM और राउटिंग जनरेशन"
 
 #: app/components/footer.tsx:50
-#: app/components/header.tsx:124
-#: app/components/header.tsx:226
 msgid "Sales"
 msgstr "बिक्रय"
 
@@ -1194,7 +1192,7 @@ msgstr "अपनी पसंदीदा होस्टिंग समाध
 
 #: app/components/footer.tsx:64
 #: app/components/header.tsx:89
-#: app/components/header.tsx:219
+#: app/components/header.tsx:209
 #: app/routes/_index.tsx:1127
 msgid "Self-hosted"
 msgstr ""

@@ -115,16 +115,6 @@ export function Header() {
 									</div>
 								</NavigationMenuContent>
 							</NavigationMenuItem>
-							<NavigationMenuItem>
-								<NavigationMenuLink
-									className={navigationMenuTriggerStyle()}
-									asChild
-								>
-									<Link to="/sales">
-										<Trans>Sales</Trans>
-									</Link>
-								</NavigationMenuLink>
-							</NavigationMenuItem>
 						</NavigationMenuList>
 					</NavigationMenu>
 
@@ -218,14 +208,6 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
 				>
 					<Trans>Self-hosted</Trans>
 				</Link>
-				<Link
-					to="/sales"
-					onClick={onClose}
-					className="border-b border-border/60 py-3 text-sm text-foreground"
-				>
-					<Trans>Sales</Trans>
-				</Link>
-
 				<div className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
 					<Trans>Developers</Trans>
 				</div>
