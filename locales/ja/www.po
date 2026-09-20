@@ -238,6 +238,10 @@ msgstr "Build <0/><1/>ソフトウェアのスピードで。"
 msgid "Build vs. buy"
 msgstr "内製 vs. 外購"
 
+#: app/routes/_index.tsx:1103
+msgid "Built for CMMC compliance"
+msgstr ""
+
 #: app/routes/pricing.tsx:47
 msgid "Business"
 msgstr "ビジネス"
@@ -320,6 +324,10 @@ msgstr "クラウド + サポート"
 
 #: app/routes/pricing.tsx:77
 msgid "CMMC compliant"
+msgstr ""
+
+#: app/routes/_index.tsx:1131
+msgid "CMMC-compliant work stays inside your walls."
 msgstr ""
 
 #: app/routes/about.tsx:106
@@ -481,10 +489,6 @@ msgstr "防衛"
 msgid "Demand & forecast"
 msgstr "需要と予測"
 
-#: app/routes/_index.tsx:1103
-msgid "Deploy inside your own walls"
-msgstr ""
-
 #: app/components/header.tsx:46
 msgid "Developer guides and API reference"
 msgstr "開発者ガイドとAPIリファレンス"
@@ -506,10 +510,6 @@ msgstr "作業指示を含むデジタルトラベラー"
 #: app/components/header.tsx:29
 msgid "Discord"
 msgstr "Discord"
-
-#: app/routes/_index.tsx:1104
-msgid "Docker on a single box, your own VPC, or fully air-gapped for defense and ITAR-restricted programs. No phone-home, no vendor cloud."
-msgstr ""
 
 #: app/components/footer.tsx:60
 #: app/components/header.tsx:45
@@ -557,7 +557,7 @@ msgid "ERP · MRP · MES · QMS"
 msgstr "ERP · MRP · MES · QMS"
 
 #: app/routes/_index.tsx:1109
-msgid "ERP, MRP, MES and QMS on a single database you control, with row-level security. Your data never leaves your perimeter."
+msgid "ERP, MRP, MES and QMS on a single database you control, with row-level security. Your data never leaves your perimeter — no vendor cloud, no third-party data lake."
 msgstr ""
 
 #: app/routes/_index.tsx:280
@@ -776,6 +776,10 @@ msgstr "Discordコミュニティに参加する"
 #: app/components/hero.tsx:218
 msgid "Kanban Schedule"
 msgstr "カンバンスケジュール"
+
+#: app/routes/_index.tsx:1104
+msgid "Keep CUI inside your own boundary. Deploy on a single box, your own VPC, or fully air-gapped for defense programs that have to meet CMMC and ITAR requirements."
+msgstr ""
 
 #: app/routes/_index.tsx:132
 msgid "Labor, scrap & rework"
@@ -1280,10 +1284,6 @@ msgstr "SOC 2コントロール"
 #: app/components/wizard-form.tsx:87
 msgid "Software as a Service"
 msgstr "Software as a Service"
-
-#: app/routes/_index.tsx:1131
-msgid "Some work has to stay inside your walls."
-msgstr ""
 
 #: app/routes/_index.tsx:1074
 msgid "Source available"
