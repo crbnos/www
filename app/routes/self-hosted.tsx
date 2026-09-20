@@ -255,7 +255,7 @@ function Hero() {
 					<span className="text-secondary">Air-gapped</span>
 				</div>
 
-				<h1 className="mt-10 font-display font-semibold tracking-[-0.04em] leading-[1.02] text-[clamp(2.5rem,5.2vw,4.5rem)]">
+				<h1 className="mt-10 font-display font-semibold tracking-[-0.045em] leading-[1.0] text-[clamp(2.75rem,5.8vw,5.25rem)]">
 					The world's only self-hosted
 					<br />
 					<span className="text-secondary">manufacturing ERP</span>
