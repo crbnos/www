@@ -75,9 +75,9 @@ export function Header() {
 									className={navigationMenuTriggerStyle()}
 									asChild
 								>
-									<a href="https://docs.carbon.ms" target="_blank" rel="noopener">
-										<Trans>Docs</Trans>
-									</a>
+									<Link prefetch="intent" to="/pricing">
+										<Trans>Pricing</Trans>
+									</Link>
 								</NavigationMenuLink>
 							</NavigationMenuItem>
 							<NavigationMenuItem>
@@ -85,8 +85,8 @@ export function Header() {
 									className={navigationMenuTriggerStyle()}
 									asChild
 								>
-									<Link prefetch="intent" to="/pricing">
-										<Trans>Pricing</Trans>
+									<Link prefetch="intent" to="/self-hosted">
+										<Trans>Self-hosted</Trans>
 									</Link>
 								</NavigationMenuLink>
 							</NavigationMenuItem>
@@ -121,7 +121,7 @@ export function Header() {
 									asChild
 								>
 									<Link to="/sales">
-										<Trans>Enterprise</Trans>
+										<Trans>Sales</Trans>
 									</Link>
 								</NavigationMenuLink>
 							</NavigationMenuItem>
@@ -204,15 +204,6 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
 				>
 					<Trans>About</Trans>
 				</Link>
-				<a
-					href="https://docs.carbon.ms"
-					target="_blank"
-					rel="noopener"
-					onClick={onClose}
-					className="border-b border-border/60 py-3 text-sm text-foreground"
-				>
-					<Trans>Docs</Trans>
-				</a>
 				<Link
 					to="/pricing"
 					onClick={onClose}
@@ -221,11 +212,18 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
 					<Trans>Pricing</Trans>
 				</Link>
 				<Link
+					to="/self-hosted"
+					onClick={onClose}
+					className="border-b border-border/60 py-3 text-sm text-foreground"
+				>
+					<Trans>Self-hosted</Trans>
+				</Link>
+				<Link
 					to="/sales"
 					onClick={onClose}
 					className="border-b border-border/60 py-3 text-sm text-foreground"
 				>
-					<Trans>Enterprise</Trans>
+					<Trans>Sales</Trans>
 				</Link>
 
 				<div className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">

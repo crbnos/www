@@ -61,6 +61,7 @@ export function Footer() {
               <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="https://learn.carbon.ms"><Trans>Learning</Trans></Link>
               <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="https://github.com/crbnos/carbon/blob/main/LICENSE"><Trans>License</Trans></Link>
               <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="/pricing"><Trans>Pricing</Trans></Link>
+              <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="/self-hosted"><Trans>Self-hosted</Trans></Link>
               <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="https://github.com/crbnos/carbon"><Trans>Source Code</Trans></Link>
             </div>
           </div>

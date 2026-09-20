@@ -78,6 +78,9 @@ type Pages = {
   "/sales": {
     params: {};
   };
+  "/self-hosted": {
+    params: {};
+  };
   "/sitemap.xml": {
     params: {};
   };
@@ -92,7 +95,7 @@ type Pages = {
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/.well-known/mcp.json" | "/.well-known/oauth-authorization-server" | "/.well-known/oauth-protected-resource" | "/.well-known/openapi.json" | "/about" | "/api/status" | "/api/try" | "/brand" | "/compare/:competitor" | "/compare" | "/contact" | "/developers" | "/learn" | "/learn/:slug" | "/mcp.json" | "/openapi.json" | "/openapi.yaml" | "/pricing" | "/privacy" | "/sales" | "/sitemap.xml" | "/subprocessors" | "/terms";
+    page: "/" | "/.well-known/mcp.json" | "/.well-known/oauth-authorization-server" | "/.well-known/oauth-protected-resource" | "/.well-known/openapi.json" | "/about" | "/api/status" | "/api/try" | "/brand" | "/compare/:competitor" | "/compare" | "/contact" | "/developers" | "/learn" | "/learn/:slug" | "/mcp.json" | "/openapi.json" | "/openapi.yaml" | "/pricing" | "/privacy" | "/sales" | "/self-hosted" | "/sitemap.xml" | "/subprocessors" | "/terms";
   };
   "routes/[.]well-known.mcp[.]json.ts": {
     id: "routes/[.]well-known.mcp[.]json";
@@ -182,6 +185,10 @@ type RouteFiles = {
     id: "routes/sales";
     page: "/sales";
   };
+  "routes/self-hosted.tsx": {
+    id: "routes/self-hosted";
+    page: "/self-hosted";
+  };
   "routes/sitemap[.]xml.ts": {
     id: "routes/sitemap[.]xml";
     page: "/sitemap.xml";
@@ -220,6 +227,7 @@ type RouteModules = {
   "routes/pricing": typeof import("./app/routes/pricing.tsx");
   "routes/privacy": typeof import("./app/routes/privacy.tsx");
   "routes/sales": typeof import("./app/routes/sales.tsx");
+  "routes/self-hosted": typeof import("./app/routes/self-hosted.tsx");
   "routes/sitemap[.]xml": typeof import("./app/routes/sitemap[.]xml.ts");
   "routes/subprocessors": typeof import("./app/routes/subprocessors.tsx");
   "routes/terms": typeof import("./app/routes/terms.tsx");
