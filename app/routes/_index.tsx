@@ -495,7 +495,7 @@ function Hero() {
 			{/* glow backdrop */}
 			<div
 				aria-hidden
-				className="pointer-events-none absolute left-1/2 top-[-320px] h-[560px] w-[1200px] max-w-full -translate-x-1/2 rounded-full bg-secondary/20 blur-[110px]"
+				className="pointer-events-none absolute left-1/2 top-[-320px] h-[560px] w-[1200px] max-w-full -translate-x-1/2 rounded-full bg-secondary/10 blur-[110px]"
 			/>
 
 			{/* Tighter gutter at 320px and below so "Build <word>" fits one line.
