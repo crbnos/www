@@ -238,6 +238,10 @@ msgstr "Build <0/><1/>at the speed of software."
 msgid "Build vs. buy"
 msgstr "Build vs. buy"
 
+#: app/routes/_index.tsx:1103
+msgid "Built for CMMC compliance"
+msgstr "Built for CMMC compliance"
+
 #: app/routes/pricing.tsx:47
 msgid "Business"
 msgstr "Business"
@@ -321,6 +325,10 @@ msgstr "Cloud + support"
 #: app/routes/pricing.tsx:77
 msgid "CMMC compliant"
 msgstr "CMMC compliant"
+
+#: app/routes/_index.tsx:1131
+msgid "CMMC-compliant work stays inside your walls."
+msgstr "CMMC-compliant work stays inside your walls."
 
 #: app/routes/about.tsx:106
 msgid "Co-Founder and CTO"
@@ -481,10 +489,6 @@ msgstr "Defense"
 msgid "Demand & forecast"
 msgstr "Demand & forecast"
 
-#: app/routes/_index.tsx:1103
-msgid "Deploy inside your own walls"
-msgstr "Deploy inside your own walls"
-
 #: app/components/header.tsx:46
 msgid "Developer guides and API reference"
 msgstr "Developer guides and API reference"
@@ -506,10 +510,6 @@ msgstr "Digital travelers with work instructions"
 #: app/components/header.tsx:29
 msgid "Discord"
 msgstr "Discord"
-
-#: app/routes/_index.tsx:1104
-msgid "Docker on a single box, your own VPC, or fully air-gapped for defense and ITAR-restricted programs. No phone-home, no vendor cloud."
-msgstr "Docker on a single box, your own VPC, or fully air-gapped for defense and ITAR-restricted programs. No phone-home, no vendor cloud."
 
 #: app/components/footer.tsx:60
 #: app/components/header.tsx:45
@@ -557,8 +557,8 @@ msgid "ERP · MRP · MES · QMS"
 msgstr "ERP · MRP · MES · QMS"
 
 #: app/routes/_index.tsx:1109
-msgid "ERP, MRP, MES and QMS on a single database you control, with row-level security. Your data never leaves your perimeter."
-msgstr "ERP, MRP, MES and QMS on a single database you control, with row-level security. Your data never leaves your perimeter."
+msgid "ERP, MRP, MES and QMS on a single database you control, with row-level security. Your data never leaves your perimeter — no vendor cloud, no third-party data lake."
+msgstr "ERP, MRP, MES and QMS on a single database you control, with row-level security. Your data never leaves your perimeter — no vendor cloud, no third-party data lake."
 
 #: app/routes/_index.tsx:280
 msgid "Every part, hour, barcode, and deviation tracked and handled in real-time."
@@ -776,6 +776,10 @@ msgstr "Join our Discord community"
 #: app/components/hero.tsx:218
 msgid "Kanban Schedule"
 msgstr "Kanban Schedule"
+
+#: app/routes/_index.tsx:1104
+msgid "Keep CUI inside your own boundary. Deploy on a single box, your own VPC, or fully air-gapped for defense programs that have to meet CMMC and ITAR requirements."
+msgstr "Keep CUI inside your own boundary. Deploy on a single box, your own VPC, or fully air-gapped for defense programs that have to meet CMMC and ITAR requirements."
 
 #: app/routes/_index.tsx:132
 msgid "Labor, scrap & rework"
@@ -1280,10 +1284,6 @@ msgstr "SOC 2 controls"
 #: app/components/wizard-form.tsx:87
 msgid "Software as a Service"
 msgstr "Software as a Service"
-
-#: app/routes/_index.tsx:1131
-msgid "Some work has to stay inside your walls."
-msgstr "Some work has to stay inside your walls."
 
 #: app/routes/_index.tsx:1074
 msgid "Source available"

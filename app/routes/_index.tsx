@@ -1099,14 +1099,14 @@ function TrustOpen() {
 
 const selfHostPillars = [
 	{
-		tag: "On-prem",
-		name: msg`Deploy inside your own walls`,
-		desc: msg`Docker on a single box, your own VPC, or fully air-gapped for defense and ITAR-restricted programs. No phone-home, no vendor cloud.`,
+		tag: "CMMC compliant",
+		name: msg`Built for CMMC compliance`,
+		desc: msg`Keep CUI inside your own boundary. Deploy on a single box, your own VPC, or fully air-gapped for defense programs that have to meet CMMC and ITAR requirements.`,
 	},
 	{
 		tag: "Your database",
 		name: msg`One Postgres schema, and it's yours`,
-		desc: msg`ERP, MRP, MES and QMS on a single database you control, with row-level security. Your data never leaves your perimeter.`,
+		desc: msg`ERP, MRP, MES and QMS on a single database you control, with row-level security. Your data never leaves your perimeter — no vendor cloud, no third-party data lake.`,
 	},
 	{
 		tag: "Source available",
@@ -1128,7 +1128,7 @@ function SelfHost() {
 							</span>
 						</div>
 						<h2 className={cn(heading, "mt-6 max-w-[22ch]")}>
-							<Trans>Some work has to stay inside your walls.</Trans>
+							<Trans>CMMC-compliant work stays inside your walls.</Trans>
 						</h2>
 					</div>
 					<div className="flex flex-wrap gap-3">
@@ -1264,8 +1264,8 @@ export default function Route() {
 			<StatusQuo />
 			<OneModel />
 			<Industries />
-			<TrustOpen />
 			<SelfHost />
+			<TrustOpen />
 			<Agents />
 			<Integrations />
 			<StartCTA />

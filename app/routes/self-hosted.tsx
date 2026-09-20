@@ -38,6 +38,10 @@ const faqs = [
 		a: "Carbon is open core. The Community edition — the full ERP, MRP, MES and QMS — is on GitHub under AGPL-3.0 and free to self-host. Enterprise features and keeping a private fork require a commercial license. Either way, every line is in the public repository, so you can audit it before you deploy.",
 	},
 	{
+		q: "Does Carbon help with CMMC compliance?",
+		a: "Yes. Self-hosting Carbon keeps your CUI inside your own boundary, which is the foundation of a CMMC and NIST 800-171 program. For Enterprise deployments we provide the compliance artifacts an assessor asks for — a System Security Plan (SSP), a Plan of Action & Milestones (POA&M), and the SPRS score inputs — mapped to how Carbon is deployed on your infrastructure. Carbon is one system in your boundary, not your whole compliance program, but it's built so it doesn't work against you.",
+	},
+	{
 		q: "Can Carbon run fully air-gapped?",
 		a: "Yes, with an Enterprise license. Carbon runs on Docker against a Postgres database you control, and air-gapped licensing lets it run inside a restricted network with no outbound calls — built for classified and ITAR-restricted programs.",
 	},
@@ -81,19 +85,19 @@ export const meta: MetaFunction = ({ matches }) =>
 
 const principles = [
 	{
+		tag: "CMMC · NIST 800-171",
+		name: "Built for your CMMC boundary",
+		desc: "Keep CUI inside a boundary you control. We provide the SSP, POA&M and SPRS inputs for Enterprise deployments, mapped to how Carbon runs on your infrastructure.",
+	},
+	{
 		tag: "Data ownership",
 		name: "Your records, your database",
 		desc: "BOMs, travelers, serial genealogy and costs live in a Postgres database you own — never copied to a vendor's cloud.",
 	},
 	{
-		tag: "CMMC · NIST 800-171",
-		name: "Compliant by deployment",
-		desc: "Keep production data inside your own boundary to meet CMMC and NIST 800-171 controls for defense and ITAR-restricted work.",
-	},
-	{
 		tag: "Complete control",
 		name: "The whole layer is yours",
-		desc: "You hold the network, the keys, the models and the backups. Nothing phones home unless you decide it should.",
+		desc: "You hold the network, the keys, the models and the backups — the whole layer is yours to secure, audit and control.",
 	},
 ];
 
@@ -345,14 +349,16 @@ function Walls() {
 	return (
 		<section className="border-b border-border py-28 sm:py-32">
 			<div className={shell}>
-				<Chip>Built for regulated work</Chip>
+				<Chip>Built for CMMC</Chip>
 				<h2 className={cn(heading, "mt-6 max-w-[20ch]")}>
-					Some work has to stay inside your walls.
+					CMMC-compliant work stays inside your walls.
 				</h2>
 				<p className="mt-6 max-w-[60ch] text-lg leading-relaxed text-muted-foreground">
-					Defense, aerospace and regulated manufacturers can't ship their record
-					of production to someone else's cloud. Carbon is built for the
-					environments where you control every layer.
+					Defense and aerospace manufacturers handling CUI can't ship their
+					record of production to someone else's cloud. Self-hosting Carbon
+					keeps that data inside your own CMMC boundary — and for Enterprise
+					deployments we hand you the SSP, POA&amp;M and SPRS inputs an assessor
+					will ask for.
 				</p>
 				<div className="mt-14 grid grid-cols-1 gap-px border border-border bg-border lg:grid-cols-3">
 					{walls.map((w) => (
@@ -476,7 +482,7 @@ function Deploy() {
 					</div>
 					<p className="max-w-[38ch] text-base leading-relaxed text-muted-foreground">
 						The same source runs from a single Docker host to a multi-region
-						deployment in your own cloud. No proprietary runtime, no phone-home.
+						deployment in your own cloud. No proprietary runtime, no lock-in.
 					</p>
 				</div>
 
