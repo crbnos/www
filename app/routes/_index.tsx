@@ -495,7 +495,7 @@ function Hero() {
 			{/* glow backdrop */}
 			<div
 				aria-hidden
-				className="pointer-events-none absolute left-1/2 top-[-320px] h-[560px] w-[1200px] max-w-full -translate-x-1/2 rounded-full bg-secondary/20 blur-[110px]"
+				className="pointer-events-none absolute left-1/2 top-[-320px] h-[560px] w-[1200px] max-w-full -translate-x-1/2 rounded-full bg-secondary/10 blur-[110px]"
 			/>
 
 			{/* Tighter gutter at 320px and below so "Build <word>" fits one line.
@@ -548,7 +548,7 @@ function HeroDashboard() {
 			<div
 				aria-hidden
 				className="mx-[12%] h-px bg-gradient-to-r from-transparent via-secondary to-transparent"
-				style={{ boxShadow: "0 0 34px 6px hsl(var(--secondary) / 0.35)" }}
+				style={{ boxShadow: "0 0 34px 6px hsl(var(--secondary) / 0.15)" }}
 			/>
 			<div className="border border-b-0 border-border bg-card px-2.5 pt-2.5">
 				<div className="flex items-center justify-between px-2 pb-3 pt-1.5 font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
