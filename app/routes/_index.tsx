@@ -2,12 +2,14 @@ import type { MessageDescriptor } from "@lingui/core";
 import { msg } from "@lingui/core/macro";
 import { Trans, useLingui } from "@lingui/react/macro";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import { Book, Check, ChevronRight, Copy, ImageIcon, X } from "lucide-react";
+import { Book, Check, ChevronRight, Copy, X } from "lucide-react";
 import { type ReactNode, useEffect, useRef, useState } from "react";
 import { Link } from "react-router";
 import type { MetaFunction } from "react-router";
 import { AppCtaLabel } from "~/components/app-cta-label";
 import { CodeExamples } from "~/components/code-examples";
+import { LogoStrip } from "~/components/logo-strip";
+import { Screenshot } from "~/components/screenshot";
 import { Button } from "~/components/ui/button";
 import { ZoomableImage } from "~/components/zoomable-image";
 import { cn } from "~/lib/utils";
@@ -34,56 +36,6 @@ export const meta: MetaFunction = ({ matches }) =>
 // Each descriptor is resolved to the active locale at render time via
 // `useLingui().i18n._(descriptor)`. Brand names, acronym codes (ERP/MRP/…),
 // URLs and other proper nouns are left as plain strings on purpose.
-
-type Customer = {
-	name: string;
-	logo: string;
-	url: string;
-	tone?: "light" | "color";
-};
-
-// Brand names — never translated.
-const customers: Customer[] = [
-	{ name: "Minimal", logo: "/logos/minimal.svg", url: "https://minimal.tech" },
-	{ name: "Kform", logo: "/logos/kform.png", url: "https://kform.com/" },
-	{
-		name: "Sygnal",
-		logo: "/logos/sygnal.svg",
-		url: "https://www.sygnalauto.com/",
-		tone: "light",
-	},
-	{
-		name: "Ren-Teq",
-		logo: "/logos/ren-teq.webp",
-		url: "https://www.ren-teq.com/",
-		tone: "light",
-	},
-	{
-		name: "Digital Metal",
-		logo: "/logos/digital-metal.svg",
-		url: "https://www.digitalmetal.io/",
-	},
-	{ name: "Zero", logo: "/logos/zero.webp", url: "https://zerofarms.it" },
-	{
-		name: "Witty Machines",
-		logo: "/logos/witty-machines.svg",
-		url: "https://www.witty-machines.com/",
-	},
-	
-	{ name: "Machenit", logo: "/logos/machenit.png", url: "https://machenit.com" },
-	{
-		name: "Allinol Technologies",
-		logo: "/logos/allinol.png",
-		url: "https://allinoltec.com",
-	},
-	{ name: "Saeki", logo: "/logos/saeki.svg", url: "https://saeki.ch/" },
-	{
-		name: "Black Cat Labs",
-		logo: "/logos/black-cat-labs.png",
-		url: "https://blackcatlabs.xyz",
-	},
-	{ name: "M3 Aerospace", logo: "/logos/m3.png", url: "https://m3-aerospace.com/" },
-];
 
 const heroWords: MessageDescriptor[] = [
 	msg`hardware`,
@@ -324,7 +276,7 @@ const featureRows = [
 	{
 		id: "execution",
 		eyebrow: msg`Manufacturing execution`,
-		title: msg`The floor, live to the second.`,
+		title: msg`Real-time, real cost shop floor.`,
 		body: msg`Every part, hour, barcode, and deviation tracked and handled in real-time.`,
 		points: [
 			msg`Digital travelers with work instructions`,
@@ -530,139 +482,6 @@ function CountUp({ to, dec = 0 }: { to: number; dec?: number }) {
 	return <span ref={ref}>{val.toFixed(dec)}</span>;
 }
 
-/**
- * Stand-in for a product screenshot. Fills its container and labels what will
- * live there, so real assets can be dropped in later.
- */
-function Placeholder({ label, className }: { label: string; className?: string }) {
-	return (
-		<div
-			className={cn(
-				"flex h-full w-full items-center justify-center bg-muted/40 p-6 text-center",
-				className,
-			)}
-			style={{
-				backgroundImage:
-					"repeating-linear-gradient(45deg, rgba(128,128,128,0.06) 0, rgba(128,128,128,0.06) 1px, transparent 1px, transparent 11px)",
-			}}
-		>
-			<div className="flex flex-col items-center gap-3">
-				<ImageIcon
-					className="size-6 text-muted-foreground/50"
-					strokeWidth={1.5}
-				/>
-				<span className="max-w-[24ch] font-mono text-sm uppercase leading-relaxed tracking-[0.16em] text-muted-foreground/70">
-					{label}
-				</span>
-			</div>
-		</div>
-	);
-}
-
-/**
- * A product screenshot — or a muted screen recording — dropped into a panel.
- * App views are wide and multi-column, so we never crop horizontally (which
- * would slice off nav / sidebars):
- *   - Below `sm`: the media shows at its natural height (phones). No fixed
- *     frame, so a wide shot scaled to phone width never leaves dead space.
- *   - `sm` and up: the media is pinned to the top of the fixed-height frame and
- *     bleeds past it, fading into the card — reads as "the app continues below".
- * `fit="cover"` instead fills the frame from the top-left (for pre-cropped,
- * near-square regions). Pass `video` for a screen recording; `src` doubles as
- * its poster (and as the still fallback for reduced-motion or a missing video).
- * Falls back to <Placeholder> when nothing loads, so the page degrades
- * gracefully until real assets land in /public/screenshots.
- */
-function Screenshot({
-	src,
-	video,
-	label,
-	fit = "width",
-	eager = false,
-	className,
-}: {
-	src?: string;
-	video?: string;
-	label: string;
-	fit?: "width" | "cover";
-	eager?: boolean;
-	className?: string;
-}) {
-	const [loaded, setLoaded] = useState(false);
-	const [reduce, setReduce] = useState(false);
-	const [videoFailed, setVideoFailed] = useState(false);
-	const mediaRef = useRef<HTMLImageElement | HTMLVideoElement | null>(null);
-	useEffect(() => {
-		setReduce(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
-	}, []);
-	const showVideo = !!video && !reduce && !videoFailed;
-	// onLoad/onLoadedData can fire before hydration (eager/cached media finish
-	// during SSR paint), so settle `loaded` on mount too. A <video> paints its
-	// poster immediately, so treat it as shown right away.
-	useEffect(() => {
-		const el = mediaRef.current;
-		if (!el) return;
-		if (el instanceof HTMLVideoElement) setLoaded(true);
-		else setLoaded(el.complete && el.naturalWidth > 0);
-	}, [src, showVideo]);
-
-	const mediaClass = cn(
-		"block w-full select-none transition-opacity duration-500",
-		loaded ? "opacity-100" : "opacity-0",
-		fit === "cover"
-			? "h-auto sm:absolute sm:inset-0 sm:h-full sm:object-cover sm:object-left-top"
-			: "h-auto sm:absolute sm:inset-x-0 sm:top-0",
-	);
-
-	return (
-		<div
-			className={cn(
-				"relative w-full overflow-hidden bg-screenshot min-h-[220px] sm:min-h-0 sm:h-full",
-				className,
-			)}
-		>
-			{!loaded && <Placeholder label={label} className="absolute inset-0" />}
-			{showVideo ? (
-				<video
-					ref={(el) => {
-						mediaRef.current = el;
-					}}
-					key={video}
-					poster={src}
-					autoPlay
-					muted
-					loop
-					playsInline
-					preload="metadata"
-					aria-label={label}
-					onLoadedData={() => setLoaded(true)}
-					onError={() => setVideoFailed(true)}
-					className={mediaClass}
-				>
-					<source src={video} type="video/mp4" />
-				</video>
-			) : src ? (
-				<img
-					ref={(el) => {
-						mediaRef.current = el;
-					}}
-					src={src}
-					alt={label}
-					loading={eager ? "eager" : "lazy"}
-					onLoad={() => setLoaded(true)}
-					className={mediaClass}
-				/>
-			) : null}
-			{(showVideo || src) && loaded && fit === "width" && (
-				<div
-					aria-hidden
-					className="pointer-events-none absolute inset-0 hidden sm:block [background:linear-gradient(to_bottom,transparent_55%,hsl(var(--card)))]"
-				/>
-			)}
-		</div>
-	);
-}
-
 /* -------------------------------------------------------------------------- */
 /*  Sections                                                                   */
 /* -------------------------------------------------------------------------- */
@@ -758,50 +577,6 @@ function HeroDashboard() {
 				</div>
 			</div>
 		</div>
-	);
-}
-
-function LogoStrip() {
-	return (
-		<section className="border-y border-border py-16">
-			<div className={cn(shell, "flex flex-col gap-8")}>
-				<div className="font-mono text-[11px] text-center uppercase leading-relaxed tracking-[0.18em] text-muted-foreground">
-					<Trans>Trusted by the world's most innovative</Trans>
-				</div>
-				<div
-					className="group relative flex w-full items-center overflow-hidden [--marquee-gap:4rem]"
-					style={{
-						maskImage:
-							"linear-gradient(to right, transparent, #000 12%, #000 88%, transparent)",
-						WebkitMaskImage:
-							"linear-gradient(to right, transparent, #000 12%, #000 88%, transparent)",
-					}}
-				>
-					<div className="flex w-max shrink-0 animate-marquee items-center gap-[--marquee-gap] group-hover:[animation-play-state:paused] motion-reduce:animate-none">
-						{[...customers, ...customers].map((c, index) => (
-							<a
-								key={`${c.name}-${index}`}
-								href={c.url}
-								target="_blank"
-								rel="noreferrer"
-								aria-hidden={index >= customers.length}
-								tabIndex={index >= customers.length ? -1 : undefined}
-								className="flex h-10 shrink-0 items-center justify-center"
-							>
-								<img
-									alt={c.name}
-									src={c.logo}
-									className={cn(
-										"h-auto max-h-8 w-24 object-contain opacity-70 transition-opacity hover:opacity-100",
-										c.tone === "light" ? "invert dark:invert-0" : "dark:invert",
-									)}
-								/>
-							</a>
-						))}
-					</div>
-				</div>
-			</div>
-		</section>
 	);
 }
 
@@ -940,7 +715,7 @@ function OneModel() {
 			<div className={shell}>
 				<Reveal>
 					<h2 className={cn(heading, "mt-5 max-w-[26ch]")}>
-						<Trans>Four systems, one schema. Nothing to integrate.</Trans>
+						<Trans>Four systems, one schema.</Trans>
 					</h2>
 				</Reveal>
 
@@ -1322,6 +1097,78 @@ function TrustOpen() {
 	);
 }
 
+const selfHostPillars = [
+	{
+		tag: "On-prem",
+		name: msg`Deploy inside your own walls`,
+		desc: msg`Docker on a single box, your own VPC, or fully air-gapped for defense and ITAR-restricted programs. No phone-home, no vendor cloud.`,
+	},
+	{
+		tag: "Your database",
+		name: msg`One Postgres schema, and it's yours`,
+		desc: msg`ERP, MRP, MES and QMS on a single database you control, with row-level security. Your data never leaves your perimeter.`,
+	},
+	{
+		tag: "Source available",
+		name: msg`Audit it before you deploy it`,
+		desc: msg`The whole application is on GitHub — the Community edition under AGPL-3.0. Read every line, run a security review, and extend it to fit your process.`,
+	},
+];
+
+function SelfHost() {
+	const { i18n } = useLingui();
+	return (
+		<section id="self-hosted" className="border-b border-border py-28 sm:py-32">
+			<div className={shell}>
+				<Reveal className="flex flex-wrap items-end justify-between gap-8">
+					<div>
+						<div className={eyebrow}>
+							<span className="inline-block bg-secondary/10 dark:bg-secondary-surface px-3 py-1.5 text-secondary">
+								<Trans>Self-hosted</Trans>
+							</span>
+						</div>
+						<h2 className={cn(heading, "mt-6 max-w-[22ch]")}>
+							<Trans>Some work has to stay inside your walls.</Trans>
+						</h2>
+					</div>
+					<div className="flex flex-wrap gap-3">
+						<Button asChild variant="accent" size="cta">
+							<Link to="/self-hosted">
+								<Trans>Explore self-hosting</Trans>
+								<ChevronRight />
+							</Link>
+						</Button>
+						<Button asChild variant="accentOutline" size="cta">
+							<a href={GITHUB_URL} target="_blank" rel="noopener">
+								<Trans>View the source</Trans>
+							</a>
+						</Button>
+					</div>
+				</Reveal>
+
+				<Reveal className="mt-14 grid grid-cols-1 gap-px border border-border bg-border lg:grid-cols-3">
+					{selfHostPillars.map((p) => (
+						<div
+							key={p.tag}
+							className="flex flex-col gap-4 bg-card p-8 transition-colors hover:bg-muted"
+						>
+							<div className="font-mono text-[10px] uppercase leading-none tracking-wide text-secondary">
+								<span className="inline-block bg-secondary/10 dark:bg-secondary-surface px-3 py-1.5">
+									{p.tag}
+								</span>
+							</div>
+							<div className="text-xl font-medium">{i18n._(p.name)}</div>
+							<div className="text-sm leading-relaxed text-muted-foreground">
+								{i18n._(p.desc)}
+							</div>
+						</div>
+					))}
+				</Reveal>
+			</div>
+		</section>
+	);
+}
+
 function Integrations() {
 	const { i18n } = useLingui();
 	return (
@@ -1405,14 +1252,20 @@ export default function Route() {
 	return (
 		<>
 			<Hero />
-			<LogoStrip />
-			<HappyPath />
+			<LogoStrip
+				headline={<Trans>Two hard tech unicorns build on Carbon.</Trans>}
+				label={
+					<Trans>And some of the world's most innovative manufacturers</Trans>
+				}
+			/>
 			<Testimonial />
+			<HappyPath />		
 			<FeatureRows />
 			<StatusQuo />
 			<OneModel />
 			<Industries />
 			<TrustOpen />
+			<SelfHost />
 			<Agents />
 			<Integrations />
 			<StartCTA />
