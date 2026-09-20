@@ -253,9 +253,6 @@ function Hero() {
 					<span className="text-secondary">VPC</span>
 					<span>/</span>
 					<span className="text-secondary">Air-gapped</span>
-					<span className="ml-auto hidden bg-secondary/10 dark:bg-secondary-surface px-3 py-1.5 text-secondary sm:inline uppercase text-[11px]">
-						Open core
-					</span>
 				</div>
 
 				<h1 className="mt-10 font-display font-semibold tracking-[-0.04em] leading-[1.02] text-[clamp(2.5rem,5.2vw,4.5rem)]">
@@ -559,8 +556,7 @@ function Parity() {
 			<div className={shell}>
 				<div className="grid grid-cols-1 gap-px border border-border bg-border lg:grid-cols-2">
 					<div className="flex flex-col bg-muted p-10 sm:p-11">
-						<Chip>Cloud-grade</Chip>
-						<h2 className="mt-6 font-display font-semibold tracking-[-0.03em] leading-[1] text-[clamp(1.75rem,3vw,2.75rem)]">
+						<h2 className="font-display font-semibold tracking-[-0.03em] leading-[1] text-[clamp(1.75rem,3vw,2.75rem)]">
 							Nothing held back for the cloud.
 						</h2>
 						<p className="mt-5 max-w-[42ch] text-[15px] leading-relaxed text-muted-foreground">
