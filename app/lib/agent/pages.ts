@@ -103,8 +103,10 @@ Cancel anytime.
 
 A managed cloud-hosted version of Carbon. Self-serve.
 
-- Automatic updates and backups
-- Basic ERP, MES, and QMS functionality
+- Automatic updates and cloud backups
+- Basic ERP, MES, MRP, and QMS functionality
+- Accounting with general ledger, financial reports, fixed assets, and multi-currency
+- Product configurator with rules-based BOMs and routings
 - Unlimited records
 - Self-onboarding
 - Community support
@@ -113,25 +115,28 @@ A managed cloud-hosted version of Carbon. Self-serve.
 
 ## Business — $100/user/month
 
-A managed cloud-hosted version of Carbon that includes support and all advanced
-features. 5 user minimum.
+Everything in Starter, and the features below.
 
 - Technical support
-- API, webhooks, and integrations
-- Accounting
-- Audit logging
-- All advanced features available
+- API, webhooks, integrations, and MCP
+- Workflows, AI agent, and email notifications
+- Custom roles, permissions, and approval rules
+- Shop floor console mode
+- Customer portals and demand forecasting
+- Audit logging, 2FA, and backup/restore
+- 5 user minimum
 
 [Start a 30-day free trial](${APP_URL})
 
 ## Enterprise — contact us
 
-A custom solution to meet your needs.
+Everything in Business, plus a custom solution to meet your needs.
 
 - Self-hosted or managed
 - Forward deployed engineer
 - Customizations, training, and integrations
-- ITAR compliant
+- CMMC Level 2 compliance
+- Air-gapped and ITAR deployments
 - Full setup and migrations
 - SSO/SAML
 - Unlimited functional support
@@ -142,6 +147,9 @@ A custom solution to meet your needs.
 
 The open source core is on [GitHub](${REPO_URL}) under a source-available
 license. See the [documentation](${DOCS_URL}) for deployment.
+
+Want Business features on your own servers? Unlock them with a
+[commercial license](${SITE_URL}/sales).
 `,
 );
 

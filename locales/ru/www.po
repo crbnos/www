@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: app/routes/pricing.tsx:33
-#: app/routes/pricing.tsx:51
+#: app/routes/pricing.tsx:53
 msgid "/user/month"
 msgstr "/пользователь/месяц"
 
@@ -26,7 +26,7 @@ msgstr "18-месячная реализация"
 msgid "21 CFR Part 11"
 msgstr "21 CFR Part 11"
 
-#: app/routes/pricing.tsx:61
+#: app/routes/pricing.tsx:65
 msgid "5 user minimum"
 msgstr "Минимум 5 пользователей"
 
@@ -34,17 +34,9 @@ msgstr "Минимум 5 пользователей"
 msgid "A built-in MCP server exposes 1,374 operations across 15 modules through three discovery tools. Permissions are baked in — an agent can never do what its identity can't."
 msgstr "Встроенный сервер MCP предоставляет 1 374 операции в 15 модулях через три инструмента обнаружения. Разрешения встроены в систему — агент никогда не может делать то, что не может его идентификатор."
 
-#: app/routes/pricing.tsx:71
-msgid "A custom solution to meet your needs"
-msgstr "Пользовательское решение, соответствующее вашим потребностям"
-
 #: app/routes/pricing.tsx:36
 msgid "A managed cloud-hosted version of Carbon"
 msgstr "Управляемая облачная версия Carbon"
-
-#: app/routes/pricing.tsx:49
-msgid "A managed cloud-hosted version of Carbon that includes support and all advanced features"
-msgstr "Управляемая облачная версия Carbon, которая включает поддержку и все расширенные функции"
 
 #: app/routes/_index.tsx:205
 msgid "A typed TypeScript monorepo with one generated database type shared across the app, the API, and the AI tools. Bring your own LLM."
@@ -56,9 +48,12 @@ msgid "About"
 msgstr "О нас"
 
 #: app/routes/_index.tsx:162
-#: app/routes/pricing.tsx:58
 msgid "Accounting"
 msgstr "Бухгалтерия"
+
+#: app/routes/pricing.tsx:41
+msgid "Accounting with general ledger, financial reports, fixed assets, and multi-currency"
+msgstr "Бухгалтерский учет с главной книгой, финансовыми отчетами, основными средствами и мультивалютностью"
 
 #: app/routes/_index.tsx:68
 msgid "Accounting-focused"
@@ -92,9 +87,9 @@ msgstr "После почти десяти лет разработки комп�
 msgid "Agent-ready by default"
 msgstr "Готов к использованию агентами по умолчанию"
 
-#: app/routes/pricing.tsx:60
-msgid "All advanced features available"
-msgstr "Все расширенные функции доступны"
+#: app/routes/pricing.tsx:82
+msgid "Air-gapped and ITAR deployments"
+msgstr "Развертывания без подключения к сети и соответствия ITAR"
 
 #: app/routes/brand.tsx:23
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
@@ -110,7 +105,7 @@ msgstr "Аналитика"
 
 #: app/routes/_index.tsx:1258
 msgid "And some of the world's most innovative manufacturers"
-msgstr ""
+msgstr "И некоторые из самых инновационных производителей в мире"
 
 #: app/routes/_index.tsx:567
 #: app/routes/_index.tsx:574
@@ -137,9 +132,9 @@ msgstr "API-first с полноценной поддержкой MCP"
 msgid "API, MCP, apps"
 msgstr "API, MCP, приложения"
 
-#: app/routes/pricing.tsx:57
-msgid "API, webhooks, and integrations"
-msgstr "API, вебхуки и интеграции"
+#: app/routes/pricing.tsx:59
+msgid "API, webhooks, integrations, and MCP"
+msgstr "API, вебхуки, интеграции и MCP"
 
 #: app/routes/_index.tsx:232
 msgid "AS9100"
@@ -155,11 +150,11 @@ msgstr "Спросите вашего агента, что он думает"
 
 #: app/routes/_index.tsx:1113
 msgid "Audit it before you deploy it"
-msgstr ""
+msgstr "Проверьте его перед развертыванием"
 
-#: app/routes/pricing.tsx:59
-msgid "Audit logging"
-msgstr "Логирование аудита"
+#: app/routes/pricing.tsx:64
+msgid "Audit logging, 2FA, and backup/restore"
+msgstr "Журналирование аудита, двухфакторная аутентификация и резервное копирование/восстановление"
 
 #: app/routes/_index.tsx:86
 msgid "Audit trail is the database"
@@ -178,8 +173,8 @@ msgid "Auto-generated API Documentation"
 msgstr "Автоматически созданная документация API"
 
 #: app/routes/pricing.tsx:39
-msgid "Automatic updates and backups"
-msgstr "Автоматические обновления и резервные копии"
+msgid "Automatic updates and cloud backups"
+msgstr "Автоматические обновления и облачные резервные копии"
 
 #: app/routes/_index.tsx:212
 msgid "Automotive"
@@ -198,8 +193,8 @@ msgid "Based on assumptions"
 msgstr "На основе предположений"
 
 #: app/routes/pricing.tsx:40
-msgid "Basic ERP, MES, and QMS functionality"
-msgstr "Базовая функциональность ERP, MES и QMS"
+msgid "Basic ERP, MES, MRP, and QMS functionality"
+msgstr "Базовые функции ERP, MES, MRP и QMS"
 
 #: app/routes/_index.tsx:591
 msgid "Best ERP/MRP/MES system I've ever seen in a 22-year career across defense and automotive. Native Onshape integration means we synchronize all our data without extra PLM connectors — good UX, modern integrations, open source, open API and MCP, cloud or on-prem. We run our whole electric-vehicle engineering and manufacturing business on Carbon, and I couldn't imagine going back to a legacy system."
@@ -240,9 +235,9 @@ msgstr "Разработать или купить"
 
 #: app/routes/_index.tsx:1103
 msgid "Built for CMMC compliance"
-msgstr ""
+msgstr "Разработано для соответствия CMMC"
 
-#: app/routes/pricing.tsx:47
+#: app/routes/pricing.tsx:49
 msgid "Business"
 msgstr "Бизнес"
 
@@ -318,23 +313,23 @@ msgstr "операции чистого помещения, аналитика �
 msgid "Close"
 msgstr "Закрыть"
 
-#: app/routes/pricing.tsx:48
+#: app/routes/pricing.tsx:50
 msgid "Cloud + support"
 msgstr "Облако + поддержка"
 
-#: app/routes/pricing.tsx:77
-msgid "CMMC compliant"
-msgstr ""
+#: app/routes/pricing.tsx:81
+msgid "CMMC Level 2 compliance"
+msgstr "Соответствие уровню 2 CMMC"
 
 #: app/routes/_index.tsx:1131
 msgid "CMMC-compliant work stays inside your walls."
-msgstr ""
+msgstr "Работа, соответствующая CMMC, остается внутри ваших стен."
 
 #: app/routes/about.tsx:106
 msgid "Co-Founder and CTO"
 msgstr "Соучредитель и CTO"
 
-#: app/routes/pricing.tsx:43
+#: app/routes/pricing.tsx:45
 msgid "Community support"
 msgstr "Поддержка сообщества"
 
@@ -394,9 +389,9 @@ msgstr "Контактная информация"
 msgid "Contact Sales"
 msgstr "Связаться с отделом продаж"
 
-#: app/routes/pricing.tsx:52
-#: app/routes/pricing.tsx:67
-#: app/routes/pricing.tsx:69
+#: app/routes/pricing.tsx:54
+#: app/routes/pricing.tsx:71
+#: app/routes/pricing.tsx:73
 msgid "Contact us"
 msgstr "Свяжитесь с нами"
 
@@ -441,6 +436,10 @@ msgstr "Пользовательская разработка"
 msgid "Custom integrations with your existing systems"
 msgstr "Пользовательские интеграции с вашими существующими системами"
 
+#: app/routes/pricing.tsx:61
+msgid "Custom roles, permissions, and approval rules"
+msgstr "Пользовательские роли, разрешения и правила утверждения"
+
 #: app/components/hero.tsx:234
 msgid "Customer Portal"
 msgstr "Портал клиента"
@@ -449,7 +448,11 @@ msgstr "Портал клиента"
 msgid "Customer Portal/Website"
 msgstr "Портал клиента/Веб-сайт"
 
-#: app/routes/pricing.tsx:76
+#: app/routes/pricing.tsx:63
+msgid "Customer portals and demand forecasting"
+msgstr "Портали клиентов и прогнозирование спроса"
+
+#: app/routes/pricing.tsx:80
 msgid "Customizations, training, and integrations"
 msgstr "Настройки, обучение и интеграции"
 
@@ -544,7 +547,7 @@ msgstr "Инженерия"
 msgid "Engineering change orders"
 msgstr "Заказы на изменение инженерии"
 
-#: app/routes/pricing.tsx:65
+#: app/routes/pricing.tsx:69
 msgid "Enterprise"
 msgstr "Корпоративное решение"
 
@@ -558,7 +561,7 @@ msgstr "ERP · MRP · MES · QMS"
 
 #: app/routes/_index.tsx:1109
 msgid "ERP, MRP, MES and QMS on a single database you control, with row-level security. Your data never leaves your perimeter — no vendor cloud, no third-party data lake."
-msgstr ""
+msgstr "ERP, MRP, MES и QMS в одной базе данных, которую вы контролируете, с защитой на уровне строк. Ваши данные никогда не покидают ваш периметр — нет облака поставщика, нет озера данных третьей стороны."
 
 #: app/routes/_index.tsx:280
 msgid "Every part, hour, barcode, and deviation tracked and handled in real-time."
@@ -580,6 +583,14 @@ msgstr "Каждая таблица — это конечная точка"
 msgid "Every unit, every op"
 msgstr "Каждый блок, каждая операция"
 
+#: app/routes/pricing.tsx:75
+msgid "Everything in Business, plus a custom solution to meet your needs"
+msgstr "Все в Business плюс пользовательское решение, соответствующее вашим потребностям"
+
+#: app/routes/pricing.tsx:51
+msgid "Everything in Starter, and the features below"
+msgstr "Все в Starter и функции ниже"
+
 #: app/routes/_index.tsx:82
 msgid "Everything integrated"
 msgstr "Всё интегрировано"
@@ -598,7 +609,7 @@ msgstr "Расходы"
 
 #: app/routes/_index.tsx:1137
 msgid "Explore self-hosting"
-msgstr ""
+msgstr "Изучите самостоятельное размещение"
 
 #: app/routes/_index.tsx:159
 msgid "FAI & NCR"
@@ -629,7 +640,7 @@ msgstr "Проверка первого изделия"
 msgid "First article inspection, non-conformance, CAPA and gauge calibration sit on the same records as production. Pull any serial number and get its full genealogy — material certs, operators, measurements, deviations."
 msgstr "Проверка первого изделия, несоответствие, CAPA и калибровка датчика находятся в той же записи, что и производство. Извлеките любой серийный номер и получите его полную трассировку — сертификаты материалов, операторы, измерения, отклонения."
 
-#: app/routes/pricing.tsx:75
+#: app/routes/pricing.tsx:79
 msgid "Forward deployed engineer"
 msgstr "Инженер на месте у клиента"
 
@@ -639,13 +650,13 @@ msgstr "Письмо основателя"
 
 #: app/routes/_index.tsx:718
 msgid "Four systems, one schema."
-msgstr ""
+msgstr "Четыре системы, одна схема."
 
 #: app/components/wizard-form.tsx:385
 msgid "Full Name"
 msgstr "Полное имя"
 
-#: app/routes/pricing.tsx:78
+#: app/routes/pricing.tsx:83
 msgid "Full setup and migrations"
 msgstr "Полная настройка и миграция"
 
@@ -665,7 +676,7 @@ msgstr "Сгенерировано прямо из схемы Carbon — 381 р�
 msgid "Get Started"
 msgstr "Начать"
 
-#: app/routes/pricing.tsx:189
+#: app/routes/pricing.tsx:194
 msgid "Get started for free."
 msgstr "Начните бесплатно."
 
@@ -779,7 +790,7 @@ msgstr "Канбан расписание"
 
 #: app/routes/_index.tsx:1104
 msgid "Keep CUI inside your own boundary. Deploy on a single box, your own VPC, or fully air-gapped for defense programs that have to meet CMMC and ITAR requirements."
-msgstr ""
+msgstr "Держите CUI внутри своей границы. Развертывайте на одной машине, вашей собственной VPC или полностью без подключения для оборонных программ, которые должны соответствовать требованиям CMMC и ITAR."
 
 #: app/routes/_index.tsx:132
 msgid "Labor, scrap & rework"
@@ -846,7 +857,7 @@ msgstr "долгий срок поставки, проектная сборка"
 msgid "Low monthly payments"
 msgstr "Низкие ежемесячные платежи"
 
-#: app/routes/pricing.tsx:97
+#: app/routes/pricing.tsx:102
 msgid "Managed cloud or self-host the open-source core. Start free for 30 days — no sales call required."
 msgstr "Управляемое облако или самостоятельное размещение открытого исходного кода. Начните бесплатно на 30 дней — не требуется звонок продажи."
 
@@ -894,7 +905,7 @@ msgstr "Сообщение"
 msgid "money in, money out"
 msgstr "деньги входят, деньги выходят"
 
-#: app/routes/pricing.tsx:66
+#: app/routes/pricing.tsx:70
 msgid "Most popular"
 msgstr "Самый популярный"
 
@@ -948,7 +959,7 @@ msgstr "Не требуется"
 
 #: app/routes/_index.tsx:1108
 msgid "One Postgres schema, and it's yours"
-msgstr ""
+msgstr "Одна схема Postgres, и она ваша"
 
 #: app/routes/_index.tsx:221
 msgid "one-off, lot-of-one traceability"
@@ -1039,6 +1050,10 @@ msgstr "Конфиденциальность"
 msgid "Product"
 msgstr "Продукт"
 
+#: app/routes/pricing.tsx:42
+msgid "Product configurator with rules-based BOMs and routings"
+msgstr "Конфигуратор продуктов с основанными на правилах спецификациями материалов и маршрутизацией"
+
 #: app/routes/_index.tsx:158
 msgid "Production"
 msgstr "Производство"
@@ -1105,17 +1120,17 @@ msgstr "реакторы"
 msgid "Read it. Extend it."
 msgstr "Читайте это. Расширяйте это."
 
-#: app/routes/pricing.tsx:200
+#: app/routes/pricing.tsx:215
 msgid "Read the Docs"
 msgstr "Читать документацию"
 
-#: app/routes/pricing.tsx:192
+#: app/routes/pricing.tsx:197
 msgid "Read the source, run it in your own environment, and start developing locally."
 msgstr "Прочитайте исходный код, запустите его в своей собственной среде и начните разрабатывать локально."
 
 #: app/routes/_index.tsx:279
 msgid "Real-time, real cost shop floor."
-msgstr ""
+msgstr "Производственный цех в реальном времени с реальными затратами."
 
 #: app/components/wizard-form.tsx:142
 msgid "Recommended. Priority support with dedicated account manager"
@@ -1199,17 +1214,17 @@ msgstr "Выберите предпочитаемое решение для хо
 #: app/components/header.tsx:209
 #: app/routes/_index.tsx:1127
 msgid "Self-hosted"
-msgstr ""
+msgstr "Самостоятельное размещение"
 
 #: app/components/wizard-form.tsx:100
 msgid "Self-Hosted"
 msgstr "Самостоятельный хостинг"
 
-#: app/routes/pricing.tsx:74
+#: app/routes/pricing.tsx:78
 msgid "Self-hosted or managed"
 msgstr "Самостоятельно размещенное или управляемое"
 
-#: app/routes/pricing.tsx:42
+#: app/routes/pricing.tsx:44
 msgid "Self-onboarding"
 msgstr "Самостоятельная подготовка"
 
@@ -1257,6 +1272,10 @@ msgstr "Производственный цех / путевой лист зад
 msgid "Shop Floor Apps"
 msgstr "Приложения для цеха"
 
+#: app/routes/pricing.tsx:62
+msgid "Shop floor console mode"
+msgstr "Режим консоли производственного цеха"
+
 #: app/routes/_index.tsx:118
 msgid "Shortage escalation"
 msgstr "Эскалация нехватки"
@@ -1265,7 +1284,7 @@ msgstr "Эскалация нехватки"
 msgid "Shortages found on the floor"
 msgstr "Нехватки найдены на полу"
 
-#: app/routes/pricing.tsx:94
+#: app/routes/pricing.tsx:99
 msgid "Simple pricing based on your needs."
 msgstr "Простое ценообразование в зависимости от ваших потребностей."
 
@@ -1301,11 +1320,11 @@ msgstr "Пространство"
 msgid "Spreadsheet"
 msgstr "Электронная таблица"
 
-#: app/routes/pricing.tsx:79
+#: app/routes/pricing.tsx:84
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
-#: app/routes/pricing.tsx:206
+#: app/routes/pricing.tsx:221
 msgid "Star on GitHub"
 msgstr "Звезда на GitHub"
 
@@ -1354,7 +1373,7 @@ msgstr "Заменяемые системы"
 msgid "Tasks"
 msgstr "Задачи"
 
-#: app/routes/pricing.tsx:56
+#: app/routes/pricing.tsx:58
 msgid "Technical support"
 msgstr "Техническая поддержка"
 
@@ -1380,7 +1399,7 @@ msgstr "Современный стек производства"
 
 #: app/routes/_index.tsx:1114
 msgid "The whole application is on GitHub — the Community edition under AGPL-3.0. Read every line, run a security review, and extend it to fit your process."
-msgstr ""
+msgstr "Все приложение находится на GitHub — версия Community под AGPL-3.0. Прочитайте каждую строку, проведите проверку безопасности и расширьте его в соответствии с вашим процессом."
 
 #: app/routes/_index.tsx:295
 msgid "Traceability is the default state."
@@ -1400,7 +1419,7 @@ msgstr "Доверено самыми инновационными в мире"
 
 #: app/routes/_index.tsx:1256
 msgid "Two hard tech unicorns build on Carbon."
-msgstr ""
+msgstr "Две высокотехнологичные стартапы-единороги строят на Carbon."
 
 #: app/routes/_index.tsx:187
 msgid "Typical first deployment"
@@ -1414,11 +1433,11 @@ msgstr "Восстановите вашу спецификацию матери�
 msgid "Unified system of record"
 msgstr "Единая система записей"
 
-#: app/routes/pricing.tsx:80
+#: app/routes/pricing.tsx:85
 msgid "Unlimited functional support"
 msgstr "Неограниченная функциональная поддержка"
 
-#: app/routes/pricing.tsx:41
+#: app/routes/pricing.tsx:43
 msgid "Unlimited records"
 msgstr "Неограниченное количество записей"
 
@@ -1432,7 +1451,11 @@ msgstr "Просмотрите наш исходный код и внесите 
 
 #: app/routes/_index.tsx:1143
 msgid "View the source"
-msgstr ""
+msgstr "Просмотр источника"
+
+#: app/routes/pricing.tsx:201
+msgid "Want Business features on your own servers? <0>Unlock them with a commercial license</0>."
+msgstr "Хотите функции Business на своих серверах? <0>Разблокируйте их с помощью коммерческой лицензии</0>."
 
 #: app/routes/about.tsx:57
 msgid "We open-sourced Carbon not because it's a great business plan, but because that's the system I would have wanted when I was in your shoes."
@@ -1469,6 +1492,10 @@ msgstr "Рабочая почта"
 #: app/components/hero.tsx:194
 msgid "Work Instructions"
 msgstr "Инструкции по работе"
+
+#: app/routes/pricing.tsx:60
+msgid "Workflows, AI agent, and email notifications"
+msgstr "Рабочие процессы, ИИ-агент и уведомления по электронной почте"
 
 #: app/components/wizard-form.tsx:160
 msgid "You can handle everything yourself"
