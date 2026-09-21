@@ -120,11 +120,11 @@ Everything in Starter, and the features below.
 - Technical support
 - API, webhooks, integrations, and MCP
 - Workflow automation with custom triggers
-- Email notifications, in addition to in-app alerts
-- Custom roles, permissions, and approval rules
+- Demand forecasting to plan ahead of orders
 - Shop floor console mode
 - Customer portals with live order status and files
-- Demand forecasting to plan ahead of orders
+- Email and Slack notifications
+- Custom roles, permissions, and approval rules
 - Audit logging, 2FA enforcement, and backup/restore
 - 5 user minimum
 

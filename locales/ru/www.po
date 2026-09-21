@@ -436,7 +436,7 @@ msgstr "Пользовательская разработка"
 msgid "Custom integrations with your existing systems"
 msgstr "Пользовательские интеграции с вашими существующими системами"
 
-#: app/routes/pricing.tsx:62
+#: app/routes/pricing.tsx:65
 msgid "Custom roles, permissions, and approval rules"
 msgstr "Пользовательские роли, разрешения и правила утверждения"
 
@@ -448,7 +448,7 @@ msgstr "Портал клиента"
 msgid "Customer Portal/Website"
 msgstr "Портал клиента/Веб-сайт"
 
-#: app/routes/pricing.tsx:64
+#: app/routes/pricing.tsx:63
 msgid "Customer portals with live order status and files"
 msgstr "Портали для клиентов с актуальным статусом заказов и файлами"
 
@@ -492,7 +492,7 @@ msgstr "Защита"
 msgid "Demand & forecast"
 msgstr "Спрос и прогноз"
 
-#: app/routes/pricing.tsx:65
+#: app/routes/pricing.tsx:61
 msgid "Demand forecasting to plan ahead of orders"
 msgstr "Прогнозирование спроса для планирования заказов"
 
@@ -539,9 +539,9 @@ msgstr "дроны"
 msgid "Email Address"
 msgstr "Адрес электронной почты"
 
-#: app/routes/pricing.tsx:61
-msgid "Email notifications, in addition to in-app alerts"
-msgstr "Уведомления по электронной почте в дополнение к оповещениям в приложении"
+#: app/routes/pricing.tsx:64
+msgid "Email and Slack notifications"
+msgstr "Уведомления по электронной почте и Slack"
 
 #: app/routes/_index.tsx:220
 msgid "Energy & grid"
@@ -1280,7 +1280,7 @@ msgstr "Производственный цех / путевой лист зад
 msgid "Shop Floor Apps"
 msgstr "Приложения для цеха"
 
-#: app/routes/pricing.tsx:63
+#: app/routes/pricing.tsx:62
 msgid "Shop floor console mode"
 msgstr "Режим консоли производственного цеха"
 

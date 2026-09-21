@@ -436,7 +436,7 @@ msgstr "Custom Development"
 msgid "Custom integrations with your existing systems"
 msgstr "Custom integrations with your existing systems"
 
-#: app/routes/pricing.tsx:62
+#: app/routes/pricing.tsx:65
 msgid "Custom roles, permissions, and approval rules"
 msgstr "Custom roles, permissions, and approval rules"
 
@@ -448,7 +448,7 @@ msgstr "Customer Portal"
 msgid "Customer Portal/Website"
 msgstr "Customer Portal/Website"
 
-#: app/routes/pricing.tsx:64
+#: app/routes/pricing.tsx:63
 msgid "Customer portals with live order status and files"
 msgstr "Customer portals with live order status and files"
 
@@ -492,7 +492,7 @@ msgstr "Defense"
 msgid "Demand & forecast"
 msgstr "Demand & forecast"
 
-#: app/routes/pricing.tsx:65
+#: app/routes/pricing.tsx:61
 msgid "Demand forecasting to plan ahead of orders"
 msgstr "Demand forecasting to plan ahead of orders"
 
@@ -539,9 +539,9 @@ msgstr "drones"
 msgid "Email Address"
 msgstr "Email Address"
 
-#: app/routes/pricing.tsx:61
-msgid "Email notifications, in addition to in-app alerts"
-msgstr "Email notifications, in addition to in-app alerts"
+#: app/routes/pricing.tsx:64
+msgid "Email and Slack notifications"
+msgstr "Email and Slack notifications"
 
 #: app/routes/_index.tsx:220
 msgid "Energy & grid"
@@ -1280,7 +1280,7 @@ msgstr "Shop floor / job traveler"
 msgid "Shop Floor Apps"
 msgstr "Shop Floor Apps"
 
-#: app/routes/pricing.tsx:63
+#: app/routes/pricing.tsx:62
 msgid "Shop floor console mode"
 msgstr "Shop floor console mode"
 

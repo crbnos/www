@@ -436,7 +436,7 @@ msgstr "맞춤 개발"
 msgid "Custom integrations with your existing systems"
 msgstr "기존 시스템과의 사용자 정의 통합"
 
-#: app/routes/pricing.tsx:62
+#: app/routes/pricing.tsx:65
 msgid "Custom roles, permissions, and approval rules"
 msgstr "사용자 정의 역할, 권한 및 승인 규칙"
 
@@ -448,7 +448,7 @@ msgstr "고객 포털"
 msgid "Customer Portal/Website"
 msgstr "고객 포털/웹사이트"
 
-#: app/routes/pricing.tsx:64
+#: app/routes/pricing.tsx:63
 msgid "Customer portals with live order status and files"
 msgstr "실시간 주문 상태 및 파일이 포함된 고객 포털"
 
@@ -492,7 +492,7 @@ msgstr "국방"
 msgid "Demand & forecast"
 msgstr "수요 및 예측"
 
-#: app/routes/pricing.tsx:65
+#: app/routes/pricing.tsx:61
 msgid "Demand forecasting to plan ahead of orders"
 msgstr "주문을 미리 계획하기 위한 수요 예측"
 
@@ -539,9 +539,9 @@ msgstr "드론"
 msgid "Email Address"
 msgstr "이메일 주소"
 
-#: app/routes/pricing.tsx:61
-msgid "Email notifications, in addition to in-app alerts"
-msgstr "인앱 알림 외에 이메일 알림"
+#: app/routes/pricing.tsx:64
+msgid "Email and Slack notifications"
+msgstr "이메일 및 Slack 알림"
 
 #: app/routes/_index.tsx:220
 msgid "Energy & grid"
@@ -1280,7 +1280,7 @@ msgstr "작업 현장 / 작업 추적"
 msgid "Shop Floor Apps"
 msgstr "Shop Floor Apps"
 
-#: app/routes/pricing.tsx:63
+#: app/routes/pricing.tsx:62
 msgid "Shop floor console mode"
 msgstr "샵 플로어 콘솔 모드"
 

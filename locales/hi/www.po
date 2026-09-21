@@ -436,7 +436,7 @@ msgstr "कस्टम विकास"
 msgid "Custom integrations with your existing systems"
 msgstr "आपकी मौजूदा प्रणालियों के साथ कस्टम इंटीग्रेशन"
 
-#: app/routes/pricing.tsx:62
+#: app/routes/pricing.tsx:65
 msgid "Custom roles, permissions, and approval rules"
 msgstr "कस्टम भूमिकाएं, अनुमतियां, और अनुमोदन नियम"
 
@@ -448,7 +448,7 @@ msgstr "ग्राहक पोर्टल"
 msgid "Customer Portal/Website"
 msgstr "ग्राहक पोर्टल/वेबसाइट"
 
-#: app/routes/pricing.tsx:64
+#: app/routes/pricing.tsx:63
 msgid "Customer portals with live order status and files"
 msgstr "लाइव ऑर्डर स्थिति और फ़ाइलों के साथ ग्राहक पोर्टल"
 
@@ -492,7 +492,7 @@ msgstr "रक्षा"
 msgid "Demand & forecast"
 msgstr "मांग और पूर्वानुमान"
 
-#: app/routes/pricing.tsx:65
+#: app/routes/pricing.tsx:61
 msgid "Demand forecasting to plan ahead of orders"
 msgstr "ऑर्डर से आगे की योजना के लिए मांग पूर्वानुमान"
 
@@ -539,9 +539,9 @@ msgstr "ड्रोन"
 msgid "Email Address"
 msgstr "ईमेल पता"
 
-#: app/routes/pricing.tsx:61
-msgid "Email notifications, in addition to in-app alerts"
-msgstr "ईमेल सूचनाएं, इन-ऐप अलर्ट के अलावा"
+#: app/routes/pricing.tsx:64
+msgid "Email and Slack notifications"
+msgstr "ईमेल और Slack सूचनाएं"
 
 #: app/routes/_index.tsx:220
 msgid "Energy & grid"
@@ -1280,7 +1280,7 @@ msgstr "शॉप फ्लोर / जॉब ट्रैवलर"
 msgid "Shop Floor Apps"
 msgstr "शॉप फ्लोर ऐप्स"
 
-#: app/routes/pricing.tsx:63
+#: app/routes/pricing.tsx:62
 msgid "Shop floor console mode"
 msgstr "शॉप फ्लोर कंसोल मोड"
 

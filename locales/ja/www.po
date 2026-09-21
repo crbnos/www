@@ -436,7 +436,7 @@ msgstr "カスタム開発"
 msgid "Custom integrations with your existing systems"
 msgstr "既存のシステムとのカスタム統合"
 
-#: app/routes/pricing.tsx:62
+#: app/routes/pricing.tsx:65
 msgid "Custom roles, permissions, and approval rules"
 msgstr "カスタムロール、権限、および承認ルール"
 
@@ -448,7 +448,7 @@ msgstr "顧客ポータル"
 msgid "Customer Portal/Website"
 msgstr "顧客ポータル/ウェブサイト"
 
-#: app/routes/pricing.tsx:64
+#: app/routes/pricing.tsx:63
 msgid "Customer portals with live order status and files"
 msgstr "リアルタイム注文ステータスとファイルを備えた顧客ポータル"
 
@@ -492,7 +492,7 @@ msgstr "防衛"
 msgid "Demand & forecast"
 msgstr "需要と予測"
 
-#: app/routes/pricing.tsx:65
+#: app/routes/pricing.tsx:61
 msgid "Demand forecasting to plan ahead of orders"
 msgstr "需要予測による先制的な計画"
 
@@ -539,9 +539,9 @@ msgstr "ドローン"
 msgid "Email Address"
 msgstr "メールアドレス"
 
-#: app/routes/pricing.tsx:61
-msgid "Email notifications, in addition to in-app alerts"
-msgstr "アプリ内アラートに加えてメール通知"
+#: app/routes/pricing.tsx:64
+msgid "Email and Slack notifications"
+msgstr "メールとSlackの通知"
 
 #: app/routes/_index.tsx:220
 msgid "Energy & grid"
@@ -1280,7 +1280,7 @@ msgstr "ショップフロア/ジョブトラベラー"
 msgid "Shop Floor Apps"
 msgstr "ショップフロアアプリ"
 
-#: app/routes/pricing.tsx:63
+#: app/routes/pricing.tsx:62
 msgid "Shop floor console mode"
 msgstr "工場フロアコンソールモード"
 

@@ -436,7 +436,7 @@ msgstr "Desenvolvimento Personalizado"
 msgid "Custom integrations with your existing systems"
 msgstr "Integrações personalizadas com seus sistemas existentes"
 
-#: app/routes/pricing.tsx:62
+#: app/routes/pricing.tsx:65
 msgid "Custom roles, permissions, and approval rules"
 msgstr "Funções personalizadas, permissões e regras de aprovação"
 
@@ -448,7 +448,7 @@ msgstr "Portal do Cliente"
 msgid "Customer Portal/Website"
 msgstr "Portal do Cliente/Website"
 
-#: app/routes/pricing.tsx:64
+#: app/routes/pricing.tsx:63
 msgid "Customer portals with live order status and files"
 msgstr "Portais de clientes com status de pedidos em tempo real e arquivos"
 
@@ -492,7 +492,7 @@ msgstr "Defesa"
 msgid "Demand & forecast"
 msgstr "Demanda e previsão"
 
-#: app/routes/pricing.tsx:65
+#: app/routes/pricing.tsx:61
 msgid "Demand forecasting to plan ahead of orders"
 msgstr "Previsão de demanda para planejar antecipadamente os pedidos"
 
@@ -539,9 +539,9 @@ msgstr "drones"
 msgid "Email Address"
 msgstr "Endereço de Email"
 
-#: app/routes/pricing.tsx:61
-msgid "Email notifications, in addition to in-app alerts"
-msgstr "Notificações por e-mail, além de alertas no aplicativo"
+#: app/routes/pricing.tsx:64
+msgid "Email and Slack notifications"
+msgstr "Notificações por Email e Slack"
 
 #: app/routes/_index.tsx:220
 msgid "Energy & grid"
@@ -1280,7 +1280,7 @@ msgstr "Chão de fábrica / viajante de trabalho"
 msgid "Shop Floor Apps"
 msgstr "Aplicativos de Chão de Fábrica"
 
-#: app/routes/pricing.tsx:63
+#: app/routes/pricing.tsx:62
 msgid "Shop floor console mode"
 msgstr "Modo console do chão de fábrica"
 

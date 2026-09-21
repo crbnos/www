@@ -436,7 +436,7 @@ msgstr "Özel Geliştirme"
 msgid "Custom integrations with your existing systems"
 msgstr "Mevcut sistemlerinizle özel entegrasyonlar"
 
-#: app/routes/pricing.tsx:62
+#: app/routes/pricing.tsx:65
 msgid "Custom roles, permissions, and approval rules"
 msgstr "Özel roller, izinler ve onay kuralları"
 
@@ -448,7 +448,7 @@ msgstr "Müşteri Portalı"
 msgid "Customer Portal/Website"
 msgstr "Müşteri Portalı/Web Sitesi"
 
-#: app/routes/pricing.tsx:64
+#: app/routes/pricing.tsx:63
 msgid "Customer portals with live order status and files"
 msgstr "Müşteri portalları, canlı sipariş durumu ve dosyalarla"
 
@@ -492,7 +492,7 @@ msgstr "Savunma"
 msgid "Demand & forecast"
 msgstr "Talep ve Tahmin"
 
-#: app/routes/pricing.tsx:65
+#: app/routes/pricing.tsx:61
 msgid "Demand forecasting to plan ahead of orders"
 msgstr "Siparişlerin öncesinde planlama yapmak için talep tahmini"
 
@@ -539,9 +539,9 @@ msgstr "İnsansız Hava Araçları"
 msgid "Email Address"
 msgstr "E-posta Adresi"
 
-#: app/routes/pricing.tsx:61
-msgid "Email notifications, in addition to in-app alerts"
-msgstr "Uygulama içi uyarılara ek olarak e-posta bildirimleri"
+#: app/routes/pricing.tsx:64
+msgid "Email and Slack notifications"
+msgstr "E-posta ve Slack bildirimleri"
 
 #: app/routes/_index.tsx:220
 msgid "Energy & grid"
@@ -1280,7 +1280,7 @@ msgstr "Atölye Tabanı / İş Gezgini"
 msgid "Shop Floor Apps"
 msgstr "Üretim Katı Uygulamaları"
 
-#: app/routes/pricing.tsx:63
+#: app/routes/pricing.tsx:62
 msgid "Shop floor console mode"
 msgstr "Atölye konsol modu"
 
