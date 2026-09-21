@@ -745,7 +745,7 @@ export default function SelfHosted() {
 			<Hero />
 			<Principles />
 			<LogoStrip
-				headline="Defense and aerospace manufacturers run Carbon on their own servers."
+				headline="Two hard tech unicorns run Carbon on their own servers."
 				label="Defense · aerospace · regulated manufacturing"
 			/>
 			<Walls />
