@@ -26,7 +26,7 @@ msgstr "18-месячная реализация"
 msgid "21 CFR Part 11"
 msgstr "21 CFR Part 11"
 
-#: app/routes/pricing.tsx:65
+#: app/routes/pricing.tsx:67
 msgid "5 user minimum"
 msgstr "Минимум 5 пользователей"
 
@@ -87,7 +87,7 @@ msgstr "После почти десяти лет разработки комп�
 msgid "Agent-ready by default"
 msgstr "Готов к использованию агентами по умолчанию"
 
-#: app/routes/pricing.tsx:82
+#: app/routes/pricing.tsx:84
 msgid "Air-gapped and ITAR deployments"
 msgstr "Развертывания без подключения к сети и соответствия ITAR"
 
@@ -152,7 +152,7 @@ msgstr "Спросите вашего агента, что он думает"
 msgid "Audit it before you deploy it"
 msgstr "Проверьте его перед развертыванием"
 
-#: app/routes/pricing.tsx:64
+#: app/routes/pricing.tsx:66
 msgid "Audit logging, 2FA enforcement, and backup/restore"
 msgstr "Логирование аудита, обязательная 2FA и резервное копирование/восстановление"
 
@@ -317,7 +317,7 @@ msgstr "Закрыть"
 msgid "Cloud + support"
 msgstr "Облако + поддержка"
 
-#: app/routes/pricing.tsx:81
+#: app/routes/pricing.tsx:83
 msgid "CMMC Level 2 compliance"
 msgstr "Соответствие уровню 2 CMMC"
 
@@ -390,8 +390,8 @@ msgid "Contact Sales"
 msgstr "Связаться с отделом продаж"
 
 #: app/routes/pricing.tsx:54
-#: app/routes/pricing.tsx:71
 #: app/routes/pricing.tsx:73
+#: app/routes/pricing.tsx:75
 msgid "Contact us"
 msgstr "Свяжитесь с нами"
 
@@ -436,7 +436,7 @@ msgstr "Пользовательская разработка"
 msgid "Custom integrations with your existing systems"
 msgstr "Пользовательские интеграции с вашими существующими системами"
 
-#: app/routes/pricing.tsx:61
+#: app/routes/pricing.tsx:62
 msgid "Custom roles, permissions, and approval rules"
 msgstr "Пользовательские роли, разрешения и правила утверждения"
 
@@ -448,11 +448,11 @@ msgstr "Портал клиента"
 msgid "Customer Portal/Website"
 msgstr "Портал клиента/Веб-сайт"
 
-#: app/routes/pricing.tsx:63
-msgid "Customer portals and demand forecasting"
-msgstr "Портали клиентов и прогнозирование спроса"
+#: app/routes/pricing.tsx:64
+msgid "Customer portals with live order status and files"
+msgstr "Портали для клиентов с актуальным статусом заказов и файлами"
 
-#: app/routes/pricing.tsx:80
+#: app/routes/pricing.tsx:82
 msgid "Customizations, training, and integrations"
 msgstr "Настройки, обучение и интеграции"
 
@@ -491,6 +491,10 @@ msgstr "Защита"
 #: app/routes/_index.tsx:113
 msgid "Demand & forecast"
 msgstr "Спрос и прогноз"
+
+#: app/routes/pricing.tsx:65
+msgid "Demand forecasting to plan ahead of orders"
+msgstr "Прогнозирование спроса для планирования заказов"
 
 #: app/components/header.tsx:46
 msgid "Developer guides and API reference"
@@ -535,6 +539,10 @@ msgstr "дроны"
 msgid "Email Address"
 msgstr "Адрес электронной почты"
 
+#: app/routes/pricing.tsx:61
+msgid "Email notifications, in addition to in-app alerts"
+msgstr "Уведомления по электронной почте в дополнение к оповещениям в приложении"
+
 #: app/routes/_index.tsx:220
 msgid "Energy & grid"
 msgstr "Энергетика и сеть"
@@ -547,7 +555,7 @@ msgstr "Инженерия"
 msgid "Engineering change orders"
 msgstr "Заказы на изменение инженерии"
 
-#: app/routes/pricing.tsx:69
+#: app/routes/pricing.tsx:71
 msgid "Enterprise"
 msgstr "Корпоративное решение"
 
@@ -583,7 +591,7 @@ msgstr "Каждая таблица — это конечная точка"
 msgid "Every unit, every op"
 msgstr "Каждый блок, каждая операция"
 
-#: app/routes/pricing.tsx:75
+#: app/routes/pricing.tsx:77
 msgid "Everything in Business, plus a custom solution to meet your needs"
 msgstr "Все в Business плюс пользовательское решение, соответствующее вашим потребностям"
 
@@ -640,7 +648,7 @@ msgstr "Проверка первого изделия"
 msgid "First article inspection, non-conformance, CAPA and gauge calibration sit on the same records as production. Pull any serial number and get its full genealogy — material certs, operators, measurements, deviations."
 msgstr "Проверка первого изделия, несоответствие, CAPA и калибровка датчика находятся в той же записи, что и производство. Извлеките любой серийный номер и получите его полную трассировку — сертификаты материалов, операторы, измерения, отклонения."
 
-#: app/routes/pricing.tsx:79
+#: app/routes/pricing.tsx:81
 msgid "Forward deployed engineer"
 msgstr "Инженер на месте у клиента"
 
@@ -656,7 +664,7 @@ msgstr "Четыре системы, одна схема."
 msgid "Full Name"
 msgstr "Полное имя"
 
-#: app/routes/pricing.tsx:83
+#: app/routes/pricing.tsx:85
 msgid "Full setup and migrations"
 msgstr "Полная настройка и миграция"
 
@@ -676,7 +684,7 @@ msgstr "Сгенерировано прямо из схемы Carbon — 381 р�
 msgid "Get Started"
 msgstr "Начать"
 
-#: app/routes/pricing.tsx:194
+#: app/routes/pricing.tsx:196
 msgid "Get started for free."
 msgstr "Начните бесплатно."
 
@@ -857,7 +865,7 @@ msgstr "долгий срок поставки, проектная сборка"
 msgid "Low monthly payments"
 msgstr "Низкие ежемесячные платежи"
 
-#: app/routes/pricing.tsx:102
+#: app/routes/pricing.tsx:104
 msgid "Managed cloud or self-host the open-source core. Start free for 30 days — no sales call required."
 msgstr "Управляемое облако или самостоятельное размещение открытого исходного кода. Начните бесплатно на 30 дней — не требуется звонок продажи."
 
@@ -905,7 +913,7 @@ msgstr "Сообщение"
 msgid "money in, money out"
 msgstr "деньги входят, деньги выходят"
 
-#: app/routes/pricing.tsx:70
+#: app/routes/pricing.tsx:72
 msgid "Most popular"
 msgstr "Самый популярный"
 
@@ -1120,11 +1128,11 @@ msgstr "реакторы"
 msgid "Read it. Extend it."
 msgstr "Читайте это. Расширяйте это."
 
-#: app/routes/pricing.tsx:215
+#: app/routes/pricing.tsx:217
 msgid "Read the Docs"
 msgstr "Читать документацию"
 
-#: app/routes/pricing.tsx:197
+#: app/routes/pricing.tsx:199
 msgid "Read the source, run it in your own environment, and start developing locally."
 msgstr "Прочитайте исходный код, запустите его в своей собственной среде и начните разрабатывать локально."
 
@@ -1220,7 +1228,7 @@ msgstr "Самостоятельное размещение"
 msgid "Self-Hosted"
 msgstr "Самостоятельный хостинг"
 
-#: app/routes/pricing.tsx:78
+#: app/routes/pricing.tsx:80
 msgid "Self-hosted or managed"
 msgstr "Самостоятельно размещенное или управляемое"
 
@@ -1272,7 +1280,7 @@ msgstr "Производственный цех / путевой лист зад
 msgid "Shop Floor Apps"
 msgstr "Приложения для цеха"
 
-#: app/routes/pricing.tsx:62
+#: app/routes/pricing.tsx:63
 msgid "Shop floor console mode"
 msgstr "Режим консоли производственного цеха"
 
@@ -1284,7 +1292,7 @@ msgstr "Эскалация нехватки"
 msgid "Shortages found on the floor"
 msgstr "Нехватки найдены на полу"
 
-#: app/routes/pricing.tsx:99
+#: app/routes/pricing.tsx:101
 msgid "Simple pricing based on your needs."
 msgstr "Простое ценообразование в зависимости от ваших потребностей."
 
@@ -1320,11 +1328,11 @@ msgstr "Пространство"
 msgid "Spreadsheet"
 msgstr "Электронная таблица"
 
-#: app/routes/pricing.tsx:84
+#: app/routes/pricing.tsx:86
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
-#: app/routes/pricing.tsx:221
+#: app/routes/pricing.tsx:223
 msgid "Star on GitHub"
 msgstr "Звезда на GitHub"
 
@@ -1433,7 +1441,7 @@ msgstr "Восстановите вашу спецификацию матери�
 msgid "Unified system of record"
 msgstr "Единая система записей"
 
-#: app/routes/pricing.tsx:85
+#: app/routes/pricing.tsx:87
 msgid "Unlimited functional support"
 msgstr "Неограниченная функциональная поддержка"
 
@@ -1453,7 +1461,7 @@ msgstr "Просмотрите наш исходный код и внесите 
 msgid "View the source"
 msgstr "Просмотр источника"
 
-#: app/routes/pricing.tsx:201
+#: app/routes/pricing.tsx:203
 msgid "Want Business features on your own servers? <0>Unlock them with a commercial license</0>."
 msgstr "Хотите функции Business на своих серверах? <0>Разблокируйте их с помощью коммерческой лицензии</0>."
 
@@ -1494,8 +1502,8 @@ msgid "Work Instructions"
 msgstr "Инструкции по работе"
 
 #: app/routes/pricing.tsx:60
-msgid "Workflows, AI agent, and email notifications"
-msgstr "Рабочие процессы, ИИ-агент и уведомления по электронной почте"
+msgid "Workflow automation with custom triggers and run history"
+msgstr "Автоматизация рабочих процессов с пользовательскими триггерами и историей запусков"
 
 #: app/components/wizard-form.tsx:160
 msgid "You can handle everything yourself"

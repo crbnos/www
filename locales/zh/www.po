@@ -26,7 +26,7 @@ msgstr "18个月实现"
 msgid "21 CFR Part 11"
 msgstr "21 CFR Part 11"
 
-#: app/routes/pricing.tsx:65
+#: app/routes/pricing.tsx:67
 msgid "5 user minimum"
 msgstr "5个用户最少"
 
@@ -87,7 +87,7 @@ msgstr "在花了近十年时间为制造业构建端到端系统后，从技术
 msgid "Agent-ready by default"
 msgstr "默认代理就绪"
 
-#: app/routes/pricing.tsx:82
+#: app/routes/pricing.tsx:84
 msgid "Air-gapped and ITAR deployments"
 msgstr "气隙式和ITAR部署"
 
@@ -152,7 +152,7 @@ msgstr "询问您的代理的看法"
 msgid "Audit it before you deploy it"
 msgstr "在部署前进行审计"
 
-#: app/routes/pricing.tsx:64
+#: app/routes/pricing.tsx:66
 msgid "Audit logging, 2FA enforcement, and backup/restore"
 msgstr "审计日志、2FA强制执行和备份/恢复"
 
@@ -317,7 +317,7 @@ msgstr "关闭"
 msgid "Cloud + support"
 msgstr "云 + 支持"
 
-#: app/routes/pricing.tsx:81
+#: app/routes/pricing.tsx:83
 msgid "CMMC Level 2 compliance"
 msgstr "CMMC 2级合规性"
 
@@ -390,8 +390,8 @@ msgid "Contact Sales"
 msgstr "联系销售"
 
 #: app/routes/pricing.tsx:54
-#: app/routes/pricing.tsx:71
 #: app/routes/pricing.tsx:73
+#: app/routes/pricing.tsx:75
 msgid "Contact us"
 msgstr "联系我们"
 
@@ -436,7 +436,7 @@ msgstr "自定义开发"
 msgid "Custom integrations with your existing systems"
 msgstr "与您现有系统的自定义集成"
 
-#: app/routes/pricing.tsx:61
+#: app/routes/pricing.tsx:62
 msgid "Custom roles, permissions, and approval rules"
 msgstr "自定义角色、权限和批准规则"
 
@@ -448,11 +448,11 @@ msgstr "客户门户"
 msgid "Customer Portal/Website"
 msgstr "客户门户/网站"
 
-#: app/routes/pricing.tsx:63
-msgid "Customer portals and demand forecasting"
-msgstr "客户门户和需求预测"
+#: app/routes/pricing.tsx:64
+msgid "Customer portals with live order status and files"
+msgstr "客户门户及实时订单状态和文件"
 
-#: app/routes/pricing.tsx:80
+#: app/routes/pricing.tsx:82
 msgid "Customizations, training, and integrations"
 msgstr "定制、培训和集成"
 
@@ -491,6 +491,10 @@ msgstr "防御"
 #: app/routes/_index.tsx:113
 msgid "Demand & forecast"
 msgstr "需求和预测"
+
+#: app/routes/pricing.tsx:65
+msgid "Demand forecasting to plan ahead of orders"
+msgstr "需求预测以提前规划订单"
 
 #: app/components/header.tsx:46
 msgid "Developer guides and API reference"
@@ -535,6 +539,10 @@ msgstr "无人机"
 msgid "Email Address"
 msgstr "电子邮件地址"
 
+#: app/routes/pricing.tsx:61
+msgid "Email notifications, in addition to in-app alerts"
+msgstr "电子邮件通知和应用内警报"
+
 #: app/routes/_index.tsx:220
 msgid "Energy & grid"
 msgstr "能源和电网"
@@ -547,7 +555,7 @@ msgstr "工程"
 msgid "Engineering change orders"
 msgstr "工程变更单"
 
-#: app/routes/pricing.tsx:69
+#: app/routes/pricing.tsx:71
 msgid "Enterprise"
 msgstr "企业"
 
@@ -583,7 +591,7 @@ msgstr "每个表都是一个端点"
 msgid "Every unit, every op"
 msgstr "每个单位，每个操作"
 
-#: app/routes/pricing.tsx:75
+#: app/routes/pricing.tsx:77
 msgid "Everything in Business, plus a custom solution to meet your needs"
 msgstr "业务中的所有功能，加上满足您需求的定制解决方案"
 
@@ -640,7 +648,7 @@ msgstr "首件检测"
 msgid "First article inspection, non-conformance, CAPA and gauge calibration sit on the same records as production. Pull any serial number and get its full genealogy — material certs, operators, measurements, deviations."
 msgstr "首件检测、不合格、CAPA和测量仪校准与生产坐在相同的记录中。拉取任何序列号并获取其完整溯源——物料证书、操作员、测量、偏差。"
 
-#: app/routes/pricing.tsx:79
+#: app/routes/pricing.tsx:81
 msgid "Forward deployed engineer"
 msgstr "前置部署工程师"
 
@@ -656,7 +664,7 @@ msgstr "四个系统，一个架构。"
 msgid "Full Name"
 msgstr "全名"
 
-#: app/routes/pricing.tsx:83
+#: app/routes/pricing.tsx:85
 msgid "Full setup and migrations"
 msgstr "完整的设置和迁移"
 
@@ -676,7 +684,7 @@ msgstr "直接从 Carbon 的模式生成 — 381 个资源和 1,641 个端点，
 msgid "Get Started"
 msgstr "开始"
 
-#: app/routes/pricing.tsx:194
+#: app/routes/pricing.tsx:196
 msgid "Get started for free."
 msgstr "免费开始。"
 
@@ -857,7 +865,7 @@ msgstr "长交货期、基于项目的构建"
 msgid "Low monthly payments"
 msgstr "低月度付款"
 
-#: app/routes/pricing.tsx:102
+#: app/routes/pricing.tsx:104
 msgid "Managed cloud or self-host the open-source core. Start free for 30 days — no sales call required."
 msgstr "托管云或自托管开源内核。免费开始30天——无需销售电话。"
 
@@ -905,7 +913,7 @@ msgstr "消息"
 msgid "money in, money out"
 msgstr "进钱、出钱"
 
-#: app/routes/pricing.tsx:70
+#: app/routes/pricing.tsx:72
 msgid "Most popular"
 msgstr "最受欢迎"
 
@@ -1120,11 +1128,11 @@ msgstr "反应器"
 msgid "Read it. Extend it."
 msgstr "阅读它。扩展它。"
 
-#: app/routes/pricing.tsx:215
+#: app/routes/pricing.tsx:217
 msgid "Read the Docs"
 msgstr "阅读文档"
 
-#: app/routes/pricing.tsx:197
+#: app/routes/pricing.tsx:199
 msgid "Read the source, run it in your own environment, and start developing locally."
 msgstr "读取源代码、在您自己的环境中运行，并开始在本地开发。"
 
@@ -1220,7 +1228,7 @@ msgstr "自主托管"
 msgid "Self-Hosted"
 msgstr "自托管"
 
-#: app/routes/pricing.tsx:78
+#: app/routes/pricing.tsx:80
 msgid "Self-hosted or managed"
 msgstr "自托管或托管"
 
@@ -1272,7 +1280,7 @@ msgstr "车间/作业单"
 msgid "Shop Floor Apps"
 msgstr "车间应用"
 
-#: app/routes/pricing.tsx:62
+#: app/routes/pricing.tsx:63
 msgid "Shop floor console mode"
 msgstr "车间控制台模式"
 
@@ -1284,7 +1292,7 @@ msgstr "短缺升级"
 msgid "Shortages found on the floor"
 msgstr "在车间发现的短缺"
 
-#: app/routes/pricing.tsx:99
+#: app/routes/pricing.tsx:101
 msgid "Simple pricing based on your needs."
 msgstr "基于您需求的简单定价。"
 
@@ -1320,11 +1328,11 @@ msgstr "空间"
 msgid "Spreadsheet"
 msgstr "电子表格"
 
-#: app/routes/pricing.tsx:84
+#: app/routes/pricing.tsx:86
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
-#: app/routes/pricing.tsx:221
+#: app/routes/pricing.tsx:223
 msgid "Star on GitHub"
 msgstr "在 GitHub 上标星"
 
@@ -1433,7 +1441,7 @@ msgstr "取消分支您的 BOM。"
 msgid "Unified system of record"
 msgstr "统一记录系统"
 
-#: app/routes/pricing.tsx:85
+#: app/routes/pricing.tsx:87
 msgid "Unlimited functional support"
 msgstr "无限功能支持"
 
@@ -1453,7 +1461,7 @@ msgstr "查看我们的源代码并做出贡献"
 msgid "View the source"
 msgstr "查看源代码"
 
-#: app/routes/pricing.tsx:201
+#: app/routes/pricing.tsx:203
 msgid "Want Business features on your own servers? <0>Unlock them with a commercial license</0>."
 msgstr "想要在自己的服务器上获得业务功能？<0>使用商业许可证解锁它们</0>。"
 
@@ -1494,8 +1502,8 @@ msgid "Work Instructions"
 msgstr "工作指令"
 
 #: app/routes/pricing.tsx:60
-msgid "Workflows, AI agent, and email notifications"
-msgstr "工作流、AI代理和电子邮件通知"
+msgid "Workflow automation with custom triggers and run history"
+msgstr "具有自定义触发器和运行历史的工作流自动化"
 
 #: app/components/wizard-form.tsx:160
 msgid "You can handle everything yourself"

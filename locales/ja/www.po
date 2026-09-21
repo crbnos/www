@@ -26,7 +26,7 @@ msgstr "18ヶ月実装"
 msgid "21 CFR Part 11"
 msgstr "21 CFR Part 11"
 
-#: app/routes/pricing.tsx:65
+#: app/routes/pricing.tsx:67
 msgid "5 user minimum"
 msgstr "5ユーザー最小"
 
@@ -87,7 +87,7 @@ msgstr "製造業向けのエンドツーエンドシステムを構築して約
 msgid "Agent-ready by default"
 msgstr "デフォルトでエージェント対応"
 
-#: app/routes/pricing.tsx:82
+#: app/routes/pricing.tsx:84
 msgid "Air-gapped and ITAR deployments"
 msgstr "エアギャップおよびITAR展開"
 
@@ -152,7 +152,7 @@ msgstr "エージェントの意見を聞く"
 msgid "Audit it before you deploy it"
 msgstr "デプロイする前に監査してください"
 
-#: app/routes/pricing.tsx:64
+#: app/routes/pricing.tsx:66
 msgid "Audit logging, 2FA enforcement, and backup/restore"
 msgstr "監査ログ、2FA強制、バックアップ/復元"
 
@@ -317,7 +317,7 @@ msgstr "閉じる"
 msgid "Cloud + support"
 msgstr "クラウド + サポート"
 
-#: app/routes/pricing.tsx:81
+#: app/routes/pricing.tsx:83
 msgid "CMMC Level 2 compliance"
 msgstr "CMMC Level 2準拠"
 
@@ -390,8 +390,8 @@ msgid "Contact Sales"
 msgstr "営業に連絡"
 
 #: app/routes/pricing.tsx:54
-#: app/routes/pricing.tsx:71
 #: app/routes/pricing.tsx:73
+#: app/routes/pricing.tsx:75
 msgid "Contact us"
 msgstr "お問い合わせ"
 
@@ -436,7 +436,7 @@ msgstr "カスタム開発"
 msgid "Custom integrations with your existing systems"
 msgstr "既存のシステムとのカスタム統合"
 
-#: app/routes/pricing.tsx:61
+#: app/routes/pricing.tsx:62
 msgid "Custom roles, permissions, and approval rules"
 msgstr "カスタムロール、権限、および承認ルール"
 
@@ -448,11 +448,11 @@ msgstr "顧客ポータル"
 msgid "Customer Portal/Website"
 msgstr "顧客ポータル/ウェブサイト"
 
-#: app/routes/pricing.tsx:63
-msgid "Customer portals and demand forecasting"
-msgstr "顧客ポータルおよび需要予測"
+#: app/routes/pricing.tsx:64
+msgid "Customer portals with live order status and files"
+msgstr "リアルタイム注文ステータスとファイルを備えた顧客ポータル"
 
-#: app/routes/pricing.tsx:80
+#: app/routes/pricing.tsx:82
 msgid "Customizations, training, and integrations"
 msgstr "カスタマイズ、トレーニング、および統合"
 
@@ -491,6 +491,10 @@ msgstr "防衛"
 #: app/routes/_index.tsx:113
 msgid "Demand & forecast"
 msgstr "需要と予測"
+
+#: app/routes/pricing.tsx:65
+msgid "Demand forecasting to plan ahead of orders"
+msgstr "需要予測による先制的な計画"
 
 #: app/components/header.tsx:46
 msgid "Developer guides and API reference"
@@ -535,6 +539,10 @@ msgstr "ドローン"
 msgid "Email Address"
 msgstr "メールアドレス"
 
+#: app/routes/pricing.tsx:61
+msgid "Email notifications, in addition to in-app alerts"
+msgstr "アプリ内アラートに加えてメール通知"
+
 #: app/routes/_index.tsx:220
 msgid "Energy & grid"
 msgstr "エネルギーとグリッド"
@@ -547,7 +555,7 @@ msgstr "エンジニアリング"
 msgid "Engineering change orders"
 msgstr "エンジニアリング変更注文"
 
-#: app/routes/pricing.tsx:69
+#: app/routes/pricing.tsx:71
 msgid "Enterprise"
 msgstr "エンタープライズ"
 
@@ -583,7 +591,7 @@ msgstr "すべてのテーブルがエンドポイント"
 msgid "Every unit, every op"
 msgstr "すべてのユニット、すべての作業"
 
-#: app/routes/pricing.tsx:75
+#: app/routes/pricing.tsx:77
 msgid "Everything in Business, plus a custom solution to meet your needs"
 msgstr "Business内のすべて、およびニーズに合わせたカスタムソリューション"
 
@@ -640,7 +648,7 @@ msgstr "初回品検査"
 msgid "First article inspection, non-conformance, CAPA and gauge calibration sit on the same records as production. Pull any serial number and get its full genealogy — material certs, operators, measurements, deviations."
 msgstr "初回品検査、不適合、CAPA、ゲージキャリブレーションは本番環境と同じレコードに位置しています。任意のシリアル番号をプルして、完全な系統を取得します — 材料証明書、オペレーター、測定、偏差。"
 
-#: app/routes/pricing.tsx:79
+#: app/routes/pricing.tsx:81
 msgid "Forward deployed engineer"
 msgstr "フォワードデプロイエンジニア"
 
@@ -656,7 +664,7 @@ msgstr "4つのシステム、1つのスキーマ。"
 msgid "Full Name"
 msgstr "フルネーム"
 
-#: app/routes/pricing.tsx:83
+#: app/routes/pricing.tsx:85
 msgid "Full setup and migrations"
 msgstr "完全なセットアップと移行"
 
@@ -676,7 +684,7 @@ msgstr "Carbon のスキーマから直接生成 — 381 個のリソースと 1
 msgid "Get Started"
 msgstr "始める"
 
-#: app/routes/pricing.tsx:194
+#: app/routes/pricing.tsx:196
 msgid "Get started for free."
 msgstr "無料で開始。"
 
@@ -857,7 +865,7 @@ msgstr "長期リード、プロジェクトベースのビルド"
 msgid "Low monthly payments"
 msgstr "月額の低い支払い"
 
-#: app/routes/pricing.tsx:102
+#: app/routes/pricing.tsx:104
 msgid "Managed cloud or self-host the open-source core. Start free for 30 days — no sales call required."
 msgstr "管理されたクラウドまたは自己ホストのオープンソースコア。30日間無料で開始 — 営業電話不要。"
 
@@ -905,7 +913,7 @@ msgstr "メッセージ"
 msgid "money in, money out"
 msgstr "お金の出入り"
 
-#: app/routes/pricing.tsx:70
+#: app/routes/pricing.tsx:72
 msgid "Most popular"
 msgstr "最も人気"
 
@@ -1120,11 +1128,11 @@ msgstr "リアクター"
 msgid "Read it. Extend it."
 msgstr "読む。拡張する。"
 
-#: app/routes/pricing.tsx:215
+#: app/routes/pricing.tsx:217
 msgid "Read the Docs"
 msgstr "ドキュメントを読む"
 
-#: app/routes/pricing.tsx:197
+#: app/routes/pricing.tsx:199
 msgid "Read the source, run it in your own environment, and start developing locally."
 msgstr "ソースを読み、独自の環境で実行し、ローカルで開発を開始します。"
 
@@ -1220,7 +1228,7 @@ msgstr "自己ホスト"
 msgid "Self-Hosted"
 msgstr "セルフホスト"
 
-#: app/routes/pricing.tsx:78
+#: app/routes/pricing.tsx:80
 msgid "Self-hosted or managed"
 msgstr "自社ホストまたはマネージド"
 
@@ -1272,7 +1280,7 @@ msgstr "ショップフロア/ジョブトラベラー"
 msgid "Shop Floor Apps"
 msgstr "ショップフロアアプリ"
 
-#: app/routes/pricing.tsx:62
+#: app/routes/pricing.tsx:63
 msgid "Shop floor console mode"
 msgstr "工場フロアコンソールモード"
 
@@ -1284,7 +1292,7 @@ msgstr "不足のエスカレーション"
 msgid "Shortages found on the floor"
 msgstr "床に見つかった不足"
 
-#: app/routes/pricing.tsx:99
+#: app/routes/pricing.tsx:101
 msgid "Simple pricing based on your needs."
 msgstr "ニーズに基づいたシンプルな価格設定。"
 
@@ -1320,11 +1328,11 @@ msgstr "スペース"
 msgid "Spreadsheet"
 msgstr "スプレッドシート"
 
-#: app/routes/pricing.tsx:84
+#: app/routes/pricing.tsx:86
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
-#: app/routes/pricing.tsx:221
+#: app/routes/pricing.tsx:223
 msgid "Star on GitHub"
 msgstr "GitHubでスターを付ける"
 
@@ -1433,7 +1441,7 @@ msgstr "あなたのBOMを統一してください。"
 msgid "Unified system of record"
 msgstr "統一されたシステムオブレコード"
 
-#: app/routes/pricing.tsx:85
+#: app/routes/pricing.tsx:87
 msgid "Unlimited functional support"
 msgstr "無制限の機能サポート"
 
@@ -1453,7 +1461,7 @@ msgstr "ソースコードを表示して貢献する"
 msgid "View the source"
 msgstr "ソースを表示"
 
-#: app/routes/pricing.tsx:201
+#: app/routes/pricing.tsx:203
 msgid "Want Business features on your own servers? <0>Unlock them with a commercial license</0>."
 msgstr "独自のサーバーでBusiness機能が必要ですか？<0>商用ライセンスでそれらをロック解除</0>。"
 
@@ -1494,8 +1502,8 @@ msgid "Work Instructions"
 msgstr "作業指示"
 
 #: app/routes/pricing.tsx:60
-msgid "Workflows, AI agent, and email notifications"
-msgstr "ワークフロー、AIエージェント、およびメール通知"
+msgid "Workflow automation with custom triggers and run history"
+msgstr "カスタムトリガーと実行履歴によるワークフロー自動化"
 
 #: app/components/wizard-form.tsx:160
 msgid "You can handle everything yourself"

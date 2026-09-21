@@ -26,7 +26,7 @@ msgstr "Implementación de 18 meses"
 msgid "21 CFR Part 11"
 msgstr "21 CFR Part 11"
 
-#: app/routes/pricing.tsx:65
+#: app/routes/pricing.tsx:67
 msgid "5 user minimum"
 msgstr "Mínimo de 5 usuarios"
 
@@ -87,7 +87,7 @@ msgstr "Después de pasar casi una década construyendo sistemas completos para 
 msgid "Agent-ready by default"
 msgstr "Preparado para agentes por defecto"
 
-#: app/routes/pricing.tsx:82
+#: app/routes/pricing.tsx:84
 msgid "Air-gapped and ITAR deployments"
 msgstr "Implementaciones aisladas del aire e ITAR"
 
@@ -152,7 +152,7 @@ msgstr "Pregunta a tu agente qué piensa"
 msgid "Audit it before you deploy it"
 msgstr "Auditarlo antes de implementarlo"
 
-#: app/routes/pricing.tsx:64
+#: app/routes/pricing.tsx:66
 msgid "Audit logging, 2FA enforcement, and backup/restore"
 msgstr "Registro de auditoría, cumplimiento de 2FA y copia de seguridad/restauración"
 
@@ -317,7 +317,7 @@ msgstr "Cerrar"
 msgid "Cloud + support"
 msgstr "Cloud + soporte"
 
-#: app/routes/pricing.tsx:81
+#: app/routes/pricing.tsx:83
 msgid "CMMC Level 2 compliance"
 msgstr "Cumplimiento CMMC Nivel 2"
 
@@ -390,8 +390,8 @@ msgid "Contact Sales"
 msgstr "Contactar Ventas"
 
 #: app/routes/pricing.tsx:54
-#: app/routes/pricing.tsx:71
 #: app/routes/pricing.tsx:73
+#: app/routes/pricing.tsx:75
 msgid "Contact us"
 msgstr "Contáctanos"
 
@@ -436,7 +436,7 @@ msgstr "Desarrollo Personalizado"
 msgid "Custom integrations with your existing systems"
 msgstr "Integraciones personalizadas con tus sistemas existentes"
 
-#: app/routes/pricing.tsx:61
+#: app/routes/pricing.tsx:62
 msgid "Custom roles, permissions, and approval rules"
 msgstr "Roles personalizados, permisos y reglas de aprobación"
 
@@ -448,11 +448,11 @@ msgstr "Portal del Cliente"
 msgid "Customer Portal/Website"
 msgstr "Portal del Cliente/Sitio Web"
 
-#: app/routes/pricing.tsx:63
-msgid "Customer portals and demand forecasting"
-msgstr "Portales de clientes y pronóstico de demanda"
+#: app/routes/pricing.tsx:64
+msgid "Customer portals with live order status and files"
+msgstr "Portales de cliente con estado de pedidos en tiempo real y archivos"
 
-#: app/routes/pricing.tsx:80
+#: app/routes/pricing.tsx:82
 msgid "Customizations, training, and integrations"
 msgstr "Personalizaciones, capacitación e integraciones"
 
@@ -491,6 +491,10 @@ msgstr "Defensa"
 #: app/routes/_index.tsx:113
 msgid "Demand & forecast"
 msgstr "Demanda y pronóstico"
+
+#: app/routes/pricing.tsx:65
+msgid "Demand forecasting to plan ahead of orders"
+msgstr "Previsión de demanda para planificar antes de los pedidos"
 
 #: app/components/header.tsx:46
 msgid "Developer guides and API reference"
@@ -535,6 +539,10 @@ msgstr "drones"
 msgid "Email Address"
 msgstr "Dirección de Correo Electrónico"
 
+#: app/routes/pricing.tsx:61
+msgid "Email notifications, in addition to in-app alerts"
+msgstr "Notificaciones por correo electrónico, además de alertas en la aplicación"
+
 #: app/routes/_index.tsx:220
 msgid "Energy & grid"
 msgstr "Energía y red"
@@ -547,7 +555,7 @@ msgstr "Ingeniería"
 msgid "Engineering change orders"
 msgstr "Órdenes de cambio de ingeniería"
 
-#: app/routes/pricing.tsx:69
+#: app/routes/pricing.tsx:71
 msgid "Enterprise"
 msgstr "Empresa"
 
@@ -583,7 +591,7 @@ msgstr "Cada tabla es un endpoint"
 msgid "Every unit, every op"
 msgstr "Cada unidad, cada operación"
 
-#: app/routes/pricing.tsx:75
+#: app/routes/pricing.tsx:77
 msgid "Everything in Business, plus a custom solution to meet your needs"
 msgstr "Todo en Business, más una solución personalizada para satisfacer sus necesidades"
 
@@ -640,7 +648,7 @@ msgstr "Inspección del primer artículo"
 msgid "First article inspection, non-conformance, CAPA and gauge calibration sit on the same records as production. Pull any serial number and get its full genealogy — material certs, operators, measurements, deviations."
 msgstr "La inspección del primer artículo, no conformidad, CAPA y calibración de medidores están en los mismos registros que la producción. Extrae cualquier número de serie y obtén su genealogía completa — certificados de material, operadores, mediciones, desviaciones."
 
-#: app/routes/pricing.tsx:79
+#: app/routes/pricing.tsx:81
 msgid "Forward deployed engineer"
 msgstr "Ingeniero desplegado en sitio"
 
@@ -656,7 +664,7 @@ msgstr "Cuatro sistemas, un esquema."
 msgid "Full Name"
 msgstr "Nombre Completo"
 
-#: app/routes/pricing.tsx:83
+#: app/routes/pricing.tsx:85
 msgid "Full setup and migrations"
 msgstr "Configuración completa y migraciones"
 
@@ -676,7 +684,7 @@ msgstr "Generado directamente desde el esquema de Carbon — 381 recursos y 1.64
 msgid "Get Started"
 msgstr "Comenzar"
 
-#: app/routes/pricing.tsx:194
+#: app/routes/pricing.tsx:196
 msgid "Get started for free."
 msgstr "Comienza gratis."
 
@@ -857,7 +865,7 @@ msgstr "construcción de largo plazo basada en proyectos"
 msgid "Low monthly payments"
 msgstr "Pagos mensuales bajos"
 
-#: app/routes/pricing.tsx:102
+#: app/routes/pricing.tsx:104
 msgid "Managed cloud or self-host the open-source core. Start free for 30 days — no sales call required."
 msgstr "Nube administrada o aloja el núcleo de código abierto. Comienza gratis por 30 días — no se requiere llamada de ventas."
 
@@ -905,7 +913,7 @@ msgstr "Mensaje"
 msgid "money in, money out"
 msgstr "dinero dentro, dinero fuera"
 
-#: app/routes/pricing.tsx:70
+#: app/routes/pricing.tsx:72
 msgid "Most popular"
 msgstr "Más popular"
 
@@ -1120,11 +1128,11 @@ msgstr "reactores"
 msgid "Read it. Extend it."
 msgstr "Léelo. Extiéndelo."
 
-#: app/routes/pricing.tsx:215
+#: app/routes/pricing.tsx:217
 msgid "Read the Docs"
 msgstr "Leer la documentación"
 
-#: app/routes/pricing.tsx:197
+#: app/routes/pricing.tsx:199
 msgid "Read the source, run it in your own environment, and start developing locally."
 msgstr "Lee el código fuente, ejecútalo en tu propio entorno y comienza a desarrollar localmente."
 
@@ -1220,7 +1228,7 @@ msgstr "Alojado por sí mismo"
 msgid "Self-Hosted"
 msgstr "Auto-hospedado"
 
-#: app/routes/pricing.tsx:78
+#: app/routes/pricing.tsx:80
 msgid "Self-hosted or managed"
 msgstr "Auto-hospedado o administrado"
 
@@ -1272,7 +1280,7 @@ msgstr "Piso de taller / viajante de trabajo"
 msgid "Shop Floor Apps"
 msgstr "Aplicaciones de Planta de Producción"
 
-#: app/routes/pricing.tsx:62
+#: app/routes/pricing.tsx:63
 msgid "Shop floor console mode"
 msgstr "Modo de consola del piso de producción"
 
@@ -1284,7 +1292,7 @@ msgstr "Escalada de escasez"
 msgid "Shortages found on the floor"
 msgstr "Escaseces encontradas en el piso"
 
-#: app/routes/pricing.tsx:99
+#: app/routes/pricing.tsx:101
 msgid "Simple pricing based on your needs."
 msgstr "Precios simples basados en tus necesidades."
 
@@ -1320,11 +1328,11 @@ msgstr "Espacio"
 msgid "Spreadsheet"
 msgstr "Hoja de cálculo"
 
-#: app/routes/pricing.tsx:84
+#: app/routes/pricing.tsx:86
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
-#: app/routes/pricing.tsx:221
+#: app/routes/pricing.tsx:223
 msgid "Star on GitHub"
 msgstr "Destacar en GitHub"
 
@@ -1433,7 +1441,7 @@ msgstr "Unifica tu BOM."
 msgid "Unified system of record"
 msgstr "Sistema unificado de registro"
 
-#: app/routes/pricing.tsx:85
+#: app/routes/pricing.tsx:87
 msgid "Unlimited functional support"
 msgstr "Soporte funcional ilimitado"
 
@@ -1453,7 +1461,7 @@ msgstr "Ver nuestro código fuente y contribuir"
 msgid "View the source"
 msgstr "Ver el código fuente"
 
-#: app/routes/pricing.tsx:201
+#: app/routes/pricing.tsx:203
 msgid "Want Business features on your own servers? <0>Unlock them with a commercial license</0>."
 msgstr "¿Quiere características de Business en sus propios servidores? <0>Desbloquéalas con una licencia comercial</0>."
 
@@ -1494,8 +1502,8 @@ msgid "Work Instructions"
 msgstr "Instrucciones de Trabajo"
 
 #: app/routes/pricing.tsx:60
-msgid "Workflows, AI agent, and email notifications"
-msgstr "Flujos de trabajo, agente de IA y notificaciones por correo electrónico"
+msgid "Workflow automation with custom triggers and run history"
+msgstr "Automatización de flujo de trabajo con activadores personalizados e historial de ejecución"
 
 #: app/components/wizard-form.tsx:160
 msgid "You can handle everything yourself"
