@@ -283,7 +283,7 @@ export default function Compare() {
           }}
         />
         <div className="relative mx-auto max-w-[1000px] px-6 text-center">
-          <div className={eyebrow}>Open core · Self-host · API-first</div>
+          <div className={eyebrow}>Open source · Self-host · API-first</div>
           <h2 className="mt-6 font-display font-semibold tracking-[-0.045em] leading-[0.96] text-[clamp(2.25rem,5vw,4.5rem)]">
             See Carbon on your own parts.
           </h2>

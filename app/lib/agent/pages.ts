@@ -123,7 +123,7 @@ Everything in Starter, and the features below.
 - Custom roles, permissions, and approval rules
 - Shop floor console mode
 - Customer portals and demand forecasting
-- Audit logging, 2FA, and backup/restore
+- Audit logging, 2FA enforcement, and backup/restore
 - 5 user minimum
 
 [Start a 30-day free trial](${APP_URL})

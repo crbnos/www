@@ -153,8 +153,8 @@ msgid "Audit it before you deploy it"
 msgstr "इसे तैनात करने से पहले इसका ऑडिट करें"
 
 #: app/routes/pricing.tsx:64
-msgid "Audit logging, 2FA, and backup/restore"
-msgstr "ऑडिट लॉगिंग, 2FA, और बैकअप/पुनर्स्थापन"
+msgid "Audit logging, 2FA enforcement, and backup/restore"
+msgstr "ऑडिट लॉगिंग, 2FA प्रवर्तन, और बैकअप/पुनर्स्थापन"
 
 #: app/routes/_index.tsx:86
 msgid "Audit trail is the database"

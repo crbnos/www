@@ -61,7 +61,7 @@ function usePlans() {
 				t`Custom roles, permissions, and approval rules`,
 				t`Shop floor console mode`,
 				t`Customer portals and demand forecasting`,
-				t`Audit logging, 2FA, and backup/restore`,
+				t`Audit logging, 2FA enforcement, and backup/restore`,
 				t`5 user minimum`,
 			],
 		},
