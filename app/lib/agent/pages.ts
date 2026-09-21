@@ -119,7 +119,7 @@ Everything in Starter, and the features below.
 
 - Technical support
 - API, webhooks, integrations, and MCP
-- Workflow automation with custom triggers and run history
+- Workflow automation with custom triggers
 - Email notifications, in addition to in-app alerts
 - Custom roles, permissions, and approval rules
 - Shop floor console mode

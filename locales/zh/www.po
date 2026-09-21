@@ -1502,8 +1502,8 @@ msgid "Work Instructions"
 msgstr "工作指令"
 
 #: app/routes/pricing.tsx:60
-msgid "Workflow automation with custom triggers and run history"
-msgstr "具有自定义触发器和运行历史的工作流自动化"
+msgid "Workflow automation with custom triggers"
+msgstr "自定义触发器的工作流自动化"
 
 #: app/components/wizard-form.tsx:160
 msgid "You can handle everything yourself"

@@ -57,7 +57,7 @@ function usePlans() {
 			features: [
 				t`Technical support`,
 				t`API, webhooks, integrations, and MCP`,
-				t`Workflow automation with custom triggers and run history`,
+				t`Workflow automation with custom triggers`,
 				t`Email notifications, in addition to in-app alerts`,
 				t`Custom roles, permissions, and approval rules`,
 				t`Shop floor console mode`,
