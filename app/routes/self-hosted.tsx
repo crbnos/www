@@ -2,7 +2,6 @@ import { Check, ChevronRight, Copy, Github } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import type { MetaFunction } from "react-router";
-import { AppCtaLabel } from "~/components/app-cta-label";
 import { LogoStrip } from "~/components/logo-strip";
 import { Screenshot } from "~/components/screenshot";
 import { Button } from "~/components/ui/button";
@@ -25,7 +24,6 @@ import { REPO_URL, SITE_URL } from "~/lib/agent/site";
 const DESCRIPTION =
 	"Own the stack: run Carbon on your own infrastructure — on-prem, in your VPC, or fully air-gapped. ERP, MRP, MES and QMS on Postgres you own, source available, with an AGPL-3.0 Community edition.";
 
-const APP_URL = "https://app.carbon.ms";
 const DOCS_URL = "https://docs.carbon.ms";
 
 /* -------------------------------------------------------------------------- */
@@ -35,7 +33,7 @@ const DOCS_URL = "https://docs.carbon.ms";
 const faqs = [
 	{
 		q: "Is Carbon open source?",
-		a: "Carbon is open core. The Community edition — the full ERP, MRP, MES and QMS — is on GitHub under AGPL-3.0 and free to self-host. Enterprise features and keeping a private fork require a commercial license. Either way, every line is in the public repository, so you can audit it before you deploy.",
+		a: "Yes. The Community edition — the core ERP, MRP, MES and QMS — is on GitHub under AGPL-3.0 and free to self-host. A private fork is fine under AGPL-3.0. You need a commercial license to use Enterprise features, or to keep your changes private from the people who use your modified version (AGPL-3.0 requires you to offer them the source). Either way, every line is in the public repository, so you can audit it before you deploy.",
 	},
 	{
 		q: "Does Carbon help with CMMC compliance?",
@@ -47,11 +45,11 @@ const faqs = [
 	},
 	{
 		q: "Is the self-hosted version the same as the cloud?",
-		a: "It is the same codebase. The managed cloud at app.carbon.ms is this repository, operated by us. Self-hosting gives you the same ERP, MRP, MES and QMS — the same REST API and MCP server — on infrastructure you own; Enterprise features unlock with a commercial license.",
+		a: "It is the same codebase. The managed cloud at app.carbon.ms is this repository, operated by us. Self-hosting gives you the same ERP, MRP, MES and QMS on infrastructure you own; the same REST API and MCP server need a commercial license when self-hosting, and other Enterprise features unlock with one too.",
 	},
 	{
 		q: "Can I bring my own AI models?",
-		a: "Yes. The whole backend is exposed over a REST API and a built-in MCP server, so you point your own agents — Claude, ChatGPT, a local model — at your own data. Nothing leaves your perimeter unless you send it.",
+		a: "Yes. The whole backend is exposed over a REST API and a built-in MCP server, so you point your own agents — Claude, ChatGPT, a local model — at your own data. API keys and the MCP server are a Business feature, so self-hosting them needs a commercial license. Nothing leaves your perimeter unless you send it.",
 	},
 	{
 		q: "Do you help with deployment?",
@@ -108,7 +106,7 @@ const walls = [
 		desc: "Carbon runs against a Postgres database you own, on hardware you control. BOMs, travelers, serial genealogy and costs stay inside your perimeter — on-prem, in your VPC, or fully air-gapped.",
 	},
 	{
-		tag: "Source available",
+		tag: "Open source",
 		name: "Audit the code before you deploy it",
 		desc: "The whole application is on GitHub — the Community edition under AGPL-3.0. Read every line, run a security review, and extend it to fit your process — no black box sitting on your most sensitive records.",
 	},
@@ -201,7 +199,7 @@ const owns = [
 	{
 		tag: "Your LLM",
 		name: "Bring your own agents",
-		desc: "Every table is a REST endpoint and a built-in MCP server exposes the whole backend. Point Claude, ChatGPT or a local model at your live data — inside your perimeter, on your keys.",
+		desc: "Every table is a REST endpoint and a built-in MCP server exposes the whole backend. Point Claude, ChatGPT or a local model at your live data — inside your perimeter, on your keys. API keys and MCP are a Business feature, so self-hosting them needs a commercial license.",
 	},
 	{
 		tag: "Your storage",
@@ -215,7 +213,7 @@ const parity = [
 	"MRP — demand, supply planning, BOM and routing versions",
 	"MES — digital travelers, operator terminal, live scheduling",
 	"QMS — first article, NCR/CAPA, calibration and genealogy",
-	"REST API and MCP server across every module",
+	"REST API and MCP server across every module (commercial license to self-host)",
 	"SSO / SAML, granular permissions and row-level security",
 	"Multi-entity, multi-location, consolidated accounting",
 	"ITAR-ready, CMMC and NIST 800-171 aligned deployment",
@@ -260,16 +258,15 @@ function Hero() {
 				</div>
 
 				<h1 className="mt-10 font-display font-semibold tracking-[-0.045em] leading-[1.0] text-[clamp(2.75rem,5.8vw,5.25rem)]">
-					The world's only open-source
+					Open-source ERP that runs
 					<br />
-					<span className="text-secondary">manufacturing ERP</span>
+					<span className="text-secondary">inside your CMMC boundary</span>
 				</h1>
 
 				<p className="mt-9 max-w-[70ch] text-lg leading-relaxed text-muted-foreground">
 					The whole system of record — ERP, MRP, MES and QMS — on Postgres you
-					own. On-prem, in your VPC, or fully air-gapped. Source-available, so
-					you can audit every line before it ever touches your most sensitive
-					records.
+					own. On-prem, in your VPC, or fully air-gapped. Open source, so you can
+					audit every line before it ever touches your most sensitive records.
 				</p>
 
 				<div className="mt-10 flex flex-wrap gap-2.5">
@@ -589,8 +586,12 @@ function Parity() {
 								<Link to="/sales">Talk to sales</Link>
 							</Button>
 							<Button asChild variant="accentOutline" size="cta">
-								<a href={APP_URL}>
-									<AppCtaLabel />
+								<a
+									href="https://docs.carbon.ms/docs/platform/self-hosting"
+									target="_blank"
+									rel="noopener"
+								>
+									Deploy it yourself
 								</a>
 							</Button>
 						</div>
@@ -742,11 +743,11 @@ export default function SelfHosted() {
 	return (
 		<>
 			<Hero />
+			<Principles />
 			<LogoStrip
-				headline="Two hard tech unicorns run Carbon on their own servers."
+				headline="Defense and aerospace manufacturers run Carbon on their own servers."
 				label="Defense · aerospace · regulated manufacturing"
 			/>
-			<Principles />
 			<Walls />
 			<FeatureRows />
 			<Deploy />
