@@ -36,8 +36,10 @@ function usePlans() {
 			description: t`A managed cloud-hosted version of Carbon`,
 			featured: false,
 			features: [
-				t`Automatic updates and backups`,
-				t`Basic ERP, MES, and QMS functionality`,
+				t`Automatic updates and cloud backups`,
+				t`Basic ERP, MES, MRP, and QMS functionality`,
+				t`Accounting with general ledger, financial reports, fixed assets, and multi-currency`,
+				t`Product configurator with rules-based BOMs and routings`,
 				t`Unlimited records`,
 				t`Self-onboarding`,
 				t`Community support`,
@@ -46,7 +48,7 @@ function usePlans() {
 		{
 			name: t`Business`,
 			tag: t`Cloud + support`,
-			description: t`A managed cloud-hosted version of Carbon that includes support and all advanced features`,
+			description: t`Everything in Starter, and the features below`,
 			priceHeadline: "$100",
 			priceSubtext: t`/user/month`,
 			action: t`Contact us`,
@@ -54,10 +56,14 @@ function usePlans() {
 			featured: false,
 			features: [
 				t`Technical support`,
-				t`API, webhooks, and integrations`,
-				t`Accounting`,
-				t`Audit logging`,
-				t`All advanced features available`,
+				t`API, webhooks, integrations, and MCP`,
+				t`Workflow automation with custom triggers`,
+				t`Demand forecasting to plan ahead of orders`,
+				t`Shop floor console mode`,
+				t`Customer portals with live order status and files`,
+				t`Email and Slack notifications`,
+				t`Custom roles, permissions, and approval rules`,
+				t`Audit logging, 2FA enforcement, and backup/restore`,
 				t`5 user minimum`,
 			],
 		},
@@ -68,13 +74,14 @@ function usePlans() {
 			priceSubtext: "",
 			action: t`Contact us`,
 			url: "/sales",
-			description: t`A custom solution to meet your needs`,
+			description: t`Everything in Business, plus a custom solution to meet your needs`,
 			featured: true,
 			features: [
 				t`Self-hosted or managed`,
 				t`Forward deployed engineer`,
 				t`Customizations, training, and integrations`,
-				t`CMMC compliant`,
+				t`CMMC Level 2 compliance`,
+				t`Air-gapped and ITAR deployments`,
 				t`Full setup and migrations`,
 				t`SSO/SAML`,
 				t`Unlimited functional support`,
@@ -184,7 +191,7 @@ export default function Pricing() {
 					}}
 				/>
 				<div className="relative mx-auto max-w-[1000px] px-6 text-center">
-					<div className={eyebrow}>Open core · Self-host</div>
+					<div className={eyebrow}>Open source · Self-host</div>
 					<h2 className="mt-6 font-display font-semibold tracking-[-0.045em] leading-[0.96] text-[clamp(2.25rem,5vw,4.5rem)]">
 						<Trans>Get started for free.</Trans>
 					</h2>
@@ -192,6 +199,16 @@ export default function Pricing() {
 						<Trans>
 							Read the source, run it in your own environment, and start
 							developing locally.
+						</Trans>{" "}
+						<Trans>
+							Want Business features on your own servers?{" "}
+							<Link
+								to="/sales"
+								className="font-medium text-secondary hover:underline"
+							>
+								Unlock them with a commercial license
+							</Link>
+							.
 						</Trans>
 					</p>
 					<div className="mt-10 flex flex-wrap justify-center gap-3">

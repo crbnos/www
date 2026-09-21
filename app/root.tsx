@@ -237,7 +237,7 @@ export const meta: MetaFunction = ({ data }) => {
 							priceCurrency: "USD",
 							url: `${siteUrl}/pricing`,
 							description:
-								"Managed cloud with support, API access and all advanced features, per user per month. 5 user minimum.",
+								"Managed cloud with technical support, API access, workflows, and more, per user per month. 5 user minimum.",
 						},
 						{
 							"@type": "Offer",

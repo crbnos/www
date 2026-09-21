@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: app/routes/pricing.tsx:33
-#: app/routes/pricing.tsx:51
+#: app/routes/pricing.tsx:53
 msgid "/user/month"
 msgstr "/用户/月"
 
@@ -26,7 +26,7 @@ msgstr "18个月实现"
 msgid "21 CFR Part 11"
 msgstr "21 CFR Part 11"
 
-#: app/routes/pricing.tsx:61
+#: app/routes/pricing.tsx:67
 msgid "5 user minimum"
 msgstr "5个用户最少"
 
@@ -34,17 +34,9 @@ msgstr "5个用户最少"
 msgid "A built-in MCP server exposes 1,374 operations across 15 modules through three discovery tools. Permissions are baked in — an agent can never do what its identity can't."
 msgstr "内置 MCP 服务器通过三个发现工具公开 15 个模块中的 1,374 个操作。权限已内置 — 代理永远无法执行其身份无法执行的操作。"
 
-#: app/routes/pricing.tsx:71
-msgid "A custom solution to meet your needs"
-msgstr "满足您需求的定制解决方案"
-
 #: app/routes/pricing.tsx:36
 msgid "A managed cloud-hosted version of Carbon"
 msgstr "Carbon 的托管云托管版本"
-
-#: app/routes/pricing.tsx:49
-msgid "A managed cloud-hosted version of Carbon that includes support and all advanced features"
-msgstr "一个托管的云托管版本的 Carbon，包括支持和所有高级功能"
 
 #: app/routes/_index.tsx:205
 msgid "A typed TypeScript monorepo with one generated database type shared across the app, the API, and the AI tools. Bring your own LLM."
@@ -56,9 +48,12 @@ msgid "About"
 msgstr "关于"
 
 #: app/routes/_index.tsx:162
-#: app/routes/pricing.tsx:58
 msgid "Accounting"
 msgstr "会计"
+
+#: app/routes/pricing.tsx:41
+msgid "Accounting with general ledger, financial reports, fixed assets, and multi-currency"
+msgstr "具有总帐、财务报告、固定资产和多币种的会计"
 
 #: app/routes/_index.tsx:68
 msgid "Accounting-focused"
@@ -92,9 +87,9 @@ msgstr "在花了近十年时间为制造业构建端到端系统后，从技术
 msgid "Agent-ready by default"
 msgstr "默认代理就绪"
 
-#: app/routes/pricing.tsx:60
-msgid "All advanced features available"
-msgstr "所有高级功能可用"
+#: app/routes/pricing.tsx:84
+msgid "Air-gapped and ITAR deployments"
+msgstr "气隙式和ITAR部署"
 
 #: app/routes/brand.tsx:23
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
@@ -110,7 +105,7 @@ msgstr "分析"
 
 #: app/routes/_index.tsx:1258
 msgid "And some of the world's most innovative manufacturers"
-msgstr ""
+msgstr "以及世界上一些最具创新精神的制造商"
 
 #: app/routes/_index.tsx:567
 #: app/routes/_index.tsx:574
@@ -137,9 +132,9 @@ msgstr "优先使用 API，提供一流的 MCP 支持"
 msgid "API, MCP, apps"
 msgstr "API、MCP、应用"
 
-#: app/routes/pricing.tsx:57
-msgid "API, webhooks, and integrations"
-msgstr "API、Webhook 和集成"
+#: app/routes/pricing.tsx:59
+msgid "API, webhooks, integrations, and MCP"
+msgstr "API、网络钩子、集成和MCP"
 
 #: app/routes/_index.tsx:232
 msgid "AS9100"
@@ -155,11 +150,11 @@ msgstr "询问您的代理的看法"
 
 #: app/routes/_index.tsx:1113
 msgid "Audit it before you deploy it"
-msgstr ""
+msgstr "在部署前进行审计"
 
-#: app/routes/pricing.tsx:59
-msgid "Audit logging"
-msgstr "审计日志"
+#: app/routes/pricing.tsx:66
+msgid "Audit logging, 2FA enforcement, and backup/restore"
+msgstr "审计日志、2FA强制执行和备份/恢复"
 
 #: app/routes/_index.tsx:86
 msgid "Audit trail is the database"
@@ -178,8 +173,8 @@ msgid "Auto-generated API Documentation"
 msgstr "自动生成的API文档"
 
 #: app/routes/pricing.tsx:39
-msgid "Automatic updates and backups"
-msgstr "自动更新和备份"
+msgid "Automatic updates and cloud backups"
+msgstr "自动更新和云备份"
 
 #: app/routes/_index.tsx:212
 msgid "Automotive"
@@ -198,8 +193,8 @@ msgid "Based on assumptions"
 msgstr "基于假设"
 
 #: app/routes/pricing.tsx:40
-msgid "Basic ERP, MES, and QMS functionality"
-msgstr "基础ERP、MES和QMS功能"
+msgid "Basic ERP, MES, MRP, and QMS functionality"
+msgstr "基本ERP、MES、MRP和QMS功能"
 
 #: app/routes/_index.tsx:591
 msgid "Best ERP/MRP/MES system I've ever seen in a 22-year career across defense and automotive. Native Onshape integration means we synchronize all our data without extra PLM connectors — good UX, modern integrations, open source, open API and MCP, cloud or on-prem. We run our whole electric-vehicle engineering and manufacturing business on Carbon, and I couldn't imagine going back to a legacy system."
@@ -240,9 +235,9 @@ msgstr "自研还是购买"
 
 #: app/routes/_index.tsx:1103
 msgid "Built for CMMC compliance"
-msgstr ""
+msgstr "为CMMC合规性而构建"
 
-#: app/routes/pricing.tsx:47
+#: app/routes/pricing.tsx:49
 msgid "Business"
 msgstr "商业"
 
@@ -318,23 +313,23 @@ msgstr "洁净室操作、产率分析"
 msgid "Close"
 msgstr "关闭"
 
-#: app/routes/pricing.tsx:48
+#: app/routes/pricing.tsx:50
 msgid "Cloud + support"
 msgstr "云 + 支持"
 
-#: app/routes/pricing.tsx:77
-msgid "CMMC compliant"
-msgstr ""
+#: app/routes/pricing.tsx:83
+msgid "CMMC Level 2 compliance"
+msgstr "CMMC 2级合规性"
 
 #: app/routes/_index.tsx:1131
 msgid "CMMC-compliant work stays inside your walls."
-msgstr ""
+msgstr "符合CMMC的工作留在您的内部。"
 
 #: app/routes/about.tsx:106
 msgid "Co-Founder and CTO"
 msgstr "联合创始人兼首席技术官"
 
-#: app/routes/pricing.tsx:43
+#: app/routes/pricing.tsx:45
 msgid "Community support"
 msgstr "社区支持"
 
@@ -394,9 +389,9 @@ msgstr "联系信息"
 msgid "Contact Sales"
 msgstr "联系销售"
 
-#: app/routes/pricing.tsx:52
-#: app/routes/pricing.tsx:67
-#: app/routes/pricing.tsx:69
+#: app/routes/pricing.tsx:54
+#: app/routes/pricing.tsx:73
+#: app/routes/pricing.tsx:75
 msgid "Contact us"
 msgstr "联系我们"
 
@@ -441,6 +436,10 @@ msgstr "自定义开发"
 msgid "Custom integrations with your existing systems"
 msgstr "与您现有系统的自定义集成"
 
+#: app/routes/pricing.tsx:65
+msgid "Custom roles, permissions, and approval rules"
+msgstr "自定义角色、权限和批准规则"
+
 #: app/components/hero.tsx:234
 msgid "Customer Portal"
 msgstr "客户门户"
@@ -449,7 +448,11 @@ msgstr "客户门户"
 msgid "Customer Portal/Website"
 msgstr "客户门户/网站"
 
-#: app/routes/pricing.tsx:76
+#: app/routes/pricing.tsx:63
+msgid "Customer portals with live order status and files"
+msgstr "客户门户及实时订单状态和文件"
+
+#: app/routes/pricing.tsx:82
 msgid "Customizations, training, and integrations"
 msgstr "定制、培训和集成"
 
@@ -488,6 +491,10 @@ msgstr "防御"
 #: app/routes/_index.tsx:113
 msgid "Demand & forecast"
 msgstr "需求和预测"
+
+#: app/routes/pricing.tsx:61
+msgid "Demand forecasting to plan ahead of orders"
+msgstr "需求预测以提前规划订单"
 
 #: app/components/header.tsx:46
 msgid "Developer guides and API reference"
@@ -532,6 +539,10 @@ msgstr "无人机"
 msgid "Email Address"
 msgstr "电子邮件地址"
 
+#: app/routes/pricing.tsx:64
+msgid "Email and Slack notifications"
+msgstr "电子邮件和 Slack 通知"
+
 #: app/routes/_index.tsx:220
 msgid "Energy & grid"
 msgstr "能源和电网"
@@ -544,7 +555,7 @@ msgstr "工程"
 msgid "Engineering change orders"
 msgstr "工程变更单"
 
-#: app/routes/pricing.tsx:65
+#: app/routes/pricing.tsx:71
 msgid "Enterprise"
 msgstr "企业"
 
@@ -558,7 +569,7 @@ msgstr "ERP · MRP · MES · QMS"
 
 #: app/routes/_index.tsx:1109
 msgid "ERP, MRP, MES and QMS on a single database you control, with row-level security. Your data never leaves your perimeter — no vendor cloud, no third-party data lake."
-msgstr ""
+msgstr "ERP、MRP、MES和QMS在您控制的单个数据库上，具有行级安全性。您的数据永远不会离开您的周边——没有供应商云，没有第三方数据湖。"
 
 #: app/routes/_index.tsx:280
 msgid "Every part, hour, barcode, and deviation tracked and handled in real-time."
@@ -580,6 +591,14 @@ msgstr "每个表都是一个端点"
 msgid "Every unit, every op"
 msgstr "每个单位，每个操作"
 
+#: app/routes/pricing.tsx:77
+msgid "Everything in Business, plus a custom solution to meet your needs"
+msgstr "业务中的所有功能，加上满足您需求的定制解决方案"
+
+#: app/routes/pricing.tsx:51
+msgid "Everything in Starter, and the features below"
+msgstr "初始版本中的所有功能，以及下面的功能"
+
 #: app/routes/_index.tsx:82
 msgid "Everything integrated"
 msgstr "所有功能集成"
@@ -598,7 +617,7 @@ msgstr "费用"
 
 #: app/routes/_index.tsx:1137
 msgid "Explore self-hosting"
-msgstr ""
+msgstr "探索自主托管"
 
 #: app/routes/_index.tsx:159
 msgid "FAI & NCR"
@@ -629,7 +648,7 @@ msgstr "首件检测"
 msgid "First article inspection, non-conformance, CAPA and gauge calibration sit on the same records as production. Pull any serial number and get its full genealogy — material certs, operators, measurements, deviations."
 msgstr "首件检测、不合格、CAPA和测量仪校准与生产坐在相同的记录中。拉取任何序列号并获取其完整溯源——物料证书、操作员、测量、偏差。"
 
-#: app/routes/pricing.tsx:75
+#: app/routes/pricing.tsx:81
 msgid "Forward deployed engineer"
 msgstr "前置部署工程师"
 
@@ -639,13 +658,13 @@ msgstr "创始人备忘录"
 
 #: app/routes/_index.tsx:718
 msgid "Four systems, one schema."
-msgstr ""
+msgstr "四个系统，一个架构。"
 
 #: app/components/wizard-form.tsx:385
 msgid "Full Name"
 msgstr "全名"
 
-#: app/routes/pricing.tsx:78
+#: app/routes/pricing.tsx:85
 msgid "Full setup and migrations"
 msgstr "完整的设置和迁移"
 
@@ -665,7 +684,7 @@ msgstr "直接从 Carbon 的模式生成 — 381 个资源和 1,641 个端点，
 msgid "Get Started"
 msgstr "开始"
 
-#: app/routes/pricing.tsx:189
+#: app/routes/pricing.tsx:196
 msgid "Get started for free."
 msgstr "免费开始。"
 
@@ -779,7 +798,7 @@ msgstr "看板计划"
 
 #: app/routes/_index.tsx:1104
 msgid "Keep CUI inside your own boundary. Deploy on a single box, your own VPC, or fully air-gapped for defense programs that have to meet CMMC and ITAR requirements."
-msgstr ""
+msgstr "将CUI保留在您自己的边界内。在单个框上、您自己的VPC或完全气隙式部署，用于必须满足CMMC和ITAR要求的防御程序。"
 
 #: app/routes/_index.tsx:132
 msgid "Labor, scrap & rework"
@@ -846,7 +865,7 @@ msgstr "长交货期、基于项目的构建"
 msgid "Low monthly payments"
 msgstr "低月度付款"
 
-#: app/routes/pricing.tsx:97
+#: app/routes/pricing.tsx:104
 msgid "Managed cloud or self-host the open-source core. Start free for 30 days — no sales call required."
 msgstr "托管云或自托管开源内核。免费开始30天——无需销售电话。"
 
@@ -894,7 +913,7 @@ msgstr "消息"
 msgid "money in, money out"
 msgstr "进钱、出钱"
 
-#: app/routes/pricing.tsx:66
+#: app/routes/pricing.tsx:72
 msgid "Most popular"
 msgstr "最受欢迎"
 
@@ -948,7 +967,7 @@ msgstr "无需自定义开发"
 
 #: app/routes/_index.tsx:1108
 msgid "One Postgres schema, and it's yours"
-msgstr ""
+msgstr "一个Postgres架构，它是您的"
 
 #: app/routes/_index.tsx:221
 msgid "one-off, lot-of-one traceability"
@@ -1039,6 +1058,10 @@ msgstr "隐私"
 msgid "Product"
 msgstr "产品"
 
+#: app/routes/pricing.tsx:42
+msgid "Product configurator with rules-based BOMs and routings"
+msgstr "具有基于规则的BOM和工艺路线的产品配置器"
+
 #: app/routes/_index.tsx:158
 msgid "Production"
 msgstr "生产"
@@ -1105,17 +1128,17 @@ msgstr "反应器"
 msgid "Read it. Extend it."
 msgstr "阅读它。扩展它。"
 
-#: app/routes/pricing.tsx:200
+#: app/routes/pricing.tsx:217
 msgid "Read the Docs"
 msgstr "阅读文档"
 
-#: app/routes/pricing.tsx:192
+#: app/routes/pricing.tsx:199
 msgid "Read the source, run it in your own environment, and start developing locally."
 msgstr "读取源代码、在您自己的环境中运行，并开始在本地开发。"
 
 #: app/routes/_index.tsx:279
 msgid "Real-time, real cost shop floor."
-msgstr ""
+msgstr "实时、真实成本的车间。"
 
 #: app/components/wizard-form.tsx:142
 msgid "Recommended. Priority support with dedicated account manager"
@@ -1199,17 +1222,17 @@ msgstr "选择您偏好的托管解决方案"
 #: app/components/header.tsx:209
 #: app/routes/_index.tsx:1127
 msgid "Self-hosted"
-msgstr ""
+msgstr "自主托管"
 
 #: app/components/wizard-form.tsx:100
 msgid "Self-Hosted"
 msgstr "自托管"
 
-#: app/routes/pricing.tsx:74
+#: app/routes/pricing.tsx:80
 msgid "Self-hosted or managed"
 msgstr "自托管或托管"
 
-#: app/routes/pricing.tsx:42
+#: app/routes/pricing.tsx:44
 msgid "Self-onboarding"
 msgstr "自助入门"
 
@@ -1257,6 +1280,10 @@ msgstr "车间/作业单"
 msgid "Shop Floor Apps"
 msgstr "车间应用"
 
+#: app/routes/pricing.tsx:62
+msgid "Shop floor console mode"
+msgstr "车间控制台模式"
+
 #: app/routes/_index.tsx:118
 msgid "Shortage escalation"
 msgstr "短缺升级"
@@ -1265,7 +1292,7 @@ msgstr "短缺升级"
 msgid "Shortages found on the floor"
 msgstr "在车间发现的短缺"
 
-#: app/routes/pricing.tsx:94
+#: app/routes/pricing.tsx:101
 msgid "Simple pricing based on your needs."
 msgstr "基于您需求的简单定价。"
 
@@ -1301,11 +1328,11 @@ msgstr "空间"
 msgid "Spreadsheet"
 msgstr "电子表格"
 
-#: app/routes/pricing.tsx:79
+#: app/routes/pricing.tsx:86
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
-#: app/routes/pricing.tsx:206
+#: app/routes/pricing.tsx:223
 msgid "Star on GitHub"
 msgstr "在 GitHub 上标星"
 
@@ -1354,7 +1381,7 @@ msgstr "替换系统"
 msgid "Tasks"
 msgstr "任务"
 
-#: app/routes/pricing.tsx:56
+#: app/routes/pricing.tsx:58
 msgid "Technical support"
 msgstr "技术支持"
 
@@ -1380,7 +1407,7 @@ msgstr "现代制造堆栈"
 
 #: app/routes/_index.tsx:1114
 msgid "The whole application is on GitHub — the Community edition under AGPL-3.0. Read every line, run a security review, and extend it to fit your process."
-msgstr ""
+msgstr "整个应用程序都在GitHub上——社区版本在AGPL-3.0下。阅读每一行，运行安全审查，并将其扩展以适应您的流程。"
 
 #: app/routes/_index.tsx:295
 msgid "Traceability is the default state."
@@ -1400,7 +1427,7 @@ msgstr "受到世界最创新者的信任"
 
 #: app/routes/_index.tsx:1256
 msgid "Two hard tech unicorns build on Carbon."
-msgstr ""
+msgstr "两个硬科技独角兽在Carbon上构建。"
 
 #: app/routes/_index.tsx:187
 msgid "Typical first deployment"
@@ -1414,11 +1441,11 @@ msgstr "取消分支您的 BOM。"
 msgid "Unified system of record"
 msgstr "统一记录系统"
 
-#: app/routes/pricing.tsx:80
+#: app/routes/pricing.tsx:87
 msgid "Unlimited functional support"
 msgstr "无限功能支持"
 
-#: app/routes/pricing.tsx:41
+#: app/routes/pricing.tsx:43
 msgid "Unlimited records"
 msgstr "无限记录"
 
@@ -1432,7 +1459,11 @@ msgstr "查看我们的源代码并做出贡献"
 
 #: app/routes/_index.tsx:1143
 msgid "View the source"
-msgstr ""
+msgstr "查看源代码"
+
+#: app/routes/pricing.tsx:203
+msgid "Want Business features on your own servers? <0>Unlock them with a commercial license</0>."
+msgstr "想要在自己的服务器上获得业务功能？<0>使用商业许可证解锁它们</0>。"
 
 #: app/routes/about.tsx:57
 msgid "We open-sourced Carbon not because it's a great business plan, but because that's the system I would have wanted when I was in your shoes."
@@ -1469,6 +1500,10 @@ msgstr "工作邮箱"
 #: app/components/hero.tsx:194
 msgid "Work Instructions"
 msgstr "工作指令"
+
+#: app/routes/pricing.tsx:60
+msgid "Workflow automation with custom triggers"
+msgstr "自定义触发器的工作流自动化"
 
 #: app/components/wizard-form.tsx:160
 msgid "You can handle everything yourself"
