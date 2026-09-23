@@ -296,15 +296,13 @@ function Hero() {
 						<div className="relative overflow-hidden border-t border-border sm:h-[min(60vh,680px)]">
 							<Screenshot
 								className="dark:hidden"
-								src="/screenshots/assembly-light.webp"
-								video="/screenshots/assembly-light.mp4"
+								src="/screenshots/self-hosted-light.webp"
 								label="Carbon running on your own servers"
 								eager
 							/>
 							<Screenshot
 								className="hidden dark:block"
-								src="/screenshots/assembly-dark.webp"
-								video="/screenshots/assembly-dark.mp4"
+								src="/screenshots/self-hosted-dark.webp"
 								label="Carbon running on your own servers"
 								eager
 							/>
