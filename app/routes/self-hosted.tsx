@@ -290,21 +290,19 @@ function Hero() {
 					/>
 					<div className="border border-b-0 border-border bg-card px-2.5 pt-2.5">
 						<div className="flex items-center justify-between px-2 pb-3 pt-1.5 font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
-							<span>Carbon / Your infrastructure</span>
+							<span>Carbon / Console</span>
 							<span>On-prem · Live</span>
 						</div>
 						<div className="relative overflow-hidden border-t border-border sm:h-[min(60vh,680px)]">
 							<Screenshot
 								className="dark:hidden"
-								src="/screenshots/assembly-light.webp"
-								video="/screenshots/assembly-light.mp4"
+								src="/screenshots/self-hosted-light.webp"
 								label="Carbon running on your own servers"
 								eager
 							/>
 							<Screenshot
 								className="hidden dark:block"
-								src="/screenshots/assembly-dark.webp"
-								video="/screenshots/assembly-dark.mp4"
+								src="/screenshots/self-hosted-dark.webp"
 								label="Carbon running on your own servers"
 								eager
 							/>
