@@ -37,7 +37,7 @@ const faqs = [
 	},
 	{
 		q: "Does Carbon help with CMMC compliance?",
-		a: "Yes. Self-hosting Carbon keeps your CUI inside your own boundary, which is the foundation of a CMMC and NIST 800-171 program. For Enterprise deployments we provide the compliance artifacts an assessor asks for — a System Security Plan (SSP), a Plan of Action & Milestones (POA&M), and the SPRS score inputs — mapped to how Carbon is deployed on your infrastructure. Carbon is one system in your boundary, not your whole compliance program, but it's built so it doesn't work against you.",
+		a: "Yes. Self-hosting Carbon keeps your CUI inside your own boundary, which is the foundation of a CMMC and NIST 800-171 program. When you run Carbon on our bring-your-own-cloud (BYOC) infrastructure, we guarantee the deployment is audit-ready and provide the compliance artifacts an assessor asks for — a System Security Plan (SSP), a Plan of Action & Milestones (POA&M), and the SPRS score inputs — mapped to how Carbon runs in your cloud.",
 	},
 	{
 		q: "Can Carbon run fully air-gapped?",
