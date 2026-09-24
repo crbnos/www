@@ -490,7 +490,7 @@ function Hero() {
 	return (
 		<section
 			id="hero"
-			className="relative flex min-h-[calc(100vh-var(--header-height))] flex-col overflow-hidden pt-16 sm:pt-24"
+			className="relative overflow-hidden pt-24 sm:pt-36 lg:pt-44"
 		>
 			{/* Tighter gutter at 320px and below so "Build <word>" fits one line.
 			    Raw media query, not max-[320px]: — the `tall` raw screen in
@@ -498,7 +498,7 @@ function Hero() {
 			<div
 				className={cn(shell, "relative [@media(max-width:320px)]:px-4")}
 			>
-				<h1 className="font-display tracking-[-0.025em] text-balance text-[clamp(2.75rem,6.6vw,6.5rem)] leading-[1.12]">
+				<h1 className="font-display tracking-[-0.025em] text-balance text-[clamp(2.5rem,5.6vw,5.5rem)] leading-[1.06]">
 					<Trans>
 						Build <CyclingWord />
 						<br />
@@ -506,7 +506,7 @@ function Hero() {
 					</Trans>
 				</h1>
 
-				<p className="mt-9 max-w-[80ch] text-lg leading-relaxed text-muted-foreground">
+				<p className="mt-8 max-w-[60ch] text-pretty text-lg leading-relaxed text-muted-foreground">
 					<Trans>
 						Carbon is the open-source manufacturing ERP/MES/QMS. Quote, plan,
 						buy, build, inspect and ship on one live model of your factory — from a ten-person prototype shop to a
@@ -514,6 +514,24 @@ function Hero() {
 					</Trans>
 				</p>
 
+				<div className="mt-10 flex flex-col items-start gap-5">
+					<Button asChild variant="accent" size="cta">
+						<a href={APP_URL}>
+							<AppCtaLabel />
+						</a>
+					</Button>
+					<a
+						href={GITHUB_URL}
+						target="_blank"
+						rel="noopener"
+						className="font-mono text-[11px] uppercase leading-none text-muted-foreground transition-colors hover:text-foreground"
+					>
+						<Trans>Or self-host the open source core</Trans>
+					</a>
+				</div>
+			</div>
+
+			<div className={cn(shell, "mt-24 sm:mt-32")}>
 				<HeroDashboard />
 			</div>
 		</section>
@@ -523,7 +541,7 @@ function Hero() {
 function HeroDashboard() {
 	const { t } = useLingui();
 	return (
-		<div className="relative mt-auto pt-16 [perspective:2000px]">
+		<div className="relative [perspective:2000px]">
 			{/* glowing plane edge */}
 			<div
 				aria-hidden
