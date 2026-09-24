@@ -57,7 +57,7 @@ export const meta: MetaFunction = ({ data, params, matches }) => {
   // article never ships a broken `${siteUrl}undefined` social card.
   const socialImageUrl = post.metadata.image
     ? `${siteUrl}${post.metadata.image}`
-    : `${siteUrl}/images/og.webp`;
+    : `${siteUrl}/images/og.jpg`;
 
   // BlogPosting JSON-LD so search engines and answer engines can attribute the
   // article to its author and publisher, and resolve it as a first-class

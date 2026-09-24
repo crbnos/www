@@ -574,8 +574,16 @@ function Testimonial() {
 		<section id="testimonial" className="border-b border-border py-28 sm:py-32">
 			<div className={shell}>
 				<Reveal className="mx-auto max-w-3xl">
-					<figure className="border border-border bg-card shadow-[inset_2px_0_0] shadow-secondary">
-						<div className="p-8 sm:p-12">
+					<figure className="border border-border bg-card">
+						<div className="flow-root p-8 sm:p-12">
+							<svg
+								aria-hidden
+								viewBox="0 0 46 36"
+								className="float-left mt-1.5 mr-4 mb-1 h-auto w-[52px] fill-secondary sm:mr-5 sm:w-[72px]"
+							>
+								<path d="M0 36V22C0 10 6 2 18 0l2 5c-7 2-10 7-10 12h10v19Z" />
+								<path d="M26 36V22c0-12 6-20 18-22l2 5c-7 2-10 7-10 12h10v19Z" />
+							</svg>
 							<blockquote className="text-pretty text-xl text-foreground sm:text-[1.5rem] sm:leading-[1.5] leading-[1.55]">
 								<Trans>
 									Best ERP/MRP/MES system I've ever seen in a 22-year career
@@ -592,10 +600,10 @@ function Testimonial() {
 							<img
 								src="/faces/liam.jpeg"
 								alt="Liam Sill"
-								className="size-12 shrink-0 rounded-full object-cover ring-1 ring-border"
+								className="size-12 shrink-0 rounded-full corner-squircle object-cover ring-1 ring-border"
 							/>
 							<div>
-								<div className="text-[15px] font-medium leading-tight text-foreground">
+								<div className="font-display text-2xl leading-tight text-foreground">
 									Liam Sill
 								</div>
 								<div className="mt-1 font-mono text-[11px] uppercase leading-none tracking-[0.16em] text-muted-foreground">
@@ -772,7 +780,7 @@ function HappyPath() {
 				<Reveal className="flex flex-wrap items-end justify-between gap-8">
 					<div>
 						<h2 className={cn(heading, "mt-5")}>
-							<Trans>CAD to Cash</Trans>
+							<Trans>CAD to Cash</Trans>.
 						</h2>
 					</div>
 					<p className="max-w-[38ch] text-base leading-relaxed text-muted-foreground">

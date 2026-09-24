@@ -10,7 +10,7 @@ const ROOT_META: MetaDescriptor[] = [
   { name: "robots", content: "index,follow" },
   { property: "og:site_name", content: "Carbon" },
   { property: "og:title", content: "Carbon Manufacturing Systems" },
-  { property: "og:image", content: "https://carbon.ms/images/og.webp" },
+  { property: "og:image", content: "https://carbon.ms/images/og.jpg" },
 ];
 
 const MATCHES = [{ id: "root", meta: ROOT_META }, { id: "routes/about" }];
