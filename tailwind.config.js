@@ -151,6 +151,11 @@ export default {
 					"88%": { opacity: "1" },
 					"100%": { transform: "translateX(108%)", opacity: "0" },
 				},
+				// Dashes marching along an SVG path; the 18 matches one dash period.
+				"cb-march": {
+					from: { "stroke-dashoffset": "18" },
+					to: { "stroke-dashoffset": "0" },
+				},
 				"cb-blink": {
 					"0%, 49%": { opacity: "1" },
 					"50%, 100%": { opacity: "0" },
@@ -173,6 +178,7 @@ export default {
 				marquee: "marquee var(--marquee-duration, 40s) linear infinite",
 				"cb-word": "cb-word 0.55s cubic-bezier(0.2, 0.7, 0.2, 1)",
 				"cb-flow": "cb-flow 5.5s linear infinite",
+				"cb-march": "cb-march 0.8s linear infinite",
 				"cb-blink": "cb-blink 1.1s step-end infinite",
 				scan: "scan 6s linear infinite",
 				flicker: "flicker 1.6s steps(1, end) infinite",

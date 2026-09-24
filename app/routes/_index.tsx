@@ -8,6 +8,7 @@ import { Link } from "react-router";
 import type { MetaFunction } from "react-router";
 import { AppCtaLabel } from "~/components/app-cta-label";
 import { CodeExamples } from "~/components/code-examples";
+import { EntityTree } from "~/components/entity-tree";
 import { LogoStrip } from "~/components/logo-strip";
 import { Screenshot } from "~/components/screenshot";
 import { Button } from "~/components/ui/button";
@@ -318,8 +319,7 @@ const featureRows = [
 		],
 		shotLabel: msg`Multi-entity ledger / multi-site planning`,
 		shot: "multi-entity",
-		shotLight: "/screenshots/multi-light.webp",
-		shotDark: "/screenshots/multi-dark.webp",
+		diagram: "entity-tree",
 		flip: true,
 	},
 ];
@@ -772,7 +772,7 @@ function HappyPath() {
 				<Reveal className="flex flex-wrap items-end justify-between gap-8">
 					<div>
 						<h2 className={cn(heading, "mt-5")}>
-							<Trans>CAD to cash, unbroken.</Trans>
+							<Trans>CAD to Cash</Trans>
 						</h2>
 					</div>
 					<p className="max-w-[38ch] text-base leading-relaxed text-muted-foreground">
@@ -817,6 +817,7 @@ function FeatureRows() {
 				{featureRows.map((f) => {
 					const shotLight = "shotLight" in f ? f.shotLight : undefined;
 					const shotDark = "shotDark" in f ? f.shotDark : undefined;
+					const diagram = "diagram" in f ? f.diagram : undefined;
 					return (
 					<Reveal
 						key={f.id}
@@ -843,7 +844,9 @@ function FeatureRows() {
 							)}
 						>
 							<div className="relative overflow-hidden sm:h-[min(52vh,480px)]">
-								{shotLight && shotDark ? (
+								{diagram === "entity-tree" ? (
+									<EntityTree label={i18n._(f.shotLabel)} />
+								) : shotLight && shotDark ? (
 									<>
 										<ZoomableImage
 											className="dark:hidden"
