@@ -72,7 +72,7 @@ export function LogoStrip({
 		<section className={cn("border-y border-border py-16", className)}>
 			<div className={cn(SHELL, "flex flex-col gap-8")}>
 				{headline && (
-					<p className="mx-auto max-w-[24ch] text-balance text-center font-display font-semibold tracking-[-0.02em] leading-[1.05] text-[clamp(1.5rem,3.2vw,2.25rem)]">
+					<p className="mx-auto max-w-[24ch] text-balance text-center font-display tracking-[-0.005em] text-[clamp(1.5rem,3.2vw,2.25rem)] leading-[1.15]">
 						{headline}
 					</p>
 				)}

@@ -88,7 +88,7 @@ export default {
 			fontFamily: {
 				sans: ["Archivo", "Geist Variable", ...fontFamily.sans],
 				mono: ["Geist Mono Variable", ...fontFamily.mono],
-				display: ["Archivo", "Barlow Semi Condensed", ...fontFamily.sans],
+				display: ["Hedvig Letters Serif", ...fontFamily.serif],
 			},
 			width: {
 				"form-sm": "360px",
