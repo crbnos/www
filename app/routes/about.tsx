@@ -17,11 +17,11 @@ export default function About() {
 		<div className="flex flex-1 flex-col">
 			<div className="mx-auto flex flex-col px-4 w-full max-w-4xl mb-28 pt-28">
 				<div className="flex flex-col gap-4 border-[0.5px] bg-card px-8 shadow py-12 lg:p-14 text-lg xl-p-16">
-					<div className="mb-4 flex flex-col gap-1.5 md:mb-6 lg:mb-8 tracking-tight">
-						<p className="dark:text-muted-foreground font-mono uppercase text-base font-light">
+					<div className="mb-4 flex flex-col gap-2 font-mono text-[11px] uppercase leading-none tracking-[0.16em] md:mb-6 lg:mb-8">
+						<p className="text-muted-foreground">
 							<Trans>Founder memo</Trans>
 						</p>
-						<p className="font-mono uppercase font-medium">
+						<p className="font-medium">
 							<Trans>Carbon Manufacturing Systems Corp.</Trans>
 						</p>
 					</div>

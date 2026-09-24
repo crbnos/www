@@ -23,8 +23,8 @@ msgstr "{0} → {1} · 汇总至 {rootName}"
 msgid "{count} entities · {currencies} currencies · one ledger"
 msgstr "{count} 个实体 · {currencies} 种货币 · 一个账本"
 
-#: app/routes/pricing.tsx:33
-#: app/routes/pricing.tsx:53
+#: app/routes/pricing.tsx:40
+#: app/routes/pricing.tsx:66
 msgid "/user/month"
 msgstr "/用户/月"
 
@@ -36,7 +36,7 @@ msgstr "18个月实现"
 msgid "21 CFR Part 11"
 msgstr "21 CFR Part 11"
 
-#: app/routes/pricing.tsx:67
+#: app/routes/pricing.tsx:80
 msgid "5 user minimum"
 msgstr "5个用户最少"
 
@@ -44,7 +44,7 @@ msgstr "5个用户最少"
 msgid "A built-in MCP server exposes 1,374 operations across 15 modules through three discovery tools. Permissions are baked in — an agent can never do what its identity can't."
 msgstr "内置 MCP 服务器通过三个发现工具公开 15 个模块中的 1,374 个操作。权限已内置 — 代理永远无法执行其身份无法执行的操作。"
 
-#: app/routes/pricing.tsx:36
+#: app/routes/pricing.tsx:45
 msgid "A managed cloud-hosted version of Carbon"
 msgstr "Carbon 的托管云托管版本"
 
@@ -61,7 +61,7 @@ msgstr "关于"
 msgid "Accounting"
 msgstr "会计"
 
-#: app/routes/pricing.tsx:41
+#: app/routes/pricing.tsx:52
 msgid "Accounting with general ledger, financial reports, fixed assets, and multi-currency"
 msgstr "具有总帐、财务报告、固定资产和多币种的会计"
 
@@ -97,7 +97,7 @@ msgstr "在花了近十年时间为制造业构建端到端系统后，从技术
 msgid "Agent-ready by default"
 msgstr "默认代理就绪"
 
-#: app/routes/pricing.tsx:84
+#: app/routes/pricing.tsx:99
 msgid "Air-gapped and ITAR deployments"
 msgstr "气隙式和ITAR部署"
 
@@ -143,7 +143,7 @@ msgstr "优先使用 API，提供一流的 MCP 支持"
 msgid "API, MCP, apps"
 msgstr "API、MCP、应用"
 
-#: app/routes/pricing.tsx:59
+#: app/routes/pricing.tsx:72
 msgid "API, webhooks, integrations, and MCP"
 msgstr "API、网络钩子、集成和MCP"
 
@@ -163,7 +163,7 @@ msgstr "询问您的代理的看法"
 msgid "Audit it before you deploy it"
 msgstr "在部署前进行审计"
 
-#: app/routes/pricing.tsx:66
+#: app/routes/pricing.tsx:79
 msgid "Audit logging, 2FA enforcement, and backup/restore"
 msgstr "审计日志、2FA强制执行和备份/恢复"
 
@@ -183,7 +183,7 @@ msgstr "从内存重建的审计"
 msgid "Auto-generated API Documentation"
 msgstr "自动生成的API文档"
 
-#: app/routes/pricing.tsx:39
+#: app/routes/pricing.tsx:50
 msgid "Automatic updates and cloud backups"
 msgstr "自动更新和云备份"
 
@@ -203,7 +203,7 @@ msgstr "条码/二维码追踪"
 msgid "Based on assumptions"
 msgstr "基于假设"
 
-#: app/routes/pricing.tsx:40
+#: app/routes/pricing.tsx:51
 msgid "Basic ERP, MES, MRP, and QMS functionality"
 msgstr "基本ERP、MES、MRP和QMS功能"
 
@@ -214,6 +214,10 @@ msgstr "我在国防和汽车领域22年职业生涯中见过的最好的ERP/MRP
 #: app/components/hero.tsx:230
 msgid "Bill of Materials"
 msgstr "物料清单"
+
+#: app/routes/pricing.tsx:216
+msgid "Billed per user, monthly · 30-day free trial · Cancel anytime"
+msgstr ""
 
 #: app/routes/_index.tsx:249
 msgid "Billing"
@@ -248,7 +252,7 @@ msgstr "自研还是购买"
 msgid "Built for CMMC compliance"
 msgstr "为CMMC合规性而构建"
 
-#: app/routes/pricing.tsx:49
+#: app/routes/pricing.tsx:60
 msgid "Business"
 msgstr "商业"
 
@@ -320,11 +324,15 @@ msgstr "洁净室操作、产率分析"
 msgid "Close"
 msgstr "关闭"
 
-#: app/routes/pricing.tsx:50
+#: app/routes/pricing.tsx:205
+msgid "Cloud"
+msgstr ""
+
+#: app/routes/pricing.tsx:61
 msgid "Cloud + support"
 msgstr "云 + 支持"
 
-#: app/routes/pricing.tsx:83
+#: app/routes/pricing.tsx:98
 msgid "CMMC Level 2 compliance"
 msgstr "CMMC 2级合规性"
 
@@ -336,7 +344,11 @@ msgstr "符合CMMC的工作留在您的内部。"
 msgid "Co-Founder and CTO"
 msgstr "联合创始人兼首席技术官"
 
-#: app/routes/pricing.tsx:45
+#: app/routes/pricing.tsx:37
+msgid "Community Edition"
+msgstr ""
+
+#: app/routes/pricing.tsx:56
 msgid "Community support"
 msgstr "社区支持"
 
@@ -401,9 +413,9 @@ msgstr "联系信息"
 msgid "Contact Sales"
 msgstr "联系销售"
 
-#: app/routes/pricing.tsx:54
-#: app/routes/pricing.tsx:73
-#: app/routes/pricing.tsx:75
+#: app/routes/pricing.tsx:67
+#: app/routes/pricing.tsx:86
+#: app/routes/pricing.tsx:88
 msgid "Contact us"
 msgstr "联系我们"
 
@@ -448,7 +460,7 @@ msgstr "自定义开发"
 msgid "Custom integrations with your existing systems"
 msgstr "与您现有系统的自定义集成"
 
-#: app/routes/pricing.tsx:65
+#: app/routes/pricing.tsx:78
 msgid "Custom roles, permissions, and approval rules"
 msgstr "自定义角色、权限和批准规则"
 
@@ -460,11 +472,11 @@ msgstr "客户门户"
 msgid "Customer Portal/Website"
 msgstr "客户门户/网站"
 
-#: app/routes/pricing.tsx:63
+#: app/routes/pricing.tsx:76
 msgid "Customer portals with live order status and files"
 msgstr "客户门户及实时订单状态和文件"
 
-#: app/routes/pricing.tsx:82
+#: app/routes/pricing.tsx:97
 msgid "Customizations, training, and integrations"
 msgstr "定制、培训和集成"
 
@@ -504,9 +516,13 @@ msgstr "防御"
 msgid "Demand & forecast"
 msgstr "需求和预测"
 
-#: app/routes/pricing.tsx:61
+#: app/routes/pricing.tsx:74
 msgid "Demand forecasting to plan ahead of orders"
 msgstr "需求预测以提前规划订单"
+
+#: app/routes/pricing.tsx:202
+msgid "Deployment"
+msgstr ""
 
 #: app/components/header.tsx:46
 msgid "Developer guides and API reference"
@@ -551,7 +567,7 @@ msgstr "无人机"
 msgid "Email Address"
 msgstr "电子邮件地址"
 
-#: app/routes/pricing.tsx:64
+#: app/routes/pricing.tsx:77
 msgid "Email and Slack notifications"
 msgstr "电子邮件和 Slack 通知"
 
@@ -567,7 +583,7 @@ msgstr "工程"
 msgid "Engineering change orders"
 msgstr "工程变更单"
 
-#: app/routes/pricing.tsx:71
+#: app/routes/pricing.tsx:84
 msgid "Enterprise"
 msgstr "企业"
 
@@ -603,11 +619,15 @@ msgstr "每个表都是一个端点"
 msgid "Every unit, every op"
 msgstr "每个单位，每个操作"
 
-#: app/routes/pricing.tsx:77
+#: app/routes/pricing.tsx:90
 msgid "Everything in Business, plus a custom solution to meet your needs"
 msgstr "业务中的所有功能，加上满足您需求的定制解决方案"
 
-#: app/routes/pricing.tsx:51
+#: app/routes/pricing.tsx:63
+msgid "Everything in Community Edition, and the features below"
+msgstr ""
+
+#: app/routes/pricing.tsx:64
 msgid "Everything in Starter, and the features below"
 msgstr "初始版本中的所有功能，以及下面的功能"
 
@@ -660,7 +680,7 @@ msgstr "首件检测"
 msgid "First article inspection, non-conformance, CAPA and gauge calibration sit on the same records as production. Pull any serial number and get its full genealogy — material certs, operators, measurements, deviations."
 msgstr "首件检测、不合格、CAPA和测量仪校准与生产坐在相同的记录中。拉取任何序列号并获取其完整溯源——物料证书、操作员、测量、偏差。"
 
-#: app/routes/pricing.tsx:81
+#: app/routes/pricing.tsx:96
 msgid "Forward deployed engineer"
 msgstr "前置部署工程师"
 
@@ -676,7 +696,7 @@ msgstr "四个系统，一个架构。"
 msgid "Full Name"
 msgstr "全名"
 
-#: app/routes/pricing.tsx:85
+#: app/routes/pricing.tsx:100
 msgid "Full setup and migrations"
 msgstr "完整的设置和迁移"
 
@@ -692,11 +712,15 @@ msgstr "测量仪校准"
 msgid "Generated straight from Carbon's schema — 381 resources and 1,641 endpoints, with typed clients for TypeScript, Python, C#, and cURL."
 msgstr "直接从 Carbon 的模式生成 — 381 个资源和 1,641 个端点，提供 TypeScript、Python、C# 和 cURL 的类型化客户端。"
 
+#: app/routes/pricing.tsx:67
+msgid "Get a license"
+msgstr ""
+
 #: app/components/hero.tsx:136
 msgid "Get Started"
 msgstr "开始"
 
-#: app/routes/pricing.tsx:196
+#: app/routes/pricing.tsx:251
 msgid "Get started for free."
 msgstr "免费开始。"
 
@@ -856,6 +880,10 @@ msgstr "让我们为您处理基础设施"
 msgid "License"
 msgstr "许可证"
 
+#: app/routes/pricing.tsx:224
+msgid "Licensed per user, monthly · Community Edition free under AGPL-3.0"
+msgstr ""
+
 #: app/components/wizard-form.tsx:136
 msgid "Limited Support"
 msgstr "有限支持"
@@ -881,7 +909,7 @@ msgstr "长交货期、基于项目的构建"
 msgid "Low monthly payments"
 msgstr "低月度付款"
 
-#: app/routes/pricing.tsx:104
+#: app/routes/pricing.tsx:191
 msgid "Managed cloud or self-host the open-source core. Start free for 30 days — no sales call required."
 msgstr "托管云或自托管开源内核。免费开始30天——无需销售电话。"
 
@@ -929,7 +957,7 @@ msgstr "消息"
 msgid "money in, money out"
 msgstr "进钱、出钱"
 
-#: app/routes/pricing.tsx:72
+#: app/routes/pricing.tsx:85
 msgid "Most popular"
 msgstr "最受欢迎"
 
@@ -981,6 +1009,10 @@ msgstr "不合格和CAPA"
 msgid "None Required"
 msgstr "无需自定义开发"
 
+#: app/routes/pricing.tsx:94
+msgid "On-prem, private cloud, or air-gapped"
+msgstr ""
+
 #: app/routes/_index.tsx:1100
 msgid "One Postgres schema, and it's yours"
 msgstr "一个Postgres架构，它是您的"
@@ -992,6 +1024,10 @@ msgstr "一次性、单件溯源"
 #: app/components/wizard-form.tsx:83
 msgid "One-time purchase with full ownership"
 msgstr "一次性购买，完全所有权"
+
+#: app/routes/pricing.tsx:38
+msgid "Open source"
+msgstr ""
 
 #: app/components/status-indicator.tsx:8
 msgid "Operational"
@@ -1074,7 +1110,7 @@ msgstr "隐私"
 msgid "Product"
 msgstr "产品"
 
-#: app/routes/pricing.tsx:42
+#: app/routes/pricing.tsx:53
 msgid "Product configurator with rules-based BOMs and routings"
 msgstr "具有基于规则的BOM和工艺路线的产品配置器"
 
@@ -1144,11 +1180,11 @@ msgstr "反应器"
 msgid "Read it. Extend it."
 msgstr "阅读它。扩展它。"
 
-#: app/routes/pricing.tsx:217
+#: app/routes/pricing.tsx:272
 msgid "Read the Docs"
 msgstr "阅读文档"
 
-#: app/routes/pricing.tsx:199
+#: app/routes/pricing.tsx:254
 msgid "Read the source, run it in your own environment, and start developing locally."
 msgstr "读取源代码、在您自己的环境中运行，并开始在本地开发。"
 
@@ -1206,6 +1242,14 @@ msgstr "行级安全"
 msgid "Rule-based BOM and routing generation"
 msgstr "基于规则的BOM和工艺生成"
 
+#: app/routes/pricing.tsx:95
+msgid "Runs on your cloud"
+msgstr ""
+
+#: app/routes/pricing.tsx:49
+msgid "Runs on your servers or in your VPC with Docker"
+msgstr ""
+
 #: app/components/footer.tsx:50
 msgid "Sales"
 msgstr "销售"
@@ -1234,10 +1278,19 @@ msgstr "选择您所需的支持级别"
 msgid "Select your preferred hosting solution"
 msgstr "选择您偏好的托管解决方案"
 
+#: app/routes/pricing.tsx:55
+msgid "Self-guided installation"
+msgstr ""
+
+#: app/routes/pricing.tsx:41
+msgid "Self-Host Carbon"
+msgstr ""
+
 #: app/components/footer.tsx:64
 #: app/components/header.tsx:89
 #: app/components/header.tsx:209
 #: app/routes/_index.tsx:1119
+#: app/routes/pricing.tsx:209
 msgid "Self-hosted"
 msgstr "自主托管"
 
@@ -1245,15 +1298,15 @@ msgstr "自主托管"
 msgid "Self-Hosted"
 msgstr "自托管"
 
-#: app/routes/pricing.tsx:80
-msgid "Self-hosted or managed"
-msgstr "自托管或托管"
+#: app/routes/pricing.tsx:61
+msgid "Self-hosted + support"
+msgstr ""
 
-#: app/routes/pricing.tsx:44
+#: app/routes/pricing.tsx:55
 msgid "Self-onboarding"
 msgstr "自助入门"
 
-#: app/routes/pricing.tsx:31
+#: app/routes/pricing.tsx:38
 msgid "Self-serve"
 msgstr "自助"
 
@@ -1297,7 +1350,7 @@ msgstr "车间/作业单"
 msgid "Shop Floor Apps"
 msgstr "车间应用"
 
-#: app/routes/pricing.tsx:62
+#: app/routes/pricing.tsx:75
 msgid "Shop floor console mode"
 msgstr "车间控制台模式"
 
@@ -1309,7 +1362,7 @@ msgstr "短缺升级"
 msgid "Shortages found on the floor"
 msgstr "在车间发现的短缺"
 
-#: app/routes/pricing.tsx:101
+#: app/routes/pricing.tsx:188
 msgid "Simple pricing based on your needs."
 msgstr "基于您需求的简单定价。"
 
@@ -1345,16 +1398,16 @@ msgstr "空间"
 msgid "Spreadsheet"
 msgstr "电子表格"
 
-#: app/routes/pricing.tsx:86
+#: app/routes/pricing.tsx:101
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
 #: app/routes/_index.tsx:527
-#: app/routes/pricing.tsx:223
+#: app/routes/pricing.tsx:278
 msgid "Star on GitHub"
 msgstr "在 GitHub 上标星"
 
-#: app/routes/pricing.tsx:34
+#: app/routes/pricing.tsx:41
 msgid "Start 30-day free trial"
 msgstr "开始30天免费试用"
 
@@ -1366,7 +1419,7 @@ msgstr "免费开始"
 msgid "Start now · No call required"
 msgstr "立即开始 · 无需通话"
 
-#: app/routes/pricing.tsx:30
+#: app/routes/pricing.tsx:37
 msgid "Starter"
 msgstr "入门版"
 
@@ -1399,7 +1452,7 @@ msgstr "替换系统"
 msgid "Tasks"
 msgstr "任务"
 
-#: app/routes/pricing.tsx:58
+#: app/routes/pricing.tsx:71
 msgid "Technical support"
 msgstr "技术支持"
 
@@ -1422,6 +1475,10 @@ msgstr "工厂本身"
 #: app/components/hero.tsx:123
 msgid "The Modern Manufacturing Stack"
 msgstr "现代制造堆栈"
+
+#: app/routes/pricing.tsx:44
+msgid "The open-source core of Carbon, free under AGPL-3.0"
+msgstr ""
 
 #: app/routes/_index.tsx:1106
 msgid "The whole application is on GitHub — the Community edition under AGPL-3.0. Read every line, run a security review, and extend it to fit your process."
@@ -1456,11 +1513,11 @@ msgstr "典型首次部署"
 msgid "Unfork your BOM."
 msgstr "取消分支您的 BOM。"
 
-#: app/routes/pricing.tsx:87
+#: app/routes/pricing.tsx:102
 msgid "Unlimited functional support"
 msgstr "无限功能支持"
 
-#: app/routes/pricing.tsx:43
+#: app/routes/pricing.tsx:54
 msgid "Unlimited records"
 msgstr "无限记录"
 
@@ -1476,7 +1533,7 @@ msgstr "查看我们的源代码并做出贡献"
 msgid "View the source"
 msgstr "查看源代码"
 
-#: app/routes/pricing.tsx:203
+#: app/routes/pricing.tsx:258
 msgid "Want Business features on your own servers? <0>Unlock them with a commercial license</0>."
 msgstr "想要在自己的服务器上获得业务功能？<0>使用商业许可证解锁它们</0>。"
 
@@ -1516,7 +1573,7 @@ msgstr "工作邮箱"
 msgid "Work Instructions"
 msgstr "工作指令"
 
-#: app/routes/pricing.tsx:60
+#: app/routes/pricing.tsx:73
 msgid "Workflow automation with custom triggers"
 msgstr "自定义触发器的工作流自动化"
 

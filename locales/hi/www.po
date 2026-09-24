@@ -23,8 +23,8 @@ msgstr "{0} → {1} · {rootName} में समेकित होता ह�
 msgid "{count} entities · {currencies} currencies · one ledger"
 msgstr "{count} संस्थाएं · {currencies} मुद्राएं · एक बहीखाता"
 
-#: app/routes/pricing.tsx:33
-#: app/routes/pricing.tsx:53
+#: app/routes/pricing.tsx:40
+#: app/routes/pricing.tsx:66
 msgid "/user/month"
 msgstr "/उपयोगकर्ता/माह"
 
@@ -36,7 +36,7 @@ msgstr "18-माह कार्यान्वयन"
 msgid "21 CFR Part 11"
 msgstr "21 CFR Part 11"
 
-#: app/routes/pricing.tsx:67
+#: app/routes/pricing.tsx:80
 msgid "5 user minimum"
 msgstr "5 उपयोगकर्ता न्यूनतम"
 
@@ -44,7 +44,7 @@ msgstr "5 उपयोगकर्ता न्यूनतम"
 msgid "A built-in MCP server exposes 1,374 operations across 15 modules through three discovery tools. Permissions are baked in — an agent can never do what its identity can't."
 msgstr "एक अंतर्निर्मित MCP सर्वर 15 मॉड्यूल में 1,374 ऑपरेशन तीन खोज उपकरणों के माध्यम से उजागर करता है। अनुमतियां एम्बेड की गई हैं — एक एजेंट कभी नहीं कर सकता कि उसकी पहचान क्या नहीं कर सकती।"
 
-#: app/routes/pricing.tsx:36
+#: app/routes/pricing.tsx:45
 msgid "A managed cloud-hosted version of Carbon"
 msgstr "Carbon का एक प्रबंधित क्लाउड-होस्टेड संस्करण"
 
@@ -61,7 +61,7 @@ msgstr "के बारे में"
 msgid "Accounting"
 msgstr "लेखांकन"
 
-#: app/routes/pricing.tsx:41
+#: app/routes/pricing.tsx:52
 msgid "Accounting with general ledger, financial reports, fixed assets, and multi-currency"
 msgstr "सामान्य लेजर, वित्तीय रिपोर्ट, अचल संपत्ति और बहु-मुद्रा के साथ लेखांकन"
 
@@ -97,7 +97,7 @@ msgstr "विनिर्माण के लिए लगभग एक दश�
 msgid "Agent-ready by default"
 msgstr "डिफ़ॉल्ट रूप से एजेंट-तैयार"
 
-#: app/routes/pricing.tsx:84
+#: app/routes/pricing.tsx:99
 msgid "Air-gapped and ITAR deployments"
 msgstr "वायु-विच्छिन्न और ITAR तैनातियाँ"
 
@@ -143,7 +143,7 @@ msgstr "API-पहले, प्रथम-श्रेणी MCP के सा�
 msgid "API, MCP, apps"
 msgstr "API, MCP, ऐप्स"
 
-#: app/routes/pricing.tsx:59
+#: app/routes/pricing.tsx:72
 msgid "API, webhooks, integrations, and MCP"
 msgstr "API, वेबहुक्स, एकीकरण, और MCP"
 
@@ -163,7 +163,7 @@ msgstr "अपने एजेंट से पूछें कि वह क्
 msgid "Audit it before you deploy it"
 msgstr "इसे तैनात करने से पहले इसका ऑडिट करें"
 
-#: app/routes/pricing.tsx:66
+#: app/routes/pricing.tsx:79
 msgid "Audit logging, 2FA enforcement, and backup/restore"
 msgstr "ऑडिट लॉगिंग, 2FA प्रवर्तन, और बैकअप/पुनर्स्थापन"
 
@@ -183,7 +183,7 @@ msgstr "स्मृति से पुनर्निर्मित ऑडि
 msgid "Auto-generated API Documentation"
 msgstr "स्वचालित रूप से उत्पन्न API दस्तावेज़"
 
-#: app/routes/pricing.tsx:39
+#: app/routes/pricing.tsx:50
 msgid "Automatic updates and cloud backups"
 msgstr "स्वचालित अपडेट और क्लाउड बैकअप"
 
@@ -203,7 +203,7 @@ msgstr "बारकोड / QR ट्रैकिंग"
 msgid "Based on assumptions"
 msgstr "धारणाओं पर आधारित"
 
-#: app/routes/pricing.tsx:40
+#: app/routes/pricing.tsx:51
 msgid "Basic ERP, MES, MRP, and QMS functionality"
 msgstr "मौलिक ERP, MES, MRP, और QMS कार्यक्षमता"
 
@@ -214,6 +214,10 @@ msgstr "मैंने रक्षा और ऑटोमोटिव मे�
 #: app/components/hero.tsx:230
 msgid "Bill of Materials"
 msgstr "सामग्री की सूची"
+
+#: app/routes/pricing.tsx:216
+msgid "Billed per user, monthly · 30-day free trial · Cancel anytime"
+msgstr ""
 
 #: app/routes/_index.tsx:249
 msgid "Billing"
@@ -248,7 +252,7 @@ msgstr "निर्माण बनाम खरीद"
 msgid "Built for CMMC compliance"
 msgstr "CMMC अनुपालन के लिए निर्मित"
 
-#: app/routes/pricing.tsx:49
+#: app/routes/pricing.tsx:60
 msgid "Business"
 msgstr "व्यावसायिक"
 
@@ -320,11 +324,15 @@ msgstr "शुद्ध कक्ष ops, yield विश्लेषण"
 msgid "Close"
 msgstr "बंद करें"
 
-#: app/routes/pricing.tsx:50
+#: app/routes/pricing.tsx:205
+msgid "Cloud"
+msgstr ""
+
+#: app/routes/pricing.tsx:61
 msgid "Cloud + support"
 msgstr "Cloud + समर्थन"
 
-#: app/routes/pricing.tsx:83
+#: app/routes/pricing.tsx:98
 msgid "CMMC Level 2 compliance"
 msgstr "CMMC स्तर 2 अनुपालन"
 
@@ -336,7 +344,11 @@ msgstr "CMMC-अनुपालनशील कार्य आपकी दी�
 msgid "Co-Founder and CTO"
 msgstr "सह-संस्थापक और CTO"
 
-#: app/routes/pricing.tsx:45
+#: app/routes/pricing.tsx:37
+msgid "Community Edition"
+msgstr ""
+
+#: app/routes/pricing.tsx:56
 msgid "Community support"
 msgstr "सामुदायिक समर्थन"
 
@@ -401,9 +413,9 @@ msgstr "संपर्क जानकारी"
 msgid "Contact Sales"
 msgstr "बिक्रय से संपर्क करें"
 
-#: app/routes/pricing.tsx:54
-#: app/routes/pricing.tsx:73
-#: app/routes/pricing.tsx:75
+#: app/routes/pricing.tsx:67
+#: app/routes/pricing.tsx:86
+#: app/routes/pricing.tsx:88
 msgid "Contact us"
 msgstr "हमसे संपर्क करें"
 
@@ -448,7 +460,7 @@ msgstr "कस्टम विकास"
 msgid "Custom integrations with your existing systems"
 msgstr "आपकी मौजूदा प्रणालियों के साथ कस्टम इंटीग्रेशन"
 
-#: app/routes/pricing.tsx:65
+#: app/routes/pricing.tsx:78
 msgid "Custom roles, permissions, and approval rules"
 msgstr "कस्टम भूमिकाएं, अनुमतियां, और अनुमोदन नियम"
 
@@ -460,11 +472,11 @@ msgstr "ग्राहक पोर्टल"
 msgid "Customer Portal/Website"
 msgstr "ग्राहक पोर्टल/वेबसाइट"
 
-#: app/routes/pricing.tsx:63
+#: app/routes/pricing.tsx:76
 msgid "Customer portals with live order status and files"
 msgstr "लाइव ऑर्डर स्थिति और फ़ाइलों के साथ ग्राहक पोर्टल"
 
-#: app/routes/pricing.tsx:82
+#: app/routes/pricing.tsx:97
 msgid "Customizations, training, and integrations"
 msgstr "अनुकूलन, प्रशिक्षण, और एकीकरण"
 
@@ -504,9 +516,13 @@ msgstr "रक्षा"
 msgid "Demand & forecast"
 msgstr "मांग और पूर्वानुमान"
 
-#: app/routes/pricing.tsx:61
+#: app/routes/pricing.tsx:74
 msgid "Demand forecasting to plan ahead of orders"
 msgstr "ऑर्डर से आगे की योजना के लिए मांग पूर्वानुमान"
+
+#: app/routes/pricing.tsx:202
+msgid "Deployment"
+msgstr ""
 
 #: app/components/header.tsx:46
 msgid "Developer guides and API reference"
@@ -551,7 +567,7 @@ msgstr "ड्रोन"
 msgid "Email Address"
 msgstr "ईमेल पता"
 
-#: app/routes/pricing.tsx:64
+#: app/routes/pricing.tsx:77
 msgid "Email and Slack notifications"
 msgstr "ईमेल और Slack सूचनाएं"
 
@@ -567,7 +583,7 @@ msgstr "इंजीनियरिंग"
 msgid "Engineering change orders"
 msgstr "इंजीनियरिंग परिवर्तन आदेश"
 
-#: app/routes/pricing.tsx:71
+#: app/routes/pricing.tsx:84
 msgid "Enterprise"
 msgstr "एंटरप्राइज़"
 
@@ -603,11 +619,15 @@ msgstr "हर टेबल एक अंतबिंदु है"
 msgid "Every unit, every op"
 msgstr "हर इकाई, हर ऑप"
 
-#: app/routes/pricing.tsx:77
+#: app/routes/pricing.tsx:90
 msgid "Everything in Business, plus a custom solution to meet your needs"
 msgstr "व्यावसायिक में सभी कुछ, साथ ही आपकी आवश्यकताओं को पूरा करने के लिए एक कस्टम समाधान"
 
-#: app/routes/pricing.tsx:51
+#: app/routes/pricing.tsx:63
+msgid "Everything in Community Edition, and the features below"
+msgstr ""
+
+#: app/routes/pricing.tsx:64
 msgid "Everything in Starter, and the features below"
 msgstr "शुरुआतकर्ता में सभी कुछ, और नीचे दी गई सुविधाएं"
 
@@ -660,7 +680,7 @@ msgstr "प्रथम लेख निरीक्षण"
 msgid "First article inspection, non-conformance, CAPA and gauge calibration sit on the same records as production. Pull any serial number and get its full genealogy — material certs, operators, measurements, deviations."
 msgstr "प्रथम लेख निरीक्षण, गैर-अनुरूपता, CAPA और गेज कैलिब्रेशन उत्पादन के समान रिकॉर्ड पर बैठते हैं। कोई भी सीरियल नंबर खींचें और इसकी पूर्ण वंशावली प्राप्त करें — सामग्री certs, ऑपरेटर, माप, विचलन।"
 
-#: app/routes/pricing.tsx:81
+#: app/routes/pricing.tsx:96
 msgid "Forward deployed engineer"
 msgstr "आगे तैनात इंजीनियर"
 
@@ -676,7 +696,7 @@ msgstr "चार सिस्टम, एक स्कीमा।"
 msgid "Full Name"
 msgstr "पूरा नाम"
 
-#: app/routes/pricing.tsx:85
+#: app/routes/pricing.tsx:100
 msgid "Full setup and migrations"
 msgstr "पूर्ण सेटअप और माइग्रेशन"
 
@@ -692,11 +712,15 @@ msgstr "गेज कैलिब्रेशन"
 msgid "Generated straight from Carbon's schema — 381 resources and 1,641 endpoints, with typed clients for TypeScript, Python, C#, and cURL."
 msgstr "Carbon के स्कीमा से सीधे जनरेट किया गया — 381 संसाधन और 1,641 अंतबिंदु, TypeScript, Python, C#, और cURL के लिए टाइप किए गए क्लाइंट के साथ।"
 
+#: app/routes/pricing.tsx:67
+msgid "Get a license"
+msgstr ""
+
 #: app/components/hero.tsx:136
 msgid "Get Started"
 msgstr "शुरुआत करें"
 
-#: app/routes/pricing.tsx:196
+#: app/routes/pricing.tsx:251
 msgid "Get started for free."
 msgstr "मुफ्त में शुरुआत करें।"
 
@@ -856,6 +880,10 @@ msgstr "हमें आपके लिए बुनियादी ढां�
 msgid "License"
 msgstr "लाइसेंस"
 
+#: app/routes/pricing.tsx:224
+msgid "Licensed per user, monthly · Community Edition free under AGPL-3.0"
+msgstr ""
+
 #: app/components/wizard-form.tsx:136
 msgid "Limited Support"
 msgstr "सीमित समर्थन"
@@ -881,7 +909,7 @@ msgstr "लंबी लीड, प्रोजेक्ट-आधारित �
 msgid "Low monthly payments"
 msgstr "कम मासिक भुगतान"
 
-#: app/routes/pricing.tsx:104
+#: app/routes/pricing.tsx:191
 msgid "Managed cloud or self-host the open-source core. Start free for 30 days — no sales call required."
 msgstr "प्रबंधित क्लाउड या खुले स्रोत कोर को स्व-होस्ट करें। 30 दिनों के लिए मुफ्त शुरू करें — कोई बिक्रय कॉल की आवश्यकता नहीं।"
 
@@ -929,7 +957,7 @@ msgstr "संदेश"
 msgid "money in, money out"
 msgstr "पैसा अंदर, पैसा बाहर"
 
-#: app/routes/pricing.tsx:72
+#: app/routes/pricing.tsx:85
 msgid "Most popular"
 msgstr "सबसे लोकप्रिय"
 
@@ -981,6 +1009,10 @@ msgstr "गैर-अनुरूपता और CAPA"
 msgid "None Required"
 msgstr "कोई आवश्यक नहीं"
 
+#: app/routes/pricing.tsx:94
+msgid "On-prem, private cloud, or air-gapped"
+msgstr ""
+
 #: app/routes/_index.tsx:1100
 msgid "One Postgres schema, and it's yours"
 msgstr "एक Postgres स्कीमा, और यह आपका है"
@@ -992,6 +1024,10 @@ msgstr "एकबारी, लॉट-ऑफ-वन ट्रेसेबिल�
 #: app/components/wizard-form.tsx:83
 msgid "One-time purchase with full ownership"
 msgstr "एकबारी खरीद पूर्ण स्वामित्व के साथ"
+
+#: app/routes/pricing.tsx:38
+msgid "Open source"
+msgstr ""
 
 #: app/components/status-indicator.tsx:8
 msgid "Operational"
@@ -1074,7 +1110,7 @@ msgstr "गोपनीयता"
 msgid "Product"
 msgstr "उत्पाद"
 
-#: app/routes/pricing.tsx:42
+#: app/routes/pricing.tsx:53
 msgid "Product configurator with rules-based BOMs and routings"
 msgstr "नियम-आधारित BOMs और रूटिंग के साथ उत्पाद कॉन्फ़िगरेटर"
 
@@ -1144,11 +1180,11 @@ msgstr "रिएक्टर"
 msgid "Read it. Extend it."
 msgstr "इसे पढ़ें। इसे विस्तारित करें।"
 
-#: app/routes/pricing.tsx:217
+#: app/routes/pricing.tsx:272
 msgid "Read the Docs"
 msgstr "डॉक्स पढ़ें"
 
-#: app/routes/pricing.tsx:199
+#: app/routes/pricing.tsx:254
 msgid "Read the source, run it in your own environment, and start developing locally."
 msgstr "स्रोत पढ़ें, इसे अपने स्वयं के वातावरण में चलाएं, और स्थानीय रूप से विकास शुरू करें।"
 
@@ -1206,6 +1242,14 @@ msgstr "पंक्ति-स्तर की सुरक्षा"
 msgid "Rule-based BOM and routing generation"
 msgstr "नियम-आधारित BOM और राउटिंग जनरेशन"
 
+#: app/routes/pricing.tsx:95
+msgid "Runs on your cloud"
+msgstr ""
+
+#: app/routes/pricing.tsx:49
+msgid "Runs on your servers or in your VPC with Docker"
+msgstr ""
+
 #: app/components/footer.tsx:50
 msgid "Sales"
 msgstr "बिक्रय"
@@ -1234,10 +1278,19 @@ msgstr "अपने वांछित समर्थन स्तर का �
 msgid "Select your preferred hosting solution"
 msgstr "अपनी पसंदीदा होस्टिंग समाधान चुनें"
 
+#: app/routes/pricing.tsx:55
+msgid "Self-guided installation"
+msgstr ""
+
+#: app/routes/pricing.tsx:41
+msgid "Self-Host Carbon"
+msgstr ""
+
 #: app/components/footer.tsx:64
 #: app/components/header.tsx:89
 #: app/components/header.tsx:209
 #: app/routes/_index.tsx:1119
+#: app/routes/pricing.tsx:209
 msgid "Self-hosted"
 msgstr "स्व-होस्टेड"
 
@@ -1245,15 +1298,15 @@ msgstr "स्व-होस्टेड"
 msgid "Self-Hosted"
 msgstr "स्व-होस्टेड"
 
-#: app/routes/pricing.tsx:80
-msgid "Self-hosted or managed"
-msgstr "स्व-होस्टेड या प्रबंधित"
+#: app/routes/pricing.tsx:61
+msgid "Self-hosted + support"
+msgstr ""
 
-#: app/routes/pricing.tsx:44
+#: app/routes/pricing.tsx:55
 msgid "Self-onboarding"
 msgstr "स्व-प्रशिक्षण"
 
-#: app/routes/pricing.tsx:31
+#: app/routes/pricing.tsx:38
 msgid "Self-serve"
 msgstr "आत्म-सेवा"
 
@@ -1297,7 +1350,7 @@ msgstr "शॉप फ्लोर / जॉब ट्रैवलर"
 msgid "Shop Floor Apps"
 msgstr "शॉप फ्लोर ऐप्स"
 
-#: app/routes/pricing.tsx:62
+#: app/routes/pricing.tsx:75
 msgid "Shop floor console mode"
 msgstr "शॉप फ्लोर कंसोल मोड"
 
@@ -1309,7 +1362,7 @@ msgstr "कमी की बढ़ोतरी"
 msgid "Shortages found on the floor"
 msgstr "फ्लोर पर पाई गई कमियाँ"
 
-#: app/routes/pricing.tsx:101
+#: app/routes/pricing.tsx:188
 msgid "Simple pricing based on your needs."
 msgstr "आपकी जरूरतों के आधार पर सरल मूल्य निर्धारण।"
 
@@ -1345,16 +1398,16 @@ msgstr "अंतरिक्ष"
 msgid "Spreadsheet"
 msgstr "स्प्रेडशीट"
 
-#: app/routes/pricing.tsx:86
+#: app/routes/pricing.tsx:101
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
 #: app/routes/_index.tsx:527
-#: app/routes/pricing.tsx:223
+#: app/routes/pricing.tsx:278
 msgid "Star on GitHub"
 msgstr "GitHub पर स्टार करें"
 
-#: app/routes/pricing.tsx:34
+#: app/routes/pricing.tsx:41
 msgid "Start 30-day free trial"
 msgstr "30-दिन की निःशुल्क परीक्षण शुरू करें"
 
@@ -1366,7 +1419,7 @@ msgstr "मुफ्त शुरू करें"
 msgid "Start now · No call required"
 msgstr "अभी शुरू करें · कोई कॉल की आवश्यकता नहीं"
 
-#: app/routes/pricing.tsx:30
+#: app/routes/pricing.tsx:37
 msgid "Starter"
 msgstr "स्टार्टर"
 
@@ -1399,7 +1452,7 @@ msgstr "सिस्टम प्रतिस्थापित"
 msgid "Tasks"
 msgstr "कार्य"
 
-#: app/routes/pricing.tsx:58
+#: app/routes/pricing.tsx:71
 msgid "Technical support"
 msgstr "तकनीकी समर्थन"
 
@@ -1422,6 +1475,10 @@ msgstr "फ्लोर ही"
 #: app/components/hero.tsx:123
 msgid "The Modern Manufacturing Stack"
 msgstr "आधुनिक विनिर्माण स्टैक"
+
+#: app/routes/pricing.tsx:44
+msgid "The open-source core of Carbon, free under AGPL-3.0"
+msgstr ""
 
 #: app/routes/_index.tsx:1106
 msgid "The whole application is on GitHub — the Community edition under AGPL-3.0. Read every line, run a security review, and extend it to fit your process."
@@ -1456,11 +1513,11 @@ msgstr "विशिष्ट पहली तैनाती"
 msgid "Unfork your BOM."
 msgstr "अपने BOM को अनफोर्क करें।"
 
-#: app/routes/pricing.tsx:87
+#: app/routes/pricing.tsx:102
 msgid "Unlimited functional support"
 msgstr "असीमित कार्यात्मक समर्थन"
 
-#: app/routes/pricing.tsx:43
+#: app/routes/pricing.tsx:54
 msgid "Unlimited records"
 msgstr "असीमित रिकॉर्ड"
 
@@ -1476,7 +1533,7 @@ msgstr "हमारे स्रोत कोड को देखें और 
 msgid "View the source"
 msgstr "स्रोत देखें"
 
-#: app/routes/pricing.tsx:203
+#: app/routes/pricing.tsx:258
 msgid "Want Business features on your own servers? <0>Unlock them with a commercial license</0>."
 msgstr "अपने स्वयं के सर्वर पर व्यावसायिक सुविधाएं चाहते हैं? <0>व्यावसायिक लाइसेंस के साथ उन्हें अनलॉक करें</0>।"
 
@@ -1516,7 +1573,7 @@ msgstr "कार्य ईमेल"
 msgid "Work Instructions"
 msgstr "कार्य निर्देश"
 
-#: app/routes/pricing.tsx:60
+#: app/routes/pricing.tsx:73
 msgid "Workflow automation with custom triggers"
 msgstr "कस्टम ट्रिगर के साथ वर्कफ़्लो ऑटोमेशन"
 

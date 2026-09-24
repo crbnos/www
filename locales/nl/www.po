@@ -23,8 +23,8 @@ msgstr "{0} → {1} · rolt op naar {rootName}"
 msgid "{count} entities · {currencies} currencies · one ledger"
 msgstr "{count} entiteiten · {currencies} valuta's · één boekhouding"
 
-#: app/routes/pricing.tsx:33
-#: app/routes/pricing.tsx:53
+#: app/routes/pricing.tsx:40
+#: app/routes/pricing.tsx:66
 msgid "/user/month"
 msgstr "/gebruiker/maand"
 
@@ -36,7 +36,7 @@ msgstr "18-maanden implementatie"
 msgid "21 CFR Part 11"
 msgstr "21 CFR Part 11"
 
-#: app/routes/pricing.tsx:67
+#: app/routes/pricing.tsx:80
 msgid "5 user minimum"
 msgstr "5 gebruikers minimum"
 
@@ -44,7 +44,7 @@ msgstr "5 gebruikers minimum"
 msgid "A built-in MCP server exposes 1,374 operations across 15 modules through three discovery tools. Permissions are baked in — an agent can never do what its identity can't."
 msgstr "Een ingebouwde MCP-server stelt 1.374 bewerkingen beschikbaar via 15 modules met drie detectiehulpmiddelen. Machtigingen zijn ingebakken — een agent kan nooit doen wat zijn identiteit niet toestaat."
 
-#: app/routes/pricing.tsx:36
+#: app/routes/pricing.tsx:45
 msgid "A managed cloud-hosted version of Carbon"
 msgstr "Een beheerde cloud-gehoste versie van Carbon"
 
@@ -61,7 +61,7 @@ msgstr "Over"
 msgid "Accounting"
 msgstr "Boekhouden"
 
-#: app/routes/pricing.tsx:41
+#: app/routes/pricing.tsx:52
 msgid "Accounting with general ledger, financial reports, fixed assets, and multi-currency"
 msgstr "Boekhouden met grootboek, financiële verslagen, vaste activa en multi-currency"
 
@@ -97,7 +97,7 @@ msgstr "Na bijna tien jaar lang end-to-end systemen voor de productie te bouwen,
 msgid "Agent-ready by default"
 msgstr "Standaard agentgereed"
 
-#: app/routes/pricing.tsx:84
+#: app/routes/pricing.tsx:99
 msgid "Air-gapped and ITAR deployments"
 msgstr "Air-gapped en ITAR-implementaties"
 
@@ -143,7 +143,7 @@ msgstr "API-first, met eersteklas MCP"
 msgid "API, MCP, apps"
 msgstr "API, MCP, apps"
 
-#: app/routes/pricing.tsx:59
+#: app/routes/pricing.tsx:72
 msgid "API, webhooks, integrations, and MCP"
 msgstr "API, webhooks, integraties en MCP"
 
@@ -163,7 +163,7 @@ msgstr "Vraag je agent wat het denkt"
 msgid "Audit it before you deploy it"
 msgstr "Controleer het voordat u het implementeert"
 
-#: app/routes/pricing.tsx:66
+#: app/routes/pricing.tsx:79
 msgid "Audit logging, 2FA enforcement, and backup/restore"
 msgstr "Audit-logging, 2FA-handhaving en back-up/herstel"
 
@@ -183,7 +183,7 @@ msgstr "Audits gereconstrueerd uit geheugen"
 msgid "Auto-generated API Documentation"
 msgstr "Automatisch gegenereerde API-documentatie"
 
-#: app/routes/pricing.tsx:39
+#: app/routes/pricing.tsx:50
 msgid "Automatic updates and cloud backups"
 msgstr "Automatische updates en cloud-back-ups"
 
@@ -203,7 +203,7 @@ msgstr "Barcode/QR-tracking"
 msgid "Based on assumptions"
 msgstr "Gebaseerd op aannames"
 
-#: app/routes/pricing.tsx:40
+#: app/routes/pricing.tsx:51
 msgid "Basic ERP, MES, MRP, and QMS functionality"
 msgstr "Basis ERP-, MES-, MRP- en QMS-functionaliteit"
 
@@ -214,6 +214,10 @@ msgstr "Beste ERP/MRP/MES-systeem dat ik in een 22-jarige carrière in de defens
 #: app/components/hero.tsx:230
 msgid "Bill of Materials"
 msgstr "Stuklijst"
+
+#: app/routes/pricing.tsx:216
+msgid "Billed per user, monthly · 30-day free trial · Cancel anytime"
+msgstr ""
 
 #: app/routes/_index.tsx:249
 msgid "Billing"
@@ -248,7 +252,7 @@ msgstr "Bouwen vs. kopen"
 msgid "Built for CMMC compliance"
 msgstr "Gebouwd voor CMMC-conformiteit"
 
-#: app/routes/pricing.tsx:49
+#: app/routes/pricing.tsx:60
 msgid "Business"
 msgstr "Zakelijk"
 
@@ -320,11 +324,15 @@ msgstr "schone kamer operaties, opbrengstanalyses"
 msgid "Close"
 msgstr "Sluiten"
 
-#: app/routes/pricing.tsx:50
+#: app/routes/pricing.tsx:205
+msgid "Cloud"
+msgstr ""
+
+#: app/routes/pricing.tsx:61
 msgid "Cloud + support"
 msgstr "Cloud + ondersteuning"
 
-#: app/routes/pricing.tsx:83
+#: app/routes/pricing.tsx:98
 msgid "CMMC Level 2 compliance"
 msgstr "CMMC Level 2-conformiteit"
 
@@ -336,7 +344,11 @@ msgstr "CMMC-conforme werkzaamheden blijven binnen uw muren."
 msgid "Co-Founder and CTO"
 msgstr "Medeoprichter en CTO"
 
-#: app/routes/pricing.tsx:45
+#: app/routes/pricing.tsx:37
+msgid "Community Edition"
+msgstr ""
+
+#: app/routes/pricing.tsx:56
 msgid "Community support"
 msgstr "Communityondersteuning"
 
@@ -401,9 +413,9 @@ msgstr "Contactgegevens"
 msgid "Contact Sales"
 msgstr "Neem contact op met verkoopteam"
 
-#: app/routes/pricing.tsx:54
-#: app/routes/pricing.tsx:73
-#: app/routes/pricing.tsx:75
+#: app/routes/pricing.tsx:67
+#: app/routes/pricing.tsx:86
+#: app/routes/pricing.tsx:88
 msgid "Contact us"
 msgstr "Neem contact op"
 
@@ -448,7 +460,7 @@ msgstr "Aangepaste Ontwikkeling"
 msgid "Custom integrations with your existing systems"
 msgstr "Aangepaste integraties met uw bestaande systemen"
 
-#: app/routes/pricing.tsx:65
+#: app/routes/pricing.tsx:78
 msgid "Custom roles, permissions, and approval rules"
 msgstr "Aangepaste rollen, machtigingen en goedkeuringsregels"
 
@@ -460,11 +472,11 @@ msgstr "Klantportaal"
 msgid "Customer Portal/Website"
 msgstr "Klantportaal/Website"
 
-#: app/routes/pricing.tsx:63
+#: app/routes/pricing.tsx:76
 msgid "Customer portals with live order status and files"
 msgstr "Klantportals met live orderstatus en bestanden"
 
-#: app/routes/pricing.tsx:82
+#: app/routes/pricing.tsx:97
 msgid "Customizations, training, and integrations"
 msgstr "Aanpassingen, training en integraties"
 
@@ -504,9 +516,13 @@ msgstr "Defensie"
 msgid "Demand & forecast"
 msgstr "Vraag & prognose"
 
-#: app/routes/pricing.tsx:61
+#: app/routes/pricing.tsx:74
 msgid "Demand forecasting to plan ahead of orders"
 msgstr "Vraagprognose voor planning voorafgaand aan bestellingen"
+
+#: app/routes/pricing.tsx:202
+msgid "Deployment"
+msgstr ""
 
 #: app/components/header.tsx:46
 msgid "Developer guides and API reference"
@@ -551,7 +567,7 @@ msgstr "drones"
 msgid "Email Address"
 msgstr "E-mailadres"
 
-#: app/routes/pricing.tsx:64
+#: app/routes/pricing.tsx:77
 msgid "Email and Slack notifications"
 msgstr "E-mail- en Slack-meldingen"
 
@@ -567,7 +583,7 @@ msgstr "Engineering"
 msgid "Engineering change orders"
 msgstr "Engineering wijzigingsorders"
 
-#: app/routes/pricing.tsx:71
+#: app/routes/pricing.tsx:84
 msgid "Enterprise"
 msgstr "Onderneming"
 
@@ -603,11 +619,15 @@ msgstr "Elke tabel is een eindpunt"
 msgid "Every unit, every op"
 msgstr "Elke eenheid, elke bewerking"
 
-#: app/routes/pricing.tsx:77
+#: app/routes/pricing.tsx:90
 msgid "Everything in Business, plus a custom solution to meet your needs"
 msgstr "Alles in Business, plus een aangepaste oplossing voor uw behoeften"
 
-#: app/routes/pricing.tsx:51
+#: app/routes/pricing.tsx:63
+msgid "Everything in Community Edition, and the features below"
+msgstr ""
+
+#: app/routes/pricing.tsx:64
 msgid "Everything in Starter, and the features below"
 msgstr "Alles in Starter en de onderstaande functies"
 
@@ -660,7 +680,7 @@ msgstr "Eerste artikelinspectie"
 msgid "First article inspection, non-conformance, CAPA and gauge calibration sit on the same records as production. Pull any serial number and get its full genealogy — material certs, operators, measurements, deviations."
 msgstr "Eerste artikelinspectie, non-conformiteit, CAPA en maatstafkalibratie bevinden zich op dezelfde records als productie. Trek elk serienummer op en krijg de volledige stamboom — materiaalgeverificaties, operators, metingen, afwijkingen."
 
-#: app/routes/pricing.tsx:81
+#: app/routes/pricing.tsx:96
 msgid "Forward deployed engineer"
 msgstr "Ter plaatse geplaatste engineer"
 
@@ -676,7 +696,7 @@ msgstr "Vier systemen, één schema."
 msgid "Full Name"
 msgstr "Volledige naam"
 
-#: app/routes/pricing.tsx:85
+#: app/routes/pricing.tsx:100
 msgid "Full setup and migrations"
 msgstr "Volledige setup en migraties"
 
@@ -692,11 +712,15 @@ msgstr "Maatstafkalibratie"
 msgid "Generated straight from Carbon's schema — 381 resources and 1,641 endpoints, with typed clients for TypeScript, Python, C#, and cURL."
 msgstr "Direct gegenereerd uit Carbon's schema — 381 resources en 1.641 eindpunten, met getypeerde clients voor TypeScript, Python, C# en cURL."
 
+#: app/routes/pricing.tsx:67
+msgid "Get a license"
+msgstr ""
+
 #: app/components/hero.tsx:136
 msgid "Get Started"
 msgstr "Aan de slag"
 
-#: app/routes/pricing.tsx:196
+#: app/routes/pricing.tsx:251
 msgid "Get started for free."
 msgstr "Gratis aan de slag."
 
@@ -856,6 +880,10 @@ msgstr "Laat ons de infrastructuur voor u beheren"
 msgid "License"
 msgstr "Licentie"
 
+#: app/routes/pricing.tsx:224
+msgid "Licensed per user, monthly · Community Edition free under AGPL-3.0"
+msgstr ""
+
 #: app/components/wizard-form.tsx:136
 msgid "Limited Support"
 msgstr "Beperkte ondersteuning"
@@ -881,7 +909,7 @@ msgstr "lange doorlooptijd, projectgebaseerde bouw"
 msgid "Low monthly payments"
 msgstr "Lage maandelijkse betalingen"
 
-#: app/routes/pricing.tsx:104
+#: app/routes/pricing.tsx:191
 msgid "Managed cloud or self-host the open-source core. Start free for 30 days — no sales call required."
 msgstr "Beheerde cloud of zelf-host de open-source kern. Gratis beginnen voor 30 dagen — geen verkoopgesprek vereist."
 
@@ -929,7 +957,7 @@ msgstr "Bericht"
 msgid "money in, money out"
 msgstr "geld in, geld uit"
 
-#: app/routes/pricing.tsx:72
+#: app/routes/pricing.tsx:85
 msgid "Most popular"
 msgstr "Meest populair"
 
@@ -981,6 +1009,10 @@ msgstr "Non-conformiteit & CAPA"
 msgid "None Required"
 msgstr "Niet vereist"
 
+#: app/routes/pricing.tsx:94
+msgid "On-prem, private cloud, or air-gapped"
+msgstr ""
+
 #: app/routes/_index.tsx:1100
 msgid "One Postgres schema, and it's yours"
 msgstr "Eén Postgres-schema, en het is van u"
@@ -992,6 +1024,10 @@ msgstr "eenmalig, lot-van-één traceerbaarheid"
 #: app/components/wizard-form.tsx:83
 msgid "One-time purchase with full ownership"
 msgstr "Eenmalige aankoop met volledig eigendom"
+
+#: app/routes/pricing.tsx:38
+msgid "Open source"
+msgstr ""
 
 #: app/components/status-indicator.tsx:8
 msgid "Operational"
@@ -1074,7 +1110,7 @@ msgstr "Privacy"
 msgid "Product"
 msgstr "Product"
 
-#: app/routes/pricing.tsx:42
+#: app/routes/pricing.tsx:53
 msgid "Product configurator with rules-based BOMs and routings"
 msgstr "Productconfigurator met op regels gebaseerde BOM's en routeringen"
 
@@ -1144,11 +1180,11 @@ msgstr "reactoren"
 msgid "Read it. Extend it."
 msgstr "Lees het. Breid het uit."
 
-#: app/routes/pricing.tsx:217
+#: app/routes/pricing.tsx:272
 msgid "Read the Docs"
 msgstr "Lees de documentatie"
 
-#: app/routes/pricing.tsx:199
+#: app/routes/pricing.tsx:254
 msgid "Read the source, run it in your own environment, and start developing locally."
 msgstr "Lees de bron, voer deze uit in uw eigen omgeving en begin lokaal te ontwikkelen."
 
@@ -1206,6 +1242,14 @@ msgstr "Beveiliging op rijniveau"
 msgid "Rule-based BOM and routing generation"
 msgstr "Op regels gebaseerde BOM- en routeringsgeneratie"
 
+#: app/routes/pricing.tsx:95
+msgid "Runs on your cloud"
+msgstr ""
+
+#: app/routes/pricing.tsx:49
+msgid "Runs on your servers or in your VPC with Docker"
+msgstr ""
+
 #: app/components/footer.tsx:50
 msgid "Sales"
 msgstr "Verkoop"
@@ -1234,10 +1278,19 @@ msgstr "Selecteer uw gewenste ondersteuningsniveau"
 msgid "Select your preferred hosting solution"
 msgstr "Selecteer uw voorkeur voor hosting"
 
+#: app/routes/pricing.tsx:55
+msgid "Self-guided installation"
+msgstr ""
+
+#: app/routes/pricing.tsx:41
+msgid "Self-Host Carbon"
+msgstr ""
+
 #: app/components/footer.tsx:64
 #: app/components/header.tsx:89
 #: app/components/header.tsx:209
 #: app/routes/_index.tsx:1119
+#: app/routes/pricing.tsx:209
 msgid "Self-hosted"
 msgstr "Zelf gehost"
 
@@ -1245,15 +1298,15 @@ msgstr "Zelf gehost"
 msgid "Self-Hosted"
 msgstr "Zelf gehost"
 
-#: app/routes/pricing.tsx:80
-msgid "Self-hosted or managed"
-msgstr "Zelf-gehost of beheerd"
+#: app/routes/pricing.tsx:61
+msgid "Self-hosted + support"
+msgstr ""
 
-#: app/routes/pricing.tsx:44
+#: app/routes/pricing.tsx:55
 msgid "Self-onboarding"
 msgstr "Zelf onboarden"
 
-#: app/routes/pricing.tsx:31
+#: app/routes/pricing.tsx:38
 msgid "Self-serve"
 msgstr "Zelfbediening"
 
@@ -1297,7 +1350,7 @@ msgstr "Werkvoer / jobmobiel"
 msgid "Shop Floor Apps"
 msgstr "Shop Floor Apps"
 
-#: app/routes/pricing.tsx:62
+#: app/routes/pricing.tsx:75
 msgid "Shop floor console mode"
 msgstr "Shopfloor-consolemodus"
 
@@ -1309,7 +1362,7 @@ msgstr "Tekortescalatie"
 msgid "Shortages found on the floor"
 msgstr "Tekorten gevonden op de vloer"
 
-#: app/routes/pricing.tsx:101
+#: app/routes/pricing.tsx:188
 msgid "Simple pricing based on your needs."
 msgstr "Eenvoudig prijzen op basis van uw behoeften."
 
@@ -1345,16 +1398,16 @@ msgstr "Ruimte"
 msgid "Spreadsheet"
 msgstr "Spreadsheet"
 
-#: app/routes/pricing.tsx:86
+#: app/routes/pricing.tsx:101
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
 #: app/routes/_index.tsx:527
-#: app/routes/pricing.tsx:223
+#: app/routes/pricing.tsx:278
 msgid "Star on GitHub"
 msgstr "Ster op GitHub"
 
-#: app/routes/pricing.tsx:34
+#: app/routes/pricing.tsx:41
 msgid "Start 30-day free trial"
 msgstr "Start 30-daagse gratis proefperiode"
 
@@ -1366,7 +1419,7 @@ msgstr "Gratis beginnen"
 msgid "Start now · No call required"
 msgstr "Start nu · Geen oproep vereist"
 
-#: app/routes/pricing.tsx:30
+#: app/routes/pricing.tsx:37
 msgid "Starter"
 msgstr "Starter"
 
@@ -1399,7 +1452,7 @@ msgstr "Systemen vervangen"
 msgid "Tasks"
 msgstr "Taken"
 
-#: app/routes/pricing.tsx:58
+#: app/routes/pricing.tsx:71
 msgid "Technical support"
 msgstr "Technische ondersteuning"
 
@@ -1422,6 +1475,10 @@ msgstr "de vloer zelf"
 #: app/components/hero.tsx:123
 msgid "The Modern Manufacturing Stack"
 msgstr "De Moderne Productie Stack"
+
+#: app/routes/pricing.tsx:44
+msgid "The open-source core of Carbon, free under AGPL-3.0"
+msgstr ""
 
 #: app/routes/_index.tsx:1106
 msgid "The whole application is on GitHub — the Community edition under AGPL-3.0. Read every line, run a security review, and extend it to fit your process."
@@ -1456,11 +1513,11 @@ msgstr "Typische eerste implementatie"
 msgid "Unfork your BOM."
 msgstr "Versplitsing van uw stuklijst opheffen."
 
-#: app/routes/pricing.tsx:87
+#: app/routes/pricing.tsx:102
 msgid "Unlimited functional support"
 msgstr "Onbeperkte functionele ondersteuning"
 
-#: app/routes/pricing.tsx:43
+#: app/routes/pricing.tsx:54
 msgid "Unlimited records"
 msgstr "Onbeperkte records"
 
@@ -1476,7 +1533,7 @@ msgstr "Bekijk onze broncode en draag bij"
 msgid "View the source"
 msgstr "Bekijk de bron"
 
-#: app/routes/pricing.tsx:203
+#: app/routes/pricing.tsx:258
 msgid "Want Business features on your own servers? <0>Unlock them with a commercial license</0>."
 msgstr "Wilt u Business-functies op uw eigen servers? <0>Ontgrendel ze met een commerciële licentie</0>."
 
@@ -1516,7 +1573,7 @@ msgstr "Werkmail"
 msgid "Work Instructions"
 msgstr "WerkInstructies"
 
-#: app/routes/pricing.tsx:60
+#: app/routes/pricing.tsx:73
 msgid "Workflow automation with custom triggers"
 msgstr "Workflowautomatisering met aangepaste triggers"
 
