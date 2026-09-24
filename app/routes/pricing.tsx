@@ -82,7 +82,7 @@ function usePlans(deployment: Deployment) {
 		},
 		{
 			name: selfHosted ? t`Custom Build` : t`Enterprise`,
-			tag: t`Most popular`,
+			tag: selfHosted ? t`Forward deployed` : t`Bring your own cloud`,
 			priceHeadline: t`Contact us`,
 			priceSubtext: "",
 			action: t`Contact us`,

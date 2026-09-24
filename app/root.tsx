@@ -34,6 +34,7 @@ import { getCompanyId } from "./services/company.server";
 import { loadLinguiCatalog } from "./services/lingui.server";
 import { getLocale } from "./services/locale.server";
 import { getMode, setMode } from "./services/mode.server";
+import { fetchGithubStars } from "./utils/github.server";
 import { fetchStatus } from "./utils/status";
 
 export const config = { runtime: "edge" };
@@ -103,6 +104,7 @@ export async function loader({ request, params }: LoaderFunctionArgs) {
 	const linguiCatalog = await loadLinguiCatalog(locale);
 
 	const statusPromise = fetchStatus();
+	const githubStarsPromise = fetchGithubStars();
 
 	return {
 		siteUrl,
@@ -112,6 +114,7 @@ export async function loader({ request, params }: LoaderFunctionArgs) {
 		linguiCatalog,
 		locale,
 		statusPromise,
+		githubStarsPromise,
 		// Only the presence matters here — never expose the id itself to the client.
 		hasCompany: getCompanyId(request) !== null,
 	};

@@ -2,11 +2,13 @@ import { Trans } from "@lingui/react/macro";
 import { BookOpen, Menu, Moon, Sun, X } from "lucide-react";
 import { useState } from "react";
 import { flushSync } from "react-dom";
-import { Link, useFetcher } from "react-router";
+import { Link, useFetcher, useRouteLoaderData } from "react-router";
+import type { loader } from "~/root";
 import { setClientMode, useMode } from "~/hooks/useMode";
 import { startModeTransition } from "~/utils/dom";
 import { path } from "~/utils/path";
 import { AppCtaLabel } from "./app-cta-label";
+import { GithubStars } from "./github-stars";
 import { LogoMenu } from "./logo-menu";
 import { Button } from "./ui/button";
 import { DiscordLogo } from "./ui/discord-logo";
@@ -52,6 +54,7 @@ const developerLinks = [
 
 export function Header() {
 	const [open, setOpen] = useState(false);
+	const data = useRouteLoaderData<typeof loader>("root");
 
 	return (
 		<header className="sticky top-0 z-header w-full border-b bg-background/90 backdrop-blur-sm">
@@ -122,6 +125,12 @@ export function Header() {
 				<div className="flex items-center justify-self-end gap-1 sm:gap-3">
 					{/* Theme toggle is a dev-only affordance; production ships a single theme. */}
 					{import.meta.env.DEV && <ModeToggle />}
+					{data && (
+						<GithubStars
+							starsPromise={data.githubStarsPromise}
+							className="hidden sm:inline-flex"
+						/>
+					)}
 					<Button
 						asChild
 						variant="accentOutline"

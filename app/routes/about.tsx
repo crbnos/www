@@ -1,9 +1,11 @@
 import { Trans } from "@lingui/react/macro";
-import { ChevronRight } from "lucide-react";
 import type { MetaFunction } from "react-router";
 import { Button } from "~/components/ui/button";
 import { DiscordLogo } from "~/components/ui/discord-logo";
+import { GithubLogo } from "~/components/ui/github-logo";
 import { pageMeta } from "~/lib/seo";
+
+const GITHUB_URL = "https://github.com/crbnos/carbon";
 
 export const meta: MetaFunction = ({ matches }) =>
 	pageMeta(matches, {
@@ -15,18 +17,9 @@ export const meta: MetaFunction = ({ matches }) =>
 export default function About() {
 	return (
 		<div className="flex flex-1 flex-col">
-			<div className="mx-auto flex flex-col px-4 w-full max-w-4xl mb-28 pt-28">
-				<div className="flex flex-col gap-4 border-[0.5px] bg-card px-8 shadow py-12 lg:p-14 text-lg xl-p-16">
-					<div className="mb-4 flex flex-col gap-2 font-mono text-[11px] uppercase leading-none tracking-[0.16em] md:mb-6 lg:mb-8">
-						<p className="text-muted-foreground">
-							<Trans>Founder memo</Trans>
-						</p>
-						<p className="font-medium">
-							<Trans>Carbon Manufacturing Systems Corp.</Trans>
-						</p>
-					</div>
-
-					<h1 className="mb-2 font-display text-3xl tracking-[-0.005em] text-pretty sm:text-4xl">
+			<div className="mx-auto flex flex-col px-4 w-full max-w-3xl mb-28 pt-28">
+				<div className="flex flex-col gap-4 text-lg">
+					<h1 className="mb-6 font-display text-3xl tracking-[-0.005em] text-pretty sm:text-4xl">
 						<Trans>Why we built Carbon and open-sourced it</Trans>
 					</h1>
 
@@ -73,20 +66,6 @@ export default function About() {
 						<Trans>We're glad you're here for it.</Trans>
 					</p>
 
-					<div>
-						<Button variant="outline" asChild>
-							<a
-								href="https://discord.gg/ntzBZ3yYj"
-								target="_blank"
-								rel="noopener"
-							>
-								<DiscordLogo />
-								<Trans>Join our Discord community</Trans>{" "}
-								<ChevronRight className="text-muted-foreground size-3" />
-							</a>
-						</Button>
-					</div>
-
 					<div className="mt-8 flex flex-col gap-4">
 						<a
 							target="_blank"
@@ -101,12 +80,32 @@ export default function About() {
 								src="/faces/brad.webp"
 							/>
 							<div className="flex flex-col">
-								<p className="dark:text-tertiary text-foreground">Brad Barbin</p>
-								<p className="dark:text-tertiary text-muted-foreground text-sm">
+								<p className="font-display text-2xl leading-tight text-foreground">
+									Brad Barbin
+								</p>
+								<p className="mt-1 font-mono text-[11px] uppercase leading-none tracking-[0.16em] text-muted-foreground">
 									<Trans>Co-Founder and CTO</Trans>
 								</p>
 							</div>
 						</a>
+						<div className="mt-2 flex flex-wrap gap-2.5">
+							<Button asChild variant="accentOutline" size="cta">
+								<a
+									href="https://discord.gg/ntzBZ3yYj"
+									target="_blank"
+									rel="noopener"
+								>
+									<DiscordLogo className="size-4" />
+									<Trans>Join our Discord community</Trans>
+								</a>
+							</Button>
+							<Button asChild variant="accentOutline" size="cta">
+								<a href={GITHUB_URL} target="_blank" rel="noopener">
+									<GithubLogo className="size-4" />
+									<Trans>Star on GitHub</Trans>
+								</a>
+							</Button>
+						</div>
 					</div>
 				</div>
 			</div>
