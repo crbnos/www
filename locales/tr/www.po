@@ -95,7 +95,7 @@ msgstr "Hava boşluklu ve ITAR dağıtımları"
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "Tüm Carbon ticari markaları, logoları veya diğer marka öğeleri hiçbir zaman değiştirilemez veya Carbon Manufacturing Systems Corporation'ı temsil etmek dışında başka herhangi bir amaç için kullanılamaz."
 
-#: app/routes/_index.tsx:882
+#: app/routes/_index.tsx:900
 msgid "An API for the entire organization."
 msgstr "Tüm kuruluş için bir API."
 
@@ -103,12 +103,12 @@ msgstr "Tüm kuruluş için bir API."
 msgid "Analytics"
 msgstr "Analitikler"
 
-#: app/routes/_index.tsx:1238
+#: app/routes/_index.tsx:1256
 msgid "And some of the world's most innovative manufacturers"
 msgstr "Ve dünyanın en yenilikçi üreticilerinden bazıları"
 
-#: app/routes/_index.tsx:547
-#: app/routes/_index.tsx:554
+#: app/routes/_index.tsx:565
+#: app/routes/_index.tsx:572
 msgid "Animated assembly instructions"
 msgstr "Animasyonlu montaj talimatları"
 
@@ -116,7 +116,7 @@ msgstr "Animasyonlu montaj talimatları"
 msgid "API"
 msgstr "API"
 
-#: app/routes/_index.tsx:902
+#: app/routes/_index.tsx:920
 msgid "API Docs"
 msgstr "API Dokümanları"
 
@@ -144,11 +144,11 @@ msgstr "AS9100"
 msgid "AS9100, FAI, full genealogy"
 msgstr "AS9100, FAI, tam soybilim"
 
-#: app/routes/_index.tsx:1058
+#: app/routes/_index.tsx:1076
 msgid "Ask your agent what it thinks"
 msgstr "Aracınıza ne düşündüğünü sorun"
 
-#: app/routes/_index.tsx:1093
+#: app/routes/_index.tsx:1111
 msgid "Audit it before you deploy it"
 msgstr "Dağıtmadan önce denetleyin"
 
@@ -160,7 +160,7 @@ msgstr "Denetim günlüğü, 2FA uygulaması ve yedekleme/geri yükleme"
 msgid "Audit trail is the database"
 msgstr "Denetim izi veritabanıdır"
 
-#: app/routes/_index.tsx:1031
+#: app/routes/_index.tsx:1049
 msgid "Auditable by construction."
 msgstr "İnşaat tarafından denetlenebilir."
 
@@ -196,7 +196,7 @@ msgstr "Varsayımlara dayalı"
 msgid "Basic ERP, MES, MRP, and QMS functionality"
 msgstr "Temel ERP, MES, MRP ve QMS işlevselliği"
 
-#: app/routes/_index.tsx:571
+#: app/routes/_index.tsx:589
 msgid "Best ERP/MRP/MES system I've ever seen in a 22-year career across defense and automotive. Native Onshape integration means we synchronize all our data without extra PLM connectors — good UX, modern integrations, open source, open API and MCP, cloud or on-prem. We run our whole electric-vehicle engineering and manufacturing business on Carbon, and I couldn't imagine going back to a legacy system."
 msgstr "Gördüğüm en iyi ERP/MRP/MES sistemi - 22 yıllık savunma ve otomotiv sektörü deneyimim içinde. Yerel Onshape entegrasyonu, tüm verilerimizi ekstra PLM bağlayıcıları olmadan senkronize edebilmemiz anlamına gelir — iyi UX, modern entegrasyonlar, açık kaynaklı, açık API ve MCP, bulut veya şirket içi. Tüm elektrikli araç mühendisliği ve üretim işletmemizi Carbon üzerinde yürütüyoruz ve eski bir sisteme geri dönmeyi hayal bile edemiyorum."
 
@@ -233,7 +233,7 @@ msgstr "Yazılım hızında <0/><1/>oluşturun."
 msgid "Build vs. buy"
 msgstr "Geliştirme vs. Satın Alma"
 
-#: app/routes/_index.tsx:1083
+#: app/routes/_index.tsx:1101
 msgid "Built for CMMC compliance"
 msgstr "CMMC uyumluluğu için oluşturuldu"
 
@@ -253,11 +253,11 @@ msgstr "Kaynak Kodunu Satın Al"
 msgid "CAD"
 msgstr "CAD"
 
-#: app/routes/_index.tsx:766
+#: app/routes/_index.tsx:784
 msgid "CAD to cash, unbroken."
 msgstr "CAD'den nakit, kesintisiz."
 
-#: app/routes/_index.tsx:536
+#: app/routes/_index.tsx:554
 msgid "Carbon / Assembly Instructions"
 msgstr "Carbon / Montaj Talimatları"
 
@@ -277,7 +277,7 @@ msgstr "Carbon, açık kaynaklı üretim ERP/MES/QMS sistemidir. Fabrika modelin
 msgid "Carbon Manufacturing Systems Corp."
 msgstr "Carbon Manufacturing Systems Corp."
 
-#: app/routes/_index.tsx:1061
+#: app/routes/_index.tsx:1079
 msgid "Carbon's source code is available. Copy the prompt below into your favorite LLM."
 msgstr "Carbon'ın kaynak kodu mevcuttur. Aşağıdaki istemi favori LLM'inize kopyalayın."
 
@@ -321,7 +321,7 @@ msgstr "Bulut + Destek"
 msgid "CMMC Level 2 compliance"
 msgstr "CMMC Seviye 2 uyumluluğu"
 
-#: app/routes/_index.tsx:1111
+#: app/routes/_index.tsx:1129
 msgid "CMMC-compliant work stays inside your walls."
 msgstr "CMMC uyumlu çalışmalar duvarlarınız içinde kalır."
 
@@ -385,7 +385,7 @@ msgstr "İletişim Bilgileri"
 
 #: app/components/header.tsx:142
 #: app/components/header.tsx:235
-#: app/routes/_index.tsx:1217
+#: app/routes/_index.tsx:1235
 msgid "Contact Sales"
 msgstr "Satış ile İletişime Geçin"
 
@@ -396,11 +396,11 @@ msgid "Contact us"
 msgstr "Bize ulaşın"
 
 #: app/components/logo-menu.tsx:66
-#: app/routes/_index.tsx:1009
+#: app/routes/_index.tsx:1027
 msgid "Copied"
 msgstr "Kopyalandı"
 
-#: app/routes/_index.tsx:1009
+#: app/routes/_index.tsx:1027
 msgid "Copy"
 msgstr "Kopyala"
 
@@ -424,7 +424,7 @@ msgstr "Olay Sonrası Tahmin Edilen Maliyet"
 msgid "Create a branded ordering experience that drives production"
 msgstr "Üretimi artıran markalı bir sipariş deneyimi oluşturun"
 
-#: app/routes/_index.tsx:1204
+#: app/routes/_index.tsx:1222
 msgid "Create a company, connect the MCP, release your first job today."
 msgstr "Bir şirket oluşturun, MCP'yi bağlayın, ilk işinizi bugün yayınlayın."
 
@@ -567,7 +567,7 @@ msgstr "Kurumsal. Ürün yol haritasını öncelikli özellik istekleriyle etkil
 msgid "ERP · MRP · MES · QMS"
 msgstr "ERP · MRP · MES · QMS"
 
-#: app/routes/_index.tsx:1089
+#: app/routes/_index.tsx:1107
 msgid "ERP, MRP, MES and QMS on a single database you control, with row-level security. Your data never leaves your perimeter — no vendor cloud, no third-party data lake."
 msgstr "Kontrol ettiğiniz tek bir veritabanında ERP, MRP, MES ve QMS, satır düzeyinde güvenlikle. Verileriniz asla çevrenizi terk etmez — satıcı bulutu yok, üçüncü taraf veri gölü yok."
 
@@ -579,7 +579,7 @@ msgstr "Her parça, saat, barkod ve sapma gerçek zamanlı olarak izlenir ve ele
 msgid "Every site on one ledger."
 msgstr "Her site bir defter üzerinde."
 
-#: app/routes/_index.tsx:770
+#: app/routes/_index.tsx:788
 msgid "Every stage writes to the same record. No handoffs, no re-keying, no reconciliation."
 msgstr "Her aşama aynı kayda yazılır. Aktarım yok, yeniden anahtar yok, mutabakat yok."
 
@@ -615,7 +615,7 @@ msgstr "Resmi genişlet"
 msgid "Expenses"
 msgstr "Masraflar"
 
-#: app/routes/_index.tsx:1117
+#: app/routes/_index.tsx:1135
 msgid "Explore self-hosting"
 msgstr "Kendi kendini barındırmayı keşfedin"
 
@@ -656,7 +656,7 @@ msgstr "İleri konuşlandırılmış mühendis"
 msgid "Founder memo"
 msgstr "Kurucu Notu"
 
-#: app/routes/_index.tsx:698
+#: app/routes/_index.tsx:716
 msgid "Four systems, one schema."
 msgstr "Dört sistem, bir şema."
 
@@ -716,11 +716,11 @@ msgstr "Büyük Danışmanlık Faturaları"
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "Açık kaynak yazılımın inanılmaz bir potansiyele sahip olduğuna inanıyorum çünkü bu sadece bir ürün değil – AI ve robotik çağında üretimin geleceğini inşa etmek için çalışan benzer düşüncelere sahip insanların bir topluluğudur."
 
-#: app/routes/_index.tsx:944
+#: app/routes/_index.tsx:962
 msgid "If it has a bill of materials, Carbon runs it."
 msgstr "Bir malzeme listesi varsa, Carbon bunu çalıştırır."
 
-#: app/routes/_index.tsx:1034
+#: app/routes/_index.tsx:1052
 msgid "Immutable ledgers, granular permissions, and the controls regulated programs are held to."
 msgstr "Değişmez defterler, ayrıntılı izinler ve düzenlenen programların tutulduğu kontrollar."
 
@@ -732,7 +732,7 @@ msgstr "Olay tespit edildi"
 msgid "Industrial equipment"
 msgstr "Endüstriyel Ekipman"
 
-#: app/routes/_index.tsx:1159
+#: app/routes/_index.tsx:1177
 msgid "Integrated with the world's best software."
 msgstr "Dünyanın en iyi yazılımı ile entegre."
 
@@ -796,7 +796,7 @@ msgstr "Discord topluluğumuza katılın"
 msgid "Kanban Schedule"
 msgstr "Kanban Programı"
 
-#: app/routes/_index.tsx:1084
+#: app/routes/_index.tsx:1102
 msgid "Keep CUI inside your own boundary. Deploy on a single box, your own VPC, or fully air-gapped for defense programs that have to meet CMMC and ITAR requirements."
 msgstr "CUI'yi kendi sınırlarınızda tutun. Tek bir kutu, kendi VPC'niz veya CMMC ve ITAR gereksinimlerini karşılaması gereken savunma programları için tamamen hava boşluklu olarak dağıtın."
 
@@ -824,7 +824,7 @@ msgstr "En ucuz. Temel onboarding ve e-posta desteği"
 msgid "Legacy ERP"
 msgstr "Eski ERP"
 
-#: app/routes/_index.tsx:617
+#: app/routes/_index.tsx:635
 msgid "Legacy ERPs were built for accountants in the 1990s."
 msgstr "Eski ERP'ler, 1990'larda muhasebeciler için tasarlandı."
 
@@ -881,7 +881,7 @@ msgstr "İmalat yürütmesi"
 msgid "Manufacturing-focused, GAAP accounting"
 msgstr "İmalat odaklı, GAAP muhasebesi"
 
-#: app/routes/_index.tsx:892
+#: app/routes/_index.tsx:910
 msgid "MCP Docs"
 msgstr "MCP Belgeleri"
 
@@ -965,7 +965,7 @@ msgstr "Uygunsuzluk & CAPA"
 msgid "None Required"
 msgstr "Gerekli Değil"
 
-#: app/routes/_index.tsx:1088
+#: app/routes/_index.tsx:1106
 msgid "One Postgres schema, and it's yours"
 msgstr "Bir Postgres şeması ve bu sizin"
 
@@ -989,7 +989,8 @@ msgstr "Operatör Terminali"
 msgid "ops on the floor"
 msgstr "Şantiye Operasyonları"
 
-#: app/routes/_index.tsx:1223
+#: app/routes/_index.tsx:529
+#: app/routes/_index.tsx:1241
 msgid "Or self-host the open source core"
 msgstr "Ya da açık kaynak çekirdeği kendi barındırın"
 
@@ -1144,7 +1145,7 @@ msgstr "Gerçek zamanlı, gerçek maliyet atölyesi."
 msgid "Recommended. Priority support with dedicated account manager"
 msgstr "Önerilen. Özel hesap yöneticisi ile öncelikli destek"
 
-#: app/routes/_index.tsx:948
+#: app/routes/_index.tsx:966
 msgid "Regulated or not, one-off or rate production — the primitives are the same. The configuration is yours."
 msgstr "Düzenlenmiş veya değil, tek üretim veya hız üretimi - temel öğeler aynıdır. Yapılandırma sizindir."
 
@@ -1153,7 +1154,7 @@ msgstr "Düzenlenmiş veya değil, tek üretim veya hız üretimi - temel öğel
 msgid "Resources"
 msgstr "Kaynaklar"
 
-#: app/routes/_index.tsx:539
+#: app/routes/_index.tsx:557
 msgid "Rev 4 · Live"
 msgstr "Sürüm 4 · Canlı"
 
@@ -1220,7 +1221,7 @@ msgstr "Tercih ettiğiniz barındırma çözümünü seçin"
 #: app/components/footer.tsx:64
 #: app/components/header.tsx:89
 #: app/components/header.tsx:209
-#: app/routes/_index.tsx:1107
+#: app/routes/_index.tsx:1125
 msgid "Self-hosted"
 msgstr "Kendi kendini barındıran"
 
@@ -1264,7 +1265,7 @@ msgstr "İzole edilmiş verilerle paylaşılan veritabanı"
 msgid "Shared schema"
 msgstr "Paylaşılan şema"
 
-#: app/routes/_index.tsx:1201
+#: app/routes/_index.tsx:1219
 msgid "Ship faster than your competitors can quote."
 msgstr "Rakiplerinizin teklif verebileceğinden daha hızlı gönderin."
 
@@ -1312,7 +1313,7 @@ msgstr "SOC 2 kontrolleri"
 msgid "Software as a Service"
 msgstr "Hizmet Olarak Yazılım"
 
-#: app/routes/_index.tsx:1054
+#: app/routes/_index.tsx:1072
 msgid "Source available"
 msgstr "Kaynak mevcut"
 
@@ -1344,7 +1345,7 @@ msgstr "30 günlük ücretsiz denemeyi başlat"
 msgid "Start Free"
 msgstr "Ücretsiz Başlayın"
 
-#: app/routes/_index.tsx:1198
+#: app/routes/_index.tsx:1216
 msgid "Start now · No call required"
 msgstr "Şimdi başlayın · Çağrı gerekmez"
 
@@ -1405,7 +1406,7 @@ msgstr "Şantiye Kendisi"
 msgid "The Modern Manufacturing Stack"
 msgstr "Modern İmalat Yığını"
 
-#: app/routes/_index.tsx:1094
+#: app/routes/_index.tsx:1112
 msgid "The whole application is on GitHub — the Community edition under AGPL-3.0. Read every line, run a security review, and extend it to fit your process."
 msgstr "Bütün uygulama GitHub'da — Community edition AGPL-3.0 altında. Her satırı okuyun, bir güvenlik incelemesi çalıştırın ve sürecinize uyacak şekilde genişletin."
 
@@ -1417,7 +1418,7 @@ msgstr "İzlenebilirlik Varsayılan Durumdur."
 msgid "Traveler printed at 6am, stale by 9"
 msgstr "Saat 6'da Yazdırılan Gezgin, Saat 9'da Eski"
 
-#: app/routes/_index.tsx:1027
+#: app/routes/_index.tsx:1045
 msgid "Trusted"
 msgstr "Güvenilir"
 
@@ -1425,7 +1426,7 @@ msgstr "Güvenilir"
 msgid "Trusted by the world's most innovative"
 msgstr "Dünyanın En İnovatif Olanları Tarafından Güvenilir"
 
-#: app/routes/_index.tsx:1236
+#: app/routes/_index.tsx:1254
 msgid "Two hard tech unicorns build on Carbon."
 msgstr "İki yüksek teknoloji unicorn Carbon üzerinde oluşturur."
 
@@ -1453,7 +1454,7 @@ msgstr "Araçlar"
 msgid "View our source code and contribute"
 msgstr "Kaynak kodlarımızı görüntüleyin ve katkıda bulunun"
 
-#: app/routes/_index.tsx:1123
+#: app/routes/_index.tsx:1141
 msgid "View the source"
 msgstr "Kaynağı görüntüle"
 

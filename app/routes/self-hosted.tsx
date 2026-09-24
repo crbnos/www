@@ -243,15 +243,15 @@ function Chip({ children }: { children: string }) {
 
 function Hero() {
 	return (
-		<section className="relative overflow-hidden pt-16 sm:pt-24">
+		<section className="relative overflow-hidden pt-24 sm:pt-36 lg:pt-44">
 			<div className={cn(shell, "relative")}>
-				<h1 className="font-display tracking-[-0.02em] text-[clamp(2.75rem,5.8vw,5.25rem)] leading-[1.1]">
+				<h1 className="font-display tracking-[-0.02em] text-[clamp(2.5rem,5.6vw,5.5rem)] leading-[1.06]">
 					Open-source ERP that runs
 					<br />
 					<span className="text-secondary">inside your CMMC boundary</span>
 				</h1>
 
-				<p className="mt-9 max-w-[70ch] text-lg leading-relaxed text-muted-foreground">
+				<p className="mt-8 max-w-[60ch] text-pretty text-lg leading-relaxed text-muted-foreground">
 					The whole system of record — ERP, MRP, MES and QMS — on Postgres you
 					own. On-prem, in your VPC, or fully air-gapped. Open source, so you can
 					audit every line before it ever touches your most sensitive records.
@@ -270,7 +270,7 @@ function Hero() {
 				</div>
 
 				{/* Framed hero visual — same panel treatment as the home page. */}
-				<div className="relative mt-16 [perspective:2000px]">
+				<div className="relative mt-24 sm:mt-32 [perspective:2000px]">
 					<div
 						aria-hidden
 						className="mx-[12%] h-px bg-gradient-to-r from-transparent via-secondary to-transparent"
