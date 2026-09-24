@@ -1,9 +1,11 @@
 import { Trans, useLingui } from "@lingui/react/macro";
-import { Check } from "lucide-react";
-import { Link } from "react-router";
+import { Check, Cloud, Server } from "lucide-react";
+import { useState } from "react";
+import { Link, useSearchParams } from "react-router";
 import type { MetaFunction } from "react-router";
 import { Button } from "~/components/ui/button";
 import { GithubLogo } from "~/components/ui/github-logo";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs";
 import { pageMeta } from "~/lib/seo";
 import { cn } from "~/lib/utils";
 
@@ -22,36 +24,47 @@ const heading =
 
 const DOCS_URL = "https://docs.carbon.ms";
 const GITHUB_URL = "https://github.com/crbnos/carbon";
+const SELF_HOSTING_DOCS_URL =
+	"https://docs.carbon.ms/docs/platform/self-hosting";
 
-function usePlans() {
+type Deployment = "cloud" | "self-hosted";
+
+function usePlans(deployment: Deployment) {
 	const { t } = useLingui();
+	const selfHosted = deployment === "self-hosted";
 	return [
 		{
-			name: t`Starter`,
-			tag: t`Self-serve`,
-			priceHeadline: "$40",
+			name: selfHosted ? t`Community Edition` : t`Starter`,
+			tag: selfHosted ? t`Open source` : t`Self-serve`,
+			priceHeadline: selfHosted ? "$0" : "$40",
 			priceSubtext: t`/user/month`,
-			action: t`Start 30-day free trial`,
-			url: "https://app.carbon.ms",
-			description: t`A managed cloud-hosted version of Carbon`,
+			action: selfHosted ? t`Self-Host Carbon` : t`Start 30-day free trial`,
+			url: selfHosted ? SELF_HOSTING_DOCS_URL : "https://app.carbon.ms",
+			description: selfHosted
+				? t`The open-source core of Carbon, free under AGPL-3.0`
+				: t`A managed cloud-hosted version of Carbon`,
 			featured: false,
 			features: [
-				t`Automatic updates and cloud backups`,
+				selfHosted
+					? t`Runs on your servers or in your VPC with Docker`
+					: t`Automatic updates and cloud backups`,
 				t`Basic ERP, MES, MRP, and QMS functionality`,
 				t`Accounting with general ledger, financial reports, fixed assets, and multi-currency`,
 				t`Product configurator with rules-based BOMs and routings`,
 				t`Unlimited records`,
-				t`Self-onboarding`,
+				selfHosted ? t`Self-guided installation` : t`Self-onboarding`,
 				t`Community support`,
 			],
 		},
 		{
 			name: t`Business`,
-			tag: t`Cloud + support`,
-			description: t`Everything in Starter, and the features below`,
+			tag: selfHosted ? t`Self-hosted + support` : t`Cloud + support`,
+			description: selfHosted
+				? t`Everything in Community Edition, and the features below`
+				: t`Everything in Starter, and the features below`,
 			priceHeadline: "$100",
 			priceSubtext: t`/user/month`,
-			action: t`Contact us`,
+			action: selfHosted ? t`Get a license` : t`Contact us`,
 			url: "/sales",
 			featured: false,
 			features: [
@@ -77,7 +90,9 @@ function usePlans() {
 			description: t`Everything in Business, plus a custom solution to meet your needs`,
 			featured: true,
 			features: [
-				t`Self-hosted or managed`,
+				selfHosted
+					? t`On-prem, private cloud, or air-gapped`
+					: t`Runs on your cloud`,
 				t`Forward deployed engineer`,
 				t`Customizations, training, and integrations`,
 				t`CMMC Level 2 compliance`,
@@ -90,8 +105,80 @@ function usePlans() {
 	];
 }
 
+function PlanGrid({ deployment }: { deployment: Deployment }) {
+	const plans = usePlans(deployment);
+	return (
+		<div className="grid grid-cols-1 gap-px border border-border bg-border lg:grid-cols-3">
+			{plans.map((plan) => (
+				<div
+					key={plan.name}
+					className={cn(
+						"flex flex-col p-8",
+						plan.featured
+							? "bg-muted shadow-[inset_0_2px_0] shadow-secondary"
+							: "bg-card",
+					)}
+				>
+					<div
+						className={cn(
+							"font-mono text-[10px] uppercase leading-none tracking-[0.18em]",
+							plan.featured ? "text-secondary" : "text-muted-foreground",
+						)}
+					>
+						{plan.tag}
+					</div>
+
+					<h2 className="mt-5 font-display text-2xl tracking-[-0.005em]">
+						{plan.name}
+					</h2>
+					<p className="mt-2 min-h-[40px] text-sm leading-snug text-muted-foreground">
+						{plan.description}
+					</p>
+
+					<div className="mt-6 flex items-end gap-1.5">
+						<span className="font-display tracking-[-0.02em] text-[clamp(2.25rem,4vw,3.25rem)] leading-none">
+							{plan.priceHeadline}
+						</span>
+						{plan.priceSubtext && (
+							<span className="mb-1 font-mono text-xs text-muted-foreground">
+								{plan.priceSubtext}
+							</span>
+						)}
+					</div>
+
+					<div className="my-7 h-px w-full bg-border" />
+
+					<ul className="flex flex-col gap-3">
+						{plan.features.map((feature) => (
+							<li key={feature} className="flex items-start gap-2.5">
+								<Check className="mt-0.5 size-4 shrink-0 text-secondary" />
+								<span className="text-sm leading-snug">{feature}</span>
+							</li>
+						))}
+					</ul>
+
+					<div className="mt-auto pt-8">
+						<Button
+							asChild
+							variant={plan.featured ? "accent" : "accentOutline"}
+							size="cta"
+							className="w-full"
+						>
+							<Link to={plan.url}>{plan.action}</Link>
+						</Button>
+					</div>
+				</div>
+			))}
+		</div>
+	);
+}
+
 export default function Pricing() {
-	const plans = usePlans();
+	const { t } = useLingui();
+	const [searchParams] = useSearchParams();
+	const [deployment, setDeployment] = useState<Deployment>(
+		searchParams.get("deployment") === "self-hosted" ? "self-hosted" : "cloud",
+	);
 	return (
 		<>
 			<section className="border-b border-border py-24 sm:py-28">
@@ -107,72 +194,40 @@ export default function Pricing() {
 						</Trans>
 					</p>
 
-					<div className="mt-14 grid grid-cols-1 gap-px border border-border bg-border lg:grid-cols-3">
-						{plans.map((plan) => (
-							<div
-								key={plan.name}
-								className={cn(
-									"flex flex-col p-8",
-									plan.featured
-										? "bg-muted shadow-[inset_0_2px_0] shadow-secondary"
-										: "bg-card",
-								)}
-							>
-								<div
-									className={cn(
-										"font-mono text-[10px] uppercase leading-none tracking-[0.18em]",
-										plan.featured ? "text-secondary" : "text-muted-foreground",
-									)}
-								>
-									{plan.tag}
-								</div>
+					<Tabs
+						value={deployment}
+						onValueChange={(value) => setDeployment(value as Deployment)}
+						className="mt-14"
+					>
+						<TabsList aria-label={t`Deployment`}>
+							<TabsTrigger value="cloud">
+								<Cloud />
+								<Trans>Cloud</Trans>
+							</TabsTrigger>
+							<TabsTrigger value="self-hosted">
+								<Server />
+								<Trans>Self-hosted</Trans>
+							</TabsTrigger>
+						</TabsList>
 
-								<h2 className="mt-5 font-display text-2xl tracking-[-0.005em]">
-									{plan.name}
-								</h2>
-								<p className="mt-2 min-h-[40px] text-sm leading-snug text-muted-foreground">
-									{plan.description}
-								</p>
-
-								<div className="mt-6 flex items-end gap-1.5">
-									<span className="font-display tracking-[-0.02em] text-[clamp(2.25rem,4vw,3.25rem)] leading-none">
-										{plan.priceHeadline}
-									</span>
-									{plan.priceSubtext && (
-										<span className="mb-1 font-mono text-xs text-muted-foreground">
-											{plan.priceSubtext}
-										</span>
-									)}
-								</div>
-
-								<div className="my-7 h-px w-full bg-border" />
-
-								<ul className="flex flex-col gap-3">
-									{plan.features.map((feature) => (
-										<li key={feature} className="flex items-start gap-2.5">
-											<Check className="mt-0.5 size-4 shrink-0 text-secondary" />
-											<span className="text-sm leading-snug">{feature}</span>
-										</li>
-									))}
-								</ul>
-
-								<div className="mt-auto pt-8">
-									<Button
-										asChild
-										variant={plan.featured ? "accent" : "accentOutline"}
-										size="cta"
-										className="w-full"
-									>
-										<Link to={plan.url}>{plan.action}</Link>
-									</Button>
-								</div>
-							</div>
-						))}
-					</div>
-
-					<p className="mt-6 font-mono text-[11px] uppercase tracking-[0.16em] text-muted-foreground">
-						Billed per user, monthly · 30-day free trial · Cancel anytime
-					</p>
+						<TabsContent value="cloud" className="mt-6">
+							<PlanGrid deployment="cloud" />
+							<p className="mt-6 font-mono text-[11px] uppercase tracking-[0.16em] text-muted-foreground">
+								<Trans>
+									Billed per user, monthly · 30-day free trial · Cancel anytime
+								</Trans>
+							</p>
+						</TabsContent>
+						<TabsContent value="self-hosted" className="mt-6">
+							<PlanGrid deployment="self-hosted" />
+							<p className="mt-6 font-mono text-[11px] uppercase tracking-[0.16em] text-muted-foreground">
+								<Trans>
+									Licensed per user, monthly · Community Edition free under
+									AGPL-3.0
+								</Trans>
+							</p>
+						</TabsContent>
+					</Tabs>
 				</div>
 			</section>
 

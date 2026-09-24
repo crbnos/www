@@ -134,7 +134,7 @@ Everything in Starter, and the features below.
 
 Everything in Business, plus a custom solution to meet your needs.
 
-- Self-hosted or managed
+- Runs on your cloud, or self-hosted on-prem or air-gapped
 - Forward deployed engineer
 - Customizations, training, and integrations
 - CMMC Level 2 compliance
@@ -151,7 +151,8 @@ The open source core is on [GitHub](${REPO_URL}) under a source-available
 license. See the [documentation](${DOCS_URL}) for deployment.
 
 Want Business features on your own servers? Unlock them with a
-[commercial license](${SITE_URL}/sales).
+[commercial license](${SITE_URL}/sales). Self-hosted plans: Community Edition is free
+($0/user/month), Business is $100/user/month, and Enterprise is on request.
 `,
 );
 
