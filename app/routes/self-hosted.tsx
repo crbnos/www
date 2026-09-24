@@ -1,10 +1,11 @@
-import { Check, ChevronRight, Copy, Github } from "lucide-react";
+import { Check, ChevronRight, Copy } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import type { MetaFunction } from "react-router";
 import { LogoStrip } from "~/components/logo-strip";
 import { Screenshot } from "~/components/screenshot";
 import { Button } from "~/components/ui/button";
+import { GithubLogo } from "~/components/ui/github-logo";
 import { ZoomableImage } from "~/components/zoomable-image";
 import { cn } from "~/lib/utils";
 import { pageMeta } from "~/lib/seo";
@@ -245,13 +246,15 @@ function Hero() {
 	return (
 		<section className="relative overflow-hidden pt-24 sm:pt-36 lg:pt-44">
 			<div className={cn(shell, "relative")}>
-				<h1 className="font-display tracking-[-0.02em] text-[clamp(2.5rem,5.6vw,5.5rem)] leading-[1.06]">
-					Open-source ERP that runs
-					<br />
+				{/* The forced break only holds from sm up; on phones the headline
+				    wraps naturally and text-balance evens out the lines. */}
+				<h1 className="font-display tracking-[-0.02em] text-balance text-[clamp(2.5rem,5.6vw,5.5rem)] leading-[1.06]">
+					Open-source ERP that runs{" "}
+					<br className="hidden sm:inline" />
 					<span className="text-secondary">inside your CMMC boundary</span>
 				</h1>
 
-				<p className="mt-8 max-w-[60ch] text-pretty text-lg leading-relaxed text-muted-foreground">
+				<p className="mt-8 max-w-[60ch] text-lg leading-relaxed text-muted-foreground">
 					The whole system of record — ERP, MRP, MES and QMS — on Postgres you
 					own. On-prem, in your VPC, or fully air-gapped. Open source, so you can
 					audit every line before it ever touches your most sensitive records.
@@ -263,8 +266,8 @@ function Hero() {
 					</Button>
 					<Button asChild variant="accentOutline" size="cta">
 						<a href={REPO_URL} target="_blank" rel="noopener">
-							View the source
-							<Github />
+							<GithubLogo className="size-4" />
+							Star on GitHub
 						</a>
 					</Button>
 				</div>
@@ -633,8 +636,8 @@ function OpenCore() {
 					<div className="flex flex-wrap gap-3">
 						<Button asChild variant="accent" size="cta">
 							<a href={REPO_URL} target="_blank" rel="noopener">
+								<GithubLogo className="size-4" />
 								Star on GitHub
-								<Github />
 							</a>
 						</Button>
 						<Button asChild variant="accentOutline" size="cta">
@@ -703,9 +706,10 @@ function CTA() {
 			<div className="relative mx-auto max-w-[1000px] px-6 text-center">
 				<div className={eyebrow}>Run it on your infrastructure</div>
 				<h2 className="mt-6 font-display tracking-[-0.02em] text-[clamp(2.5rem,6vw,5.5rem)] leading-[1.08]">
-					Your factory. Your servers.
+					<span className="block">Your factory.</span>{" "}
+					<span className="block">Your servers.</span>
 				</h2>
-				<p className="mx-auto mt-6 max-w-[56ch] text-lg leading-relaxed text-muted-foreground">
+				<p className="mx-auto mt-6 max-w-[56ch] text-balance text-lg leading-relaxed text-muted-foreground">
 					Start from the source today, or have our team scope a deployment for
 					your program.
 				</p>
@@ -715,8 +719,8 @@ function CTA() {
 					</Button>
 					<Button asChild variant="accentOutline" size="cta">
 						<a href={REPO_URL} target="_blank" rel="noopener">
-							View the source
-							<Github />
+							<GithubLogo className="size-4" />
+							Star on GitHub
 						</a>
 					</Button>
 				</div>

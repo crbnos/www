@@ -11,6 +11,7 @@ import { CodeExamples } from "~/components/code-examples";
 import { LogoStrip } from "~/components/logo-strip";
 import { Screenshot } from "~/components/screenshot";
 import { Button } from "~/components/ui/button";
+import { GithubLogo } from "~/components/ui/github-logo";
 import { ZoomableImage } from "~/components/zoomable-image";
 import { cn } from "~/lib/utils";
 import { pageMeta } from "~/lib/seo";
@@ -498,7 +499,7 @@ function Hero() {
 			<div
 				className={cn(shell, "relative [@media(max-width:320px)]:px-4")}
 			>
-				<h1 className="font-display tracking-[-0.025em] text-balance text-[clamp(2.5rem,5.6vw,5.5rem)] leading-[1.06]">
+				<h1 className="font-display tracking-[-0.025em] text-balance text-[clamp(2.75rem,6.2vw,6.25rem)] leading-[1.06] [@media(max-width:374px)]:text-[2.5rem]">
 					<Trans>
 						Build <CyclingWord />
 						<br />
@@ -506,7 +507,7 @@ function Hero() {
 					</Trans>
 				</h1>
 
-				<p className="mt-8 max-w-[60ch] text-pretty text-lg leading-relaxed text-muted-foreground">
+				<p className="mt-8 max-w-[60ch] text-lg leading-relaxed text-muted-foreground">
 					<Trans>
 						Carbon is the open-source manufacturing ERP/MES/QMS. Quote, plan,
 						buy, build, inspect and ship on one live model of your factory — from a ten-person prototype shop to a
@@ -514,20 +515,18 @@ function Hero() {
 					</Trans>
 				</p>
 
-				<div className="mt-10 flex flex-col items-start gap-5">
+				<div className="mt-10 flex flex-wrap gap-3">
 					<Button asChild variant="accent" size="cta">
 						<a href={APP_URL}>
 							<AppCtaLabel />
 						</a>
 					</Button>
-					<a
-						href={GITHUB_URL}
-						target="_blank"
-						rel="noopener"
-						className="font-mono text-[11px] uppercase leading-none text-muted-foreground transition-colors hover:text-foreground"
-					>
-						<Trans>Or self-host the open source core</Trans>
-					</a>
+					<Button asChild variant="accentOutline" size="cta">
+						<a href={GITHUB_URL} target="_blank" rel="noopener">
+							<GithubLogo className="size-4" />
+							<Trans>Star on GitHub</Trans>
+						</a>
+					</Button>
 				</div>
 			</div>
 
@@ -585,7 +584,7 @@ function Testimonial() {
 				<Reveal className="mx-auto max-w-3xl">
 					<figure className="border border-border bg-card shadow-[inset_2px_0_0] shadow-secondary">
 						<div className="p-8 sm:p-12">
-							<blockquote className="text-pretty font-display text-xl tracking-[0em] text-foreground sm:text-[1.5rem] sm:leading-[1.5] leading-[1.55]">
+							<blockquote className="text-pretty text-xl text-foreground sm:text-[1.5rem] sm:leading-[1.5] leading-[1.55]">
 								<Trans>
 									Best ERP/MRP/MES system I've ever seen in a 22-year career
 									across defense and automotive. Native Onshape integration
