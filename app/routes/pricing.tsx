@@ -57,7 +57,7 @@ function usePlans(deployment: Deployment) {
 			],
 		},
 		{
-			name: t`Business`,
+			name: selfHosted ? t`Enterprise Edition` : t`Business`,
 			tag: selfHosted ? t`Self-hosted + support` : t`Cloud + support`,
 			description: selfHosted
 				? t`Everything in Community Edition, and the features below`
@@ -81,13 +81,15 @@ function usePlans(deployment: Deployment) {
 			],
 		},
 		{
-			name: t`Enterprise`,
+			name: selfHosted ? t`Custom Build` : t`Enterprise`,
 			tag: t`Most popular`,
 			priceHeadline: t`Contact us`,
 			priceSubtext: "",
 			action: t`Contact us`,
 			url: "/sales",
-			description: t`Everything in Business, plus a custom solution to meet your needs`,
+			description: selfHosted
+				? t`Everything in Enterprise Edition, plus a custom solution to meet your needs`
+				: t`Everything in Business, plus a custom solution to meet your needs`,
 			featured: true,
 			features: [
 				selfHosted
@@ -256,7 +258,7 @@ export default function Pricing() {
 							developing locally.
 						</Trans>{" "}
 						<Trans>
-							Want Business features on your own servers?{" "}
+							Want Enterprise Edition features on your own servers?{" "}
 							<Link
 								to="/sales"
 								className="font-medium text-secondary hover:underline"

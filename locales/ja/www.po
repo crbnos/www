@@ -97,7 +97,7 @@ msgstr "製造業向けのエンドツーエンドシステムを構築して約
 msgid "Agent-ready by default"
 msgstr "デフォルトでエージェント対応"
 
-#: app/routes/pricing.tsx:99
+#: app/routes/pricing.tsx:101
 msgid "Air-gapped and ITAR deployments"
 msgstr "エアギャップおよびITAR展開"
 
@@ -215,9 +215,9 @@ msgstr "防衛・自動車業界での22年間のキャリアで見た最高のE
 msgid "Bill of Materials"
 msgstr "部品表"
 
-#: app/routes/pricing.tsx:216
+#: app/routes/pricing.tsx:218
 msgid "Billed per user, monthly · 30-day free trial · Cancel anytime"
-msgstr ""
+msgstr "ユーザーごとに毎月請求 · 30日間無料トライアル · いつでもキャンセル可能"
 
 #: app/routes/_index.tsx:249
 msgid "Billing"
@@ -324,15 +324,15 @@ msgstr "クリーンルームオプス、収率分析"
 msgid "Close"
 msgstr "閉じる"
 
-#: app/routes/pricing.tsx:205
+#: app/routes/pricing.tsx:207
 msgid "Cloud"
-msgstr ""
+msgstr "クラウド"
 
 #: app/routes/pricing.tsx:61
 msgid "Cloud + support"
 msgstr "クラウド + サポート"
 
-#: app/routes/pricing.tsx:98
+#: app/routes/pricing.tsx:100
 msgid "CMMC Level 2 compliance"
 msgstr "CMMC Level 2準拠"
 
@@ -346,7 +346,7 @@ msgstr "共同創設者兼CTO"
 
 #: app/routes/pricing.tsx:37
 msgid "Community Edition"
-msgstr ""
+msgstr "コミュニティ版"
 
 #: app/routes/pricing.tsx:56
 msgid "Community support"
@@ -452,6 +452,10 @@ msgstr "ブランド化された注文体験を作成して、生産を促進し
 msgid "Create a company, connect the MCP, release your first job today."
 msgstr "会社を作成し、MCPを接続し、今日最初のジョブをリリースします。"
 
+#: app/routes/pricing.tsx:84
+msgid "Custom Build"
+msgstr "カスタムビルド"
+
 #: app/components/wizard-form.tsx:153
 msgid "Custom Development"
 msgstr "カスタム開発"
@@ -476,7 +480,7 @@ msgstr "顧客ポータル/ウェブサイト"
 msgid "Customer portals with live order status and files"
 msgstr "リアルタイム注文ステータスとファイルを備えた顧客ポータル"
 
-#: app/routes/pricing.tsx:97
+#: app/routes/pricing.tsx:99
 msgid "Customizations, training, and integrations"
 msgstr "カスタマイズ、トレーニング、および統合"
 
@@ -520,9 +524,9 @@ msgstr "需要と予測"
 msgid "Demand forecasting to plan ahead of orders"
 msgstr "需要予測による先制的な計画"
 
-#: app/routes/pricing.tsx:202
+#: app/routes/pricing.tsx:204
 msgid "Deployment"
-msgstr ""
+msgstr "デプロイメント"
 
 #: app/components/header.tsx:46
 msgid "Developer guides and API reference"
@@ -587,6 +591,10 @@ msgstr "エンジニアリング変更注文"
 msgid "Enterprise"
 msgstr "エンタープライズ"
 
+#: app/routes/pricing.tsx:60
+msgid "Enterprise Edition"
+msgstr "エンタープライズ版"
+
 #: app/components/wizard-form.tsx:147
 msgid "Enterprise. Influence product roadmap with priority feature requests"
 msgstr "エンタープライズ。優先度の高い機能リクエストで製品ロードマップに影響を与えます"
@@ -619,13 +627,17 @@ msgstr "すべてのテーブルがエンドポイント"
 msgid "Every unit, every op"
 msgstr "すべてのユニット、すべての作業"
 
-#: app/routes/pricing.tsx:90
+#: app/routes/pricing.tsx:92
 msgid "Everything in Business, plus a custom solution to meet your needs"
 msgstr "Business内のすべて、およびニーズに合わせたカスタムソリューション"
 
 #: app/routes/pricing.tsx:63
 msgid "Everything in Community Edition, and the features below"
-msgstr ""
+msgstr "コミュニティ版のすべての機能に加えて、以下の機能"
+
+#: app/routes/pricing.tsx:91
+msgid "Everything in Enterprise Edition, plus a custom solution to meet your needs"
+msgstr "エンタープライズ版のすべての機能に加えて、お客様のニーズに対応するカスタムソリューション"
 
 #: app/routes/pricing.tsx:64
 msgid "Everything in Starter, and the features below"
@@ -680,7 +692,7 @@ msgstr "初回品検査"
 msgid "First article inspection, non-conformance, CAPA and gauge calibration sit on the same records as production. Pull any serial number and get its full genealogy — material certs, operators, measurements, deviations."
 msgstr "初回品検査、不適合、CAPA、ゲージキャリブレーションは本番環境と同じレコードに位置しています。任意のシリアル番号をプルして、完全な系統を取得します — 材料証明書、オペレーター、測定、偏差。"
 
-#: app/routes/pricing.tsx:96
+#: app/routes/pricing.tsx:98
 msgid "Forward deployed engineer"
 msgstr "フォワードデプロイエンジニア"
 
@@ -696,7 +708,7 @@ msgstr "4つのシステム、1つのスキーマ。"
 msgid "Full Name"
 msgstr "フルネーム"
 
-#: app/routes/pricing.tsx:100
+#: app/routes/pricing.tsx:102
 msgid "Full setup and migrations"
 msgstr "完全なセットアップと移行"
 
@@ -714,13 +726,13 @@ msgstr "Carbon のスキーマから直接生成 — 381 個のリソースと 1
 
 #: app/routes/pricing.tsx:67
 msgid "Get a license"
-msgstr ""
+msgstr "ライセンスを取得する"
 
 #: app/components/hero.tsx:136
 msgid "Get Started"
 msgstr "始める"
 
-#: app/routes/pricing.tsx:251
+#: app/routes/pricing.tsx:253
 msgid "Get started for free."
 msgstr "無料で開始。"
 
@@ -880,9 +892,9 @@ msgstr "インフラストラクチャの管理はお任せください"
 msgid "License"
 msgstr "ライセンス"
 
-#: app/routes/pricing.tsx:224
+#: app/routes/pricing.tsx:226
 msgid "Licensed per user, monthly · Community Edition free under AGPL-3.0"
-msgstr ""
+msgstr "ユーザーごとに毎月ライセンス · コミュニティ版はAGPL-3.0下で無料"
 
 #: app/components/wizard-form.tsx:136
 msgid "Limited Support"
@@ -909,7 +921,7 @@ msgstr "長期リード、プロジェクトベースのビルド"
 msgid "Low monthly payments"
 msgstr "月額の低い支払い"
 
-#: app/routes/pricing.tsx:191
+#: app/routes/pricing.tsx:193
 msgid "Managed cloud or self-host the open-source core. Start free for 30 days — no sales call required."
 msgstr "管理されたクラウドまたは自己ホストのオープンソースコア。30日間無料で開始 — 営業電話不要。"
 
@@ -1009,9 +1021,9 @@ msgstr "不適合 & CAPA"
 msgid "None Required"
 msgstr "不要"
 
-#: app/routes/pricing.tsx:94
+#: app/routes/pricing.tsx:96
 msgid "On-prem, private cloud, or air-gapped"
-msgstr ""
+msgstr "オンプレミス、プライベートクラウド、またはエアギャップ"
 
 #: app/routes/_index.tsx:1100
 msgid "One Postgres schema, and it's yours"
@@ -1027,7 +1039,7 @@ msgstr "一度の購入で完全な所有権を取得"
 
 #: app/routes/pricing.tsx:38
 msgid "Open source"
-msgstr ""
+msgstr "オープンソース"
 
 #: app/components/status-indicator.tsx:8
 msgid "Operational"
@@ -1180,11 +1192,11 @@ msgstr "リアクター"
 msgid "Read it. Extend it."
 msgstr "読む。拡張する。"
 
-#: app/routes/pricing.tsx:272
+#: app/routes/pricing.tsx:274
 msgid "Read the Docs"
 msgstr "ドキュメントを読む"
 
-#: app/routes/pricing.tsx:254
+#: app/routes/pricing.tsx:256
 msgid "Read the source, run it in your own environment, and start developing locally."
 msgstr "ソースを読み、独自の環境で実行し、ローカルで開発を開始します。"
 
@@ -1242,13 +1254,13 @@ msgstr "行レベルセキュリティ"
 msgid "Rule-based BOM and routing generation"
 msgstr "ルールベースのBOMとルーティング生成"
 
-#: app/routes/pricing.tsx:95
+#: app/routes/pricing.tsx:97
 msgid "Runs on your cloud"
-msgstr ""
+msgstr "クラウド上で実行"
 
 #: app/routes/pricing.tsx:49
 msgid "Runs on your servers or in your VPC with Docker"
-msgstr ""
+msgstr "サーバーまたはDockerを使用したVPC内で実行"
 
 #: app/components/footer.tsx:50
 msgid "Sales"
@@ -1280,17 +1292,17 @@ msgstr "ご希望のホスティングソリューションを選択してくだ
 
 #: app/routes/pricing.tsx:55
 msgid "Self-guided installation"
-msgstr ""
+msgstr "セルフガイドインストール"
 
 #: app/routes/pricing.tsx:41
 msgid "Self-Host Carbon"
-msgstr ""
+msgstr "Carbon をセルフホスト"
 
 #: app/components/footer.tsx:64
 #: app/components/header.tsx:89
 #: app/components/header.tsx:209
 #: app/routes/_index.tsx:1119
-#: app/routes/pricing.tsx:209
+#: app/routes/pricing.tsx:211
 msgid "Self-hosted"
 msgstr "自己ホスト"
 
@@ -1300,7 +1312,7 @@ msgstr "セルフホスト"
 
 #: app/routes/pricing.tsx:61
 msgid "Self-hosted + support"
-msgstr ""
+msgstr "セルフホスト+サポート"
 
 #: app/routes/pricing.tsx:55
 msgid "Self-onboarding"
@@ -1362,7 +1374,7 @@ msgstr "不足のエスカレーション"
 msgid "Shortages found on the floor"
 msgstr "床に見つかった不足"
 
-#: app/routes/pricing.tsx:188
+#: app/routes/pricing.tsx:190
 msgid "Simple pricing based on your needs."
 msgstr "ニーズに基づいたシンプルな価格設定。"
 
@@ -1398,12 +1410,12 @@ msgstr "スペース"
 msgid "Spreadsheet"
 msgstr "スプレッドシート"
 
-#: app/routes/pricing.tsx:101
+#: app/routes/pricing.tsx:103
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
 #: app/routes/_index.tsx:527
-#: app/routes/pricing.tsx:278
+#: app/routes/pricing.tsx:280
 msgid "Star on GitHub"
 msgstr "GitHubでスターを付ける"
 
@@ -1478,7 +1490,7 @@ msgstr "最新の製造スタック"
 
 #: app/routes/pricing.tsx:44
 msgid "The open-source core of Carbon, free under AGPL-3.0"
-msgstr ""
+msgstr "Carbon のオープンソースコアで、AGPL-3.0下で無料"
 
 #: app/routes/_index.tsx:1106
 msgid "The whole application is on GitHub — the Community edition under AGPL-3.0. Read every line, run a security review, and extend it to fit your process."
@@ -1513,7 +1525,7 @@ msgstr "一般的な初回デプロイメント"
 msgid "Unfork your BOM."
 msgstr "あなたのBOMを統一してください。"
 
-#: app/routes/pricing.tsx:102
+#: app/routes/pricing.tsx:104
 msgid "Unlimited functional support"
 msgstr "無制限の機能サポート"
 
@@ -1533,9 +1545,9 @@ msgstr "ソースコードを表示して貢献する"
 msgid "View the source"
 msgstr "ソースを表示"
 
-#: app/routes/pricing.tsx:258
-msgid "Want Business features on your own servers? <0>Unlock them with a commercial license</0>."
-msgstr "独自のサーバーでBusiness機能が必要ですか？<0>商用ライセンスでそれらをロック解除</0>。"
+#: app/routes/pricing.tsx:260
+msgid "Want Enterprise Edition features on your own servers? <0>Unlock them with a commercial license</0>."
+msgstr "独自のサーバー上でエンタープライズ版の機能が必要ですか？<0>商用ライセンスでロック解除できます</0>。"
 
 #: app/routes/about.tsx:57
 msgid "We open-sourced Carbon not because it's a great business plan, but because that's the system I would have wanted when I was in your shoes."

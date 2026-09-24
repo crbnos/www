@@ -97,7 +97,7 @@ msgstr "Dopo aver trascorso quasi un decennio a costruire sistemi end-to-end per
 msgid "Agent-ready by default"
 msgstr "Pronto per gli agenti per impostazione predefinita"
 
-#: app/routes/pricing.tsx:99
+#: app/routes/pricing.tsx:101
 msgid "Air-gapped and ITAR deployments"
 msgstr "Distribuzioni air-gapped e ITAR"
 
@@ -215,9 +215,9 @@ msgstr "Miglior sistema ERP/MRP/MES che abbia mai visto in una carriera di 22 an
 msgid "Bill of Materials"
 msgstr "Distinta Base"
 
-#: app/routes/pricing.tsx:216
+#: app/routes/pricing.tsx:218
 msgid "Billed per user, monthly · 30-day free trial · Cancel anytime"
-msgstr ""
+msgstr "Fatturato per utente, mensile · Prova gratuita di 30 giorni · Annulla in qualsiasi momento"
 
 #: app/routes/_index.tsx:249
 msgid "Billing"
@@ -324,15 +324,15 @@ msgstr "operazioni cleanroom, analisi di resa"
 msgid "Close"
 msgstr "Chiudi"
 
-#: app/routes/pricing.tsx:205
+#: app/routes/pricing.tsx:207
 msgid "Cloud"
-msgstr ""
+msgstr "Cloud"
 
 #: app/routes/pricing.tsx:61
 msgid "Cloud + support"
 msgstr "Cloud + supporto"
 
-#: app/routes/pricing.tsx:98
+#: app/routes/pricing.tsx:100
 msgid "CMMC Level 2 compliance"
 msgstr "Conformità CMMC Livello 2"
 
@@ -346,7 +346,7 @@ msgstr "Co-Fondatore e CTO"
 
 #: app/routes/pricing.tsx:37
 msgid "Community Edition"
-msgstr ""
+msgstr "Edizione Community"
 
 #: app/routes/pricing.tsx:56
 msgid "Community support"
@@ -452,6 +452,10 @@ msgstr "Crea un'esperienza di ordinazione personalizzata che aumenta la produzio
 msgid "Create a company, connect the MCP, release your first job today."
 msgstr "Crea un'azienda, connetti l'MCP, rilascia il tuo primo lavoro oggi."
 
+#: app/routes/pricing.tsx:84
+msgid "Custom Build"
+msgstr "Compilazione personalizzata"
+
 #: app/components/wizard-form.tsx:153
 msgid "Custom Development"
 msgstr "Sviluppo Personalizzato"
@@ -476,7 +480,7 @@ msgstr "Portale Cliente/Sito Web"
 msgid "Customer portals with live order status and files"
 msgstr "Portali clienti con stato ordini in tempo reale e file"
 
-#: app/routes/pricing.tsx:97
+#: app/routes/pricing.tsx:99
 msgid "Customizations, training, and integrations"
 msgstr "Personalizzazioni, formazione e integrazioni"
 
@@ -520,9 +524,9 @@ msgstr "Domanda e previsioni"
 msgid "Demand forecasting to plan ahead of orders"
 msgstr "Previsione della domanda per pianificare in anticipo gli ordini"
 
-#: app/routes/pricing.tsx:202
+#: app/routes/pricing.tsx:204
 msgid "Deployment"
-msgstr ""
+msgstr "Implementazione"
 
 #: app/components/header.tsx:46
 msgid "Developer guides and API reference"
@@ -587,6 +591,10 @@ msgstr "Ordini di modifica ingegneristica"
 msgid "Enterprise"
 msgstr "Azienda"
 
+#: app/routes/pricing.tsx:60
+msgid "Enterprise Edition"
+msgstr "Edizione Enterprise"
+
 #: app/components/wizard-form.tsx:147
 msgid "Enterprise. Influence product roadmap with priority feature requests"
 msgstr "Enterprise. Influenza la roadmap del prodotto con richieste di funzionalità prioritarie"
@@ -619,13 +627,17 @@ msgstr "Ogni tabella è un endpoint"
 msgid "Every unit, every op"
 msgstr "Ogni unità, ogni operazione"
 
-#: app/routes/pricing.tsx:90
+#: app/routes/pricing.tsx:92
 msgid "Everything in Business, plus a custom solution to meet your needs"
 msgstr "Tutto in Business, più una soluzione personalizzata per soddisfare le tue esigenze"
 
 #: app/routes/pricing.tsx:63
 msgid "Everything in Community Edition, and the features below"
-msgstr ""
+msgstr "Tutto in Edizione Community e le funzioni sottostanti"
+
+#: app/routes/pricing.tsx:91
+msgid "Everything in Enterprise Edition, plus a custom solution to meet your needs"
+msgstr "Tutto in Edizione Enterprise, più una soluzione personalizzata per soddisfare le tue esigenze"
 
 #: app/routes/pricing.tsx:64
 msgid "Everything in Starter, and the features below"
@@ -680,7 +692,7 @@ msgstr "Ispezione del primo articolo"
 msgid "First article inspection, non-conformance, CAPA and gauge calibration sit on the same records as production. Pull any serial number and get its full genealogy — material certs, operators, measurements, deviations."
 msgstr "L'ispezione del primo articolo, non-conformità, CAPA e calibrazione dei calibri si trovano negli stessi record della produzione. Estrai qualsiasi numero di serie e ottieni la sua genealogia completa — certificati dei materiali, operatori, misurazioni, deviazioni."
 
-#: app/routes/pricing.tsx:96
+#: app/routes/pricing.tsx:98
 msgid "Forward deployed engineer"
 msgstr "Ingegnere distribuito in loco"
 
@@ -696,7 +708,7 @@ msgstr "Quattro sistemi, uno schema."
 msgid "Full Name"
 msgstr "Nome Completo"
 
-#: app/routes/pricing.tsx:100
+#: app/routes/pricing.tsx:102
 msgid "Full setup and migrations"
 msgstr "Configurazione completa e migrazioni"
 
@@ -714,13 +726,13 @@ msgstr "Generato direttamente dallo schema di Carbon — 381 risorse e 1.641 end
 
 #: app/routes/pricing.tsx:67
 msgid "Get a license"
-msgstr ""
+msgstr "Ottieni una licenza"
 
 #: app/components/hero.tsx:136
 msgid "Get Started"
 msgstr "Inizia"
 
-#: app/routes/pricing.tsx:251
+#: app/routes/pricing.tsx:253
 msgid "Get started for free."
 msgstr "Inizia gratuitamente."
 
@@ -880,9 +892,9 @@ msgstr "Lasciaci gestire l'infrastruttura per te"
 msgid "License"
 msgstr "Licenza"
 
-#: app/routes/pricing.tsx:224
+#: app/routes/pricing.tsx:226
 msgid "Licensed per user, monthly · Community Edition free under AGPL-3.0"
-msgstr ""
+msgstr "Concesso in licenza per utente, mensile · Edizione Community gratuita secondo AGPL-3.0"
 
 #: app/components/wizard-form.tsx:136
 msgid "Limited Support"
@@ -909,7 +921,7 @@ msgstr "progetto con lead lungo, build basata su progetto"
 msgid "Low monthly payments"
 msgstr "Pagamenti mensili ridotti"
 
-#: app/routes/pricing.tsx:191
+#: app/routes/pricing.tsx:193
 msgid "Managed cloud or self-host the open-source core. Start free for 30 days — no sales call required."
 msgstr "Cloud gestito o auto-hosting del core open-source. Inizia gratuitamente per 30 giorni — nessuna chiamata di vendita richiesta."
 
@@ -1009,9 +1021,9 @@ msgstr "Non-conformità e CAPA"
 msgid "None Required"
 msgstr "Nessuno richiesto"
 
-#: app/routes/pricing.tsx:94
+#: app/routes/pricing.tsx:96
 msgid "On-prem, private cloud, or air-gapped"
-msgstr ""
+msgstr "On-prem, cloud privato o isolato"
 
 #: app/routes/_index.tsx:1100
 msgid "One Postgres schema, and it's yours"
@@ -1027,7 +1039,7 @@ msgstr "Acquisto una tantum con piena proprietà"
 
 #: app/routes/pricing.tsx:38
 msgid "Open source"
-msgstr ""
+msgstr "Open source"
 
 #: app/components/status-indicator.tsx:8
 msgid "Operational"
@@ -1180,11 +1192,11 @@ msgstr "reattori"
 msgid "Read it. Extend it."
 msgstr "Leggilo. Estendilo."
 
-#: app/routes/pricing.tsx:272
+#: app/routes/pricing.tsx:274
 msgid "Read the Docs"
 msgstr "Leggi la documentazione"
 
-#: app/routes/pricing.tsx:254
+#: app/routes/pricing.tsx:256
 msgid "Read the source, run it in your own environment, and start developing locally."
 msgstr "Leggi il codice sorgente, eseguilo nel tuo ambiente e inizia a sviluppare localmente."
 
@@ -1242,13 +1254,13 @@ msgstr "Sicurezza a livello di riga"
 msgid "Rule-based BOM and routing generation"
 msgstr "Generazione di BOM e routing basata su regole"
 
-#: app/routes/pricing.tsx:95
+#: app/routes/pricing.tsx:97
 msgid "Runs on your cloud"
-msgstr ""
+msgstr "Viene eseguito sul tuo cloud"
 
 #: app/routes/pricing.tsx:49
 msgid "Runs on your servers or in your VPC with Docker"
-msgstr ""
+msgstr "Viene eseguito sui tuoi server o nel tuo VPC con Docker"
 
 #: app/components/footer.tsx:50
 msgid "Sales"
@@ -1280,17 +1292,17 @@ msgstr "Seleziona la tua soluzione di hosting preferita"
 
 #: app/routes/pricing.tsx:55
 msgid "Self-guided installation"
-msgstr ""
+msgstr "Installazione autogestita"
 
 #: app/routes/pricing.tsx:41
 msgid "Self-Host Carbon"
-msgstr ""
+msgstr "Self-Host Carbon"
 
 #: app/components/footer.tsx:64
 #: app/components/header.tsx:89
 #: app/components/header.tsx:209
 #: app/routes/_index.tsx:1119
-#: app/routes/pricing.tsx:209
+#: app/routes/pricing.tsx:211
 msgid "Self-hosted"
 msgstr "Auto-ospitato"
 
@@ -1300,7 +1312,7 @@ msgstr "Auto-ospitato"
 
 #: app/routes/pricing.tsx:61
 msgid "Self-hosted + support"
-msgstr ""
+msgstr "Self-hosted + supporto"
 
 #: app/routes/pricing.tsx:55
 msgid "Self-onboarding"
@@ -1362,7 +1374,7 @@ msgstr "Escalation della carenza"
 msgid "Shortages found on the floor"
 msgstr "Carenze riscontrate in fabbrica"
 
-#: app/routes/pricing.tsx:188
+#: app/routes/pricing.tsx:190
 msgid "Simple pricing based on your needs."
 msgstr "Prezzi semplici basati sulle tue esigenze."
 
@@ -1398,12 +1410,12 @@ msgstr "Spazio"
 msgid "Spreadsheet"
 msgstr "Foglio di calcolo"
 
-#: app/routes/pricing.tsx:101
+#: app/routes/pricing.tsx:103
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
 #: app/routes/_index.tsx:527
-#: app/routes/pricing.tsx:278
+#: app/routes/pricing.tsx:280
 msgid "Star on GitHub"
 msgstr "Stella su GitHub"
 
@@ -1478,7 +1490,7 @@ msgstr "Lo Stack Moderno di Produzione"
 
 #: app/routes/pricing.tsx:44
 msgid "The open-source core of Carbon, free under AGPL-3.0"
-msgstr ""
+msgstr "Il nucleo open-source di Carbon, gratuito secondo AGPL-3.0"
 
 #: app/routes/_index.tsx:1106
 msgid "The whole application is on GitHub — the Community edition under AGPL-3.0. Read every line, run a security review, and extend it to fit your process."
@@ -1513,7 +1525,7 @@ msgstr "Implementazione tipica del primo"
 msgid "Unfork your BOM."
 msgstr "Elimina il fork della tua distinta base."
 
-#: app/routes/pricing.tsx:102
+#: app/routes/pricing.tsx:104
 msgid "Unlimited functional support"
 msgstr "Supporto funzionale illimitato"
 
@@ -1533,9 +1545,9 @@ msgstr "Visualizza il nostro codice sorgente e contribuisci"
 msgid "View the source"
 msgstr "Visualizza il sorgente"
 
-#: app/routes/pricing.tsx:258
-msgid "Want Business features on your own servers? <0>Unlock them with a commercial license</0>."
-msgstr "Vuoi funzioni Business sui tuoi server? <0>Sbloccale con una licenza commerciale</0>."
+#: app/routes/pricing.tsx:260
+msgid "Want Enterprise Edition features on your own servers? <0>Unlock them with a commercial license</0>."
+msgstr "Vuoi le funzioni Edizione Enterprise sui tuoi server? <0>Sbloccale con una licenza commerciale</0>."
 
 #: app/routes/about.tsx:57
 msgid "We open-sourced Carbon not because it's a great business plan, but because that's the system I would have wanted when I was in your shoes."

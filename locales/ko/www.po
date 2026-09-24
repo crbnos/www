@@ -97,7 +97,7 @@ msgstr "제조 산업을 위한 엔드-투-엔드 시스템을 구축하는 데 
 msgid "Agent-ready by default"
 msgstr "기본적으로 에이전트 준비 완료"
 
-#: app/routes/pricing.tsx:99
+#: app/routes/pricing.tsx:101
 msgid "Air-gapped and ITAR deployments"
 msgstr "에어 갭 및 ITAR 배포"
 
@@ -215,9 +215,9 @@ msgstr "국방 및 자동차 분야의 22년 경력에서 본 최고의 ERP/MRP/
 msgid "Bill of Materials"
 msgstr "자재 명세서"
 
-#: app/routes/pricing.tsx:216
+#: app/routes/pricing.tsx:218
 msgid "Billed per user, monthly · 30-day free trial · Cancel anytime"
-msgstr ""
+msgstr "사용자당 월별 청구 · 30일 무료 체험 · 언제든지 취소"
 
 #: app/routes/_index.tsx:249
 msgid "Billing"
@@ -324,15 +324,15 @@ msgstr "정화실 운영, 수율 분석"
 msgid "Close"
 msgstr "닫기"
 
-#: app/routes/pricing.tsx:205
+#: app/routes/pricing.tsx:207
 msgid "Cloud"
-msgstr ""
+msgstr "클라우드"
 
 #: app/routes/pricing.tsx:61
 msgid "Cloud + support"
 msgstr "클라우드 + 지원"
 
-#: app/routes/pricing.tsx:98
+#: app/routes/pricing.tsx:100
 msgid "CMMC Level 2 compliance"
 msgstr "CMMC Level 2 규정 준수"
 
@@ -346,7 +346,7 @@ msgstr "공동 창립자 및 CTO"
 
 #: app/routes/pricing.tsx:37
 msgid "Community Edition"
-msgstr ""
+msgstr "커뮤니티 에디션"
 
 #: app/routes/pricing.tsx:56
 msgid "Community support"
@@ -452,6 +452,10 @@ msgstr "브랜드화된 주문 경험을 만들어 생산을 촉진하세요"
 msgid "Create a company, connect the MCP, release your first job today."
 msgstr "회사를 만들고, MCP에 연결하고, 오늘 첫 번째 작업을 출시하세요."
 
+#: app/routes/pricing.tsx:84
+msgid "Custom Build"
+msgstr "맞춤형 빌드"
+
 #: app/components/wizard-form.tsx:153
 msgid "Custom Development"
 msgstr "맞춤 개발"
@@ -476,7 +480,7 @@ msgstr "고객 포털/웹사이트"
 msgid "Customer portals with live order status and files"
 msgstr "실시간 주문 상태 및 파일이 포함된 고객 포털"
 
-#: app/routes/pricing.tsx:97
+#: app/routes/pricing.tsx:99
 msgid "Customizations, training, and integrations"
 msgstr "맞춤화, 교육 및 통합"
 
@@ -520,9 +524,9 @@ msgstr "수요 및 예측"
 msgid "Demand forecasting to plan ahead of orders"
 msgstr "주문을 미리 계획하기 위한 수요 예측"
 
-#: app/routes/pricing.tsx:202
+#: app/routes/pricing.tsx:204
 msgid "Deployment"
-msgstr ""
+msgstr "배포"
 
 #: app/components/header.tsx:46
 msgid "Developer guides and API reference"
@@ -587,6 +591,10 @@ msgstr "엔지니어링 변경 주문"
 msgid "Enterprise"
 msgstr "엔터프라이즈"
 
+#: app/routes/pricing.tsx:60
+msgid "Enterprise Edition"
+msgstr "엔터프라이즈 에디션"
+
 #: app/components/wizard-form.tsx:147
 msgid "Enterprise. Influence product roadmap with priority feature requests"
 msgstr "엔터프라이즈. 우선순위 기능 요청으로 제품 로드맵에 영향을 미칩니다"
@@ -619,13 +627,17 @@ msgstr "모든 테이블은 끝점입니다"
 msgid "Every unit, every op"
 msgstr "모든 단위, 모든 작업"
 
-#: app/routes/pricing.tsx:90
+#: app/routes/pricing.tsx:92
 msgid "Everything in Business, plus a custom solution to meet your needs"
 msgstr "Business의 모든 것 + 당신의 필요를 충족하는 사용자 정의 솔루션"
 
 #: app/routes/pricing.tsx:63
 msgid "Everything in Community Edition, and the features below"
-msgstr ""
+msgstr "커뮤니티 에디션의 모든 기능 및 아래의 기능"
+
+#: app/routes/pricing.tsx:91
+msgid "Everything in Enterprise Edition, plus a custom solution to meet your needs"
+msgstr "엔터프라이즈 에디션의 모든 기능 및 귀사의 요구사항을 충족하는 맞춤형 솔루션"
 
 #: app/routes/pricing.tsx:64
 msgid "Everything in Starter, and the features below"
@@ -680,7 +692,7 @@ msgstr "첫 번째 제품 검사"
 msgid "First article inspection, non-conformance, CAPA and gauge calibration sit on the same records as production. Pull any serial number and get its full genealogy — material certs, operators, measurements, deviations."
 msgstr "첫 번째 제품 검사, 부적합, CAPA 및 게이지 보정은 생산과 동일한 레코드에 있습니다. 모든 일련번호를 가져오고 전체 계보를 얻으세요. 자재 인증서, 운영자, 측정값, 편차."
 
-#: app/routes/pricing.tsx:96
+#: app/routes/pricing.tsx:98
 msgid "Forward deployed engineer"
 msgstr "전방 배치 엔지니어"
 
@@ -696,7 +708,7 @@ msgstr "네 가지 시스템, 하나의 스키마."
 msgid "Full Name"
 msgstr "전체 이름"
 
-#: app/routes/pricing.tsx:100
+#: app/routes/pricing.tsx:102
 msgid "Full setup and migrations"
 msgstr "전체 설정 및 마이그레이션"
 
@@ -714,13 +726,13 @@ msgstr "Carbon의 스키마에서 직접 생성됨 — TypeScript, Python, C# �
 
 #: app/routes/pricing.tsx:67
 msgid "Get a license"
-msgstr ""
+msgstr "라이선스 받기"
 
 #: app/components/hero.tsx:136
 msgid "Get Started"
 msgstr "시작하기"
 
-#: app/routes/pricing.tsx:251
+#: app/routes/pricing.tsx:253
 msgid "Get started for free."
 msgstr "무료로 시작하세요."
 
@@ -880,9 +892,9 @@ msgstr "인프라를 저희가 관리해드립니다"
 msgid "License"
 msgstr "라이선스"
 
-#: app/routes/pricing.tsx:224
+#: app/routes/pricing.tsx:226
 msgid "Licensed per user, monthly · Community Edition free under AGPL-3.0"
-msgstr ""
+msgstr "사용자당 월별 라이선스 · 커뮤니티 에디션은 AGPL-3.0 하에서 무료"
 
 #: app/components/wizard-form.tsx:136
 msgid "Limited Support"
@@ -909,7 +921,7 @@ msgstr "장기 리드, 프로젝트 기반 구축"
 msgid "Low monthly payments"
 msgstr "낮은 월간 결제"
 
-#: app/routes/pricing.tsx:191
+#: app/routes/pricing.tsx:193
 msgid "Managed cloud or self-host the open-source core. Start free for 30 days — no sales call required."
 msgstr "관리형 클라우드 또는 오픈 소스 코어를 자체 호스팅하세요. 30일 동안 무료로 시작하세요. 영업 전화 불필요."
 
@@ -1009,9 +1021,9 @@ msgstr "부적합 & CAPA"
 msgid "None Required"
 msgstr "필수 없음"
 
-#: app/routes/pricing.tsx:94
+#: app/routes/pricing.tsx:96
 msgid "On-prem, private cloud, or air-gapped"
-msgstr ""
+msgstr "온프레미스, 프라이빗 클라우드 또는 에어갭"
 
 #: app/routes/_index.tsx:1100
 msgid "One Postgres schema, and it's yours"
@@ -1027,7 +1039,7 @@ msgstr "일회성 구매로 완전한 소유권 획득"
 
 #: app/routes/pricing.tsx:38
 msgid "Open source"
-msgstr ""
+msgstr "오픈 소스"
 
 #: app/components/status-indicator.tsx:8
 msgid "Operational"
@@ -1180,11 +1192,11 @@ msgstr "원자로"
 msgid "Read it. Extend it."
 msgstr "읽으세요. 확장하세요."
 
-#: app/routes/pricing.tsx:272
+#: app/routes/pricing.tsx:274
 msgid "Read the Docs"
 msgstr "문서 읽기"
 
-#: app/routes/pricing.tsx:254
+#: app/routes/pricing.tsx:256
 msgid "Read the source, run it in your own environment, and start developing locally."
 msgstr "소스를 읽고 자신의 환경에서 실행하고 로컬에서 개발을 시작하세요."
 
@@ -1242,13 +1254,13 @@ msgstr "행 수준 보안"
 msgid "Rule-based BOM and routing generation"
 msgstr "규칙 기반 BOM 및 라우팅 생성"
 
-#: app/routes/pricing.tsx:95
+#: app/routes/pricing.tsx:97
 msgid "Runs on your cloud"
-msgstr ""
+msgstr "귀사 클라우드에서 실행"
 
 #: app/routes/pricing.tsx:49
 msgid "Runs on your servers or in your VPC with Docker"
-msgstr ""
+msgstr "귀사의 서버 또는 Docker를 사용한 VPC에서 실행"
 
 #: app/components/footer.tsx:50
 msgid "Sales"
@@ -1280,17 +1292,17 @@ msgstr "선호하는 호스팅 솔루션을 선택하세요"
 
 #: app/routes/pricing.tsx:55
 msgid "Self-guided installation"
-msgstr ""
+msgstr "자체 가이드 설치"
 
 #: app/routes/pricing.tsx:41
 msgid "Self-Host Carbon"
-msgstr ""
+msgstr "Self-Host Carbon"
 
 #: app/components/footer.tsx:64
 #: app/components/header.tsx:89
 #: app/components/header.tsx:209
 #: app/routes/_index.tsx:1119
-#: app/routes/pricing.tsx:209
+#: app/routes/pricing.tsx:211
 msgid "Self-hosted"
 msgstr "자체 호스팅"
 
@@ -1300,7 +1312,7 @@ msgstr "자체 호스팅"
 
 #: app/routes/pricing.tsx:61
 msgid "Self-hosted + support"
-msgstr ""
+msgstr "셀프 호스팅 + 지원"
 
 #: app/routes/pricing.tsx:55
 msgid "Self-onboarding"
@@ -1362,7 +1374,7 @@ msgstr "부족 에스컬레이션"
 msgid "Shortages found on the floor"
 msgstr "작업 현장에서 발견된 부족"
 
-#: app/routes/pricing.tsx:188
+#: app/routes/pricing.tsx:190
 msgid "Simple pricing based on your needs."
 msgstr "필요에 따른 간단한 가격."
 
@@ -1398,12 +1410,12 @@ msgstr "우주"
 msgid "Spreadsheet"
 msgstr "스프레드시트"
 
-#: app/routes/pricing.tsx:101
+#: app/routes/pricing.tsx:103
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
 #: app/routes/_index.tsx:527
-#: app/routes/pricing.tsx:278
+#: app/routes/pricing.tsx:280
 msgid "Star on GitHub"
 msgstr "GitHub에서 별 표시"
 
@@ -1478,7 +1490,7 @@ msgstr "현대적인 제조 스택"
 
 #: app/routes/pricing.tsx:44
 msgid "The open-source core of Carbon, free under AGPL-3.0"
-msgstr ""
+msgstr "Carbon의 오픈소스 코어, AGPL-3.0 하에서 무료"
 
 #: app/routes/_index.tsx:1106
 msgid "The whole application is on GitHub — the Community edition under AGPL-3.0. Read every line, run a security review, and extend it to fit your process."
@@ -1513,7 +1525,7 @@ msgstr "일반적인 첫 배포"
 msgid "Unfork your BOM."
 msgstr "BOM을 Unfork하세요."
 
-#: app/routes/pricing.tsx:102
+#: app/routes/pricing.tsx:104
 msgid "Unlimited functional support"
 msgstr "무제한 기능 지원"
 
@@ -1533,9 +1545,9 @@ msgstr "우리의 소스 코드를 보고 기여하세요"
 msgid "View the source"
 msgstr "소스 보기"
 
-#: app/routes/pricing.tsx:258
-msgid "Want Business features on your own servers? <0>Unlock them with a commercial license</0>."
-msgstr "자신의 서버에서 Business 기능을 원하시나요? <0>상용 라이센스로 잠금 해제하세요</0>."
+#: app/routes/pricing.tsx:260
+msgid "Want Enterprise Edition features on your own servers? <0>Unlock them with a commercial license</0>."
+msgstr "자신의 서버에서 엔터프라이즈 에디션 기능을 원하세요? <0>상용 라이선스로 잠금 해제</0>."
 
 #: app/routes/about.tsx:57
 msgid "We open-sourced Carbon not because it's a great business plan, but because that's the system I would have wanted when I was in your shoes."
