@@ -1,3 +1,4 @@
+import { Trans } from "@lingui/react/macro";
 import { Check, ChevronRight, Copy } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
@@ -279,12 +280,8 @@ function Hero() {
 						className="mx-[12%] h-px bg-gradient-to-r from-transparent via-secondary to-transparent"
 						style={{ boxShadow: "0 0 34px 6px hsl(var(--secondary) / 0.35)" }}
 					/>
-					<div className="border border-b-0 border-border bg-card px-2.5 pt-2.5">
-						<div className="flex items-center justify-between px-2 pb-3 pt-1.5 font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
-							<span>Carbon / Console</span>
-							<span>On-prem · Live</span>
-						</div>
-						<div className="relative overflow-hidden border-t border-border sm:h-[min(60vh,680px)]">
+					<div className="border border-b-0 border-border bg-card">
+						<div className="relative overflow-hidden sm:h-[min(60vh,680px)]">
 							<Screenshot
 								className="dark:hidden"
 								src="/screenshots/self-hosted-light.webp"
@@ -735,8 +732,10 @@ export default function SelfHosted() {
 			<Hero />
 			<Principles />
 			<LogoStrip
-				headline="Two hard tech unicorns run Carbon on their own servers."
-				label="Defense · aerospace · regulated manufacturing"
+				headline={<Trans>Two hard tech unicorns build on Carbon.</Trans>}
+				label={
+					<Trans>And some of the world's most innovative manufacturers</Trans>
+				}
 			/>
 			<Walls />
 			<FeatureRows />
