@@ -219,7 +219,7 @@ msgstr "Stuklijst"
 msgid "Billed per user, monthly · 30-day free trial · Cancel anytime"
 msgstr "Per gebruiker gefactureerd, maandelijks · 30 dagen gratis proefperiode · Op elk moment annuleren"
 
-#: app/routes/_index.tsx:249
+#: app/routes/_index.tsx:250
 msgid "Billing"
 msgstr "Facturering"
 
@@ -269,6 +269,7 @@ msgid "Buy the Source Code"
 msgstr "Koop de broncode"
 
 #: app/routes/_index.tsx:243
+#: app/routes/_index.tsx:244
 msgid "CAD"
 msgstr "CAD"
 
@@ -300,7 +301,7 @@ msgstr "Certificaten gegenereerd op basis van live-gegevens"
 msgid "Certificates of conformance"
 msgstr "Conformiteitscertificaten"
 
-#: app/routes/_index.tsx:247
+#: app/routes/_index.tsx:248
 msgid "Chat"
 msgstr "Chat"
 
@@ -655,7 +656,7 @@ msgstr "Uitvoering"
 msgid "Expand image"
 msgstr "Afbeelding vergroten"
 
-#: app/routes/_index.tsx:244
+#: app/routes/_index.tsx:245
 msgid "Expenses"
 msgstr "Uitgaven"
 
@@ -671,8 +672,8 @@ msgstr "FAI & NCR"
 msgid "Feature Prioritization"
 msgstr "Prioritering van functies"
 
-#: app/routes/_index.tsx:250
 #: app/routes/_index.tsx:251
+#: app/routes/_index.tsx:252
 msgid "Finance"
 msgstr "Financiën"
 
@@ -1104,9 +1105,9 @@ msgstr "PO's & ontvangsten"
 msgid "Pricing"
 msgstr "Prijzen"
 
-#: app/routes/_index.tsx:252
 #: app/routes/_index.tsx:253
 #: app/routes/_index.tsx:254
+#: app/routes/_index.tsx:255
 msgid "Printer"
 msgstr "Printer"
 
@@ -1172,7 +1173,7 @@ msgstr "Offertes & RFQ-prijzen"
 msgid "Quotes Table"
 msgstr "Offertetabel"
 
-#: app/routes/_index.tsx:248
+#: app/routes/_index.tsx:249
 msgid "Quoting"
 msgstr "Offertering"
 
@@ -1269,10 +1270,6 @@ msgstr "Verkooporders"
 #: app/routes/_index.tsx:44
 msgid "satellites"
 msgstr "satellieten"
-
-#: app/routes/_index.tsx:255
-msgid "SCADA"
-msgstr "SCADA"
 
 #: app/components/wizard-form.tsx:154
 msgid "Select which features you need custom development for"
@@ -1460,8 +1457,8 @@ msgstr "Systeemstatus:"
 msgid "Systems replaced"
 msgstr "Systemen vervangen"
 
-#: app/routes/_index.tsx:245
 #: app/routes/_index.tsx:246
+#: app/routes/_index.tsx:247
 msgid "Tasks"
 msgstr "Taken"
 
