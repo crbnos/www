@@ -227,7 +227,7 @@ const shell = "mx-auto w-full max-w-[1360px] px-6 sm:px-7";
 const eyebrow =
 	"font-mono text-sm uppercase leading-none tracking-[0.2em] text-muted-foreground";
 const heading =
-	"font-display font-semibold tracking-[-0.035em] leading-[0.95] text-[clamp(2.125rem,4.4vw,3.875rem)]";
+	"font-display tracking-[-0.015em] text-[clamp(2.125rem,4.4vw,3.875rem)] leading-[1.08]";
 
 function Chip({ children }: { children: string }) {
 	return (
@@ -244,20 +244,8 @@ function Chip({ children }: { children: string }) {
 function Hero() {
 	return (
 		<section className="relative overflow-hidden pt-16 sm:pt-24">
-			<div
-				aria-hidden
-				className="pointer-events-none absolute left-1/2 top-[-320px] h-[560px] w-[1200px] max-w-full -translate-x-1/2 rounded-full bg-secondary/20 blur-[110px]"
-			/>
 			<div className={cn(shell, "relative")}>
-				<div className="flex items-center gap-3.5 font-mono text-sm uppercase leading-none tracking-[0.2em] text-muted-foreground">
-					<span className="text-secondary">On-prem</span>
-					<span>/</span>
-					<span className="text-secondary">VPC</span>
-					<span>/</span>
-					<span className="text-secondary">Air-gapped</span>
-				</div>
-
-				<h1 className="mt-10 font-display font-semibold tracking-[-0.045em] leading-[1.0] text-[clamp(2.75rem,5.8vw,5.25rem)]">
+				<h1 className="font-display tracking-[-0.02em] text-[clamp(2.75rem,5.8vw,5.25rem)] leading-[1.1]">
 					Open-source ERP that runs
 					<br />
 					<span className="text-secondary">inside your CMMC boundary</span>
@@ -389,7 +377,7 @@ function FeatureRows() {
 					>
 						<div className={cn(f.flip && "lg:order-2")}>
 							<div className={eyebrow}>{f.eyebrow}</div>
-							<h3 className="mt-5 font-display font-semibold tracking-[-0.03em] leading-[0.98] text-[clamp(1.75rem,3vw,2.625rem)]">
+							<h3 className="mt-5 font-display tracking-[-0.01em] text-[clamp(1.75rem,3vw,2.625rem)] leading-[1.1]">
 								{f.title}
 							</h3>
 							<p className="mt-5 max-w-[44ch] text-base leading-relaxed text-muted-foreground">
@@ -557,7 +545,7 @@ function Parity() {
 			<div className={shell}>
 				<div className="grid grid-cols-1 gap-px border border-border bg-border lg:grid-cols-2">
 					<div className="flex flex-col bg-muted p-10 sm:p-11">
-						<h2 className="font-display font-semibold tracking-[-0.03em] leading-[1] text-[clamp(1.75rem,3vw,2.75rem)]">
+						<h2 className="font-display tracking-[-0.01em] text-[clamp(1.75rem,3vw,2.75rem)] leading-[1.1]">
 							Nothing held back for the cloud.
 						</h2>
 						<p className="mt-5 max-w-[42ch] text-[15px] leading-relaxed text-muted-foreground">
@@ -714,7 +702,7 @@ function CTA() {
 			/>
 			<div className="relative mx-auto max-w-[1000px] px-6 text-center">
 				<div className={eyebrow}>Run it on your infrastructure</div>
-				<h2 className="mt-6 font-display font-semibold tracking-[-0.045em] leading-[0.96] text-[clamp(2.5rem,6vw,5.5rem)]">
+				<h2 className="mt-6 font-display tracking-[-0.02em] text-[clamp(2.5rem,6vw,5.5rem)] leading-[1.08]">
 					Your factory. Your servers.
 				</h2>
 				<p className="mx-auto mt-6 max-w-[56ch] text-lg leading-relaxed text-muted-foreground">

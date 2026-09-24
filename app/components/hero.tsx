@@ -119,7 +119,7 @@ export const Header = memo(({ className }: { className?: string }) => {
 				className,
 			)}
 		>
-			<h2 className="text-balance mx-auto mt-4 max-w-4xl text-center text-4xl font-semibold tracking-tight bg-[radial-gradient(at_top_left,_var(--tw-gradient-stops))] from-zinc-700 to-zinc-900 dark:from-zinc-200 dark:to-zinc-400 bg-clip-text text-transparent sm:text-5xl md:text-6xl lg:text-7xl xl:text-[4.5rem]">
+			<h2 className="text-balance mx-auto mt-4 max-w-4xl text-center font-display text-4xl tracking-[-0.01em] bg-[radial-gradient(at_top_left,_var(--tw-gradient-stops))] from-zinc-700 to-zinc-900 dark:from-zinc-200 dark:to-zinc-400 bg-clip-text text-transparent sm:text-5xl md:text-6xl lg:text-7xl xl:text-[4.5rem] leading-[1.1]">
 				<Trans>The Modern Manufacturing Stack</Trans>
 			</h2>
 			<p className="text-balance mx-auto max-w-4xl text-center text-muted-foreground font-medium text-lg">

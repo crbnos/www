@@ -22,9 +22,9 @@ const shell = "mx-auto w-full max-w-[1360px] px-6 sm:px-7";
 const eyebrow =
   "font-mono text-[11px] uppercase leading-none tracking-[0.2em] text-muted-foreground";
 const heading =
-  "font-display font-semibold tracking-[-0.035em] leading-[0.95] text-[clamp(2.125rem,4.4vw,3.875rem)]";
+  "font-display tracking-[-0.015em] text-[clamp(2.125rem,4.4vw,3.875rem)] leading-[1.08]";
 const sectionHeading =
-  "font-display font-semibold tracking-[-0.03em] text-[clamp(1.5rem,2.6vw,2.25rem)]";
+  "font-display tracking-[-0.01em] text-[clamp(1.5rem,2.6vw,2.25rem)]";
 
 export async function loader({ request, params }: LoaderFunctionArgs) {
   const requestUrl = new URL(request.url);
@@ -155,7 +155,7 @@ export default function Compare() {
           <dl className="mt-16 grid grid-cols-2 gap-px border border-border bg-border lg:grid-cols-4">
             {c.stats.map((stat) => (
               <div key={stat.label} className="bg-card p-6">
-                <dt className="font-display text-3xl font-semibold tracking-[-0.03em]">
+                <dt className="font-display text-3xl tracking-[-0.01em]">
                   {stat.value}
                 </dt>
                 <dd className="mt-2 text-xs leading-snug text-muted-foreground">
@@ -189,12 +189,12 @@ export default function Compare() {
                 <tr>
                   <th className="border-b border-b-border py-5 pr-6 align-bottom" />
                   <th className="border-t-2 border-t-secondary border-b border-b-border px-5 py-5 align-bottom">
-                    <span className="font-display text-lg font-semibold tracking-[-0.02em] text-secondary">
+                    <span className="font-display text-lg tracking-[-0.005em] text-secondary">
                       Carbon
                     </span>
                   </th>
                   <th className="border-b border-b-border px-5 py-5 align-bottom">
-                    <span className="font-display text-lg font-semibold tracking-[-0.02em] text-muted-foreground">
+                    <span className="font-display text-lg tracking-[-0.005em] text-muted-foreground">
                       {c.competitor}
                     </span>
                   </th>
@@ -235,7 +235,7 @@ export default function Compare() {
           <div className="mt-12 grid grid-cols-1 gap-px border border-border bg-border md:grid-cols-3">
             {c.outgrowing.map((card) => (
               <div key={card.title} className="flex flex-col bg-card p-8">
-                <h3 className="font-display text-lg font-semibold tracking-[-0.02em]">
+                <h3 className="font-display text-lg tracking-[-0.005em]">
                   {card.title}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
@@ -255,7 +255,7 @@ export default function Compare() {
           <div className="mt-12 grid grid-cols-1 gap-px border border-border bg-border md:grid-cols-2">
             {c.reasons.map((card) => (
               <div key={card.title} className="flex flex-col bg-card p-8">
-                <h3 className="font-display text-lg font-semibold tracking-[-0.02em]">
+                <h3 className="font-display text-lg tracking-[-0.005em]">
                   {card.title}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
@@ -284,7 +284,7 @@ export default function Compare() {
         />
         <div className="relative mx-auto max-w-[1000px] px-6 text-center">
           <div className={eyebrow}>Open source · Self-host · API-first</div>
-          <h2 className="mt-6 font-display font-semibold tracking-[-0.045em] leading-[0.96] text-[clamp(2.25rem,5vw,4.5rem)]">
+          <h2 className="mt-6 font-display tracking-[-0.02em] text-[clamp(2.25rem,5vw,4.5rem)] leading-[1.08]">
             See Carbon on your own parts.
           </h2>
           <p className="mx-auto mt-6 max-w-[48ch] text-lg leading-relaxed text-muted-foreground">

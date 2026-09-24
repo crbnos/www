@@ -49,7 +49,7 @@ export default function Blog() {
           a larger display-type title, a real subheadline, and a divider that
           sets the intro apart from the list of guides below it. */}
       <header className="mb-16 border-b border-border pb-10">
-        <h1 className="max-w-[20ch] font-display font-semibold text-4xl sm:text-5xl tracking-tight text-balance">
+        <h1 className="max-w-[20ch] font-display text-4xl sm:text-5xl tracking-[-0.01em] text-balance leading-[1.1]">
           Manufacturing systems, explained
         </h1>
         <p className="mt-6 max-w-[52ch] text-lg text-muted-foreground text-pretty">

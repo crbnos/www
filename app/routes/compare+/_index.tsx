@@ -13,7 +13,7 @@ const shell = "mx-auto w-full max-w-[1360px] px-6 sm:px-7";
 const eyebrow =
   "font-mono text-[11px] uppercase leading-none tracking-[0.2em] text-muted-foreground";
 const heading =
-  "font-display font-semibold tracking-[-0.035em] leading-[0.95] text-[clamp(2.125rem,4.4vw,3.875rem)]";
+  "font-display tracking-[-0.015em] text-[clamp(2.125rem,4.4vw,3.875rem)] leading-[1.08]";
 
 export const meta: MetaFunction = ({ matches }) =>
   pageMeta(matches, {
@@ -47,7 +47,7 @@ export default function CompareIndex() {
               className="group flex flex-col bg-card p-8 transition-colors hover:bg-muted"
             >
               <div className={eyebrow}>{c.category}</div>
-              <h2 className="mt-5 font-display text-2xl font-semibold tracking-[-0.02em]">
+              <h2 className="mt-5 font-display text-2xl tracking-[-0.005em]">
                 {c.headline}
               </h2>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">

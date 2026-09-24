@@ -40,14 +40,21 @@ export const config = { runtime: "edge" };
 
 export function links() {
 	return [
-		// Preload the above-the-fold Archivo subset so the browser fetches it in
-		// parallel with the stylesheet instead of discovering it after the CSS
-		// parses. Self-hosted, so no cross-origin preconnect is needed.
+		// Preload the above-the-fold Archivo (body) and Hedvig (headline) subsets
+		// so the browser fetches them in parallel with the stylesheet instead of
+		// discovering them after the CSS parses. Self-hosted, so no cross-origin preconnect is needed.
 		{
 			rel: "preload",
 			as: "font",
 			type: "font/woff2",
 			href: "/fonts/archivo/archivo-latin.woff2",
+			crossOrigin: "anonymous",
+		},
+		{
+			rel: "preload",
+			as: "font",
+			type: "font/woff2",
+			href: "/fonts/hedvig-letters-serif/hedvig-letters-serif-latin.woff2",
 			crossOrigin: "anonymous",
 		},
 		{ rel: "stylesheet", href: Tailwind },

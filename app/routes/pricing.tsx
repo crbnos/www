@@ -18,7 +18,7 @@ const shell = "mx-auto w-full max-w-[1360px] px-6 sm:px-7";
 const eyebrow =
 	"font-mono text-[11px] uppercase leading-none tracking-[0.2em] text-muted-foreground";
 const heading =
-	"font-display font-semibold tracking-[-0.035em] leading-[0.95] text-[clamp(2.125rem,4.4vw,3.875rem)]";
+	"font-display tracking-[-0.015em] text-[clamp(2.125rem,4.4vw,3.875rem)] leading-[1.08]";
 
 const DOCS_URL = "https://docs.carbon.ms";
 const GITHUB_URL = "https://github.com/crbnos/carbon";
@@ -127,7 +127,7 @@ export default function Pricing() {
 									{plan.tag}
 								</div>
 
-								<h2 className="mt-5 font-display text-2xl font-semibold tracking-[-0.02em]">
+								<h2 className="mt-5 font-display text-2xl tracking-[-0.005em]">
 									{plan.name}
 								</h2>
 								<p className="mt-2 min-h-[40px] text-sm leading-snug text-muted-foreground">
@@ -135,7 +135,7 @@ export default function Pricing() {
 								</p>
 
 								<div className="mt-6 flex items-end gap-1.5">
-									<span className="font-display font-semibold leading-none tracking-[-0.04em] text-[clamp(2.25rem,4vw,3.25rem)]">
+									<span className="font-display tracking-[-0.02em] text-[clamp(2.25rem,4vw,3.25rem)] leading-none">
 										{plan.priceHeadline}
 									</span>
 									{plan.priceSubtext && (
@@ -192,7 +192,7 @@ export default function Pricing() {
 				/>
 				<div className="relative mx-auto max-w-[1000px] px-6 text-center">
 					<div className={eyebrow}>Open source · Self-host</div>
-					<h2 className="mt-6 font-display font-semibold tracking-[-0.045em] leading-[0.96] text-[clamp(2.25rem,5vw,4.5rem)]">
+					<h2 className="mt-6 font-display tracking-[-0.02em] text-[clamp(2.25rem,5vw,4.5rem)] leading-[1.08]">
 						<Trans>Get started for free.</Trans>
 					</h2>
 					<p className="mx-auto mt-6 max-w-[48ch] text-lg leading-relaxed text-muted-foreground">

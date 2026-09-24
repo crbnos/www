@@ -152,7 +152,7 @@ export default function Contact() {
     <div className="flex flex-1 flex-col">
       <div className="mx-auto flex w-full flex-col px-4 md:px-6 lg:px-8 3xl:pt-32 4xl:pt-36 max-w-4xl pt-28">
         <div className="flex flex-col gap-4 lg:items-center lg:text-center mb-16">
-          <h1 className="font-semibold text-6xl tracking-tight"><Trans>Contact</Trans></h1>
+          <h1 className="font-display text-6xl tracking-[-0.01em] leading-[1.1]"><Trans>Contact</Trans></h1>
         </div>
       </div>
       <div className="mx-auto flex flex-col px-4 w-full lg:w-form-lg max-w-4xl mb-28">

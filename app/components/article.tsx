@@ -81,7 +81,7 @@ export function Article({ data, preview = false }: ArticleProps) {
           </div>
         )}
         <Link prefetch="intent" className="block" to={`/learn/${data.slug}`}>
-          <h2 className="font-medium text-2xl tracking-tight transition-colors group-hover:text-secondary">
+          <h2 className="font-display text-2xl tracking-[-0.01em] transition-colors group-hover:text-secondary">
             {data.metadata.title}
           </h2>
         </Link>
@@ -114,7 +114,7 @@ export function Article({ data, preview = false }: ArticleProps) {
           {data.metadata.tag}
         </div>
       )}
-      <h1 className="font-medium text-3xl tracking-tight mb-6">
+      <h1 className="font-display text-3xl tracking-[-0.01em] mb-6">
         {data.metadata.title}
       </h1>
 

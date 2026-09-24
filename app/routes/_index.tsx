@@ -334,7 +334,7 @@ const shell = "mx-auto w-full max-w-[1360px] px-6 sm:px-7";
 const eyebrow =
 	"font-mono text-sm uppercase leading-none tracking-[0.2em] text-muted-foreground";
 const heading =
-	"font-display font-semibold tracking-[-0.035em] leading-[0.95] text-[clamp(2.125rem,4.4vw,3.875rem)]";
+	"font-display tracking-[-0.015em] text-[clamp(2.125rem,4.4vw,3.875rem)] leading-[1.08]";
 
 // Layout wrapper. Kept as a plain, always-visible block so content renders
 // without JS / before hydration (important for first paint + SEO). Scroll-in
@@ -492,32 +492,13 @@ function Hero() {
 			id="hero"
 			className="relative flex min-h-[calc(100vh-var(--header-height))] flex-col overflow-hidden pt-16 sm:pt-24"
 		>
-			{/* glow backdrop */}
-			<div
-				aria-hidden
-				className="pointer-events-none absolute left-1/2 top-[-320px] h-[560px] w-[1200px] max-w-full -translate-x-1/2 rounded-full bg-secondary/10 blur-[110px]"
-			/>
-
 			{/* Tighter gutter at 320px and below so "Build <word>" fits one line.
 			    Raw media query, not max-[320px]: — the `tall` raw screen in
 			    tailwind.config.js suppresses Tailwind's min and max variants. */}
 			<div
 				className={cn(shell, "relative [@media(max-width:320px)]:px-4")}
 			>
-				<div className="flex items-center gap-3.5 font-mono text-sm uppercase leading-none tracking-[0.2em] text-muted-foreground">
-					<span className="text-secondary">ERP</span>
-					<span>/</span>
-					<span className="text-secondary">MRP</span>
-					<span>/</span>
-					<span className="text-secondary">MES</span>
-					<span>/</span>
-					<span className="text-secondary">QMS</span>
-					<span className="ml-auto hidden bg-secondary/10 dark:bg-secondary-surface px-3 py-1.5 text-secondary sm:inline uppercase text-[11px]">
-						<Trans>Unified system of record</Trans>
-					</span>
-				</div>
-
-				<h1 className="mt-10 font-display font-semibold tracking-[-0.05em] leading-[0.9] text-balance text-[clamp(2.75rem,7.6vw,7.9rem)]">
+				<h1 className="font-display tracking-[-0.025em] text-balance text-[clamp(2.75rem,6.6vw,6.5rem)] leading-[1.12]">
 					<Trans>
 						Build <CyclingWord />
 						<br />
@@ -527,9 +508,8 @@ function Hero() {
 
 				<p className="mt-9 max-w-[80ch] text-lg leading-relaxed text-muted-foreground">
 					<Trans>
-						Carbon is the engineering-first operating system for
-						manufacturers. Quote, plan, buy, build, inspect and ship on one
-						live model of your factory — from a ten-person prototype shop to a
+						Carbon is the open-source manufacturing ERP/MES/QMS. Quote, plan,
+						buy, build, inspect and ship on one live model of your factory — from a ten-person prototype shop to a
 						rate-production line.
 					</Trans>
 				</p>
@@ -587,7 +567,7 @@ function Testimonial() {
 				<Reveal className="mx-auto max-w-3xl">
 					<figure className="border border-border bg-card shadow-[inset_2px_0_0] shadow-secondary">
 						<div className="p-8 sm:p-12">
-							<blockquote className="text-pretty font-display text-xl font-medium leading-[1.55] tracking-[-0.01em] text-foreground sm:text-[1.5rem] sm:leading-[1.5]">
+							<blockquote className="text-pretty font-display text-xl tracking-[0em] text-foreground sm:text-[1.5rem] sm:leading-[1.5] leading-[1.55]">
 								<Trans>
 									Best ERP/MRP/MES system I've ever seen in a 22-year career
 									across defense and automotive. Native Onshape integration
@@ -835,7 +815,7 @@ function FeatureRows() {
 					>
 						<div className={cn(f.flip && "lg:order-2")}>
 							<div className={eyebrow}>{i18n._(f.eyebrow)}</div>
-							<h3 className="mt-5 font-display font-semibold tracking-[-0.03em] leading-[0.98] text-[clamp(1.75rem,3vw,2.625rem)]">
+							<h3 className="mt-5 font-display tracking-[-0.01em] text-[clamp(1.75rem,3vw,2.625rem)] leading-[1.1]">
 								{i18n._(f.title)}
 							</h3>
 							<p className="mt-5 max-w-[44ch] text-base leading-relaxed text-muted-foreground">
@@ -1047,7 +1027,7 @@ function TrustOpen() {
 								<Trans>Trusted</Trans>
 							</span>
 						</div>
-						<h3 className="mt-5 font-display font-semibold tracking-[-0.03em] leading-[1] text-[clamp(1.625rem,2.6vw,2.375rem)]">
+						<h3 className="mt-5 font-display tracking-[-0.01em] text-[clamp(1.625rem,2.6vw,2.375rem)] leading-[1.1]">
 							<Trans>Auditable by construction.</Trans>
 						</h3>
 						<p className="mt-4 max-w-[40ch] text-[15px] leading-relaxed text-muted-foreground">
@@ -1074,7 +1054,7 @@ function TrustOpen() {
 								<Trans>Source available</Trans>
 							</span>
 						</div>
-						<h3 className="mt-5 font-display font-semibold tracking-[-0.03em] leading-[1] text-[clamp(1.625rem,2.6vw,2.375rem)]">
+						<h3 className="mt-5 font-display tracking-[-0.01em] text-[clamp(1.625rem,2.6vw,2.375rem)] leading-[1.1]">
 							<Trans>Ask your agent what it thinks</Trans>
 						</h3>
 						<p className="mt-4 max-w-[40ch] text-[15px] leading-relaxed text-muted-foreground">
@@ -1175,7 +1155,7 @@ function Integrations() {
 		<section className="border-b border-border py-24">
 			<div className={shell}>
 				<Reveal>
-					<h2 className="mb-12 mt-5 font-display font-semibold tracking-[-0.03em] leading-[0.98] text-[clamp(1.75rem,3vw,2.75rem)]">
+					<h2 className="mb-12 mt-5 font-display tracking-[-0.01em] text-[clamp(1.75rem,3vw,2.75rem)] leading-[1.1]">
 						<Trans>Integrated with the world's best software.</Trans>
 					</h2>
 				</Reveal>
@@ -1217,7 +1197,7 @@ function StartCTA() {
 				<div className={eyebrow}>
 					<Trans>Start now · No call required</Trans>
 				</div>
-				<h2 className="mt-6 font-display font-semibold tracking-[-0.045em] leading-[0.96] text-[clamp(2.5rem,6vw,5.5rem)]">
+				<h2 className="mt-6 font-display tracking-[-0.02em] text-[clamp(2.5rem,6vw,5.5rem)] leading-[1.08]">
 					<Trans>Ship faster than your competitors can quote.</Trans>
 				</h2>
 				<p className="mx-auto mt-6 max-w-[60ch] text-lg leading-relaxed text-muted-foreground">
