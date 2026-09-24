@@ -219,7 +219,7 @@ msgstr "Nomenclature"
 msgid "Billed per user, monthly · 30-day free trial · Cancel anytime"
 msgstr "Facturation par utilisateur, mensuel · Essai gratuit de 30 jours · Annulez à tout moment"
 
-#: app/routes/_index.tsx:249
+#: app/routes/_index.tsx:250
 msgid "Billing"
 msgstr "Facturation"
 
@@ -269,6 +269,7 @@ msgid "Buy the Source Code"
 msgstr "Acheter le code source"
 
 #: app/routes/_index.tsx:243
+#: app/routes/_index.tsx:244
 msgid "CAD"
 msgstr "CAD"
 
@@ -300,7 +301,7 @@ msgstr "Certificats générés à partir de données en direct"
 msgid "Certificates of conformance"
 msgstr "Certificats de conformité"
 
-#: app/routes/_index.tsx:247
+#: app/routes/_index.tsx:248
 msgid "Chat"
 msgstr "Chat"
 
@@ -655,7 +656,7 @@ msgstr "Exécution"
 msgid "Expand image"
 msgstr "Agrandir l'image"
 
-#: app/routes/_index.tsx:244
+#: app/routes/_index.tsx:245
 msgid "Expenses"
 msgstr "Dépenses"
 
@@ -671,8 +672,8 @@ msgstr "FAI & NCR"
 msgid "Feature Prioritization"
 msgstr "Priorisation des fonctionnalités"
 
-#: app/routes/_index.tsx:250
 #: app/routes/_index.tsx:251
+#: app/routes/_index.tsx:252
 msgid "Finance"
 msgstr "Finance"
 
@@ -1104,9 +1105,9 @@ msgstr "Bons de commande et reçus"
 msgid "Pricing"
 msgstr "Tarification"
 
-#: app/routes/_index.tsx:252
 #: app/routes/_index.tsx:253
 #: app/routes/_index.tsx:254
+#: app/routes/_index.tsx:255
 msgid "Printer"
 msgstr "Imprimante"
 
@@ -1172,7 +1173,7 @@ msgstr "Devis et tarification des demandes de devis"
 msgid "Quotes Table"
 msgstr "Tableau des devis"
 
-#: app/routes/_index.tsx:248
+#: app/routes/_index.tsx:249
 msgid "Quoting"
 msgstr "Devis"
 
@@ -1269,10 +1270,6 @@ msgstr "Commandes de vente"
 #: app/routes/_index.tsx:44
 msgid "satellites"
 msgstr "satellites"
-
-#: app/routes/_index.tsx:255
-msgid "SCADA"
-msgstr "SCADA"
 
 #: app/components/wizard-form.tsx:154
 msgid "Select which features you need custom development for"
@@ -1460,8 +1457,8 @@ msgstr "Statut du système :"
 msgid "Systems replaced"
 msgstr "Systèmes remplacés"
 
-#: app/routes/_index.tsx:245
 #: app/routes/_index.tsx:246
+#: app/routes/_index.tsx:247
 msgid "Tasks"
 msgstr "Tâches"
 

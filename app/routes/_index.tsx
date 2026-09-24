@@ -241,6 +241,7 @@ const compliance: MessageDescriptor[] = [
 const integrations = [
 	// Product names stay literal; only the category ("kind") is translated.
 	{ name: "Onshape", kind: msg`CAD` },
+	{ name: "SolidWorks", kind: msg`CAD` },
 	{ name: "Ramp", kind: msg`Expenses` },
 	{ name: "Linear", kind: msg`Tasks` },
 	{ name: "Jira", kind: msg`Tasks` },
@@ -249,10 +250,9 @@ const integrations = [
 	{ name: "Stripe", kind: msg`Billing` },
 	{ name: "Rillet", kind: msg`Finance` },
 	{ name: "Xero", kind: msg`Finance` },
-	{ name: "Epson", kind: msg`Printer` },
 	{ name: "Brother", kind: msg`Printer` },
 	{ name: "Zebra ZPL", kind: msg`Printer` },
-	{ name: "Ignition", kind: msg`SCADA` },
+	{ name: "ProxyBox", kind: msg`Printer` },
 	{ name: "REST and Webhooks", kind: msg`API` },
 	{ name: "Claude", kind: msg`LLM` },
 	{ name: "ChatGPT", kind: msg`LLM` },
