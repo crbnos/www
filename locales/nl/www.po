@@ -13,16 +13,26 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. placeholder {0}: e.currency
+#. placeholder {1}: root.currency
+#: app/components/entity-tree.tsx:187
+msgid "{0} → {1} · rolls up to {rootName}"
+msgstr "{0} → {1} · rolt op naar {rootName}"
+
+#: app/components/entity-tree.tsx:174
+msgid "{count} entities · {currencies} currencies · one ledger"
+msgstr "{count} entiteiten · {currencies} valuta's · één boekhouding"
+
 #: app/routes/pricing.tsx:33
 #: app/routes/pricing.tsx:53
 msgid "/user/month"
 msgstr "/gebruiker/maand"
 
-#: app/routes/_index.tsx:70
+#: app/routes/_index.tsx:71
 msgid "18-month implementation"
 msgstr "18-maanden implementatie"
 
-#: app/routes/_index.tsx:235
+#: app/routes/_index.tsx:236
 msgid "21 CFR Part 11"
 msgstr "21 CFR Part 11"
 
@@ -30,7 +40,7 @@ msgstr "21 CFR Part 11"
 msgid "5 user minimum"
 msgstr "5 gebruikers minimum"
 
-#: app/routes/_index.tsx:201
+#: app/routes/_index.tsx:202
 msgid "A built-in MCP server exposes 1,374 operations across 15 modules through three discovery tools. Permissions are baked in — an agent can never do what its identity can't."
 msgstr "Een ingebouwde MCP-server stelt 1.374 bewerkingen beschikbaar via 15 modules met drie detectiehulpmiddelen. Machtigingen zijn ingebakken — een agent kan nooit doen wat zijn identiteit niet toestaat."
 
@@ -38,7 +48,7 @@ msgstr "Een ingebouwde MCP-server stelt 1.374 bewerkingen beschikbaar via 15 mod
 msgid "A managed cloud-hosted version of Carbon"
 msgstr "Een beheerde cloud-gehoste versie van Carbon"
 
-#: app/routes/_index.tsx:206
+#: app/routes/_index.tsx:207
 msgid "A typed TypeScript monorepo with one generated database type shared across the app, the API, and the AI tools. Bring your own LLM."
 msgstr "Een getypeerde TypeScript-monorepo met één gegenereerde databasetype, gedeeld over de app, de API en de AI-tools. Breng je eigen LLM mee."
 
@@ -47,7 +57,7 @@ msgstr "Een getypeerde TypeScript-monorepo met één gegenereerde databasetype, 
 msgid "About"
 msgstr "Over"
 
-#: app/routes/_index.tsx:163
+#: app/routes/_index.tsx:164
 msgid "Accounting"
 msgstr "Boekhouden"
 
@@ -55,11 +65,11 @@ msgstr "Boekhouden"
 msgid "Accounting with general ledger, financial reports, fixed assets, and multi-currency"
 msgstr "Boekhouden met grootboek, financiële verslagen, vaste activa en multi-currency"
 
-#: app/routes/_index.tsx:69
+#: app/routes/_index.tsx:70
 msgid "Accounting-focused"
 msgstr "Boekhoudkundig gericht"
 
-#: app/routes/_index.tsx:105
+#: app/routes/_index.tsx:106
 msgid "Accrual accounting"
 msgstr "Accumulatieve boekhouding"
 
@@ -71,11 +81,11 @@ msgstr "Acme Inc"
 msgid "Acme, Inc."
 msgstr "Acme, Inc."
 
-#: app/routes/_index.tsx:132
+#: app/routes/_index.tsx:133
 msgid "Adaptive MES UI"
 msgstr "Adaptieve MES-interface"
 
-#: app/routes/_index.tsx:212
+#: app/routes/_index.tsx:213
 msgid "Aerospace"
 msgstr "Luchtvaart"
 
@@ -83,7 +93,7 @@ msgstr "Luchtvaart"
 msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
 msgstr "Na bijna tien jaar lang end-to-end systemen voor de productie te bouwen, had ik al een behoorlijk goed idee van hoe een \"ideale\" oplossing er vanuit technisch oogpunt uit zou zien:"
 
-#: app/routes/_index.tsx:200
+#: app/routes/_index.tsx:201
 msgid "Agent-ready by default"
 msgstr "Standaard agentgereed"
 
@@ -95,7 +105,7 @@ msgstr "Air-gapped en ITAR-implementaties"
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "Alle Carbon-handelsmerken, logo's of andere merkelementen mogen nooit worden gewijzigd of voor enig ander doel worden gebruikt dan om Carbon Manufacturing Systems Corporation te vertegenwoordigen."
 
-#: app/routes/_index.tsx:891
+#: app/routes/_index.tsx:894
 msgid "An API for the entire organization."
 msgstr "Een API voor de hele organisatie."
 
@@ -103,8 +113,8 @@ msgstr "Een API voor de hele organisatie."
 msgid "Analytics"
 msgstr "Analytische gegevens"
 
-#: app/routes/_index.tsx:1247
-#: app/routes/self-hosted.tsx:737
+#: app/routes/_index.tsx:1250
+#: app/routes/self-hosted.tsx:743
 msgid "And some of the world's most innovative manufacturers"
 msgstr "En enkele van 's werelds meest innovatieve fabrikanten"
 
@@ -113,11 +123,11 @@ msgstr "En enkele van 's werelds meest innovatieve fabrikanten"
 msgid "Animated assembly instructions"
 msgstr "Geanimeerde montagerichtlijnen"
 
-#: app/routes/_index.tsx:255
+#: app/routes/_index.tsx:256
 msgid "API"
 msgstr "API"
 
-#: app/routes/_index.tsx:911
+#: app/routes/_index.tsx:914
 msgid "API Docs"
 msgstr "API-documentatie"
 
@@ -125,11 +135,11 @@ msgstr "API-documentatie"
 msgid "API-first, realtime subscriptions, forward/finite scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
 msgstr "API-first, realtimeabonnementen, vooruit/eindige planning, en 1.000 kleine details om het plezier van het gebruik van een ERP de moeite waard te maken."
 
-#: app/routes/_index.tsx:85
+#: app/routes/_index.tsx:86
 msgid "API-first, with first-class MCP"
 msgstr "API-first, met eersteklas MCP"
 
-#: app/routes/_index.tsx:164
+#: app/routes/_index.tsx:165
 msgid "API, MCP, apps"
 msgstr "API, MCP, apps"
 
@@ -137,19 +147,19 @@ msgstr "API, MCP, apps"
 msgid "API, webhooks, integrations, and MCP"
 msgstr "API, webhooks, integraties en MCP"
 
-#: app/routes/_index.tsx:233
+#: app/routes/_index.tsx:234
 msgid "AS9100"
 msgstr "AS9100"
 
-#: app/routes/_index.tsx:212
+#: app/routes/_index.tsx:213
 msgid "AS9100, FAI, full genealogy"
 msgstr "AS9100, FAI, volledige stamboom"
 
-#: app/routes/_index.tsx:1067
+#: app/routes/_index.tsx:1070
 msgid "Ask your agent what it thinks"
 msgstr "Vraag je agent wat het denkt"
 
-#: app/routes/_index.tsx:1102
+#: app/routes/_index.tsx:1105
 msgid "Audit it before you deploy it"
 msgstr "Controleer het voordat u het implementeert"
 
@@ -157,15 +167,15 @@ msgstr "Controleer het voordat u het implementeert"
 msgid "Audit logging, 2FA enforcement, and backup/restore"
 msgstr "Audit-logging, 2FA-handhaving en back-up/herstel"
 
-#: app/routes/_index.tsx:87
+#: app/routes/_index.tsx:88
 msgid "Audit trail is the database"
 msgstr "Audittrail is de database"
 
-#: app/routes/_index.tsx:1040
+#: app/routes/_index.tsx:1043
 msgid "Auditable by construction."
 msgstr "Controleerbaar per constructie."
 
-#: app/routes/_index.tsx:62
+#: app/routes/_index.tsx:63
 msgid "Audits reconstructed from memory"
 msgstr "Audits gereconstrueerd uit geheugen"
 
@@ -177,7 +187,7 @@ msgstr "Automatisch gegenereerde API-documentatie"
 msgid "Automatic updates and cloud backups"
 msgstr "Automatische updates en cloud-back-ups"
 
-#: app/routes/_index.tsx:213
+#: app/routes/_index.tsx:214
 msgid "Automotive"
 msgstr "Automotief"
 
@@ -185,11 +195,11 @@ msgstr "Automotief"
 msgid "Back"
 msgstr "Terug"
 
-#: app/routes/_index.tsx:134
+#: app/routes/_index.tsx:135
 msgid "Barcode / QR tracking"
 msgstr "Barcode/QR-tracking"
 
-#: app/routes/_index.tsx:57
+#: app/routes/_index.tsx:58
 msgid "Based on assumptions"
 msgstr "Gebaseerd op aannames"
 
@@ -205,7 +215,7 @@ msgstr "Beste ERP/MRP/MES-systeem dat ik in een 22-jarige carrière in de defens
 msgid "Bill of Materials"
 msgstr "Stuklijst"
 
-#: app/routes/_index.tsx:248
+#: app/routes/_index.tsx:249
 msgid "Billing"
 msgstr "Facturering"
 
@@ -213,11 +223,11 @@ msgstr "Facturering"
 msgid "Blog"
 msgstr "Blog"
 
-#: app/routes/_index.tsx:116
+#: app/routes/_index.tsx:117
 msgid "BOM & routing versions"
 msgstr "BOM & routeringsversies"
 
-#: app/routes/_index.tsx:72
+#: app/routes/_index.tsx:73
 msgid "BOMs re-keyed by hand"
 msgstr "BOM's handmatig opnieuw ingevoerd"
 
@@ -234,7 +244,7 @@ msgstr "Build <0/><1/>met de snelheid van software."
 msgid "Build vs. buy"
 msgstr "Bouwen vs. kopen"
 
-#: app/routes/_index.tsx:1092
+#: app/routes/_index.tsx:1095
 msgid "Built for CMMC compliance"
 msgstr "Gebouwd voor CMMC-conformiteit"
 
@@ -250,15 +260,15 @@ msgstr "Maar terwijl we met onze klanten werken om de beste standaard ERP/MES vo
 msgid "Buy the Source Code"
 msgstr "Koop de broncode"
 
-#: app/routes/_index.tsx:242
+#: app/routes/_index.tsx:243
 msgid "CAD"
 msgstr "CAD"
 
 #: app/routes/_index.tsx:775
-msgid "CAD to cash, unbroken."
-msgstr "Van CAD tot geldstroom, zonder onderbreking."
+msgid "CAD to Cash"
+msgstr "Van CAD tot cash"
 
-#: app/routes/_index.tsx:313
+#: app/routes/_index.tsx:314
 msgid "Carbon allows you to a scale from a single-entity, single-location operation, to a multi-national, multi-location manufacturing engine with consolidated accounts."
 msgstr "Met Carbon kunt u schalen van een eenentiteitsbedrijf met één vestiging naar een multinationale, multiveestigingsproductie-engine met geconsolideerde rekeningen."
 
@@ -274,19 +284,19 @@ msgstr "Carbon is de open-source ERP/MES/QMS voor de maakindustrie. Offerteer, p
 msgid "Carbon Manufacturing Systems Corp."
 msgstr "Carbon Manufacturing Systems Corp."
 
-#: app/routes/_index.tsx:1070
+#: app/routes/_index.tsx:1073
 msgid "Carbon's source code is available. Copy the prompt below into your favorite LLM."
 msgstr "Carbon's broncode is beschikbaar. Kopieer de prompt hieronder naar je favoriete LLM."
 
-#: app/routes/_index.tsx:301
+#: app/routes/_index.tsx:302
 msgid "Certificates generated from live data"
 msgstr "Certificaten gegenereerd op basis van live-gegevens"
 
-#: app/routes/_index.tsx:149
+#: app/routes/_index.tsx:150
 msgid "Certificates of conformance"
 msgstr "Conformiteitscertificaten"
 
-#: app/routes/_index.tsx:246
+#: app/routes/_index.tsx:247
 msgid "Chat"
 msgstr "Chat"
 
@@ -302,7 +312,7 @@ msgstr "Kies hoe je de oplossing wilt bezitten"
 msgid "Choose your preferred database"
 msgstr "Kies uw voorkeursdatabase"
 
-#: app/routes/_index.tsx:223
+#: app/routes/_index.tsx:224
 msgid "cleanroom ops, yield analytics"
 msgstr "schone kamer operaties, opbrengstanalyses"
 
@@ -318,7 +328,7 @@ msgstr "Cloud + ondersteuning"
 msgid "CMMC Level 2 compliance"
 msgstr "CMMC Level 2-conformiteit"
 
-#: app/routes/_index.tsx:1120
+#: app/routes/_index.tsx:1123
 msgid "CMMC-compliant work stays inside your walls."
 msgstr "CMMC-conforme werkzaamheden blijven binnen uw muren."
 
@@ -351,15 +361,15 @@ msgstr "Volledige controle over uw infrastructuur"
 msgid "Configurator"
 msgstr "Configurator"
 
-#: app/routes/_index.tsx:263
+#: app/routes/_index.tsx:264
 msgid "Configure to order"
 msgstr "Configureer op bestelling"
 
-#: app/routes/_index.tsx:227
+#: app/routes/_index.tsx:228
 msgid "configure to order, aftermarket"
 msgstr "configureer op bestelling, aftermarket"
 
-#: app/routes/_index.tsx:158
+#: app/routes/_index.tsx:159
 msgid "confirmed dates"
 msgstr "bevestigde datums"
 
@@ -367,7 +377,12 @@ msgstr "bevestigde datums"
 msgid "Connect your robots and machines to your production systems"
 msgstr "Verbind uw robots en machines met uw productiesystemen"
 
-#: app/routes/_index.tsx:217
+#. placeholder {0}: e.currency
+#: app/components/entity-tree.tsx:182
+msgid "Consolidates {count} entities in {0}"
+msgstr "Consolideert {count} entiteiten in {0}"
+
+#: app/routes/_index.tsx:218
 msgid "Consumer electronics"
 msgstr "Consumentenelektronica"
 
@@ -382,7 +397,7 @@ msgstr "Contactgegevens"
 
 #: app/components/header.tsx:142
 #: app/components/header.tsx:235
-#: app/routes/_index.tsx:1226
+#: app/routes/_index.tsx:1229
 msgid "Contact Sales"
 msgstr "Neem contact op met verkoopteam"
 
@@ -393,11 +408,11 @@ msgid "Contact us"
 msgstr "Neem contact op"
 
 #: app/components/logo-menu.tsx:66
-#: app/routes/_index.tsx:1018
+#: app/routes/_index.tsx:1021
 msgid "Copied"
 msgstr "Gekopieerd"
 
-#: app/routes/_index.tsx:1018
+#: app/routes/_index.tsx:1021
 msgid "Copy"
 msgstr "Kopiëren"
 
@@ -409,11 +424,11 @@ msgstr "Kopieer .SVG"
 msgid "Copy code snippet"
 msgstr "Code fragment kopiëren"
 
-#: app/routes/_index.tsx:162
+#: app/routes/_index.tsx:163
 msgid "costed actuals"
 msgstr "geschatte werkelijke kosten"
 
-#: app/routes/_index.tsx:59
+#: app/routes/_index.tsx:60
 msgid "Costing guessed after the fact"
 msgstr "Kostenberekening achteraf geraden"
 
@@ -421,7 +436,7 @@ msgstr "Kostenberekening achteraf geraden"
 msgid "Create a branded ordering experience that drives production"
 msgstr "Creëer een merkgebonden bestelervaring die productie stimuleert"
 
-#: app/routes/_index.tsx:1213
+#: app/routes/_index.tsx:1216
 msgid "Create a company, connect the MCP, release your first job today."
 msgstr "Maak een bedrijf aan, verbind de MCP, release je eerste job vandaag."
 
@@ -453,7 +468,7 @@ msgstr "Klantportals met live orderstatus en bestanden"
 msgid "Customizations, training, and integrations"
 msgstr "Aanpassingen, training en integraties"
 
-#: app/routes/_index.tsx:164
+#: app/routes/_index.tsx:165
 msgid "Customize"
 msgstr "Aanpassen"
 
@@ -465,7 +480,7 @@ msgstr "Dashboard"
 msgid "Database"
 msgstr "Database"
 
-#: app/routes/_index.tsx:187
+#: app/routes/_index.tsx:188
 msgid "Days to go live"
 msgstr "Dagen tot live"
 
@@ -477,15 +492,15 @@ msgstr "Toegewezen database voor uw organisatie"
 msgid "Dedicated Support"
 msgstr "Toegewezen ondersteuning"
 
-#: app/routes/_index.tsx:220
+#: app/routes/_index.tsx:221
 msgid "deep assemblies, configured units"
 msgstr "diepe assemblages, geconfigureerde eenheden"
 
-#: app/routes/_index.tsx:211
+#: app/routes/_index.tsx:212
 msgid "Defense"
 msgstr "Defensie"
 
-#: app/routes/_index.tsx:114
+#: app/routes/_index.tsx:115
 msgid "Demand & forecast"
 msgstr "Vraag & prognose"
 
@@ -503,11 +518,11 @@ msgstr "Ontwikkelaarshandleidingen en API-referentie"
 msgid "Developers"
 msgstr "Ontwikkelaars"
 
-#: app/routes/_index.tsx:130
+#: app/routes/_index.tsx:131
 msgid "Digital job travelers"
 msgstr "Digitale jobmovielen"
 
-#: app/routes/_index.tsx:283
+#: app/routes/_index.tsx:284
 msgid "Digital travelers with work instructions"
 msgstr "Digitale movielen met werkinstructies"
 
@@ -528,7 +543,7 @@ msgstr "Documenten"
 msgid "Download Logo Kit"
 msgstr "Logo Kit downloaden"
 
-#: app/routes/_index.tsx:45
+#: app/routes/_index.tsx:46
 msgid "drones"
 msgstr "drones"
 
@@ -540,15 +555,15 @@ msgstr "E-mailadres"
 msgid "Email and Slack notifications"
 msgstr "E-mail- en Slack-meldingen"
 
-#: app/routes/_index.tsx:221
+#: app/routes/_index.tsx:222
 msgid "Energy & grid"
 msgstr "Energie & netwerk"
 
-#: app/routes/_index.tsx:155
+#: app/routes/_index.tsx:156
 msgid "Engineering"
 msgstr "Engineering"
 
-#: app/routes/_index.tsx:121
+#: app/routes/_index.tsx:122
 msgid "Engineering change orders"
 msgstr "Engineering wijzigingsorders"
 
@@ -560,19 +575,19 @@ msgstr "Onderneming"
 msgid "Enterprise. Influence product roadmap with priority feature requests"
 msgstr "Enterprise. Beïnvloed de productroutekaart met prioritaire functieverzoeken"
 
-#: app/routes/_index.tsx:171
+#: app/routes/_index.tsx:172
 msgid "ERP · MRP · MES · QMS"
 msgstr "ERP · MRP · MES · QMS"
 
-#: app/routes/_index.tsx:1098
+#: app/routes/_index.tsx:1101
 msgid "ERP, MRP, MES and QMS on a single database you control, with row-level security. Your data never leaves your perimeter — no vendor cloud, no third-party data lake."
 msgstr "ERP, MRP, MES en QMS op één database die u beheert, met beveiliging op rijniveau. Uw gegevens verlaten nooit uw perimeterzone — geen leveranciercloud, geen datalake van derden."
 
-#: app/routes/_index.tsx:281
+#: app/routes/_index.tsx:282
 msgid "Every part, hour, barcode, and deviation tracked and handled in real-time."
 msgstr "Elk onderdeel, elk uur, elke barcode en elke afwijking worden in real-time bijgehouden en verwerkt."
 
-#: app/routes/_index.tsx:312
+#: app/routes/_index.tsx:313
 msgid "Every site on one ledger."
 msgstr "Elke vestiging op één grootboek."
 
@@ -580,11 +595,11 @@ msgstr "Elke vestiging op één grootboek."
 msgid "Every stage writes to the same record. No handoffs, no re-keying, no reconciliation."
 msgstr "Elke fase schrijft naar dezelfde record. Geen overdrachten, geen opnieuw invoeren, geen afstemming."
 
-#: app/routes/_index.tsx:195
+#: app/routes/_index.tsx:196
 msgid "Every table is an endpoint"
 msgstr "Elke tabel is een eindpunt"
 
-#: app/routes/_index.tsx:183
+#: app/routes/_index.tsx:184
 msgid "Every unit, every op"
 msgstr "Elke eenheid, elke bewerking"
 
@@ -596,11 +611,11 @@ msgstr "Alles in Business, plus een aangepaste oplossing voor uw behoeften"
 msgid "Everything in Starter, and the features below"
 msgstr "Alles in Starter en de onderstaande functies"
 
-#: app/routes/_index.tsx:83
+#: app/routes/_index.tsx:84
 msgid "Everything integrated"
 msgstr "Alles geïntegreerd"
 
-#: app/routes/_index.tsx:127
+#: app/routes/_index.tsx:128
 msgid "Execution"
 msgstr "Uitvoering"
 
@@ -608,15 +623,15 @@ msgstr "Uitvoering"
 msgid "Expand image"
 msgstr "Afbeelding vergroten"
 
-#: app/routes/_index.tsx:243
+#: app/routes/_index.tsx:244
 msgid "Expenses"
 msgstr "Uitgaven"
 
-#: app/routes/_index.tsx:1126
+#: app/routes/_index.tsx:1129
 msgid "Explore self-hosting"
 msgstr "Zelf hosten verkennen"
 
-#: app/routes/_index.tsx:160
+#: app/routes/_index.tsx:161
 msgid "FAI & NCR"
 msgstr "FAI & NCR"
 
@@ -624,24 +639,24 @@ msgstr "FAI & NCR"
 msgid "Feature Prioritization"
 msgstr "Prioritering van functies"
 
-#: app/routes/_index.tsx:249
 #: app/routes/_index.tsx:250
+#: app/routes/_index.tsx:251
 msgid "Finance"
 msgstr "Financiën"
 
-#: app/routes/_index.tsx:117
+#: app/routes/_index.tsx:118
 msgid "Finite capacity model"
 msgstr "Eindige capaciteitsmodel"
 
-#: app/routes/_index.tsx:285
+#: app/routes/_index.tsx:286
 msgid "Finite capacity scheduling that reacts"
 msgstr "Eindige capaciteitsplanning die reageert"
 
-#: app/routes/_index.tsx:144
+#: app/routes/_index.tsx:145
 msgid "First article inspection"
 msgstr "Eerste artikelinspectie"
 
-#: app/routes/_index.tsx:297
+#: app/routes/_index.tsx:298
 msgid "First article inspection, non-conformance, CAPA and gauge calibration sit on the same records as production. Pull any serial number and get its full genealogy — material certs, operators, measurements, deviations."
 msgstr "Eerste artikelinspectie, non-conformiteit, CAPA en maatstafkalibratie bevinden zich op dezelfde records als productie. Trek elk serienummer op en krijg de volledige stamboom — materiaalgeverificaties, operators, metingen, afwijkingen."
 
@@ -665,15 +680,15 @@ msgstr "Volledige naam"
 msgid "Full setup and migrations"
 msgstr "Volledige setup en migraties"
 
-#: app/routes/_index.tsx:86
+#: app/routes/_index.tsx:87
 msgid "Full traceability and COGS"
 msgstr "Volledige traceerbaarheid en COGS"
 
-#: app/routes/_index.tsx:146
+#: app/routes/_index.tsx:147
 msgid "Gauge calibration"
 msgstr "Maatstafkalibratie"
 
-#: app/routes/_index.tsx:196
+#: app/routes/_index.tsx:197
 msgid "Generated straight from Carbon's schema — 381 resources and 1,641 endpoints, with typed clients for TypeScript, Python, C#, and cURL."
 msgstr "Direct gegenereerd uit Carbon's schema — 381 resources en 1.641 eindpunten, met getypeerde clients voor TypeScript, Python, C# en cURL."
 
@@ -689,7 +704,7 @@ msgstr "Gratis aan de slag."
 msgid "GitHub"
 msgstr "GitHub"
 
-#: app/routes/_index.tsx:163
+#: app/routes/_index.tsx:164
 msgid "GL & accruals"
 msgstr "GL & accruals"
 
@@ -697,7 +712,7 @@ msgstr "GL & accruals"
 msgid "Global Search"
 msgstr "Globaal zoeken"
 
-#: app/routes/_index.tsx:42
+#: app/routes/_index.tsx:43
 msgid "hardware"
 msgstr "hardware"
 
@@ -705,7 +720,7 @@ msgstr "hardware"
 msgid "Hosting Preference"
 msgstr "Hostingvoorkeur"
 
-#: app/routes/_index.tsx:71
+#: app/routes/_index.tsx:72
 msgid "Huge consulting bills"
 msgstr "Enorme consultingrekeningen"
 
@@ -713,11 +728,11 @@ msgstr "Enorme consultingrekeningen"
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "Ik geloof dat open-source ongelooflijk veel potentieel heeft omdat het niet alleen een product is, maar een gemeenschap van gelijkgestemde mensen die werken aan de toekomst van productie in het tijdperk van AI en robotica."
 
-#: app/routes/_index.tsx:953
+#: app/routes/_index.tsx:956
 msgid "If it has a bill of materials, Carbon runs it."
 msgstr "Als het een stuklijst heeft, voert Carbon het uit."
 
-#: app/routes/_index.tsx:1043
+#: app/routes/_index.tsx:1046
 msgid "Immutable ledgers, granular permissions, and the controls regulated programs are held to."
 msgstr "Onveranderbare grootboeken, nauwkeurige machtigingen en de controles waaraan gereglementeerde programma's onderworpen zijn."
 
@@ -725,11 +740,11 @@ msgstr "Onveranderbare grootboeken, nauwkeurige machtigingen en de controles waa
 msgid "Incident detected"
 msgstr "Incident gedetecteerd"
 
-#: app/routes/_index.tsx:226
+#: app/routes/_index.tsx:227
 msgid "Industrial equipment"
 msgstr "Industriële apparatuur"
 
-#: app/routes/_index.tsx:1168
+#: app/routes/_index.tsx:1171
 msgid "Integrated with the world's best software."
 msgstr "Geïntegreerd met de beste software ter wereld."
 
@@ -737,39 +752,43 @@ msgstr "Geïntegreerd met de beste software ter wereld."
 msgid "Integrations"
 msgstr "Integraties"
 
-#: app/routes/_index.tsx:96
+#: app/components/entity-tree.tsx:178
+msgid "Intercompany eliminations for {parent}"
+msgstr "Intercompany-eliminaties voor {parent}"
+
+#: app/routes/_index.tsx:97
 msgid "Inventory & Costing"
 msgstr "Inventaris & Kostprijsberekening"
 
-#: app/routes/_index.tsx:102
+#: app/routes/_index.tsx:103
 msgid "Inventory & locations"
 msgstr "Inventaris & locaties"
 
-#: app/routes/_index.tsx:162
+#: app/routes/_index.tsx:163
 msgid "Invoicing"
 msgstr "Facturering"
 
-#: app/routes/_index.tsx:104
+#: app/routes/_index.tsx:105
 msgid "Invoicing & accounting sync"
 msgstr "Facturering & boekhoudingsynchronisatie"
 
-#: app/routes/_index.tsx:234
+#: app/routes/_index.tsx:235
 msgid "ISO 13485"
 msgstr "ISO 13485"
 
-#: app/routes/_index.tsx:214
+#: app/routes/_index.tsx:215
 msgid "ISO 13485, DHR, e-signatures"
 msgstr "ISO 13485, DHR, e-handtekeningen"
 
-#: app/routes/_index.tsx:232
+#: app/routes/_index.tsx:233
 msgid "ITAR-ready deployment"
 msgstr "ITAR-klaar deployment"
 
-#: app/routes/_index.tsx:211
+#: app/routes/_index.tsx:212
 msgid "ITAR-ready, serialized, audit-first"
 msgstr "ITAR-gereed, geserialiseerd, audit-eerst"
 
-#: app/routes/_index.tsx:103
+#: app/routes/_index.tsx:104
 msgid "Job costing"
 msgstr "Jobkostenberekening"
 
@@ -793,15 +812,15 @@ msgstr "Sluit je aan bij onze Discord-gemeenschap"
 msgid "Kanban Schedule"
 msgstr "Kanban Schema"
 
-#: app/routes/_index.tsx:1093
+#: app/routes/_index.tsx:1096
 msgid "Keep CUI inside your own boundary. Deploy on a single box, your own VPC, or fully air-gapped for defense programs that have to meet CMMC and ITAR requirements."
 msgstr "Houd CUI binnen uw eigen grens. Implementeer op één box, uw eigen VPC of volledig air-gapped voor defensieprogramma's die moeten voldoen aan CMMC- en ITAR-vereisten."
 
-#: app/routes/_index.tsx:133
+#: app/routes/_index.tsx:134
 msgid "Labor, scrap & rework"
 msgstr "Arbeid, uitval & herbewerking"
 
-#: app/routes/_index.tsx:118
+#: app/routes/_index.tsx:119
 msgid "Lead times & buffers"
 msgstr "Doorlooptijden & buffers"
 
@@ -817,7 +836,7 @@ msgstr "Leercentrum"
 msgid "Least expensive. Basic onboarding and email support"
 msgstr "Minst duur. Basisonboarding en e-mailondersteuning"
 
-#: app/routes/_index.tsx:67
+#: app/routes/_index.tsx:68
 msgid "Legacy ERP"
 msgstr "Legacy ERP"
 
@@ -841,20 +860,20 @@ msgstr "Licentie"
 msgid "Limited Support"
 msgstr "Beperkte ondersteuning"
 
-#: app/routes/_index.tsx:84
+#: app/routes/_index.tsx:85
 msgid "Live in weeks"
 msgstr "Live in weken"
 
-#: app/routes/_index.tsx:135
+#: app/routes/_index.tsx:136
 msgid "Live schedule board"
 msgstr "Live planningsbord"
 
-#: app/routes/_index.tsx:256
 #: app/routes/_index.tsx:257
+#: app/routes/_index.tsx:258
 msgid "LLM"
 msgstr "LLM"
 
-#: app/routes/_index.tsx:221
+#: app/routes/_index.tsx:222
 msgid "long lead, project-based build"
 msgstr "lange doorlooptijd, projectgebaseerde bouw"
 
@@ -870,15 +889,15 @@ msgstr "Beheerde cloud of zelf-host de open-source kern. Gratis beginnen voor 30
 msgid "Managed Hosting"
 msgstr "Beheerde Hosting"
 
-#: app/routes/_index.tsx:279
+#: app/routes/_index.tsx:280
 msgid "Manufacturing execution"
 msgstr "Productieuitvoering"
 
-#: app/routes/_index.tsx:82
+#: app/routes/_index.tsx:83
 msgid "Manufacturing-focused, GAAP accounting"
 msgstr "Productiegericht, GAAP-boekhouding"
 
-#: app/routes/_index.tsx:901
+#: app/routes/_index.tsx:904
 msgid "MCP Docs"
 msgstr "MCP Docs"
 
@@ -886,7 +905,7 @@ msgstr "MCP Docs"
 msgid "Media Kit"
 msgstr "Mediakit"
 
-#: app/routes/_index.tsx:214
+#: app/routes/_index.tsx:215
 msgid "Medical devices"
 msgstr "Medische apparaten"
 
@@ -906,7 +925,7 @@ msgstr "MES Werkbrieven"
 msgid "Message"
 msgstr "Bericht"
 
-#: app/routes/_index.tsx:97
+#: app/routes/_index.tsx:98
 msgid "money in, money out"
 msgstr "geld in, geld uit"
 
@@ -914,19 +933,19 @@ msgstr "geld in, geld uit"
 msgid "Most popular"
 msgstr "Meest populair"
 
-#: app/routes/_index.tsx:311
+#: app/routes/_index.tsx:312
 msgid "Multi-entity · Multi-location"
 msgstr "Multi-entiteit · Multi-vestiging"
 
-#: app/routes/_index.tsx:315
+#: app/routes/_index.tsx:316
 msgid "Multi-entity accounting with intercompany transactions"
 msgstr "Multi-entiteitboekhouding met intercompany-transacties"
 
-#: app/routes/_index.tsx:319
+#: app/routes/_index.tsx:320
 msgid "Multi-entity ledger / multi-site planning"
 msgstr "Multi-entiteit grootboek / multi-vestiging planning"
 
-#: app/routes/_index.tsx:317
+#: app/routes/_index.tsx:318
 msgid "Multi-location planning with inter-site transfers"
 msgstr "Multi-vestiging planning met vestigingsoverschrijdende transfers"
 
@@ -938,23 +957,23 @@ msgstr "Multi-Tenant"
 msgid "Name"
 msgstr "Naam"
 
-#: app/routes/_index.tsx:300
+#: app/routes/_index.tsx:301
 msgid "NCR to CAPA workflow with sign-off"
 msgstr "NCR naar CAPA-workflow met goedkeuring"
 
-#: app/routes/_index.tsx:79
+#: app/routes/_index.tsx:80
 msgid "Next Generation"
 msgstr "Volgende generatie"
 
-#: app/routes/_index.tsx:61
+#: app/routes/_index.tsx:62
 msgid "No serial-level history"
 msgstr "Geen historische gegevens op serienummerniveau"
 
-#: app/routes/_index.tsx:176
+#: app/routes/_index.tsx:177
 msgid "No sync jobs, no drift"
 msgstr "Geen synchronisatietaken, geen afwijking"
 
-#: app/routes/_index.tsx:145
+#: app/routes/_index.tsx:146
 msgid "Non-conformance & CAPA"
 msgstr "Non-conformiteit & CAPA"
 
@@ -962,11 +981,11 @@ msgstr "Non-conformiteit & CAPA"
 msgid "None Required"
 msgstr "Niet vereist"
 
-#: app/routes/_index.tsx:1097
+#: app/routes/_index.tsx:1100
 msgid "One Postgres schema, and it's yours"
 msgstr "Eén Postgres-schema, en het is van u"
 
-#: app/routes/_index.tsx:222
+#: app/routes/_index.tsx:223
 msgid "one-off, lot-of-one traceability"
 msgstr "eenmalig, lot-van-één traceerbaarheid"
 
@@ -978,19 +997,19 @@ msgstr "Eenmalige aankoop met volledig eigendom"
 msgid "Operational"
 msgstr "Operationeel"
 
-#: app/routes/_index.tsx:131
+#: app/routes/_index.tsx:132
 msgid "Operator terminal"
 msgstr "Operator terminal"
 
-#: app/routes/_index.tsx:159
+#: app/routes/_index.tsx:160
 msgid "ops on the floor"
 msgstr "ops op de vloer"
 
-#: app/routes/_index.tsx:1232
+#: app/routes/_index.tsx:1235
 msgid "Or self-host the open source core"
 msgstr "Of host de open source-kern zelf"
 
-#: app/routes/_index.tsx:158
+#: app/routes/_index.tsx:159
 msgid "Order"
 msgstr "Bestelling"
 
@@ -998,32 +1017,32 @@ msgstr "Bestelling"
 msgid "Ownership Model"
 msgstr "Eigendomsmodel"
 
-#: app/routes/_index.tsx:161
+#: app/routes/_index.tsx:162
 msgid "packing & certs"
 msgstr "verpakking & certificaten"
 
-#: app/routes/_index.tsx:265
+#: app/routes/_index.tsx:266
 msgid "Parameterize the part, not the paperwork. Rules drive the bill of materials, the routing, the price before you quote it."
 msgstr "Parametriseer het onderdeel, niet de papierwerk. Regels bepalen de stuklijst, de routering, de prijs voordat u een offerte maakt."
 
-#: app/routes/_index.tsx:271
+#: app/routes/_index.tsx:272
 msgid "Part configurator / BOM tree"
 msgstr "Onderdeelconfiguratie / BOM-boom"
 
-#: app/routes/_index.tsx:120
+#: app/routes/_index.tsx:121
 msgid "Part supersession"
 msgstr "Onderdeel vervangen"
 
-#: app/routes/_index.tsx:44
+#: app/routes/_index.tsx:45
 msgid "parts"
 msgstr "onderdelen"
 
-#: app/routes/_index.tsx:316
+#: app/routes/_index.tsx:317
 msgid "Per-entity currency, COA and tax, consolidated books"
 msgstr "Per-entiteit valuta, rekeningschema en belasting, geconsolideerde boeken"
 
-#: app/routes/_index.tsx:111
-#: app/routes/_index.tsx:156
+#: app/routes/_index.tsx:112
+#: app/routes/_index.tsx:157
 msgid "Planning"
 msgstr "Planning"
 
@@ -1031,7 +1050,7 @@ msgstr "Planning"
 msgid "Please provide your contact details to complete the process"
 msgstr "Geef alstublieft uw contactgegevens op om het proces af te ronden"
 
-#: app/routes/_index.tsx:157
+#: app/routes/_index.tsx:158
 msgid "POs & receipts"
 msgstr "PO's & ontvangsten"
 
@@ -1041,9 +1060,9 @@ msgstr "PO's & ontvangsten"
 msgid "Pricing"
 msgstr "Prijzen"
 
-#: app/routes/_index.tsx:251
 #: app/routes/_index.tsx:252
 #: app/routes/_index.tsx:253
+#: app/routes/_index.tsx:254
 msgid "Printer"
 msgstr "Printer"
 
@@ -1059,41 +1078,41 @@ msgstr "Product"
 msgid "Product configurator with rules-based BOMs and routings"
 msgstr "Productconfigurator met op regels gebaseerde BOM's en routeringen"
 
-#: app/routes/_index.tsx:159
+#: app/routes/_index.tsx:160
 msgid "Production"
 msgstr "Productie"
 
-#: app/routes/_index.tsx:156
+#: app/routes/_index.tsx:157
 msgid "projections and MRP"
 msgstr "projecties en MRP"
 
-#: app/routes/_index.tsx:142
+#: app/routes/_index.tsx:143
 msgid "proof, not paperwork"
 msgstr "bewijs, geen papierwerk"
 
-#: app/routes/_index.tsx:157
+#: app/routes/_index.tsx:158
 msgid "Purchasing"
 msgstr "Inkoop"
 
-#: app/routes/_index.tsx:101
+#: app/routes/_index.tsx:102
 msgid "Purchasing & receipts"
 msgstr "Inkoop & ontvangsten"
 
-#: app/routes/_index.tsx:284
+#: app/routes/_index.tsx:285
 msgid "QR and barcode tracking on every unit"
 msgstr "QR- en barcodebijhouden op elke eenheid"
 
-#: app/routes/_index.tsx:141
-#: app/routes/_index.tsx:160
-#: app/routes/_index.tsx:295
+#: app/routes/_index.tsx:142
+#: app/routes/_index.tsx:161
+#: app/routes/_index.tsx:296
 msgid "Quality"
 msgstr "Kwaliteit"
 
-#: app/routes/_index.tsx:303
+#: app/routes/_index.tsx:304
 msgid "Quality / traceability record"
 msgstr "Kwaliteit / traceerbaarheidsrecord"
 
-#: app/routes/_index.tsx:74
+#: app/routes/_index.tsx:75
 msgid "Quality in a separate binder"
 msgstr "Kwaliteit in een afzonderlijke map"
 
@@ -1101,7 +1120,7 @@ msgstr "Kwaliteit in een afzonderlijke map"
 msgid "Quote Pricing"
 msgstr "Prijsstelling voor offertes"
 
-#: app/routes/_index.tsx:99
+#: app/routes/_index.tsx:100
 msgid "Quotes & RFQ pricing"
 msgstr "Offertes & RFQ-prijzen"
 
@@ -1109,19 +1128,19 @@ msgstr "Offertes & RFQ-prijzen"
 msgid "Quotes Table"
 msgstr "Offertetabel"
 
-#: app/routes/_index.tsx:247
+#: app/routes/_index.tsx:248
 msgid "Quoting"
 msgstr "Offertering"
 
-#: app/routes/_index.tsx:213
+#: app/routes/_index.tsx:214
 msgid "rate production, PPAP, takt"
 msgstr "massaproductie, PPAP, takt"
 
-#: app/routes/_index.tsx:48
+#: app/routes/_index.tsx:49
 msgid "reactors"
 msgstr "reactoren"
 
-#: app/routes/_index.tsx:205
+#: app/routes/_index.tsx:206
 msgid "Read it. Extend it."
 msgstr "Lees het. Breid het uit."
 
@@ -1133,7 +1152,7 @@ msgstr "Lees de documentatie"
 msgid "Read the source, run it in your own environment, and start developing locally."
 msgstr "Lees de bron, voer deze uit in uw eigen omgeving en begin lokaal te ontwikkelen."
 
-#: app/routes/_index.tsx:280
+#: app/routes/_index.tsx:281
 msgid "Real-time, real cost shop floor."
 msgstr "Real-time, echte kostprijs shopfloor."
 
@@ -1141,7 +1160,7 @@ msgstr "Real-time, echte kostprijs shopfloor."
 msgid "Recommended. Priority support with dedicated account manager"
 msgstr "Aanbevolen. Prioriteitsondersteuning met toegewezen accountmanager"
 
-#: app/routes/_index.tsx:957
+#: app/routes/_index.tsx:960
 msgid "Regulated or not, one-off or rate production — the primitives are the same. The configuration is yours."
 msgstr "Gereglementeerd of niet, eenmalig of massaproductie — de primitieven zijn hetzelfde. De configuratie is van jou."
 
@@ -1150,35 +1169,40 @@ msgstr "Gereglementeerd of niet, eenmalig of massaproductie — de primitieven z
 msgid "Resources"
 msgstr "Middelen"
 
-#: app/routes/_index.tsx:268
+#: app/routes/_index.tsx:269
 msgid "Revision control with effectivity dates"
 msgstr "Versiebeheer met effectiviteitsdatums"
 
-#: app/routes/_index.tsx:60
+#: app/routes/_index.tsx:61
 msgid "Revisions lost in email"
 msgstr "Revisies verloren in e-mail"
 
-#: app/routes/_index.tsx:220
+#: app/routes/_index.tsx:221
 msgid "Robotics"
 msgstr "Robotica"
 
-#: app/routes/_index.tsx:46
+#: app/routes/_index.tsx:47
 msgid "robots"
 msgstr "robots"
 
-#: app/routes/_index.tsx:269
+#: app/routes/_index.tsx:270
 msgid "Rolled-up cost at any configuration"
 msgstr "Opgetelde kosten bij elke configuratie"
 
-#: app/routes/_index.tsx:155
+#. placeholder {0}: e.currency
+#: app/components/entity-tree.tsx:186
+msgid "Rolls up to {rootName} in {0}"
+msgstr "Rolt op naar {rootName} in {0}"
+
+#: app/routes/_index.tsx:156
 msgid "routing & work instructions"
 msgstr "routering & werkinstructies"
 
-#: app/routes/_index.tsx:237
+#: app/routes/_index.tsx:238
 msgid "Row-level security"
 msgstr "Beveiliging op rijniveau"
 
-#: app/routes/_index.tsx:267
+#: app/routes/_index.tsx:268
 msgid "Rule-based BOM and routing generation"
 msgstr "Op regels gebaseerde BOM- en routeringsgeneratie"
 
@@ -1186,15 +1210,15 @@ msgstr "Op regels gebaseerde BOM- en routeringsgeneratie"
 msgid "Sales"
 msgstr "Verkoop"
 
-#: app/routes/_index.tsx:100
+#: app/routes/_index.tsx:101
 msgid "Sales orders"
 msgstr "Verkooporders"
 
-#: app/routes/_index.tsx:43
+#: app/routes/_index.tsx:44
 msgid "satellites"
 msgstr "satellieten"
 
-#: app/routes/_index.tsx:254
+#: app/routes/_index.tsx:255
 msgid "SCADA"
 msgstr "SCADA"
 
@@ -1213,7 +1237,7 @@ msgstr "Selecteer uw voorkeur voor hosting"
 #: app/components/footer.tsx:64
 #: app/components/header.tsx:89
 #: app/components/header.tsx:209
-#: app/routes/_index.tsx:1116
+#: app/routes/_index.tsx:1119
 msgid "Self-hosted"
 msgstr "Zelf gehost"
 
@@ -1233,19 +1257,19 @@ msgstr "Zelf onboarden"
 msgid "Self-serve"
 msgstr "Zelfbediening"
 
-#: app/routes/_index.tsx:223
+#: app/routes/_index.tsx:224
 msgid "Semiconductor"
 msgstr "Halfgeleider"
 
-#: app/routes/_index.tsx:147
+#: app/routes/_index.tsx:148
 msgid "Serial & lot genealogy"
 msgstr "Serienummer & partijstamboom"
 
-#: app/routes/_index.tsx:299
+#: app/routes/_index.tsx:300
 msgid "Serial and lot genealogy, forwards and back"
 msgstr "Serienummer- en partijstamboom, vooruit en terug"
 
-#: app/routes/_index.tsx:182
+#: app/routes/_index.tsx:183
 msgid "Serial-level trace"
 msgstr "Serienumertraceerbaarheid"
 
@@ -1253,19 +1277,19 @@ msgstr "Serienumertraceerbaarheid"
 msgid "Shared database with isolated data"
 msgstr "Gedeelde database met geïsoleerde gegevens"
 
-#: app/routes/_index.tsx:175
+#: app/routes/_index.tsx:176
 msgid "Shared schema"
 msgstr "Gedeeld schema"
 
-#: app/routes/_index.tsx:1210
+#: app/routes/_index.tsx:1213
 msgid "Ship faster than your competitors can quote."
 msgstr "Verzend sneller dan uw concurrenten een offerte kunnen doen."
 
-#: app/routes/_index.tsx:161
+#: app/routes/_index.tsx:162
 msgid "Shipping"
 msgstr "Verzending"
 
-#: app/routes/_index.tsx:287
+#: app/routes/_index.tsx:288
 msgid "Shop floor / job traveler"
 msgstr "Werkvoer / jobmobiel"
 
@@ -1277,11 +1301,11 @@ msgstr "Shop Floor Apps"
 msgid "Shop floor console mode"
 msgstr "Shopfloor-consolemodus"
 
-#: app/routes/_index.tsx:119
+#: app/routes/_index.tsx:120
 msgid "Shortage escalation"
 msgstr "Tekortescalatie"
 
-#: app/routes/_index.tsx:58
+#: app/routes/_index.tsx:59
 msgid "Shortages found on the floor"
 msgstr "Tekorten gevonden op de vloer"
 
@@ -1293,11 +1317,11 @@ msgstr "Eenvoudig prijzen op basis van uw behoeften."
 msgid "Single-Tenant"
 msgstr "Single-Tenant"
 
-#: app/routes/_index.tsx:218
+#: app/routes/_index.tsx:219
 msgid "SMT, contract manufacture, NPI"
 msgstr "SMT, contractfabricage, NPI"
 
-#: app/routes/_index.tsx:236
+#: app/routes/_index.tsx:237
 msgid "SOC 2 controls"
 msgstr "SOC 2-controles"
 
@@ -1305,7 +1329,7 @@ msgstr "SOC 2-controles"
 msgid "Software as a Service"
 msgstr "Software as a Service"
 
-#: app/routes/_index.tsx:1063
+#: app/routes/_index.tsx:1066
 msgid "Source available"
 msgstr "Bron beschikbaar"
 
@@ -1313,11 +1337,11 @@ msgstr "Bron beschikbaar"
 msgid "Source Code"
 msgstr "Broncode"
 
-#: app/routes/_index.tsx:222
+#: app/routes/_index.tsx:223
 msgid "Space"
 msgstr "Ruimte"
 
-#: app/routes/_index.tsx:55
+#: app/routes/_index.tsx:56
 msgid "Spreadsheet"
 msgstr "Spreadsheet"
 
@@ -1338,7 +1362,7 @@ msgstr "Start 30-daagse gratis proefperiode"
 msgid "Start Free"
 msgstr "Gratis beginnen"
 
-#: app/routes/_index.tsx:1207
+#: app/routes/_index.tsx:1210
 msgid "Start now · No call required"
 msgstr "Start nu · Geen oproep vereist"
 
@@ -1350,11 +1374,11 @@ msgstr "Starter"
 msgid "Submit"
 msgstr "Verzenden"
 
-#: app/routes/_index.tsx:148
+#: app/routes/_index.tsx:149
 msgid "Supplier scorecards"
 msgstr "Leveranciersscorekaarten"
 
-#: app/routes/_index.tsx:115
+#: app/routes/_index.tsx:116
 msgid "Supply planning runs"
 msgstr "Supply planningsruns"
 
@@ -1366,12 +1390,12 @@ msgstr "Ondersteuningsniveau"
 msgid "System Status:"
 msgstr "Systeemstatus:"
 
-#: app/routes/_index.tsx:170
+#: app/routes/_index.tsx:171
 msgid "Systems replaced"
 msgstr "Systemen vervangen"
 
-#: app/routes/_index.tsx:244
 #: app/routes/_index.tsx:245
+#: app/routes/_index.tsx:246
 msgid "Tasks"
 msgstr "Taken"
 
@@ -1391,7 +1415,7 @@ msgstr "Bedankt voor je interesse!"
 msgid "Thank you for your message!"
 msgstr "Bedankt voor uw bericht!"
 
-#: app/routes/_index.tsx:128
+#: app/routes/_index.tsx:129
 msgid "the floor itself"
 msgstr "de vloer zelf"
 
@@ -1399,19 +1423,19 @@ msgstr "de vloer zelf"
 msgid "The Modern Manufacturing Stack"
 msgstr "De Moderne Productie Stack"
 
-#: app/routes/_index.tsx:1103
+#: app/routes/_index.tsx:1106
 msgid "The whole application is on GitHub — the Community edition under AGPL-3.0. Read every line, run a security review, and extend it to fit your process."
 msgstr "De gehele toepassing is op GitHub — de Community-editie onder AGPL-3.0. Lees elke regel, voer een beveiligingsbeoordeling uit en breid deze uit zodat deze bij uw proces past."
 
-#: app/routes/_index.tsx:296
+#: app/routes/_index.tsx:297
 msgid "Traceability is the default state."
 msgstr "Traceerbaarheid is de standaardstatus."
 
-#: app/routes/_index.tsx:73
+#: app/routes/_index.tsx:74
 msgid "Traveler printed at 6am, stale by 9"
 msgstr "Moviel afgedrukt om 6 uur, oud om 9 uur"
 
-#: app/routes/_index.tsx:1036
+#: app/routes/_index.tsx:1039
 msgid "Trusted"
 msgstr "Vertrouwd"
 
@@ -1419,16 +1443,16 @@ msgstr "Vertrouwd"
 msgid "Trusted by the world's most innovative"
 msgstr "Vertrouwd door de meest innovatieve ter wereld"
 
-#: app/routes/_index.tsx:1245
-#: app/routes/self-hosted.tsx:735
+#: app/routes/_index.tsx:1248
+#: app/routes/self-hosted.tsx:741
 msgid "Two hard tech unicorns build on Carbon."
 msgstr "Twee innovatieve technologiebedrijven bouwen op Carbon."
 
-#: app/routes/_index.tsx:188
+#: app/routes/_index.tsx:189
 msgid "Typical first deployment"
 msgstr "Typische eerste implementatie"
 
-#: app/routes/_index.tsx:264
+#: app/routes/_index.tsx:265
 msgid "Unfork your BOM."
 msgstr "Versplitsing van uw stuklijst opheffen."
 
@@ -1440,7 +1464,7 @@ msgstr "Onbeperkte functionele ondersteuning"
 msgid "Unlimited records"
 msgstr "Onbeperkte records"
 
-#: app/routes/_index.tsx:47
+#: app/routes/_index.tsx:48
 msgid "vehicles"
 msgstr "voertuigen"
 
@@ -1448,7 +1472,7 @@ msgstr "voertuigen"
 msgid "View our source code and contribute"
 msgstr "Bekijk onze broncode en draag bij"
 
-#: app/routes/_index.tsx:1132
+#: app/routes/_index.tsx:1135
 msgid "View the source"
 msgstr "Bekijk de bron"
 
@@ -1476,7 +1500,7 @@ msgstr "We zijn blij dat je hier bent."
 msgid "What can we help with?"
 msgstr "Waarmee kunnen we je helpen?"
 
-#: app/routes/_index.tsx:112
+#: app/routes/_index.tsx:113
 msgid "what to make, when"
 msgstr "wat te maken, wanneer"
 

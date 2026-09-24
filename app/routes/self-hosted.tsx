@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import type { MetaFunction } from "react-router";
 import { LogoStrip } from "~/components/logo-strip";
+import { EntityTree } from "~/components/entity-tree";
 import { Screenshot } from "~/components/screenshot";
 import { Button } from "~/components/ui/button";
 import { GithubLogo } from "~/components/ui/github-logo";
@@ -130,8 +131,7 @@ const featureRows = [
 			"Consolidated books across every location you run",
 			"One schema, one backup, one system to secure",
 		],
-		shotLight: "/screenshots/multi-light.webp",
-		shotDark: "/screenshots/multi-dark.webp",
+		diagram: "entity-tree",
 		label: "Multi-entity ledger / multi-site planning",
 		flip: false,
 	},
@@ -396,20 +396,26 @@ function FeatureRows() {
 							)}
 						>
 							<div className="relative overflow-hidden sm:h-[min(52vh,480px)]">
-								<ZoomableImage
-									className="dark:hidden"
-									src={f.shotLight}
-									alt={f.label}
-								>
-									<Screenshot src={f.shotLight} label={f.label} />
-								</ZoomableImage>
-								<ZoomableImage
-									className="hidden dark:block"
-									src={f.shotDark}
-									alt={f.label}
-								>
-									<Screenshot src={f.shotDark} label={f.label} />
-								</ZoomableImage>
+								{"diagram" in f ? (
+									<EntityTree label={f.label} />
+								) : (
+									<>
+										<ZoomableImage
+											className="dark:hidden"
+											src={f.shotLight}
+											alt={f.label}
+										>
+											<Screenshot src={f.shotLight} label={f.label} />
+										</ZoomableImage>
+										<ZoomableImage
+											className="hidden dark:block"
+											src={f.shotDark}
+											alt={f.label}
+										>
+											<Screenshot src={f.shotDark} label={f.label} />
+										</ZoomableImage>
+									</>
+								)}
 							</div>
 						</div>
 					</div>
