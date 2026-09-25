@@ -11,7 +11,7 @@ import {
 } from "./ui/context-menu";
 
 /**
- * The header wordmark. Left-click navigates home; right-click opens a small
+ * The header logo mark. Left-click navigates home; right-click opens a small
  * brand menu (à la Ramp) to copy the logo SVG or jump to the brand assets page.
  *
  * Uses Radix ContextMenu so the right-click gesture is handled natively — the
@@ -24,7 +24,7 @@ export function LogoMenu() {
 
 	async function copySvg() {
 		try {
-			const res = await fetch(`/brand/carbon-word-${mode}.svg`);
+			const res = await fetch(`/brand/carbon-mark-${mode}.svg`);
 			const svg = await res.text();
 			await navigator.clipboard.writeText(svg);
 			setCopied(true);
@@ -43,12 +43,12 @@ export function LogoMenu() {
 					className="flex shrink-0 select-none items-center justify-self-start font-display"
 				>
 					<img
-						src="/brand/carbon-word-light.svg"
+						src="/brand/carbon-mark-light.svg"
 						alt="Carbon"
 						className="h-7 w-auto dark:hidden"
 					/>
 					<img
-						src="/brand/carbon-word-dark.svg"
+						src="/brand/carbon-mark-dark.svg"
 						alt="Carbon"
 						className="hidden h-7 w-auto dark:block"
 					/>

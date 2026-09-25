@@ -53,7 +53,7 @@ msgid "A typed TypeScript monorepo with one generated database type shared acros
 msgstr "一个类型化的 TypeScript 单仓库，具有在应用、API 和 AI 工具之间共享的一个生成的数据库类型。自带您的 LLM。"
 
 #: app/components/header.tsx:72
-#: app/components/header.tsx:204
+#: app/components/header.tsx:203
 msgid "About"
 msgstr "关于"
 
@@ -408,8 +408,8 @@ msgstr "联系"
 msgid "Contact Information"
 msgstr "联系信息"
 
-#: app/components/header.tsx:151
-#: app/components/header.tsx:244
+#: app/components/header.tsx:150
+#: app/components/header.tsx:243
 #: app/routes/_index.tsx:1237
 msgid "Contact Sales"
 msgstr "联系销售"
@@ -535,7 +535,7 @@ msgstr "开发者指南和 API 参考"
 
 #: app/components/footer.tsx:59
 #: app/components/header.tsx:98
-#: app/components/header.tsx:221
+#: app/components/header.tsx:220
 msgid "Developers"
 msgstr "开发者"
 
@@ -748,6 +748,11 @@ msgstr "GL和应计"
 #: app/components/hero.tsx:206
 msgid "Global Search"
 msgstr "全局搜索"
+
+#: app/routes/_index.tsx:1256
+#: app/routes/self-hosted.tsx:822
+msgid "Hard tech unicorns build on Carbon."
+msgstr "硬科技独角兽在Carbon上构建。"
 
 #: app/routes/_index.tsx:43
 msgid "hardware"
@@ -1101,7 +1106,7 @@ msgstr "采购订单和收据"
 
 #: app/components/footer.tsx:63
 #: app/components/header.tsx:82
-#: app/components/header.tsx:211
+#: app/components/header.tsx:210
 msgid "Pricing"
 msgstr "定价"
 
@@ -1293,7 +1298,7 @@ msgstr "自托管Carbon"
 
 #: app/components/footer.tsx:64
 #: app/components/header.tsx:92
-#: app/components/header.tsx:218
+#: app/components/header.tsx:217
 #: app/routes/_index.tsx:1127
 #: app/routes/pricing.tsx:211
 msgid "Self-hosted"
@@ -1506,14 +1511,9 @@ msgstr "作业单在早上6点打印，到9点就过期了"
 msgid "Trusted"
 msgstr "值得信赖的"
 
-#: app/components/logo-strip.tsx:86
+#: app/components/logo-strip.tsx:81
 msgid "Trusted by the world's most innovative"
 msgstr "受到世界最创新者的信任"
-
-#: app/routes/_index.tsx:1256
-#: app/routes/self-hosted.tsx:822
-msgid "Two hard tech unicorns build on Carbon."
-msgstr "两个硬科技独角兽在Carbon上构建。"
 
 #: app/routes/_index.tsx:189
 msgid "Typical first deployment"

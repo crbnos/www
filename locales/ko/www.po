@@ -53,7 +53,7 @@ msgid "A typed TypeScript monorepo with one generated database type shared acros
 msgstr "앱, API 및 AI 도구 전반에 걸쳐 공유되는 하나의 생성된 데이터베이스 유형을 포함하는 형식화된 TypeScript monorepo입니다. 자신의 LLM을 가져오세요."
 
 #: app/components/header.tsx:72
-#: app/components/header.tsx:204
+#: app/components/header.tsx:203
 msgid "About"
 msgstr "정보"
 
@@ -408,8 +408,8 @@ msgstr "연락처"
 msgid "Contact Information"
 msgstr "연락처 정보"
 
-#: app/components/header.tsx:151
-#: app/components/header.tsx:244
+#: app/components/header.tsx:150
+#: app/components/header.tsx:243
 #: app/routes/_index.tsx:1237
 msgid "Contact Sales"
 msgstr "영업 문의"
@@ -535,7 +535,7 @@ msgstr "개발자 가이드 및 API 참조"
 
 #: app/components/footer.tsx:59
 #: app/components/header.tsx:98
-#: app/components/header.tsx:221
+#: app/components/header.tsx:220
 msgid "Developers"
 msgstr "개발자"
 
@@ -748,6 +748,11 @@ msgstr "GL & 발생액"
 #: app/components/hero.tsx:206
 msgid "Global Search"
 msgstr "전역 검색"
+
+#: app/routes/_index.tsx:1256
+#: app/routes/self-hosted.tsx:822
+msgid "Hard tech unicorns build on Carbon."
+msgstr "하드테크 유니콘들이 Carbon을 기반으로 구축합니다."
 
 #: app/routes/_index.tsx:43
 msgid "hardware"
@@ -1101,7 +1106,7 @@ msgstr "PO 및 영수증"
 
 #: app/components/footer.tsx:63
 #: app/components/header.tsx:82
-#: app/components/header.tsx:211
+#: app/components/header.tsx:210
 msgid "Pricing"
 msgstr "가격"
 
@@ -1293,7 +1298,7 @@ msgstr "Self-Host Carbon"
 
 #: app/components/footer.tsx:64
 #: app/components/header.tsx:92
-#: app/components/header.tsx:218
+#: app/components/header.tsx:217
 #: app/routes/_index.tsx:1127
 #: app/routes/pricing.tsx:211
 msgid "Self-hosted"
@@ -1506,14 +1511,9 @@ msgstr "오전 6시에 인쇄된 추적, 9시까지 오래됨"
 msgid "Trusted"
 msgstr "신뢰"
 
-#: app/components/logo-strip.tsx:86
+#: app/components/logo-strip.tsx:81
 msgid "Trusted by the world's most innovative"
 msgstr "세계에서 가장 혁신적인 기업의 신뢰"
-
-#: app/routes/_index.tsx:1256
-#: app/routes/self-hosted.tsx:822
-msgid "Two hard tech unicorns build on Carbon."
-msgstr "두 개의 하드테크 유니콘이 Carbon을 기반으로 구축합니다."
 
 #: app/routes/_index.tsx:189
 msgid "Typical first deployment"

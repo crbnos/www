@@ -53,7 +53,7 @@ msgid "A typed TypeScript monorepo with one generated database type shared acros
 msgstr "Een getypeerde TypeScript-monorepo met één gegenereerde databasetype, gedeeld over de app, de API en de AI-tools. Breng je eigen LLM mee."
 
 #: app/components/header.tsx:72
-#: app/components/header.tsx:204
+#: app/components/header.tsx:203
 msgid "About"
 msgstr "Over"
 
@@ -408,8 +408,8 @@ msgstr "Contact"
 msgid "Contact Information"
 msgstr "Contactgegevens"
 
-#: app/components/header.tsx:151
-#: app/components/header.tsx:244
+#: app/components/header.tsx:150
+#: app/components/header.tsx:243
 #: app/routes/_index.tsx:1237
 msgid "Contact Sales"
 msgstr "Neem contact op met verkoopteam"
@@ -535,7 +535,7 @@ msgstr "Ontwikkelaarshandleidingen en API-referentie"
 
 #: app/components/footer.tsx:59
 #: app/components/header.tsx:98
-#: app/components/header.tsx:221
+#: app/components/header.tsx:220
 msgid "Developers"
 msgstr "Ontwikkelaars"
 
@@ -748,6 +748,11 @@ msgstr "GL & accruals"
 #: app/components/hero.tsx:206
 msgid "Global Search"
 msgstr "Globaal zoeken"
+
+#: app/routes/_index.tsx:1256
+#: app/routes/self-hosted.tsx:822
+msgid "Hard tech unicorns build on Carbon."
+msgstr "Hardtech-unicorns bouwen op Carbon."
 
 #: app/routes/_index.tsx:43
 msgid "hardware"
@@ -1101,7 +1106,7 @@ msgstr "PO's & ontvangsten"
 
 #: app/components/footer.tsx:63
 #: app/components/header.tsx:82
-#: app/components/header.tsx:211
+#: app/components/header.tsx:210
 msgid "Pricing"
 msgstr "Prijzen"
 
@@ -1293,7 +1298,7 @@ msgstr "Carbon zelf hosten"
 
 #: app/components/footer.tsx:64
 #: app/components/header.tsx:92
-#: app/components/header.tsx:218
+#: app/components/header.tsx:217
 #: app/routes/_index.tsx:1127
 #: app/routes/pricing.tsx:211
 msgid "Self-hosted"
@@ -1506,14 +1511,9 @@ msgstr "Moviel afgedrukt om 6 uur, oud om 9 uur"
 msgid "Trusted"
 msgstr "Vertrouwd"
 
-#: app/components/logo-strip.tsx:86
+#: app/components/logo-strip.tsx:81
 msgid "Trusted by the world's most innovative"
 msgstr "Vertrouwd door de meest innovatieve ter wereld"
-
-#: app/routes/_index.tsx:1256
-#: app/routes/self-hosted.tsx:822
-msgid "Two hard tech unicorns build on Carbon."
-msgstr "Twee innovatieve technologiebedrijven bouwen op Carbon."
 
 #: app/routes/_index.tsx:189
 msgid "Typical first deployment"
