@@ -20,9 +20,9 @@ const buttonVariants = cva(
 				ghost: "hover:bg-background/70 hover:text-accent-foreground",
 				link: "text-primary underline-offset-4 hover:underline",
 				accent:
-					"bg-secondary text-secondary-foreground transition-opacity hover:opacity-90 dark:border dark:border-secondary/50 dark:bg-secondary-surface dark:text-secondary dark:transition-colors dark:hover:bg-secondary/20 dark:hover:opacity-100",
+					"bg-secondary text-secondary-foreground transition-opacity hover:opacity-90 dark:border dark:border-secondary/20 dark:bg-secondary-surface dark:text-secondary/90 dark:transition-colors dark:hover:border-secondary/40 dark:hover:bg-secondary/15 dark:hover:text-secondary dark:hover:opacity-100",
 				accentOutline:
-					"border border-border text-foreground transition-colors hover:border-foreground",
+					"border border-border text-muted-foreground transition-colors hover:border-foreground/30 hover:text-foreground",
 			},
 			size: {
 				default: "h-9 px-4 py-2",
@@ -30,8 +30,9 @@ const buttonVariants = cva(
 				lg: "h-10 rounded-md px-8",
 				xl: "h-12 rounded-none px-8 text-lg",
 				icon: "h-9 w-9",
-				cta: "px-6 py-4 font-mono text-[11px] uppercase tracking-[0.15em]",
-				ctaSm: "px-4 py-2 font-mono text-[11px] uppercase tracking-[0.15em]",
+				cta: "rounded-[2px] px-6 py-4 font-mono text-xs font-normal uppercase tracking-[0.08em]",
+				ctaSm:
+					"h-8 rounded-[2px] px-3 font-mono text-xs font-normal uppercase tracking-[0.08em]",
 			},
 		},
 		defaultVariants: {
