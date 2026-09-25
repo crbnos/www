@@ -136,17 +136,6 @@ export function ByocConsole({
 		if (!added) setAdded({ ready: 0 });
 	};
 
-	const caption = (() => {
-		if (added && added.ready < 14)
-			return `Provisioning eu-prod in your AWS account · ${added.ready}/14 workloads`;
-		if (staging.phase === "rolling")
-			return `Rolling ${HEAD} out to staging · ${staging.ready}/13 workloads`;
-		if (staging.phase === "behind")
-			return `staging is behind the channel — approve ${HEAD} to roll it out`;
-		if (!added) return `Every environment on ${HEAD} · add one in a click`;
-		return `${rows.length} environments on ${HEAD} · all workloads healthy`;
-	})();
-
 	return (
 		<div
 			role="group"
@@ -251,31 +240,6 @@ export function ByocConsole({
 					</div>
 				</div>
 			</div>
-
-			<div
-				aria-live="polite"
-				className="flex min-h-11 items-center gap-2 border-t border-border px-4 py-3 font-mono text-[9px] uppercase leading-snug tracking-[0.08em] text-muted-foreground sm:px-5 sm:text-[11px] sm:tracking-[0.16em]"
-			>
-				<span
-					aria-hidden
-					className={cn(
-						"size-1.5 shrink-0 transition-colors duration-200",
-						running || awaiting ? "bg-secondary" : "bg-muted-foreground/40",
-					)}
-				/>
-				<AnimatePresence mode="popLayout" initial={false}>
-					<motion.span
-						key={caption.replace(/\d+\/\d+/, "")}
-						initial={{ opacity: 0, y: 4, filter: "blur(2px)" }}
-						animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-						exit={{ opacity: 0, y: -4, transition: { duration: 0.12 } }}
-						transition={{ type: "spring", duration: 0.3, bounce: 0 }}
-						className="min-w-0 tabular-nums"
-					>
-						{caption}
-					</motion.span>
-				</AnimatePresence>
-			</div>
 		</div>
 	);
 }
@@ -315,7 +279,7 @@ function EnvironmentRow({ row: r }: { row: Row }) {
 				{r.behind && (
 					<>
 						<span className="hidden border border-amber-500/40 bg-amber-500/10 px-1.5 py-0.5 font-sans text-[11px] leading-none text-amber-700 dark:text-amber-300 xl:inline-block">
-							behind
+							Behind
 						</span>
 						<button
 							type="button"
