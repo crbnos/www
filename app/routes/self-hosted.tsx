@@ -117,14 +117,14 @@ const byoc = [
 		desc: "Connect your cloud account, pick a region, and Carbon deploys the whole stack into it — staging, production, or a separate environment per site.",
 	},
 	{
-		tag: "Releases",
-		name: "Upgrades that wait for you",
-		desc: "New releases land on your channel and wait for sign-off. Roll them to staging first, then production, on your schedule — never a surprise upgrade.",
+		tag: "Forks",
+		name: "Supports forks",
+		desc: "Running your own fork of Carbon? We build and release it the same way we ship ours — your customizations roll out to staging and production through the same pipeline.",
 	},
 	{
-		tag: "Managed",
+		tag: "Single-tenant",
 		name: "Operated by us, owned by you",
-		desc: "An agent in your cluster reports workload, certificate and version health back to our team, so we catch problems and renew certificates before you notice.",
+		desc: "Every deployment is single-tenant: your own instance, database and storage, inside your own cloud account. Nothing is shared with other customers or copied to our cloud — your data stays private and entirely yours.",
 	},
 ];
 
@@ -382,10 +382,8 @@ function Byoc() {
 					</Button>
 				</div>
 
-				<div className="mt-14 border border-border bg-screenshot p-2.5">
-					<div className="border border-border sm:h-[min(64vh,560px)]">
-						<ByocConsole label="Carbon BYOC control plane: environments running in your own cloud account" />
-					</div>
+				<div className="mt-14 border border-border sm:h-[min(64vh,520px)]">
+					<ByocConsole label="Carbon BYOC control plane: environments running in your own cloud account" />
 				</div>
 
 				<div className="grid grid-cols-1 gap-px border border-t-0 border-border bg-border lg:grid-cols-3">
