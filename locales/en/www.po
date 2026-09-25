@@ -1506,7 +1506,7 @@ msgstr "Traveler printed at 6am, stale by 9"
 msgid "Trusted"
 msgstr "Trusted"
 
-#: app/components/logo-strip.tsx:81
+#: app/components/logo-strip.tsx:86
 msgid "Trusted by the world's most innovative"
 msgstr "Trusted by the world's most innovative"
 
