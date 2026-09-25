@@ -3,6 +3,7 @@ import { Check, ChevronRight, Copy } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import type { MetaFunction } from "react-router";
+import { ByocConsole } from "~/components/byoc-console";
 import { LogoStrip } from "~/components/logo-strip";
 import { EntityTree } from "~/components/entity-tree";
 import { Screenshot } from "~/components/screenshot";
@@ -19,13 +20,16 @@ import { REPO_URL, SITE_URL } from "~/lib/agent/site";
  * "on-prem MES", "air-gapped ERP"). Everything here is true of Carbon as
  * shipped: it's open core (Community edition AGPL-3.0, Enterprise features and
  * air-gapped licensing under a commercial license), the stack is Docker +
- * Postgres, and the whole backend is reachable over REST and MCP. The page
+ * Postgres, and the whole backend is reachable over REST and MCP. BYOC is the
+ * managed middle ground: we deploy and operate Carbon inside the customer's
+ * own cloud account from a control plane, so they get self-hosting's data
+ * ownership without running it themselves. The page
  * reuses the home page's screenshot panels and customer strip so it reads as
  * the same product, then layers on the self-hosting story on top.
  */
 
 const DESCRIPTION =
-	"Own the stack: run Carbon on your own infrastructure — on-prem, in your VPC, or fully air-gapped. ERP, MRP, MES and QMS on Postgres you own, source available, with an AGPL-3.0 Community edition.";
+	"Own the stack: run Carbon on your own infrastructure — managed in your own cloud account in one click (BYOC), on-prem, or fully air-gapped. ERP, MRP, MES and QMS on Postgres you own, source available, with an AGPL-3.0 Community edition.";
 
 const DOCS_URL = "https://docs.carbon.ms";
 
@@ -47,6 +51,10 @@ const faqs = [
 		a: "Yes, with an Enterprise license. Carbon runs on Docker against a Postgres database you control, and air-gapped licensing lets it run inside a restricted network with no outbound calls — built for classified and ITAR-restricted programs.",
 	},
 	{
+		q: "What is bring-your-own-cloud (BYOC)?",
+		a: "Managed self-hosting. Carbon deploys into your own cloud account in one click, and our team operates it from a control plane — releases, certificates and health monitoring — while the application and its data run on infrastructure you own. You get the data ownership of self-hosting without having to run it yourself, and every upgrade waits for your approval.",
+	},
+	{
 		q: "Is the self-hosted version the same as the cloud?",
 		a: "It is the same codebase. The managed cloud at app.carbon.ms is this repository, operated by us. Self-hosting gives you the same ERP, MRP, MES and QMS on infrastructure you own; the same REST API and MCP server need a commercial license when self-hosting, and other Enterprise features unlock with one too.",
 	},
@@ -56,13 +64,13 @@ const faqs = [
 	},
 	{
 		q: "Do you help with deployment?",
-		a: "For regulated and enterprise programs we offer white-glove deployment, migration and an SLA. Talk to sales and we'll scope it with your team.",
+		a: "Yes. With BYOC we deploy and run Carbon in your cloud account for you. For regulated and enterprise programs we also offer white-glove deployment, migration and an SLA. Talk to sales and we'll scope it with your team.",
 	},
 ];
 
 export const meta: MetaFunction = ({ matches }) =>
 	pageMeta(matches, {
-		title: "Self-hosted Carbon — on-prem & air-gapped manufacturing ERP",
+		title: "Self-hosted Carbon — BYOC, on-prem & air-gapped manufacturing ERP",
 		description: DESCRIPTION,
 		extra: [
 			{
@@ -99,6 +107,24 @@ const principles = [
 		tag: "Complete control",
 		name: "The whole layer is yours",
 		desc: "You hold the network, the keys, the models and the backups — the whole layer is yours to secure, audit and control.",
+	},
+];
+
+const byoc = [
+	{
+		tag: "One click",
+		name: "A new environment in one click",
+		desc: "Connect your cloud account, pick a region, and Carbon deploys the whole stack into it — staging, production, or a separate environment per site.",
+	},
+	{
+		tag: "Releases",
+		name: "Upgrades that wait for you",
+		desc: "New releases land on your channel and wait for sign-off. Roll them to staging first, then production, on your schedule — never a surprise upgrade.",
+	},
+	{
+		tag: "Managed",
+		name: "Operated by us, owned by you",
+		desc: "An agent in your cluster reports workload, certificate and version health back to our team, so we catch problems and renew certificates before you notice.",
 	},
 ];
 
@@ -170,16 +196,21 @@ const featureRows = [
 const deployments = [
 	{
 		n: "01",
+		name: "Managed in your cloud",
+		desc: "BYOC: we deploy Carbon into your own cloud account in one click and operate it for you — upgrades, certificates and monitoring included. Your data never leaves your account.",
+	},
+	{
+		n: "02",
 		name: "Docker",
 		desc: "The whole stack — app, API, MCP server and Postgres — runs in Docker containers. Stand it up on a single box to evaluate, then scale out.",
 	},
 	{
-		n: "02",
-		name: "Your own cloud",
-		desc: "Deploy into your own VPC on AWS, GCP or Azure, against managed Postgres. You keep the network, the keys and the backups.",
+		n: "03",
+		name: "Self-managed cloud",
+		desc: "Run it yourself in your own VPC on AWS, GCP or Azure, against managed Postgres. You keep the network, the keys and the backups.",
 	},
 	{
-		n: "03",
+		n: "04",
 		name: "On-prem & air-gapped",
 		desc: "Run entirely inside your own network with no outbound calls — built for defense, ITAR-restricted and classified programs. Air-gapped licensing is an Enterprise feature.",
 	},
@@ -257,7 +288,8 @@ function Hero() {
 
 				<p className="mt-8 max-w-[60ch] text-lg leading-relaxed text-muted-foreground">
 					The whole system of record — ERP, MRP, MES and QMS — on Postgres you
-					own. On-prem, in your VPC, or fully air-gapped. Open source, so you can
+					own. Managed in your own cloud in one click, on-prem, or fully
+					air-gapped. Open source, so you can
 					audit every line before it ever touches your most sensitive records.
 				</p>
 
@@ -319,6 +351,57 @@ function Principles() {
 							</div>
 							<div className="text-sm leading-relaxed text-muted-foreground">
 								{p.desc}
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
+		</section>
+	);
+}
+
+function Byoc() {
+	return (
+		<section className="border-b border-border py-28 sm:py-32">
+			<div className={shell}>
+				<div className="flex flex-wrap items-end justify-between gap-8">
+					<div>
+						<Chip>Bring your own cloud</Chip>
+						<h2 className={cn(heading, "mt-6 max-w-[20ch]")}>
+							Self-hosted, without running it yourself.
+						</h2>
+						<p className="mt-6 max-w-[58ch] text-lg leading-relaxed text-muted-foreground">
+							With BYOC, Carbon deploys into your own cloud account in one click
+							and our team operates it from there — upgrades, certificates and
+							monitoring included. The infrastructure and the data are yours;
+							the pager is ours.
+						</p>
+					</div>
+					<Button asChild variant="accent" size="cta">
+						<Link to="/sales">Talk to sales</Link>
+					</Button>
+				</div>
+
+				<div className="mt-14 border border-border bg-screenshot p-2.5">
+					<div className="border border-border sm:h-[min(64vh,560px)]">
+						<ByocConsole label="Carbon BYOC control plane: environments running in your own cloud account" />
+					</div>
+				</div>
+
+				<div className="grid grid-cols-1 gap-px border border-t-0 border-border bg-border lg:grid-cols-3">
+					{byoc.map((b) => (
+						<div
+							key={b.tag}
+							className="flex flex-col gap-4 bg-card p-8 transition-colors hover:bg-muted"
+						>
+							<div className="font-mono text-[10px] uppercase leading-none tracking-wide text-secondary">
+								<span className="inline-block bg-secondary/10 dark:bg-secondary-surface px-3 py-1.5">
+									{b.tag}
+								</span>
+							</div>
+							<div className="text-xl font-medium">{b.name}</div>
+							<div className="text-sm leading-relaxed text-muted-foreground">
+								{b.desc}
 							</div>
 						</div>
 					))}
@@ -475,7 +558,7 @@ function Deploy() {
 					</p>
 				</div>
 
-				<div className="mt-14 grid grid-cols-1 gap-px border border-border bg-border md:grid-cols-3">
+				<div className="mt-14 grid grid-cols-1 gap-px border border-border bg-border md:grid-cols-2 lg:grid-cols-4">
 					{deployments.map((d) => (
 						<div
 							key={d.n}
@@ -743,6 +826,7 @@ export default function SelfHosted() {
 					<Trans>And some of the world's most innovative manufacturers</Trans>
 				}
 			/>
+			<Byoc />
 			<Walls />
 			<FeatureRows />
 			<Deploy />

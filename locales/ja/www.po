@@ -114,7 +114,7 @@ msgid "Analytics"
 msgstr "分析"
 
 #: app/routes/_index.tsx:1258
-#: app/routes/self-hosted.tsx:743
+#: app/routes/self-hosted.tsx:826
 msgid "And some of the world's most innovative manufacturers"
 msgstr "そして世界で最も革新的なメーカーの一部"
 
@@ -1511,7 +1511,7 @@ msgid "Trusted by the world's most innovative"
 msgstr "世界で最も革新的な信頼"
 
 #: app/routes/_index.tsx:1256
-#: app/routes/self-hosted.tsx:741
+#: app/routes/self-hosted.tsx:824
 msgid "Two hard tech unicorns build on Carbon."
 msgstr "2つのハードテック・ユニコーンがCarbonの上に構築。"
 

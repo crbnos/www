@@ -114,7 +114,7 @@ msgid "Analytics"
 msgstr "Analytik"
 
 #: app/routes/_index.tsx:1258
-#: app/routes/self-hosted.tsx:743
+#: app/routes/self-hosted.tsx:826
 msgid "And some of the world's most innovative manufacturers"
 msgstr "Und einige der weltweit innovativsten Hersteller"
 
@@ -1511,7 +1511,7 @@ msgid "Trusted by the world's most innovative"
 msgstr "Vertraut von den innovativsten der Welt"
 
 #: app/routes/_index.tsx:1256
-#: app/routes/self-hosted.tsx:741
+#: app/routes/self-hosted.tsx:824
 msgid "Two hard tech unicorns build on Carbon."
 msgstr "Zwei Hard-Tech-Einhörner bauen auf Carbon auf."
 
