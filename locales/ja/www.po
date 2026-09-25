@@ -1506,7 +1506,7 @@ msgstr "午前6時に印刷されたトラベラー、午前9時までに古く�
 msgid "Trusted"
 msgstr "信頼"
 
-#: app/components/logo-strip.tsx:81
+#: app/components/logo-strip.tsx:90
 msgid "Trusted by the world's most innovative"
 msgstr "世界で最も革新的な信頼"
 

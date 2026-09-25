@@ -1506,7 +1506,7 @@ msgstr "오전 6시에 인쇄된 추적, 9시까지 오래됨"
 msgid "Trusted"
 msgstr "신뢰"
 
-#: app/components/logo-strip.tsx:81
+#: app/components/logo-strip.tsx:90
 msgid "Trusted by the world's most innovative"
 msgstr "세계에서 가장 혁신적인 기업의 신뢰"
 

@@ -5,6 +5,8 @@ import { cn } from "~/lib/utils";
 export type Customer = {
 	name: string;
 	logo: string;
+	/** Separate artwork for dark mode; when set, no invert filter is applied. */
+	logoDark?: string;
 	url: string;
 	tone?: "light" | "color";
 };
@@ -49,10 +51,17 @@ export const customers: Customer[] = [
 		url: "https://blackcatlabs.xyz",
 	},
 	{ name: "M3 Aerospace", logo: "/logos/m3.png", url: "https://m3-aerospace.com/" },
-	{ name: "Robo", logo: "/logos/robo.svg", url: "https://robo.inc/" },
+	{
+		name: "Robo",
+		logo: "/logos/robo.svg",
+		logoDark: "/logos/robo-dark.svg",
+		url: "https://robo.inc/",
+	},
 ];
 
 const SHELL = "mx-auto w-full max-w-[1360px] px-6 sm:px-7";
+const LOGO_CLASS =
+	"h-auto max-h-8 w-24 object-contain opacity-70 transition-opacity hover:opacity-100";
 
 /**
  * The customer logo marquee — shared by the home page and the self-hosted page
@@ -100,14 +109,29 @@ export function LogoStrip({
 								tabIndex={index >= customers.length ? -1 : undefined}
 								className="flex h-10 shrink-0 items-center justify-center"
 							>
-								<img
-									alt={c.name}
-									src={c.logo}
-									className={cn(
-										"h-auto max-h-8 w-24 object-contain opacity-70 transition-opacity hover:opacity-100",
-										c.tone === "light" ? "invert dark:invert-0" : "dark:invert",
-									)}
-								/>
+								{c.logoDark ? (
+									<>
+										<img
+											alt={c.name}
+											src={c.logo}
+											className={cn(LOGO_CLASS, "dark:hidden")}
+										/>
+										<img
+											alt={c.name}
+											src={c.logoDark}
+											className={cn(LOGO_CLASS, "hidden dark:block")}
+										/>
+									</>
+								) : (
+									<img
+										alt={c.name}
+										src={c.logo}
+										className={cn(
+											LOGO_CLASS,
+											c.tone === "light" ? "invert dark:invert-0" : "dark:invert",
+										)}
+									/>
+								)}
 							</a>
 						))}
 					</div>
