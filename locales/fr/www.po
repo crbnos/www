@@ -1506,7 +1506,7 @@ msgstr "Trajet imprimé à 6h, obsolète à 9h"
 msgid "Trusted"
 msgstr "Fiable"
 
-#: app/components/logo-strip.tsx:80
+#: app/components/logo-strip.tsx:81
 msgid "Trusted by the world's most innovative"
 msgstr "Approuvé par les plus innovants du monde"
 

@@ -19,6 +19,7 @@ export const customers: Customer[] = [
 		url: "https://www.sygnalauto.com/",
 		tone: "light",
 	},
+	{ name: "Robo", logo: "/logos/robo.svg", url: "https://robo.inc" },
 	{
 		name: "Ren-Teq",
 		logo: "/logos/ren-teq.webp",
