@@ -1506,7 +1506,7 @@ msgstr "Путевой лист напечатан в 6:00, устарел к 9:
 msgid "Trusted"
 msgstr "Надежный"
 
-#: app/components/logo-strip.tsx:80
+#: app/components/logo-strip.tsx:81
 msgid "Trusted by the world's most innovative"
 msgstr "Доверено самыми инновационными в мире"
 

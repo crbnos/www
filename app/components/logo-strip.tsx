@@ -49,6 +49,7 @@ export const customers: Customer[] = [
 		url: "https://blackcatlabs.xyz",
 	},
 	{ name: "M3 Aerospace", logo: "/logos/m3.png", url: "https://m3-aerospace.com/" },
+	{ name: "Robo", logo: "/logos/robo.svg", url: "https://robo.inc/" },
 ];
 
 const SHELL = "mx-auto w-full max-w-[1360px] px-6 sm:px-7";

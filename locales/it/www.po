@@ -1506,7 +1506,7 @@ msgstr "Traveller stampato alle 6, obsoleto alle 9"
 msgid "Trusted"
 msgstr "Affidato"
 
-#: app/components/logo-strip.tsx:80
+#: app/components/logo-strip.tsx:81
 msgid "Trusted by the world's most innovative"
 msgstr "Trusted by the world's most innovative"
 

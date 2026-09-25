@@ -1506,7 +1506,7 @@ msgstr "Saat 6'da Yazdırılan Gezgin, Saat 9'da Eski"
 msgid "Trusted"
 msgstr "Güvenilir"
 
-#: app/components/logo-strip.tsx:80
+#: app/components/logo-strip.tsx:81
 msgid "Trusted by the world's most innovative"
 msgstr "Dünyanın En İnovatif Olanları Tarafından Güvenilir"
 
