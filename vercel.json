@@ -22,6 +22,26 @@
       "permanent": true
     },
     {
+      "source": "/openapi.yml",
+      "destination": "/openapi.yaml",
+      "permanent": true
+    },
+    {
+      "source": "/developer",
+      "destination": "/developers",
+      "permanent": true
+    },
+    {
+      "source": "/api-docs",
+      "destination": "https://docs.carbon.ms/api-reference",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference",
+      "destination": "https://docs.carbon.ms/api-reference",
+      "permanent": true
+    },
+    {
       "source": "/auth",
       "destination": "https://docs.carbon.ms/api-reference/authentication",
       "permanent": true

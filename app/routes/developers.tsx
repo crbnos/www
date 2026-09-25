@@ -7,6 +7,9 @@ import {
   internalHref,
   MCP_URL,
   OAUTH_METADATA,
+  ONBOARDING,
+  RATE_LIMIT_PER_MINUTE,
+  ORGANIZATION,
   REST_URL,
   SITE_URL,
 } from "~/lib/agent/site";
@@ -27,23 +30,44 @@ const DESCRIPTION =
 
 export const meta: MetaFunction = ({ matches }) =>
   pageMeta(matches, {
-    title: "Carbon developers — API, OpenAPI, MCP server, and webhooks",
+    title: "Carbon API, MCP server & OpenAPI spec — Carbon developers",
     description: DESCRIPTION,
     extra: [
       {
         "script:ld+json": {
           "@context": "https://schema.org",
-          "@type": "ItemList",
-          name: "Carbon developer resources",
-          description: DESCRIPTION,
-          url: `${SITE_URL}/developers`,
-          itemListElement: DEVELOPER_RESOURCES.map((resource, index) => ({
-            "@type": "ListItem",
-            position: index + 1,
-            name: resource.name,
-            description: resource.description,
-            url: resource.url,
-          })),
+          "@graph": [
+            {
+              "@type": "ItemList",
+              name: "Carbon developer resources",
+              description: DESCRIPTION,
+              url: `${SITE_URL}/developers`,
+              itemListElement: DEVELOPER_RESOURCES.map((resource, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                name: resource.name,
+                description: resource.description,
+                url: resource.url,
+              })),
+            },
+            // Names the API itself as an entity, so a search for "Carbon API"
+            // has something to resolve to besides this page.
+            {
+              "@type": "WebAPI",
+              name: "Carbon API",
+              alternateName: ["Carbon REST API", "Carbon ERP API"],
+              description:
+                "REST API for Carbon, the API-first manufacturing ERP/MRP. Every resource in the product, authenticated with a self-serve scoped API key or OAuth 2.0.",
+              url: REST_URL,
+              documentation: `${DOCS_URL}/api-reference`,
+              termsOfService: `${SITE_URL}/terms`,
+              provider: {
+                "@type": "Organization",
+                name: ORGANIZATION.name,
+                url: SITE_URL,
+              },
+            },
+          ],
         },
       },
     ],
@@ -101,7 +125,29 @@ export default function Developers() {
       </div>
       <div className="mx-auto flex flex-col px-4 w-full lg:max-w-4xl mb-28">
         <div className="prose dark:prose-invert lg:prose-lg w-full lg:max-w-4xl mx-auto">
-          <h2 id="quick-start">Quick start</h2>
+          <h2 id="get-access">Get a Carbon API key</h2>
+          <p>
+            Self-serve from start to first request — no sales call, no form.
+          </p>
+          <ol>
+            <li>
+              <a href={ONBOARDING.signupUrl}>Sign up</a> and start the{" "}
+              {ONBOARDING.trialDays}-day free trial. Choose the Business plan:
+              the API, webhooks and the MCP server are Business features.
+            </li>
+            <li>
+              Generate a scoped key yourself in{" "}
+              <a href={ONBOARDING.apiKeysUrl}>Settings → API Keys</a>.
+            </li>
+            <li>Call the REST API or connect an agent over MCP, below.</li>
+          </ol>
+          <p>
+            The OpenAPI spec, the MCP manifest, the OAuth metadata and{" "}
+            <code>llms.txt</code> need no credential at all, and the Community
+            Edition is free to <a href="/self-hosted">self-host</a>.
+          </p>
+
+          <h2 id="quick-start">Carbon API quick start</h2>
           <p>
             Create a scoped API key in{" "}
             <a href={`${APP_URL}/x/settings/api-keys`}>Settings → API Keys</a>,
@@ -119,13 +165,15 @@ export default function Developers() {
             ever touch the data it was granted.
           </p>
           <p>
-            Every key allows 60 requests per minute. A refused request returns{" "}
-            <code>429</code> with <code>Retry-After</code> and{" "}
-            <code>X-RateLimit-*</code> headers — back off on those rather than
-            retrying immediately.
+            Every key allows {RATE_LIMIT_PER_MINUTE} requests per minute. A
+            refused request returns <code>429</code> with{" "}
+            <code>Retry-After</code> (seconds) and{" "}
+            <code>X-RateLimit-Limit</code>, <code>X-RateLimit-Remaining</code>{" "}
+            and <code>X-RateLimit-Reset</code> (Unix milliseconds) — back off on
+            those rather than retrying immediately.
           </p>
 
-          <h2 id="oauth">OAuth 2.0</h2>
+          <h2 id="oauth">Carbon API OAuth 2.0</h2>
           <p>
             An agent that cannot hold a long-lived key can obtain a token
             instead. <a href={APP_URL}>{APP_URL}</a> is the authorization server;
@@ -147,14 +195,14 @@ export default function Developers() {
             client follows on its own.
           </p>
 
-          <h2 id="versioning">Versioning and deprecation</h2>
+          <h2 id="versioning">Carbon API versioning and deprecation</h2>
           <ul>
             {API_VERSIONING.rules.map((rule) => (
               <li key={rule}>{rule}</li>
             ))}
           </ul>
 
-          <h2 id="mcp">Connect an agent over MCP</h2>
+          <h2 id="mcp">Carbon MCP server</h2>
           <p>
             The Carbon MCP server speaks the Streamable HTTP transport at{" "}
             <a href={MCP_URL}>
@@ -178,7 +226,7 @@ export default function Developers() {
             <a href={`${DOCS_URL}/mcp`}>MCP guide</a> covers the details.
           </p>
 
-          <h2 id="resources">Resources</h2>
+          <h2 id="resources">Carbon developer resources</h2>
           <ul>
             {DEVELOPER_RESOURCES.map((resource) => (
               <li key={resource.url}>
@@ -188,7 +236,7 @@ export default function Developers() {
             ))}
           </ul>
 
-          <h2 id="machine-readable">Machine-readable files</h2>
+          <h2 id="machine-readable">Carbon machine-readable files</h2>
           <p>
             Served from this domain, unauthenticated, with CORS open so a
             browser-based agent can read them:

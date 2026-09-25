@@ -1506,7 +1506,7 @@ msgstr "Begleiter gedruckt um 6 Uhr, veraltet um 9 Uhr"
 msgid "Trusted"
 msgstr "Vertrauenswürdig"
 
-#: app/components/logo-strip.tsx:81
+#: app/components/logo-strip.tsx:86
 msgid "Trusted by the world's most innovative"
 msgstr "Vertraut von den innovativsten der Welt"
 

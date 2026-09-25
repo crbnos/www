@@ -33,23 +33,60 @@ export const OAUTH_METADATA = {
   protectedResource: `${APP_URL}/.well-known/oauth-protected-resource`,
 } as const;
 
+const MINIMUM_NOTICE_DAYS = 90;
+
 /**
  * What an agent can rely on about the API's shape over time.
  *
- * Stated as fact, not aspiration: the first two points describe artifacts served
- * from this repo and are enforced by tests. The REST surface itself carries no
- * version segment today — saying so plainly is more useful to an integrator than
- * implying a guarantee that does not exist.
+ * Stated as fact, not aspiration: the first three points describe artifacts
+ * served from this repo and are enforced by tests. The REST surface itself
+ * carries no version segment today — saying so plainly is more useful to an
+ * integrator than implying a guarantee that does not exist.
  */
 export const API_VERSIONING = {
   /** Bumped when the published contract changes; see RULES below. */
-  specVersion: "1.0.0",
+  specVersion: "1.1.0",
+  /**
+   * The shortest time between an operation being marked deprecated in the
+   * OpenAPI document and its removal. `openapi.test.ts` refuses a deprecated
+   * operation whose `x-sunset` is closer than this to its `x-deprecated-at`.
+   */
+  minimumNoticeDays: MINIMUM_NOTICE_DAYS,
   rules: [
     "The OpenAPI document is versioned by `info.version`, semver. It is served from a stable URL (`/openapi.json`) and its version is bumped whenever the published contract changes.",
     "A breaking change to a published operation — a removed operation, a removed or retyped field, a new required parameter — bumps the MAJOR. Additive changes bump the MINOR.",
+    `Nothing is removed without notice. An operation that is going away is first marked \`deprecated: true\` in the OpenAPI document, with \`x-deprecated-at\` (the date it was deprecated) and \`x-sunset\` (the earliest date it may be removed, at least ${MINIMUM_NOTICE_DAYS} days later), in a MINOR release. Every operation declares \`deprecated\` explicitly, so a diff of the spec shows the change.`,
     "The REST API itself carries no version segment in its URL today: resources are addressed directly (`/item`, `/salesOrder`). Pin the spec version you built against, and diff `info.version` before upgrading.",
   ],
 } as const;
+
+/**
+ * How a developer or an agent gets from nothing to an authenticated request,
+ * without talking to anyone. Rendered on `/developers`, in its Markdown, in
+ * `llms.txt` and in the OpenAPI description.
+ */
+export const ONBOARDING = {
+  signupUrl: APP_URL,
+  apiKeysUrl: `${APP_URL}/x/settings/api-keys`,
+  trialDays: 30,
+  steps: [
+    `Sign up at ${APP_URL} and start the 30-day free trial — no sales call. Choose the Business plan: the API, webhooks and the MCP server are Business features.`,
+    `Generate a scoped API key yourself in Settings → API Keys (${APP_URL}/x/settings/api-keys). Keys are self-serve, scoped to one company and to the module permissions you choose.`,
+    `Call the REST API at ${REST_URL} or connect an agent to the MCP server at ${MCP_URL} with that key.`,
+  ],
+  /** Everything an agent can read before it has any credential at all. */
+  noAuth: [
+    `${SITE_URL}/openapi.json`,
+    `${SITE_URL}/.well-known/mcp.json`,
+    `${SITE_URL}/llms.txt`,
+    `${SITE_URL}/.well-known/oauth-protected-resource`,
+    `${SITE_URL}/developers.md`,
+  ],
+  selfHost: `The Community Edition is free to self-host from ${REPO_URL}.`,
+} as const;
+
+/** The per-key REST and MCP allowance, in requests per minute. Platform-controlled. */
+export const RATE_LIMIT_PER_MINUTE = 60;
 
 export const SUPPORT_EMAIL = "support@carbon.ms";
 export const INFO_EMAIL = "info@carbon.ms";

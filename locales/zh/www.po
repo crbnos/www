@@ -1506,7 +1506,7 @@ msgstr "作业单在早上6点打印，到9点就过期了"
 msgid "Trusted"
 msgstr "值得信赖的"
 
-#: app/components/logo-strip.tsx:81
+#: app/components/logo-strip.tsx:86
 msgid "Trusted by the world's most innovative"
 msgstr "受到世界最创新者的信任"
 

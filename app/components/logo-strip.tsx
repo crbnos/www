@@ -37,7 +37,12 @@ export const customers: Customer[] = [
 		logo: "/logos/witty-machines.svg",
 		url: "https://www.witty-machines.com/",
 	},
-	{ name: "Machenit", logo: "/logos/machenit.png", url: "https://machenit.com" },
+	{
+		name: "Anvil",
+		logo: "/logos/anvil.svg",
+		url: "https://anvil.co",
+		tone: "color",
+	},
 	{
 		name: "Allinol Technologies",
 		logo: "/logos/allinol.png",
@@ -105,7 +110,8 @@ export function LogoStrip({
 									src={c.logo}
 									className={cn(
 										"h-auto max-h-8 w-24 object-contain opacity-70 transition-opacity hover:opacity-100",
-										c.tone === "light" ? "invert dark:invert-0" : "dark:invert",
+										c.tone === "light" && "invert dark:invert-0",
+										!c.tone && "dark:invert",
 									)}
 								/>
 							</a>
