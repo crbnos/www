@@ -6,7 +6,7 @@ export type Customer = {
 	name: string;
 	logo: string;
 	url: string;
-	tone?: "light" | "color";
+	tone?: "light";
 };
 
 // Brand names — never translated.
@@ -37,12 +37,7 @@ export const customers: Customer[] = [
 		logo: "/logos/witty-machines.svg",
 		url: "https://www.witty-machines.com/",
 	},
-	{
-		name: "Anvil",
-		logo: "/logos/anvil.svg",
-		url: "https://anvil.co",
-		tone: "color",
-	},
+	{ name: "Anvil", logo: "/logos/anvil.svg", url: "https://anvil.co" },
 	{
 		name: "Allinol Technologies",
 		logo: "/logos/allinol.png",

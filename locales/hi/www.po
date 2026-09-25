@@ -53,7 +53,7 @@ msgid "A typed TypeScript monorepo with one generated database type shared acros
 msgstr "एक टाइप किया गया TypeScript मोनोरेपो जिसमें एक जनरेट की गई डेटाबेस प्रकार ऐप, API, और AI उपकरणों में साझा की जाती है। अपना LLM लाएं।"
 
 #: app/components/header.tsx:72
-#: app/components/header.tsx:204
+#: app/components/header.tsx:203
 msgid "About"
 msgstr "के बारे में"
 
@@ -408,8 +408,8 @@ msgstr "संपर्क"
 msgid "Contact Information"
 msgstr "संपर्क जानकारी"
 
-#: app/components/header.tsx:151
-#: app/components/header.tsx:244
+#: app/components/header.tsx:150
+#: app/components/header.tsx:243
 #: app/routes/_index.tsx:1237
 msgid "Contact Sales"
 msgstr "बिक्रय से संपर्क करें"
@@ -535,7 +535,7 @@ msgstr "डेवलपर गाइड और API संदर्भ"
 
 #: app/components/footer.tsx:59
 #: app/components/header.tsx:98
-#: app/components/header.tsx:221
+#: app/components/header.tsx:220
 msgid "Developers"
 msgstr "डेवलपर्स"
 
@@ -748,6 +748,11 @@ msgstr "GL और उपार्जन"
 #: app/components/hero.tsx:206
 msgid "Global Search"
 msgstr "वैश्विक खोज"
+
+#: app/routes/_index.tsx:1256
+#: app/routes/self-hosted.tsx:822
+msgid "Hard tech unicorns build on Carbon."
+msgstr "हार्ड टेक यूनिकॉर्न Carbon पर निर्माण करते हैं।"
 
 #: app/routes/_index.tsx:43
 msgid "hardware"
@@ -1101,7 +1106,7 @@ msgstr "PO और रसीदें"
 
 #: app/components/footer.tsx:63
 #: app/components/header.tsx:82
-#: app/components/header.tsx:211
+#: app/components/header.tsx:210
 msgid "Pricing"
 msgstr "मूल्य निर्धारण"
 
@@ -1293,7 +1298,7 @@ msgstr "सेल्फ-होस्ट कार्बन"
 
 #: app/components/footer.tsx:64
 #: app/components/header.tsx:92
-#: app/components/header.tsx:218
+#: app/components/header.tsx:217
 #: app/routes/_index.tsx:1127
 #: app/routes/pricing.tsx:211
 msgid "Self-hosted"
@@ -1506,14 +1511,9 @@ msgstr "6am पर मुद्रित ट्रैवलर, 9 तक बा�
 msgid "Trusted"
 msgstr "विश्वसनीय"
 
-#: app/components/logo-strip.tsx:86
+#: app/components/logo-strip.tsx:81
 msgid "Trusted by the world's most innovative"
 msgstr "विश्व के सबसे अभिनव द्वारा विश्वस्त"
-
-#: app/routes/_index.tsx:1256
-#: app/routes/self-hosted.tsx:822
-msgid "Two hard tech unicorns build on Carbon."
-msgstr "दो कठोर प्रौद्योगिकी यूनिकॉर्न Carbon पर निर्माण करते हैं।"
 
 #: app/routes/_index.tsx:189
 msgid "Typical first deployment"

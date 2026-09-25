@@ -53,7 +53,7 @@ msgid "A typed TypeScript monorepo with one generated database type shared acros
 msgstr "Ein typisiertes TypeScript-Monorepo mit einem generierten Datenbanktyp, der über die App, die API und die KI-Tools gemeinsam genutzt wird. Bringen Sie Ihr eigenes LLM mit."
 
 #: app/components/header.tsx:72
-#: app/components/header.tsx:204
+#: app/components/header.tsx:203
 msgid "About"
 msgstr "Über"
 
@@ -408,8 +408,8 @@ msgstr "Kontakt"
 msgid "Contact Information"
 msgstr "Kontaktinformationen"
 
-#: app/components/header.tsx:151
-#: app/components/header.tsx:244
+#: app/components/header.tsx:150
+#: app/components/header.tsx:243
 #: app/routes/_index.tsx:1237
 msgid "Contact Sales"
 msgstr "Kontakt zum Vertrieb"
@@ -535,7 +535,7 @@ msgstr "Entwicklerhandbücher und API-Referenz"
 
 #: app/components/footer.tsx:59
 #: app/components/header.tsx:98
-#: app/components/header.tsx:221
+#: app/components/header.tsx:220
 msgid "Developers"
 msgstr "Entwickler"
 
@@ -748,6 +748,11 @@ msgstr "Hauptbuch & Rückstellungen"
 #: app/components/hero.tsx:206
 msgid "Global Search"
 msgstr "Globale Suche"
+
+#: app/routes/_index.tsx:1256
+#: app/routes/self-hosted.tsx:822
+msgid "Hard tech unicorns build on Carbon."
+msgstr "Hard-Tech-Einhörner bauen auf Carbon."
 
 #: app/routes/_index.tsx:43
 msgid "hardware"
@@ -1101,7 +1106,7 @@ msgstr "Bestellungen & Eingangsbestätigungen"
 
 #: app/components/footer.tsx:63
 #: app/components/header.tsx:82
-#: app/components/header.tsx:211
+#: app/components/header.tsx:210
 msgid "Pricing"
 msgstr "Preisgestaltung"
 
@@ -1293,7 +1298,7 @@ msgstr "Carbon selbst hosten"
 
 #: app/components/footer.tsx:64
 #: app/components/header.tsx:92
-#: app/components/header.tsx:218
+#: app/components/header.tsx:217
 #: app/routes/_index.tsx:1127
 #: app/routes/pricing.tsx:211
 msgid "Self-hosted"
@@ -1506,14 +1511,9 @@ msgstr "Begleiter gedruckt um 6 Uhr, veraltet um 9 Uhr"
 msgid "Trusted"
 msgstr "Vertrauenswürdig"
 
-#: app/components/logo-strip.tsx:86
+#: app/components/logo-strip.tsx:81
 msgid "Trusted by the world's most innovative"
 msgstr "Vertraut von den innovativsten der Welt"
-
-#: app/routes/_index.tsx:1256
-#: app/routes/self-hosted.tsx:822
-msgid "Two hard tech unicorns build on Carbon."
-msgstr "Zwei Hard-Tech-Einhörner bauen auf Carbon auf."
 
 #: app/routes/_index.tsx:189
 msgid "Typical first deployment"

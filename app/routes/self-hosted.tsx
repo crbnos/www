@@ -819,7 +819,7 @@ export default function SelfHosted() {
 			<Hero />
 			<Principles />
 			<LogoStrip
-				headline={<Trans>Two hard tech unicorns build on Carbon.</Trans>}
+				headline={<Trans>Hard tech unicorns build on Carbon.</Trans>}
 				label={
 					<Trans>And some of the world's most innovative manufacturers</Trans>
 				}

@@ -27,6 +27,39 @@ export default defineConfig({
   server: {
     port: 3003,
   },
+  // Vite's dep scanner misses most of these (they're only discovered once a
+  // page imports them). Each late discovery re-optimizes and reloads, which can
+  // leave two copies of React on the page and crash Radix components with
+  // "Cannot read properties of null (reading 'useContext')". Pre-bundle upfront.
+  optimizeDeps: {
+    include: [
+      "@lingui/core",
+      "@lingui/react",
+      "@lingui/message-utils/compileMessage",
+      "@marsidev/react-turnstile",
+      "@radix-ui/react-accordion",
+      "@radix-ui/react-context-menu",
+      "@radix-ui/react-dialog",
+      "@radix-ui/react-dropdown-menu",
+      "@radix-ui/react-label",
+      "@radix-ui/react-navigation-menu",
+      "@radix-ui/react-progress",
+      "@radix-ui/react-separator",
+      "@radix-ui/react-slot",
+      "@radix-ui/react-tabs",
+      "@upstash/redis",
+      "@vercel/analytics/react",
+      "class-variance-authority",
+      "clsx",
+      "cookie",
+      "intl-parse-accept-language",
+      "lucide-react",
+      "motion/react",
+      "prism-react-renderer",
+      "tailwind-merge",
+      "zod",
+    ],
+  },
   plugins: [
     babel({
       // `include` must be set explicitly: since vite-plugin-babel@1.7.0 the
