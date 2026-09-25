@@ -122,9 +122,9 @@ const byoc = [
 		desc: "Running your own fork of Carbon? We build and release it the same way we ship ours — your customizations roll out to staging and production through the same pipeline.",
 	},
 	{
-		tag: "Managed",
+		tag: "Single-tenant",
 		name: "Operated by us, owned by you",
-		desc: "An agent in your cluster reports workload, certificate and version health back to our team, so we catch problems and renew certificates before you notice.",
+		desc: "Every deployment is single-tenant: your own instance, database and storage, inside your own cloud account. Nothing is shared with other customers or copied to our cloud — your data stays private and entirely yours.",
 	},
 ];
 
