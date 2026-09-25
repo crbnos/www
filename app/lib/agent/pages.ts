@@ -21,6 +21,8 @@ import {
   DOCS_URL,
   OAUTH_METADATA,
   LEARN_URL,
+  ONBOARDING,
+  RATE_LIMIT_PER_MINUTE,
   MCP_URL,
   REPO_URL,
   REST_URL,
@@ -214,12 +216,24 @@ Corporation". Do not recolour, rotate, or add effects to the mark.
 
 const DEVELOPERS = page(
   "/developers",
-  "Carbon developer resources",
+  "Carbon developers: API, MCP server and OpenAPI spec",
   `
 Everything needed to build against Carbon: the REST API, the MCP server, the
 OpenAPI specification, webhooks, and the source code.
 
-## Quick start
+## Get a Carbon API key
+
+Self-serve from start to first request — no sales call, no form.
+
+${ONBOARDING.steps.map((step, index) => `${index + 1}. ${step}`).join("\n")}
+
+These need no credential at all:
+
+${ONBOARDING.noAuth.map((url) => `- ${url}`).join("\n")}
+
+${ONBOARDING.selfHost}
+
+## Carbon API quick start
 
 1. Create a scoped API key in Settings → API Keys at
    [${APP_URL}/x/settings/api-keys](${APP_URL}/x/settings/api-keys).
@@ -236,7 +250,12 @@ The key is scoped to one company and to the module permissions you check when
 creating it, and the database enforces those scopes with row-level security —
 not just the application layer.
 
-## OAuth 2.0
+Every key allows ${RATE_LIMIT_PER_MINUTE} requests per minute. A refused request returns \`429\` with
+\`Retry-After\` (seconds), \`X-RateLimit-Limit\`, \`X-RateLimit-Remaining\` and
+\`X-RateLimit-Reset\` (Unix milliseconds). Back off on those rather than
+retrying immediately.
+
+## Carbon API OAuth 2.0
 
 An agent that cannot hold a long-lived key can obtain a token instead.
 [${APP_URL}](${APP_URL}) is the authorization server; its metadata is published
@@ -250,18 +269,18 @@ The MCP endpoint returns \`401\` with
 \`WWW-Authenticate: Bearer resource_metadata="..."\` pointing at the same
 document, which is the discovery path a compliant MCP client follows on its own.
 
-## Versioning and deprecation
+## Carbon API versioning and deprecation
 
 ${API_VERSIONING.rules.map((rule) => `- ${rule}`).join("\n")}
 
-## Connect an agent over MCP
+## Carbon MCP server
 
 Carbon's MCP server speaks the Streamable HTTP transport at
 [${MCP_URL}](${MCP_URL}). It authenticates with the same API key (as a bearer
 token) or with OAuth. The machine-readable manifest is at
 [${SITE_URL}/.well-known/mcp.json](${SITE_URL}/.well-known/mcp.json).
 
-## Resources
+## Carbon developer resources
 
 ${DEVELOPER_RESOURCES.map(
   (resource) => `- [${resource.name}](${resource.url}) — ${resource.description}`,

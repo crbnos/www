@@ -16,11 +16,13 @@
 
 import { API_SCHEMAS } from "./api-schemas.generated";
 import type {
+  HeaderObject,
   JsonSchema,
   OpenApiDocument,
   Operation,
   Parameter,
   PathItem,
+  ResponseObject,
 } from "./openapi-types";
 import {
   API_VERSIONING,
@@ -28,6 +30,8 @@ import {
   DOCS_URL,
   MCP_URL,
   OAUTH_METADATA,
+  ONBOARDING,
+  RATE_LIMIT_PER_MINUTE,
   REST_URL,
   SITE_URL,
   SUPPORT_EMAIL,
@@ -315,6 +319,7 @@ function listOperation(resource: Resource): Operation {
     summary: `List ${resource.plural}`,
     description: `Return ${resource.plural} for the company the API key belongs to. ${resource.description} Results are filtered by row-level security, so a key only ever sees rows its scopes allow. Use \`select\` to narrow the columns, \`order\` to sort, and \`limit\`/\`offset\` to page.`,
     tags: [resource.tag],
+    deprecated: false,
     parameters: [
       REF.select,
       REF.order,
@@ -358,6 +363,7 @@ function createOperation(resource: Resource): Operation {
     summary: `Create ${resource.singular}`,
     description: `Insert ${resource.singular}. ${resource.description} \`companyId\` is taken from the API key and must not be sent. Send \`Prefer: return=representation\` to get the created row back instead of an empty body. An array body inserts several rows in one statement.`,
     tags: [resource.tag],
+    deprecated: false,
     parameters: [REF.prefer, REF.select],
     requestBody: {
       description: `The ${resource.singular.replace(/^an? /, "")} to create, or an array of them.`,
@@ -400,6 +406,7 @@ function updateOperation(resource: Resource): Operation {
     summary: `Update ${resource.plural}`,
     description: `Patch every row matching the query. ${resource.description} A filter is REQUIRED: an unfiltered PATCH would rewrite every row the key can reach. Send \`Prefer: return=representation\` to get the updated rows back.`,
     tags: [resource.tag],
+    deprecated: false,
     parameters: [REF.prefer, REF.select, ...filterParameters(resource)],
     requestBody: {
       description: "The columns to change. Omitted columns are left alone.",
@@ -427,6 +434,7 @@ function deleteOperation(resource: Resource): Operation {
     summary: `Delete ${resource.plural}`,
     description: `Delete every row matching the query. ${resource.description} A filter is REQUIRED. Rows referenced by other records may be refused by a foreign-key constraint rather than cascading.`,
     tags: [resource.tag],
+    deprecated: false,
     parameters: [REF.prefer, ...filterParameters(resource)],
     responses: {
       "200": {
@@ -450,16 +458,45 @@ function deleteOperation(resource: Resource): Operation {
   };
 }
 
+const DAY_MS = 24 * 60 * 60 * 1000;
+const FULL_DATE = /^\d{4}-\d{2}-\d{2}$/;
+
+/**
+ * Hold a deprecated operation to the published policy: it names the date it
+ * was deprecated and a sunset at least `minimumNoticeDays` later. A spec that
+ * broke its own policy would be worse than one that stated none.
+ */
+export function assertDeprecationNotice(operation: Operation): void {
+  if (!operation.deprecated) return;
+
+  const deprecatedAt = operation["x-deprecated-at"];
+  const sunset = operation["x-sunset"];
+  if (!deprecatedAt || !sunset || !FULL_DATE.test(deprecatedAt) || !FULL_DATE.test(sunset)) {
+    throw new Error(
+      `openapi: deprecated operation "${operation.operationId}" needs x-deprecated-at and x-sunset as YYYY-MM-DD`,
+    );
+  }
+
+  const noticeDays = (Date.parse(sunset) - Date.parse(deprecatedAt)) / DAY_MS;
+  if (!(noticeDays >= API_VERSIONING.minimumNoticeDays)) {
+    throw new Error(
+      `openapi: "${operation.operationId}" gives ${noticeDays} days of notice; the policy is at least ${API_VERSIONING.minimumNoticeDays}`,
+    );
+  }
+}
+
 function pathsForResources(): Record<string, PathItem> {
   const paths: Record<string, PathItem> = {};
 
   for (const resource of RESOURCES) {
-    paths[`/${resource.name}`] = {
+    const item = {
       get: listOperation(resource),
       post: createOperation(resource),
       patch: updateOperation(resource),
       delete: deleteOperation(resource),
     };
+    for (const operation of Object.values(item)) assertDeprecationNotice(operation);
+    paths[`/${resource.name}`] = item;
   }
 
   return paths;
@@ -522,14 +559,46 @@ const ERROR_SCHEMA: JsonSchema = {
   },
 };
 
-function errorResponse(description: string) {
+function errorResponse(description: string, headers?: ResponseObject["headers"]) {
   return {
     description,
+    ...(headers ? { headers } : {}),
     content: {
       "application/json": { schema: { $ref: "#/components/schemas/Error" } },
     },
   };
 }
+
+/**
+ * The headers a refused request carries, declared as components rather than
+ * named only in prose, so a client generated from this document can read them.
+ * The formats are the API's own: `X-RateLimit-Reset` is a Unix timestamp in
+ * MILLISECONDS, `Retry-After` is delta-seconds (RFC 9110 §10.2.3).
+ */
+const RATE_LIMIT_HEADERS: Record<string, HeaderObject> = {
+  "Retry-After": {
+    description:
+      "Seconds to wait before retrying (RFC 9110 delta-seconds). Honour this rather than retrying immediately.",
+    schema: { type: "integer", minimum: 1 },
+    example: 8,
+  },
+  "X-RateLimit-Limit": {
+    description: `Requests allowed per window for this key — ${RATE_LIMIT_PER_MINUTE} per minute.`,
+    schema: { type: "integer", minimum: 1 },
+    example: RATE_LIMIT_PER_MINUTE,
+  },
+  "X-RateLimit-Remaining": {
+    description: "Requests left in the current window. `0` on a refused request.",
+    schema: { type: "integer", minimum: 0 },
+    example: 0,
+  },
+  "X-RateLimit-Reset": {
+    description:
+      "When the current window resets, as a Unix timestamp in milliseconds.",
+    schema: { type: "integer", format: "int64" },
+    example: 1790367600000,
+  },
+};
 
 /** Build the document. Throws if a resource references a column that is gone. */
 export function buildOpenApiDocument(): OpenApiDocument {
@@ -544,11 +613,15 @@ export function buildOpenApiDocument(): OpenApiDocument {
         "Carbon exposes every module — items, sales, purchasing, production, inventory, quality and accounting — over one REST API. This document describes the core resources in full; the complete catalogue of every table Carbon publishes is generated into the reference at " +
           `${DOCS_URL}/api-reference.`,
         "",
+        "**Getting access.** Self-serve, no sales call:",
+        ...ONBOARDING.steps.map((step, index) => `${index + 1}. ${step}`),
+        `The specification, the MCP manifest, the OAuth metadata and llms.txt need no credential at all. ${ONBOARDING.selfHost}`,
+        "",
         "**Authentication.** Create a scoped API key in Settings → API Keys and send it as `Authorization: Bearer <api-key>`, or in the `carbon-key` header. A key belongs to one company and carries an explicit set of module permissions; row-level security in the database — not just the application — confines every request to that scope.",
         "",
         `**OAuth 2.0.** Agents that cannot hold a long-lived key can obtain a token instead: ${APP_URL} is the authorization server, and its metadata is published at ${OAUTH_METADATA.authorizationServer} (RFC 8414), with protected-resource metadata at ${OAUTH_METADATA.protectedResource} (RFC 9728). Both are mirrored from ${SITE_URL} by redirect. The MCP endpoint returns \`401\` with a \`WWW-Authenticate: Bearer resource_metadata="…"\` header pointing at the same document.`,
         "",
-        "**Rate limiting.** Every key allows 60 requests per minute. The limit is platform-controlled, not configurable per key. A refused request returns `429` with `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` and `Retry-After` — wait out `Retry-After` rather than retrying immediately.",
+        `**Rate limiting.** Every key allows ${RATE_LIMIT_PER_MINUTE} requests per minute. The limit is platform-controlled, not configurable per key. A refused request returns \`429\` with \`Retry-After\` (seconds), \`X-RateLimit-Limit\`, \`X-RateLimit-Remaining\` and \`X-RateLimit-Reset\` (Unix milliseconds), declared under \`components.headers\` — wait out \`Retry-After\` rather than retrying immediately.`,
         "",
         "**Querying.** The API is PostgREST-shaped: filter with `?column=eq.value`, choose columns with `select`, sort with `order`, page with `limit`/`offset`, and embed relations inside `select`. There are no `/{id}` paths — address a single row with `?id=eq.<id>`.",
         "",
@@ -566,6 +639,34 @@ export function buildOpenApiDocument(): OpenApiDocument {
       license: {
         name: "Carbon source-available license",
         url: "https://github.com/crbnos/carbon/blob/main/LICENSE",
+      },
+      /**
+       * The versioning and deprecation policy in machine-readable form. The
+       * prose above says the same thing for a human; this is what a client
+       * checks before trusting an operation to stay put.
+       */
+      "x-api-lifecycle": {
+        versioning: "semver",
+        versionField: "info.version",
+        breakingChange: "major",
+        additiveChange: "minor",
+        urlVersioned: false,
+        deprecation: {
+          signal: "operation.deprecated",
+          deprecatedAtField: "x-deprecated-at",
+          sunsetField: "x-sunset",
+          minimumNoticeDays: API_VERSIONING.minimumNoticeDays,
+        },
+        policy: `${SITE_URL}/developers#versioning`,
+      },
+      "x-onboarding": {
+        selfServe: true,
+        signup: ONBOARDING.signupUrl,
+        apiKeys: ONBOARDING.apiKeysUrl,
+        freeTrialDays: ONBOARDING.trialDays,
+        planWithApiAccess: "Business",
+        selfHostedFreeEdition: "Community",
+        unauthenticated: ONBOARDING.noAuth,
       },
     },
     externalDocs: {
@@ -593,6 +694,7 @@ export function buildOpenApiDocument(): OpenApiDocument {
         },
       },
       parameters: { ...COMMON_PARAMETERS, ...filterParameterComponents() },
+      headers: RATE_LIMIT_HEADERS,
       schemas: { ...API_SCHEMAS, Error: ERROR_SCHEMA },
       responses: {
         BadRequest: errorResponse(
@@ -605,7 +707,13 @@ export function buildOpenApiDocument(): OpenApiDocument {
           "The key resolved but its scopes do not permit this action on this resource.",
         ),
         TooManyRequests: errorResponse(
-          "The key exceeded its allowance of 60 requests per minute. `Retry-After` and the `X-RateLimit-*` headers say when to try again.",
+          `The key exceeded its allowance of ${RATE_LIMIT_PER_MINUTE} requests per minute. \`Retry-After\` and the \`X-RateLimit-*\` headers say when to try again.`,
+          Object.fromEntries(
+            Object.keys(RATE_LIMIT_HEADERS).map((name) => [
+              name,
+              { $ref: `#/components/headers/${name}` },
+            ]),
+          ),
         ),
       },
     },

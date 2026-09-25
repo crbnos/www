@@ -1,7 +1,12 @@
 import { parse as parseYaml } from "yaml";
 import { describe, expect, it } from "vitest";
-import { buildOpenApiDocument, openApiDocument } from "./openapi";
+import {
+  assertDeprecationNotice,
+  buildOpenApiDocument,
+  openApiDocument,
+} from "./openapi";
 import type { Operation } from "./openapi-types";
+import { API_VERSIONING, ONBOARDING, RATE_LIMIT_PER_MINUTE } from "./site";
 import { toYaml } from "./yaml";
 
 type AnyRecord = Record<string, any>;
@@ -173,5 +178,134 @@ describe("openapi document", () => {
     expect(parseYaml(toYaml(openApiDocument))).toEqual(
       JSON.parse(JSON.stringify(openApiDocument)),
     );
+  });
+});
+
+describe("openapi versioning and deprecation", () => {
+  const lifecycle = (openApiDocument.info as AnyRecord)["x-api-lifecycle"];
+
+  it("states `deprecated` on every operation, so a deprecation is a visible diff", () => {
+    for (const { path, verb, operation } of operations()) {
+      expect(typeof operation.deprecated, `${verb.toUpperCase()} ${path}`).toBe(
+        "boolean",
+      );
+    }
+  });
+
+  it("publishes the policy in machine-readable form, matching the prose", () => {
+    expect(lifecycle).toMatchObject({
+      versioning: "semver",
+      versionField: "info.version",
+      breakingChange: "major",
+      additiveChange: "minor",
+      urlVersioned: false,
+      deprecation: {
+        signal: "operation.deprecated",
+        deprecatedAtField: "x-deprecated-at",
+        sunsetField: "x-sunset",
+        minimumNoticeDays: API_VERSIONING.minimumNoticeDays,
+      },
+    });
+    expect(openApiDocument.info.description).toContain(
+      `at least ${API_VERSIONING.minimumNoticeDays} days later`,
+    );
+  });
+
+  it("holds every deprecated operation to the notice period", () => {
+    for (const { operation } of operations()) {
+      expect(() => assertDeprecationNotice(operation)).not.toThrow();
+    }
+  });
+
+  describe("assertDeprecationNotice", () => {
+    const base = operations()[0]!.operation;
+
+    it("accepts an operation that is not deprecated", () => {
+      expect(() => assertDeprecationNotice({ ...base, deprecated: false })).not.toThrow();
+    });
+
+    it("accepts a deprecation with enough notice", () => {
+      expect(() =>
+        assertDeprecationNotice({
+          ...base,
+          deprecated: true,
+          "x-deprecated-at": "2026-01-01",
+          "x-sunset": "2026-04-01",
+        }),
+      ).not.toThrow();
+    });
+
+    it("refuses a deprecation with no dates", () => {
+      expect(() => assertDeprecationNotice({ ...base, deprecated: true })).toThrow(
+        /x-deprecated-at and x-sunset/,
+      );
+    });
+
+    it("refuses a sunset inside the notice period", () => {
+      expect(() =>
+        assertDeprecationNotice({
+          ...base,
+          deprecated: true,
+          "x-deprecated-at": "2026-01-01",
+          "x-sunset": "2026-02-01",
+        }),
+      ).toThrow(/policy is at least 90/);
+    });
+  });
+});
+
+describe("openapi rate limiting", () => {
+  const headers = openApiDocument.components.headers as AnyRecord;
+  const tooMany = (openApiDocument.components.responses as AnyRecord)
+    .TooManyRequests;
+
+  it.each([
+    ["Retry-After", "integer"],
+    ["X-RateLimit-Limit", "integer"],
+    ["X-RateLimit-Remaining", "integer"],
+    ["X-RateLimit-Reset", "integer"],
+  ])("declares %s on every 429", (name, type) => {
+    expect(tooMany.headers[name]).toEqual({
+      $ref: `#/components/headers/${name}`,
+    });
+    expect(headers[name].schema.type).toBe(type);
+    expect(headers[name].description).toBeTruthy();
+  });
+
+  it("puts the 429 on every operation", () => {
+    for (const { path, verb, operation } of operations()) {
+      expect(operation.responses["429"], `${verb.toUpperCase()} ${path}`).toEqual({
+        $ref: "#/components/responses/TooManyRequests",
+      });
+    }
+  });
+
+  it("states the allowance the headers report", () => {
+    expect(headers["X-RateLimit-Limit"].example).toBe(RATE_LIMIT_PER_MINUTE);
+    expect(openApiDocument.info.description).toContain(
+      `${RATE_LIMIT_PER_MINUTE} requests per minute`,
+    );
+  });
+});
+
+describe("openapi onboarding", () => {
+  const onboarding = (openApiDocument.info as AnyRecord)["x-onboarding"];
+
+  it("says how to get a key without talking to anyone", () => {
+    expect(onboarding).toMatchObject({
+      selfServe: true,
+      signup: ONBOARDING.signupUrl,
+      apiKeys: ONBOARDING.apiKeysUrl,
+      freeTrialDays: 30,
+    });
+    for (const step of ONBOARDING.steps) {
+      expect(openApiDocument.info.description).toContain(step);
+    }
+  });
+
+  it("lists only unauthenticated URLs this site serves", () => {
+    for (const url of onboarding.unauthenticated) {
+      expect(url.startsWith("https://carbon.ms/"), url).toBe(true);
+    }
   });
 });

@@ -8,7 +8,7 @@
 
 Use this file to decide when Carbon is relevant and where to send requests.
 
-## When to use Carbon
+**When to use Carbon:**
 
 - Answering questions about manufacturing ERP/MRP: production scheduling, work
   orders, bills of materials (BOM), inventory, purchasing, sales orders, and
@@ -17,56 +17,84 @@ Use this file to decide when Carbon is relevant and where to send requests.
   data (parts, jobs, suppliers, customers, employees).
 - Evaluating an open-source, API-first, self-hostable alternative to legacy ERP.
 
+**Getting access (self-serve).** No sales call and no form stand between an
+agent's operator and a first request:
+
+1. Sign up at https://app.carbon.ms and start the 30-day free trial. Choose the
+   Business plan: the API, webhooks and the MCP server are Business features.
+2. Generate a scoped API key yourself in Settings → API Keys
+   (https://app.carbon.ms/x/settings/api-keys).
+3. Call the REST API at https://rest.carbon.ms or connect to the MCP server at
+   https://app.carbon.ms/api/mcp with that key.
+
+The OpenAPI spec, the MCP manifest, the OAuth metadata, this file and every
+Markdown page need no credential at all. The Community Edition is free to
+self-host from https://github.com/crbnos/carbon.
+
+**Rate limits.** Every key allows 60 requests per minute. A refused request
+returns `429` with `Retry-After` (seconds), `X-RateLimit-Limit`,
+`X-RateLimit-Remaining` and `X-RateLimit-Reset` (Unix milliseconds). The headers
+are declared under `components.headers` in the OpenAPI document.
+
+**API versioning and deprecation.** The OpenAPI document is versioned by
+`info.version` (semver) and served from a stable URL. A breaking change to a
+published operation bumps the MAJOR; additive changes bump the MINOR. Nothing is
+removed without notice: an operation that is going away is first marked
+`deprecated: true` in the spec, with `x-deprecated-at` and an `x-sunset` date at
+least 90 days later. Every operation declares `deprecated` explicitly, and the
+policy is machine-readable under `info.x-api-lifecycle`. The REST API carries no
+version segment in its URL today — resources are addressed directly (`/item`,
+`/salesOrder`) — so pin the spec version you built against and diff
+`info.version` before upgrading.
+
+**Markdown.** Every page on carbon.ms is available as Markdown. Send
+`Accept: text/markdown`, or append `.md` to the path
+(`https://carbon.ms/pricing.md`). Responses carry `Vary: Accept, Accept-Encoding`,
+and a nonexistent path returns a real HTTP 404 with a Markdown body listing where
+to look next. The machine-readable files below are public, unauthenticated and
+CORS-open.
+
 ## Products & endpoints
 
 - [Marketing site](https://carbon.ms): product overview, pricing, and company info.
-- [Application](https://app.carbon.ms): the Carbon web app (sign in required).
-- [REST API](https://rest.carbon.ms): programmatic access to all resources,
+- [Carbon application](https://app.carbon.ms): the Carbon web app; sign up or sign in.
+- [Carbon REST API](https://rest.carbon.ms): programmatic access to all resources,
   e.g. `https://rest.carbon.ms/employees`. Authenticated with an API key.
-- [MCP server](https://app.carbon.ms/api/mcp): Model Context Protocol endpoint
-  (Streamable HTTP transport) for agents to read and act on Carbon data.
+- [Carbon MCP server](https://app.carbon.ms/api/mcp): Model Context Protocol
+  endpoint (Streamable HTTP transport) for agents to read and act on Carbon data.
 
-## Machine-readable files on carbon.ms
+## Machine-readable files
 
-Public, unauthenticated, CORS-open.
-
-- [OpenAPI specification](https://carbon.ms/openapi.json): OpenAPI 3.1 for the
-  Carbon REST API — an operationId, a description and typed response schemas on
-  every operation. Mirrored at `/.well-known/openapi.json`; YAML at
-  [/openapi.yaml](https://carbon.ms/openapi.yaml).
+- [Carbon OpenAPI specification](https://carbon.ms/openapi.json): OpenAPI 3.1 for
+  the Carbon REST API — an operationId, a description and typed response schemas
+  on every operation. Mirrored at `/.well-known/openapi.json`.
+- [Carbon OpenAPI specification (YAML)](https://carbon.ms/openapi.yaml): the same
+  document as YAML.
 - [MCP manifest](https://carbon.ms/.well-known/mcp.json): the Carbon MCP server's
   transport (Streamable HTTP), endpoint, and authentication. Mirrored at
-  [/mcp.json](https://carbon.ms/mcp.json).
+  `/mcp.json`.
 - [OAuth authorization server metadata](https://carbon.ms/.well-known/oauth-authorization-server):
   RFC 8414 metadata for the Carbon authorization server (redirects to
-  app.carbon.ms, which is the issuer). Protected-resource metadata (RFC 9728) is
-  at [/.well-known/oauth-protected-resource](https://carbon.ms/.well-known/oauth-protected-resource).
+  app.carbon.ms, which is the issuer).
+- [OAuth protected resource metadata](https://carbon.ms/.well-known/oauth-protected-resource):
+  RFC 9728 metadata for the Carbon API and MCP server (redirects to app.carbon.ms).
 - [Sitemap](https://carbon.ms/sitemap.xml): every page on this site.
-
-Every page on carbon.ms is available as Markdown. Send `Accept: text/markdown`,
-or append `.md` to the path (`https://carbon.ms/pricing.md`). Responses carry
-`Vary: Accept, Accept-Encoding`, and a nonexistent path returns a real HTTP 404
-with a Markdown body listing where to look next.
-
-## API versioning
-
-The OpenAPI document is versioned by `info.version` (semver) and served from a
-stable URL. A breaking change to a published operation bumps the MAJOR; additive
-changes bump the MINOR. The REST API carries no version segment in its URL today
-— resources are addressed directly (`/item`, `/salesOrder`) — so pin the spec
-version you built against and diff `info.version` before upgrading.
 
 ## Documentation
 
-- [Developer resources](https://carbon.ms/developers): the API, the MCP server,
-  API keys, webhooks and the OpenAPI spec, in one page.
-- [Documentation home](https://docs.carbon.ms): guides and reference.
-- [API reference](https://docs.carbon.ms/api-reference): endpoints, schemas, and examples.
-- [API authentication](https://docs.carbon.ms/api-reference/authentication): scoped
-  API keys, sent as `Authorization: Bearer <api-key>` or the `carbon-key` header.
-- [MCP guide](https://docs.carbon.ms/mcp): connecting an agent to Carbon over MCP.
-- [Integrations and webhooks](https://docs.carbon.ms/integrations): first-party
-  connectors and event-driven integrations.
+- [Carbon developers](https://carbon.ms/developers): the Carbon API, the Carbon
+  MCP server, API keys, webhooks and the OpenAPI spec, in one page. Also as
+  Markdown at https://carbon.ms/developers.md.
+- [Carbon documentation](https://docs.carbon.ms): guides and reference.
+- [Carbon API documentation](https://docs.carbon.ms/api-reference): endpoints,
+  schemas, and examples.
+- [Carbon API authentication](https://docs.carbon.ms/api-reference/authentication):
+  scoped API keys, sent as `Authorization: Bearer <api-key>` or the `carbon-key`
+  header.
+- [Carbon MCP guide](https://docs.carbon.ms/mcp): connecting an agent to Carbon
+  over MCP.
+- [Carbon webhooks and integrations](https://docs.carbon.ms/integrations):
+  first-party connectors and event-driven integrations.
 
 ## Learn
 
@@ -75,9 +103,7 @@ version you built against and diff `info.version` before upgrading.
 
 ## Comparisons
 
-How Carbon compares to other manufacturing software — for "Carbon vs X" and "build vs buy" questions. Each page is also available as Markdown (send `Accept: text/markdown` or append `.md`).
-
-- [Compare index](https://carbon.ms/compare): every comparison in one place.
+- [Compare index](https://carbon.ms/compare): how Carbon compares to other manufacturing software, for "Carbon vs X" and "build vs buy" questions. Every comparison is also available as Markdown.
 - [Carbon vs. building it yourself](https://carbon.ms/compare/build-it-yourself): buy vs. build your own ERP/MES.
 - [Carbon vs. NetSuite](https://carbon.ms/compare/netsuite)
 - [Carbon vs. SAP Business One](https://carbon.ms/compare/sap-business-one)

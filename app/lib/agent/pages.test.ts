@@ -2,8 +2,10 @@ import { describe, expect, it } from "vitest";
 import { notFoundMarkdown } from "./not-found";
 import { AGENT_PAGE_PATHS, getAgentPage, resolveMarkdownPath } from "./pages";
 import {
+  API_VERSIONING,
   DEVELOPER_RESOURCES,
   internalHref,
+  ONBOARDING,
   onOrigin,
   RECOVERY_LINKS,
   SITE_URL,
@@ -48,6 +50,29 @@ describe("page markdown", () => {
       expect(page?.markdown.match(/^# /gm)?.length, path).toBe(1);
       expect(page?.markdown, path).toContain(`${SITE_URL}/openapi.json`);
     }
+  });
+
+  describe("/developers", () => {
+    const markdown = getAgentPage("/developers")?.markdown ?? "";
+
+    it("names the product in every section heading", () => {
+      const sections = markdown.match(/^## .+$/gm) ?? [];
+      // The shared footer is the last section and is not about the API.
+      const own = sections.filter((heading) => heading !== "## Elsewhere on carbon.ms");
+      expect(own.length).toBeGreaterThan(4);
+      for (const heading of own) expect(heading).toMatch(/Carbon/);
+    });
+
+    it("walks through self-serve access", () => {
+      expect(markdown).toContain("## Get a Carbon API key");
+      for (const step of ONBOARDING.steps) expect(markdown).toContain(step);
+      for (const url of ONBOARDING.noAuth) expect(markdown).toContain(url);
+    });
+
+    it("documents the rate-limit headers and the deprecation policy", () => {
+      expect(markdown).toContain("`X-RateLimit-Reset` (Unix milliseconds)");
+      for (const rule of API_VERSIONING.rules) expect(markdown).toContain(rule);
+    });
   });
 
   it("has no page for an unknown path", () => {

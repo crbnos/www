@@ -38,11 +38,15 @@ export type MediaTypeObject = {
   readonly example?: unknown;
 };
 
+export type HeaderObject = {
+  readonly description: string;
+  readonly schema: JsonSchema;
+  readonly example?: unknown;
+};
+
 export type ResponseObject = {
   readonly description: string;
-  readonly headers?: Readonly<
-    Record<string, { readonly description: string; readonly schema: JsonSchema }>
-  >;
+  readonly headers?: Readonly<Record<string, HeaderObject | { readonly $ref: string }>>;
   readonly content?: Readonly<Record<string, MediaTypeObject>>;
 };
 
@@ -58,6 +62,15 @@ export type Operation = {
   readonly summary: string;
   readonly description: string;
   readonly tags: readonly string[];
+  /**
+   * Always stated, never left to the OpenAPI default, so deprecating an
+   * operation is a visible one-field diff.
+   */
+  readonly deprecated: boolean;
+  /** RFC 3339 full-date the operation was deprecated. Required when `deprecated`. */
+  readonly "x-deprecated-at"?: string;
+  /** RFC 3339 full-date on or after which a deprecated operation may be removed. */
+  readonly "x-sunset"?: string;
   readonly parameters?: readonly (Parameter | { readonly $ref: string })[];
   readonly requestBody?: RequestBodyObject;
   readonly responses: Readonly<Record<string, ResponseObject | { readonly $ref: string }>>;
