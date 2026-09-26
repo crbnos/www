@@ -52,11 +52,6 @@ msgstr "Carbon 的托管云托管版本"
 msgid "A typed TypeScript monorepo with one generated database type shared across the app, the API, and the AI tools. Bring your own LLM."
 msgstr "一个类型化的 TypeScript 单仓库，具有在应用、API 和 AI 工具之间共享的一个生成的数据库类型。自带您的 LLM。"
 
-#: app/components/header.tsx:72
-#: app/components/header.tsx:203
-msgid "About"
-msgstr "关于"
-
 #: app/routes/_index.tsx:164
 msgid "Accounting"
 msgstr "会计"
@@ -1437,6 +1432,11 @@ msgstr "立即开始 · 无需通话"
 #: app/routes/pricing.tsx:37
 msgid "Starter"
 msgstr "入门版"
+
+#: app/components/header.tsx:72
+#: app/components/header.tsx:203
+msgid "Story"
+msgstr "故事"
 
 #: app/routes/contact.tsx:242
 msgid "Submit"

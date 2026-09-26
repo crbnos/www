@@ -52,11 +52,6 @@ msgstr "Zarządzana wersja Carbon hostowana w chmurze"
 msgid "A typed TypeScript monorepo with one generated database type shared across the app, the API, and the AI tools. Bring your own LLM."
 msgstr "Typed TypeScript monorepo z jednym wygenerowanym typem bazy danych udostępnianym w całej aplikacji, API i narzędziach AI. Przynieś swoje własne LLM."
 
-#: app/components/header.tsx:72
-#: app/components/header.tsx:203
-msgid "About"
-msgstr "O nas"
-
 #: app/routes/_index.tsx:164
 msgid "Accounting"
 msgstr "Rachunkowość"
@@ -1437,6 +1432,11 @@ msgstr "Zacznij teraz · Brak wymaganego połączenia"
 #: app/routes/pricing.tsx:37
 msgid "Starter"
 msgstr "Starter"
+
+#: app/components/header.tsx:72
+#: app/components/header.tsx:203
+msgid "Story"
+msgstr "Historia"
 
 #: app/routes/contact.tsx:242
 msgid "Submit"

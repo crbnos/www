@@ -69,7 +69,7 @@ export function Header() {
 									asChild
 								>
 									<Link prefetch="intent" to="/about">
-										<Trans>About</Trans>
+										<Trans>Story</Trans>
 									</Link>
 								</NavigationMenuLink>
 							</NavigationMenuItem>
@@ -200,7 +200,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
 					onClick={onClose}
 					className="border-b border-border/60 py-3 text-sm text-foreground"
 				>
-					<Trans>About</Trans>
+					<Trans>Story</Trans>
 				</Link>
 				<Link
 					to="/pricing"
