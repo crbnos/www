@@ -23,7 +23,7 @@ export default function About() {
 						<Trans>Why we built Carbon and open-sourced it</Trans>
 					</h1>
 
-					<p className="leading-[1.8] text-foreground text-pretty">
+					<p className="leading-[1.8] text-muted-foreground text-pretty">
 						<Trans>
 							After spending nearly a decade building end-to-end systems for
 							manufacturing, I had a pretty good idea of what an "ideal" solution
@@ -31,13 +31,13 @@ export default function About() {
 						</Trans>
 					</p>
 
-					<p className="leading-[1.8] text-foreground text-pretty">
+					<p className="leading-[1.8] text-muted-foreground text-pretty">
 						<Trans>
 							API-first, realtime subscriptions, forward/finite scheduling, and 1,000
 							little details to make the juice of using an ERP worth the squeeze.
 						</Trans>
 					</p>
-					<p className="leading-[1.8] text-foreground text-pretty">
+					<p className="leading-[1.8] text-muted-foreground text-pretty">
 						<Trans>
 							But even as we work with our customers to become the best
 							off-the-shelf ERP/MES for many types of discrete manufacturing, we
@@ -46,7 +46,7 @@ export default function About() {
 						</Trans>
 					</p>
 
-					<p className="leading-[1.8] text-foreground text-pretty">
+					<p className="leading-[1.8] text-muted-foreground text-pretty">
 						<Trans>
 							We open-sourced Carbon not because it's a great business plan, but
 							because that's the system I would have wanted when I was in your
@@ -54,7 +54,7 @@ export default function About() {
 						</Trans>
 					</p>
 
-					<p className="leading-[1.8] text-foreground text-pretty">
+					<p className="leading-[1.8] text-muted-foreground text-pretty">
 						<Trans>
 							I believe open-source has incredible potential because it's not
 							just a product–it's a community of like-minded people working to
@@ -62,7 +62,7 @@ export default function About() {
 						</Trans>
 					</p>
 
-					<p className="leading-[1.8] text-foreground text-pretty">
+					<p className="leading-[1.8] text-muted-foreground text-pretty">
 						<Trans>We're glad you're here for it.</Trans>
 					</p>
 

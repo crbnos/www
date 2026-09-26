@@ -264,7 +264,7 @@ const heading =
 
 function Chip({ children }: { children: string }) {
 	return (
-		<span className="inline-block bg-secondary/10 dark:bg-secondary-surface px-3 py-1.5 font-mono text-[11px] uppercase leading-none tracking-[0.2em] text-secondary">
+		<span className="inline-block bg-secondary/10 dark:bg-secondary-surface px-3 py-1.5 font-mono text-[10px] uppercase leading-none tracking-wide text-secondary">
 			{children}
 		</span>
 	);
@@ -457,7 +457,7 @@ function FeatureRows() {
 						className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-14"
 					>
 						<div className={cn(f.flip && "lg:order-2")}>
-							<div className={eyebrow}>{f.eyebrow}</div>
+							<Chip>{f.eyebrow}</Chip>
 							<h3 className="mt-5 font-display tracking-[-0.01em] text-[clamp(1.75rem,3vw,2.625rem)] leading-[1.1]">
 								{f.title}
 							</h3>
