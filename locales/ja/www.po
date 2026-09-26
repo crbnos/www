@@ -52,11 +52,6 @@ msgstr "Carbonの管理されたクラウドホスト版"
 msgid "A typed TypeScript monorepo with one generated database type shared across the app, the API, and the AI tools. Bring your own LLM."
 msgstr "アプリ、API、AI ツール全体で共有される生成されたデータベース型を備えた型付き TypeScript モノレポ。自分の LLM を用意してください。"
 
-#: app/components/header.tsx:72
-#: app/components/header.tsx:203
-msgid "About"
-msgstr "について"
-
 #: app/routes/_index.tsx:164
 msgid "Accounting"
 msgstr "会計"
@@ -1437,6 +1432,11 @@ msgstr "今すぐ開始 · 通話不要"
 #: app/routes/pricing.tsx:37
 msgid "Starter"
 msgstr "スターター"
+
+#: app/components/header.tsx:72
+#: app/components/header.tsx:203
+msgid "Story"
+msgstr "ストーリー"
 
 #: app/routes/contact.tsx:242
 msgid "Submit"
