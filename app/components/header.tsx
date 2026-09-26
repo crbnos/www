@@ -57,7 +57,7 @@ export function Header() {
 	const data = useRouteLoaderData<typeof loader>("root");
 
 	return (
-		<header className="sticky top-0 z-header w-full border-b bg-background/90 backdrop-blur-sm">
+		<header className="sticky top-0 z-header w-full bg-background/90 backdrop-blur-sm">
 			<div className="flex w-full items-center justify-between gap-6 px-4 sm:px-4 md:px-4 lg:px-4 xl:px-6 2xl:px-8 py-3 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:justify-normal">
 					<LogoMenu />
                     
