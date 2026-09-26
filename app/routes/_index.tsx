@@ -832,7 +832,11 @@ function FeatureRows() {
 						className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-14"
 					>
 						<div className={cn(f.flip && "lg:order-2")}>
-							<div className={eyebrow}>{i18n._(f.eyebrow)}</div>
+							<div className="font-mono text-[10px] uppercase leading-none tracking-wide text-secondary">
+								<span className="inline-block bg-secondary/10 dark:bg-secondary-surface px-3 py-1.5">
+									{i18n._(f.eyebrow)}
+								</span>
+							</div>
 							<h3 className="mt-5 font-display tracking-[-0.01em] text-[clamp(1.75rem,3vw,2.625rem)] leading-[1.1]">
 								{i18n._(f.title)}
 							</h3>
@@ -1042,7 +1046,7 @@ function TrustOpen() {
 			<div className={shell}>
 				<Reveal className="grid grid-cols-1 gap-px border border-border bg-border lg:grid-cols-2">
 					<div className="bg-card p-10 sm:p-11">
-						<div className="font-mono text-[11px] uppercase leading-none tracking-[0.2em] text-secondary">
+						<div className="font-mono text-[10px] uppercase leading-none tracking-wide text-secondary">
 							<span className="inline-block bg-secondary/10 dark:bg-secondary-surface px-3 py-1.5">
 								<Trans>Trusted</Trans>
 							</span>
@@ -1069,7 +1073,7 @@ function TrustOpen() {
 					</div>
 
 					<div className="bg-muted p-10 sm:p-11">
-						<div className="font-mono text-[11px] uppercase leading-none tracking-[0.2em] text-secondary">
+						<div className="font-mono text-[10px] uppercase leading-none tracking-wide text-secondary">
 							<span className="inline-block bg-secondary/10 dark:bg-secondary-surface px-3 py-1.5">
 								<Trans>Source available</Trans>
 							</span>
@@ -1122,8 +1126,8 @@ function SelfHost() {
 			<div className={shell}>
 				<Reveal className="flex flex-wrap items-end justify-between gap-8">
 					<div>
-						<div className={eyebrow}>
-							<span className="inline-block bg-secondary/10 dark:bg-secondary-surface px-3 py-1.5 text-secondary">
+						<div className="font-mono text-[10px] uppercase leading-none tracking-wide text-secondary">
+							<span className="inline-block bg-secondary/10 dark:bg-secondary-surface px-3 py-1.5">
 								<Trans>Self-hosted</Trans>
 							</span>
 						</div>
