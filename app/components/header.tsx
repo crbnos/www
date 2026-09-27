@@ -27,14 +27,6 @@ const APP_URL = "https://app.carbon.ms";
 
 const developerLinks = [
 	{
-		href: "https://discord.gg/ntzBZ3yYj",
-		title: <Trans>Discord</Trans>,
-		desc: <Trans>Join our community chat</Trans>,
-		icon: (
-			<DiscordLogo className="size-12 rounded-lg bg-[#5865F2] p-2 text-white" />
-		),
-	},
-	{
 		href: "https://github.com/crbnos/carbon",
 		title: <Trans>GitHub</Trans>,
 		desc: <Trans>View our source code and contribute</Trans>,
@@ -48,6 +40,14 @@ const developerLinks = [
 		desc: <Trans>Developer guides and API reference</Trans>,
 		icon: (
 			<BookOpen className="size-12 rounded-lg bg-primary p-2 text-primary-foreground dark:bg-secondary dark:text-secondary-foreground" />
+		),
+	},
+	{
+		href: "https://discord.gg/ntzBZ3yYj",
+		title: <Trans>Discord</Trans>,
+		desc: <Trans>Join our community chat</Trans>,
+		icon: (
+			<DiscordLogo className="size-12 rounded-lg bg-[#5865F2] p-2 text-white" />
 		),
 	},
 ];
