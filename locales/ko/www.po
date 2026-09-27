@@ -409,10 +409,13 @@ msgstr "연락처 정보"
 msgid "Contact Sales"
 msgstr "영업 문의"
 
-#: app/routes/pricing.tsx:67
 #: app/routes/pricing.tsx:86
-#: app/routes/pricing.tsx:88
 msgid "Contact us"
+msgstr "문의하기"
+
+#: app/routes/pricing.tsx:67
+#: app/routes/pricing.tsx:88
+msgid "Contact Us"
 msgstr "문의하기"
 
 #: app/components/logo-menu.tsx:66
@@ -656,7 +659,7 @@ msgid "Expenses"
 msgstr "비용"
 
 #: app/routes/_index.tsx:1141
-msgid "Explore self-hosting"
+msgid "Explore Self-Hosting"
 msgstr "자체 호스팅 탐색"
 
 #: app/routes/_index.tsx:161
@@ -721,7 +724,7 @@ msgid "Generated straight from Carbon's schema — 381 resources and 1,641 endpo
 msgstr "Carbon의 스키마에서 직접 생성됨 — TypeScript, Python, C# 및 cURL용 형식화된 클라이언트와 함께 381개의 리소스 및 1,641개의 끝점입니다."
 
 #: app/routes/pricing.tsx:67
-msgid "Get a license"
+msgid "Get a License"
 msgstr "라이선스 받기"
 
 #: app/components/hero.tsx:136
@@ -842,7 +845,7 @@ msgid "Join our community chat"
 msgstr "우리 커뮤니티 채팅에 참여하세요"
 
 #: app/routes/about.tsx:99
-msgid "Join our Discord community"
+msgid "Join Our Discord Community"
 msgstr "Discord 커뮤니티에 참여하세요"
 
 #: app/components/hero.tsx:218
@@ -1418,7 +1421,7 @@ msgid "Star on GitHub"
 msgstr "GitHub에서 별 표시"
 
 #: app/routes/pricing.tsx:41
-msgid "Start 30-day free trial"
+msgid "Start 30-Day Free Trial"
 msgstr "30일 무료 체험 시작"
 
 #: app/components/app-cta-label.tsx:11
@@ -1540,7 +1543,7 @@ msgid "View our source code and contribute"
 msgstr "우리의 소스 코드를 보고 기여하세요"
 
 #: app/routes/_index.tsx:1147
-msgid "View the source"
+msgid "View the Source"
 msgstr "소스 보기"
 
 #: app/routes/pricing.tsx:260

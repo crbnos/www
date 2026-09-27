@@ -145,10 +145,10 @@ export default function Compare() {
 
           <div className="mt-10 flex flex-wrap gap-3">
             <Button asChild variant="accent" size="cta">
-              <a href={APP_URL}>Start 30-day free trial</a>
+              <a href={APP_URL}>Start 30-Day Free Trial</a>
             </Button>
             <Button asChild variant="accentOutline" size="cta">
-              <Link to="/sales">Talk to us</Link>
+              <Link to="/sales">Talk to Us</Link>
             </Button>
           </div>
 
@@ -293,7 +293,7 @@ export default function Compare() {
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             <Button asChild variant="accent" size="cta">
-              <a href={APP_URL}>Start 30-day free trial</a>
+              <a href={APP_URL}>Start 30-Day Free Trial</a>
             </Button>
             <Button asChild variant="accentOutline" size="cta">
               <a href={GITHUB_URL} target="_blank" rel="noopener">

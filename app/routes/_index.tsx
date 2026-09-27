@@ -1138,13 +1138,13 @@ function SelfHost() {
 					<div className="flex flex-wrap gap-3">
 						<Button asChild variant="accent" size="cta">
 							<Link to="/self-hosted">
-								<Trans>Explore self-hosting</Trans>
+								<Trans>Explore Self-Hosting</Trans>
 								<ChevronRight />
 							</Link>
 						</Button>
 						<Button asChild variant="accentOutline" size="cta">
 							<a href={GITHUB_URL} target="_blank" rel="noopener">
-								<Trans>View the source</Trans>
+								<Trans>View the Source</Trans>
 							</a>
 						</Button>
 					</div>

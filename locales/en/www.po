@@ -409,11 +409,14 @@ msgstr "Contact Information"
 msgid "Contact Sales"
 msgstr "Contact Sales"
 
-#: app/routes/pricing.tsx:67
 #: app/routes/pricing.tsx:86
-#: app/routes/pricing.tsx:88
 msgid "Contact us"
 msgstr "Contact us"
+
+#: app/routes/pricing.tsx:67
+#: app/routes/pricing.tsx:88
+msgid "Contact Us"
+msgstr "Contact Us"
 
 #: app/components/logo-menu.tsx:66
 #: app/routes/_index.tsx:1033
@@ -656,8 +659,8 @@ msgid "Expenses"
 msgstr "Expenses"
 
 #: app/routes/_index.tsx:1141
-msgid "Explore self-hosting"
-msgstr "Explore self-hosting"
+msgid "Explore Self-Hosting"
+msgstr "Explore Self-Hosting"
 
 #: app/routes/_index.tsx:161
 msgid "FAI & NCR"
@@ -721,8 +724,8 @@ msgid "Generated straight from Carbon's schema — 381 resources and 1,641 endpo
 msgstr "Generated straight from Carbon's schema — 381 resources and 1,641 endpoints, with typed clients for TypeScript, Python, C#, and cURL."
 
 #: app/routes/pricing.tsx:67
-msgid "Get a license"
-msgstr "Get a license"
+msgid "Get a License"
+msgstr "Get a License"
 
 #: app/components/hero.tsx:136
 msgid "Get Started"
@@ -842,8 +845,8 @@ msgid "Join our community chat"
 msgstr "Join our community chat"
 
 #: app/routes/about.tsx:99
-msgid "Join our Discord community"
-msgstr "Join our Discord community"
+msgid "Join Our Discord Community"
+msgstr "Join Our Discord Community"
 
 #: app/components/hero.tsx:218
 msgid "Kanban Schedule"
@@ -1418,8 +1421,8 @@ msgid "Star on GitHub"
 msgstr "Star on GitHub"
 
 #: app/routes/pricing.tsx:41
-msgid "Start 30-day free trial"
-msgstr "Start 30-day free trial"
+msgid "Start 30-Day Free Trial"
+msgstr "Start 30-Day Free Trial"
 
 #: app/components/app-cta-label.tsx:11
 msgid "Start Free"
@@ -1540,8 +1543,8 @@ msgid "View our source code and contribute"
 msgstr "View our source code and contribute"
 
 #: app/routes/_index.tsx:1147
-msgid "View the source"
-msgstr "View the source"
+msgid "View the Source"
+msgstr "View the Source"
 
 #: app/routes/pricing.tsx:260
 msgid "Want Enterprise Edition features on your own servers? <0>Unlock them with a commercial license</0>."

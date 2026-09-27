@@ -38,7 +38,7 @@ function usePlans(deployment: Deployment) {
 			tag: selfHosted ? t`Open source` : t`Self-serve`,
 			priceHeadline: selfHosted ? "$0" : "$40",
 			priceSubtext: t`/user/month`,
-			action: selfHosted ? t`Self-Host Carbon` : t`Start 30-day free trial`,
+			action: selfHosted ? t`Self-Host Carbon` : t`Start 30-Day Free Trial`,
 			url: selfHosted ? SELF_HOSTING_DOCS_URL : "https://app.carbon.ms",
 			description: selfHosted
 				? t`The open-source core of Carbon, free under AGPL-3.0`
@@ -64,7 +64,7 @@ function usePlans(deployment: Deployment) {
 				: t`Everything in Starter, and the features below`,
 			priceHeadline: "$100",
 			priceSubtext: t`/user/month`,
-			action: selfHosted ? t`Get a license` : t`Contact us`,
+			action: selfHosted ? t`Get a License` : t`Contact Us`,
 			url: "/sales",
 			featured: false,
 			features: [
@@ -85,7 +85,7 @@ function usePlans(deployment: Deployment) {
 			tag: selfHosted ? t`Forward deployed` : t`Bring your own cloud`,
 			priceHeadline: t`Contact us`,
 			priceSubtext: "",
-			action: t`Contact us`,
+			action: t`Contact Us`,
 			url: "/sales",
 			description: selfHosted
 				? t`Everything in Enterprise Edition, plus a custom solution to meet your needs`
