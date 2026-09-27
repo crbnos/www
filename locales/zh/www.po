@@ -409,10 +409,13 @@ msgstr "联系信息"
 msgid "Contact Sales"
 msgstr "联系销售"
 
-#: app/routes/pricing.tsx:67
 #: app/routes/pricing.tsx:86
-#: app/routes/pricing.tsx:88
 msgid "Contact us"
+msgstr "联系我们"
+
+#: app/routes/pricing.tsx:67
+#: app/routes/pricing.tsx:88
+msgid "Contact Us"
 msgstr "联系我们"
 
 #: app/components/logo-menu.tsx:66
@@ -656,7 +659,7 @@ msgid "Expenses"
 msgstr "费用"
 
 #: app/routes/_index.tsx:1141
-msgid "Explore self-hosting"
+msgid "Explore Self-Hosting"
 msgstr "探索自主托管"
 
 #: app/routes/_index.tsx:161
@@ -721,7 +724,7 @@ msgid "Generated straight from Carbon's schema — 381 resources and 1,641 endpo
 msgstr "直接从 Carbon 的模式生成 — 381 个资源和 1,641 个端点，提供 TypeScript、Python、C# 和 cURL 的类型化客户端。"
 
 #: app/routes/pricing.tsx:67
-msgid "Get a license"
+msgid "Get a License"
 msgstr "获取许可证"
 
 #: app/components/hero.tsx:136
@@ -842,7 +845,7 @@ msgid "Join our community chat"
 msgstr "加入我们的社区聊天"
 
 #: app/routes/about.tsx:99
-msgid "Join our Discord community"
+msgid "Join Our Discord Community"
 msgstr "加入我们的 Discord 社区"
 
 #: app/components/hero.tsx:218
@@ -1418,7 +1421,7 @@ msgid "Star on GitHub"
 msgstr "在 GitHub 上标星"
 
 #: app/routes/pricing.tsx:41
-msgid "Start 30-day free trial"
+msgid "Start 30-Day Free Trial"
 msgstr "开始30天免费试用"
 
 #: app/components/app-cta-label.tsx:11
@@ -1540,7 +1543,7 @@ msgid "View our source code and contribute"
 msgstr "查看我们的源代码并做出贡献"
 
 #: app/routes/_index.tsx:1147
-msgid "View the source"
+msgid "View the Source"
 msgstr "查看源代码"
 
 #: app/routes/pricing.tsx:260

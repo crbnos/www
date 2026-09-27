@@ -96,7 +96,7 @@ export default function About() {
 									rel="noopener"
 								>
 									<DiscordLogo className="size-4" />
-									<Trans>Join our Discord community</Trans>
+									<Trans>Join Our Discord Community</Trans>
 								</a>
 							</Button>
 							<Button asChild variant="accentOutline" size="cta">

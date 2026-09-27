@@ -409,10 +409,13 @@ msgstr "Informações de Contato"
 msgid "Contact Sales"
 msgstr "Entre em contato com vendas"
 
-#: app/routes/pricing.tsx:67
 #: app/routes/pricing.tsx:86
-#: app/routes/pricing.tsx:88
 msgid "Contact us"
+msgstr "Contacte-nos"
+
+#: app/routes/pricing.tsx:67
+#: app/routes/pricing.tsx:88
+msgid "Contact Us"
 msgstr "Contacte-nos"
 
 #: app/components/logo-menu.tsx:66
@@ -656,7 +659,7 @@ msgid "Expenses"
 msgstr "Despesas"
 
 #: app/routes/_index.tsx:1141
-msgid "Explore self-hosting"
+msgid "Explore Self-Hosting"
 msgstr "Explorar auto-hospedagem"
 
 #: app/routes/_index.tsx:161
@@ -721,7 +724,7 @@ msgid "Generated straight from Carbon's schema — 381 resources and 1,641 endpo
 msgstr "Gerado diretamente do esquema do Carbon — 381 recursos e 1.641 endpoints, com clientes tipados para TypeScript, Python, C# e cURL."
 
 #: app/routes/pricing.tsx:67
-msgid "Get a license"
+msgid "Get a License"
 msgstr "Obter uma licença"
 
 #: app/components/hero.tsx:136
@@ -842,7 +845,7 @@ msgid "Join our community chat"
 msgstr "Junte-se ao nosso chat da comunidade"
 
 #: app/routes/about.tsx:99
-msgid "Join our Discord community"
+msgid "Join Our Discord Community"
 msgstr "Junte-se à nossa comunidade do Discord"
 
 #: app/components/hero.tsx:218
@@ -1418,7 +1421,7 @@ msgid "Star on GitHub"
 msgstr "Marcar com estrela no GitHub"
 
 #: app/routes/pricing.tsx:41
-msgid "Start 30-day free trial"
+msgid "Start 30-Day Free Trial"
 msgstr "Iniciar avaliação gratuita de 30 dias"
 
 #: app/components/app-cta-label.tsx:11
@@ -1540,7 +1543,7 @@ msgid "View our source code and contribute"
 msgstr "Veja nosso código-fonte e contribua"
 
 #: app/routes/_index.tsx:1147
-msgid "View the source"
+msgid "View the Source"
 msgstr "Ver a fonte"
 
 #: app/routes/pricing.tsx:260

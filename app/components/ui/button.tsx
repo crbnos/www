@@ -30,9 +30,8 @@ const buttonVariants = cva(
 				lg: "h-10 rounded-md px-8",
 				xl: "h-12 rounded-none px-8 text-lg",
 				icon: "h-9 w-9",
-				cta: "rounded-[2px] px-6 py-4 font-mono text-xs font-normal uppercase tracking-[0.08em]",
-				ctaSm:
-					"h-8 rounded-[2px] px-3 font-mono text-xs font-normal uppercase tracking-[0.08em]",
+				cta: "rounded-[2px] px-6 py-4 tracking-normal",
+				ctaSm: "h-8 rounded-[2px] px-3 tracking-normal",
 			},
 		},
 		defaultVariants: {

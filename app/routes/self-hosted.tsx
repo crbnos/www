@@ -295,7 +295,7 @@ function Hero() {
 
 				<div className="mt-10 flex flex-wrap gap-2.5">
 					<Button asChild variant="accent" size="cta">
-						<Link to="/sales">Get a license</Link>
+						<Link to="/sales">Get a License</Link>
 					</Button>
 					<Button asChild variant="accentOutline" size="cta">
 						<a href={REPO_URL} target="_blank" rel="noopener">
@@ -378,7 +378,7 @@ function Byoc() {
 						</p>
 					</div>
 					<Button asChild variant="accent" size="cta">
-						<Link to="/sales">Talk to sales</Link>
+						<Link to="/sales">Talk to Sales</Link>
 					</Button>
 				</div>
 
@@ -656,7 +656,7 @@ function Parity() {
 						</ul>
 						<div className="mt-8 flex flex-wrap gap-2.5">
 							<Button asChild variant="accent" size="cta">
-								<Link to="/sales">Talk to sales</Link>
+								<Link to="/sales">Talk to Sales</Link>
 							</Button>
 							<Button asChild variant="accentOutline" size="cta">
 								<a
@@ -664,7 +664,7 @@ function Parity() {
 									target="_blank"
 									rel="noopener"
 								>
-									Deploy it yourself
+									Deploy It Yourself
 								</a>
 							</Button>
 						</div>
@@ -726,7 +726,7 @@ function OpenCore() {
 						</Button>
 						<Button asChild variant="accentOutline" size="cta">
 							<Link to="/developers">
-								Developer surface
+								Developer Surface
 								<ChevronRight />
 							</Link>
 						</Button>
@@ -799,7 +799,7 @@ function CTA() {
 				</p>
 				<div className="mt-10 flex flex-wrap justify-center gap-2.5">
 					<Button asChild variant="accent" size="cta">
-						<Link to="/sales">Get a license</Link>
+						<Link to="/sales">Get a License</Link>
 					</Button>
 					<Button asChild variant="accentOutline" size="cta">
 						<a href={REPO_URL} target="_blank" rel="noopener">
