@@ -191,7 +191,7 @@ export default function Pricing() {
 				<div className={shell}>
 					<div className={eyebrow}>Pricing</div>
 					<h1 className={cn(heading, "mt-5 max-w-[20ch]")}>
-						<Trans>Choose a deployment and plan.</Trans>
+						<Trans>Simple pricing based on your needs.</Trans>
 					</h1>
 					<p className="mt-6 max-w-[52ch] text-lg leading-relaxed text-muted-foreground">
 						<Trans>
@@ -254,7 +254,7 @@ export default function Pricing() {
 				<div className="relative mx-auto max-w-[1000px] px-6 text-center">
 					<div className={eyebrow}>Open source · Self-host</div>
 					<h2 className="mt-6 font-display tracking-[-0.02em] text-[clamp(2.25rem,5vw,4.5rem)] leading-[1.08]">
-						<Trans>Self-host the Community edition.</Trans>
+						<Trans>Get started for free.</Trans>
 					</h2>
 					<p className="mx-auto mt-6 max-w-[48ch] text-lg leading-relaxed text-muted-foreground">
 						<Trans>

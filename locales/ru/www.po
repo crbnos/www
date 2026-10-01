@@ -190,6 +190,10 @@ msgstr "Фирменные материалы"
 msgid "Bring your own cloud"
 msgstr "Используйте свое облако"
 
+#: app/routes/_index.tsx:424
+msgid "Build hardware at the <0/><1>speed of software</1>"
+msgstr ""
+
 #: app/components/footer.tsx:58
 msgid "Build vs. buy"
 msgstr "Разработать или купить"
@@ -254,10 +258,6 @@ msgstr "Чат"
 #: app/components/status-indicator.tsx:45
 msgid "Checking status…"
 msgstr "Проверка статуса…"
-
-#: app/routes/pricing.tsx:194
-msgid "Choose a deployment and plan."
-msgstr ""
 
 #: app/components/wizard-form.tsx:77
 msgid "Choose how you'd like to own the solution"
@@ -696,6 +696,10 @@ msgstr ""
 msgid "Get Started"
 msgstr "Начать"
 
+#: app/routes/pricing.tsx:257
+msgid "Get started for free."
+msgstr ""
+
 #: app/components/header.tsx:31
 msgid "GitHub"
 msgstr "GitHub"
@@ -707,6 +711,11 @@ msgstr "ГЛ и начисления"
 #: app/components/hero.tsx:206
 msgid "Global Search"
 msgstr "Глобальный поиск"
+
+#: app/routes/_index.tsx:1169
+#: app/routes/self-hosted.tsx:807
+msgid "Hard tech unicorns build on Carbon."
+msgstr ""
 
 #: app/components/wizard-form.tsx:94
 msgid "Hosting Preference"
@@ -891,11 +900,6 @@ msgstr "Управляемый хостинг"
 
 #: app/routes/pricing.tsx:50
 msgid "Managed updates and backups"
-msgstr ""
-
-#: app/routes/_index.tsx:1169
-#: app/routes/self-hosted.tsx:807
-msgid "Manufacturers run production on Carbon."
 msgstr ""
 
 #: app/routes/_index.tsx:267
@@ -1232,20 +1236,12 @@ msgstr ""
 msgid "Run Carbon on infrastructure you control."
 msgstr ""
 
-#: app/routes/_index.tsx:424
-msgid "Run manufacturing on <0/><1>one data model</1>"
-msgstr ""
-
 #: app/routes/_index.tsx:301
 msgid "Run one facility or multiple legal entities and locations. Carbon handles entity-specific currencies, charts of accounts and taxes with consolidated reporting."
 msgstr ""
 
 #: app/routes/_index.tsx:268
 msgid "Run production from live data."
-msgstr ""
-
-#: app/routes/_index.tsx:1145
-msgid "Run your first production job in Carbon."
 msgstr ""
 
 #: app/components/footer.tsx:50
@@ -1267,10 +1263,6 @@ msgstr "Выберите желаемый уровень поддержки"
 #: app/components/wizard-form.tsx:95
 msgid "Select your preferred hosting solution"
 msgstr "Выберите предпочитаемое решение для хостинга"
-
-#: app/routes/pricing.tsx:257
-msgid "Self-host the Community edition."
-msgstr ""
 
 #: app/components/footer.tsx:64
 #: app/components/header.tsx:92
@@ -1328,6 +1320,10 @@ msgstr "Общая база данных с изолированными дан�
 msgid "Shared schema"
 msgstr "Общая схема"
 
+#: app/routes/_index.tsx:1145
+msgid "Ship faster than your competitors can quote."
+msgstr ""
+
 #: app/routes/_index.tsx:149
 msgid "Shipping"
 msgstr "Доставка"
@@ -1350,6 +1346,10 @@ msgstr "Эскалация нехватки"
 
 #: app/routes/_index.tsx:46
 msgid "Shortages surface during production"
+msgstr ""
+
+#: app/routes/pricing.tsx:194
+msgid "Simple pricing based on your needs."
 msgstr ""
 
 #: app/components/wizard-form.tsx:123

@@ -293,7 +293,7 @@ function Hero() {
 			<div className={cn(shell, "relative")}>
 				<div className="text-center">
 					<h1 className="font-display tracking-[-0.02em] text-balance text-[clamp(2.5rem,5.6vw,5.5rem)] leading-[1.06]">
-						Run Carbon on your infrastructure
+						Self-hosted ERP on your infrastructure
 					</h1>
 
 					<p className="mx-auto mt-8 max-w-[60ch] text-lg leading-relaxed text-muted-foreground">
@@ -785,8 +785,8 @@ function CTA() {
 			<div className="relative mx-auto max-w-[1000px] px-6 text-center">
 				<div className={eyebrow}>Choose your deployment model</div>
 				<h2 className="mt-6 font-display tracking-[-0.02em] text-[clamp(2.5rem,6vw,5.5rem)] leading-[1.08]">
-					<span className="block">Your infrastructure.</span>{" "}
-					<span className="block">Your system of record.</span>
+					<span className="block">Your factory.</span>{" "}
+					<span className="block">Your servers.</span>
 				</h2>
 				<p className="mx-auto mt-6 max-w-[56ch] text-balance text-lg leading-relaxed text-muted-foreground">
 					Deploy the Community edition yourself or work with our team on BYOC,
@@ -804,7 +804,7 @@ export default function SelfHosted() {
 			<Hero />
 			<Principles />
 			<LogoStrip
-				headline={<Trans>Manufacturers run production on Carbon.</Trans>}
+				headline={<Trans>Hard tech unicorns build on Carbon.</Trans>}
 				label={
 					<Trans>From hardware startups to regulated production teams</Trans>
 				}

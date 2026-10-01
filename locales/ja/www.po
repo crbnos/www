@@ -190,6 +190,10 @@ msgstr "ブランドアセット"
 msgid "Bring your own cloud"
 msgstr "独自のクラウドをご利用"
 
+#: app/routes/_index.tsx:424
+msgid "Build hardware at the <0/><1>speed of software</1>"
+msgstr ""
+
 #: app/components/footer.tsx:58
 msgid "Build vs. buy"
 msgstr "内製 vs. 外購"
@@ -254,10 +258,6 @@ msgstr "チャット"
 #: app/components/status-indicator.tsx:45
 msgid "Checking status…"
 msgstr "ステータスを確認中…"
-
-#: app/routes/pricing.tsx:194
-msgid "Choose a deployment and plan."
-msgstr ""
 
 #: app/components/wizard-form.tsx:77
 msgid "Choose how you'd like to own the solution"
@@ -696,6 +696,10 @@ msgstr ""
 msgid "Get Started"
 msgstr "始める"
 
+#: app/routes/pricing.tsx:257
+msgid "Get started for free."
+msgstr ""
+
 #: app/components/header.tsx:31
 msgid "GitHub"
 msgstr "GitHub"
@@ -707,6 +711,11 @@ msgstr "GL & 引当金"
 #: app/components/hero.tsx:206
 msgid "Global Search"
 msgstr "グローバル検索"
+
+#: app/routes/_index.tsx:1169
+#: app/routes/self-hosted.tsx:807
+msgid "Hard tech unicorns build on Carbon."
+msgstr ""
 
 #: app/components/wizard-form.tsx:94
 msgid "Hosting Preference"
@@ -891,11 +900,6 @@ msgstr "マネージドホスティング"
 
 #: app/routes/pricing.tsx:50
 msgid "Managed updates and backups"
-msgstr ""
-
-#: app/routes/_index.tsx:1169
-#: app/routes/self-hosted.tsx:807
-msgid "Manufacturers run production on Carbon."
 msgstr ""
 
 #: app/routes/_index.tsx:267
@@ -1232,20 +1236,12 @@ msgstr ""
 msgid "Run Carbon on infrastructure you control."
 msgstr ""
 
-#: app/routes/_index.tsx:424
-msgid "Run manufacturing on <0/><1>one data model</1>"
-msgstr ""
-
 #: app/routes/_index.tsx:301
 msgid "Run one facility or multiple legal entities and locations. Carbon handles entity-specific currencies, charts of accounts and taxes with consolidated reporting."
 msgstr ""
 
 #: app/routes/_index.tsx:268
 msgid "Run production from live data."
-msgstr ""
-
-#: app/routes/_index.tsx:1145
-msgid "Run your first production job in Carbon."
 msgstr ""
 
 #: app/components/footer.tsx:50
@@ -1267,10 +1263,6 @@ msgstr "サポートレベルを選択してください"
 #: app/components/wizard-form.tsx:95
 msgid "Select your preferred hosting solution"
 msgstr "ご希望のホスティングソリューションを選択してください"
-
-#: app/routes/pricing.tsx:257
-msgid "Self-host the Community edition."
-msgstr ""
 
 #: app/components/footer.tsx:64
 #: app/components/header.tsx:92
@@ -1328,6 +1320,10 @@ msgstr "分離されたデータを持つ共有データベース"
 msgid "Shared schema"
 msgstr "共有スキーマ"
 
+#: app/routes/_index.tsx:1145
+msgid "Ship faster than your competitors can quote."
+msgstr ""
+
 #: app/routes/_index.tsx:149
 msgid "Shipping"
 msgstr "配送"
@@ -1350,6 +1346,10 @@ msgstr "不足のエスカレーション"
 
 #: app/routes/_index.tsx:46
 msgid "Shortages surface during production"
+msgstr ""
+
+#: app/routes/pricing.tsx:194
+msgid "Simple pricing based on your needs."
 msgstr ""
 
 #: app/components/wizard-form.tsx:123

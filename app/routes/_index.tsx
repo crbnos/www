@@ -422,9 +422,9 @@ function Hero() {
 					{/* The break only applies from sm up; below that, text-balance
 					    wraps the line evenly. */}
 					<Trans>
-						Run manufacturing on{" "}
+						Build hardware at the{" "}
 						<br className="hidden sm:inline" />
-						<span className="text-secondary">one data model</span>
+						<span className="text-secondary">speed of software</span>
 					</Trans>
 				</h1>
 
@@ -1142,7 +1142,7 @@ function StartCTA() {
 					<Trans>30-day trial · No sales call</Trans>
 				</div>
 				<h2 className="mt-6 font-display tracking-[-0.02em] text-[clamp(2.5rem,6vw,5.5rem)] leading-[1.08]">
-					<Trans>Run your first production job in Carbon.</Trans>
+					<Trans>Ship faster than your competitors can quote.</Trans>
 				</h2>
 				<p className="mx-auto mt-6 max-w-[60ch] text-lg leading-relaxed text-muted-foreground">
 					<Trans>
@@ -1166,7 +1166,7 @@ export default function Route() {
 		<>
 			<Hero />
 			<LogoStrip
-				headline={<Trans>Manufacturers run production on Carbon.</Trans>}
+				headline={<Trans>Hard tech unicorns build on Carbon.</Trans>}
 				label={
 					<Trans>From hardware startups to regulated production teams</Trans>
 				}

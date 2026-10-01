@@ -190,6 +190,10 @@ msgstr "Brand Assets"
 msgid "Bring your own cloud"
 msgstr "Bring your own cloud"
 
+#: app/routes/_index.tsx:424
+msgid "Build hardware at the <0/><1>speed of software</1>"
+msgstr "Build hardware at the <0/><1>speed of software</1>"
+
 #: app/components/footer.tsx:58
 msgid "Build vs. buy"
 msgstr "Build vs. buy"
@@ -254,10 +258,6 @@ msgstr "Chat"
 #: app/components/status-indicator.tsx:45
 msgid "Checking status…"
 msgstr "Checking status…"
-
-#: app/routes/pricing.tsx:194
-msgid "Choose a deployment and plan."
-msgstr "Choose a deployment and plan."
 
 #: app/components/wizard-form.tsx:77
 msgid "Choose how you'd like to own the solution"
@@ -696,6 +696,10 @@ msgstr "Generate each configuration from rules."
 msgid "Get Started"
 msgstr "Get Started"
 
+#: app/routes/pricing.tsx:257
+msgid "Get started for free."
+msgstr "Get started for free."
+
 #: app/components/header.tsx:31
 msgid "GitHub"
 msgstr "GitHub"
@@ -707,6 +711,11 @@ msgstr "GL & accruals"
 #: app/components/hero.tsx:206
 msgid "Global Search"
 msgstr "Global Search"
+
+#: app/routes/_index.tsx:1169
+#: app/routes/self-hosted.tsx:807
+msgid "Hard tech unicorns build on Carbon."
+msgstr "Hard tech unicorns build on Carbon."
 
 #: app/components/wizard-form.tsx:94
 msgid "Hosting Preference"
@@ -892,11 +901,6 @@ msgstr "Managed Hosting"
 #: app/routes/pricing.tsx:50
 msgid "Managed updates and backups"
 msgstr "Managed updates and backups"
-
-#: app/routes/_index.tsx:1169
-#: app/routes/self-hosted.tsx:807
-msgid "Manufacturers run production on Carbon."
-msgstr "Manufacturers run production on Carbon."
 
 #: app/routes/_index.tsx:267
 msgid "Manufacturing execution"
@@ -1232,10 +1236,6 @@ msgstr "Rules-based product configurator, BOMs and routings"
 msgid "Run Carbon on infrastructure you control."
 msgstr "Run Carbon on infrastructure you control."
 
-#: app/routes/_index.tsx:424
-msgid "Run manufacturing on <0/><1>one data model</1>"
-msgstr "Run manufacturing on <0/><1>one data model</1>"
-
 #: app/routes/_index.tsx:301
 msgid "Run one facility or multiple legal entities and locations. Carbon handles entity-specific currencies, charts of accounts and taxes with consolidated reporting."
 msgstr "Run one facility or multiple legal entities and locations. Carbon handles entity-specific currencies, charts of accounts and taxes with consolidated reporting."
@@ -1243,10 +1243,6 @@ msgstr "Run one facility or multiple legal entities and locations. Carbon handle
 #: app/routes/_index.tsx:268
 msgid "Run production from live data."
 msgstr "Run production from live data."
-
-#: app/routes/_index.tsx:1145
-msgid "Run your first production job in Carbon."
-msgstr "Run your first production job in Carbon."
 
 #: app/components/footer.tsx:50
 msgid "Sales"
@@ -1267,10 +1263,6 @@ msgstr "Select your desired level of support"
 #: app/components/wizard-form.tsx:95
 msgid "Select your preferred hosting solution"
 msgstr "Select your preferred hosting solution"
-
-#: app/routes/pricing.tsx:257
-msgid "Self-host the Community edition."
-msgstr "Self-host the Community edition."
 
 #: app/components/footer.tsx:64
 #: app/components/header.tsx:92
@@ -1328,6 +1320,10 @@ msgstr "Shared database with isolated data"
 msgid "Shared schema"
 msgstr "Shared schema"
 
+#: app/routes/_index.tsx:1145
+msgid "Ship faster than your competitors can quote."
+msgstr "Ship faster than your competitors can quote."
+
 #: app/routes/_index.tsx:149
 msgid "Shipping"
 msgstr "Shipping"
@@ -1351,6 +1347,10 @@ msgstr "Shortage escalation"
 #: app/routes/_index.tsx:46
 msgid "Shortages surface during production"
 msgstr "Shortages surface during production"
+
+#: app/routes/pricing.tsx:194
+msgid "Simple pricing based on your needs."
+msgstr "Simple pricing based on your needs."
 
 #: app/components/wizard-form.tsx:123
 msgid "Single-Tenant"
