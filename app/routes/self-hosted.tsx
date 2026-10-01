@@ -28,7 +28,7 @@ import { REPO_URL, SITE_URL } from "~/lib/agent/site";
  */
 
 const DESCRIPTION =
-	"Own the stack: run Carbon on your own infrastructure — managed in your own cloud account in one click (BYOC), on-prem, or fully air-gapped. ERP, MRP, MES and QMS on Postgres you own, open source, with an AGPL-3.0 Community edition.";
+	"Run Carbon in your cloud account, on-prem or air-gapped. Keep ERP, MRP, MES and QMS data in a Postgres database you control, with managed BYOC and self-managed options.";
 
 const DOCS_URL = "https://docs.carbon.ms";
 
@@ -39,31 +39,31 @@ const DOCS_URL = "https://docs.carbon.ms";
 const faqs = [
 	{
 		q: "Is Carbon open source?",
-		a: "Yes. The Community edition — the core ERP, MRP, MES and QMS — is on GitHub under AGPL-3.0 and free to self-host. A private fork is fine under AGPL-3.0. You need a commercial license to use Enterprise features, or to keep your changes private from the people who use your modified version (AGPL-3.0 requires you to offer them the source). Either way, every line is in the public repository, so you can audit it before you deploy.",
+		a: "Yes. The Community edition includes the core ERP, MRP, MES and QMS and is available on GitHub under AGPL-3.0. Enterprise features and alternative licensing require a commercial agreement.",
 	},
 	{
-		q: "Does Carbon help with CMMC compliance?",
-		a: "Yes. Self-hosting Carbon keeps your CUI inside your own boundary, which is the foundation of a CMMC and NIST 800-171 program. When you run Carbon on our bring-your-own-cloud (BYOC) infrastructure, we guarantee the deployment is audit-ready and provide the compliance artifacts an assessor asks for — a System Security Plan (SSP), a Plan of Action & Milestones (POA&M), and the SPRS score inputs — mapped to how Carbon runs in your cloud.",
+		q: "How does Carbon support CMMC requirements?",
+		a: "Self-hosting keeps CUI inside an infrastructure boundary you control. For Enterprise BYOC deployments, we provide deployment-specific inputs for your System Security Plan, POA&M and SPRS score. Your organization remains responsible for its full CMMC program and assessment.",
 	},
 	{
 		q: "Can Carbon run fully air-gapped?",
-		a: "Yes, with an Enterprise license. Carbon runs on Docker against a Postgres database you control, and air-gapped licensing lets it run inside a restricted network with no outbound calls — built for classified and ITAR-restricted programs.",
+		a: "Yes. With an Enterprise license, Carbon runs in a restricted network without outbound calls. The application is containerized and uses a Postgres database you control.",
 	},
 	{
 		q: "What is bring-your-own-cloud (BYOC)?",
-		a: "Managed self-hosting. Carbon deploys into your own cloud account in one click, and our team operates it from a control plane — releases, certificates and health monitoring — while the application and its data run on infrastructure you own. You get the data ownership of self-hosting without having to run it yourself, and every upgrade waits for your approval.",
+		a: "BYOC is managed self-hosting. Carbon deploys the application and data services into your cloud account, then operates releases, certificates and monitoring through a control plane. You approve upgrades and retain control of the infrastructure and data.",
 	},
 	{
 		q: "Is the self-hosted version the same as the cloud?",
-		a: "It is the same codebase. The managed cloud at app.carbon.ms is this repository, operated by us. Self-hosting gives you the same ERP, MRP, MES and QMS on infrastructure you own; the same REST API and MCP server need a commercial license when self-hosting, and other Enterprise features unlock with one too.",
+		a: "Yes. Managed cloud and self-hosted deployments use the same codebase. The Community edition includes core manufacturing functions; the REST API, MCP server and other Enterprise features require a commercial license when self-hosted.",
 	},
 	{
 		q: "Can I bring my own AI models?",
-		a: "Yes. The whole backend is exposed over a REST API and a built-in MCP server, so you point your own agents — Claude, ChatGPT, a local model — at your own data. API keys and the MCP server are a Business feature, so self-hosting them needs a commercial license. Nothing leaves your perimeter unless you send it.",
+		a: "Yes. Connect hosted or local models through Carbon's REST API and built-in MCP server. Both use Carbon identities and permissions. Self-hosted API keys and MCP access require a commercial license.",
 	},
 	{
 		q: "Do you help with deployment?",
-		a: "Yes. With BYOC we deploy and run Carbon in your cloud account for you. For regulated and enterprise programs we also offer white-glove deployment, migration and an SLA. Talk to sales and we'll scope it with your team.",
+		a: "Yes. BYOC includes deployment and operations in your cloud account. Enterprise engagements can also include data migration, custom integrations, training and an SLA.",
 	},
 ];
 
@@ -94,54 +94,54 @@ export const meta: MetaFunction = ({ matches }) =>
 const principles = [
 	{
 		tag: "CMMC · NIST 800-171",
-		name: "Built for your CMMC boundary",
-		desc: "Keep CUI inside a boundary you control. We provide the SSP, POA&M and SPRS inputs for Enterprise deployments, mapped to how Carbon runs on your infrastructure.",
+		name: "Keep CUI in your security boundary",
+		desc: "Run Carbon inside infrastructure you control. Enterprise BYOC includes deployment-specific inputs for your SSP, POA&M and SPRS score.",
 	},
 	{
 		tag: "Data ownership",
-		name: "Your records, your database",
-		desc: "BOMs, travelers, serial genealogy and costs live in a Postgres database you own — never copied to a vendor's cloud.",
+		name: "Store records in your database",
+		desc: "BOMs, travelers, serial genealogy and costs remain in a Postgres database in your account or network.",
 	},
 	{
 		tag: "Complete control",
-		name: "The whole layer is yours",
-		desc: "You hold the network, the keys, the models and the backups — the whole layer is yours to secure, audit and control.",
+		name: "Control the complete deployment",
+		desc: "Set the network, encryption keys, identity provider, AI models, backup policy and retention rules.",
 	},
 ];
 
 const byoc = [
 	{
-		tag: "One click",
-		name: "A new environment in one click",
-		desc: "Connect your cloud account, pick a region, and Carbon deploys the whole stack into it — staging, production, or a separate environment per site.",
+		tag: "Provisioning",
+		name: "Provision environments on demand",
+		desc: "Connect your cloud account, choose a region and deploy an isolated environment for staging, production or a specific site.",
 	},
 	{
 		tag: "Forks",
-		name: "Supports forks",
-		desc: "Running your own fork of Carbon? We build and release it the same way we ship ours — your customizations roll out to staging and production through the same pipeline.",
+		name: "Deploy your own fork",
+		desc: "Build and release a customized Carbon fork through the same staging and production pipeline as the standard distribution.",
 	},
 	{
 		tag: "Single-tenant",
-		name: "Operated by us, owned by you",
-		desc: "Every deployment is single-tenant: your own instance, database and storage, inside your own cloud account. Nothing is shared with other customers or copied to our cloud — your data stays private and entirely yours.",
+		name: "Single-tenant by design",
+		desc: "Each deployment has its own application, database and object storage in your cloud account. Application data is not copied into Carbon's managed cloud.",
 	},
 ];
 
 const walls = [
 	{
 		tag: "Data residency",
-		name: "Your data never leaves your walls",
-		desc: "Carbon runs against a Postgres database you own, on hardware you control. BOMs, travelers, serial genealogy and costs stay inside your perimeter — on-prem, in your VPC, or fully air-gapped.",
+		name: "Keep production data in your environment",
+		desc: "Run Carbon against Postgres in your VPC, data center or isolated network. BOMs, travelers, genealogy and costs stay inside that boundary.",
 	},
 	{
 		tag: "Open source",
-		name: "Audit the code before you deploy it",
-		desc: "The whole application is on GitHub — the Community edition under AGPL-3.0. Read every line, run a security review, and extend it to fit your process — no black box sitting on your most sensitive records.",
+		name: "Review the code before deployment",
+		desc: "Inspect the application on GitHub, run your security review and extend the AGPL-3.0 Community edition for your process.",
 	},
 	{
 		tag: "White-glove",
-		name: "A team that deploys with you",
-		desc: "For regulated and enterprise programs we scope the install, migrate your legacy data, and back it with an SLA — so a self-hosted deployment isn't a self-serve one.",
+		name: "Deployment and migration support",
+		desc: "Enterprise engagements can include architecture, installation, legacy data migration, training and an SLA.",
 	},
 ];
 
@@ -149,8 +149,8 @@ const featureRows = [
 	{
 		id: "ledger",
 		eyebrow: "Multi-entity · Multi-location",
-		title: "Every site on one ledger you own.",
-		body: "Run a single shop or a multi-national manufacturing engine from one Postgres database inside your perimeter. Per-entity currency, chart of accounts and tax; consolidated books; inter-site transfers — none of it leaving your network.",
+		title: "Run every site on one ledger.",
+		body: "Manage one facility or multiple entities and locations from Postgres inside your perimeter. Configure currency, chart of accounts and tax by entity, then consolidate reporting and inter-site transfers.",
 		points: [
 			"Multi-entity accounting with intercompany transactions",
 			"Consolidated books across every location you run",
@@ -163,8 +163,8 @@ const featureRows = [
 	{
 		id: "trace",
 		eyebrow: "Quality & traceability",
-		title: "Traceability that never leaves your network.",
-		body: "Pull any serial number and get its full genealogy — material certs, operators, measurements, deviations — from a database that sits behind your own firewall. First article, NCR, CAPA and calibration on the same records as production.",
+		title: "Keep traceability inside your network.",
+		body: "Open any serial number to see its material certificates, operators, measurements and deviations. First articles, NCRs, CAPAs and calibrations link to the same production records.",
 		points: [
 			"Serial and lot genealogy, forwards and back",
 			"NCR to CAPA workflow with sign-off",
@@ -178,8 +178,8 @@ const featureRows = [
 	{
 		id: "floor",
 		eyebrow: "Manufacturing execution",
-		title: "The floor, running on your servers.",
-		body: "Digital travelers, operator terminals, barcode tracking and finite-capacity scheduling — all executing against the copy of Carbon you host. No cloud dependency between the floor and the record.",
+		title: "Run the shop floor on your servers.",
+		body: "Serve digital travelers, operator terminals, barcode tracking and finite-capacity schedules from the Carbon instance you host. Production does not depend on Carbon's managed cloud.",
 		points: [
 			"Digital travelers with work instructions",
 			"QR and barcode tracking on every unit",
@@ -195,23 +195,23 @@ const featureRows = [
 const deployments = [
 	{
 		n: "01",
-		name: "Managed in your cloud",
-		desc: "BYOC: we deploy Carbon into your own cloud account in one click and operate it for you — upgrades, certificates and monitoring included. Your data never leaves your account.",
+		name: "Managed BYOC",
+		desc: "Carbon deploys into your cloud account and operates upgrades, certificates and monitoring. Application data remains in your account.",
 	},
 	{
 		n: "02",
 		name: "Docker",
-		desc: "The whole stack — app, API, MCP server and Postgres — runs in Docker containers. Stand it up on a single box to evaluate, then scale out.",
+		desc: "Run the application, API and MCP server in containers with Postgres. Start on one host, then move to a clustered deployment.",
 	},
 	{
 		n: "03",
 		name: "Self-managed cloud",
-		desc: "Run it yourself in your own VPC on AWS, GCP or Azure, against managed Postgres. You keep the network, the keys and the backups.",
+		desc: "Operate Carbon in your AWS, Google Cloud or Azure VPC with managed Postgres. You manage the network, keys, backups and releases.",
 	},
 	{
 		n: "04",
 		name: "On-prem & air-gapped",
-		desc: "Run entirely inside your own network with no outbound calls — built for defense, ITAR-restricted and classified programs. Air-gapped licensing is an Enterprise feature.",
+		desc: "Operate without outbound calls inside an isolated network. Air-gapped deployment and licensing are Enterprise features.",
 	},
 ];
 
@@ -225,18 +225,18 @@ docker compose up -d
 const owns = [
 	{
 		tag: "Postgres",
-		name: "One database, and it's yours",
-		desc: "ERP, MRP, MES and QMS share a single Postgres schema with row-level security. No sync jobs between systems, no vendor data lake — just your database.",
+		name: "One database for every module",
+		desc: "ERP, MRP, MES and QMS share a Postgres schema with row-level security. There are no synchronization jobs between separate product databases.",
 	},
 	{
 		tag: "Your LLM",
-		name: "Bring your own agents",
-		desc: "Every table is a REST endpoint and a built-in MCP server exposes the whole backend. Point Claude, ChatGPT or a local model at your live data — inside your perimeter, on your keys. API keys and MCP are a Business feature, so self-hosting them needs a commercial license.",
+		name: "Connect your own AI models",
+		desc: "Use the REST API and built-in MCP server with hosted or local models. Requests stay inside your deployment and use Carbon permissions. Self-hosted API keys and MCP require a commercial license.",
 	},
 	{
 		tag: "Your storage",
-		name: "Files stay where you put them",
-		desc: "Attachments, drawings and certificates live in object storage you control, behind signed URLs and access control — never a public bucket.",
+		name: "Store files in your object storage",
+		desc: "Keep attachments, drawings and certificates in object storage you control, protected by signed URLs and application access rules.",
 	},
 ];
 
@@ -274,10 +274,10 @@ function LicenseActions({ className }: { className?: string }) {
 	return (
 		<div className={cn("flex flex-wrap gap-2.5", className)}>
 			<Button asChild variant="accent" size="cta">
-				<Link to="/pricing?mode=self-hosted">Get a License</Link>
+				<Link to="/pricing?mode=self-hosted">View Self-Hosted Pricing</Link>
 			</Button>
 			<Button asChild variant="accentOutline" size="cta">
-				<Link to="/sales">Talk to a Human</Link>
+				<Link to="/sales">Contact Sales</Link>
 			</Button>
 		</div>
 	);
@@ -297,9 +297,9 @@ function Hero() {
 					</h1>
 
 					<p className="mx-auto mt-8 max-w-[60ch] text-lg leading-relaxed text-muted-foreground">
-						The whole system of record — ERP, MRP, MES and QMS — on Postgres you
-						own. Managed in your own cloud in one click, on-prem, or fully
-						air-gapped.
+						Deploy ERP, MRP, MES and QMS in your cloud account, on-prem or
+						air-gapped. Keep the application and Postgres data inside a boundary
+						you control.
 					</p>
 
 					<LicenseActions className="mt-10 justify-center" />
@@ -368,13 +368,12 @@ function Byoc() {
 					<div>
 						<Chip>Bring your own cloud</Chip>
 						<h2 className={cn(heading, "mt-6 max-w-[20ch]")}>
-							Self-hosted, without running it yourself.
+							Your cloud account, operated by Carbon.
 						</h2>
 						<p className="mt-6 max-w-[58ch] text-lg leading-relaxed text-muted-foreground">
-							With BYOC, Carbon deploys into your own cloud account in one click
-							and our team operates it from there — upgrades, certificates and
-							monitoring included. The infrastructure and the data are yours;
-							the pager is ours.
+							BYOC deploys Carbon into your cloud account. We operate releases,
+							certificates and monitoring while you retain control of the account,
+							network and data.
 						</p>
 					</div>
 					<LicenseActions />
@@ -411,16 +410,14 @@ function Walls() {
 	return (
 		<section className="border-b border-border py-28 sm:py-32">
 			<div className={shell}>
-				<Chip>Built for CMMC</Chip>
+				<Chip>CMMC · NIST 800-171</Chip>
 				<h2 className={cn(heading, "mt-6 max-w-[20ch]")}>
-					CMMC-compliant work stays inside your walls.
+					Keep CUI inside your security boundary.
 				</h2>
 				<p className="mt-6 max-w-[60ch] text-lg leading-relaxed text-muted-foreground">
-					Defense and aerospace manufacturers handling CUI can't ship their
-					record of production to someone else's cloud. Self-hosting Carbon
-					keeps that data inside your own CMMC boundary — and for Enterprise
-					deployments we hand you the SSP, POA&amp;M and SPRS inputs an assessor
-					will ask for.
+					Self-host Carbon to keep production records and CUI in infrastructure
+					you control. Enterprise BYOC deployments include system-specific
+					inputs for your SSP, POA&amp;M and SPRS score.
 				</p>
 				<LicenseActions className="mt-10" />
 				<div className="mt-14 grid grid-cols-1 gap-px border border-border bg-border lg:grid-cols-3">
@@ -547,17 +544,17 @@ function Deploy() {
 					<div>
 						<Chip>Deploy it your way</Chip>
 						<h2 className={cn(heading, "mt-6 max-w-[22ch]")}>
-							One codebase, from a laptop to a cluster.
+							One codebase across every deployment model.
 						</h2>
 					</div>
 					<div className="flex flex-col gap-8">
 						<p className="max-w-[38ch] text-base leading-relaxed text-muted-foreground">
-							The same source runs from a single Docker host to a multi-region
-							deployment in your own cloud. No proprietary runtime, no lock-in.
+							Run the same application on one Docker host, a private cloud cluster
+							or an isolated on-prem network.
 						</p>
 						<div className="flex flex-wrap gap-2.5">
 							<Button asChild variant="accent" size="cta">
-								<Link to="/pricing?mode=self-hosted">Get a License</Link>
+								<Link to="/pricing?mode=self-hosted">View Pricing</Link>
 							</Button>
 							<Button asChild variant="accentOutline" size="cta">
 								<a
@@ -620,7 +617,7 @@ function OwnItAll() {
 					<div>
 						<Chip>Your stack, top to bottom</Chip>
 						<h2 className={cn(heading, "mt-6 max-w-[24ch]")}>
-							Own the database, the models, and the files.
+							Control the data, models and storage.
 						</h2>
 					</div>
 					<LicenseActions />
@@ -658,12 +655,12 @@ function Parity() {
 					    show through and swallow the divider line. */}
 					<div className="flex flex-col bg-[color-mix(in_srgb,hsl(var(--muted))_30%,hsl(var(--background)))] p-10 sm:p-11">
 						<h2 className="font-display tracking-[-0.01em] text-[clamp(1.75rem,3vw,2.75rem)] leading-[1.1]">
-							Nothing held back for the cloud.
+							Use the same product in every environment.
 						</h2>
 						<p className="mt-5 max-w-[42ch] text-[15px] leading-relaxed text-muted-foreground">
-							Self-hosted Carbon is the same codebase that runs the managed
-							cloud — the Community edition free under AGPL-3.0, Enterprise
-							features unlocked with a commercial license.
+							Managed cloud and self-hosted Carbon use the same codebase. The
+							Community edition is available under AGPL-3.0; a commercial license
+							unlocks Enterprise features for self-hosted deployments.
 						</p>
 						<ul role="list" className="mt-8 flex flex-col divide-y divide-border/60">
 							{parity.map((item) => (
@@ -719,14 +716,13 @@ function OpenCore() {
 					<div>
 						<Chip>Open source core</Chip>
 						<h2 className={cn(heading, "mt-6 max-w-[22ch]")}>
-							Read it. Run it. Extend it.
+							Inspect, deploy and extend the source.
 						</h2>
 						<p className="mt-6 max-w-[54ch] text-lg leading-relaxed text-muted-foreground">
-							The whole application is on GitHub — a typed TypeScript monorepo
-							on Postgres. The Community edition is licensed AGPL-3.0 and free
-							to self-host; Enterprise modules and air-gapped licensing require a
-							commercial license. Audit it against your security requirements
-							before a single record ever lands in it.
+							Carbon is a TypeScript monorepo backed by Postgres. Self-host the
+							Community edition under AGPL-3.0, or use a commercial license for
+							Enterprise modules and air-gapped deployments. Review the code
+							against your security requirements before rollout.
 						</p>
 					</div>
 					<LicenseActions />
@@ -787,14 +783,14 @@ function CTA() {
 				}}
 			/>
 			<div className="relative mx-auto max-w-[1000px] px-6 text-center">
-				<div className={eyebrow}>Run it on your infrastructure</div>
+				<div className={eyebrow}>Choose your deployment model</div>
 				<h2 className="mt-6 font-display tracking-[-0.02em] text-[clamp(2.5rem,6vw,5.5rem)] leading-[1.08]">
 					<span className="block">Your factory.</span>{" "}
 					<span className="block">Your servers.</span>
 				</h2>
 				<p className="mx-auto mt-6 max-w-[56ch] text-balance text-lg leading-relaxed text-muted-foreground">
-					Start from the source today, or have our team scope a deployment for
-					your program.
+					Deploy the Community edition yourself or work with our team on BYOC,
+					on-prem and air-gapped Enterprise deployments.
 				</p>
 				<LicenseActions className="mt-10 justify-center" />
 			</div>
@@ -810,7 +806,7 @@ export default function SelfHosted() {
 			<LogoStrip
 				headline={<Trans>Hard tech unicorns build on Carbon.</Trans>}
 				label={
-					<Trans>And some of the world's most innovative manufacturers</Trans>
+					<Trans>From hardware startups to regulated production teams</Trans>
 				}
 			/>
 			<Byoc />
