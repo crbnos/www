@@ -100,7 +100,7 @@ msgstr "气隙式和ITAR部署"
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "所有Carbon商标、徽标或其他品牌元素不得以任何方式修改或用于任何其他目的，仅限用于代表Carbon Manufacturing Systems Corporation。"
 
-#: app/routes/_index.tsx:821
+#: app/routes/_index.tsx:823
 msgid "An API for the entire organization."
 msgstr "面向整个组织的 API"
 
@@ -108,7 +108,7 @@ msgstr "面向整个组织的 API"
 msgid "Analytics"
 msgstr "分析"
 
-#: app/routes/_index.tsx:1169
+#: app/routes/_index.tsx:1171
 #: app/routes/self-hosted.tsx:813
 msgid "And some of the world's most innovative manufacturers"
 msgstr "以及世界上一些最具创新精神的制造商"
@@ -122,7 +122,7 @@ msgstr "动画组装说明"
 msgid "API"
 msgstr "API"
 
-#: app/routes/_index.tsx:841
+#: app/routes/_index.tsx:843
 msgid "API Docs"
 msgstr "API 文档"
 
@@ -150,11 +150,11 @@ msgstr "AS9100"
 msgid "AS9100, FAI, full genealogy"
 msgstr "AS9100、FAI、完整溯源"
 
-#: app/routes/_index.tsx:997
+#: app/routes/_index.tsx:999
 msgid "Ask your agent what it thinks"
 msgstr "询问您的代理的看法"
 
-#: app/routes/_index.tsx:1032
+#: app/routes/_index.tsx:1034
 msgid "Audit it before you deploy it"
 msgstr "在部署前进行审计"
 
@@ -166,7 +166,7 @@ msgstr "审计日志、2FA强制执行和备份/恢复"
 msgid "Audit trail is the database"
 msgstr "审计追踪就是数据库"
 
-#: app/routes/_index.tsx:970
+#: app/routes/_index.tsx:972
 msgid "Auditable by design."
 msgstr "设计即可审计。"
 
@@ -247,7 +247,7 @@ msgstr "<1>以软件的速度</1><0/>打造硬件"
 msgid "Build vs. buy"
 msgstr "自研还是购买"
 
-#: app/routes/_index.tsx:1022
+#: app/routes/_index.tsx:1024
 msgid "Built for CMMC compliance"
 msgstr "为CMMC合规性而构建"
 
@@ -268,7 +268,7 @@ msgstr "购买源代码"
 msgid "CAD"
 msgstr "CAD"
 
-#: app/routes/_index.tsx:694
+#: app/routes/_index.tsx:696
 msgid "CAD to Cash"
 msgstr "从 CAD 到现金"
 
@@ -284,7 +284,7 @@ msgstr "Carbon 将 ERP、MES 和 QMS 整合到一个统一的系统中。"
 msgid "Carbon is the open-source manufacturing ERP/MES/QMS. Quote, plan, buy, build, inspect and ship on one live model of your factory."
 msgstr "Carbon是开源的制造业ERP/MES/QMS。在您工厂的一个实时模型上进行报价、计划、采购、构建、检查和发货。"
 
-#: app/routes/_index.tsx:1000
+#: app/routes/_index.tsx:1002
 msgid "Carbon's source code is available. Copy the prompt below into your favorite LLM."
 msgstr "Carbon的源代码是可用的。将下面的提示复制到您喜欢的LLM中。"
 
@@ -418,11 +418,11 @@ msgid "Contact Us"
 msgstr "联系我们"
 
 #: app/components/logo-menu.tsx:66
-#: app/routes/_index.tsx:948
+#: app/routes/_index.tsx:950
 msgid "Copied"
 msgstr "已复制"
 
-#: app/routes/_index.tsx:948
+#: app/routes/_index.tsx:950
 msgid "Copy"
 msgstr "复制"
 
@@ -446,7 +446,7 @@ msgstr "事后猜测的成本"
 msgid "Create a branded ordering experience that drives production"
 msgstr "创建品牌化的订购体验，推动生产"
 
-#: app/routes/_index.tsx:1146
+#: app/routes/_index.tsx:1148
 msgid "Create a company, connect the MCP, release your first job today."
 msgstr "创建公司、连接MCP、今天发布第一个作业。"
 
@@ -593,7 +593,7 @@ msgstr "企业版。通过优先功能请求影响产品路线图"
 msgid "ERP · MRP · MES · QMS"
 msgstr "ERP · MRP · MES · QMS"
 
-#: app/routes/_index.tsx:1028
+#: app/routes/_index.tsx:1030
 msgid "ERP, MRP, MES and QMS on a single database you control, with row-level security. Your data never leaves your perimeter — no vendor cloud, no third-party data lake."
 msgstr "ERP、MRP、MES和QMS在您控制的单个数据库上，具有行级安全性。您的数据永远不会离开您的周边——没有供应商云，没有第三方数据湖。"
 
@@ -605,7 +605,7 @@ msgstr "每个零件、小时、条形码和偏差都被实时跟踪和处理。
 msgid "Every site on one ledger."
 msgstr "所有地点在一个分类账中。"
 
-#: app/routes/_index.tsx:697
+#: app/routes/_index.tsx:699
 msgid "Every stage writes to the same record. No handoffs, no re-keying, no reconciliation."
 msgstr "每个阶段都写入同一条记录。没有交接、没有重新输入、没有协调。"
 
@@ -649,7 +649,7 @@ msgstr "展开图像"
 msgid "Expenses"
 msgstr "费用"
 
-#: app/routes/_index.tsx:1059
+#: app/routes/_index.tsx:1061
 msgid "Explore Self-Hosting"
 msgstr "探索自主托管"
 
@@ -738,7 +738,7 @@ msgstr "全局搜索"
 msgid "GovCloud, self-hosted and air-gapped ready"
 msgstr "支持 GovCloud、自托管和离线隔离部署"
 
-#: app/routes/_index.tsx:1167
+#: app/routes/_index.tsx:1169
 #: app/routes/self-hosted.tsx:811
 msgid "Hard tech unicorns build on Carbon."
 msgstr "硬科技独角兽在Carbon上构建。"
@@ -755,11 +755,11 @@ msgstr "巨大的咨询账单"
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "我相信开源具有令人难以置信的潜力，因为它不仅仅是一个产品——它是一个志同道合的人们社区，致力于在人工智能和机器人时代建设制造业的未来。"
 
-#: app/routes/_index.tsx:883
+#: app/routes/_index.tsx:885
 msgid "If it has a bill of materials, Carbon runs it."
 msgstr "如果有物料清单，Carbon就能运行它。"
 
-#: app/routes/_index.tsx:973
+#: app/routes/_index.tsx:975
 msgid "Immutable ledgers, granular permissions, and the controls regulated programs are held to."
 msgstr "不可变分类账、细粒度权限和受监管程序必须遵守的控制。"
 
@@ -771,7 +771,7 @@ msgstr "检测到事件"
 msgid "Industrial equipment"
 msgstr "工业设备"
 
-#: app/routes/_index.tsx:1101
+#: app/routes/_index.tsx:1103
 msgid "Integrated with the world's best software."
 msgstr "与世界最好的软件集成。"
 
@@ -839,7 +839,7 @@ msgstr "加入我们的 Discord 社区"
 msgid "Kanban Schedule"
 msgstr "看板计划"
 
-#: app/routes/_index.tsx:1023
+#: app/routes/_index.tsx:1025
 msgid "Keep CUI inside your own boundary. Deploy on a single box, your own VPC, or fully air-gapped for defense programs that have to meet CMMC and ITAR requirements."
 msgstr "将CUI保留在您自己的边界内。在单个框上、您自己的VPC或完全气隙式部署，用于必须满足CMMC和ITAR要求的防御程序。"
 
@@ -928,7 +928,7 @@ msgstr "制造执行"
 msgid "Manufacturing-focused, GAAP accounting"
 msgstr "以制造为中心，GAAP 会计"
 
-#: app/routes/_index.tsx:831
+#: app/routes/_index.tsx:833
 msgid "MCP Docs"
 msgstr "MCP 文档"
 
@@ -1012,7 +1012,7 @@ msgstr "无需自定义开发"
 msgid "On-prem, private cloud, or air-gapped"
 msgstr "本地部署、私有云或气隙隔离"
 
-#: app/routes/_index.tsx:1027
+#: app/routes/_index.tsx:1029
 msgid "One Postgres schema, and it's yours"
 msgstr "一个Postgres架构，它是您的"
 
@@ -1024,6 +1024,7 @@ msgstr "一次性、单件溯源"
 msgid "One-time purchase with full ownership"
 msgstr "一次性购买，完全所有权"
 
+#: app/routes/_index.tsx:995
 #: app/routes/pricing.tsx:38
 msgid "Open source"
 msgstr "开源"
@@ -1040,7 +1041,7 @@ msgstr "操作员终端"
 msgid "ops on the floor"
 msgstr "工厂操作"
 
-#: app/routes/_index.tsx:1154
+#: app/routes/_index.tsx:1156
 msgid "Or self-host the open source core"
 msgstr "或自托管开源核心"
 
@@ -1187,7 +1188,7 @@ msgstr "实时、真实成本的车间。"
 msgid "Recommended. Priority support with dedicated account manager"
 msgstr "推荐。优先支持和专属账户经理"
 
-#: app/routes/_index.tsx:887
+#: app/routes/_index.tsx:889
 msgid "Regulated or not, one-off or rate production — the primitives are the same. The configuration is yours."
 msgstr "无论是否受管制、一次性或批量生产——原始方法是相同的。配置是您的。"
 
@@ -1265,14 +1266,14 @@ msgstr "自助安装"
 msgid "Self-Host Carbon"
 msgstr "自托管Carbon"
 
-#: app/routes/_index.tsx:1053
+#: app/routes/_index.tsx:1055
 msgid "Self-host in your own cloud or on-prem"
 msgstr "在您自己的云端或本地自托管"
 
 #: app/components/footer.tsx:64
 #: app/components/header.tsx:92
 #: app/components/header.tsx:217
-#: app/routes/_index.tsx:1049
+#: app/routes/_index.tsx:1051
 #: app/routes/pricing.tsx:211
 msgid "Self-hosted"
 msgstr "自主托管"
@@ -1317,7 +1318,7 @@ msgstr "共享数据库，数据隔离"
 msgid "Shared schema"
 msgstr "共享架构"
 
-#: app/routes/_index.tsx:1143
+#: app/routes/_index.tsx:1145
 msgid "Ship faster than your competitors can quote."
 msgstr "比竞争对手报价更快地发货。"
 
@@ -1365,10 +1366,6 @@ msgstr "SOC 2 控制"
 msgid "Software as a Service"
 msgstr "软件即服务"
 
-#: app/routes/_index.tsx:993
-msgid "Source available"
-msgstr "源代码可用"
-
 #: app/components/footer.tsx:65
 msgid "Source Code"
 msgstr "源代码"
@@ -1402,7 +1399,7 @@ msgstr "开始30天免费试用"
 msgid "Start Free"
 msgstr "免费开始"
 
-#: app/routes/_index.tsx:1140
+#: app/routes/_index.tsx:1142
 msgid "Start now · No call required"
 msgstr "立即开始 · 无需通话"
 
@@ -1476,7 +1473,7 @@ msgstr "现代制造堆栈"
 msgid "The open-source core of Carbon, free under AGPL-3.0"
 msgstr "Carbon的开源核心，在AGPL-3.0下免费"
 
-#: app/routes/_index.tsx:1033
+#: app/routes/_index.tsx:1035
 msgid "The whole application is on GitHub — the Community edition under AGPL-3.0. Read every line, run a security review, and extend it to fit your process."
 msgstr "整个应用程序都在GitHub上——社区版本在AGPL-3.0下。阅读每一行，运行安全审查，并将其扩展以适应您的流程。"
 
@@ -1488,7 +1485,7 @@ msgstr "可追溯性是默认状态。"
 msgid "Traveler printed at 6am, stale by 9"
 msgstr "作业单在早上6点打印，到9点就过期了"
 
-#: app/routes/_index.tsx:966
+#: app/routes/_index.tsx:968
 msgid "Trusted"
 msgstr "值得信赖的"
 
@@ -1520,7 +1517,7 @@ msgstr "无限记录"
 msgid "View our source code and contribute"
 msgstr "查看我们的源代码并做出贡献"
 
-#: app/routes/_index.tsx:1065
+#: app/routes/_index.tsx:1067
 msgid "View the Source"
 msgstr "查看源代码"
 

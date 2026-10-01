@@ -28,7 +28,7 @@ import { REPO_URL, SITE_URL } from "~/lib/agent/site";
  */
 
 const DESCRIPTION =
-	"Own the stack: run Carbon on your own infrastructure — managed in your own cloud account in one click (BYOC), on-prem, or fully air-gapped. ERP, MRP, MES and QMS on Postgres you own, source available, with an AGPL-3.0 Community edition.";
+	"Own the stack: run Carbon on your own infrastructure — managed in your own cloud account in one click (BYOC), on-prem, or fully air-gapped. ERP, MRP, MES and QMS on Postgres you own, open source, with an AGPL-3.0 Community edition.";
 
 const DOCS_URL = "https://docs.carbon.ms";
 

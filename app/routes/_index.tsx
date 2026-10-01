@@ -190,7 +190,7 @@ const devPillars = [
 		desc: msg`A built-in MCP server exposes 1,374 operations across 15 modules through three discovery tools. Permissions are baked in — an agent can never do what its identity can't.`,
 	},
 	{
-		tag: "Source available",
+		tag: "Open source",
 		name: msg`Read it. Extend it.`,
 		desc: msg`A typed TypeScript monorepo with one generated database type shared across the app, the API, and the AI tools. Bring your own LLM.`,
 	},
@@ -645,10 +645,12 @@ function OneModel() {
 										: "bg-card text-muted-foreground hover:text-foreground",
 								)}
 							>
-								<div className="font-mono text-[10px] uppercase leading-none tracking-[0.18em]">
-									{m.code}
+								<div className="font-mono text-[10px] uppercase leading-none tracking-wide text-secondary">
+									<span className="inline-block bg-secondary/10 dark:bg-secondary-surface px-3 py-1.5">
+										{m.code}
+									</span>
 								</div>
-								<div className="mt-3 text-[17px] font-medium">
+								<div className="mt-4 text-[17px] font-medium">
 									{i18n._(m.name)}
 								</div>
 								<div className="mt-2 font-mono text-xs text-muted-foreground">
@@ -990,7 +992,7 @@ function TrustOpen() {
 					<div className="bg-muted p-10 sm:p-11">
 						<div className="font-mono text-[10px] uppercase leading-none tracking-wide text-secondary">
 							<span className="inline-block bg-secondary/10 dark:bg-secondary-surface px-3 py-1.5">
-								<Trans>Source available</Trans>
+								<Trans>Open source</Trans>
 							</span>
 						</div>
 						<h3 className="mt-5 font-display tracking-[-0.01em] text-[clamp(1.625rem,2.6vw,2.375rem)] leading-[1.1]">
@@ -1028,7 +1030,7 @@ const selfHostPillars = [
 		desc: msg`ERP, MRP, MES and QMS on a single database you control, with row-level security. Your data never leaves your perimeter — no vendor cloud, no third-party data lake.`,
 	},
 	{
-		tag: "Source available",
+		tag: "Open source",
 		name: msg`Audit it before you deploy it`,
 		desc: msg`The whole application is on GitHub — the Community edition under AGPL-3.0. Read every line, run a security review, and extend it to fit your process.`,
 	},

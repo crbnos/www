@@ -100,7 +100,7 @@ msgstr "Luftgekapselte und ITAR-Bereitstellungen"
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "Alle Carbon-Markenzeichen, Logos oder andere Markenelemente dürfen niemals geändert oder für einen anderen Zweck als die Darstellung der Carbon Manufacturing Systems Corporation verwendet werden."
 
-#: app/routes/_index.tsx:821
+#: app/routes/_index.tsx:823
 msgid "An API for the entire organization."
 msgstr "Eine API für die gesamte Organisation."
 
@@ -108,7 +108,7 @@ msgstr "Eine API für die gesamte Organisation."
 msgid "Analytics"
 msgstr "Analytik"
 
-#: app/routes/_index.tsx:1169
+#: app/routes/_index.tsx:1171
 #: app/routes/self-hosted.tsx:813
 msgid "And some of the world's most innovative manufacturers"
 msgstr "Und einige der weltweit innovativsten Hersteller"
@@ -122,7 +122,7 @@ msgstr "Animierte Montageanleitungen"
 msgid "API"
 msgstr "API"
 
-#: app/routes/_index.tsx:841
+#: app/routes/_index.tsx:843
 msgid "API Docs"
 msgstr "API-Dokumentation"
 
@@ -150,11 +150,11 @@ msgstr "AS9100"
 msgid "AS9100, FAI, full genealogy"
 msgstr "AS9100, FAI, vollständige Genealogie"
 
-#: app/routes/_index.tsx:997
+#: app/routes/_index.tsx:999
 msgid "Ask your agent what it thinks"
 msgstr "Fragen Sie Ihren Agenten, was er denkt"
 
-#: app/routes/_index.tsx:1032
+#: app/routes/_index.tsx:1034
 msgid "Audit it before you deploy it"
 msgstr "Überprüfen Sie es vor der Bereitstellung"
 
@@ -166,7 +166,7 @@ msgstr "Audit-Logging, 2FA-Erzwingung und Sicherung/Wiederherstellung"
 msgid "Audit trail is the database"
 msgstr "Audit-Protokoll ist die Datenbank"
 
-#: app/routes/_index.tsx:970
+#: app/routes/_index.tsx:972
 msgid "Auditable by design."
 msgstr "Prüfbar by Design."
 
@@ -247,7 +247,7 @@ msgstr "Baue Hardware in der <0/><1>Geschwindigkeit von Software</1>"
 msgid "Build vs. buy"
 msgstr "Eigenentwicklung vs. Kauf"
 
-#: app/routes/_index.tsx:1022
+#: app/routes/_index.tsx:1024
 msgid "Built for CMMC compliance"
 msgstr "Gebaut für CMMC-Konformität"
 
@@ -268,7 +268,7 @@ msgstr "Quellcode kaufen"
 msgid "CAD"
 msgstr "CAD"
 
-#: app/routes/_index.tsx:694
+#: app/routes/_index.tsx:696
 msgid "CAD to Cash"
 msgstr "Von CAD zu Cash"
 
@@ -284,7 +284,7 @@ msgstr "Carbon kombiniert ERP, MES und QMS in einem einzigen, einheitlichen Syst
 msgid "Carbon is the open-source manufacturing ERP/MES/QMS. Quote, plan, buy, build, inspect and ship on one live model of your factory."
 msgstr "Carbon ist das Open-Source-ERP/MES/QMS für die Fertigung. Angebot, Planung, Kauf, Fertigung, Inspektionen und Versand erfolgen auf einem Live-Modell Ihrer Fabrik."
 
-#: app/routes/_index.tsx:1000
+#: app/routes/_index.tsx:1002
 msgid "Carbon's source code is available. Copy the prompt below into your favorite LLM."
 msgstr "Der Quellcode von Carbon ist verfügbar. Kopieren Sie die Eingabeaufforderung unten in Ihren bevorzugten LLM."
 
@@ -418,11 +418,11 @@ msgid "Contact Us"
 msgstr "Kontaktieren Sie uns"
 
 #: app/components/logo-menu.tsx:66
-#: app/routes/_index.tsx:948
+#: app/routes/_index.tsx:950
 msgid "Copied"
 msgstr "Kopiert"
 
-#: app/routes/_index.tsx:948
+#: app/routes/_index.tsx:950
 msgid "Copy"
 msgstr "Kopieren"
 
@@ -446,7 +446,7 @@ msgstr "Kostenrechnung im Nachhinein geschätzt"
 msgid "Create a branded ordering experience that drives production"
 msgstr "Erstellen Sie ein Markenerlebnis für Bestellungen, das die Produktion vorantreibt"
 
-#: app/routes/_index.tsx:1146
+#: app/routes/_index.tsx:1148
 msgid "Create a company, connect the MCP, release your first job today."
 msgstr "Erstellen Sie ein Unternehmen, verbinden Sie das MCP, veröffentlichen Sie Ihren ersten Auftrag heute."
 
@@ -593,7 +593,7 @@ msgstr "Enterprise. Beeinflussen Sie die Produktentwicklung mit priorisierten Fu
 msgid "ERP · MRP · MES · QMS"
 msgstr "ERP · MRP · MES · QMS"
 
-#: app/routes/_index.tsx:1028
+#: app/routes/_index.tsx:1030
 msgid "ERP, MRP, MES and QMS on a single database you control, with row-level security. Your data never leaves your perimeter — no vendor cloud, no third-party data lake."
 msgstr "ERP, MRP, MES und QMS auf einer einzelnen Datenbank, die Sie kontrollieren, mit Zeilensicherheit. Ihre Daten verlassen niemals Ihre Grenzen – keine Anbieter-Cloud, kein Drittunsternehmen-Datensee."
 
@@ -605,7 +605,7 @@ msgstr "Jedes Teil, jede Stunde, jeden Barcode und jede Abweichung in Echtzeit e
 msgid "Every site on one ledger."
 msgstr "Alle Standorte in einem Ledger."
 
-#: app/routes/_index.tsx:697
+#: app/routes/_index.tsx:699
 msgid "Every stage writes to the same record. No handoffs, no re-keying, no reconciliation."
 msgstr "Jede Phase schreibt in denselben Datensatz. Keine Übergaben, keine Neuerfassung, keine Abstimmung."
 
@@ -649,7 +649,7 @@ msgstr "Bild vergrößern"
 msgid "Expenses"
 msgstr "Ausgaben"
 
-#: app/routes/_index.tsx:1059
+#: app/routes/_index.tsx:1061
 msgid "Explore Self-Hosting"
 msgstr "Selbsthosting erkunden"
 
@@ -738,7 +738,7 @@ msgstr "Globale Suche"
 msgid "GovCloud, self-hosted and air-gapped ready"
 msgstr "Bereit für GovCloud, Self-Hosting und Air-Gap"
 
-#: app/routes/_index.tsx:1167
+#: app/routes/_index.tsx:1169
 #: app/routes/self-hosted.tsx:811
 msgid "Hard tech unicorns build on Carbon."
 msgstr "Hard-Tech-Einhörner bauen auf Carbon."
@@ -755,11 +755,11 @@ msgstr "Riesige Beratungsrechnungen"
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "Ich glaube, dass Open Source unglaubliches Potenzial hat, weil es nicht nur ein Produkt ist – es ist eine Gemeinschaft von Gleichgesinnten, die an der Zukunft der Fertigung im Zeitalter von KI und Robotik arbeitet."
 
-#: app/routes/_index.tsx:883
+#: app/routes/_index.tsx:885
 msgid "If it has a bill of materials, Carbon runs it."
 msgstr "Wenn es eine Stückliste gibt, läuft Carbon."
 
-#: app/routes/_index.tsx:973
+#: app/routes/_index.tsx:975
 msgid "Immutable ledgers, granular permissions, and the controls regulated programs are held to."
 msgstr "Unveränderliche Ledger, granulare Berechtigungen und die Kontrollen, an die sich regulierte Programme halten müssen."
 
@@ -771,7 +771,7 @@ msgstr "Incident erkannt"
 msgid "Industrial equipment"
 msgstr "Industrielle Ausrüstung"
 
-#: app/routes/_index.tsx:1101
+#: app/routes/_index.tsx:1103
 msgid "Integrated with the world's best software."
 msgstr "Integriert mit der besten Software der Welt."
 
@@ -839,7 +839,7 @@ msgstr "Treten Sie unserer Discord-Community bei"
 msgid "Kanban Schedule"
 msgstr "Kanban-Zeitplan"
 
-#: app/routes/_index.tsx:1023
+#: app/routes/_index.tsx:1025
 msgid "Keep CUI inside your own boundary. Deploy on a single box, your own VPC, or fully air-gapped for defense programs that have to meet CMMC and ITAR requirements."
 msgstr "Halten Sie CUI innerhalb Ihrer eigenen Grenzen. Stellen Sie auf einer einzelnen Box, Ihrem eigenen VPC oder vollständig luftgekapselt für Verteidigungsprogramme bereit, die CMMC- und ITAR-Anforderungen erfüllen müssen."
 
@@ -928,7 +928,7 @@ msgstr "Fertigungsausführung"
 msgid "Manufacturing-focused, GAAP accounting"
 msgstr "Herstellungsorientiert, GAAP-Buchhaltung"
 
-#: app/routes/_index.tsx:831
+#: app/routes/_index.tsx:833
 msgid "MCP Docs"
 msgstr "MCP Docs"
 
@@ -1012,7 +1012,7 @@ msgstr "Keine erforderlich"
 msgid "On-prem, private cloud, or air-gapped"
 msgstr "On-Premises, Private Cloud oder isoliert"
 
-#: app/routes/_index.tsx:1027
+#: app/routes/_index.tsx:1029
 msgid "One Postgres schema, and it's yours"
 msgstr "Ein Postgres-Schema, und es gehört dir"
 
@@ -1024,6 +1024,7 @@ msgstr "Einzelstück-Rückverfolgbarkeit"
 msgid "One-time purchase with full ownership"
 msgstr "Einmaliger Kauf mit vollständigem Eigentum"
 
+#: app/routes/_index.tsx:995
 #: app/routes/pricing.tsx:38
 msgid "Open source"
 msgstr "Open Source"
@@ -1040,7 +1041,7 @@ msgstr "Bedienterminal"
 msgid "ops on the floor"
 msgstr "Vorgänge auf dem Boden"
 
-#: app/routes/_index.tsx:1154
+#: app/routes/_index.tsx:1156
 msgid "Or self-host the open source core"
 msgstr "Oder hosten Sie den Open-Source-Kern selbst"
 
@@ -1187,7 +1188,7 @@ msgstr "Echtzeitfertigungshalle mit realen Kosten."
 msgid "Recommended. Priority support with dedicated account manager"
 msgstr "Empfohlen. Prioritätssupport mit dediziertem Account Manager"
 
-#: app/routes/_index.tsx:887
+#: app/routes/_index.tsx:889
 msgid "Regulated or not, one-off or rate production — the primitives are the same. The configuration is yours."
 msgstr "Reguliert oder nicht, Einzelstück oder Serienfertigung – die Grundelemente sind gleich. Die Konfiguration ist Ihre."
 
@@ -1265,14 +1266,14 @@ msgstr "Selbstgeführte Installation"
 msgid "Self-Host Carbon"
 msgstr "Carbon selbst hosten"
 
-#: app/routes/_index.tsx:1053
+#: app/routes/_index.tsx:1055
 msgid "Self-host in your own cloud or on-prem"
 msgstr "Self-Hosting in Ihrer eigenen Cloud oder On-Prem"
 
 #: app/components/footer.tsx:64
 #: app/components/header.tsx:92
 #: app/components/header.tsx:217
-#: app/routes/_index.tsx:1049
+#: app/routes/_index.tsx:1051
 #: app/routes/pricing.tsx:211
 msgid "Self-hosted"
 msgstr "Selbstgehostet"
@@ -1317,7 +1318,7 @@ msgstr "Gemeinsame Datenbank mit isolierten Daten"
 msgid "Shared schema"
 msgstr "Gemeinsames Schema"
 
-#: app/routes/_index.tsx:1143
+#: app/routes/_index.tsx:1145
 msgid "Ship faster than your competitors can quote."
 msgstr "Versenden Sie schneller, als Ihre Konkurrenten anbieten können."
 
@@ -1365,10 +1366,6 @@ msgstr "SOC 2 Kontrollen"
 msgid "Software as a Service"
 msgstr "Software as a Service"
 
-#: app/routes/_index.tsx:993
-msgid "Source available"
-msgstr "Quellcode verfügbar"
-
 #: app/components/footer.tsx:65
 msgid "Source Code"
 msgstr "Quellcode"
@@ -1402,7 +1399,7 @@ msgstr "Starten Sie die kostenlose 30-Tage-Testversion"
 msgid "Start Free"
 msgstr "Kostenlos starten"
 
-#: app/routes/_index.tsx:1140
+#: app/routes/_index.tsx:1142
 msgid "Start now · No call required"
 msgstr "Jetzt starten · Kein Anruf erforderlich"
 
@@ -1476,7 +1473,7 @@ msgstr "Der moderne Manufacturing Stack"
 msgid "The open-source core of Carbon, free under AGPL-3.0"
 msgstr "Der Open-Source-Kern von Carbon, kostenlos unter AGPL-3.0"
 
-#: app/routes/_index.tsx:1033
+#: app/routes/_index.tsx:1035
 msgid "The whole application is on GitHub — the Community edition under AGPL-3.0. Read every line, run a security review, and extend it to fit your process."
 msgstr "Die ganze Anwendung ist auf GitHub – die Community-Edition unter AGPL-3.0. Lesen Sie jede Zeile, führen Sie eine Sicherheitsüberprüfung durch und erweitern Sie sie, um sie an Ihren Prozess anzupassen."
 
@@ -1488,7 +1485,7 @@ msgstr "Rückverfolgbarkeit ist der Standardzustand."
 msgid "Traveler printed at 6am, stale by 9"
 msgstr "Begleiter gedruckt um 6 Uhr, veraltet um 9 Uhr"
 
-#: app/routes/_index.tsx:966
+#: app/routes/_index.tsx:968
 msgid "Trusted"
 msgstr "Vertrauenswürdig"
 
@@ -1520,7 +1517,7 @@ msgstr "Unbegrenzte Datensätze"
 msgid "View our source code and contribute"
 msgstr "Zeigen Sie unseren Quellcode an und tragen Sie bei"
 
-#: app/routes/_index.tsx:1065
+#: app/routes/_index.tsx:1067
 msgid "View the Source"
 msgstr "Quelle anzeigen"
 

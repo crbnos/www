@@ -100,7 +100,7 @@ msgstr "エアギャップおよびITAR展開"
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "すべてのCarbonの商標、ロゴ、またはその他のブランド要素は、Carbon Manufacturing Systems Corporationを表現する目的以外に変更または使用することはできません。"
 
-#: app/routes/_index.tsx:821
+#: app/routes/_index.tsx:823
 msgid "An API for the entire organization."
 msgstr "組織全体のための API"
 
@@ -108,7 +108,7 @@ msgstr "組織全体のための API"
 msgid "Analytics"
 msgstr "分析"
 
-#: app/routes/_index.tsx:1169
+#: app/routes/_index.tsx:1171
 #: app/routes/self-hosted.tsx:813
 msgid "And some of the world's most innovative manufacturers"
 msgstr "そして世界で最も革新的なメーカーの一部"
@@ -122,7 +122,7 @@ msgstr "アニメーション付き組立指示"
 msgid "API"
 msgstr "API"
 
-#: app/routes/_index.tsx:841
+#: app/routes/_index.tsx:843
 msgid "API Docs"
 msgstr "API ドキュメント"
 
@@ -150,11 +150,11 @@ msgstr "AS9100"
 msgid "AS9100, FAI, full genealogy"
 msgstr "AS9100、FAI、完全な系統"
 
-#: app/routes/_index.tsx:997
+#: app/routes/_index.tsx:999
 msgid "Ask your agent what it thinks"
 msgstr "エージェントの意見を聞く"
 
-#: app/routes/_index.tsx:1032
+#: app/routes/_index.tsx:1034
 msgid "Audit it before you deploy it"
 msgstr "デプロイする前に監査してください"
 
@@ -166,7 +166,7 @@ msgstr "監査ログ、2FA強制、バックアップ/復元"
 msgid "Audit trail is the database"
 msgstr "監査証跡がデータベース"
 
-#: app/routes/_index.tsx:970
+#: app/routes/_index.tsx:972
 msgid "Auditable by design."
 msgstr "設計から監査可能。"
 
@@ -247,7 +247,7 @@ msgstr "ハードウェアを<0/><1>ソフトウェアのスピードで</1>"
 msgid "Build vs. buy"
 msgstr "内製 vs. 外購"
 
-#: app/routes/_index.tsx:1022
+#: app/routes/_index.tsx:1024
 msgid "Built for CMMC compliance"
 msgstr "CMMC準拠用に構築"
 
@@ -268,7 +268,7 @@ msgstr "ソースコードを購入"
 msgid "CAD"
 msgstr "CAD"
 
-#: app/routes/_index.tsx:694
+#: app/routes/_index.tsx:696
 msgid "CAD to Cash"
 msgstr "CADから現金まで"
 
@@ -284,7 +284,7 @@ msgstr "Carbonは、ERP、MES、QMSを1つの統合されたシステムに組�
 msgid "Carbon is the open-source manufacturing ERP/MES/QMS. Quote, plan, buy, build, inspect and ship on one live model of your factory."
 msgstr "Carbonはオープンソースの製造業向けERP/MES/QMSです。工場の1つのライブモデルで見積もり、計画、購入、構築、検査、出荷できます。"
 
-#: app/routes/_index.tsx:1000
+#: app/routes/_index.tsx:1002
 msgid "Carbon's source code is available. Copy the prompt below into your favorite LLM."
 msgstr "Carbonのソースコードが利用可能です。以下のプロンプトをお気に入りのLLMにコピーします。"
 
@@ -418,11 +418,11 @@ msgid "Contact Us"
 msgstr "お問い合わせ"
 
 #: app/components/logo-menu.tsx:66
-#: app/routes/_index.tsx:948
+#: app/routes/_index.tsx:950
 msgid "Copied"
 msgstr "コピー済み"
 
-#: app/routes/_index.tsx:948
+#: app/routes/_index.tsx:950
 msgid "Copy"
 msgstr "コピー"
 
@@ -446,7 +446,7 @@ msgstr "後付けで推測された原価計算"
 msgid "Create a branded ordering experience that drives production"
 msgstr "ブランド化された注文体験を作成して、生産を促進します"
 
-#: app/routes/_index.tsx:1146
+#: app/routes/_index.tsx:1148
 msgid "Create a company, connect the MCP, release your first job today."
 msgstr "会社を作成し、MCPを接続し、今日最初のジョブをリリースします。"
 
@@ -593,7 +593,7 @@ msgstr "エンタープライズ。優先度の高い機能リクエストで製
 msgid "ERP · MRP · MES · QMS"
 msgstr "ERP · MRP · MES · QMS"
 
-#: app/routes/_index.tsx:1028
+#: app/routes/_index.tsx:1030
 msgid "ERP, MRP, MES and QMS on a single database you control, with row-level security. Your data never leaves your perimeter — no vendor cloud, no third-party data lake."
 msgstr "ERP、MRP、MES、QMSが単一のデータベースで管理され、行レベルのセキュリティがあります。データはペリメータから離れることはありません。ベンダークラウドやサードパーティデータレイクはありません。"
 
@@ -605,7 +605,7 @@ msgstr "すべての部品、作業時間、バーコード、偏差がリアル
 msgid "Every site on one ledger."
 msgstr "すべてのサイトが統一された帳簿上にあります。"
 
-#: app/routes/_index.tsx:697
+#: app/routes/_index.tsx:699
 msgid "Every stage writes to the same record. No handoffs, no re-keying, no reconciliation."
 msgstr "すべてのステージが同じレコードに書き込みます。ハンドオフなし、再入力なし、調整なし。"
 
@@ -649,7 +649,7 @@ msgstr "画像を拡大"
 msgid "Expenses"
 msgstr "経費"
 
-#: app/routes/_index.tsx:1059
+#: app/routes/_index.tsx:1061
 msgid "Explore Self-Hosting"
 msgstr "自己ホスティングを探索"
 
@@ -738,7 +738,7 @@ msgstr "グローバル検索"
 msgid "GovCloud, self-hosted and air-gapped ready"
 msgstr "GovCloud、セルフホスト、エアギャップ環境に対応"
 
-#: app/routes/_index.tsx:1167
+#: app/routes/_index.tsx:1169
 #: app/routes/self-hosted.tsx:811
 msgid "Hard tech unicorns build on Carbon."
 msgstr "ハードテック・ユニコーンがCarbonの上に構築。"
@@ -755,11 +755,11 @@ msgstr "巨大なコンサルティング料金"
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "オープンソースは素晴らしい可能性を秘めていると信じています。なぜなら、それは単なる製品ではなく、AIとロボティクスの時代に製造業の未来を構築しようとする志を同じくする人々のコミュニティだからです。"
 
-#: app/routes/_index.tsx:883
+#: app/routes/_index.tsx:885
 msgid "If it has a bill of materials, Carbon runs it."
 msgstr "部品表がある場合、Carbonがそれを実行します。"
 
-#: app/routes/_index.tsx:973
+#: app/routes/_index.tsx:975
 msgid "Immutable ledgers, granular permissions, and the controls regulated programs are held to."
 msgstr "不変の帳簿、粒度の細かい権限、および規制プログラムが対象とするコントロール。"
 
@@ -771,7 +771,7 @@ msgstr "インシデントが検出されました"
 msgid "Industrial equipment"
 msgstr "産業用機器"
 
-#: app/routes/_index.tsx:1101
+#: app/routes/_index.tsx:1103
 msgid "Integrated with the world's best software."
 msgstr "世界最高のソフトウェアと統合"
 
@@ -839,7 +839,7 @@ msgstr "Discordコミュニティに参加する"
 msgid "Kanban Schedule"
 msgstr "カンバンスケジュール"
 
-#: app/routes/_index.tsx:1023
+#: app/routes/_index.tsx:1025
 msgid "Keep CUI inside your own boundary. Deploy on a single box, your own VPC, or fully air-gapped for defense programs that have to meet CMMC and ITAR requirements."
 msgstr "CUIを自分の境界内に保ちます。単一のボックス、独自のVPC、またはCMMCおよびITAR要件を満たす必要のある防衛プログラム向けの完全にエアギャップで展開します。"
 
@@ -928,7 +928,7 @@ msgstr "製造実行"
 msgid "Manufacturing-focused, GAAP accounting"
 msgstr "製造重視、GAAP会計"
 
-#: app/routes/_index.tsx:831
+#: app/routes/_index.tsx:833
 msgid "MCP Docs"
 msgstr "MCP ドキュメント"
 
@@ -1012,7 +1012,7 @@ msgstr "不要"
 msgid "On-prem, private cloud, or air-gapped"
 msgstr "オンプレミス、プライベートクラウド、またはエアギャップ"
 
-#: app/routes/_index.tsx:1027
+#: app/routes/_index.tsx:1029
 msgid "One Postgres schema, and it's yours"
 msgstr "1つのPostgresスキーマ、それはあなたのものです"
 
@@ -1024,6 +1024,7 @@ msgstr "1回限り、1ロットのトレーサビリティ"
 msgid "One-time purchase with full ownership"
 msgstr "一度の購入で完全な所有権を取得"
 
+#: app/routes/_index.tsx:995
 #: app/routes/pricing.tsx:38
 msgid "Open source"
 msgstr "オープンソース"
@@ -1040,7 +1041,7 @@ msgstr "オペレータ端末"
 msgid "ops on the floor"
 msgstr "床上のオプス"
 
-#: app/routes/_index.tsx:1154
+#: app/routes/_index.tsx:1156
 msgid "Or self-host the open source core"
 msgstr "またはオープンソースコアの自己ホスト"
 
@@ -1187,7 +1188,7 @@ msgstr "リアルタイム、実コストの工場。"
 msgid "Recommended. Priority support with dedicated account manager"
 msgstr "推奨。専任のアカウントマネージャーによる優先サポート"
 
-#: app/routes/_index.tsx:887
+#: app/routes/_index.tsx:889
 msgid "Regulated or not, one-off or rate production — the primitives are the same. The configuration is yours."
 msgstr "規制されているかどうか、1回限りまたは生産レート — プリミティブは同じです。構成はあなたのものです。"
 
@@ -1265,14 +1266,14 @@ msgstr "セルフガイドインストール"
 msgid "Self-Host Carbon"
 msgstr "Carbon をセルフホスト"
 
-#: app/routes/_index.tsx:1053
+#: app/routes/_index.tsx:1055
 msgid "Self-host in your own cloud or on-prem"
 msgstr "自社クラウドまたはオンプレミスでセルフホスト"
 
 #: app/components/footer.tsx:64
 #: app/components/header.tsx:92
 #: app/components/header.tsx:217
-#: app/routes/_index.tsx:1049
+#: app/routes/_index.tsx:1051
 #: app/routes/pricing.tsx:211
 msgid "Self-hosted"
 msgstr "自己ホスト"
@@ -1317,7 +1318,7 @@ msgstr "分離されたデータを持つ共有データベース"
 msgid "Shared schema"
 msgstr "共有スキーマ"
 
-#: app/routes/_index.tsx:1143
+#: app/routes/_index.tsx:1145
 msgid "Ship faster than your competitors can quote."
 msgstr "競合他社が見積もるより速く配送します。"
 
@@ -1365,10 +1366,6 @@ msgstr "SOC 2コントロール"
 msgid "Software as a Service"
 msgstr "Software as a Service"
 
-#: app/routes/_index.tsx:993
-msgid "Source available"
-msgstr "ソース入手可能"
-
 #: app/components/footer.tsx:65
 msgid "Source Code"
 msgstr "ソースコード"
@@ -1402,7 +1399,7 @@ msgstr "30日間の無料トライアルを開始"
 msgid "Start Free"
 msgstr "無料開始"
 
-#: app/routes/_index.tsx:1140
+#: app/routes/_index.tsx:1142
 msgid "Start now · No call required"
 msgstr "今すぐ開始 · 通話不要"
 
@@ -1476,7 +1473,7 @@ msgstr "最新の製造スタック"
 msgid "The open-source core of Carbon, free under AGPL-3.0"
 msgstr "Carbon のオープンソースコアで、AGPL-3.0下で無料"
 
-#: app/routes/_index.tsx:1033
+#: app/routes/_index.tsx:1035
 msgid "The whole application is on GitHub — the Community edition under AGPL-3.0. Read every line, run a security review, and extend it to fit your process."
 msgstr "アプリケーション全体がGitHub上にあります—AGPL-3.0下のCommunity版。すべての行を読み、セキュリティレビューを実行し、プロセスに合わせて拡張します。"
 
@@ -1488,7 +1485,7 @@ msgstr "トレーサビリティはデフォルト状態です。"
 msgid "Traveler printed at 6am, stale by 9"
 msgstr "午前6時に印刷されたトラベラー、午前9時までに古くなる"
 
-#: app/routes/_index.tsx:966
+#: app/routes/_index.tsx:968
 msgid "Trusted"
 msgstr "信頼"
 
@@ -1520,7 +1517,7 @@ msgstr "無制限のレコード"
 msgid "View our source code and contribute"
 msgstr "ソースコードを表示して貢献する"
 
-#: app/routes/_index.tsx:1065
+#: app/routes/_index.tsx:1067
 msgid "View the Source"
 msgstr "ソースを表示"
 

@@ -80,7 +80,7 @@ stage writes to the same record: no handoffs, no re-keying, no reconciliation.
   yours.
 - **Auditable by design.** Immutable ledgers, granular permissions, and
   the controls regulated programs are held to.
-- **Source available.** The whole system is on
+- **Open source.** The whole system is on
   [GitHub](${REPO_URL}); run it hosted or self-host it.
 
 ## Where to go next
