@@ -22,9 +22,9 @@ import { pageMeta } from "~/lib/seo";
 // page its own SERP entry.
 export const meta: MetaFunction = ({ matches }) =>
 	pageMeta(matches, {
-		title: "Carbon — Manufacturing ERP, MES & QMS on one system",
+		title: "Carbon — Manufacturing ERP, MRP, MES & QMS",
 		description:
-			"Carbon is the engineering-first operating system for manufacturers — ERP, MRP, MES and QMS on one live model of your factory. Open-source and API-first.",
+			"Carbon is an open-source manufacturing system for ERP, MRP, MES and QMS. Plan materials, run production, manage quality and track costs on one data model.",
 	});
 
 /* -------------------------------------------------------------------------- */
@@ -38,42 +38,41 @@ export const meta: MetaFunction = ({ matches }) =>
 // URLs and other proper nouns are left as plain strings on purpose.
 
 const statusQuo = [
-	
 	{
 		id: "spreadsheet",
-		name: msg`Spreadsheet`,
+		name: msg`Spreadsheets`,
 		rows: [
-            msg`Based on assumptions`,
-			msg`Shortages found on the floor`,
-			msg`Costing guessed after the fact`,
-			msg`Revisions lost in email`,
+			msg`Plans depend on manual inputs`,
+			msg`Shortages surface during production`,
+			msg`Actual costs arrive after the job`,
+			msg`Revisions move through email`,
 			msg`No serial-level history`,
-			msg`Audits reconstructed from memory`,
+			msg`Audit records must be reconstructed`,
 		],
 	},
-  {
+	{
 		id: "legacy",
 		name: msg`Legacy ERP`,
 		rows: [
-            msg`Accounting-focused`,
+			msg`Designed around accounting`,
 			msg`18-month implementation`,
-			msg`Huge consulting bills`,
+			msg`Consultants required for changes`,
 			msg`BOMs re-keyed by hand`,
-			msg`Traveler printed at 6am, stale by 9`,
-			msg`Quality in a separate binder`,
+			msg`Printed travelers become stale`,
+			msg`Quality runs in a separate system`,
 		],
 	},
 	{
 		id: "carbon",
-		name: msg`Next Generation`,
+		name: msg`Carbon`,
 		accent: true,
 		rows: [
-            msg`Manufacturing-focused, GAAP accounting`,
-            msg`Everything integrated`,
-			msg`Live in weeks`,
-			msg`API-first, with first-class MCP`,
-			msg`Full traceability and COGS`,
-			msg`Audit trail is the database`,
+			msg`Manufacturing workflows with GAAP accounting`,
+			msg`ERP, MRP, MES and QMS share one schema`,
+			msg`Deploy in weeks`,
+			msg`REST API, webhooks and MCP`,
+			msg`Serial traceability and actual COGS`,
+			msg`Audit history stored with each record`,
 		],
 	},
 ];
@@ -83,7 +82,7 @@ const modules = [
 		code: "ERP",
 		shot: "sales-order",
 		name: msg`Inventory & Costing`,
-		note: msg`money in, money out`,
+		note: msg`orders, inventory and actual costs`,
 		rows: [
 			msg`Quotes & RFQ pricing`,
 			msg`Sales orders`,
@@ -98,7 +97,7 @@ const modules = [
 		code: "MRP",
 		shot: "kanban",
 		name: msg`Planning`,
-		note: msg`what to make, when`,
+		note: msg`materials, capacity and schedules`,
 		rows: [
 			msg`Demand & forecast`,
 			msg`Supply planning runs`,
@@ -114,7 +113,7 @@ const modules = [
 		code: "MES",
 		shot: "mes-model",
 		name: msg`Execution`,
-		note: msg`the floor itself`,
+		note: msg`operators, jobs and work centers`,
 		rows: [
 			msg`Digital job travelers`,
 			msg`Operator terminal`,
@@ -128,7 +127,7 @@ const modules = [
 		code: "QMS",
 		shot: "traceability",
 		name: msg`Quality`,
-		note: msg`proof, not paperwork`,
+		note: msg`inspection, compliance and genealogy`,
 		rows: [
 			msg`First article inspection`,
 			msg`Non-conformance & CAPA`,
@@ -181,18 +180,18 @@ const stats = [
 const devPillars = [
 	{
 		tag: "REST API",
-		name: msg`Every table is an endpoint`,
-		desc: msg`Generated straight from Carbon's schema — 381 resources and 1,641 endpoints, with typed clients for TypeScript, Python, C#, and cURL.`,
+		name: msg`A generated API for every module`,
+		desc: msg`Carbon generates REST endpoints from its schema and publishes typed clients for TypeScript, Python and C#. Use webhooks for event-driven integrations.`,
 	},
 	{
 		tag: "MCP server",
-		name: msg`Agent-ready by default`,
-		desc: msg`A built-in MCP server exposes 1,374 operations across 15 modules through three discovery tools. Permissions are baked in — an agent can never do what its identity can't.`,
+		name: msg`A permission-aware MCP server`,
+		desc: msg`The built-in MCP server exposes Carbon operations to AI agents. Every request uses the permissions of the authenticated identity.`,
 	},
 	{
 		tag: "Open source",
-		name: msg`Read it. Extend it.`,
-		desc: msg`A typed TypeScript monorepo with one generated database type shared across the app, the API, and the AI tools. Bring your own LLM.`,
+		name: msg`Inspect and extend the code`,
+		desc: msg`The TypeScript monorepo shares generated database types across the application, API and agent tools. Run Carbon with your own models and infrastructure.`,
 	},
 ];
 
@@ -250,8 +249,8 @@ const featureRows = [
 	{
 		id: "configure",
 		eyebrow: msg`Configure to order`,
-		title: msg`Unfork your BOM.`,
-		body: msg`Parameterize the part, not the paperwork. Rules drive the bill of materials, the routing, the price before you quote it.`,
+		title: msg`Generate each configuration from rules.`,
+		body: msg`Define product parameters once. Carbon generates the BOM, routing and quoted price for each valid configuration.`,
 		points: [
 			msg`Rule-based BOM and routing generation`,
 			msg`Revision control with effectivity dates`,
@@ -266,8 +265,8 @@ const featureRows = [
 	{
 		id: "execution",
 		eyebrow: msg`Manufacturing execution`,
-		title: msg`Real-time, real cost shop floor.`,
-		body: msg`Every part, hour, barcode, and deviation tracked and handled in real-time.`,
+		title: msg`Run production from live data.`,
+		body: msg`Track material, labor, scans, scrap and deviations as work happens. Schedules and job costs update from the same records.`,
 		points: [
 			msg`Digital travelers with work instructions`,
 			msg`QR and barcode tracking on every unit`,
@@ -282,8 +281,8 @@ const featureRows = [
 	{
 		id: "quality",
 		eyebrow: msg`Quality`,
-		title: msg`Traceability is the default state.`,
-		body: msg`First article inspection, non-conformance, CAPA and gauge calibration sit on the same records as production. Pull any serial number and get its full genealogy — material certs, operators, measurements, deviations.`,
+		title: msg`Trace every unit to its source.`,
+		body: msg`Link first articles, nonconformances, CAPAs and calibrations to production. Open any serial number to see its materials, operators, measurements and deviations.`,
 		points: [
 			msg`Serial and lot genealogy, forwards and back`,
 			msg`NCR to CAPA workflow with sign-off`,
@@ -298,8 +297,8 @@ const featureRows = [
 	{
 		id: "multi-entity",
 		eyebrow: msg`Multi-entity · Multi-location`,
-		title: msg`Every site on one ledger.`,
-		body: msg`Carbon allows you to a scale from a single-entity, single-location operation, to a multi-national, multi-location manufacturing engine with consolidated accounts.`,
+		title: msg`Manage every site on one ledger.`,
+		body: msg`Run one facility or multiple legal entities and locations. Carbon handles entity-specific currencies, charts of accounts and taxes with consolidated reporting.`,
 		points: [
 			msg`Multi-entity accounting with intercompany transactions`,
 			msg`Per-entity currency, COA and tax, consolidated books`,
@@ -331,12 +330,12 @@ function TrialActions({ className }: { className?: string }) {
 		<div className={cn("flex flex-wrap gap-2.5", className)}>
 			<Button asChild variant="accent" size="cta">
 				<a href={APP_URL}>
-					<AppCtaLabel signupLabel={<Trans>Try Carbon for 30 Days</Trans>} />
+					<AppCtaLabel signupLabel={<Trans>Start 30-Day Trial</Trans>} />
 				</a>
 			</Button>
 			<Button asChild variant="accentOutline" size="cta">
 				<Link to="/sales">
-					<Trans>Talk to a Human</Trans>
+					<Trans>Contact Sales</Trans>
 				</Link>
 			</Button>
 		</div>
@@ -415,7 +414,7 @@ function Hero() {
 					to="/self-hosted"
 					className="group mb-8 inline-flex items-center gap-2 rounded-full border border-border px-4 py-1.5 text-sm text-muted-foreground transition-colors hover:border-foreground/30 hover:text-foreground"
 				>
-					<Trans>GovCloud, self-hosted and air-gapped ready</Trans>
+					<Trans>Deploy in our cloud, your cloud or on-prem</Trans>
 					<ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
 				</Link>
 
@@ -423,16 +422,16 @@ function Hero() {
 					{/* The break only applies from sm up; below that, text-balance
 					    wraps the line evenly. */}
 					<Trans>
-						Build hardware at the{" "}
+						Run manufacturing on{" "}
 						<br className="hidden sm:inline" />
-						<span className="text-secondary">speed of software</span>
+						<span className="text-secondary">one data model</span>
 					</Trans>
 				</h1>
 
 				<p className="mx-auto mt-8 max-w-[60ch] text-lg leading-relaxed text-muted-foreground">
 					<Trans>
-						Carbon is the open-source manufacturing ERP/MES/QMS. Quote, plan,
-						buy, build, inspect and ship on one live model of your factory.
+						Carbon combines ERP, MRP, MES and QMS. Plan materials, run the
+						shop floor, manage quality and track actual costs in one system.
 					</Trans>
 				</p>
 
@@ -540,7 +539,7 @@ function StatusQuo() {
 				<Reveal className="flex flex-wrap items-end justify-between gap-10">
 					<div>
 						<h2 className={cn(heading, "mt-5 max-w-[22ch]")}>
-							<Trans>Legacy ERPs were built for 1990s accountants.</Trans>
+							<Trans>Replace spreadsheets and disconnected manufacturing systems.</Trans>
 						</h2>
 					</div>
 					<TrialActions />
@@ -622,7 +621,7 @@ function OneModel() {
 			<div className={shell}>
 				<Reveal className="flex flex-wrap items-end justify-between gap-8">
 					<h2 className={cn(heading, "mt-5 max-w-[26ch]")}>
-						<Trans>Four systems, one schema.</Trans>
+						<Trans>ERP, MRP, MES and QMS on one schema.</Trans>
 					</h2>
 					<TrialActions />
 				</Reveal>
@@ -693,12 +692,12 @@ function HappyPath() {
 				<Reveal className="flex flex-wrap items-end justify-between gap-8">
 					<div>
 						<h2 className={cn(heading, "mt-5")}>
-							<Trans>CAD to Cash</Trans>.
+							<Trans>One record from CAD to cash.</Trans>
 						</h2>
 						<p className="mt-6 max-w-[38ch] text-base leading-relaxed text-muted-foreground">
 							<Trans>
-								Every stage writes to the same record. No handoffs, no
-								re-keying, no reconciliation.
+								Engineering, planning, production, quality and accounting update
+								the same data. No re-keying or cross-system reconciliation.
 							</Trans>
 						</p>
 					</div>
@@ -820,7 +819,7 @@ function Agents() {
 				<Reveal className="flex flex-wrap items-end justify-between gap-8">
 					<div>
 						<h2 className={cn(heading, "mt-5 max-w-[40ch]")}>
-							<Trans>An API for the entire organization.</Trans>
+							<Trans>Integrate every manufacturing workflow.</Trans>
 						</h2>
 					</div>
 					<div className="flex flex-wrap gap-3">
@@ -882,13 +881,13 @@ function Industries() {
 				<Reveal className="flex flex-wrap items-end justify-between gap-8">
 					<div>
 						<h2 className={cn(heading, "mt-5 max-w-[22ch]")}>
-							<Trans>If it has a bill of materials, Carbon runs it.</Trans>
+							<Trans>Built for discrete manufacturing.</Trans>
 						</h2>
 					</div>
 					<p className="max-w-[38ch] text-base leading-relaxed text-muted-foreground">
 						<Trans>
-							Regulated or not, one-off or rate production — the primitives are
-							the same. The configuration is yours.
+							Configure Carbon for one-off builds, rate production and regulated
+							work without changing the underlying data model.
 						</Trans>
 					</p>
 				</Reveal>
@@ -916,7 +915,7 @@ function Industries() {
 	);
 }
 
-const AUDIT_PROMPT = `I'm deciding whether Carbon would be the approach for my manufacturing business. Download the repo https://github.com/crbnos/carbon and do an audit of the capabilities. Then interview me about my manufacturing process, goals, and tools I use. Finish with 3-5 specific things Carbon could do for me.`;
+const AUDIT_PROMPT = `Evaluate Carbon for my manufacturing business. Review the repository at https://github.com/crbnos/carbon and summarize its relevant capabilities and constraints. Then ask about my products, production process, compliance requirements, current systems, and goals. Finish with 3–5 specific ways Carbon could fit my operation.`;
 
 /**
  * A read-only prompt the visitor can copy in one click and paste into their
@@ -969,12 +968,12 @@ function TrustOpen() {
 							</span>
 						</div>
 						<h3 className="mt-5 font-display tracking-[-0.01em] text-[clamp(1.625rem,2.6vw,2.375rem)] leading-[1.1]">
-							<Trans>Auditable by design.</Trans>
+							<Trans>Controls built into the data model.</Trans>
 						</h3>
 						<p className="mt-4 max-w-[40ch] text-[15px] leading-relaxed text-muted-foreground">
 							<Trans>
-								Immutable ledgers, granular permissions, and the
-								controls regulated programs are held to.
+								Use append-only ledgers, granular permissions and complete record
+								history to support regulated workflows.
 							</Trans>
 						</p>
 						<div className="mt-7 flex flex-wrap gap-2">
@@ -996,11 +995,12 @@ function TrustOpen() {
 							</span>
 						</div>
 						<h3 className="mt-5 font-display tracking-[-0.01em] text-[clamp(1.625rem,2.6vw,2.375rem)] leading-[1.1]">
-							<Trans>Ask your agent what it thinks</Trans>
+							<Trans>Evaluate the source before you deploy</Trans>
 						</h3>
 						<p className="mt-4 max-w-[40ch] text-[15px] leading-relaxed text-muted-foreground">
 							<Trans>
-								Carbon's source code is available. Copy the prompt below into your favorite LLM.
+								Carbon's source is public. Use the prompt below to review it against
+								your requirements.
 							</Trans>
 						</p>
 						<CopyPrompt prompt={AUDIT_PROMPT} />
@@ -1020,19 +1020,19 @@ function TrustOpen() {
 
 const selfHostPillars = [
 	{
-		tag: "CMMC compliant",
-		name: msg`Built for CMMC compliance`,
-		desc: msg`Keep CUI inside your own boundary. Deploy on a single box, your own VPC, or fully air-gapped for defense programs that have to meet CMMC and ITAR requirements.`,
+		tag: "CMMC · ITAR",
+		name: msg`Keep regulated data in your boundary`,
+		desc: msg`Deploy in your VPC, on-prem or fully air-gapped. Keep CUI inside infrastructure you control while supporting CMMC and ITAR requirements.`,
 	},
 	{
 		tag: "Your database",
-		name: msg`One Postgres schema, and it's yours`,
-		desc: msg`ERP, MRP, MES and QMS on a single database you control, with row-level security. Your data never leaves your perimeter — no vendor cloud, no third-party data lake.`,
+		name: msg`Control the system of record`,
+		desc: msg`ERP, MRP, MES and QMS share a Postgres database with row-level security. You control its network, encryption, backups and retention.`,
 	},
 	{
 		tag: "Open source",
-		name: msg`Audit it before you deploy it`,
-		desc: msg`The whole application is on GitHub — the Community edition under AGPL-3.0. Read every line, run a security review, and extend it to fit your process.`,
+		name: msg`Review the code before deployment`,
+		desc: msg`Inspect the application on GitHub, run your own security review and extend the AGPL-3.0 Community edition for your process.`,
 	},
 ];
 
@@ -1052,7 +1052,7 @@ function SelfHost() {
 							</span>
 						</div>
 						<h2 className={cn(heading, "mt-6 max-w-[22ch]")}>
-							<Trans>Self-host in your own cloud or on-prem</Trans>
+							<Trans>Run Carbon on infrastructure you control.</Trans>
 						</h2>
 					</div>
 					<div className="flex flex-wrap gap-3">
@@ -1100,7 +1100,7 @@ function Integrations() {
 			<div className={shell}>
 				<Reveal>
 					<h2 className="mb-12 mt-5 font-display tracking-[-0.01em] text-[clamp(1.75rem,3vw,2.75rem)] leading-[1.1]">
-						<Trans>Integrated with the world's best software.</Trans>
+						<Trans>Connect the tools your teams already use.</Trans>
 					</h2>
 				</Reveal>
 				<Reveal className="grid grid-cols-1 gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
@@ -1139,15 +1139,15 @@ function StartCTA() {
 			/>
 			<div className="relative mx-auto max-w-[1000px] px-6 text-center">
 				<div className={eyebrow}>
-					<Trans>Start now · No call required</Trans>
+					<Trans>30-day trial · No sales call</Trans>
 				</div>
 				<h2 className="mt-6 font-display tracking-[-0.02em] text-[clamp(2.5rem,6vw,5.5rem)] leading-[1.08]">
-					<Trans>Ship faster than your competitors can quote.</Trans>
+					<Trans>Run your first production job in Carbon.</Trans>
 				</h2>
 				<p className="mx-auto mt-6 max-w-[60ch] text-lg leading-relaxed text-muted-foreground">
 					<Trans>
-						Create a company, connect the MCP, release your first job
-						today.
+						Create a workspace, import your data and connect your integrations.
+						Self-host the open-source core or use the managed cloud.
 					</Trans>
 				</p>
 				<TrialActions className="mt-10 justify-center" />
@@ -1166,9 +1166,9 @@ export default function Route() {
 		<>
 			<Hero />
 			<LogoStrip
-				headline={<Trans>Hard tech unicorns build on Carbon.</Trans>}
+				headline={<Trans>Manufacturers run production on Carbon.</Trans>}
 				label={
-					<Trans>And some of the world's most innovative manufacturers</Trans>
+					<Trans>From hardware startups to regulated production teams</Trans>
 				}
 			/>
 			<Testimonial />

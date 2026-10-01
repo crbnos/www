@@ -11,9 +11,9 @@ import { cn } from "~/lib/utils";
 
 export const meta: MetaFunction = ({ matches }) =>
 	pageMeta(matches, {
-		title: "Pricing",
+		title: "Carbon Pricing — Cloud & Self-Hosted",
 		description:
-			"Carbon pricing: Starter at $40/user/mo, Business at $100/user/mo with API access and support, and self-hosted Enterprise. ERP, MRP, MES and QMS on one system, with a 30-day free trial and no sales call.",
+			"Compare Carbon cloud and self-hosted plans. Starter is $40 per user per month, Business is $100, and the open-source Community edition is free to self-host.",
 	});
 
 const shell = "mx-auto w-full max-w-[1360px] px-6 sm:px-7";
@@ -37,22 +37,24 @@ function usePlans(deployment: Deployment) {
 			name: selfHosted ? t`Community Edition` : t`Starter`,
 			tag: selfHosted ? t`Open source` : t`Self-serve`,
 			priceHeadline: selfHosted ? "$0" : "$40",
-			priceSubtext: t`/user/month`,
-			action: selfHosted ? t`Self-Host Carbon` : t`Start 30-Day Free Trial`,
+			priceSubtext: selfHosted ? "AGPL-3.0" : t`/user/month`,
+			action: selfHosted ? t`View Installation Guide` : t`Start 30-Day Trial`,
 			url: selfHosted ? SELF_HOSTING_DOCS_URL : "https://app.carbon.ms",
 			description: selfHosted
-				? t`The open-source core of Carbon, free under AGPL-3.0`
-				: t`A managed cloud-hosted version of Carbon`,
+				? t`Core manufacturing modules under AGPL-3.0`
+				: t`Managed Carbon for small manufacturing teams`,
 			featured: false,
 			features: [
 				selfHosted
-					? t`Runs on your servers or in your VPC with Docker`
-					: t`Automatic updates and cloud backups`,
-				t`Basic ERP, MES, MRP, and QMS functionality`,
-				t`Accounting with general ledger, financial reports, fixed assets, and multi-currency`,
-				t`Product configurator with rules-based BOMs and routings`,
+					? t`Deploy with Docker on your servers or in your VPC`
+					: t`Managed updates and backups`,
+				t`Core ERP, MRP, MES and QMS workflows`,
+				t`General ledger, financial reports, fixed assets and multi-currency`,
+				t`Rules-based product configurator, BOMs and routings`,
 				t`Unlimited records`,
-				selfHosted ? t`Self-guided installation` : t`Self-onboarding`,
+				selfHosted
+					? t`Self-managed installation and upgrades`
+					: t`Self-service onboarding`,
 				t`Community support`,
 			],
 		},
@@ -60,46 +62,48 @@ function usePlans(deployment: Deployment) {
 			name: selfHosted ? t`Enterprise Edition` : t`Business`,
 			tag: selfHosted ? t`Self-hosted + support` : t`Cloud + support`,
 			description: selfHosted
-				? t`Everything in Community Edition, and the features below`
-				: t`Everything in Starter, and the features below`,
+				? t`Community Edition plus APIs, automation and support`
+				: t`Starter plus APIs, automation and support`,
 			priceHeadline: "$100",
 			priceSubtext: t`/user/month`,
-			action: selfHosted ? t`Get a License` : t`Contact Us`,
+			action: selfHosted ? t`Request a License` : t`Contact Sales`,
 			url: "/sales",
 			featured: false,
 			features: [
-				t`Technical support`,
-				t`API, webhooks, integrations, and MCP`,
-				t`Workflow automation with custom triggers`,
-				t`Demand forecasting to plan ahead of orders`,
+				t`Technical support from Carbon`,
+				t`REST API, webhooks, integrations and MCP`,
+				t`Workflow automation and custom triggers`,
+				t`Demand forecasting`,
 				t`Shop floor console mode`,
-				t`Customer portals with live order status and files`,
+				t`Customer portals for order status and files`,
 				t`Email and Slack notifications`,
-				t`Custom roles, permissions, and approval rules`,
-				t`Audit logging, 2FA enforcement, and backup/restore`,
+				t`Custom roles, permissions and approval rules`,
+				t`Audit logs, enforced 2FA and backup/restore`,
 				t`5 user minimum`,
 			],
 		},
 		{
-			name: selfHosted ? t`CMMC Compliant` : t`Enterprise`,
-			tag: t`Bring your own cloud`,
+			name: selfHosted ? t`Regulated Enterprise` : t`Enterprise`,
+			tag: selfHosted ? t`Regulated deployment` : t`Bring your own cloud`,
 			priceHeadline: t`Contact us`,
 			priceSubtext: "",
-			action: t`Contact Us`,
+			action: t`Contact Sales`,
 			url: "/sales",
 			description: selfHosted
-				? t`Everything in Enterprise Edition, plus a custom solution to meet your needs`
-				: t`Everything in Business, plus a custom solution to meet your needs`,
+				? t`Enterprise Edition with a deployment designed for your security boundary`
+				: t`Business with dedicated deployment and implementation support`,
 			featured: true,
 			features: [
 				selfHosted
-					? t`On-prem, private cloud, or air-gapped`
-					: t`Runs on your cloud`,
-				t`Forward deployed engineer`,
-				t`Customizations, training, and integrations`,
-				t`CMMC Level 2 compliance`,
-				t`Air-gapped and ITAR deployments`,
-				t`Full setup and migrations`,
+					? t`On-prem, private cloud or air-gapped deployment`
+					: t`Single-tenant deployment in your cloud account`,
+				t`Forward-deployed engineer`,
+				t`Custom development, training and integrations`,
+				t`CMMC Level 2 and NIST 800-171 deployment support`,
+				selfHosted
+					? t`Air-gapped and ITAR-controlled environments`
+					: t`Dedicated deployment for regulated environments`,
+				t`Implementation and data migration`,
 				t`SSO/SAML`,
 				t`Unlimited functional support`,
 			],
@@ -187,12 +191,12 @@ export default function Pricing() {
 				<div className={shell}>
 					<div className={eyebrow}>Pricing</div>
 					<h1 className={cn(heading, "mt-5 max-w-[20ch]")}>
-						<Trans>Simple pricing based on your needs.</Trans>
+						<Trans>Choose a deployment and plan.</Trans>
 					</h1>
 					<p className="mt-6 max-w-[52ch] text-lg leading-relaxed text-muted-foreground">
 						<Trans>
-							Managed cloud or self-host the open-source core. Start free for 30
-							days — no sales call required.
+							Use Carbon's managed cloud or run it on your infrastructure. Cloud
+							plans include a 30-day trial with no sales call.
 						</Trans>
 					</p>
 
@@ -250,20 +254,20 @@ export default function Pricing() {
 				<div className="relative mx-auto max-w-[1000px] px-6 text-center">
 					<div className={eyebrow}>Open source · Self-host</div>
 					<h2 className="mt-6 font-display tracking-[-0.02em] text-[clamp(2.25rem,5vw,4.5rem)] leading-[1.08]">
-						<Trans>Get started for free.</Trans>
+						<Trans>Self-host the Community edition.</Trans>
 					</h2>
 					<p className="mx-auto mt-6 max-w-[48ch] text-lg leading-relaxed text-muted-foreground">
 						<Trans>
-							Read the source, run it in your own environment, and start
-							developing locally.
+							Review the source and deploy the core manufacturing modules in your
+							own environment under AGPL-3.0.
 						</Trans>{" "}
 						<Trans>
-							Want Enterprise Edition features on your own servers?{" "}
+							Need APIs, MCP, advanced controls or deployment support?{" "}
 							<Link
 								to="/sales"
 								className="font-medium text-secondary hover:underline"
 							>
-								Unlock them with a commercial license
+								Request an Enterprise license
 							</Link>
 							.
 						</Trans>
@@ -271,7 +275,7 @@ export default function Pricing() {
 					<div className="mt-10 flex flex-wrap justify-center gap-3">
 						<Button asChild variant="accent" size="cta">
 							<a href={DOCS_URL}>
-								<Trans>Read the Docs</Trans>
+								<Trans>View Installation Guide</Trans>
 							</a>
 						</Button>
 						<Button asChild variant="accentOutline" size="cta">
