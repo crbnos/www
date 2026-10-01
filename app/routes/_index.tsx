@@ -621,7 +621,7 @@ function OneModel() {
 			<div className={shell}>
 				<Reveal className="flex flex-wrap items-end justify-between gap-8">
 					<h2 className={cn(heading, "mt-5 max-w-[26ch]")}>
-						<Trans>ERP, MRP, MES and QMS on one schema.</Trans>
+						<Trans>ERP, MRP, MES and QMS in one database.</Trans>
 					</h2>
 					<TrialActions />
 				</Reveal>

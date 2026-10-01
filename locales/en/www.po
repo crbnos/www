@@ -607,8 +607,8 @@ msgid "ERP · MRP · MES · QMS"
 msgstr "ERP · MRP · MES · QMS"
 
 #: app/routes/_index.tsx:624
-msgid "ERP, MRP, MES and QMS on one schema."
-msgstr "ERP, MRP, MES and QMS on one schema."
+msgid "ERP, MRP, MES and QMS in one database."
+msgstr "ERP, MRP, MES and QMS in one database."
 
 #: app/routes/_index.tsx:1030
 msgid "ERP, MRP, MES and QMS share a Postgres database with row-level security. You control its network, encryption, backups and retention."

@@ -607,7 +607,7 @@ msgid "ERP · MRP · MES · QMS"
 msgstr "ERP · MRP · MES · QMS"
 
 #: app/routes/_index.tsx:624
-msgid "ERP, MRP, MES and QMS on one schema."
+msgid "ERP, MRP, MES and QMS in one database."
 msgstr ""
 
 #: app/routes/_index.tsx:1030
