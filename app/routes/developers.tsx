@@ -59,7 +59,7 @@ export const meta: MetaFunction = ({ matches }) =>
               description:
                 "REST API for Carbon, the API-first manufacturing ERP/MRP. Every resource in the product, authenticated with a self-serve scoped API key or OAuth 2.0.",
               url: REST_URL,
-              documentation: `${DOCS_URL}/api-reference`,
+              documentation: `${DOCS_URL}/api`,
               termsOfService: `${SITE_URL}/terms`,
               provider: {
                 "@type": "Organization",
@@ -223,7 +223,7 @@ export default function Developers() {
             <code>describe_tool</code> and <code>call_tool</code> — that reach
             more than 1,400 ERP operations across 15 modules, each classified
             read, write or destructive. The{" "}
-            <a href={`${DOCS_URL}/mcp`}>MCP guide</a> covers the details.
+            <a href={`${DOCS_URL}/api/mcp`}>MCP guide</a> covers the details.
           </p>
 
           <h2 id="resources">Carbon developer resources</h2>

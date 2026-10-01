@@ -62,12 +62,11 @@ const INDEX = page(
   "Carbon Manufacturing Systems",
   `
 Carbon is the engineering-first operating system for manufacturers. Quote, plan,
-buy, build, inspect and ship on one live model of your factory — from a
-ten-person prototype shop to a rate-production line.
+buy, build, inspect and ship on one live model of your factory.
 
 ## What Carbon is
 
-Legacy ERPs were built for accountants in the 1990s. Carbon is four systems —
+Legacy ERPs were built for 1990s accountants. Carbon is four systems —
 ERP, MRP, MES and QMS — on one schema, so there is nothing to integrate. Every
 stage writes to the same record: no handoffs, no re-keying, no reconciliation.
 
@@ -79,7 +78,7 @@ stage writes to the same record: no handoffs, no re-keying, no reconciliation.
 - **If it has a bill of materials, Carbon runs it.** Regulated or not, one-off
   or rate production — the primitives are the same, and the configuration is
   yours.
-- **Auditable by construction.** Immutable ledgers, granular permissions, and
+- **Auditable by design.** Immutable ledgers, granular permissions, and
   the controls regulated programs are held to.
 - **Source available.** The whole system is on
   [GitHub](${REPO_URL}); run it hosted or self-host it.

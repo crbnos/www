@@ -179,7 +179,7 @@ export type DeveloperResource = {
 export const DEVELOPER_RESOURCES: DeveloperResource[] = [
   {
     name: "Carbon API documentation",
-    url: `${DOCS_URL}/api-reference`,
+    url: `${DOCS_URL}/api`,
     description:
       "Generated reference for every REST resource: endpoints, attributes, request and response shapes, and copy-paste examples.",
   },
@@ -203,13 +203,13 @@ export const DEVELOPER_RESOURCES: DeveloperResource[] = [
   },
   {
     name: "Carbon MCP guide",
-    url: `${DOCS_URL}/mcp`,
+    url: `${DOCS_URL}/api/mcp`,
     description:
       "How to connect an agent to Carbon over MCP, including the available tools and their permission scopes.",
   },
   {
     name: "Carbon API authentication",
-    url: `${DOCS_URL}/api-reference/authentication`,
+    url: `${DOCS_URL}/api/authentication`,
     description:
       "Creating a scoped API key and sending it as `Authorization: Bearer <api-key>` (or the `carbon-key` header).",
   },

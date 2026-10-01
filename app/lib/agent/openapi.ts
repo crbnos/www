@@ -6,7 +6,7 @@
  * `operationId`, a real description, typed parameters and a response schema on
  * every operation, which is what makes the document usable as a function-calling
  * tool definition. The complete catalogue (700+ tables) is generated into the
- * reference at https://docs.carbon.ms/api-reference; a document that large is a
+ * reference at https://docs.carbon.ms/api; a document that large is a
  * catalogue to search, not a spec an agent can load.
  *
  * The property schemas come from the API's own PostgREST schema by way of
@@ -611,7 +611,7 @@ export function buildOpenApiDocument(): OpenApiDocument {
         "Programmatic read and write access to Carbon, the API-first operating system for manufacturing.",
       description: [
         "Carbon exposes every module — items, sales, purchasing, production, inventory, quality and accounting — over one REST API. This document describes the core resources in full; the complete catalogue of every table Carbon publishes is generated into the reference at " +
-          `${DOCS_URL}/api-reference.`,
+          `${DOCS_URL}/api.`,
         "",
         "**Getting access.** Self-serve, no sales call:",
         ...ONBOARDING.steps.map((step, index) => `${index + 1}. ${step}`),
@@ -671,7 +671,7 @@ export function buildOpenApiDocument(): OpenApiDocument {
     },
     externalDocs: {
       description: "Carbon documentation and the full API reference",
-      url: `${DOCS_URL}/api-reference`,
+      url: `${DOCS_URL}/api`,
     },
     servers: [{ url: REST_URL, description: "Carbon hosted REST API" }],
     security: [{ bearerAuth: [] }, { carbonKey: [] }],

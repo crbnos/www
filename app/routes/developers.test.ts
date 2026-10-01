@@ -24,7 +24,7 @@ describe("/developers meta", () => {
     expect(graph.map((node) => node["@type"])).toEqual(["ItemList", "WebAPI"]);
     const api = graph.find((node) => node["@type"] === "WebAPI")!;
     expect(api.name).toBe("Carbon API");
-    expect(api.documentation).toBe("https://docs.carbon.ms/api-reference");
+    expect(api.documentation).toBe("https://docs.carbon.ms/api");
     expect(api.provider.name).toBe("Carbon Manufacturing Systems");
   });
 });

@@ -8,7 +8,6 @@ import { LogoStrip } from "~/components/logo-strip";
 import { EntityTree } from "~/components/entity-tree";
 import { Screenshot } from "~/components/screenshot";
 import { Button } from "~/components/ui/button";
-import { GithubLogo } from "~/components/ui/github-logo";
 import { ZoomableImage } from "~/components/zoomable-image";
 import { cn } from "~/lib/utils";
 import { pageMeta } from "~/lib/seo";
@@ -270,6 +269,20 @@ function Chip({ children }: { children: string }) {
 	);
 }
 
+/** The page's two calls to action, repeated through most sections. */
+function LicenseActions({ className }: { className?: string }) {
+	return (
+		<div className={cn("flex flex-wrap gap-2.5", className)}>
+			<Button asChild variant="accent" size="cta">
+				<Link to="/pricing?mode=self-hosted">Get a License</Link>
+			</Button>
+			<Button asChild variant="accentOutline" size="cta">
+				<Link to="/sales">Talk to a Human</Link>
+			</Button>
+		</div>
+	);
+}
+
 /* -------------------------------------------------------------------------- */
 /*  Sections                                                                   */
 /* -------------------------------------------------------------------------- */
@@ -278,31 +291,18 @@ function Hero() {
 	return (
 		<section className="relative overflow-hidden pt-24 sm:pt-36 lg:pt-44">
 			<div className={cn(shell, "relative")}>
-				{/* The forced break only holds from sm up; on phones the headline
-				    wraps naturally and text-balance evens out the lines. */}
-				<h1 className="font-display tracking-[-0.02em] text-balance text-[clamp(2.5rem,5.6vw,5.5rem)] leading-[1.06]">
-					Open-source ERP that runs{" "}
-					<br className="hidden sm:inline" />
-					<span className="text-secondary">inside your CMMC boundary</span>
-				</h1>
+				<div className="text-center">
+					<h1 className="font-display tracking-[-0.02em] text-balance text-[clamp(2.5rem,5.6vw,5.5rem)] leading-[1.06]">
+						Self-hosted ERP on your infrastructure
+					</h1>
 
-				<p className="mt-8 max-w-[60ch] text-lg leading-relaxed text-muted-foreground">
-					The whole system of record — ERP, MRP, MES and QMS — on Postgres you
-					own. Managed in your own cloud in one click, on-prem, or fully
-					air-gapped. Open source, so you can
-					audit every line before it ever touches your most sensitive records.
-				</p>
+					<p className="mx-auto mt-8 max-w-[60ch] text-lg leading-relaxed text-muted-foreground">
+						The whole system of record — ERP, MRP, MES and QMS — on Postgres you
+						own. Managed in your own cloud in one click, on-prem, or fully
+						air-gapped.
+					</p>
 
-				<div className="mt-10 flex flex-wrap gap-2.5">
-					<Button asChild variant="accent" size="cta">
-						<Link to="/sales">Get a License</Link>
-					</Button>
-					<Button asChild variant="accentOutline" size="cta">
-						<a href={REPO_URL} target="_blank" rel="noopener">
-							<GithubLogo className="size-4" />
-							Star on GitHub
-						</a>
-					</Button>
+					<LicenseActions className="mt-10 justify-center" />
 				</div>
 
 				{/* Framed hero visual — same panel treatment as the home page. */}
@@ -377,9 +377,7 @@ function Byoc() {
 							the pager is ours.
 						</p>
 					</div>
-					<Button asChild variant="accent" size="cta">
-						<Link to="/sales">Talk to Sales</Link>
-					</Button>
+					<LicenseActions />
 				</div>
 
 				<div className="mt-14 border border-border sm:h-[min(64vh,520px)]">
@@ -424,6 +422,7 @@ function Walls() {
 					deployments we hand you the SSP, POA&amp;M and SPRS inputs an assessor
 					will ask for.
 				</p>
+				<LicenseActions className="mt-10" />
 				<div className="mt-14 grid grid-cols-1 gap-px border border-border bg-border lg:grid-cols-3">
 					{walls.map((w) => (
 						<div
@@ -464,11 +463,12 @@ function FeatureRows() {
 							<p className="mt-5 max-w-[44ch] text-base leading-relaxed text-muted-foreground">
 								{f.body}
 							</p>
-							<div className="mt-7 flex flex-col gap-2.5 font-mono text-[13px] leading-snug text-muted-foreground">
+							<div className="mt-7 flex flex-col gap-2.5 text-sm leading-snug text-muted-foreground">
 								{f.points.map((p) => (
 									<div key={p}>→ {p}</div>
 								))}
 							</div>
+							<LicenseActions className="mt-10" />
 						</div>
 						<div
 							className={cn(
@@ -550,10 +550,27 @@ function Deploy() {
 							One codebase, from a laptop to a cluster.
 						</h2>
 					</div>
-					<p className="max-w-[38ch] text-base leading-relaxed text-muted-foreground">
-						The same source runs from a single Docker host to a multi-region
-						deployment in your own cloud. No proprietary runtime, no lock-in.
-					</p>
+					<div className="flex flex-col gap-8">
+						<p className="max-w-[38ch] text-base leading-relaxed text-muted-foreground">
+							The same source runs from a single Docker host to a multi-region
+							deployment in your own cloud. No proprietary runtime, no lock-in.
+						</p>
+						<div className="flex flex-wrap gap-2.5">
+							<Button asChild variant="accent" size="cta">
+								<Link to="/pricing?mode=self-hosted">Get a License</Link>
+							</Button>
+							<Button asChild variant="accentOutline" size="cta">
+								<a
+									href={`${DOCS_URL}/docs/platform/self-hosting`}
+									target="_blank"
+									rel="noopener"
+								>
+									Read the Docs
+									<ChevronRight />
+								</a>
+							</Button>
+						</div>
+					</div>
 				</div>
 
 				<div className="mt-14 grid grid-cols-1 gap-px border border-border bg-border md:grid-cols-2 lg:grid-cols-4">
@@ -599,10 +616,15 @@ function OwnItAll() {
 	return (
 		<section className="border-b border-border py-28 sm:py-32">
 			<div className={shell}>
-				<Chip>Your stack, top to bottom</Chip>
-				<h2 className={cn(heading, "mt-6 max-w-[24ch]")}>
-					Own the database, the models, and the files.
-				</h2>
+				<div className="flex flex-wrap items-end justify-between gap-8">
+					<div>
+						<Chip>Your stack, top to bottom</Chip>
+						<h2 className={cn(heading, "mt-6 max-w-[24ch]")}>
+							Own the database, the models, and the files.
+						</h2>
+					</div>
+					<LicenseActions />
+				</div>
 				<div className="mt-14 grid grid-cols-1 gap-px border border-border bg-border lg:grid-cols-3">
 					{owns.map((o) => (
 						<div
@@ -631,7 +653,10 @@ function Parity() {
 		<section className="border-b border-border py-28 sm:py-32">
 			<div className={shell}>
 				<div className="grid grid-cols-1 gap-px border border-border bg-border lg:grid-cols-2">
-					<div className="flex flex-col bg-muted p-10 sm:p-11">
+					{/* Muted at 30%, mixed over the page background rather than made
+					    transparent — a translucent cell would let the grid's bg-border
+					    show through and swallow the divider line. */}
+					<div className="flex flex-col bg-[color-mix(in_srgb,hsl(var(--muted))_30%,hsl(var(--background)))] p-10 sm:p-11">
 						<h2 className="font-display tracking-[-0.01em] text-[clamp(1.75rem,3vw,2.75rem)] leading-[1.1]">
 							Nothing held back for the cloud.
 						</h2>
@@ -654,20 +679,7 @@ function Parity() {
 								</li>
 							))}
 						</ul>
-						<div className="mt-8 flex flex-wrap gap-2.5">
-							<Button asChild variant="accent" size="cta">
-								<Link to="/sales">Talk to Sales</Link>
-							</Button>
-							<Button asChild variant="accentOutline" size="cta">
-								<a
-									href="https://docs.carbon.ms/docs/platform/self-hosting"
-									target="_blank"
-									rel="noopener"
-								>
-									Deploy It Yourself
-								</a>
-							</Button>
-						</div>
+						<LicenseActions className="mt-8" />
 					</div>
 					<div className="relative overflow-hidden bg-screenshot p-2.5">
 						<div className="relative h-full overflow-hidden sm:min-h-[560px]">
@@ -717,20 +729,7 @@ function OpenCore() {
 							before a single record ever lands in it.
 						</p>
 					</div>
-					<div className="flex flex-wrap gap-3">
-						<Button asChild variant="accent" size="cta">
-							<a href={REPO_URL} target="_blank" rel="noopener">
-								<GithubLogo className="size-4" />
-								Star on GitHub
-							</a>
-						</Button>
-						<Button asChild variant="accentOutline" size="cta">
-							<Link to="/developers">
-								Developer Surface
-								<ChevronRight />
-							</Link>
-						</Button>
-					</div>
+					<LicenseActions />
 				</div>
 				<div className="mt-12 flex flex-wrap gap-6 font-mono text-xs uppercase leading-none text-muted-foreground">
 					<span>TypeScript</span>
@@ -797,17 +796,7 @@ function CTA() {
 					Start from the source today, or have our team scope a deployment for
 					your program.
 				</p>
-				<div className="mt-10 flex flex-wrap justify-center gap-2.5">
-					<Button asChild variant="accent" size="cta">
-						<Link to="/sales">Get a License</Link>
-					</Button>
-					<Button asChild variant="accentOutline" size="cta">
-						<a href={REPO_URL} target="_blank" rel="noopener">
-							<GithubLogo className="size-4" />
-							Star on GitHub
-						</a>
-					</Button>
-				</div>
+				<LicenseActions className="mt-10 justify-center" />
 			</div>
 		</section>
 	);

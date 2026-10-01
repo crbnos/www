@@ -13,7 +13,7 @@
     },
     {
       "source": "/api",
-      "destination": "https://docs.carbon.ms/api-reference",
+      "destination": "https://docs.carbon.ms/api",
       "permanent": true
     },
     {
@@ -33,17 +33,17 @@
     },
     {
       "source": "/api-docs",
-      "destination": "https://docs.carbon.ms/api-reference",
+      "destination": "https://docs.carbon.ms/api",
       "permanent": true
     },
     {
       "source": "/api-reference",
-      "destination": "https://docs.carbon.ms/api-reference",
+      "destination": "https://docs.carbon.ms/api",
       "permanent": true
     },
     {
       "source": "/auth",
-      "destination": "https://docs.carbon.ms/api-reference/authentication",
+      "destination": "https://docs.carbon.ms/api/authentication",
       "permanent": true
     },
     {
@@ -53,7 +53,7 @@
     },
     {
       "source": "/mcp",
-      "destination": "https://docs.carbon.ms/mcp",
+      "destination": "https://docs.carbon.ms/api/mcp",
       "permanent": true
     },
     { "source": "/oss", "destination": "/about", "permanent": true },

@@ -81,8 +81,8 @@ function usePlans(deployment: Deployment) {
 			],
 		},
 		{
-			name: selfHosted ? t`Custom Build` : t`Enterprise`,
-			tag: selfHosted ? t`Forward deployed` : t`Bring your own cloud`,
+			name: selfHosted ? t`CMMC Compliant` : t`Enterprise`,
+			tag: t`Bring your own cloud`,
 			priceHeadline: t`Contact us`,
 			priceSubtext: "",
 			action: t`Contact Us`,
@@ -179,7 +179,7 @@ export default function Pricing() {
 	const { t } = useLingui();
 	const [searchParams] = useSearchParams();
 	const [deployment, setDeployment] = useState<Deployment>(
-		searchParams.get("deployment") === "self-hosted" ? "self-hosted" : "cloud",
+		searchParams.get("mode") === "self-hosted" ? "self-hosted" : "cloud",
 	);
 	return (
 		<>

@@ -214,8 +214,8 @@ await check("unknown path is a real 404 with a markdown way out", async () => {
 if (onVercel) {
   for (const [source, destination] of [
     ["/developer", "/developers"],
-    ["/api-docs", "https://docs.carbon.ms/api-reference"],
-    ["/api-reference", "https://docs.carbon.ms/api-reference"],
+    ["/api-docs", "https://docs.carbon.ms/api"],
+    ["/api-reference", "https://docs.carbon.ms/api"],
     ["/openapi.yml", "/openapi.yaml"],
   ]) {
     await check(`${source} redirects to ${destination}`, async () => {

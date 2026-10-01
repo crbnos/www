@@ -585,11 +585,19 @@ function SnippetSwitcher({
 	);
 }
 
-export function CodeExamples({ className }: { className?: string }) {
+export function CodeExamples({
+	className,
+	inverted = false,
+}: {
+	className?: string;
+	/** Set inside a `.theme-invert` section so the syntax colours flip with it. */
+	inverted?: boolean;
+}) {
 	const mode = useMode();
 	const [language, setLanguage] = useState<Language>("TypeScript");
 	const [snippet, setSnippet] = useState<SnippetName>("JS Client");
-	const editorTheme = mode === "dark" ? darkEditorTheme : lightEditorTheme;
+	const editorTheme =
+		(mode === "dark") !== inverted ? darkEditorTheme : lightEditorTheme;
 
 	useEffect(() => {
 		setSnippet(languagesList[language][0].name);

@@ -10,7 +10,7 @@
  * published resources, and commit the result.
  *
  * Only the resources in RESOURCES are emitted. The complete catalogue — every
- * table Carbon exposes — is documented at https://docs.carbon.ms/api-reference;
+ * table Carbon exposes — is documented at https://docs.carbon.ms/api;
  * /openapi.json is a curated, fully-described subset an agent can load whole.
  */
 

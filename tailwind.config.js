@@ -2,7 +2,16 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
 export default {
-	darkMode: ["class"],
+	// Class-based, plus `.theme-invert` sections that render in the opposite
+	// theme: `dark:` styles switch off inside one in dark mode and on inside one
+	// in light mode, matching the swapped variables in tailwind.css.
+	darkMode: [
+		"variant",
+		[
+			"&:is(.dark *):not(:is(.dark .theme-invert, .dark .theme-invert *))",
+			"&:is(.light .theme-invert, .light .theme-invert *)",
+		],
+	],
 	content: [
 		"./**/*.{ts,tsx}", // include packages if not transpiling
 	],
