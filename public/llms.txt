@@ -86,12 +86,12 @@ CORS-open.
   MCP server, API keys, webhooks and the OpenAPI spec, in one page. Also as
   Markdown at https://carbon.ms/developers.md.
 - [Carbon documentation](https://docs.carbon.ms): guides and reference.
-- [Carbon API documentation](https://docs.carbon.ms/api-reference): endpoints,
+- [Carbon API documentation](https://docs.carbon.ms/api): endpoints,
   schemas, and examples.
-- [Carbon API authentication](https://docs.carbon.ms/api-reference/authentication):
+- [Carbon API authentication](https://docs.carbon.ms/api/authentication):
   scoped API keys, sent as `Authorization: Bearer <api-key>` or the `carbon-key`
   header.
-- [Carbon MCP guide](https://docs.carbon.ms/mcp): connecting an agent to Carbon
+- [Carbon MCP guide](https://docs.carbon.ms/api/mcp): connecting an agent to Carbon
   over MCP.
 - [Carbon webhooks and integrations](https://docs.carbon.ms/integrations):
   first-party connectors and event-driven integrations.

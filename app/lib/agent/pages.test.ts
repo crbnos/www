@@ -125,7 +125,7 @@ describe("onOrigin / internalHref", () => {
 
   it("leaves an external URL alone", () => {
     for (const url of [
-      "https://docs.carbon.ms/mcp",
+      "https://docs.carbon.ms/api/mcp",
       "https://app.carbon.ms/api/mcp",
       "https://github.com/crbnos/carbon",
     ]) {

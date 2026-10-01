@@ -1,8 +1,7 @@
 import type { MessageDescriptor } from "@lingui/core";
 import { msg } from "@lingui/core/macro";
 import { Trans, useLingui } from "@lingui/react/macro";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import { Book, Check, ChevronRight, Copy, X } from "lucide-react";
+import { ArrowRight, Book, Check, ChevronRight, Copy, X } from "lucide-react";
 import { type ReactNode, useEffect, useRef, useState } from "react";
 import { Link } from "react-router";
 import type { MetaFunction } from "react-router";
@@ -12,7 +11,6 @@ import { EntityTree } from "~/components/entity-tree";
 import { LogoStrip } from "~/components/logo-strip";
 import { Screenshot } from "~/components/screenshot";
 import { Button } from "~/components/ui/button";
-import { GithubLogo } from "~/components/ui/github-logo";
 import { ZoomableImage } from "~/components/zoomable-image";
 import { cn } from "~/lib/utils";
 import { pageMeta } from "~/lib/seo";
@@ -38,16 +36,6 @@ export const meta: MetaFunction = ({ matches }) =>
 // Each descriptor is resolved to the active locale at render time via
 // `useLingui().i18n._(descriptor)`. Brand names, acronym codes (ERP/MRP/…),
 // URLs and other proper nouns are left as plain strings on purpose.
-
-const heroWords: MessageDescriptor[] = [
-	msg`hardware`,
-	msg`satellites`,
-	msg`parts`,
-	msg`drones`,
-	msg`robots`,
-	msg`vehicles`,
-	msg`reactors`,
-];
 
 const statusQuo = [
 	
@@ -202,7 +190,7 @@ const devPillars = [
 		desc: msg`A built-in MCP server exposes 1,374 operations across 15 modules through three discovery tools. Permissions are baked in — an agent can never do what its identity can't.`,
 	},
 	{
-		tag: "Source available",
+		tag: "Open source",
 		name: msg`Read it. Extend it.`,
 		desc: msg`A typed TypeScript monorepo with one generated database type shared across the app, the API, and the AI tools. Bring your own LLM.`,
 	},
@@ -337,6 +325,24 @@ const eyebrow =
 const heading =
 	"font-display tracking-[-0.015em] text-[clamp(2.125rem,4.4vw,3.875rem)] leading-[1.08]";
 
+/** The page's two calls to action, repeated through most sections. */
+function TrialActions({ className }: { className?: string }) {
+	return (
+		<div className={cn("flex flex-wrap gap-2.5", className)}>
+			<Button asChild variant="accent" size="cta">
+				<a href={APP_URL}>
+					<AppCtaLabel signupLabel={<Trans>Try Carbon for 30 Days</Trans>} />
+				</a>
+			</Button>
+			<Button asChild variant="accentOutline" size="cta">
+				<Link to="/sales">
+					<Trans>Talk to a Human</Trans>
+				</Link>
+			</Button>
+		</div>
+	);
+}
+
 // Layout wrapper. Kept as a plain, always-visible block so content renders
 // without JS / before hydration (important for first paint + SEO). Scroll-in
 // reveal animations land in the aesthetics pass.
@@ -348,103 +354,6 @@ function Reveal({
 	className?: string;
 }) {
 	return <div className={className}>{children}</div>;
-}
-
-function CyclingWord() {
-	const { i18n } = useLingui();
-	const reduceMotion = useReducedMotion();
-	const [i, setI] = useState(0);
-	// Hold the next swap until the outgoing word has finished exiting, so the
-	// two never overlap mid-flight.
-	const [isAnimating, setIsAnimating] = useState(false);
-	useEffect(() => {
-		if (isAnimating) return;
-		const id = setTimeout(() => {
-			setI((v) => (v + 1) % heroWords.length);
-			setIsAnimating(true);
-		}, 2300);
-		return () => clearTimeout(id);
-	}, [isAnimating]);
-
-	const word = i18n._(heroWords[i]);
-
-	// Every word occupies the same grid cell so the slot keeps a constant size —
-	// otherwise a longer word re-wraps the headline and shoves the copy and
-	// dashboard below it down a line each time it cycles.
-	return (
-		<span className="relative inline-grid max-w-full justify-items-start">
-			{heroWords.map((w, idx) => (
-				<span
-					key={idx}
-					aria-hidden
-					className="invisible col-start-1 row-start-1"
-				>
-					{i18n._(w)}
-				</span>
-			))}
-			<span className="col-start-1 row-start-1 text-secondary">
-				{reduceMotion ? (
-					<span>{word}</span>
-				) : (
-					<AnimatePresence onExitComplete={() => setIsAnimating(false)}>
-						<motion.span
-							key={word}
-							// role="img" makes aria-label valid here (aria-label is
-							// prohibited on a plain generic span) and lets AT announce the
-							// whole word once, while the per-letter spans stay aria-hidden.
-							role="img"
-							aria-label={word}
-							initial={{ opacity: 0, y: 10 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ type: "spring", stiffness: 260, damping: 22 }}
-							// Exits straight up. The upstream component also flings x+40 and
-							// scales 2x, but the exiting word is absolutely positioned and
-							// that grows with the word — it painted 18px past the viewport
-							// edge at 375px, and worse on wide screens. Vertical only, so
-							// the widest word can never extend the page horizontally.
-							exit={{
-								opacity: 0,
-								y: -24,
-								filter: "blur(6px)",
-								position: "absolute",
-								transition: { duration: 0.2, ease: "easeIn" },
-							}}
-							className="z-10 inline-block text-left"
-						>
-							{word.split(" ").map((part, partIndex) => (
-								<motion.span
-									key={part + partIndex}
-									aria-hidden
-									initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
-									animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-									transition={{ delay: partIndex * 0.12, duration: 0.18 }}
-									className="inline-block whitespace-nowrap"
-								>
-									{part.split("").map((letter, letterIndex) => (
-										<motion.span
-											key={part + letterIndex}
-											initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
-											animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-											transition={{
-												delay: partIndex * 0.12 + letterIndex * 0.025,
-												duration: 0.15,
-											}}
-											className="inline-block"
-										>
-											{letter}
-										</motion.span>
-									))}
-									{partIndex < word.split(" ").length - 1 && (
-										<span className="inline-block">&nbsp;</span>
-									)}
-								</motion.span>
-							))}
-						</motion.span>
-					</AnimatePresence>
-				)}
-			</span>
-		</span>
-	);
 }
 
 /**
@@ -493,44 +402,44 @@ function Hero() {
 			id="hero"
 			className="relative overflow-hidden pt-24 sm:pt-36 lg:pt-44"
 		>
-			{/* Tighter gutter at 320px and below so "Build <word>" fits one line.
+			{/* Tighter gutter at 320px and below so the headline keeps its width.
 			    Raw media query, not max-[320px]: — the `tall` raw screen in
 			    tailwind.config.js suppresses Tailwind's min and max variants. */}
 			<div
-				className={cn(shell, "relative [@media(max-width:320px)]:px-4")}
+				className={cn(
+					shell,
+					"relative text-center [@media(max-width:320px)]:px-4",
+				)}
 			>
+				<Link
+					to="/self-hosted"
+					className="group mb-8 inline-flex items-center gap-2 rounded-full border border-border px-4 py-1.5 text-sm text-muted-foreground transition-colors hover:border-foreground/30 hover:text-foreground"
+				>
+					<Trans>GovCloud, self-hosted and air-gapped ready</Trans>
+					<ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
+				</Link>
+
 				<h1 className="font-display tracking-[-0.025em] text-balance text-[clamp(2.75rem,6.2vw,6.25rem)] leading-[1.06] [@media(max-width:374px)]:text-[2.5rem]">
+					{/* The break only applies from sm up; below that, text-balance
+					    wraps the line evenly. */}
 					<Trans>
-						Build <CyclingWord />
-						<br />
-						at the speed of software.
+						Build hardware at the{" "}
+						<br className="hidden sm:inline" />
+						<span className="text-secondary">speed of software</span>
 					</Trans>
 				</h1>
 
-				<p className="mt-8 max-w-[60ch] text-lg leading-relaxed text-muted-foreground">
+				<p className="mx-auto mt-8 max-w-[60ch] text-lg leading-relaxed text-muted-foreground">
 					<Trans>
 						Carbon is the open-source manufacturing ERP/MES/QMS. Quote, plan,
-						buy, build, inspect and ship on one live model of your factory — from a ten-person prototype shop to a
-						rate-production line.
+						buy, build, inspect and ship on one live model of your factory.
 					</Trans>
 				</p>
 
-				<div className="mt-10 flex flex-wrap gap-3">
-					<Button asChild variant="accent" size="cta">
-						<a href={APP_URL}>
-							<AppCtaLabel />
-						</a>
-					</Button>
-					<Button asChild variant="accentOutline" size="cta">
-						<a href={GITHUB_URL} target="_blank" rel="noopener">
-							<GithubLogo className="size-4" />
-							<Trans>Star on GitHub</Trans>
-						</a>
-					</Button>
-				</div>
+				<TrialActions className="mt-10 justify-center" />
 			</div>
 
-			<div className={cn(shell, "mt-24 sm:mt-32")}>
+			<div className={cn(shell, "mt-32 sm:mt-44")}>
 				<HeroDashboard />
 			</div>
 		</section>
@@ -631,9 +540,10 @@ function StatusQuo() {
 				<Reveal className="flex flex-wrap items-end justify-between gap-10">
 					<div>
 						<h2 className={cn(heading, "mt-5 max-w-[22ch]")}>
-							<Trans>Legacy ERPs were built for accountants in the 1990s.</Trans>
+							<Trans>Legacy ERPs were built for 1990s accountants.</Trans>
 						</h2>
 					</div>
+					<TrialActions />
 				</Reveal>
 
 				<Reveal className="mt-14 grid grid-cols-1 gap-px border border-border bg-border md:grid-cols-3">
@@ -710,10 +620,11 @@ function OneModel() {
 	return (
 		<section id="modules" className="border-b border-border py-28 sm:py-32">
 			<div className={shell}>
-				<Reveal>
+				<Reveal className="flex flex-wrap items-end justify-between gap-8">
 					<h2 className={cn(heading, "mt-5 max-w-[26ch]")}>
 						<Trans>Four systems, one schema.</Trans>
 					</h2>
+					<TrialActions />
 				</Reveal>
 
 				<div className="mt-12 grid grid-cols-1 gap-px border border-border bg-border lg:grid-cols-2">
@@ -734,10 +645,12 @@ function OneModel() {
 										: "bg-card text-muted-foreground hover:text-foreground",
 								)}
 							>
-								<div className="font-mono text-[10px] uppercase leading-none tracking-[0.18em]">
-									{m.code}
+								<div className="font-mono text-[10px] uppercase leading-none tracking-wide text-secondary">
+									<span className="inline-block bg-secondary/10 dark:bg-secondary-surface px-3 py-1.5">
+										{m.code}
+									</span>
 								</div>
-								<div className="mt-3 text-[17px] font-medium">
+								<div className="mt-4 text-[17px] font-medium">
 									{i18n._(m.name)}
 								</div>
 								<div className="mt-2 font-mono text-xs text-muted-foreground">
@@ -782,13 +695,14 @@ function HappyPath() {
 						<h2 className={cn(heading, "mt-5")}>
 							<Trans>CAD to Cash</Trans>.
 						</h2>
+						<p className="mt-6 max-w-[38ch] text-base leading-relaxed text-muted-foreground">
+							<Trans>
+								Every stage writes to the same record. No handoffs, no
+								re-keying, no reconciliation.
+							</Trans>
+						</p>
 					</div>
-					<p className="max-w-[38ch] text-base leading-relaxed text-muted-foreground">
-						<Trans>
-							Every stage writes to the same record. No handoffs, no re-keying,
-							no reconciliation.
-						</Trans>
-					</p>
+					<TrialActions />
 				</Reveal>
 
 				<div className="relative mt-16 border-t border-border">
@@ -843,7 +757,7 @@ function FeatureRows() {
 							<p className="mt-5 max-w-[44ch] text-base leading-relaxed text-muted-foreground">
 								{i18n._(f.body)}
 							</p>
-							<div className="mt-7 flex flex-col gap-2.5 font-mono text-[13px] leading-snug text-muted-foreground">
+							<div className="mt-7 flex flex-col gap-2.5 text-sm leading-snug text-muted-foreground">
 								{f.points.map((p, i) => (
 									<div key={i}>→ {i18n._(p)}</div>
 								))}
@@ -898,7 +812,10 @@ function FeatureRows() {
 function Agents() {
 	const { i18n } = useLingui();
 	return (
-		<section id="developers" className="border-b border-border py-28 sm:py-32">
+		<section
+			id="developers"
+			className="theme-invert border-b border-border bg-background py-28 text-foreground sm:py-32"
+		>
 			<div className={shell}>
 				<Reveal className="flex flex-wrap items-end justify-between gap-8">
 					<div>
@@ -909,7 +826,7 @@ function Agents() {
 					<div className="flex flex-wrap gap-3">
 						<Button asChild variant="accent" size="cta">
 							<a
-								href="https://docs.carbon.ms/mcp"
+								href="https://docs.carbon.ms/api/mcp"
 								target="_blank"
 								rel="noopener"
 							>
@@ -919,7 +836,7 @@ function Agents() {
 						</Button>
 						<Button asChild variant="accentOutline" size="cta">
 							<a
-								href="https://docs.carbon.ms/api-reference"
+								href="https://docs.carbon.ms/api"
 								target="_blank"
 								rel="noopener"
 							>
@@ -950,7 +867,7 @@ function Agents() {
 				</Reveal>
 
 				<Reveal>
-					<CodeExamples className="border-t-0" />
+					<CodeExamples className="border-t-0" inverted />
 				</Reveal>
 			</div>
 		</section>
@@ -1052,7 +969,7 @@ function TrustOpen() {
 							</span>
 						</div>
 						<h3 className="mt-5 font-display tracking-[-0.01em] text-[clamp(1.625rem,2.6vw,2.375rem)] leading-[1.1]">
-							<Trans>Auditable by construction.</Trans>
+							<Trans>Auditable by design.</Trans>
 						</h3>
 						<p className="mt-4 max-w-[40ch] text-[15px] leading-relaxed text-muted-foreground">
 							<Trans>
@@ -1075,7 +992,7 @@ function TrustOpen() {
 					<div className="bg-muted p-10 sm:p-11">
 						<div className="font-mono text-[10px] uppercase leading-none tracking-wide text-secondary">
 							<span className="inline-block bg-secondary/10 dark:bg-secondary-surface px-3 py-1.5">
-								<Trans>Source available</Trans>
+								<Trans>Open source</Trans>
 							</span>
 						</div>
 						<h3 className="mt-5 font-display tracking-[-0.01em] text-[clamp(1.625rem,2.6vw,2.375rem)] leading-[1.1]">
@@ -1113,7 +1030,7 @@ const selfHostPillars = [
 		desc: msg`ERP, MRP, MES and QMS on a single database you control, with row-level security. Your data never leaves your perimeter — no vendor cloud, no third-party data lake.`,
 	},
 	{
-		tag: "Source available",
+		tag: "Open source",
 		name: msg`Audit it before you deploy it`,
 		desc: msg`The whole application is on GitHub — the Community edition under AGPL-3.0. Read every line, run a security review, and extend it to fit your process.`,
 	},
@@ -1122,7 +1039,10 @@ const selfHostPillars = [
 function SelfHost() {
 	const { i18n } = useLingui();
 	return (
-		<section id="self-hosted" className="border-b border-border py-28 sm:py-32">
+		<section
+			id="self-hosted"
+			className="theme-invert border-b border-border bg-background py-28 text-foreground sm:py-32"
+		>
 			<div className={shell}>
 				<Reveal className="flex flex-wrap items-end justify-between gap-8">
 					<div>
@@ -1132,7 +1052,7 @@ function SelfHost() {
 							</span>
 						</div>
 						<h2 className={cn(heading, "mt-6 max-w-[22ch]")}>
-							<Trans>CMMC-compliant work stays inside your walls.</Trans>
+							<Trans>Self-host in your own cloud or on-prem</Trans>
 						</h2>
 					</div>
 					<div className="flex flex-wrap gap-3">
@@ -1230,18 +1150,7 @@ function StartCTA() {
 						today.
 					</Trans>
 				</p>
-				<div className="mt-10 flex flex-wrap justify-center gap-2.5">
-					<Button asChild variant="accentOutline" size="cta">
-						<a href={APP_URL}>
-							<AppCtaLabel />
-						</a>
-					</Button>
-					<Button asChild variant="accent" size="cta">
-						<Link to="/sales">
-							<Trans>Contact Sales</Trans>
-						</Link>
-					</Button>
-				</div>
+				<TrialActions className="mt-10 justify-center" />
 				<div className="mt-5 font-mono text-[11px] uppercase leading-none text-muted-foreground">
 					<a href={GITHUB_URL} target="_blank" rel="noopener">
 						<Trans>Or self-host the open source core</Trans>
@@ -1266,9 +1175,9 @@ export default function Route() {
 			<HappyPath />		
 			<FeatureRows />
 			<StatusQuo />
+			<SelfHost />
 			<OneModel />
 			<Industries />
-			<SelfHost />
 			<TrustOpen />
 			<Agents />
 			<Integrations />

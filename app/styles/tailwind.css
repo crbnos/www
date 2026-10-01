@@ -71,7 +71,10 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
+  /* `.theme-invert` sections take the opposite theme's variables: light inside
+     dark mode, dark inside light mode. */
+  :root,
+  .dark .theme-invert {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
@@ -103,7 +106,8 @@
     --header-height: 64px;
   }
 
-  .dark {
+  .dark,
+  .light .theme-invert {
     --background: 173 32% 4.1%;
     --foreground: 0 0% 98%;
     --card: 173 50% 3.9%;

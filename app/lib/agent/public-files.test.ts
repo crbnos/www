@@ -148,13 +148,13 @@ describe("vercel.json", () => {
 
   it.each([
     ["/developer", "/developers"],
-    ["/api", "https://docs.carbon.ms/api-reference"],
-    ["/api-docs", "https://docs.carbon.ms/api-reference"],
-    ["/api-reference", "https://docs.carbon.ms/api-reference"],
+    ["/api", "https://docs.carbon.ms/api"],
+    ["/api-docs", "https://docs.carbon.ms/api"],
+    ["/api-reference", "https://docs.carbon.ms/api"],
     ["/openapi", "/openapi.json"],
     ["/openapi.yml", "/openapi.yaml"],
-    ["/mcp", "https://docs.carbon.ms/mcp"],
-    ["/auth", "https://docs.carbon.ms/api-reference/authentication"],
+    ["/mcp", "https://docs.carbon.ms/api/mcp"],
+    ["/auth", "https://docs.carbon.ms/api/authentication"],
   ])("sends the guessable %s to %s", (source, destination) => {
     expect(bySource.get(source)).toMatchObject({ destination, permanent: true });
   });
