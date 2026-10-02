@@ -66,8 +66,8 @@ buy, build, inspect and ship on one live model of your factory.
 
 ## What Carbon is
 
-Legacy ERPs were built for 1990s accountants. Carbon is four systems —
-ERP, MRP, MES and QMS — on one schema, so there is nothing to integrate. Every
+Legacy ERPs were built for 1990s accountants. Carbon is five systems —
+ERP, MRP, MES, QMS and CMMS — on one schema, so there is nothing to integrate. Every
 stage writes to the same record: no handoffs, no re-keying, no reconciliation.
 
 - **CAD to cash, unbroken.** The engineering record and the production record

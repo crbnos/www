@@ -137,6 +137,20 @@ const modules = [
 			msg`Certificates of conformance`,
 		],
 	},
+	{
+		code: "CMMS",
+		shot: "maintenance",
+		name: msg`Maintenance`,
+		note: msg`preventive and reactive maintenance`,
+		rows: [
+			msg`Preventive maintenance schedules`,
+			msg`Reactive maintenance dispatches`,
+			msg`Work center downtime`,
+			msg`Technician labor tracking`,
+			msg`Spare parts consumption`,
+			msg`Dispatch notifications`,
+		],
+	},
 ];
 
 const stages = [
@@ -154,9 +168,9 @@ const stages = [
 
 const stats = [
 	{
-		value: 4,
+		value: 5,
 		label: msg`Systems replaced`,
-		sub: msg`ERP · MRP · MES · QMS`,
+		sub: msg`ERP · MRP · MES · QMS · CMMS`,
 	},
 	{
 		value: 1,
@@ -621,13 +635,13 @@ function OneModel() {
 			<div className={shell}>
 				<Reveal className="flex flex-wrap items-end justify-between gap-8">
 					<h2 className={cn(heading, "mt-5 max-w-[26ch]")}>
-						<Trans>Four systems, one database.</Trans>
+						<Trans>Five systems, one database.</Trans>
 					</h2>
 					<TrialActions />
 				</Reveal>
 
 				<div className="mt-12 grid grid-cols-1 gap-px border border-border bg-border lg:grid-cols-2">
-					{/* left — the four systems, stacked */}
+					{/* left — the five systems, stacked */}
 					<div className="grid auto-rows-fr grid-cols-1 gap-px bg-border">
 						{modules.map((m, i) => (
 							<button
