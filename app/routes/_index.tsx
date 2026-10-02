@@ -335,7 +335,7 @@ function TrialActions({ className }: { className?: string }) {
 			</Button>
 			<Button asChild variant="accentOutline" size="cta">
 				<Link to="/sales">
-					<Trans>Contact Sales</Trans>
+					<Trans>Talk to a Human</Trans>
 				</Link>
 			</Button>
 		</div>
@@ -539,7 +539,7 @@ function StatusQuo() {
 				<Reveal className="flex flex-wrap items-end justify-between gap-10">
 					<div>
 						<h2 className={cn(heading, "mt-5 max-w-[22ch]")}>
-							<Trans>Replace spreadsheets and disconnected manufacturing systems.</Trans>
+							<Trans>Replace spreadsheets and disconnected systems.</Trans>
 						</h2>
 					</div>
 					<TrialActions />
@@ -621,7 +621,7 @@ function OneModel() {
 			<div className={shell}>
 				<Reveal className="flex flex-wrap items-end justify-between gap-8">
 					<h2 className={cn(heading, "mt-5 max-w-[26ch]")}>
-						<Trans>ERP, MRP, MES and QMS in one database.</Trans>
+						<Trans>Four systems, one database.</Trans>
 					</h2>
 					<TrialActions />
 				</Reveal>

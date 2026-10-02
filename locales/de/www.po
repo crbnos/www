@@ -377,9 +377,6 @@ msgstr "Kontaktinformationen"
 
 #: app/components/header.tsx:150
 #: app/components/header.tsx:243
-#: app/routes/_index.tsx:338
-#: app/routes/pricing.tsx:69
-#: app/routes/pricing.tsx:90
 msgid "Contact Sales"
 msgstr "Kontakt zum Vertrieb"
 
@@ -611,10 +608,6 @@ msgstr "Enterprise. Beeinflussen Sie die Produktentwicklung mit priorisierten Fu
 msgid "ERP · MRP · MES · QMS"
 msgstr "ERP · MRP · MES · QMS"
 
-#: app/routes/_index.tsx:624
-msgid "ERP, MRP, MES and QMS in one database."
-msgstr ""
-
 #: app/routes/_index.tsx:1030
 msgid "ERP, MRP, MES and QMS share a Postgres database with row-level security. You control its network, encryption, backups and retention."
 msgstr ""
@@ -674,6 +667,10 @@ msgstr "Erstmusterprüfung"
 
 #: app/routes/pricing.tsx:100
 msgid "Forward-deployed engineer"
+msgstr ""
+
+#: app/routes/_index.tsx:624
+msgid "Four systems, one database."
 msgstr ""
 
 #: app/components/wizard-form.tsx:385
@@ -1167,7 +1164,7 @@ msgid "Regulated Enterprise"
 msgstr ""
 
 #: app/routes/_index.tsx:542
-msgid "Replace spreadsheets and disconnected manufacturing systems."
+msgid "Replace spreadsheets and disconnected systems."
 msgstr ""
 
 #: app/routes/pricing.tsx:69
@@ -1442,6 +1439,12 @@ msgstr "Systemstatus:"
 #: app/routes/_index.tsx:158
 msgid "Systems replaced"
 msgstr "Systeme ersetzt"
+
+#: app/routes/_index.tsx:338
+#: app/routes/pricing.tsx:69
+#: app/routes/pricing.tsx:90
+msgid "Talk to a Human"
+msgstr ""
 
 #: app/routes/_index.tsx:233
 #: app/routes/_index.tsx:234

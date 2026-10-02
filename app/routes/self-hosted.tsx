@@ -277,7 +277,7 @@ function LicenseActions({ className }: { className?: string }) {
 				<Link to="/pricing?mode=self-hosted">View Self-Hosted Pricing</Link>
 			</Button>
 			<Button asChild variant="accentOutline" size="cta">
-				<Link to="/sales">Contact Sales</Link>
+				<Link to="/sales">Talk to a Human</Link>
 			</Button>
 		</div>
 	);
@@ -296,10 +296,10 @@ function Hero() {
 						Self-hosted ERP on your infrastructure
 					</h1>
 
-					<p className="mx-auto mt-8 max-w-[60ch] text-lg leading-relaxed text-muted-foreground">
-						Deploy ERP, MRP, MES and QMS in your cloud account, on-prem or
-						air-gapped. Keep the application and Postgres data inside a boundary
-						you control.
+					<p className="mx-auto mt-8 max-w-[68ch] text-balance text-lg leading-relaxed text-muted-foreground">
+						Deploy ERP, MRP, MES and QMS in your cloud account, on-prem or{" "}
+						<span className="whitespace-nowrap">air-gapped</span>. Keep the
+						application and Postgres data inside a boundary you control.
 					</p>
 
 					<LicenseActions className="mt-10 justify-center" />

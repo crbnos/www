@@ -66,7 +66,7 @@ function usePlans(deployment: Deployment) {
 				: t`Starter plus APIs, automation and support`,
 			priceHeadline: "$100",
 			priceSubtext: t`/user/month`,
-			action: selfHosted ? t`Request a License` : t`Contact Sales`,
+			action: selfHosted ? t`Request a License` : t`Talk to a Human`,
 			url: "/sales",
 			featured: false,
 			features: [
@@ -87,7 +87,7 @@ function usePlans(deployment: Deployment) {
 			tag: selfHosted ? t`Regulated deployment` : t`Bring your own cloud`,
 			priceHeadline: t`Contact us`,
 			priceSubtext: "",
-			action: t`Contact Sales`,
+			action: t`Talk to a Human`,
 			url: "/sales",
 			description: selfHosted
 				? t`Enterprise Edition with a deployment designed for your security boundary`

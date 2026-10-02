@@ -377,9 +377,6 @@ msgstr "Contact Information"
 
 #: app/components/header.tsx:150
 #: app/components/header.tsx:243
-#: app/routes/_index.tsx:338
-#: app/routes/pricing.tsx:69
-#: app/routes/pricing.tsx:90
 msgid "Contact Sales"
 msgstr "Contact Sales"
 
@@ -611,10 +608,6 @@ msgstr "Enterprise. Influence product roadmap with priority feature requests"
 msgid "ERP · MRP · MES · QMS"
 msgstr "ERP · MRP · MES · QMS"
 
-#: app/routes/_index.tsx:624
-msgid "ERP, MRP, MES and QMS in one database."
-msgstr "ERP, MRP, MES and QMS in one database."
-
 #: app/routes/_index.tsx:1030
 msgid "ERP, MRP, MES and QMS share a Postgres database with row-level security. You control its network, encryption, backups and retention."
 msgstr "ERP, MRP, MES and QMS share a Postgres database with row-level security. You control its network, encryption, backups and retention."
@@ -675,6 +668,10 @@ msgstr "First article inspection"
 #: app/routes/pricing.tsx:100
 msgid "Forward-deployed engineer"
 msgstr "Forward-deployed engineer"
+
+#: app/routes/_index.tsx:624
+msgid "Four systems, one database."
+msgstr "Four systems, one database."
 
 #: app/components/wizard-form.tsx:385
 msgid "Full Name"
@@ -1167,8 +1164,8 @@ msgid "Regulated Enterprise"
 msgstr "Regulated Enterprise"
 
 #: app/routes/_index.tsx:542
-msgid "Replace spreadsheets and disconnected manufacturing systems."
-msgstr "Replace spreadsheets and disconnected manufacturing systems."
+msgid "Replace spreadsheets and disconnected systems."
+msgstr "Replace spreadsheets and disconnected systems."
 
 #: app/routes/pricing.tsx:69
 msgid "Request a License"
@@ -1442,6 +1439,12 @@ msgstr "System Status:"
 #: app/routes/_index.tsx:158
 msgid "Systems replaced"
 msgstr "Systems replaced"
+
+#: app/routes/_index.tsx:338
+#: app/routes/pricing.tsx:69
+#: app/routes/pricing.tsx:90
+msgid "Talk to a Human"
+msgstr "Talk to a Human"
 
 #: app/routes/_index.tsx:233
 #: app/routes/_index.tsx:234
