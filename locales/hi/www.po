@@ -96,6 +96,11 @@ msgstr "सभी कार्बन ट्रेडमार्क, लोग�
 msgid "Analytics"
 msgstr "विश्लेषण"
 
+#: app/routes/_index.tsx:1171
+#: app/routes/self-hosted.tsx:809
+msgid "And some of the world's most innovative manufacturers"
+msgstr "और दुनिया के कुछ सबसे नवीन निर्माताओं"
+
 #: app/routes/_index.tsx:464
 #: app/routes/_index.tsx:471
 msgid "Animated assembly instructions"
@@ -669,11 +674,6 @@ msgstr "प्रथम लेख निरीक्षण"
 
 #: app/routes/pricing.tsx:100
 msgid "Forward-deployed engineer"
-msgstr ""
-
-#: app/routes/_index.tsx:1171
-#: app/routes/self-hosted.tsx:809
-msgid "From hardware startups to regulated production teams"
 msgstr ""
 
 #: app/components/wizard-form.tsx:385

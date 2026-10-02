@@ -96,6 +96,11 @@ msgstr "모든 Carbon 상표, 로고 또는 기타 브랜드 요소는 Carbon Ma
 msgid "Analytics"
 msgstr "분석"
 
+#: app/routes/_index.tsx:1171
+#: app/routes/self-hosted.tsx:809
+msgid "And some of the world's most innovative manufacturers"
+msgstr "그리고 세계 최고의 혁신적인 제조업체들"
+
 #: app/routes/_index.tsx:464
 #: app/routes/_index.tsx:471
 msgid "Animated assembly instructions"
@@ -669,11 +674,6 @@ msgstr "첫 번째 제품 검사"
 
 #: app/routes/pricing.tsx:100
 msgid "Forward-deployed engineer"
-msgstr ""
-
-#: app/routes/_index.tsx:1171
-#: app/routes/self-hosted.tsx:809
-msgid "From hardware startups to regulated production teams"
 msgstr ""
 
 #: app/components/wizard-form.tsx:385

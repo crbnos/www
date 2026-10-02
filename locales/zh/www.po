@@ -96,6 +96,11 @@ msgstr "所有Carbon商标、徽标或其他品牌元素不得以任何方式修
 msgid "Analytics"
 msgstr "分析"
 
+#: app/routes/_index.tsx:1171
+#: app/routes/self-hosted.tsx:809
+msgid "And some of the world's most innovative manufacturers"
+msgstr "以及世界上一些最具创新精神的制造商"
+
 #: app/routes/_index.tsx:464
 #: app/routes/_index.tsx:471
 msgid "Animated assembly instructions"
@@ -669,11 +674,6 @@ msgstr "首件检测"
 
 #: app/routes/pricing.tsx:100
 msgid "Forward-deployed engineer"
-msgstr ""
-
-#: app/routes/_index.tsx:1171
-#: app/routes/self-hosted.tsx:809
-msgid "From hardware startups to regulated production teams"
 msgstr ""
 
 #: app/components/wizard-form.tsx:385

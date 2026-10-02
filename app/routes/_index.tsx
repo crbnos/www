@@ -1168,7 +1168,7 @@ export default function Route() {
 			<LogoStrip
 				headline={<Trans>Hard tech unicorns build on Carbon.</Trans>}
 				label={
-					<Trans>From hardware startups to regulated production teams</Trans>
+					<Trans>And some of the world's most innovative manufacturers</Trans>
 				}
 			/>
 			<Testimonial />

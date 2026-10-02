@@ -96,6 +96,11 @@ msgstr "Tutti i marchi commerciali Carbon, i loghi o altri elementi del marchio 
 msgid "Analytics"
 msgstr "Analitiche"
 
+#: app/routes/_index.tsx:1171
+#: app/routes/self-hosted.tsx:809
+msgid "And some of the world's most innovative manufacturers"
+msgstr "E alcuni dei più innovativi produttori del mondo"
+
 #: app/routes/_index.tsx:464
 #: app/routes/_index.tsx:471
 msgid "Animated assembly instructions"
@@ -669,11 +674,6 @@ msgstr "Ispezione del primo articolo"
 
 #: app/routes/pricing.tsx:100
 msgid "Forward-deployed engineer"
-msgstr ""
-
-#: app/routes/_index.tsx:1171
-#: app/routes/self-hosted.tsx:809
-msgid "From hardware startups to regulated production teams"
 msgstr ""
 
 #: app/components/wizard-form.tsx:385
