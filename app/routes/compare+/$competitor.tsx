@@ -167,6 +167,31 @@ export default function Compare() {
         </div>
       </section>
 
+      {/* Proof image, framed like the homepage testimonial. Capped at the
+          screenshots' native 1x width so they stay crisp. */}
+      {c.proofImage && (
+        <section className="border-b border-border py-28 sm:py-32">
+          <div className={shell}>
+            <figure className="mx-auto max-w-[600px] border border-border bg-card">
+              <img
+                src={c.proofImage.light.src}
+                alt={c.proofImage.alt}
+                width={c.proofImage.light.width}
+                height={c.proofImage.light.height}
+                className="h-auto w-full dark:hidden"
+              />
+              <img
+                src={c.proofImage.dark.src}
+                alt={c.proofImage.alt}
+                width={c.proofImage.dark.width}
+                height={c.proofImage.dark.height}
+                className="hidden h-auto w-full dark:block"
+              />
+            </figure>
+          </div>
+        </section>
+      )}
+
       {/* Comparison table */}
       <section className="border-b border-border py-24 sm:py-28">
         <div className={shell}>

@@ -48,6 +48,12 @@ export type Comparison = {
   metaDescription: string;
   /** The paragraph under the headline. */
   subheadline: string;
+  /** Optional proof image shown right below the hero. */
+  proofImage?: {
+    alt: string;
+    light: { src: string; width: number; height: number };
+    dark: { src: string; width: number; height: number };
+  };
   /** Four short proof points shown as chips in the hero. */
   stats: { value: string; label: string }[];
   /** The comparison table, in labelled groups. */
@@ -1884,6 +1890,19 @@ const BUILD: Comparison = {
     "Building your own ERP/MES costs years and a standing team. Carbon gives the same control — full source ownership — without building it, live in days.",
   subheadline:
     "The most common reason teams build their own ERP or MES is control — they want to own it and shape it to their process. Carbon gives you that same control: the full source code is yours to run, audit and extend. The difference is you start from a finished manufacturing platform instead of a blank repo and a multi-year roadmap.",
+  proofImage: {
+    alt: "Brad Barbin on X: \"showed carbon to an executive at hard tech unicorn yesterday and the reaction was: wow we're so good at our proprietary things but surpringsly far behind on the core system compared to carbon (despite having spent many many many millions on it) ive seen this a bunch of times they are basically stuck now (same thing happened to protolabs). but i think the important thing is why. when you build factoryOS you optimize for where you are today. and the decisions you make end up limiting you as you try to grow into a real company with real accounting, supply chain, and product mix — what worked great initially ends up becoming the bottleneck of course im biased but you should ask around (don't take the twitter posts aimed at investors at face value necessarily)\" Caleb of OSH Cut replies: \"It's true. We had to completely gut and overhaul our systems do handle accounting and other capabilities correctly. Cost us millions of dollars and a lot of distraction.\"",
+    light: {
+      src: "/images/build-vs-buy-tweet-light.jpg",
+      width: 1194,
+      height: 1690,
+    },
+    dark: {
+      src: "/images/build-vs-buy-tweet-dark.jpg",
+      width: 1178,
+      height: 1682,
+    },
+  },
   stats: CARBON_STATS,
   groups: [
     {
