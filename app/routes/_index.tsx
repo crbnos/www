@@ -428,6 +428,10 @@ function Hero() {
 					to="/self-hosted"
 					className="group mb-8 inline-flex items-center gap-2 rounded-full border border-border px-4 py-1.5 text-sm text-muted-foreground transition-colors hover:border-foreground/30 hover:text-foreground"
 				>
+					<span aria-hidden className="relative flex size-1.5">
+						<span className="absolute inline-flex size-full rounded-full bg-secondary opacity-75 motion-safe:animate-ping" />
+						<span className="relative inline-flex size-1.5 rounded-full bg-secondary" />
+					</span>
 					<Trans>Deploy in our cloud, your cloud or on-prem</Trans>
 					<ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
 				</Link>
@@ -463,13 +467,21 @@ function HeroDashboard() {
 	const { t } = useLingui();
 	return (
 		<div className="relative [perspective:2000px]">
-			{/* glowing plane edge */}
+			{/* glowing plane edge: an elliptical bloom centered on the edge line;
+			    the card paints over its lower half */}
 			<div
 				aria-hidden
-				className="mx-[12%] h-px bg-gradient-to-r from-transparent via-secondary to-transparent"
-				style={{ boxShadow: "0 0 34px 6px hsl(var(--secondary) / 0.15)" }}
+				className="pointer-events-none absolute inset-x-[4%] top-0 h-48 -translate-y-1/2"
+				style={{
+					background:
+						"radial-gradient(50% 50% at 50% 50%, hsl(var(--secondary) / 0.18), transparent)",
+				}}
 			/>
-			<div className="border border-b-0 border-border bg-card">
+			<div
+				aria-hidden
+				className="relative mx-[12%] h-px bg-gradient-to-r from-transparent via-secondary to-transparent"
+			/>
+			<div className="relative border border-b-0 border-border bg-card">
 				<div className="relative overflow-hidden sm:h-[min(66vh,740px)]">
 					<Screenshot
 						className="dark:hidden"

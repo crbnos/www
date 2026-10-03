@@ -36,7 +36,7 @@ msgstr "18개월 구현"
 msgid "21 CFR Part 11"
 msgstr "21 CFR Part 11"
 
-#: app/routes/_index.tsx:1156
+#: app/routes/_index.tsx:1168
 msgid "30-day trial · No sales call"
 msgstr ""
 
@@ -96,13 +96,13 @@ msgstr "모든 Carbon 상표, 로고 또는 기타 브랜드 요소는 Carbon Ma
 msgid "Analytics"
 msgstr "분석"
 
-#: app/routes/_index.tsx:1185
+#: app/routes/_index.tsx:1197
 #: app/routes/self-hosted.tsx:809
 msgid "And some of the world's most innovative manufacturers"
 msgstr "그리고 세계 최고의 혁신적인 제조업체들"
 
-#: app/routes/_index.tsx:478
-#: app/routes/_index.tsx:485
+#: app/routes/_index.tsx:490
+#: app/routes/_index.tsx:497
 msgid "Animated assembly instructions"
 msgstr "애니메이션 조립 지침"
 
@@ -110,7 +110,7 @@ msgstr "애니메이션 조립 지침"
 msgid "API"
 msgstr "API"
 
-#: app/routes/_index.tsx:856
+#: app/routes/_index.tsx:868
 msgid "API Docs"
 msgstr "API 문서"
 
@@ -158,7 +158,7 @@ msgstr "뒤로"
 msgid "Barcode / QR tracking"
 msgstr "바코드 / QR 추적"
 
-#: app/routes/_index.tsx:510
+#: app/routes/_index.tsx:522
 msgid "Best ERP/MRP/MES system I've ever seen in a 22-year career across defense and automotive. Native Onshape integration means we synchronize all our data without extra PLM connectors — good UX, modern integrations, open source, open API and MCP, cloud or on-prem. We run our whole electric-vehicle engineering and manufacturing business on Carbon, and I couldn't imagine going back to a legacy system."
 msgstr "국방 및 자동차 분야의 22년 경력에서 본 최고의 ERP/MRP/MES 시스템입니다. 네이티브 Onshape 통합은 추가 PLM 커넥터 없이 모든 데이터를 동기화할 수 있음을 의미합니다 — 좋은 UX, 현대적인 통합, 오픈 소스, 개방형 API 및 MCP, 클라우드 또는 온프레미스. 우리의 전체 전기차 엔지니어링 및 제조 사업을 Carbon에서 운영하고 있으며, 레거시 시스템으로 돌아갈 수 없습니다."
 
@@ -195,7 +195,7 @@ msgstr "브랜드 자산"
 msgid "Bring your own cloud"
 msgstr "자신의 클라우드 가져오기"
 
-#: app/routes/_index.tsx:438
+#: app/routes/_index.tsx:442
 msgid "Build hardware at the <0/><1>speed of software</1>"
 msgstr ""
 
@@ -203,7 +203,7 @@ msgstr ""
 msgid "Build vs. buy"
 msgstr "직접 구축 vs. 구매"
 
-#: app/routes/_index.tsx:898
+#: app/routes/_index.tsx:910
 msgid "Built for discrete manufacturing."
 msgstr ""
 
@@ -236,7 +236,7 @@ msgstr ""
 msgid "Carbon combines ERP, MES, and QMS into a single, unified system."
 msgstr "Carbon은 ERP, MES, QMS를 하나의 통합 시스템으로 결합합니다."
 
-#: app/routes/_index.tsx:446
+#: app/routes/_index.tsx:450
 msgid "Carbon combines ERP, MRP, MES and QMS. Plan materials, run the shop floor, manage quality and track actual costs in one system."
 msgstr ""
 
@@ -244,7 +244,7 @@ msgstr ""
 msgid "Carbon generates REST endpoints from its schema and publishes typed clients for TypeScript, Python and C#. Use webhooks for event-driven integrations."
 msgstr ""
 
-#: app/routes/_index.tsx:1015
+#: app/routes/_index.tsx:1027
 msgid "Carbon's source is public. Use the prompt below to review it against your requirements."
 msgstr ""
 
@@ -329,7 +329,7 @@ msgstr "인프라에 대한 완전한 제어"
 msgid "Configurator"
 msgstr "구성기"
 
-#: app/routes/_index.tsx:902
+#: app/routes/_index.tsx:914
 msgid "Configure Carbon for one-off builds, rate production and regulated work without changing the underlying data model."
 msgstr ""
 
@@ -345,7 +345,7 @@ msgstr "주문 구성, 애프터마켓"
 msgid "confirmed dates"
 msgstr "확인된 날짜"
 
-#: app/routes/_index.tsx:1117
+#: app/routes/_index.tsx:1129
 msgid "Connect the tools your teams already use."
 msgstr ""
 
@@ -384,20 +384,20 @@ msgstr "영업 문의"
 msgid "Contact us"
 msgstr "문의하기"
 
-#: app/routes/_index.tsx:1043
+#: app/routes/_index.tsx:1055
 msgid "Control the system of record"
 msgstr ""
 
-#: app/routes/_index.tsx:985
+#: app/routes/_index.tsx:997
 msgid "Controls built into the data model."
 msgstr ""
 
 #: app/components/logo-menu.tsx:66
-#: app/routes/_index.tsx:963
+#: app/routes/_index.tsx:975
 msgid "Copied"
 msgstr "복사됨"
 
-#: app/routes/_index.tsx:963
+#: app/routes/_index.tsx:975
 msgid "Copy"
 msgstr "복사"
 
@@ -425,7 +425,7 @@ msgstr "실제 비용"
 msgid "Create a branded ordering experience that drives production"
 msgstr "브랜드화된 주문 경험을 만들어 생산을 촉진하세요"
 
-#: app/routes/_index.tsx:1162
+#: app/routes/_index.tsx:1174
 msgid "Create a workspace, import your data and connect your integrations. Self-host the open-source core or use the managed cloud."
 msgstr ""
 
@@ -505,7 +505,7 @@ msgstr "수요 및 예측"
 msgid "Demand forecasting"
 msgstr ""
 
-#: app/routes/_index.tsx:431
+#: app/routes/_index.tsx:435
 msgid "Deploy in our cloud, your cloud or on-prem"
 msgstr ""
 
@@ -513,7 +513,7 @@ msgstr ""
 msgid "Deploy in weeks"
 msgstr ""
 
-#: app/routes/_index.tsx:1039
+#: app/routes/_index.tsx:1051
 msgid "Deploy in your VPC, on-prem or fully air-gapped. Keep CUI inside infrastructure you control while supporting CMMC and ITAR requirements."
 msgstr ""
 
@@ -588,7 +588,7 @@ msgstr "엔지니어링"
 msgid "Engineering change orders"
 msgstr "엔지니어링 변경 주문"
 
-#: app/routes/_index.tsx:712
+#: app/routes/_index.tsx:724
 msgid "Engineering, planning, production, quality and accounting update the same data. No re-keying or cross-system reconciliation."
 msgstr ""
 
@@ -612,7 +612,7 @@ msgstr "엔터프라이즈. 우선순위 기능 요청으로 제품 로드맵에
 msgid "ERP · MRP · MES · QMS · CMMS"
 msgstr ""
 
-#: app/routes/_index.tsx:1044
+#: app/routes/_index.tsx:1056
 msgid "ERP, MRP, MES and QMS share a Postgres database with row-level security. You control its network, encryption, backups and retention."
 msgstr ""
 
@@ -620,7 +620,7 @@ msgstr ""
 msgid "ERP, MRP, MES and QMS share one schema"
 msgstr ""
 
-#: app/routes/_index.tsx:1012
+#: app/routes/_index.tsx:1024
 msgid "Evaluate the source before you deploy"
 msgstr ""
 
@@ -640,7 +640,7 @@ msgstr "이미지 확대"
 msgid "Expenses"
 msgstr "비용"
 
-#: app/routes/_index.tsx:1075
+#: app/routes/_index.tsx:1087
 msgid "Explore Self-Hosting"
 msgstr "자체 호스팅 탐색"
 
@@ -669,7 +669,7 @@ msgstr "반응하는 유한 용량 스케줄링"
 msgid "First article inspection"
 msgstr "첫 번째 제품 검사"
 
-#: app/routes/_index.tsx:638
+#: app/routes/_index.tsx:650
 msgid "Five systems, one database."
 msgstr ""
 
@@ -713,7 +713,7 @@ msgstr "GL & 발생액"
 msgid "Global Search"
 msgstr "전역 검색"
 
-#: app/routes/_index.tsx:1183
+#: app/routes/_index.tsx:1195
 #: app/routes/self-hosted.tsx:807
 msgid "Hard tech unicorns build on Carbon."
 msgstr ""
@@ -742,7 +742,7 @@ msgstr "산업 장비"
 msgid "Inspect and extend the code"
 msgstr ""
 
-#: app/routes/_index.tsx:1049
+#: app/routes/_index.tsx:1061
 msgid "Inspect the application on GitHub, run your own security review and extend the AGPL-3.0 Community edition for your process."
 msgstr ""
 
@@ -750,7 +750,7 @@ msgstr ""
 msgid "inspection, compliance and genealogy"
 msgstr ""
 
-#: app/routes/_index.tsx:836
+#: app/routes/_index.tsx:848
 msgid "Integrate every manufacturing workflow."
 msgstr ""
 
@@ -818,7 +818,7 @@ msgstr "Discord 커뮤니티에 참여하세요"
 msgid "Kanban Schedule"
 msgstr "칸반 스케줄"
 
-#: app/routes/_index.tsx:1038
+#: app/routes/_index.tsx:1050
 msgid "Keep regulated data in your boundary"
 msgstr ""
 
@@ -919,7 +919,7 @@ msgstr ""
 msgid "materials, capacity and schedules"
 msgstr ""
 
-#: app/routes/_index.tsx:846
+#: app/routes/_index.tsx:858
 msgid "MCP Docs"
 msgstr "MCP 문서"
 
@@ -999,7 +999,7 @@ msgstr "필수 없음"
 msgid "On-prem, private cloud or air-gapped deployment"
 msgstr ""
 
-#: app/routes/_index.tsx:709
+#: app/routes/_index.tsx:721
 msgid "One record from CAD to cash."
 msgstr ""
 
@@ -1011,7 +1011,7 @@ msgstr "일회성, 단일 로트 추적 가능성"
 msgid "One-time purchase with full ownership"
 msgstr "일회성 구매로 완전한 소유권 획득"
 
-#: app/routes/_index.tsx:1008
+#: app/routes/_index.tsx:1020
 #: app/routes/pricing.tsx:38
 msgid "Open source"
 msgstr "오픈 소스"
@@ -1032,7 +1032,7 @@ msgstr ""
 msgid "ops on the floor"
 msgstr "바닥의 작업"
 
-#: app/routes/_index.tsx:1170
+#: app/routes/_index.tsx:1182
 msgid "Or self-host the open source core"
 msgstr "또는 오픈 소스 코어를 자체 호스팅"
 
@@ -1183,7 +1183,7 @@ msgstr ""
 msgid "Regulated Enterprise"
 msgstr ""
 
-#: app/routes/_index.tsx:556
+#: app/routes/_index.tsx:568
 msgid "Replace spreadsheets and disconnected systems."
 msgstr ""
 
@@ -1204,7 +1204,7 @@ msgstr ""
 msgid "REST API, webhooks, integrations and MCP"
 msgstr ""
 
-#: app/routes/_index.tsx:1048
+#: app/routes/_index.tsx:1060
 msgid "Review the code before deployment"
 msgstr ""
 
@@ -1249,7 +1249,7 @@ msgstr "규칙 기반 BOM 및 라우팅 생성"
 msgid "Rules-based product configurator, BOMs and routings"
 msgstr ""
 
-#: app/routes/_index.tsx:1069
+#: app/routes/_index.tsx:1081
 msgid "Run Carbon on infrastructure you control."
 msgstr ""
 
@@ -1284,7 +1284,7 @@ msgstr "선호하는 호스팅 솔루션을 선택하세요"
 #: app/components/footer.tsx:64
 #: app/components/header.tsx:92
 #: app/components/header.tsx:217
-#: app/routes/_index.tsx:1065
+#: app/routes/_index.tsx:1077
 #: app/routes/pricing.tsx:215
 msgid "Self-hosted"
 msgstr "자체 호스팅"
@@ -1337,7 +1337,7 @@ msgstr "격리된 데이터가 있는 공유 데이터베이스"
 msgid "Shared schema"
 msgstr "공유 스키마"
 
-#: app/routes/_index.tsx:1159
+#: app/routes/_index.tsx:1171
 msgid "Ship faster than your competitors can quote."
 msgstr ""
 
@@ -1515,7 +1515,7 @@ msgstr ""
 msgid "Track material, labor, scans, scrap and deviations as work happens. Schedules and job costs update from the same records."
 msgstr ""
 
-#: app/routes/_index.tsx:981
+#: app/routes/_index.tsx:993
 msgid "Trusted"
 msgstr "신뢰"
 
@@ -1535,7 +1535,7 @@ msgstr "무제한 기능 지원"
 msgid "Unlimited records"
 msgstr "무제한 레코드"
 
-#: app/routes/_index.tsx:988
+#: app/routes/_index.tsx:1000
 msgid "Use append-only ledgers, granular permissions and complete record history to support regulated workflows."
 msgstr ""
 
@@ -1552,7 +1552,7 @@ msgstr ""
 msgid "View our source code and contribute"
 msgstr "우리의 소스 코드를 보고 기여하세요"
 
-#: app/routes/_index.tsx:1081
+#: app/routes/_index.tsx:1093
 msgid "View the Source"
 msgstr "소스 보기"
 
