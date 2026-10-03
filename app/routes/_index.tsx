@@ -1,18 +1,27 @@
 import type { MessageDescriptor } from "@lingui/core";
 import { msg } from "@lingui/core/macro";
 import { Trans, useLingui } from "@lingui/react/macro";
-import { ArrowRight, Book, Check, ChevronRight, Copy, X } from "lucide-react";
+import {
+	ArrowRight,
+	Book,
+	Check,
+	ChevronRight,
+	Copy,
+	Printer,
+	Webhook,
+	X,
+} from "lucide-react";
 import { type ReactNode, useEffect, useRef, useState } from "react";
 import { Link } from "react-router";
 import type { MetaFunction } from "react-router";
 import { AppCtaLabel } from "~/components/app-cta-label";
-import { CodeExamples } from "~/components/code-examples";
+import { ApiConsole } from "~/components/api-console";
 import { EntityTree } from "~/components/entity-tree";
 import { LogoStrip } from "~/components/logo-strip";
 import { Screenshot } from "~/components/screenshot";
 import { Button } from "~/components/ui/button";
 import { ZoomableImage } from "~/components/zoomable-image";
-import { cn } from "~/lib/utils";
+import { cn, getFaviconUrl } from "~/lib/utils";
 import { pageMeta } from "~/lib/seo";
 
 // The home route shipped no `meta`, so it inherited root's default title
@@ -154,16 +163,16 @@ const modules = [
 ];
 
 const stages = [
-	{ name: msg`Engineering`, note: msg`routing & work instructions` },
-	{ name: msg`Planning`, note: msg`projections and MRP` },
-	{ name: msg`Purchasing`, note: msg`POs & receipts` },
-	{ name: msg`Order`, note: msg`confirmed dates` },
-	{ name: msg`Production`, note: msg`ops on the floor` },
-	{ name: msg`Quality`, note: msg`FAI & NCR` },
-	{ name: msg`Shipping`, note: msg`packing & certs` },
-	{ name: msg`Invoicing`, note: msg`costed actuals` },
-	{ name: msg`Accounting`, note: msg`GL & accruals` },
-	{ name: msg`Customize`, note: msg`API, MCP, apps` },
+	{ name: msg`Engineering` },
+	{ name: msg`Planning` },
+	{ name: msg`Purchasing` },
+	{ name: msg`Sales` },
+	{ name: msg`Production` },
+	{ name: msg`Quality` },
+	{ name: msg`Shipping` },
+	{ name: msg`Invoicing` },
+	{ name: msg`Accounting` },
+	{ name: msg`Customize` },
 ];
 
 const stats = [
@@ -191,21 +200,24 @@ const stats = [
 	},
 ];
 
-const devPillars = [
+const transportsInfo = [
 	{
-		tag: "REST API",
-		name: msg`A generated API for every module`,
-		desc: msg`Carbon generates REST endpoints from its schema and publishes typed clients for TypeScript, Python and C#. Use webhooks for event-driven integrations.`,
+		tag: "HTTP",
+		name: msg`Every operation is an endpoint`,
+		code: "POST /api/v1/{module}/{operation}",
+		desc: msg`Send a scoped API key as a bearer token. A single result is the response body; a list comes back with results and a total count.`,
 	},
 	{
-		tag: "MCP server",
-		name: msg`A permission-aware MCP server`,
-		desc: msg`The built-in MCP server exposes Carbon operations to AI agents. Every request uses the permissions of the authenticated identity.`,
+		tag: "MCP",
+		name: msg`One server for every AI client`,
+		code: "search_tools → describe_tool → call_tool",
+		desc: msg`Claude, ChatGPT, Cursor and Codex load only the operations a task needs, so the model's context stays small.`,
 	},
 	{
-		tag: "Open source",
-		name: msg`Inspect and extend the code`,
-		desc: msg`The TypeScript monorepo shares generated database types across the application, API and agent tools. Run Carbon with your own models and infrastructure.`,
+		tag: "OpenAPI",
+		name: msg`Typed clients in your language`,
+		code: "GET /api/v1/openapi.json",
+		desc: msg`Generate a typed client for TypeScript, Python, Go, Ruby, C# or PHP from the public spec. Input schemas come from the validators the server runs.`,
 	},
 ];
 
@@ -239,24 +251,45 @@ const compliance: MessageDescriptor[] = [
 	msg`Row-level security`,
 ];
 
-const integrations = [
-	// Product names stay literal; only the category ("kind") is translated.
-	{ name: "Onshape", kind: msg`CAD` },
-	{ name: "SolidWorks", kind: msg`CAD` },
-	{ name: "Ramp", kind: msg`Expenses` },
-	{ name: "Linear", kind: msg`Tasks` },
-	{ name: "Jira", kind: msg`Tasks` },
-	{ name: "Slack", kind: msg`Chat` },
-	{ name: "Paperless Parts", kind: msg`Quoting` },
-	{ name: "Stripe", kind: msg`Billing` },
-	{ name: "Rillet", kind: msg`Finance` },
-	{ name: "Xero", kind: msg`Finance` },
-	{ name: "Brother", kind: msg`Printer` },
-	{ name: "Zebra ZPL", kind: msg`Printer` },
-	{ name: "ProxyBox", kind: msg`Printer` },
-	{ name: "REST and Webhooks", kind: msg`API` },
-	{ name: "Claude", kind: msg`LLM` },
-	{ name: "ChatGPT", kind: msg`LLM` },
+// Product names stay literal. Two rows, scrolling in opposite directions.
+// Entries without a `url` fall back to a lucide icon instead of a favicon;
+// `invert` flips black favicons so they stay visible in dark mode.
+const integrations: {
+	name: string;
+	url?: string;
+	icon?: typeof Printer;
+	invert?: boolean;
+}[][] = [
+	[
+		{ name: "Onshape", url: "https://onshape.com" },
+		{ name: "SolidWorks", url: "https://solidworks.com" },
+		{ name: "Claude", url: "https://claude.ai" },
+		{ name: "ChatGPT", url: "https://chatgpt.com", invert: true },
+		{ name: "Cursor", url: "https://cursor.com" },
+		{ name: "Perplexity", url: "https://perplexity.ai" },
+		{ name: "Slack", url: "https://slack.com" },
+		{ name: "Linear", url: "https://linear.app" },
+		{ name: "Jira", url: "https://jira.atlassian.com" },
+		{ name: "Mount", url: "https://mount.cloud" },
+		{ name: "Paperless Parts", url: "https://paperlessparts.com" },
+		{ name: "Resend", url: "https://resend.com" },
+		{ name: "Okta", url: "https://okta.com" },
+		{ name: "Microsoft Entra", url: "https://entra.microsoft.com" },
+	],
+	[
+		{ name: "Stripe", url: "https://stripe.com" },
+		{ name: "Ramp", url: "https://ramp.com" },
+		{ name: "Rillet", url: "https://rillet.com" },
+		{ name: "Xero", url: "https://xero.com" },
+		{ name: "QuickBooks", url: "https://quickbooks.intuit.com" },
+		{ name: "Sage Intacct", url: "https://sage.com" },
+		{ name: "Zebra", url: "https://zebra.com", invert: true },
+		{ name: "Brother", url: "https://brother.com" },
+		{ name: "Epson", url: "https://epson.com" },
+		{ name: "Dymo", url: "https://dymo.com" },
+		{ name: "ProxyBox", icon: Printer },
+		{ name: "REST and Webhooks", icon: Webhook },
+	],
 ];
 
 const featureRows = [
@@ -744,9 +777,6 @@ function HappyPath() {
 								<div className="mt-3.5 text-[15px] font-medium">
 									{i18n._(s.name)}
 								</div>
-								<div className="mt-2 font-mono text-xs leading-snug text-muted-foreground">
-									{i18n._(s.note)}
-								</div>
 							</div>
 						))}
 					</div>
@@ -839,14 +869,24 @@ function Agents() {
 	return (
 		<section
 			id="developers"
-			className="theme-invert border-b border-border bg-background py-28 text-foreground sm:py-32"
+			className="border-b border-border py-28 sm:py-32"
 		>
 			<div className={shell}>
 				<Reveal className="flex flex-wrap items-end justify-between gap-8">
 					<div>
+						<div className={eyebrow}>
+							<Trans>Carbon API</Trans>
+						</div>
 						<h2 className={cn(heading, "mt-5 max-w-[40ch]")}>
 							<Trans>Integrate every manufacturing workflow.</Trans>
 						</h2>
+						<p className="mt-6 max-w-[62ch] text-lg leading-relaxed text-muted-foreground">
+							<Trans>
+								The Carbon API is the service layer: the same code the app runs
+								when you click a button. Every call validates its input,
+								recalculates what depends on it and enforces your permissions.
+							</Trans>
+						</p>
 					</div>
 					<div className="flex flex-wrap gap-3">
 						<Button asChild variant="accent" size="cta">
@@ -872,18 +912,22 @@ function Agents() {
 					</div>
 				</Reveal>
 
-				<Reveal className="mt-14 grid grid-cols-1 gap-px border border-border bg-border lg:grid-cols-3">
-					{devPillars.map((p) => (
-						<div
-							key={p.tag}
-							className="flex flex-col gap-4 bg-card p-8 transition-colors hover:bg-muted"
-						>
+				<Reveal className="mt-14">
+					<ApiConsole />
+				</Reveal>
+
+				<Reveal className="grid grid-cols-1 gap-px border border-t-0 border-border bg-border lg:grid-cols-3">
+					{transportsInfo.map((p) => (
+						<div key={p.tag} className="flex flex-col gap-4 bg-card p-8">
 							<div className="font-mono text-[10px] uppercase leading-none tracking-wide text-secondary">
 								<span className="inline-block bg-secondary/10 dark:bg-secondary-surface px-3 py-1.5">
 									{p.tag}
 								</span>
 							</div>
 							<div className="text-xl font-medium">{i18n._(p.name)}</div>
+							<code className="font-mono text-[12.5px] text-foreground/80">
+								{p.code}
+							</code>
 							<div className="text-sm leading-relaxed text-muted-foreground">
 								{i18n._(p.desc)}
 							</div>
@@ -891,9 +935,6 @@ function Agents() {
 					))}
 				</Reveal>
 
-				<Reveal>
-					<CodeExamples className="border-t-0" inverted />
-				</Reveal>
 			</div>
 		</section>
 	);
@@ -984,7 +1025,10 @@ function CopyPrompt({ prompt }: { prompt: string }) {
 function TrustOpen() {
 	const { i18n } = useLingui();
 	return (
-		<section id="open" className="border-b border-border py-28 sm:py-32">
+		<section
+			id="open"
+			className="theme-invert border-b border-border bg-background py-28 text-foreground sm:py-32"
+		>
 			<div className={shell}>
 				<Reveal className="grid grid-cols-1 gap-px border border-border bg-border lg:grid-cols-2">
 					<div className="bg-card p-10 sm:p-11">
@@ -1120,28 +1164,64 @@ function SelfHost() {
 }
 
 function Integrations() {
-	const { i18n } = useLingui();
 	return (
-		<section className="border-b border-border py-24">
+		<section className="overflow-hidden border-b border-border py-24">
 			<div className={shell}>
 				<Reveal>
-					<h2 className="mb-12 mt-5 font-display tracking-[-0.01em] text-[clamp(1.75rem,3vw,2.75rem)] leading-[1.1]">
+					<h2 className="mb-12 mt-5 text-balance text-center font-display tracking-[-0.01em] text-[clamp(1.75rem,3vw,2.75rem)] leading-[1.1]">
 						<Trans>Connect the tools your teams already use.</Trans>
 					</h2>
 				</Reveal>
-				<Reveal className="grid grid-cols-1 gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
-					{integrations.map((itg) => (
+				<div
+					className="flex flex-col gap-3"
+					style={{
+						maskImage:
+							"linear-gradient(to right, transparent, #000 15%, #000 85%, transparent)",
+						WebkitMaskImage:
+							"linear-gradient(to right, transparent, #000 15%, #000 85%, transparent)",
+					}}
+				>
+					{integrations.map((row, r) => (
 						<div
-							key={itg.name}
-							className="flex items-center justify-between gap-2.5 bg-card p-5 font-mono text-[13px] leading-none text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+							key={r}
+							className="group flex overflow-hidden [--marquee-duration:100s] [--marquee-gap:0.75rem]"
 						>
-							<span>{itg.name}</span>
-							<span className="text-[10px] text-muted-foreground">
-								{i18n._(itg.kind)}
-							</span>
+							<ul
+								className={cn(
+									"flex w-max shrink-0 animate-marquee gap-[--marquee-gap] group-hover:[animation-play-state:paused] motion-reduce:animate-none",
+									r % 2 === 1 && "[animation-direction:reverse]",
+								)}
+							>
+								{/* Four copies so one half always overfills the container;
+								    the marquee shifts by half for a seamless loop. */}
+								{[...row, ...row, ...row, ...row].map((itg, index) => (
+									<li
+										key={`${itg.name}-${index}`}
+										aria-hidden={index >= row.length}
+										className="flex h-10 shrink-0 items-center gap-2.5 rounded-full border border-border bg-card pl-3 pr-4 text-sm text-muted-foreground transition-colors hover:border-foreground/30 hover:text-foreground"
+									>
+										{itg.url ? (
+											<img
+												src={getFaviconUrl(itg.url)}
+												alt=""
+												width={16}
+												height={16}
+												loading="lazy"
+												className={cn(
+													"size-4 shrink-0 rounded-[3px]",
+													itg.invert && "dark:invert",
+												)}
+											/>
+										) : itg.icon ? (
+											<itg.icon className="size-4 shrink-0" aria-hidden />
+										) : null}
+										{itg.name}
+									</li>
+								))}
+							</ul>
 						</div>
 					))}
-				</Reveal>
+				</div>
 			</div>
 		</section>
 	);

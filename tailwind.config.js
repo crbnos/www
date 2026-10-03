@@ -165,6 +165,16 @@ export default {
 					from: { "stroke-dashoffset": "18" },
 					to: { "stroke-dashoffset": "0" },
 				},
+				// API console: trace lines and tool calls rising in, and the
+				// auto-advance timer on the active operation.
+				"cb-rise": {
+					from: { opacity: "0", transform: "translateY(4px)" },
+					to: { opacity: "1", transform: "none" },
+				},
+				"cb-progress": {
+					from: { transform: "scaleX(0)" },
+					to: { transform: "scaleX(1)" },
+				},
 				"cb-blink": {
 					"0%, 49%": { opacity: "1" },
 					"50%, 100%": { opacity: "0" },
@@ -189,6 +199,8 @@ export default {
 				"cb-flow": "cb-flow 5.5s linear infinite",
 				"cb-march": "cb-march 0.8s linear infinite",
 				"cb-blink": "cb-blink 1.1s step-end infinite",
+				"cb-rise": "cb-rise 0.4s cubic-bezier(0.2, 0.7, 0.2, 1) both",
+				"cb-progress": "cb-progress var(--progress-duration, 8s) linear both",
 				scan: "scan 6s linear infinite",
 				flicker: "flicker 1.6s steps(1, end) infinite",
 			},
