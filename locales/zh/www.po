@@ -44,7 +44,7 @@ msgstr "30天试用 · 无销售电话"
 msgid "5 user minimum"
 msgstr "5个用户最少"
 
-#: app/routes/_index.tsx:174
+#: app/routes/_index.tsx:175
 msgid "Accounting"
 msgstr "会计"
 
@@ -440,10 +440,6 @@ msgstr "客户门户/网站"
 msgid "Customer portals for order status and files"
 msgstr "客户门户，用于订单状态和文件"
 
-#: app/routes/_index.tsx:175
-msgid "Customize"
-msgstr "自定义"
-
 #: app/components/app-cta-label.tsx:16
 msgid "Dashboard"
 msgstr "仪表板"
@@ -659,6 +655,10 @@ msgstr "五个系统，一个数据库。"
 msgid "Forward-deployed engineer"
 msgstr "前沿部署工程师"
 
+#: app/routes/_index.tsx:754
+msgid "From CAD to cash."
+msgstr ""
+
 #: app/components/wizard-form.tsx:385
 msgid "Full Name"
 msgstr "全名"
@@ -754,7 +754,7 @@ msgstr "库存和成本"
 msgid "Inventory & locations"
 msgstr "库存和位置"
 
-#: app/routes/_index.tsx:173
+#: app/routes/_index.tsx:174
 msgid "Invoicing"
 msgstr "开票"
 
@@ -1038,10 +1038,6 @@ msgstr "存储单元的现有数量已更新"
 msgid "On-prem, private cloud or air-gapped deployment"
 msgstr "本地、私有云或隔离式部署"
 
-#: app/routes/_index.tsx:754
-msgid "One record from CAD to cash."
-msgstr "从CAD到现金的一条记录。"
-
 #: app/routes/_index.tsx:212
 msgid "One server for every AI client"
 msgstr "每个AI客户端一个服务器"
@@ -1167,7 +1163,7 @@ msgid "QR and barcode tracking on every unit"
 msgstr "每个单元上的二维码和条码追踪"
 
 #: app/routes/_index.tsx:138
-#: app/routes/_index.tsx:171
+#: app/routes/_index.tsx:172
 #: app/routes/_index.tsx:330
 msgid "Quality"
 msgstr "质量"
@@ -1387,9 +1383,13 @@ msgstr "共享架构"
 msgid "Ship faster than your competitors can quote."
 msgstr "比你的竞争对手能报价的速度更快地交付。"
 
-#: app/routes/_index.tsx:172
+#: app/routes/_index.tsx:173
 msgid "Shipping"
 msgstr "运输"
+
+#: app/routes/_index.tsx:171
+msgid "Shop Floor"
+msgstr ""
 
 #: app/routes/_index.tsx:322
 msgid "Shop floor / job traveler"

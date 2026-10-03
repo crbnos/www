@@ -44,7 +44,7 @@ msgstr "30-दिन का ट्रायल · कोई बिक्रय �
 msgid "5 user minimum"
 msgstr "5 उपयोगकर्ता न्यूनतम"
 
-#: app/routes/_index.tsx:174
+#: app/routes/_index.tsx:175
 msgid "Accounting"
 msgstr "लेखांकन"
 
@@ -440,10 +440,6 @@ msgstr "ग्राहक पोर्टल/वेबसाइट"
 msgid "Customer portals for order status and files"
 msgstr "ऑर्डर स्थिति और फ़ाइलों के लिए ग्राहक पोर्टल"
 
-#: app/routes/_index.tsx:175
-msgid "Customize"
-msgstr "अनुकूलित करें"
-
 #: app/components/app-cta-label.tsx:16
 msgid "Dashboard"
 msgstr "डैशबोर्ड"
@@ -659,6 +655,10 @@ msgstr "पांच प्रणालियां, एक डेटाबे�
 msgid "Forward-deployed engineer"
 msgstr "आगे-तैनात इंजीनियर"
 
+#: app/routes/_index.tsx:754
+msgid "From CAD to cash."
+msgstr ""
+
 #: app/components/wizard-form.tsx:385
 msgid "Full Name"
 msgstr "पूरा नाम"
@@ -754,7 +754,7 @@ msgstr "इन्वेंटरी और लागत"
 msgid "Inventory & locations"
 msgstr "इन्वेंटरी और स्थान"
 
-#: app/routes/_index.tsx:173
+#: app/routes/_index.tsx:174
 msgid "Invoicing"
 msgstr "चालान"
 
@@ -1038,10 +1038,6 @@ msgstr "भंडारण इकाई के लिए हाथ पर मा
 msgid "On-prem, private cloud or air-gapped deployment"
 msgstr "ऑन-प्रेमिसेस, निजी क्लाउड या एयर-गैप्ड तैनाती"
 
-#: app/routes/_index.tsx:754
-msgid "One record from CAD to cash."
-msgstr "CAD से नकद तक एक रिकॉर्ड।"
-
 #: app/routes/_index.tsx:212
 msgid "One server for every AI client"
 msgstr "हर AI क्लाइंट के लिए एक सर्वर"
@@ -1167,7 +1163,7 @@ msgid "QR and barcode tracking on every unit"
 msgstr "प्रत्येक यूनिट पर QR और बारकोड ट्रैकिंग"
 
 #: app/routes/_index.tsx:138
-#: app/routes/_index.tsx:171
+#: app/routes/_index.tsx:172
 #: app/routes/_index.tsx:330
 msgid "Quality"
 msgstr "गुणवत्ता"
@@ -1387,9 +1383,13 @@ msgstr "साझा स्कीमा"
 msgid "Ship faster than your competitors can quote."
 msgstr "अपने प्रतिद्वंद्वियों द्वारा उद्धृत की जा सकने वाली तुलना में तेजी से जहाज करें।"
 
-#: app/routes/_index.tsx:172
+#: app/routes/_index.tsx:173
 msgid "Shipping"
 msgstr "शिपिंग"
+
+#: app/routes/_index.tsx:171
+msgid "Shop Floor"
+msgstr ""
 
 #: app/routes/_index.tsx:322
 msgid "Shop floor / job traveler"

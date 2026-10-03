@@ -44,7 +44,7 @@ msgstr "30-dniowa wersja próbna · Bez rozmowy z zespołem sprzedaży"
 msgid "5 user minimum"
 msgstr "Minimum 5 użytkowników"
 
-#: app/routes/_index.tsx:174
+#: app/routes/_index.tsx:175
 msgid "Accounting"
 msgstr "Rachunkowość"
 
@@ -440,10 +440,6 @@ msgstr "Portal Klienta/Strona Internetowa"
 msgid "Customer portals for order status and files"
 msgstr "Portale klienta dla statusu zamówienia i plików"
 
-#: app/routes/_index.tsx:175
-msgid "Customize"
-msgstr "Dostosuj"
-
 #: app/components/app-cta-label.tsx:16
 msgid "Dashboard"
 msgstr "Panel"
@@ -659,6 +655,10 @@ msgstr "Pięć systemów, jedna baza danych."
 msgid "Forward-deployed engineer"
 msgstr "Inżynier wdrożony z wyprzedzeniem"
 
+#: app/routes/_index.tsx:754
+msgid "From CAD to cash."
+msgstr ""
+
 #: app/components/wizard-form.tsx:385
 msgid "Full Name"
 msgstr "Pełne Imię i Nazwisko"
@@ -754,7 +754,7 @@ msgstr "Zapasy i wycena"
 msgid "Inventory & locations"
 msgstr "Inwentarz i lokalizacje"
 
-#: app/routes/_index.tsx:173
+#: app/routes/_index.tsx:174
 msgid "Invoicing"
 msgstr "Fakturowanie"
 
@@ -1038,10 +1038,6 @@ msgstr "Ilość dostępna zaktualizowana dla jednostki przechowywania"
 msgid "On-prem, private cloud or air-gapped deployment"
 msgstr "Wdrożenie lokalnie, w chmurze prywatnej lub izolowane sieciowo"
 
-#: app/routes/_index.tsx:754
-msgid "One record from CAD to cash."
-msgstr "Jeden rekord od CAD do gotówki."
-
 #: app/routes/_index.tsx:212
 msgid "One server for every AI client"
 msgstr "Jeden serwer dla każdego klienta AI"
@@ -1167,7 +1163,7 @@ msgid "QR and barcode tracking on every unit"
 msgstr "Śledzenie kodów QR i kodów kreskowych na każdej jednostce"
 
 #: app/routes/_index.tsx:138
-#: app/routes/_index.tsx:171
+#: app/routes/_index.tsx:172
 #: app/routes/_index.tsx:330
 msgid "Quality"
 msgstr "Jakość"
@@ -1387,9 +1383,13 @@ msgstr "Udostępniony schemat"
 msgid "Ship faster than your competitors can quote."
 msgstr "Wysyłaj szybciej niż twoi konkurenci mogą wycenić."
 
-#: app/routes/_index.tsx:172
+#: app/routes/_index.tsx:173
 msgid "Shipping"
 msgstr "Wysyłka"
+
+#: app/routes/_index.tsx:171
+msgid "Shop Floor"
+msgstr ""
 
 #: app/routes/_index.tsx:322
 msgid "Shop floor / job traveler"

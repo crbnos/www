@@ -168,11 +168,11 @@ const stages = [
 	{ name: msg`Purchasing` },
 	{ name: msg`Sales` },
 	{ name: msg`Production` },
+	{ name: msg`Shop Floor` },
 	{ name: msg`Quality` },
 	{ name: msg`Shipping` },
 	{ name: msg`Invoicing` },
 	{ name: msg`Accounting` },
-	{ name: msg`Customize` },
 ];
 
 const stats = [
@@ -751,7 +751,7 @@ function HappyPath() {
 				<Reveal className="flex flex-wrap items-end justify-between gap-8">
 					<div>
 						<h2 className={cn(heading, "mt-5")}>
-							<Trans>One record from CAD to cash.</Trans>
+							<Trans>From CAD to cash.</Trans>
 						</h2>
 						<p className="mt-6 max-w-[38ch] text-base leading-relaxed text-muted-foreground">
 							<Trans>

@@ -44,7 +44,7 @@ msgstr "30日間の試用版 · 営業電話なし"
 msgid "5 user minimum"
 msgstr "5ユーザー最小"
 
-#: app/routes/_index.tsx:174
+#: app/routes/_index.tsx:175
 msgid "Accounting"
 msgstr "会計"
 
@@ -440,10 +440,6 @@ msgstr "顧客ポータル/ウェブサイト"
 msgid "Customer portals for order status and files"
 msgstr "注文ステータスとファイル用のカスタマーポータル"
 
-#: app/routes/_index.tsx:175
-msgid "Customize"
-msgstr "カスタマイズ"
-
 #: app/components/app-cta-label.tsx:16
 msgid "Dashboard"
 msgstr "ダッシュボード"
@@ -659,6 +655,10 @@ msgstr "5つのシステム、1つのデータベース。"
 msgid "Forward-deployed engineer"
 msgstr "前方配置エンジニア"
 
+#: app/routes/_index.tsx:754
+msgid "From CAD to cash."
+msgstr ""
+
 #: app/components/wizard-form.tsx:385
 msgid "Full Name"
 msgstr "フルネーム"
@@ -754,7 +754,7 @@ msgstr "在庫・原価計算"
 msgid "Inventory & locations"
 msgstr "インベントリと場所"
 
-#: app/routes/_index.tsx:173
+#: app/routes/_index.tsx:174
 msgid "Invoicing"
 msgstr "請求"
 
@@ -1038,10 +1038,6 @@ msgstr "保管ユニットの手持数量が更新されました"
 msgid "On-prem, private cloud or air-gapped deployment"
 msgstr "オンプレミス、プライベートクラウド、またはエアギャップ環境展開"
 
-#: app/routes/_index.tsx:754
-msgid "One record from CAD to cash."
-msgstr "CADから現金まで1つのレコード。"
-
 #: app/routes/_index.tsx:212
 msgid "One server for every AI client"
 msgstr "AI クライアントごとに1つのサーバー"
@@ -1167,7 +1163,7 @@ msgid "QR and barcode tracking on every unit"
 msgstr "すべてのユニット上のQRおよびバーコード追跡"
 
 #: app/routes/_index.tsx:138
-#: app/routes/_index.tsx:171
+#: app/routes/_index.tsx:172
 #: app/routes/_index.tsx:330
 msgid "Quality"
 msgstr "品質"
@@ -1387,9 +1383,13 @@ msgstr "共有スキーマ"
 msgid "Ship faster than your competitors can quote."
 msgstr "競合他社が見積もりできるより速く発送します。"
 
-#: app/routes/_index.tsx:172
+#: app/routes/_index.tsx:173
 msgid "Shipping"
 msgstr "配送"
+
+#: app/routes/_index.tsx:171
+msgid "Shop Floor"
+msgstr ""
 
 #: app/routes/_index.tsx:322
 msgid "Shop floor / job traveler"

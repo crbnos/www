@@ -44,7 +44,7 @@ msgstr "30일 무료 체험 · 영업 담당자 없음"
 msgid "5 user minimum"
 msgstr "5명 최소 사용자"
 
-#: app/routes/_index.tsx:174
+#: app/routes/_index.tsx:175
 msgid "Accounting"
 msgstr "회계"
 
@@ -440,10 +440,6 @@ msgstr "고객 포털/웹사이트"
 msgid "Customer portals for order status and files"
 msgstr "주문 상태 및 파일용 고객 포털"
 
-#: app/routes/_index.tsx:175
-msgid "Customize"
-msgstr "사용자 정의"
-
 #: app/components/app-cta-label.tsx:16
 msgid "Dashboard"
 msgstr "대시보드"
@@ -659,6 +655,10 @@ msgstr "5개 시스템, 하나의 데이터베이스."
 msgid "Forward-deployed engineer"
 msgstr "전방 배치된 엔지니어"
 
+#: app/routes/_index.tsx:754
+msgid "From CAD to cash."
+msgstr ""
+
 #: app/components/wizard-form.tsx:385
 msgid "Full Name"
 msgstr "전체 이름"
@@ -754,7 +754,7 @@ msgstr "재고 및 비용 계산"
 msgid "Inventory & locations"
 msgstr "재고 및 위치"
 
-#: app/routes/_index.tsx:173
+#: app/routes/_index.tsx:174
 msgid "Invoicing"
 msgstr "청구"
 
@@ -1038,10 +1038,6 @@ msgstr "보관 단위에 대해 현재고 수량 업데이트됨"
 msgid "On-prem, private cloud or air-gapped deployment"
 msgstr "온프레미스, 프라이빗 클라우드 또는 에어갭 배포"
 
-#: app/routes/_index.tsx:754
-msgid "One record from CAD to cash."
-msgstr "CAD에서 현금까지 하나의 레코드."
-
 #: app/routes/_index.tsx:212
 msgid "One server for every AI client"
 msgstr "모든 AI 클라이언트를 위한 하나의 서버"
@@ -1167,7 +1163,7 @@ msgid "QR and barcode tracking on every unit"
 msgstr "모든 단위에 QR 및 바코드 추적"
 
 #: app/routes/_index.tsx:138
-#: app/routes/_index.tsx:171
+#: app/routes/_index.tsx:172
 #: app/routes/_index.tsx:330
 msgid "Quality"
 msgstr "품질"
@@ -1387,9 +1383,13 @@ msgstr "공유 스키마"
 msgid "Ship faster than your competitors can quote."
 msgstr "경쟁사보다 더 빠르게 배송하세요."
 
-#: app/routes/_index.tsx:172
+#: app/routes/_index.tsx:173
 msgid "Shipping"
 msgstr "배송"
+
+#: app/routes/_index.tsx:171
+msgid "Shop Floor"
+msgstr ""
 
 #: app/routes/_index.tsx:322
 msgid "Shop floor / job traveler"
