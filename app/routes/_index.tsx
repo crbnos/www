@@ -546,7 +546,7 @@ function Testimonial() {
 							<svg
 								aria-hidden
 								viewBox="0 0 46 36"
-								className="float-left mt-1.5 mr-4 mb-1 h-auto w-[52px] fill-secondary sm:mr-5 sm:w-[72px]"
+								className="float-left mt-1.5 mr-4 mb-1 h-auto w-[52px] fill-foreground sm:mr-5 sm:w-[72px]"
 							>
 								<path d="M0 36V22C0 10 6 2 18 0l2 5c-7 2-10 7-10 12h10v19Z" />
 								<path d="M26 36V22c0-12 6-20 18-22l2 5c-7 2-10 7-10 12h10v19Z" />
