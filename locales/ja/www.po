@@ -28,35 +28,27 @@ msgstr "{count}個のエンティティ · {currencies}個の通貨 · 1つの�
 msgid "/user/month"
 msgstr "/ユーザー/月"
 
-#: app/routes/_index.tsx:58
+#: app/routes/_index.tsx:67
 msgid "18-month implementation"
 msgstr "18ヶ月実装"
 
-#: app/routes/_index.tsx:237
+#: app/routes/_index.tsx:249
 msgid "21 CFR Part 11"
 msgstr "21 CFR Part 11"
 
-#: app/routes/_index.tsx:1168
+#: app/routes/_index.tsx:1248
 msgid "30-day trial · No sales call"
-msgstr ""
+msgstr "30日間の試用版 · 営業電話なし"
 
 #: app/routes/pricing.tsx:82
 msgid "5 user minimum"
 msgstr "5ユーザー最小"
 
-#: app/routes/_index.tsx:197
-msgid "A generated API for every module"
-msgstr ""
-
-#: app/routes/_index.tsx:202
-msgid "A permission-aware MCP server"
-msgstr ""
-
-#: app/routes/_index.tsx:165
+#: app/routes/_index.tsx:175
 msgid "Accounting"
 msgstr "会計"
 
-#: app/routes/_index.tsx:93
+#: app/routes/_index.tsx:102
 msgid "Accrual accounting"
 msgstr "発生主義会計"
 
@@ -68,15 +60,15 @@ msgstr "Acme Inc"
 msgid "Acme, Inc."
 msgstr "Acme, Inc."
 
-#: app/routes/_index.tsx:47
+#: app/routes/_index.tsx:56
 msgid "Actual costs arrive after the job"
-msgstr ""
+msgstr "実際のコストはジョブの完了後に算出される"
 
-#: app/routes/_index.tsx:120
+#: app/routes/_index.tsx:129
 msgid "Adaptive MES UI"
 msgstr "適応MES UI"
 
-#: app/routes/_index.tsx:214
+#: app/routes/_index.tsx:226
 msgid "Aerospace"
 msgstr "航空宇宙"
 
@@ -86,7 +78,7 @@ msgstr "製造業向けのエンドツーエンドシステムを構築して約
 
 #: app/routes/pricing.tsx:104
 msgid "Air-gapped and ITAR-controlled environments"
-msgstr ""
+msgstr "エアギャップ環境とITAR制御環境"
 
 #: app/routes/brand.tsx:23
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
@@ -96,21 +88,17 @@ msgstr "すべてのCarbonの商標、ロゴ、またはその他のブランド
 msgid "Analytics"
 msgstr "分析"
 
-#: app/routes/_index.tsx:1197
+#: app/routes/_index.tsx:1277
 #: app/routes/self-hosted.tsx:809
 msgid "And some of the world's most innovative manufacturers"
 msgstr "そして世界で最も革新的なメーカーの一部"
 
-#: app/routes/_index.tsx:490
-#: app/routes/_index.tsx:497
+#: app/routes/_index.tsx:523
+#: app/routes/_index.tsx:530
 msgid "Animated assembly instructions"
 msgstr "アニメーション付き組立指示"
 
-#: app/routes/_index.tsx:257
-msgid "API"
-msgstr "API"
-
-#: app/routes/_index.tsx:868
+#: app/routes/_index.tsx:908
 msgid "API Docs"
 msgstr "API ドキュメント"
 
@@ -118,35 +106,31 @@ msgstr "API ドキュメント"
 msgid "API-first, realtime subscriptions, forward/finite scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
 msgstr "APIファースト、リアルタイムサブスクリプション、先制的/有限スケジューリング、そしてERP利用の価値を引き出す1,000の細かな工夫"
 
-#: app/routes/_index.tsx:166
-msgid "API, MCP, apps"
-msgstr "API、MCP、アプリ"
-
-#: app/routes/_index.tsx:235
+#: app/routes/_index.tsx:247
 msgid "AS9100"
 msgstr "AS9100"
 
-#: app/routes/_index.tsx:214
+#: app/routes/_index.tsx:226
 msgid "AS9100, FAI, full genealogy"
 msgstr "AS9100、FAI、完全な系統"
 
-#: app/routes/_index.tsx:75
+#: app/routes/_index.tsx:84
 msgid "Audit history stored with each record"
-msgstr ""
+msgstr "各レコードに監査履歴を保存"
 
 #: app/routes/pricing.tsx:81
 msgid "Audit logs, enforced 2FA and backup/restore"
-msgstr ""
+msgstr "監査ログ、強制的な2FA、バックアップ/復元"
 
-#: app/routes/_index.tsx:50
+#: app/routes/_index.tsx:59
 msgid "Audit records must be reconstructed"
-msgstr ""
+msgstr "監査レコードを再構成する必要がある"
 
 #: app/components/hero.tsx:222
 msgid "Auto-generated API Documentation"
 msgstr "自動生成されたAPIドキュメント"
 
-#: app/routes/_index.tsx:215
+#: app/routes/_index.tsx:227
 msgid "Automotive"
 msgstr "自動車"
 
@@ -154,11 +138,11 @@ msgstr "自動車"
 msgid "Back"
 msgstr "戻る"
 
-#: app/routes/_index.tsx:122
+#: app/routes/_index.tsx:131
 msgid "Barcode / QR tracking"
 msgstr "バーコード/QR追跡"
 
-#: app/routes/_index.tsx:522
+#: app/routes/_index.tsx:555
 msgid "Best ERP/MRP/MES system I've ever seen in a 22-year career across defense and automotive. Native Onshape integration means we synchronize all our data without extra PLM connectors — good UX, modern integrations, open source, open API and MCP, cloud or on-prem. We run our whole electric-vehicle engineering and manufacturing business on Carbon, and I couldn't imagine going back to a legacy system."
 msgstr "防衛・自動車業界での22年間のキャリアで見た最高のERP/MRP/MESシステム。Onshapeのネイティブ統合により、追加のPLMコネクタなしにすべてのデータを同期できます。優れたUX、最新の統合、オープンソース、オープンAPI、MCP、クラウドまたはオンプレミス対応。CarbonでEV設計・製造事業全体を運営しており、レガシーシステムに戻ることは考えられません。"
 
@@ -170,19 +154,15 @@ msgstr "部品表"
 msgid "Billed per user, monthly · 30-day free trial · Cancel anytime"
 msgstr "ユーザーごとに毎月請求 · 30日間無料トライアル · いつでもキャンセル可能"
 
-#: app/routes/_index.tsx:251
-msgid "Billing"
-msgstr "請求"
-
 #: app/components/footer.tsx:48
 msgid "Blog"
 msgstr "ブログ"
 
-#: app/routes/_index.tsx:104
+#: app/routes/_index.tsx:113
 msgid "BOM & routing versions"
 msgstr "BOM & ルーティングバージョン"
 
-#: app/routes/_index.tsx:60
+#: app/routes/_index.tsx:69
 msgid "BOMs re-keyed by hand"
 msgstr "BOMs手動で再入力"
 
@@ -195,17 +175,21 @@ msgstr "ブランドアセット"
 msgid "Bring your own cloud"
 msgstr "独自のクラウドをご利用"
 
-#: app/routes/_index.tsx:442
+#: app/components/api-console.tsx:505
+msgid "Browse every operation"
+msgstr "すべての操作を参照"
+
+#: app/routes/_index.tsx:475
 msgid "Build hardware at the <0/><1>speed of software</1>"
-msgstr ""
+msgstr "ハードウェアを<0/><1>ソフトウェアのスピード</1>で構築"
 
 #: app/components/footer.tsx:58
 msgid "Build vs. buy"
 msgstr "内製 vs. 外購"
 
-#: app/routes/_index.tsx:910
+#: app/routes/_index.tsx:951
 msgid "Built for discrete manufacturing."
-msgstr ""
+msgstr "離散的製造用に構築。"
 
 #: app/routes/pricing.tsx:62
 msgid "Business"
@@ -213,7 +197,7 @@ msgstr "ビジネス"
 
 #: app/routes/pricing.tsx:94
 msgid "Business with dedicated deployment and implementation support"
-msgstr ""
+msgstr "専任の展開と実装サポート付きのビジネス"
 
 #: app/routes/about.tsx:41
 msgid "But even as we work with our customers to become the best off-the-shelf ERP/MES for many types of discrete manufacturing, we are faced with the reality that there is no \"perfect\" off-the-shelf solution, because each manufacturing business is unique."
@@ -223,42 +207,33 @@ msgstr "多くの個別生産型製造業に対して最高のオフザシェル
 msgid "Buy the Source Code"
 msgstr "ソースコードを購入"
 
-#: app/routes/_index.tsx:244
-#: app/routes/_index.tsx:245
-msgid "CAD"
-msgstr "CAD"
-
-#: app/routes/_index.tsx:67
+#: app/routes/_index.tsx:76
 msgid "Carbon"
-msgstr ""
+msgstr "Carbon"
+
+#: app/routes/_index.tsx:878
+msgid "Carbon API"
+msgstr "Carbon API"
 
 #: app/components/hero.tsx:126
 msgid "Carbon combines ERP, MES, and QMS into a single, unified system."
 msgstr "Carbonは、ERP、MES、QMSを1つの統合されたシステムに組み合わせています。"
 
-#: app/routes/_index.tsx:450
+#: app/routes/_index.tsx:483
 msgid "Carbon combines ERP, MRP, MES and QMS. Plan materials, run the shop floor, manage quality and track actual costs in one system."
-msgstr ""
+msgstr "CarbonはERP、MRP、MES、QMSを統合します。材料計画、工場運営、品質管理、実際のコスト追跡を1つのシステムで実行します。"
 
-#: app/routes/_index.tsx:198
-msgid "Carbon generates REST endpoints from its schema and publishes typed clients for TypeScript, Python and C#. Use webhooks for event-driven integrations."
-msgstr ""
-
-#: app/routes/_index.tsx:1027
+#: app/routes/_index.tsx:1071
 msgid "Carbon's source is public. Use the prompt below to review it against your requirements."
-msgstr ""
+msgstr "Carbonのソースは公開されています。以下のプロンプトを使用して、要件に対してレビューしてください。"
 
-#: app/routes/_index.tsx:303
+#: app/routes/_index.tsx:336
 msgid "Certificates generated from live data"
 msgstr "ライブデータから生成された証明書"
 
-#: app/routes/_index.tsx:137
+#: app/routes/_index.tsx:146
 msgid "Certificates of conformance"
 msgstr "適合証明書"
-
-#: app/routes/_index.tsx:249
-msgid "Chat"
-msgstr "チャット"
 
 #: app/components/status-indicator.tsx:45
 msgid "Checking status…"
@@ -272,7 +247,15 @@ msgstr "ソリューションをどのように所有したいかを選択して
 msgid "Choose your preferred database"
 msgstr "お好みのデータベースを選択してください"
 
-#: app/routes/_index.tsx:225
+#: app/components/api-console.tsx:162
+msgid "Classified destructive, so a client can gate or exclude it"
+msgstr "分類は破壊的なので、クライアントはそれをゲートまたは除外できます"
+
+#: app/routes/_index.tsx:214
+msgid "Claude, ChatGPT, Cursor and Codex load only the operations a task needs, so the model's context stays small."
+msgstr "Claude、ChatGPT、Cursor、Codexはタスクに必要な操作のみをロードするため、モデルのコンテキストは小さいままです。"
+
+#: app/routes/_index.tsx:237
 msgid "cleanroom ops, yield analytics"
 msgstr "クリーンルームオプス、収率分析"
 
@@ -290,7 +273,7 @@ msgstr "クラウド + サポート"
 
 #: app/routes/pricing.tsx:102
 msgid "CMMC Level 2 and NIST 800-171 deployment support"
-msgstr ""
+msgstr "CMMC Level 2とNIST 800-171の展開サポート"
 
 #: app/routes/about.tsx:87
 msgid "Co-Founder and CTO"
@@ -302,7 +285,7 @@ msgstr "コミュニティ版"
 
 #: app/routes/pricing.tsx:65
 msgid "Community Edition plus APIs, automation and support"
-msgstr ""
+msgstr "Community EditionプラスAPI、自動化、サポート"
 
 #: app/routes/pricing.tsx:58
 msgid "Community support"
@@ -329,25 +312,29 @@ msgstr "インフラストラクチャを完全に制御できます"
 msgid "Configurator"
 msgstr "コンフィギュレーター"
 
-#: app/routes/_index.tsx:914
+#: app/routes/_index.tsx:955
 msgid "Configure Carbon for one-off builds, rate production and regulated work without changing the underlying data model."
-msgstr ""
+msgstr "基本的なデータモデルを変更せずに、ワンオフビルド、速度生産、規制対象作業のためにCarbonを構成します。"
 
-#: app/routes/_index.tsx:265
+#: app/routes/_index.tsx:298
 msgid "Configure to order"
 msgstr "受注構成"
 
-#: app/routes/_index.tsx:229
+#: app/routes/_index.tsx:241
 msgid "configure to order, aftermarket"
 msgstr "注文に合わせて構成、アフターマーケット"
 
-#: app/routes/_index.tsx:160
-msgid "confirmed dates"
-msgstr "確認済み日付"
+#: app/components/api-console.tsx:98
+msgid "Conflicts with existing jobs detected"
+msgstr "既存のジョブとの競合が検出されました"
 
-#: app/routes/_index.tsx:1129
+#: app/components/api-console.tsx:549
+msgid "Connect Claude Code, Cursor, Codex or ChatGPT"
+msgstr "Claude Code、Cursor、Codex、またはChatGPTを接続"
+
+#: app/routes/_index.tsx:1172
 msgid "Connect the tools your teams already use."
-msgstr ""
+msgstr "チームが既に使用しているツールを接続します。"
 
 #: app/components/wizard-form.tsx:170
 msgid "Connect your robots and machines to your production systems"
@@ -358,11 +345,11 @@ msgstr "ロボットと機械を本番システムに接続します"
 msgid "Consolidates {count} entities in {0}"
 msgstr "{0}で{count}個のエンティティを統合"
 
-#: app/routes/_index.tsx:59
+#: app/routes/_index.tsx:68
 msgid "Consultants required for changes"
-msgstr ""
+msgstr "変更に必要なコンサルタント"
 
-#: app/routes/_index.tsx:219
+#: app/routes/_index.tsx:231
 msgid "Consumer electronics"
 msgstr "コンシューマ電子機器"
 
@@ -384,20 +371,20 @@ msgstr "営業に連絡"
 msgid "Contact us"
 msgstr "お問い合わせ"
 
-#: app/routes/_index.tsx:1055
+#: app/routes/_index.tsx:1099
 msgid "Control the system of record"
-msgstr ""
+msgstr "記録システムを制御する"
 
-#: app/routes/_index.tsx:997
+#: app/routes/_index.tsx:1041
 msgid "Controls built into the data model."
-msgstr ""
+msgstr "データモデルに組み込まれたコントロール。"
 
 #: app/components/logo-menu.tsx:66
-#: app/routes/_index.tsx:975
+#: app/routes/_index.tsx:1016
 msgid "Copied"
 msgstr "コピー済み"
 
-#: app/routes/_index.tsx:975
+#: app/routes/_index.tsx:1016
 msgid "Copy"
 msgstr "コピー"
 
@@ -405,29 +392,25 @@ msgstr "コピー"
 msgid "Copy .SVG"
 msgstr ".SVGをコピー"
 
-#: app/components/code-examples.tsx:534
+#: app/components/api-console.tsx:346
 msgid "Copy code snippet"
 msgstr "コードスニペットをコピー"
 
 #: app/routes/pricing.tsx:51
 msgid "Core ERP, MRP, MES and QMS workflows"
-msgstr ""
+msgstr "コアERP、MRP、MES、QMSワークフロー"
 
 #: app/routes/pricing.tsx:44
 msgid "Core manufacturing modules under AGPL-3.0"
-msgstr ""
-
-#: app/routes/_index.tsx:164
-msgid "costed actuals"
-msgstr "実績コスト"
+msgstr "AGPL-3.0のコア製造モジュール"
 
 #: app/components/wizard-form.tsx:165
 msgid "Create a branded ordering experience that drives production"
 msgstr "ブランド化された注文体験を作成して、生産を促進します"
 
-#: app/routes/_index.tsx:1174
+#: app/routes/_index.tsx:1254
 msgid "Create a workspace, import your data and connect your integrations. Self-host the open-source core or use the managed cloud."
-msgstr ""
+msgstr "ワークスペースを作成し、データをインポートし、統合を接続します。オープンソースコアを自社でホストするか、マネージドクラウドを使用してください。"
 
 #: app/components/wizard-form.tsx:153
 msgid "Custom Development"
@@ -435,7 +418,7 @@ msgstr "カスタム開発"
 
 #: app/routes/pricing.tsx:101
 msgid "Custom development, training and integrations"
-msgstr ""
+msgstr "カスタム開発、トレーニング、統合"
 
 #: app/components/wizard-form.tsx:175
 msgid "Custom integrations with your existing systems"
@@ -443,7 +426,7 @@ msgstr "既存のシステムとのカスタム統合"
 
 #: app/routes/pricing.tsx:80
 msgid "Custom roles, permissions and approval rules"
-msgstr ""
+msgstr "カスタムロール、権限、承認ルール"
 
 #: app/components/hero.tsx:234
 msgid "Customer Portal"
@@ -455,11 +438,7 @@ msgstr "顧客ポータル/ウェブサイト"
 
 #: app/routes/pricing.tsx:78
 msgid "Customer portals for order status and files"
-msgstr ""
-
-#: app/routes/_index.tsx:166
-msgid "Customize"
-msgstr "カスタマイズ"
+msgstr "注文ステータスとファイル用のカスタマーポータル"
 
 #: app/components/app-cta-label.tsx:16
 msgid "Dashboard"
@@ -469,7 +448,7 @@ msgstr "ダッシュボード"
 msgid "Database"
 msgstr "データベース"
 
-#: app/routes/_index.tsx:189
+#: app/routes/_index.tsx:198
 msgid "Days to go live"
 msgstr "運用開始までの日数"
 
@@ -479,55 +458,59 @@ msgstr "あなたの組織専用のデータベース"
 
 #: app/routes/pricing.tsx:105
 msgid "Dedicated deployment for regulated environments"
-msgstr ""
+msgstr "規制環境向けの専用展開"
 
 #: app/components/wizard-form.tsx:141
 msgid "Dedicated Support"
 msgstr "専任サポート"
 
-#: app/routes/_index.tsx:222
+#: app/routes/_index.tsx:234
 msgid "deep assemblies, configured units"
 msgstr "深いアセンブリ、構成されたユニット"
 
-#: app/routes/_index.tsx:213
+#: app/routes/_index.tsx:225
 msgid "Defense"
 msgstr "防衛"
 
-#: app/routes/_index.tsx:267
+#: app/routes/_index.tsx:300
 msgid "Define product parameters once. Carbon generates the BOM, routing and quoted price for each valid configuration."
-msgstr ""
+msgstr "製品パラメータを一度定義します。Carbonは各有効な構成のBOM、ルーティング、見積価格を生成します。"
 
-#: app/routes/_index.tsx:102
+#: app/components/api-console.tsx:157
+msgid "Delete the draft job J-000415."
+msgstr "ドラフトジョブJ-000415を削除します。"
+
+#: app/routes/_index.tsx:111
 msgid "Demand & forecast"
 msgstr "需要と予測"
 
 #: app/routes/pricing.tsx:76
 msgid "Demand forecasting"
-msgstr ""
+msgstr "需要予測"
 
-#: app/routes/_index.tsx:435
+#: app/routes/_index.tsx:468
 msgid "Deploy in our cloud, your cloud or on-prem"
-msgstr ""
+msgstr "弊社クラウド、お客様のクラウド、またはオンプレミスに展開"
 
-#: app/routes/_index.tsx:72
+#: app/routes/_index.tsx:81
 msgid "Deploy in weeks"
-msgstr ""
+msgstr "数週間で展開"
 
-#: app/routes/_index.tsx:1051
+#: app/routes/_index.tsx:1095
 msgid "Deploy in your VPC, on-prem or fully air-gapped. Keep CUI inside infrastructure you control while supporting CMMC and ITAR requirements."
-msgstr ""
+msgstr "VPC、オンプレミス、または完全にエアギャップ環境に展開します。CMMC およびITAR要件をサポートしながら、CUIを管理インフラ内に保持します。"
 
 #: app/routes/pricing.tsx:49
 msgid "Deploy with Docker on your servers or in your VPC"
-msgstr ""
+msgstr "お客様のサーバーまたはVPCでDockerを使用して展開"
 
 #: app/routes/pricing.tsx:208
 msgid "Deployment"
 msgstr "デプロイメント"
 
-#: app/routes/_index.tsx:57
+#: app/routes/_index.tsx:66
 msgid "Designed around accounting"
-msgstr ""
+msgstr "会計を中心に設計"
 
 #: app/components/header.tsx:40
 msgid "Developer guides and API reference"
@@ -539,11 +522,11 @@ msgstr "開発者ガイドとAPIリファレンス"
 msgid "Developers"
 msgstr "開発者"
 
-#: app/routes/_index.tsx:118
+#: app/routes/_index.tsx:127
 msgid "Digital job travelers"
 msgstr "デジタルジョブトラベラー"
 
-#: app/routes/_index.tsx:285
+#: app/routes/_index.tsx:318
 msgid "Digital travelers with work instructions"
 msgstr "作業指示を含むデジタルトラベラー"
 
@@ -551,9 +534,9 @@ msgstr "作業指示を含むデジタルトラベラー"
 msgid "Discord"
 msgstr "Discord"
 
-#: app/routes/_index.tsx:151
+#: app/routes/_index.tsx:160
 msgid "Dispatch notifications"
-msgstr ""
+msgstr "ディスパッチ通知"
 
 #: app/components/footer.tsx:60
 #: app/components/header.tsx:39
@@ -568,6 +551,10 @@ msgstr "ドキュメント"
 msgid "Download Logo Kit"
 msgstr "ロゴキットをダウンロード"
 
+#: app/components/api-console.tsx:39
+msgid "Draft a quote for Acme Aerospace."
+msgstr "Acme Aerospaceの見積書を作成します。"
+
 #: app/components/wizard-form.tsx:396
 msgid "Email Address"
 msgstr "メールアドレス"
@@ -576,21 +563,21 @@ msgstr "メールアドレス"
 msgid "Email and Slack notifications"
 msgstr "メールとSlackの通知"
 
-#: app/routes/_index.tsx:223
+#: app/routes/_index.tsx:235
 msgid "Energy & grid"
 msgstr "エネルギーとグリッド"
 
-#: app/routes/_index.tsx:157
+#: app/routes/_index.tsx:166
 msgid "Engineering"
 msgstr "エンジニアリング"
 
-#: app/routes/_index.tsx:109
+#: app/routes/_index.tsx:118
 msgid "Engineering change orders"
 msgstr "エンジニアリング変更注文"
 
-#: app/routes/_index.tsx:724
+#: app/routes/_index.tsx:757
 msgid "Engineering, planning, production, quality and accounting update the same data. No re-keying or cross-system reconciliation."
-msgstr ""
+msgstr "エンジニアリング、計画、生産、品質、会計が同じデータを更新します。再入力またはシステム間の調整は不要です。"
 
 #: app/routes/pricing.tsx:86
 msgid "Enterprise"
@@ -602,33 +589,37 @@ msgstr "エンタープライズ版"
 
 #: app/routes/pricing.tsx:93
 msgid "Enterprise Edition with a deployment designed for your security boundary"
-msgstr ""
+msgstr "セキュリティ境界向けに設計された展開を備えたEnterprise Edition"
 
 #: app/components/wizard-form.tsx:147
 msgid "Enterprise. Influence product roadmap with priority feature requests"
 msgstr "エンタープライズ。優先度の高い機能リクエストで製品ロードマップに影響を与えます"
 
-#: app/routes/_index.tsx:173
+#: app/routes/_index.tsx:182
 msgid "ERP · MRP · MES · QMS · CMMS"
-msgstr ""
+msgstr "ERP · MRP · MES · QMS · CMMS"
 
-#: app/routes/_index.tsx:1056
+#: app/routes/_index.tsx:1100
 msgid "ERP, MRP, MES and QMS share a Postgres database with row-level security. You control its network, encryption, backups and retention."
-msgstr ""
+msgstr "ERP、MRP、MES、QMSはPostgresデータベースを行レベルセキュリティと共有します。ネットワーク、暗号化、バックアップ、保持を制御します。"
 
-#: app/routes/_index.tsx:71
+#: app/routes/_index.tsx:80
 msgid "ERP, MRP, MES and QMS share one schema"
-msgstr ""
+msgstr "ERP、MRP、MES、QMSは1つのスキーマを共有"
 
-#: app/routes/_index.tsx:1024
+#: app/routes/_index.tsx:1068
 msgid "Evaluate the source before you deploy"
-msgstr ""
+msgstr "展開前にソースを評価"
 
-#: app/routes/_index.tsx:185
+#: app/routes/_index.tsx:206
+msgid "Every operation is an endpoint"
+msgstr "すべての操作はエンドポイント"
+
+#: app/routes/_index.tsx:194
 msgid "Every unit, every op"
 msgstr "すべてのユニット、すべての作業"
 
-#: app/routes/_index.tsx:115
+#: app/routes/_index.tsx:124
 msgid "Execution"
 msgstr "実行"
 
@@ -636,62 +627,57 @@ msgstr "実行"
 msgid "Expand image"
 msgstr "画像を拡大"
 
-#: app/routes/_index.tsx:246
-msgid "Expenses"
-msgstr "経費"
-
-#: app/routes/_index.tsx:1087
+#: app/routes/_index.tsx:1131
 msgid "Explore Self-Hosting"
 msgstr "自己ホスティングを探索"
-
-#: app/routes/_index.tsx:162
-msgid "FAI & NCR"
-msgstr "FAI & NCR"
 
 #: app/components/wizard-form.tsx:146
 msgid "Feature Prioritization"
 msgstr "機能の優先順位付け"
 
-#: app/routes/_index.tsx:252
-#: app/routes/_index.tsx:253
-msgid "Finance"
-msgstr "財務"
-
-#: app/routes/_index.tsx:105
+#: app/routes/_index.tsx:114
 msgid "Finite capacity model"
 msgstr "有限容量モデル"
 
-#: app/routes/_index.tsx:287
+#: app/routes/_index.tsx:320
 msgid "Finite capacity scheduling that reacts"
 msgstr "反応する有限容量スケジューリング"
 
-#: app/routes/_index.tsx:132
+#: app/routes/_index.tsx:141
 msgid "First article inspection"
 msgstr "初回品検査"
 
-#: app/routes/_index.tsx:650
+#: app/routes/_index.tsx:683
 msgid "Five systems, one database."
-msgstr ""
+msgstr "5つのシステム、1つのデータベース。"
 
 #: app/routes/pricing.tsx:100
 msgid "Forward-deployed engineer"
+msgstr "前方配置エンジニア"
+
+#: app/routes/_index.tsx:754
+msgid "From CAD to cash."
 msgstr ""
 
 #: app/components/wizard-form.tsx:385
 msgid "Full Name"
 msgstr "フルネーム"
 
-#: app/routes/_index.tsx:134
+#: app/routes/_index.tsx:143
 msgid "Gauge calibration"
 msgstr "ゲージキャリブレーション"
 
 #: app/routes/pricing.tsx:52
 msgid "General ledger, financial reports, fixed assets and multi-currency"
-msgstr ""
+msgstr "総勘定元帳、財務報告書、固定資産、マルチ通貨"
 
-#: app/routes/_index.tsx:266
+#: app/routes/_index.tsx:220
+msgid "Generate a typed client for TypeScript, Python, Go, Ruby, C# or PHP from the public spec. Input schemas come from the validators the server runs."
+msgstr "公開仕様からTypeScript、Python、Go、Ruby、C#、またはPHP用の型指定クライアントを生成します。入力スキーマはサーバーが実行するバリデータから提供されます。"
+
+#: app/routes/_index.tsx:299
 msgid "Generate each configuration from rules."
-msgstr ""
+msgstr "ルールから各構成を生成します。"
 
 #: app/components/hero.tsx:136
 msgid "Get Started"
@@ -699,24 +685,20 @@ msgstr "始める"
 
 #: app/routes/pricing.tsx:257
 msgid "Get started for free."
-msgstr ""
+msgstr "無料で始める。"
 
 #: app/components/header.tsx:31
 msgid "GitHub"
 msgstr "GitHub"
 
-#: app/routes/_index.tsx:165
-msgid "GL & accruals"
-msgstr "GL & 引当金"
-
 #: app/components/hero.tsx:206
 msgid "Global Search"
 msgstr "グローバル検索"
 
-#: app/routes/_index.tsx:1195
+#: app/routes/_index.tsx:1275
 #: app/routes/self-hosted.tsx:807
 msgid "Hard tech unicorns build on Carbon."
-msgstr ""
+msgstr "ハードテック企業がCarbonの上に構築しています。"
 
 #: app/components/wizard-form.tsx:94
 msgid "Hosting Preference"
@@ -728,31 +710,33 @@ msgstr "オープンソースは素晴らしい可能性を秘めていると信
 
 #: app/routes/pricing.tsx:106
 msgid "Implementation and data migration"
-msgstr ""
+msgstr "実装とデータマイグレーション"
 
 #: app/components/status-indicator.tsx:8
 msgid "Incident detected"
 msgstr "インシデントが検出されました"
 
-#: app/routes/_index.tsx:228
+#: app/routes/_index.tsx:240
 msgid "Industrial equipment"
 msgstr "産業用機器"
 
-#: app/routes/_index.tsx:207
-msgid "Inspect and extend the code"
-msgstr ""
+#: app/components/api-console.tsx:45
+#: app/components/api-console.tsx:68
+#: app/components/api-console.tsx:118
+msgid "Input validated against the operation schema"
+msgstr "操作スキーマに対して検証された入力"
 
-#: app/routes/_index.tsx:1061
+#: app/routes/_index.tsx:1105
 msgid "Inspect the application on GitHub, run your own security review and extend the AGPL-3.0 Community edition for your process."
-msgstr ""
+msgstr "GitHubでアプリケーションを検査し、独自のセキュリティレビューを実行し、AGPL-3.0 Community版をプロセス向けに拡張します。"
 
-#: app/routes/_index.tsx:130
+#: app/routes/_index.tsx:139
 msgid "inspection, compliance and genealogy"
-msgstr ""
+msgstr "検査、コンプライアンス、系統"
 
-#: app/routes/_index.tsx:848
+#: app/routes/_index.tsx:881
 msgid "Integrate every manufacturing workflow."
-msgstr ""
+msgstr "すべての製造ワークフローを統合します。"
 
 #: app/components/wizard-form.tsx:174
 msgid "Integrations"
@@ -762,41 +746,57 @@ msgstr "統合"
 msgid "Intercompany eliminations for {parent}"
 msgstr "{parent}の連結消去"
 
-#: app/routes/_index.tsx:84
+#: app/routes/_index.tsx:93
 msgid "Inventory & Costing"
 msgstr "在庫・原価計算"
 
-#: app/routes/_index.tsx:90
+#: app/routes/_index.tsx:99
 msgid "Inventory & locations"
 msgstr "インベントリと場所"
 
-#: app/routes/_index.tsx:164
+#: app/routes/_index.tsx:174
 msgid "Invoicing"
 msgstr "請求"
 
-#: app/routes/_index.tsx:92
+#: app/routes/_index.tsx:101
 msgid "Invoicing & accounting sync"
 msgstr "請求と会計同期"
 
-#: app/routes/_index.tsx:236
+#: app/routes/_index.tsx:248
 msgid "ISO 13485"
 msgstr "ISO 13485"
 
-#: app/routes/_index.tsx:216
+#: app/routes/_index.tsx:228
 msgid "ISO 13485, DHR, e-signatures"
 msgstr "ISO 13485、DHR、電子署名"
 
-#: app/routes/_index.tsx:234
+#: app/routes/_index.tsx:246
 msgid "ITAR-ready deployment"
 msgstr "ITAR対応展開"
 
-#: app/routes/_index.tsx:213
+#: app/routes/_index.tsx:225
 msgid "ITAR-ready, serialized, audit-first"
 msgstr "ITAR対応、シリアル化、監査優先"
 
-#: app/routes/_index.tsx:91
+#: app/components/api-console.tsx:119
+msgid "Item ledger entry posted"
+msgstr "在庫台帳エントリが転記されました"
+
+#: app/routes/_index.tsx:100
 msgid "Job costing"
 msgstr "ジョブ原価計算"
+
+#: app/components/api-console.tsx:69
+msgid "Job number drawn from the sequence"
+msgstr "シーケンスから引き出されたジョブ番号"
+
+#: app/components/api-console.tsx:164
+msgid "Job removed"
+msgstr "ジョブが削除されました"
+
+#: app/components/api-console.tsx:99
+msgid "Jobs pushed past their due date reported back"
+msgstr "期限を過ぎたジョブが報告されました"
 
 #: app/components/wizard-form.tsx:391
 msgid "John Doe"
@@ -818,15 +818,39 @@ msgstr "Discordコミュニティに参加する"
 msgid "Kanban Schedule"
 msgstr "カンバンスケジュール"
 
-#: app/routes/_index.tsx:1050
+#: app/routes/_index.tsx:1094
 msgid "Keep regulated data in your boundary"
-msgstr ""
+msgstr "規制されたデータを独自の境界内に保持"
 
-#: app/routes/_index.tsx:121
+#: app/components/api-console.tsx:117
+msgid "Key scope checked: inventory · create"
+msgstr "キースコープをチェック: 在庫 · 作成"
+
+#: app/components/api-console.tsx:67
+msgid "Key scope checked: production · create"
+msgstr "キースコープをチェック: 生産 · 作成"
+
+#: app/components/api-console.tsx:163
+msgid "Key scope checked: production · delete"
+msgstr "キースコープをチェック: 生産 · 削除"
+
+#: app/components/api-console.tsx:96
+msgid "Key scope checked: production · update"
+msgstr "キースコープをチェック: 生産 · 更新"
+
+#: app/components/api-console.tsx:44
+msgid "Key scope checked: sales · create"
+msgstr "キースコープをチェック: 営業 · 作成"
+
+#: app/components/api-console.tsx:148
+msgid "Key scope checked: sales · view"
+msgstr "キースコープをチェック: 営業 · 表示"
+
+#: app/routes/_index.tsx:130
 msgid "Labor, scrap & rework"
 msgstr "労務、スクラップ、再加工"
 
-#: app/routes/_index.tsx:106
+#: app/routes/_index.tsx:115
 msgid "Lead times & buffers"
 msgstr "リードタイムとバッファ"
 
@@ -842,7 +866,7 @@ msgstr "ラーニングセンター"
 msgid "Least expensive. Basic onboarding and email support"
 msgstr "最も安価です。基本的なオンボーディングとメールサポート"
 
-#: app/routes/_index.tsx:55
+#: app/routes/_index.tsx:64
 msgid "Legacy ERP"
 msgstr "レガシーERP"
 
@@ -866,20 +890,19 @@ msgstr "ユーザーごとに毎月ライセンス · コミュニティ版はAG
 msgid "Limited Support"
 msgstr "限定的なサポート"
 
-#: app/routes/_index.tsx:299
+#: app/routes/_index.tsx:332
 msgid "Link first articles, nonconformances, CAPAs and calibrations to production. Open any serial number to see its materials, operators, measurements and deviations."
-msgstr ""
+msgstr "最初の品質記事、不適合、CAPA、キャリブレーションを生産にリンクします。任意のシリアルナンバーを開いて、その材料、操作者、測定値、偏差を確認します。"
 
-#: app/routes/_index.tsx:123
+#: app/components/api-console.tsx:150
+msgid "Lists come back with results and a total count for paging"
+msgstr "リストは結果と、ページング用の総数で返されます"
+
+#: app/routes/_index.tsx:132
 msgid "Live schedule board"
 msgstr "ライブスケジュールボード"
 
-#: app/routes/_index.tsx:258
-#: app/routes/_index.tsx:259
-msgid "LLM"
-msgstr "LLM"
-
-#: app/routes/_index.tsx:223
+#: app/routes/_index.tsx:235
 msgid "long lead, project-based build"
 msgstr "長期リード、プロジェクトベースのビルド"
 
@@ -887,17 +910,21 @@ msgstr "長期リード、プロジェクトベースのビルド"
 msgid "Low monthly payments"
 msgstr "月額の低い支払い"
 
-#: app/routes/_index.tsx:143
+#: app/routes/_index.tsx:152
 msgid "Maintenance"
-msgstr ""
+msgstr "保守"
 
-#: app/routes/_index.tsx:314
+#: app/components/api-console.tsx:55
+msgid "Make 90 solar-array brackets, due October 24."
+msgstr "太陽光線アレイブラケット90個を作成。期限は10月24日。"
+
+#: app/routes/_index.tsx:347
 msgid "Manage every site on one ledger."
-msgstr ""
+msgstr "1つの台帳ですべてのサイトを管理します。"
 
 #: app/routes/pricing.tsx:45
 msgid "Managed Carbon for small manufacturing teams"
-msgstr ""
+msgstr "小規模製造チーム向けマネージドCarbon"
 
 #: app/components/wizard-form.tsx:105
 msgid "Managed Hosting"
@@ -905,21 +932,25 @@ msgstr "マネージドホスティング"
 
 #: app/routes/pricing.tsx:50
 msgid "Managed updates and backups"
-msgstr ""
+msgstr "マネージドアップデートとバックアップ"
 
-#: app/routes/_index.tsx:281
+#: app/routes/_index.tsx:314
 msgid "Manufacturing execution"
 msgstr "製造実行"
 
-#: app/routes/_index.tsx:70
+#: app/routes/_index.tsx:79
 msgid "Manufacturing workflows with GAAP accounting"
-msgstr ""
+msgstr "GAAP会計を使用した製造ワークフロー"
 
-#: app/routes/_index.tsx:100
+#: app/components/api-console.tsx:71
+msgid "Material quantities and costs recalculated"
+msgstr "材料数量とコストが再計算されました"
+
+#: app/routes/_index.tsx:109
 msgid "materials, capacity and schedules"
-msgstr ""
+msgstr "材料、容量、スケジュール"
 
-#: app/routes/_index.tsx:858
+#: app/routes/_index.tsx:898
 msgid "MCP Docs"
 msgstr "MCP ドキュメント"
 
@@ -927,7 +958,7 @@ msgstr "MCP ドキュメント"
 msgid "Media Kit"
 msgstr "メディアキット"
 
-#: app/routes/_index.tsx:216
+#: app/routes/_index.tsx:228
 msgid "Medical devices"
 msgstr "医療機器"
 
@@ -947,19 +978,19 @@ msgstr "MES作業指示"
 msgid "Message"
 msgstr "メッセージ"
 
-#: app/routes/_index.tsx:313
+#: app/routes/_index.tsx:346
 msgid "Multi-entity · Multi-location"
 msgstr "マルチエンティティ · マルチロケーション"
 
-#: app/routes/_index.tsx:317
+#: app/routes/_index.tsx:350
 msgid "Multi-entity accounting with intercompany transactions"
 msgstr "企業間取引を伴うマルチエンティティ会計"
 
-#: app/routes/_index.tsx:321
+#: app/routes/_index.tsx:354
 msgid "Multi-entity ledger / multi-site planning"
 msgstr "マルチエンティティ帳簿 / マルチサイト計画"
 
-#: app/routes/_index.tsx:319
+#: app/routes/_index.tsx:352
 msgid "Multi-location planning with inter-site transfers"
 msgstr "サイト間転送を伴うマルチロケーション計画"
 
@@ -971,23 +1002,27 @@ msgstr "マルチテナント"
 msgid "Name"
 msgstr "名前"
 
-#: app/routes/_index.tsx:302
+#: app/routes/_index.tsx:335
 msgid "NCR to CAPA workflow with sign-off"
 msgstr "署名付きNCRからCAPA ワークフロー"
 
 #: app/routes/pricing.tsx:264
 msgid "Need APIs, MCP, advanced controls or deployment support? <0>Request an Enterprise license</0>."
-msgstr ""
+msgstr "API、MCP、高度なコントロール、または展開サポートが必要ですか？<0>Enterpriseライセンスをリクエスト</0>してください。"
 
-#: app/routes/_index.tsx:49
+#: app/components/api-console.tsx:46
+msgid "Next quote number drawn from the sequence"
+msgstr "シーケンスから引き出された次の見積番号"
+
+#: app/routes/_index.tsx:58
 msgid "No serial-level history"
 msgstr "シリアルレベルの履歴なし"
 
-#: app/routes/_index.tsx:178
+#: app/routes/_index.tsx:187
 msgid "No sync jobs, no drift"
 msgstr "同期ジョブなし、ずれなし"
 
-#: app/routes/_index.tsx:133
+#: app/routes/_index.tsx:142
 msgid "Non-conformance & CAPA"
 msgstr "不適合 & CAPA"
 
@@ -995,15 +1030,19 @@ msgstr "不適合 & CAPA"
 msgid "None Required"
 msgstr "不要"
 
+#: app/components/api-console.tsx:120
+msgid "On-hand quantity updated for the storage unit"
+msgstr "保管ユニットの手持数量が更新されました"
+
 #: app/routes/pricing.tsx:98
 msgid "On-prem, private cloud or air-gapped deployment"
-msgstr ""
+msgstr "オンプレミス、プライベートクラウド、またはエアギャップ環境展開"
 
-#: app/routes/_index.tsx:721
-msgid "One record from CAD to cash."
-msgstr ""
+#: app/routes/_index.tsx:212
+msgid "One server for every AI client"
+msgstr "AI クライアントごとに1つのサーバー"
 
-#: app/routes/_index.tsx:224
+#: app/routes/_index.tsx:236
 msgid "one-off, lot-of-one traceability"
 msgstr "1回限り、1ロットのトレーサビリティ"
 
@@ -1011,7 +1050,7 @@ msgstr "1回限り、1ロットのトレーサビリティ"
 msgid "One-time purchase with full ownership"
 msgstr "一度の購入で完全な所有権を取得"
 
-#: app/routes/_index.tsx:1020
+#: app/routes/_index.tsx:1064
 #: app/routes/pricing.tsx:38
 msgid "Open source"
 msgstr "オープンソース"
@@ -1020,74 +1059,74 @@ msgstr "オープンソース"
 msgid "Operational"
 msgstr "稼働中"
 
-#: app/routes/_index.tsx:119
+#: app/components/api-console.tsx:446
+msgid "Operations"
+msgstr "操作"
+
+#: app/components/api-console.tsx:97
+msgid "Operations placed on work center capacity"
+msgstr "ワークセンター容量に配置された操作"
+
+#: app/routes/_index.tsx:128
 msgid "Operator terminal"
 msgstr "オペレータ端末"
 
-#: app/routes/_index.tsx:116
+#: app/routes/_index.tsx:125
 msgid "operators, jobs and work centers"
-msgstr ""
+msgstr "操作者、ジョブ、ワークセンター"
 
-#: app/routes/_index.tsx:161
-msgid "ops on the floor"
-msgstr "床上のオプス"
+#: app/components/api-console.tsx:47
+msgid "Opportunity opened for the customer"
+msgstr "顧客向けのチャンスが開かれました"
 
-#: app/routes/_index.tsx:1182
+#: app/routes/_index.tsx:1262
 msgid "Or self-host the open source core"
 msgstr "またはオープンソースコアの自己ホスト"
 
-#: app/routes/_index.tsx:160
-msgid "Order"
-msgstr "注文"
-
-#: app/routes/_index.tsx:85
+#: app/routes/_index.tsx:94
 msgid "orders, inventory and actual costs"
-msgstr ""
+msgstr "注文、在庫、実際のコスト"
 
 #: app/components/wizard-form.tsx:76
 msgid "Ownership Model"
 msgstr "所有権モデル"
 
-#: app/routes/_index.tsx:163
-msgid "packing & certs"
-msgstr "梱包と証明書"
-
-#: app/routes/_index.tsx:273
+#: app/routes/_index.tsx:306
 msgid "Part configurator / BOM tree"
 msgstr "パーツコンフィギュレータ/BOMツリー"
 
-#: app/routes/_index.tsx:108
+#: app/routes/_index.tsx:117
 msgid "Part supersession"
 msgstr "部品廃止"
 
-#: app/routes/_index.tsx:318
+#: app/components/api-console.tsx:48
+msgid "Payment and shipping terms resolved from the customer"
+msgstr "顧客から解決された支払いと配送条件"
+
+#: app/routes/_index.tsx:351
 msgid "Per-entity currency, COA and tax, consolidated books"
 msgstr "エンティティごとの通貨、勘定科目表及び税、統合帳簿"
 
-#: app/routes/_index.tsx:99
-#: app/routes/_index.tsx:158
+#: app/routes/_index.tsx:108
+#: app/routes/_index.tsx:167
 msgid "Planning"
 msgstr "計画"
 
-#: app/routes/_index.tsx:45
+#: app/routes/_index.tsx:54
 msgid "Plans depend on manual inputs"
-msgstr ""
+msgstr "計画は手動入力に依存"
 
 #: app/components/wizard-form.tsx:303
 msgid "Please provide your contact details to complete the process"
 msgstr "プロセスを完了するために、ご連絡先の詳細をご入力ください"
 
-#: app/routes/_index.tsx:159
-msgid "POs & receipts"
-msgstr "PO&領収書"
-
-#: app/routes/_index.tsx:144
+#: app/routes/_index.tsx:153
 msgid "preventive and reactive maintenance"
-msgstr ""
+msgstr "予防的および反応的な保守"
 
-#: app/routes/_index.tsx:146
+#: app/routes/_index.tsx:155
 msgid "Preventive maintenance schedules"
-msgstr ""
+msgstr "予防的保守スケジュール"
 
 #: app/components/footer.tsx:63
 #: app/components/header.tsx:82
@@ -1095,15 +1134,9 @@ msgstr ""
 msgid "Pricing"
 msgstr "料金"
 
-#: app/routes/_index.tsx:61
+#: app/routes/_index.tsx:70
 msgid "Printed travelers become stale"
-msgstr ""
-
-#: app/routes/_index.tsx:254
-#: app/routes/_index.tsx:255
-#: app/routes/_index.tsx:256
-msgid "Printer"
-msgstr "プリンター"
+msgstr "印刷されたトラベラーは古くなります"
 
 #: app/components/footer.tsx:74
 msgid "Privacy"
@@ -1113,45 +1146,41 @@ msgstr "プライバシー"
 msgid "Product"
 msgstr "製品"
 
-#: app/routes/_index.tsx:161
+#: app/routes/_index.tsx:170
 msgid "Production"
 msgstr "生産"
 
-#: app/routes/_index.tsx:158
-msgid "projections and MRP"
-msgstr "予測とMRP"
-
-#: app/routes/_index.tsx:159
+#: app/routes/_index.tsx:168
 msgid "Purchasing"
 msgstr "購買"
 
-#: app/routes/_index.tsx:89
+#: app/routes/_index.tsx:98
 msgid "Purchasing & receipts"
 msgstr "購買と領収書"
 
-#: app/routes/_index.tsx:286
+#: app/routes/_index.tsx:319
 msgid "QR and barcode tracking on every unit"
 msgstr "すべてのユニット上のQRおよびバーコード追跡"
 
-#: app/routes/_index.tsx:129
-#: app/routes/_index.tsx:162
-#: app/routes/_index.tsx:297
+#: app/routes/_index.tsx:138
+#: app/routes/_index.tsx:172
+#: app/routes/_index.tsx:330
 msgid "Quality"
 msgstr "品質"
 
-#: app/routes/_index.tsx:305
+#: app/routes/_index.tsx:338
 msgid "Quality / traceability record"
 msgstr "品質/トレーサビリティレコード"
 
-#: app/routes/_index.tsx:62
+#: app/routes/_index.tsx:71
 msgid "Quality runs in a separate system"
-msgstr ""
+msgstr "品質は別のシステムで実行されます"
 
 #: app/components/hero.tsx:242
 msgid "Quote Pricing"
 msgstr "見積価格"
 
-#: app/routes/_index.tsx:87
+#: app/routes/_index.tsx:96
 msgid "Quotes & RFQ pricing"
 msgstr "見積もりとRFQ価格"
 
@@ -1159,17 +1188,13 @@ msgstr "見積もりとRFQ価格"
 msgid "Quotes Table"
 msgstr "見積表"
 
-#: app/routes/_index.tsx:250
-msgid "Quoting"
-msgstr "見積もり"
-
-#: app/routes/_index.tsx:215
+#: app/routes/_index.tsx:227
 msgid "rate production, PPAP, takt"
 msgstr "レート生産、PPAP、タクト"
 
-#: app/routes/_index.tsx:147
+#: app/routes/_index.tsx:156
 msgid "Reactive maintenance dispatches"
-msgstr ""
+msgstr "反応的な保守ディスパッチ"
 
 #: app/components/wizard-form.tsx:142
 msgid "Recommended. Priority support with dedicated account manager"
@@ -1177,54 +1202,58 @@ msgstr "推奨。専任のアカウントマネージャーによる優先サポ
 
 #: app/routes/pricing.tsx:87
 msgid "Regulated deployment"
-msgstr ""
+msgstr "規制対象の展開"
 
 #: app/routes/pricing.tsx:86
 msgid "Regulated Enterprise"
-msgstr ""
+msgstr "規制対象のEnterprise"
 
-#: app/routes/_index.tsx:568
+#: app/routes/_index.tsx:601
 msgid "Replace spreadsheets and disconnected systems."
-msgstr ""
+msgstr "スプレッドシートと切断されたシステムを置き換えます。"
 
 #: app/routes/pricing.tsx:69
 msgid "Request a License"
-msgstr ""
+msgstr "ライセンスをリクエスト"
 
 #: app/components/hero.tsx:210
 #: app/components/hero.tsx:254
 msgid "Resources"
 msgstr "リソース"
 
-#: app/routes/_index.tsx:73
+#: app/components/api-console.tsx:569
+msgid "Response"
+msgstr "応答"
+
+#: app/routes/_index.tsx:82
 msgid "REST API, webhooks and MCP"
-msgstr ""
+msgstr "REST API、ウェブフック、MCP"
 
 #: app/routes/pricing.tsx:74
 msgid "REST API, webhooks, integrations and MCP"
-msgstr ""
+msgstr "REST API、ウェブフック、統合、MCP"
 
-#: app/routes/_index.tsx:1060
+#: app/routes/_index.tsx:1104
 msgid "Review the code before deployment"
-msgstr ""
+msgstr "展開前にコードをレビュー"
 
 #: app/routes/pricing.tsx:260
 msgid "Review the source and deploy the core manufacturing modules in your own environment under AGPL-3.0."
-msgstr ""
+msgstr "ソースをレビューし、AGPL-3.0の下で独自の環境にコア製造モジュールをデプロイします。"
 
-#: app/routes/_index.tsx:270
+#: app/routes/_index.tsx:303
 msgid "Revision control with effectivity dates"
 msgstr "有効日付のリビジョン管理"
 
-#: app/routes/_index.tsx:48
+#: app/routes/_index.tsx:57
 msgid "Revisions move through email"
-msgstr ""
+msgstr "リビジョンはメールを通じて移動します"
 
-#: app/routes/_index.tsx:222
+#: app/routes/_index.tsx:234
 msgid "Robotics"
 msgstr "ロボット工学"
 
-#: app/routes/_index.tsx:271
+#: app/routes/_index.tsx:304
 msgid "Rolled-up cost at any configuration"
 msgstr "任意の構成で集計されたコスト"
 
@@ -1233,41 +1262,46 @@ msgstr "任意の構成で集計されたコスト"
 msgid "Rolls up to {rootName} in {0}"
 msgstr "{0}で{rootName}に集約"
 
-#: app/routes/_index.tsx:157
-msgid "routing & work instructions"
-msgstr "ルーティングと作業指示"
-
-#: app/routes/_index.tsx:239
+#: app/routes/_index.tsx:251
 msgid "Row-level security"
 msgstr "行レベルセキュリティ"
 
-#: app/routes/_index.tsx:269
+#: app/components/api-console.tsx:149
+msgid "Rows limited to your company and permissions"
+msgstr "行は会社と権限に限定されています"
+
+#: app/routes/_index.tsx:302
 msgid "Rule-based BOM and routing generation"
 msgstr "ルールベースのBOMとルーティング生成"
 
 #: app/routes/pricing.tsx:53
 msgid "Rules-based product configurator, BOMs and routings"
-msgstr ""
+msgstr "ルールベースの製品コンフィギュレータ、BOM、ルーティング"
 
-#: app/routes/_index.tsx:1081
+#: app/routes/_index.tsx:1125
 msgid "Run Carbon on infrastructure you control."
-msgstr ""
+msgstr "管理下のインフラ上でCarbonを実行します。"
+
+#: app/routes/_index.tsx:348
+msgid "Run one facility or multiple legal entities and locations. Carbon handles entity-specific currencies, charts of accounts and taxes with consolidated reporting."
+msgstr "1つの施設または複数の法人とロケーションを実行します。Carbonは、エンティティ固有の通貨、勘定図表、および統合レポーティング付きの税を処理します。"
 
 #: app/routes/_index.tsx:315
-msgid "Run one facility or multiple legal entities and locations. Carbon handles entity-specific currencies, charts of accounts and taxes with consolidated reporting."
-msgstr ""
-
-#: app/routes/_index.tsx:282
 msgid "Run production from live data."
-msgstr ""
+msgstr "ライブデータから生産を実行します。"
 
 #: app/components/footer.tsx:50
+#: app/routes/_index.tsx:169
 msgid "Sales"
 msgstr "営業"
 
-#: app/routes/_index.tsx:88
+#: app/routes/_index.tsx:97
 msgid "Sales orders"
 msgstr "販売注文"
+
+#: app/components/api-console.tsx:78
+msgid "Schedule J-000412 and tell me if anything slips."
+msgstr "J-000412をスケジュールし、問題があれば教えてください。"
 
 #: app/components/wizard-form.tsx:154
 msgid "Select which features you need custom development for"
@@ -1284,7 +1318,7 @@ msgstr "ご希望のホスティングソリューションを選択してくだ
 #: app/components/footer.tsx:64
 #: app/components/header.tsx:92
 #: app/components/header.tsx:217
-#: app/routes/_index.tsx:1077
+#: app/routes/_index.tsx:1121
 #: app/routes/pricing.tsx:215
 msgid "Self-hosted"
 msgstr "自己ホスト"
@@ -1299,7 +1333,7 @@ msgstr "セルフホスト+サポート"
 
 #: app/routes/pricing.tsx:56
 msgid "Self-managed installation and upgrades"
-msgstr ""
+msgstr "自己管理型のインストールとアップグレード"
 
 #: app/routes/pricing.tsx:38
 msgid "Self-serve"
@@ -1307,45 +1341,57 @@ msgstr "セルフサービス"
 
 #: app/routes/pricing.tsx:57
 msgid "Self-service onboarding"
-msgstr ""
+msgstr "セルフサービスのオンボーディング"
 
-#: app/routes/_index.tsx:225
+#: app/routes/_index.tsx:237
 msgid "Semiconductor"
 msgstr "半導体"
 
-#: app/routes/_index.tsx:135
+#: app/routes/_index.tsx:208
+msgid "Send a scoped API key as a bearer token. A single result is the response body; a list comes back with results and a total count."
+msgstr "スコープ付きAPIキーをベアラートークンとして送信します。単一の結果は応答本文です。リストは結果と総数で返されます。"
+
+#: app/routes/_index.tsx:144
 msgid "Serial & lot genealogy"
 msgstr "シリアル&ロット系統"
 
-#: app/routes/_index.tsx:301
+#: app/routes/_index.tsx:334
 msgid "Serial and lot genealogy, forwards and back"
 msgstr "シリアルおよびロット系統、前方および後方"
 
-#: app/routes/_index.tsx:74
+#: app/routes/_index.tsx:83
 msgid "Serial traceability and actual COGS"
-msgstr ""
+msgstr "シリアル追跡と実際のCOGS"
 
-#: app/routes/_index.tsx:184
+#: app/routes/_index.tsx:193
 msgid "Serial-level trace"
 msgstr "シリアルレベルの追跡"
+
+#: app/components/api-console.tsx:585
+msgid "Service layer"
+msgstr "サービスレイヤー"
 
 #: app/components/wizard-form.tsx:119
 msgid "Shared database with isolated data"
 msgstr "分離されたデータを持つ共有データベース"
 
-#: app/routes/_index.tsx:177
+#: app/routes/_index.tsx:186
 msgid "Shared schema"
 msgstr "共有スキーマ"
 
-#: app/routes/_index.tsx:1171
+#: app/routes/_index.tsx:1251
 msgid "Ship faster than your competitors can quote."
-msgstr ""
+msgstr "競合他社が見積もりできるより速く発送します。"
 
-#: app/routes/_index.tsx:163
+#: app/routes/_index.tsx:173
 msgid "Shipping"
 msgstr "配送"
 
-#: app/routes/_index.tsx:289
+#: app/routes/_index.tsx:171
+msgid "Shop Floor"
+msgstr ""
+
+#: app/routes/_index.tsx:322
 msgid "Shop floor / job traveler"
 msgstr "ショップフロア/ジョブトラベラー"
 
@@ -1357,17 +1403,17 @@ msgstr "ショップフロアアプリ"
 msgid "Shop floor console mode"
 msgstr "工場フロアコンソールモード"
 
-#: app/routes/_index.tsx:107
+#: app/routes/_index.tsx:116
 msgid "Shortage escalation"
 msgstr "不足のエスカレーション"
 
-#: app/routes/_index.tsx:46
+#: app/routes/_index.tsx:55
 msgid "Shortages surface during production"
-msgstr ""
+msgstr "不足は生産中に浮上"
 
 #: app/routes/pricing.tsx:194
 msgid "Simple pricing based on your needs."
-msgstr ""
+msgstr "ニーズに基づいたシンプルな価格設定。"
 
 #: app/components/wizard-form.tsx:123
 msgid "Single-Tenant"
@@ -1375,13 +1421,13 @@ msgstr "シングルテナント"
 
 #: app/routes/pricing.tsx:99
 msgid "Single-tenant deployment in your cloud account"
-msgstr ""
+msgstr "クラウドアカウント内の単一テナント展開"
 
-#: app/routes/_index.tsx:220
+#: app/routes/_index.tsx:232
 msgid "SMT, contract manufacture, NPI"
 msgstr "SMT、契約製造、NPI"
 
-#: app/routes/_index.tsx:238
+#: app/routes/_index.tsx:250
 msgid "SOC 2 controls"
 msgstr "SOC 2コントロール"
 
@@ -1393,17 +1439,17 @@ msgstr "Software as a Service"
 msgid "Source Code"
 msgstr "ソースコード"
 
-#: app/routes/_index.tsx:224
+#: app/routes/_index.tsx:236
 msgid "Space"
 msgstr "スペース"
 
-#: app/routes/_index.tsx:150
+#: app/routes/_index.tsx:159
 msgid "Spare parts consumption"
-msgstr ""
+msgstr "予備部品消費"
 
-#: app/routes/_index.tsx:43
+#: app/routes/_index.tsx:52
 msgid "Spreadsheets"
-msgstr ""
+msgstr "スプレッドシート"
 
 #: app/routes/pricing.tsx:107
 msgid "SSO/SAML"
@@ -1418,10 +1464,10 @@ msgstr "GitHubでCarbonにスターを付ける"
 msgid "Star on GitHub"
 msgstr "GitHubでスターを付ける"
 
-#: app/routes/_index.tsx:347
+#: app/routes/_index.tsx:380
 #: app/routes/pricing.tsx:41
 msgid "Start 30-Day Trial"
-msgstr ""
+msgstr "30日間の試用版を開始"
 
 #: app/components/app-cta-label.tsx:10
 msgid "Start Free"
@@ -1433,7 +1479,7 @@ msgstr "スターター"
 
 #: app/routes/pricing.tsx:66
 msgid "Starter plus APIs, automation and support"
-msgstr ""
+msgstr "Starter プラスAPI、自動化、サポート"
 
 #: app/components/header.tsx:72
 #: app/components/header.tsx:203
@@ -1444,11 +1490,11 @@ msgstr "ストーリー"
 msgid "Submit"
 msgstr "送信"
 
-#: app/routes/_index.tsx:136
+#: app/routes/_index.tsx:145
 msgid "Supplier scorecards"
 msgstr "サプライヤースコアカード"
 
-#: app/routes/_index.tsx:103
+#: app/routes/_index.tsx:112
 msgid "Supply planning runs"
 msgstr "供給計画実行"
 
@@ -1460,28 +1506,23 @@ msgstr "サポートレベル"
 msgid "System Status:"
 msgstr "システムステータス:"
 
-#: app/routes/_index.tsx:172
+#: app/routes/_index.tsx:181
 msgid "Systems replaced"
 msgstr "置き換えられたシステム"
 
-#: app/routes/_index.tsx:352
+#: app/routes/_index.tsx:385
 #: app/routes/pricing.tsx:69
 #: app/routes/pricing.tsx:90
 msgid "Talk to a Human"
-msgstr ""
-
-#: app/routes/_index.tsx:247
-#: app/routes/_index.tsx:248
-msgid "Tasks"
-msgstr "タスク"
+msgstr "人間と話す"
 
 #: app/routes/pricing.tsx:73
 msgid "Technical support from Carbon"
-msgstr ""
+msgstr "Carbonからの技術サポート"
 
-#: app/routes/_index.tsx:149
+#: app/routes/_index.tsx:158
 msgid "Technician labor tracking"
-msgstr ""
+msgstr "技術者労働追跡"
 
 #: app/components/footer.tsx:75
 msgid "Terms"
@@ -1495,27 +1536,27 @@ msgstr "ご関心をお寄せいただきありがとうございます！"
 msgid "Thank you for your message!"
 msgstr "ご連絡ありがとうございます！"
 
-#: app/routes/_index.tsx:203
-msgid "The built-in MCP server exposes Carbon operations to AI agents. Every request uses the permissions of the authenticated identity."
-msgstr ""
+#: app/routes/_index.tsx:884
+msgid "The Carbon API is the service layer: the same code the app runs when you click a button. Every call validates its input, recalculates what depends on it and enforces your permissions."
+msgstr "Carbon APIはサービスレイヤーです。ボタンをクリックするとアプリが実行するのと同じコードです。すべての呼び出しは入力を検証し、それに依存するものを再計算し、権限を強制します。"
+
+#: app/components/api-console.tsx:70
+msgid "The item's BOM and routing copied onto the job"
+msgstr "アイテムのBOMとルーティングがジョブにコピーされました"
 
 #: app/components/hero.tsx:123
 msgid "The Modern Manufacturing Stack"
 msgstr "最新の製造スタック"
 
-#: app/routes/_index.tsx:208
-msgid "The TypeScript monorepo shares generated database types across the application, API and agent tools. Run Carbon with your own models and infrastructure."
-msgstr ""
-
-#: app/routes/_index.tsx:298
+#: app/routes/_index.tsx:331
 msgid "Trace every unit to its source."
-msgstr ""
+msgstr "すべてのユニットをソースまで追跡します。"
 
-#: app/routes/_index.tsx:283
+#: app/routes/_index.tsx:316
 msgid "Track material, labor, scans, scrap and deviations as work happens. Schedules and job costs update from the same records."
-msgstr ""
+msgstr "作業中に材料、労働、スキャン、スクラップ、偏差を追跡します。スケジュールとジョブコストは同じレコードから更新されます。"
 
-#: app/routes/_index.tsx:993
+#: app/routes/_index.tsx:1037
 msgid "Trusted"
 msgstr "信頼"
 
@@ -1523,7 +1564,11 @@ msgstr "信頼"
 msgid "Trusted by the world's most innovative"
 msgstr "世界で最も革新的な信頼"
 
-#: app/routes/_index.tsx:190
+#: app/routes/_index.tsx:218
+msgid "Typed clients in your language"
+msgstr "お客様の言語での型指定クライアント"
+
+#: app/routes/_index.tsx:199
 msgid "Typical first deployment"
 msgstr "一般的な初回デプロイメント"
 
@@ -1535,26 +1580,30 @@ msgstr "無制限の機能サポート"
 msgid "Unlimited records"
 msgstr "無制限のレコード"
 
-#: app/routes/_index.tsx:1000
+#: app/routes/_index.tsx:1044
 msgid "Use append-only ledgers, granular permissions and complete record history to support regulated workflows."
-msgstr ""
+msgstr "追加のみの台帳、きめ細かい権限、完全なレコード履歴を使用して、規制対象ワークフローをサポートします。"
 
 #: app/routes/pricing.tsx:197
 msgid "Use Carbon's managed cloud or run it on your infrastructure. Cloud plans include a 30-day trial with no sales call."
-msgstr ""
+msgstr "Carbonのマネージドクラウドを使用するか、インフラ上で実行してください。クラウドプランには、営業電話なしの30日間の試用版が含まれています。"
 
 #: app/routes/pricing.tsx:41
 #: app/routes/pricing.tsx:278
 msgid "View Installation Guide"
-msgstr ""
+msgstr "インストールガイドを表示"
 
 #: app/components/header.tsx:32
 msgid "View our source code and contribute"
 msgstr "ソースコードを表示して貢献する"
 
-#: app/routes/_index.tsx:1093
+#: app/routes/_index.tsx:1137
 msgid "View the Source"
 msgstr "ソースを表示"
+
+#: app/components/api-console.tsx:106
+msgid "We found 12 extra M6 bolts in bin A-14. Fix the count."
+msgstr "ビンA-14で余分なM6ボルト12本を見つけました。数を修正してください。"
 
 #: app/routes/about.tsx:50
 msgid "We open-sourced Carbon not because it's a great business plan, but because that's the system I would have wanted when I was in your shoes."
@@ -1576,13 +1625,17 @@ msgstr "このコミュニティにいてくれてうれしいです。"
 msgid "What can we help with?"
 msgstr "何かお手伝いできることはありますか？"
 
+#: app/components/api-console.tsx:127
+msgid "Which sales orders are ready to ship?"
+msgstr "どの販売注文が出荷準備完了ですか？"
+
 #: app/routes/about.tsx:23
 msgid "Why we built Carbon and open-sourced it"
 msgstr "Carbonを構築し、オープンソース化した理由"
 
-#: app/routes/_index.tsx:148
+#: app/routes/_index.tsx:157
 msgid "Work center downtime"
-msgstr ""
+msgstr "ワークセンターのダウンタイム"
 
 #: app/routes/contact.tsx:191
 msgid "Work Email"
@@ -1594,7 +1647,11 @@ msgstr "作業指示"
 
 #: app/routes/pricing.tsx:75
 msgid "Workflow automation and custom triggers"
-msgstr ""
+msgstr "ワークフロー自動化とカスタムトリガー"
+
+#: app/components/api-console.tsx:380
+msgid "You"
+msgstr "あなた"
 
 #: app/components/wizard-form.tsx:160
 msgid "You can handle everything yourself"
