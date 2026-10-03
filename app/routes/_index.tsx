@@ -471,7 +471,7 @@ function HeroDashboard() {
 			    the card paints over its lower half */}
 			<div
 				aria-hidden
-				className="pointer-events-none absolute inset-x-[4%] top-0 h-48 -translate-y-1/2 [--glow:0.45] dark:[--glow:0.18]"
+				className="pointer-events-none absolute inset-x-[4%] top-0 h-48 -translate-y-1/2 [--glow:0.25] dark:[--glow:0.11]"
 				style={{
 					background:
 						"radial-gradient(50% 50% at 50% 50%, hsl(var(--secondary) / var(--glow)), transparent)",
