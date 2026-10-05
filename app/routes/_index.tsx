@@ -1,4 +1,3 @@
-import type { MessageDescriptor } from "@lingui/core";
 import { msg } from "@lingui/core/macro";
 import { Trans, useLingui } from "@lingui/react/macro";
 import {
@@ -9,7 +8,6 @@ import {
 	Copy,
 	Printer,
 	Webhook,
-	X,
 } from "lucide-react";
 import { type ReactNode, useEffect, useRef, useState } from "react";
 import { Link } from "react-router";
@@ -45,46 +43,6 @@ export const meta: MetaFunction = ({ matches }) =>
 // Each descriptor is resolved to the active locale at render time via
 // `useLingui().i18n._(descriptor)`. Brand names, acronym codes (ERP/MRP/…),
 // URLs and other proper nouns are left as plain strings on purpose.
-
-const statusQuo = [
-	{
-		id: "spreadsheet",
-		name: msg`Spreadsheets`,
-		rows: [
-			msg`Plans depend on manual inputs`,
-			msg`Shortages surface during production`,
-			msg`Actual costs arrive after the job`,
-			msg`Revisions move through email`,
-			msg`No serial-level history`,
-			msg`Audit records must be reconstructed`,
-		],
-	},
-	{
-		id: "legacy",
-		name: msg`Legacy ERP`,
-		rows: [
-			msg`Designed around accounting`,
-			msg`18-month implementation`,
-			msg`Consultants required for changes`,
-			msg`BOMs re-keyed by hand`,
-			msg`Printed travelers become stale`,
-			msg`Quality runs in a separate system`,
-		],
-	},
-	{
-		id: "carbon",
-		name: msg`Carbon`,
-		accent: true,
-		rows: [
-			msg`Manufacturing workflows with GAAP accounting`,
-			msg`ERP, MRP, MES and QMS share one schema`,
-			msg`Deploy in weeks`,
-			msg`REST API, webhooks and MCP`,
-			msg`Serial traceability and actual COGS`,
-			msg`Audit history stored with each record`,
-		],
-	},
-];
 
 const modules = [
 	{
@@ -219,36 +177,6 @@ const transportsInfo = [
 		code: "GET /api/v1/openapi.json",
 		desc: msg`Generate a typed client for TypeScript, Python, Go, Ruby, C# or PHP from the public spec. Input schemas come from the validators the server runs.`,
 	},
-];
-
-const industries = [
-	{ n: "01", name: msg`Defense`, note: msg`ITAR-ready, serialized, audit-first` },
-	{ n: "02", name: msg`Aerospace`, note: msg`AS9100, FAI, full genealogy` },
-	{ n: "03", name: msg`Automotive`, note: msg`rate production, PPAP, takt` },
-	{ n: "04", name: msg`Medical devices`, note: msg`ISO 13485, DHR, e-signatures` },
-	{
-		n: "05",
-		name: msg`Consumer electronics`,
-		note: msg`SMT, contract manufacture, NPI`,
-	},
-	{ n: "06", name: msg`Robotics`, note: msg`deep assemblies, configured units` },
-	{ n: "07", name: msg`Energy & grid`, note: msg`long lead, project-based build` },
-	{ n: "08", name: msg`Space`, note: msg`one-off, lot-of-one traceability` },
-	{ n: "09", name: msg`Semiconductor`, note: msg`cleanroom ops, yield analytics` },
-	{
-		n: "10",
-		name: msg`Industrial equipment`,
-		note: msg`configure to order, aftermarket`,
-	},
-];
-
-const compliance: MessageDescriptor[] = [
-	msg`ITAR-ready deployment`,
-	msg`AS9100`,
-	msg`ISO 13485`,
-	msg`21 CFR Part 11`,
-	msg`SOC 2 controls`,
-	msg`Row-level security`,
 ];
 
 // Product names stay literal. Two rows, scrolling in opposite directions.
@@ -590,76 +518,6 @@ function Testimonial() {
 	);
 }
 
-function StatusQuo() {
-	const { i18n } = useLingui();
-	return (
-		<section id="platform" className="border-b border-border py-28 sm:py-32">
-			<div className={shell}>
-				<Reveal className="flex flex-wrap items-end justify-between gap-10">
-					<div>
-						<h2 className={cn(heading, "mt-5 max-w-[22ch]")}>
-							<Trans>Replace spreadsheets and disconnected systems.</Trans>
-						</h2>
-					</div>
-					<TrialActions />
-				</Reveal>
-
-				<Reveal className="mt-14 grid grid-cols-1 gap-px border border-border bg-border md:grid-cols-3">
-					{statusQuo.map((col) => (
-						<div
-							key={col.id}
-							className={cn(
-								"flex flex-col p-8",
-								col.accent
-									? "bg-muted shadow-[inset_2px_0_0] shadow-secondary"
-									: "bg-card dark:bg-background",
-							)}
-						>
-							<div
-								className={cn(
-									"mt-4 pb-6 text-xl font-medium",
-									col.accent ? "text-secondary" : "text-foreground",
-								)}
-							>
-								{i18n._(col.name)}
-							</div>
-							<ul
-								role="list"
-								className={cn("flex flex-col divide-y divide-border/60", col.accent && "divide-secondary/20")}
-							>
-								{col.rows.map((row, rowIndex) => (
-									<li
-										key={rowIndex}
-										className={cn(
-											"flex items-start gap-3 py-4 text-[15px] leading-relaxed first:pt-0 last:pb-0",
-											col.accent
-												? "text-foreground"
-												: "text-muted-foreground",
-										)}
-									>
-										{col.accent ? (
-											<Check
-												className="mt-1 size-4 shrink-0 text-secondary"
-												strokeWidth={2.5}
-											/>
-										) : (
-											<X
-												className="mt-1 size-4 shrink-0 text-muted-foreground/40"
-												strokeWidth={2}
-											/>
-										)}
-										<span>{i18n._(row)}</span>
-									</li>
-								))}
-							</ul>
-						</div>
-					))}
-				</Reveal>
-			</div>
-		</section>
-	);
-}
-
 function OneModel() {
 	const { i18n } = useLingui();
 	const [active, setActive] = useState(0);
@@ -940,48 +798,6 @@ function Agents() {
 	);
 }
 
-function Industries() {
-	const { i18n } = useLingui();
-	return (
-		<section id="industries" className="border-b border-border py-28 sm:py-32">
-			<div className={shell}>
-				<Reveal className="flex flex-wrap items-end justify-between gap-8">
-					<div>
-						<h2 className={cn(heading, "mt-5 max-w-[22ch]")}>
-							<Trans>Built for discrete manufacturing.</Trans>
-						</h2>
-					</div>
-					<p className="max-w-[38ch] text-base leading-relaxed text-muted-foreground">
-						<Trans>
-							Configure Carbon for one-off builds, rate production and regulated
-							work without changing the underlying data model.
-						</Trans>
-					</p>
-				</Reveal>
-
-				<Reveal className="mt-14 grid grid-cols-2 gap-px border border-border bg-border md:grid-cols-3 lg:grid-cols-5">
-					{industries.map((ind) => (
-						<div
-							key={ind.n}
-							className="flex min-h-[158px] flex-col gap-3 bg-card px-6 pb-8 pt-6 transition-colors hover:bg-muted"
-						>
-							<div className="font-mono text-[10px] leading-none text-muted-foreground">
-								{ind.n}
-							</div>
-							<div className="text-[19px] font-medium tracking-[-0.01em] leading-tight">
-								{i18n._(ind.name)}
-							</div>
-							<div className="font-mono text-xs leading-normal text-muted-foreground">
-								{i18n._(ind.note)}
-							</div>
-						</div>
-					))}
-				</Reveal>
-			</div>
-		</section>
-	);
-}
-
 const AUDIT_PROMPT = `Evaluate Carbon for my manufacturing business. Review the repository at https://github.com/crbnos/carbon and summarize its relevant capabilities and constraints. Then ask about my products, production process, compliance requirements, current systems, and goals. Finish with 3–5 specific ways Carbon could fit my operation.`;
 
 /**
@@ -1023,41 +839,13 @@ function CopyPrompt({ prompt }: { prompt: string }) {
 }
 
 function TrustOpen() {
-	const { i18n } = useLingui();
 	return (
 		<section
 			id="open"
 			className="theme-invert border-b border-border bg-background py-28 text-foreground sm:py-32"
 		>
 			<div className={shell}>
-				<Reveal className="grid grid-cols-1 gap-px border border-border bg-border lg:grid-cols-2">
-					<div className="bg-card p-10 sm:p-11">
-						<div className="font-mono text-[10px] uppercase leading-none tracking-wide text-secondary">
-							<span className="inline-block bg-secondary/10 dark:bg-secondary-surface px-3 py-1.5">
-								<Trans>Trusted</Trans>
-							</span>
-						</div>
-						<h3 className="mt-5 font-display tracking-[-0.01em] text-[clamp(1.625rem,2.6vw,2.375rem)] leading-[1.1]">
-							<Trans>Controls built into the data model.</Trans>
-						</h3>
-						<p className="mt-4 max-w-[40ch] text-[15px] leading-relaxed text-muted-foreground">
-							<Trans>
-								Use append-only ledgers, granular permissions and complete record
-								history to support regulated workflows.
-							</Trans>
-						</p>
-						<div className="mt-7 flex flex-wrap gap-2">
-							{compliance.map((c, i) => (
-								<span
-									key={i}
-									className="border border-border px-3.5 py-2.5 font-mono text-[11px] uppercase leading-none text-muted-foreground"
-								>
-									{i18n._(c)}
-								</span>
-							))}
-						</div>
-					</div>
-
+				<Reveal className="border border-border">
 					<div className="bg-muted p-10 sm:p-11">
 						<div className="font-mono text-[10px] uppercase leading-none tracking-wide text-secondary">
 							<span className="inline-block bg-secondary/10 dark:bg-secondary-surface px-3 py-1.5">
@@ -1280,10 +1068,8 @@ export default function Route() {
 			<Testimonial />
 			<HappyPath />		
 			<FeatureRows />
-			<StatusQuo />
 			<SelfHost />
 			<OneModel />
-			<Industries />
 			<TrustOpen />
 			<Agents />
 			<Integrations />

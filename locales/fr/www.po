@@ -28,15 +28,7 @@ msgstr "{count} entités · {currencies} devises · un seul grand livre"
 msgid "/user/month"
 msgstr "/utilisateur/mois"
 
-#: app/routes/_index.tsx:67
-msgid "18-month implementation"
-msgstr "Implémentation en 18 mois"
-
-#: app/routes/_index.tsx:249
-msgid "21 CFR Part 11"
-msgstr "21 CFR Part 11"
-
-#: app/routes/_index.tsx:1248
+#: app/routes/_index.tsx:1036
 msgid "30-day trial · No sales call"
 msgstr "Essai gratuit 30 jours · Aucun appel commercial"
 
@@ -44,11 +36,11 @@ msgstr "Essai gratuit 30 jours · Aucun appel commercial"
 msgid "5 user minimum"
 msgstr "Minimum 5 utilisateurs"
 
-#: app/routes/_index.tsx:175
+#: app/routes/_index.tsx:133
 msgid "Accounting"
 msgstr "Comptabilité"
 
-#: app/routes/_index.tsx:102
+#: app/routes/_index.tsx:60
 msgid "Accrual accounting"
 msgstr "Comptabilité d'exercice"
 
@@ -60,17 +52,9 @@ msgstr "Acme Inc"
 msgid "Acme, Inc."
 msgstr "Acme, Inc."
 
-#: app/routes/_index.tsx:56
-msgid "Actual costs arrive after the job"
-msgstr "Les coûts réels arrivent après le travail"
-
-#: app/routes/_index.tsx:129
+#: app/routes/_index.tsx:87
 msgid "Adaptive MES UI"
 msgstr "Interface MES adaptative"
-
-#: app/routes/_index.tsx:226
-msgid "Aerospace"
-msgstr "Aérospatiale"
 
 #: app/routes/about.tsx:27
 msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
@@ -88,17 +72,17 @@ msgstr "Toutes les marques commerciales, logos ou autres éléments de marque de
 msgid "Analytics"
 msgstr "Analytique"
 
-#: app/routes/_index.tsx:1277
+#: app/routes/_index.tsx:1065
 #: app/routes/self-hosted.tsx:809
 msgid "And some of the world's most innovative manufacturers"
 msgstr "Et certains des fabricants les plus innovants du monde"
 
-#: app/routes/_index.tsx:523
-#: app/routes/_index.tsx:530
+#: app/routes/_index.tsx:451
+#: app/routes/_index.tsx:458
 msgid "Animated assembly instructions"
 msgstr "Instructions d'assemblage animées"
 
-#: app/routes/_index.tsx:908
+#: app/routes/_index.tsx:766
 msgid "API Docs"
 msgstr "Documentation API"
 
@@ -106,43 +90,23 @@ msgstr "Documentation API"
 msgid "API-first, realtime subscriptions, forward/finite scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
 msgstr "API-first, abonnements en temps réel, planification avant/finie, et 1 000 petits détails qui rendent l'utilisation d'un ERP digne de l'effort."
 
-#: app/routes/_index.tsx:247
-msgid "AS9100"
-msgstr "AS9100"
-
-#: app/routes/_index.tsx:226
-msgid "AS9100, FAI, full genealogy"
-msgstr "AS9100, FAI, généalogie complète"
-
-#: app/routes/_index.tsx:84
-msgid "Audit history stored with each record"
-msgstr "Historique d'audit stocké avec chaque enregistrement"
-
 #: app/routes/pricing.tsx:81
 msgid "Audit logs, enforced 2FA and backup/restore"
 msgstr "Journaux d'audit, authentification à deux facteurs appliquée et sauvegarde/restauration"
-
-#: app/routes/_index.tsx:59
-msgid "Audit records must be reconstructed"
-msgstr "Les enregistrements d'audit doivent être reconstruits"
 
 #: app/components/hero.tsx:222
 msgid "Auto-generated API Documentation"
 msgstr "Documentation API générée automatiquement"
 
-#: app/routes/_index.tsx:227
-msgid "Automotive"
-msgstr "Automobile"
-
 #: app/components/wizard-form.tsx:334
 msgid "Back"
 msgstr "Retour"
 
-#: app/routes/_index.tsx:131
+#: app/routes/_index.tsx:89
 msgid "Barcode / QR tracking"
 msgstr "Suivi par code-barres / QR"
 
-#: app/routes/_index.tsx:555
+#: app/routes/_index.tsx:483
 msgid "Best ERP/MRP/MES system I've ever seen in a 22-year career across defense and automotive. Native Onshape integration means we synchronize all our data without extra PLM connectors — good UX, modern integrations, open source, open API and MCP, cloud or on-prem. We run our whole electric-vehicle engineering and manufacturing business on Carbon, and I couldn't imagine going back to a legacy system."
 msgstr "Meilleur système ERP/MRP/MES que j'ai jamais vu au cours d'une carrière de 22 ans dans la défense et l'automobile. L'intégration native de Onshape signifie que nous synchronisons toutes nos données sans connecteurs PLM supplémentaires — bonne UX, intégrations modernes, open source, open API et MCP, cloud ou on-prem. Nous gérons notre activité entière d'ingénierie et de fabrication de véhicules électriques sur Carbon, et je n'imagine pas revenir à un système hérité."
 
@@ -158,13 +122,9 @@ msgstr "Facturation par utilisateur, mensuel · Essai gratuit de 30 jours · Ann
 msgid "Blog"
 msgstr "Blog"
 
-#: app/routes/_index.tsx:113
+#: app/routes/_index.tsx:71
 msgid "BOM & routing versions"
 msgstr "Versions de nomenclature et routages"
-
-#: app/routes/_index.tsx:69
-msgid "BOMs re-keyed by hand"
-msgstr "Nomenclatures reclassées à la main"
 
 #: app/components/footer.tsx:47
 #: app/routes/brand.tsx:20
@@ -179,17 +139,13 @@ msgstr "Apportez votre propre cloud"
 msgid "Browse every operation"
 msgstr "Parcourir chaque opération"
 
-#: app/routes/_index.tsx:475
+#: app/routes/_index.tsx:403
 msgid "Build hardware at the <0/><1>speed of software</1>"
 msgstr "Construire du matériel à la <0/><1>vitesse du logiciel</1>"
 
 #: app/components/footer.tsx:58
 msgid "Build vs. buy"
 msgstr "Construire ou acheter"
-
-#: app/routes/_index.tsx:951
-msgid "Built for discrete manufacturing."
-msgstr "Conçu pour la fabrication discrète."
 
 #: app/routes/pricing.tsx:62
 msgid "Business"
@@ -207,11 +163,7 @@ msgstr "Mais même si nous travaillons avec nos clients pour devenir le meilleur
 msgid "Buy the Source Code"
 msgstr "Acheter le code source"
 
-#: app/routes/_index.tsx:76
-msgid "Carbon"
-msgstr "Carbon"
-
-#: app/routes/_index.tsx:878
+#: app/routes/_index.tsx:736
 msgid "Carbon API"
 msgstr "Carbon API"
 
@@ -219,19 +171,19 @@ msgstr "Carbon API"
 msgid "Carbon combines ERP, MES, and QMS into a single, unified system."
 msgstr "Carbon combine ERP, MES et QMS dans un seul système unifié."
 
-#: app/routes/_index.tsx:483
+#: app/routes/_index.tsx:411
 msgid "Carbon combines ERP, MRP, MES and QMS. Plan materials, run the shop floor, manage quality and track actual costs in one system."
 msgstr "Carbon combine ERP, MRP, MES et QMS. Planifiez les matériaux, gérez l'atelier, gérez la qualité et suivez les coûts réels dans un seul système."
 
-#: app/routes/_index.tsx:1071
+#: app/routes/_index.tsx:859
 msgid "Carbon's source is public. Use the prompt below to review it against your requirements."
 msgstr "Le code source de Carbon est public. Utilisez l'invite ci-dessous pour l'examiner par rapport à vos exigences."
 
-#: app/routes/_index.tsx:336
+#: app/routes/_index.tsx:264
 msgid "Certificates generated from live data"
 msgstr "Certificats générés à partir de données en direct"
 
-#: app/routes/_index.tsx:146
+#: app/routes/_index.tsx:104
 msgid "Certificates of conformance"
 msgstr "Certificats de conformité"
 
@@ -251,13 +203,9 @@ msgstr "Choisissez votre base de données préférée"
 msgid "Classified destructive, so a client can gate or exclude it"
 msgstr "Classée comme destructive, afin qu'un client puisse la bloquer ou l'exclure"
 
-#: app/routes/_index.tsx:214
+#: app/routes/_index.tsx:172
 msgid "Claude, ChatGPT, Cursor and Codex load only the operations a task needs, so the model's context stays small."
 msgstr "Claude, ChatGPT, Cursor et Codex ne chargent que les opérations dont une tâche a besoin, le contexte du modèle reste donc petit."
-
-#: app/routes/_index.tsx:237
-msgid "cleanroom ops, yield analytics"
-msgstr "opérations de salle blanche, analytique de rendement"
 
 #: app/components/zoomable-image.tsx:127
 msgid "Close"
@@ -312,17 +260,9 @@ msgstr "Contrôle complet de votre infrastructure"
 msgid "Configurator"
 msgstr "Configurateur"
 
-#: app/routes/_index.tsx:955
-msgid "Configure Carbon for one-off builds, rate production and regulated work without changing the underlying data model."
-msgstr "Configurer Carbon pour les constructions ponctuelles, la production au tarif et les travaux réglementés sans modifier le modèle de données sous-jacent."
-
-#: app/routes/_index.tsx:298
+#: app/routes/_index.tsx:226
 msgid "Configure to order"
 msgstr "Configurer à la commande"
-
-#: app/routes/_index.tsx:241
-msgid "configure to order, aftermarket"
-msgstr "configuration à la commande, marché de l'après-vente"
 
 #: app/components/api-console.tsx:98
 msgid "Conflicts with existing jobs detected"
@@ -332,7 +272,7 @@ msgstr "Conflits avec les tâches existantes détectés"
 msgid "Connect Claude Code, Cursor, Codex or ChatGPT"
 msgstr "Connecter Claude Code, Cursor, Codex ou ChatGPT"
 
-#: app/routes/_index.tsx:1172
+#: app/routes/_index.tsx:960
 msgid "Connect the tools your teams already use."
 msgstr "Connectez les outils que vos équipes utilisent déjà."
 
@@ -344,14 +284,6 @@ msgstr "Connectez vos robots et machines à vos systèmes de production"
 #: app/components/entity-tree.tsx:182
 msgid "Consolidates {count} entities in {0}"
 msgstr "Consolide {count} entités en {0}"
-
-#: app/routes/_index.tsx:68
-msgid "Consultants required for changes"
-msgstr "Consultants requis pour les modifications"
-
-#: app/routes/_index.tsx:231
-msgid "Consumer electronics"
-msgstr "Électronique grand public"
 
 #: app/components/footer.tsx:49
 #: app/routes/contact.tsx:155
@@ -371,20 +303,16 @@ msgstr "Contactez les ventes"
 msgid "Contact us"
 msgstr "Nous contacter"
 
-#: app/routes/_index.tsx:1099
+#: app/routes/_index.tsx:887
 msgid "Control the system of record"
 msgstr "Contrôler le système d'enregistrement"
 
-#: app/routes/_index.tsx:1041
-msgid "Controls built into the data model."
-msgstr "Contrôles intégrés au modèle de données."
-
 #: app/components/logo-menu.tsx:66
-#: app/routes/_index.tsx:1016
+#: app/routes/_index.tsx:832
 msgid "Copied"
 msgstr "Copié"
 
-#: app/routes/_index.tsx:1016
+#: app/routes/_index.tsx:832
 msgid "Copy"
 msgstr "Copier"
 
@@ -408,7 +336,7 @@ msgstr "Modules de fabrication de base sous AGPL-3.0"
 msgid "Create a branded ordering experience that drives production"
 msgstr "Créer une expérience de commande personnalisée qui stimule la production"
 
-#: app/routes/_index.tsx:1254
+#: app/routes/_index.tsx:1042
 msgid "Create a workspace, import your data and connect your integrations. Self-host the open-source core or use the managed cloud."
 msgstr "Créez un espace de travail, importez vos données et connectez vos intégrations. Auto-hébergez le noyau open-source ou utilisez le cloud géré."
 
@@ -448,7 +376,7 @@ msgstr "Tableau de bord"
 msgid "Database"
 msgstr "Base de données"
 
-#: app/routes/_index.tsx:198
+#: app/routes/_index.tsx:156
 msgid "Days to go live"
 msgstr "Jours avant mise en production"
 
@@ -464,15 +392,7 @@ msgstr "Déploiement dédié pour les environnements réglementés"
 msgid "Dedicated Support"
 msgstr "Support Dédié"
 
-#: app/routes/_index.tsx:234
-msgid "deep assemblies, configured units"
-msgstr "assemblages profonds, unités configurées"
-
-#: app/routes/_index.tsx:225
-msgid "Defense"
-msgstr "Défense"
-
-#: app/routes/_index.tsx:300
+#: app/routes/_index.tsx:228
 msgid "Define product parameters once. Carbon generates the BOM, routing and quoted price for each valid configuration."
 msgstr "Définissez les paramètres du produit une fois. Carbon génère la nomenclature, la gamme et le prix devis pour chaque configuration valide."
 
@@ -480,7 +400,7 @@ msgstr "Définissez les paramètres du produit une fois. Carbon génère la nome
 msgid "Delete the draft job J-000415."
 msgstr "Supprimer le brouillon du travail J-000415."
 
-#: app/routes/_index.tsx:111
+#: app/routes/_index.tsx:69
 msgid "Demand & forecast"
 msgstr "Demande et prévisions"
 
@@ -488,15 +408,11 @@ msgstr "Demande et prévisions"
 msgid "Demand forecasting"
 msgstr "Prévisions de la demande"
 
-#: app/routes/_index.tsx:468
+#: app/routes/_index.tsx:396
 msgid "Deploy in our cloud, your cloud or on-prem"
 msgstr "Déployez dans notre cloud, votre cloud ou sur site"
 
-#: app/routes/_index.tsx:81
-msgid "Deploy in weeks"
-msgstr "Déployer en semaines"
-
-#: app/routes/_index.tsx:1095
+#: app/routes/_index.tsx:883
 msgid "Deploy in your VPC, on-prem or fully air-gapped. Keep CUI inside infrastructure you control while supporting CMMC and ITAR requirements."
 msgstr "Déployez dans votre VPC, sur site ou complètement isolé. Gardez CUI à l'intérieur de l'infrastructure que vous contrôlez tout en prenant en charge les exigences CMMC et ITAR."
 
@@ -508,10 +424,6 @@ msgstr "Déployez avec Docker sur vos serveurs ou dans votre VPC"
 msgid "Deployment"
 msgstr "Déploiement"
 
-#: app/routes/_index.tsx:66
-msgid "Designed around accounting"
-msgstr "Conçu autour de la comptabilité"
-
 #: app/components/header.tsx:40
 msgid "Developer guides and API reference"
 msgstr "Guides de développeur et référence API"
@@ -522,11 +434,11 @@ msgstr "Guides de développeur et référence API"
 msgid "Developers"
 msgstr "Développeurs"
 
-#: app/routes/_index.tsx:127
+#: app/routes/_index.tsx:85
 msgid "Digital job travelers"
 msgstr "Trajets numériques de travail"
 
-#: app/routes/_index.tsx:318
+#: app/routes/_index.tsx:246
 msgid "Digital travelers with work instructions"
 msgstr "Trajets numériques avec instructions de travail"
 
@@ -534,7 +446,7 @@ msgstr "Trajets numériques avec instructions de travail"
 msgid "Discord"
 msgstr "Discord"
 
-#: app/routes/_index.tsx:160
+#: app/routes/_index.tsx:118
 msgid "Dispatch notifications"
 msgstr "Notifications de répartition"
 
@@ -563,19 +475,15 @@ msgstr "Adresse e-mail"
 msgid "Email and Slack notifications"
 msgstr "Notifications email et Slack"
 
-#: app/routes/_index.tsx:235
-msgid "Energy & grid"
-msgstr "Énergie et réseau"
-
-#: app/routes/_index.tsx:166
+#: app/routes/_index.tsx:124
 msgid "Engineering"
 msgstr "Ingénierie"
 
-#: app/routes/_index.tsx:118
+#: app/routes/_index.tsx:76
 msgid "Engineering change orders"
 msgstr "Ordres de modification d'ingénierie"
 
-#: app/routes/_index.tsx:757
+#: app/routes/_index.tsx:615
 msgid "Engineering, planning, production, quality and accounting update the same data. No re-keying or cross-system reconciliation."
 msgstr "L'ingénierie, la planification, la production, la qualité et la comptabilité mettent à jour les mêmes données. Pas de resaisie ni de rapprochement intersite."
 
@@ -595,31 +503,27 @@ msgstr "Édition Entreprise avec un déploiement conçu pour votre limite de sé
 msgid "Enterprise. Influence product roadmap with priority feature requests"
 msgstr "Entreprise. Influencez la feuille de route produit avec des demandes de fonctionnalités prioritaires"
 
-#: app/routes/_index.tsx:182
+#: app/routes/_index.tsx:140
 msgid "ERP · MRP · MES · QMS · CMMS"
 msgstr "ERP · MRP · MES · QMS · CMMS"
 
-#: app/routes/_index.tsx:1100
+#: app/routes/_index.tsx:888
 msgid "ERP, MRP, MES and QMS share a Postgres database with row-level security. You control its network, encryption, backups and retention."
 msgstr "ERP, MRP, MES et QMS partagent une base de données Postgres avec sécurité au niveau des lignes. Vous contrôlez son réseau, son chiffrement, ses sauvegardes et sa rétention."
 
-#: app/routes/_index.tsx:80
-msgid "ERP, MRP, MES and QMS share one schema"
-msgstr "ERP, MRP, MES et QMS partagent un schéma"
-
-#: app/routes/_index.tsx:1068
+#: app/routes/_index.tsx:856
 msgid "Evaluate the source before you deploy"
 msgstr "Évaluez la source avant de déployer"
 
-#: app/routes/_index.tsx:206
+#: app/routes/_index.tsx:164
 msgid "Every operation is an endpoint"
 msgstr "Chaque opération est un point de terminaison"
 
-#: app/routes/_index.tsx:194
+#: app/routes/_index.tsx:152
 msgid "Every unit, every op"
 msgstr "Chaque unité, chaque opération"
 
-#: app/routes/_index.tsx:124
+#: app/routes/_index.tsx:82
 msgid "Execution"
 msgstr "Exécution"
 
@@ -627,7 +531,7 @@ msgstr "Exécution"
 msgid "Expand image"
 msgstr "Agrandir l'image"
 
-#: app/routes/_index.tsx:1131
+#: app/routes/_index.tsx:919
 msgid "Explore Self-Hosting"
 msgstr "Explorer l'auto-hébergement"
 
@@ -635,19 +539,19 @@ msgstr "Explorer l'auto-hébergement"
 msgid "Feature Prioritization"
 msgstr "Priorisation des fonctionnalités"
 
-#: app/routes/_index.tsx:114
+#: app/routes/_index.tsx:72
 msgid "Finite capacity model"
 msgstr "Modèle de capacité finie"
 
-#: app/routes/_index.tsx:320
+#: app/routes/_index.tsx:248
 msgid "Finite capacity scheduling that reacts"
 msgstr "Planification de capacité finie qui réagit"
 
-#: app/routes/_index.tsx:141
+#: app/routes/_index.tsx:99
 msgid "First article inspection"
 msgstr "Inspection du premier article"
 
-#: app/routes/_index.tsx:683
+#: app/routes/_index.tsx:541
 msgid "Five systems, one database."
 msgstr "Cinq systèmes, une base de données."
 
@@ -655,7 +559,7 @@ msgstr "Cinq systèmes, une base de données."
 msgid "Forward-deployed engineer"
 msgstr "Ingénieur déployé à l'avance"
 
-#: app/routes/_index.tsx:754
+#: app/routes/_index.tsx:612
 msgid "From CAD to cash."
 msgstr ""
 
@@ -663,7 +567,7 @@ msgstr ""
 msgid "Full Name"
 msgstr "Nom complet"
 
-#: app/routes/_index.tsx:143
+#: app/routes/_index.tsx:101
 msgid "Gauge calibration"
 msgstr "Étalonnage des jauges"
 
@@ -671,11 +575,11 @@ msgstr "Étalonnage des jauges"
 msgid "General ledger, financial reports, fixed assets and multi-currency"
 msgstr "Grand livre, rapports financiers, immobilisations et multi-devises"
 
-#: app/routes/_index.tsx:220
+#: app/routes/_index.tsx:178
 msgid "Generate a typed client for TypeScript, Python, Go, Ruby, C# or PHP from the public spec. Input schemas come from the validators the server runs."
 msgstr "Générez un client typé pour TypeScript, Python, Go, Ruby, C# ou PHP à partir de la spécification publique. Les schémas d'entrée proviennent des validateurs que le serveur exécute."
 
-#: app/routes/_index.tsx:299
+#: app/routes/_index.tsx:227
 msgid "Generate each configuration from rules."
 msgstr "Générez chaque configuration à partir des règles."
 
@@ -695,7 +599,7 @@ msgstr "GitHub"
 msgid "Global Search"
 msgstr "Recherche Globale"
 
-#: app/routes/_index.tsx:1275
+#: app/routes/_index.tsx:1063
 #: app/routes/self-hosted.tsx:807
 msgid "Hard tech unicorns build on Carbon."
 msgstr "Les licornes des technologies difficiles construisent sur Carbon."
@@ -716,25 +620,21 @@ msgstr "Implémentation et migration des données"
 msgid "Incident detected"
 msgstr "Incident détecté"
 
-#: app/routes/_index.tsx:240
-msgid "Industrial equipment"
-msgstr "Équipement industriel"
-
 #: app/components/api-console.tsx:45
 #: app/components/api-console.tsx:68
 #: app/components/api-console.tsx:118
 msgid "Input validated against the operation schema"
 msgstr "Entrée validée par rapport au schéma d'opération"
 
-#: app/routes/_index.tsx:1105
+#: app/routes/_index.tsx:893
 msgid "Inspect the application on GitHub, run your own security review and extend the AGPL-3.0 Community edition for your process."
 msgstr "Inspectez l'application sur GitHub, exécutez votre propre examen de sécurité et étendez l'édition Communautaire AGPL-3.0 pour votre processus."
 
-#: app/routes/_index.tsx:139
+#: app/routes/_index.tsx:97
 msgid "inspection, compliance and genealogy"
 msgstr "inspection, conformité et généalogie"
 
-#: app/routes/_index.tsx:881
+#: app/routes/_index.tsx:739
 msgid "Integrate every manufacturing workflow."
 msgstr "Intégrez chaque flux de travail de fabrication."
 
@@ -746,43 +646,27 @@ msgstr "Intégrations"
 msgid "Intercompany eliminations for {parent}"
 msgstr "Éliminations interentreprises pour {parent}"
 
-#: app/routes/_index.tsx:93
+#: app/routes/_index.tsx:51
 msgid "Inventory & Costing"
 msgstr "Inventaire et évaluation des coûts"
 
-#: app/routes/_index.tsx:99
+#: app/routes/_index.tsx:57
 msgid "Inventory & locations"
 msgstr "Inventaire et emplacements"
 
-#: app/routes/_index.tsx:174
+#: app/routes/_index.tsx:132
 msgid "Invoicing"
 msgstr "Facturation"
 
-#: app/routes/_index.tsx:101
+#: app/routes/_index.tsx:59
 msgid "Invoicing & accounting sync"
 msgstr "Synchronisation facturation et comptabilité"
-
-#: app/routes/_index.tsx:248
-msgid "ISO 13485"
-msgstr "ISO 13485"
-
-#: app/routes/_index.tsx:228
-msgid "ISO 13485, DHR, e-signatures"
-msgstr "ISO 13485, DHR, signatures électroniques"
-
-#: app/routes/_index.tsx:246
-msgid "ITAR-ready deployment"
-msgstr "Déploiement ITAR-ready"
-
-#: app/routes/_index.tsx:225
-msgid "ITAR-ready, serialized, audit-first"
-msgstr "Prêt pour ITAR, sérialisé, audit en priorité"
 
 #: app/components/api-console.tsx:119
 msgid "Item ledger entry posted"
 msgstr "Entrée du registre des articles affichée"
 
-#: app/routes/_index.tsx:100
+#: app/routes/_index.tsx:58
 msgid "Job costing"
 msgstr "Évaluation des coûts du travail"
 
@@ -818,7 +702,7 @@ msgstr "Rejoignez notre communauté Discord"
 msgid "Kanban Schedule"
 msgstr "Planification Kanban"
 
-#: app/routes/_index.tsx:1094
+#: app/routes/_index.tsx:882
 msgid "Keep regulated data in your boundary"
 msgstr "Conservez les données réglementées dans votre limite"
 
@@ -846,11 +730,11 @@ msgstr "Portée de la clé vérifiée : ventes · créer"
 msgid "Key scope checked: sales · view"
 msgstr "Portée de la clé vérifiée : ventes · afficher"
 
-#: app/routes/_index.tsx:130
+#: app/routes/_index.tsx:88
 msgid "Labor, scrap & rework"
 msgstr "Main-d’œuvre, rebut et retouche"
 
-#: app/routes/_index.tsx:115
+#: app/routes/_index.tsx:73
 msgid "Lead times & buffers"
 msgstr "Délais d'approvisionnement et tampons"
 
@@ -865,10 +749,6 @@ msgstr "Centre d'apprentissage"
 #: app/components/wizard-form.tsx:137
 msgid "Least expensive. Basic onboarding and email support"
 msgstr "Le moins cher. Intégration de base et support par email"
-
-#: app/routes/_index.tsx:64
-msgid "Legacy ERP"
-msgstr "ERP hérité"
 
 #: app/components/footer.tsx:71
 msgid "Legal"
@@ -890,7 +770,7 @@ msgstr "Sous licence par utilisateur, mensuel · Community Edition gratuit sous 
 msgid "Limited Support"
 msgstr "Support Limité"
 
-#: app/routes/_index.tsx:332
+#: app/routes/_index.tsx:260
 msgid "Link first articles, nonconformances, CAPAs and calibrations to production. Open any serial number to see its materials, operators, measurements and deviations."
 msgstr "Liez les premiers articles, les non-conformités, les CAPAs et les étalonnages à la production. Ouvrez n'importe quel numéro de série pour voir ses matériaux, ses opérateurs, ses mesures et ses écarts."
 
@@ -898,19 +778,15 @@ msgstr "Liez les premiers articles, les non-conformités, les CAPAs et les étal
 msgid "Lists come back with results and a total count for paging"
 msgstr "Les listes reviennent avec les résultats et un décompte total pour la pagination"
 
-#: app/routes/_index.tsx:132
+#: app/routes/_index.tsx:90
 msgid "Live schedule board"
 msgstr "Tableau d'horaires en direct"
-
-#: app/routes/_index.tsx:235
-msgid "long lead, project-based build"
-msgstr "long délai, construction basée sur projet"
 
 #: app/components/wizard-form.tsx:88
 msgid "Low monthly payments"
 msgstr "Paiements mensuels peu élevés"
 
-#: app/routes/_index.tsx:152
+#: app/routes/_index.tsx:110
 msgid "Maintenance"
 msgstr "Maintenance"
 
@@ -918,7 +794,7 @@ msgstr "Maintenance"
 msgid "Make 90 solar-array brackets, due October 24."
 msgstr "Fabriquez 90 supports de panneaux solaires, à remettre le 24 octobre."
 
-#: app/routes/_index.tsx:347
+#: app/routes/_index.tsx:275
 msgid "Manage every site on one ledger."
 msgstr "Gérez chaque site sur un seul registre."
 
@@ -934,33 +810,25 @@ msgstr "Hébergement géré"
 msgid "Managed updates and backups"
 msgstr "Mises à jour et sauvegardes gérées"
 
-#: app/routes/_index.tsx:314
+#: app/routes/_index.tsx:242
 msgid "Manufacturing execution"
 msgstr "Exécution de la fabrication"
-
-#: app/routes/_index.tsx:79
-msgid "Manufacturing workflows with GAAP accounting"
-msgstr "Flux de travail de fabrication avec comptabilité GAAP"
 
 #: app/components/api-console.tsx:71
 msgid "Material quantities and costs recalculated"
 msgstr "Les quantités et les coûts des matériaux sont recalculés"
 
-#: app/routes/_index.tsx:109
+#: app/routes/_index.tsx:67
 msgid "materials, capacity and schedules"
 msgstr "matériaux, capacité et horaires"
 
-#: app/routes/_index.tsx:898
+#: app/routes/_index.tsx:756
 msgid "MCP Docs"
 msgstr "Documentation MCP"
 
 #: app/components/logo-menu.tsx:71
 msgid "Media Kit"
 msgstr "Kit média"
-
-#: app/routes/_index.tsx:228
-msgid "Medical devices"
-msgstr "Dispositifs médicaux"
 
 #: app/components/hero.tsx:202
 msgid "MES 3D Viewer"
@@ -978,19 +846,19 @@ msgstr "Instructions de travail MES"
 msgid "Message"
 msgstr "Message"
 
-#: app/routes/_index.tsx:346
+#: app/routes/_index.tsx:274
 msgid "Multi-entity · Multi-location"
 msgstr "Multi-entité · Multi-site"
 
-#: app/routes/_index.tsx:350
+#: app/routes/_index.tsx:278
 msgid "Multi-entity accounting with intercompany transactions"
 msgstr "Comptabilité multi-entité avec transactions interentreprises"
 
-#: app/routes/_index.tsx:354
+#: app/routes/_index.tsx:282
 msgid "Multi-entity ledger / multi-site planning"
 msgstr "Registre multi-entité / planification multi-site"
 
-#: app/routes/_index.tsx:352
+#: app/routes/_index.tsx:280
 msgid "Multi-location planning with inter-site transfers"
 msgstr "Planification multi-site avec transferts inter-sites"
 
@@ -1002,7 +870,7 @@ msgstr "Multi-locataire"
 msgid "Name"
 msgstr "Nom"
 
-#: app/routes/_index.tsx:335
+#: app/routes/_index.tsx:263
 msgid "NCR to CAPA workflow with sign-off"
 msgstr "Flux de travail NCR à CAPA avec approbation"
 
@@ -1014,15 +882,11 @@ msgstr "Besoin d'APIs, MCP, de contrôles avancés ou d'un support de déploieme
 msgid "Next quote number drawn from the sequence"
 msgstr "Prochain numéro de devis tiré de la séquence"
 
-#: app/routes/_index.tsx:58
-msgid "No serial-level history"
-msgstr "Pas d'historique au niveau du numéro de série"
-
-#: app/routes/_index.tsx:187
+#: app/routes/_index.tsx:145
 msgid "No sync jobs, no drift"
 msgstr "Pas de tâches de synchronisation, pas de divergence"
 
-#: app/routes/_index.tsx:142
+#: app/routes/_index.tsx:100
 msgid "Non-conformance & CAPA"
 msgstr "Non-conformité et CAPA"
 
@@ -1038,19 +902,15 @@ msgstr "Quantité disponible mise à jour pour l'unité de stockage"
 msgid "On-prem, private cloud or air-gapped deployment"
 msgstr "Déploiement sur site, cloud privé ou isolé"
 
-#: app/routes/_index.tsx:212
+#: app/routes/_index.tsx:170
 msgid "One server for every AI client"
 msgstr "Un serveur pour chaque client IA"
-
-#: app/routes/_index.tsx:236
-msgid "one-off, lot-of-one traceability"
-msgstr "traçabilité unique, lot de un"
 
 #: app/components/wizard-form.tsx:83
 msgid "One-time purchase with full ownership"
 msgstr "Achat unique avec propriété complète"
 
-#: app/routes/_index.tsx:1064
+#: app/routes/_index.tsx:852
 #: app/routes/pricing.tsx:38
 msgid "Open source"
 msgstr "Open source"
@@ -1067,11 +927,11 @@ msgstr "Opérations"
 msgid "Operations placed on work center capacity"
 msgstr "Opérations placées sur la capacité du centre de travail"
 
-#: app/routes/_index.tsx:128
+#: app/routes/_index.tsx:86
 msgid "Operator terminal"
 msgstr "Terminal opérateur"
 
-#: app/routes/_index.tsx:125
+#: app/routes/_index.tsx:83
 msgid "operators, jobs and work centers"
 msgstr "opérateurs, tâches et centres de travail"
 
@@ -1079,11 +939,11 @@ msgstr "opérateurs, tâches et centres de travail"
 msgid "Opportunity opened for the customer"
 msgstr "Opportunité ouverte pour le client"
 
-#: app/routes/_index.tsx:1262
+#: app/routes/_index.tsx:1050
 msgid "Or self-host the open source core"
 msgstr "Ou auto-héberger le noyau open source"
 
-#: app/routes/_index.tsx:94
+#: app/routes/_index.tsx:52
 msgid "orders, inventory and actual costs"
 msgstr "commandes, inventaire et coûts réels"
 
@@ -1091,11 +951,11 @@ msgstr "commandes, inventaire et coûts réels"
 msgid "Ownership Model"
 msgstr "Modèle de propriété"
 
-#: app/routes/_index.tsx:306
+#: app/routes/_index.tsx:234
 msgid "Part configurator / BOM tree"
 msgstr "Configurateur de pièce / arborescence nomenclature"
 
-#: app/routes/_index.tsx:117
+#: app/routes/_index.tsx:75
 msgid "Part supersession"
 msgstr "Remplacement de pièce"
 
@@ -1103,28 +963,24 @@ msgstr "Remplacement de pièce"
 msgid "Payment and shipping terms resolved from the customer"
 msgstr "Conditions de paiement et d'expédition résolues auprès du client"
 
-#: app/routes/_index.tsx:351
+#: app/routes/_index.tsx:279
 msgid "Per-entity currency, COA and tax, consolidated books"
 msgstr "Devise par entité, plan comptable et impôt, livres consolidés"
 
-#: app/routes/_index.tsx:108
-#: app/routes/_index.tsx:167
+#: app/routes/_index.tsx:66
+#: app/routes/_index.tsx:125
 msgid "Planning"
 msgstr "Planification"
-
-#: app/routes/_index.tsx:54
-msgid "Plans depend on manual inputs"
-msgstr "Les plans dépendent des entrées manuelles"
 
 #: app/components/wizard-form.tsx:303
 msgid "Please provide your contact details to complete the process"
 msgstr "Veuillez fournir vos coordonnées pour terminer le processus"
 
-#: app/routes/_index.tsx:153
+#: app/routes/_index.tsx:111
 msgid "preventive and reactive maintenance"
 msgstr "maintenance préventive et corrective"
 
-#: app/routes/_index.tsx:155
+#: app/routes/_index.tsx:113
 msgid "Preventive maintenance schedules"
 msgstr "Horaires de maintenance préventive"
 
@@ -1134,10 +990,6 @@ msgstr "Horaires de maintenance préventive"
 msgid "Pricing"
 msgstr "Tarification"
 
-#: app/routes/_index.tsx:70
-msgid "Printed travelers become stale"
-msgstr "Les feuilles de route imprimées deviennent obsolètes"
-
 #: app/components/footer.tsx:74
 msgid "Privacy"
 msgstr "Confidentialité"
@@ -1146,41 +998,37 @@ msgstr "Confidentialité"
 msgid "Product"
 msgstr "Produit"
 
-#: app/routes/_index.tsx:170
+#: app/routes/_index.tsx:128
 msgid "Production"
 msgstr "Production"
 
-#: app/routes/_index.tsx:168
+#: app/routes/_index.tsx:126
 msgid "Purchasing"
 msgstr "Achat"
 
-#: app/routes/_index.tsx:98
+#: app/routes/_index.tsx:56
 msgid "Purchasing & receipts"
 msgstr "Achat et reçus"
 
-#: app/routes/_index.tsx:319
+#: app/routes/_index.tsx:247
 msgid "QR and barcode tracking on every unit"
 msgstr "Suivi QR et code-barres sur chaque unité"
 
-#: app/routes/_index.tsx:138
-#: app/routes/_index.tsx:172
-#: app/routes/_index.tsx:330
+#: app/routes/_index.tsx:96
+#: app/routes/_index.tsx:130
+#: app/routes/_index.tsx:258
 msgid "Quality"
 msgstr "Qualité"
 
-#: app/routes/_index.tsx:338
+#: app/routes/_index.tsx:266
 msgid "Quality / traceability record"
 msgstr "Enregistrement qualité / traçabilité"
-
-#: app/routes/_index.tsx:71
-msgid "Quality runs in a separate system"
-msgstr "La qualité s'exécute dans un système séparé"
 
 #: app/components/hero.tsx:242
 msgid "Quote Pricing"
 msgstr "Tarification des devis"
 
-#: app/routes/_index.tsx:96
+#: app/routes/_index.tsx:54
 msgid "Quotes & RFQ pricing"
 msgstr "Devis et tarification des demandes de devis"
 
@@ -1188,11 +1036,7 @@ msgstr "Devis et tarification des demandes de devis"
 msgid "Quotes Table"
 msgstr "Tableau des devis"
 
-#: app/routes/_index.tsx:227
-msgid "rate production, PPAP, takt"
-msgstr "production en série, PPAP, takt"
-
-#: app/routes/_index.tsx:156
+#: app/routes/_index.tsx:114
 msgid "Reactive maintenance dispatches"
 msgstr "Répartitions de maintenance corrective"
 
@@ -1208,10 +1052,6 @@ msgstr "Déploiement réglementé"
 msgid "Regulated Enterprise"
 msgstr "Entreprise réglementée"
 
-#: app/routes/_index.tsx:601
-msgid "Replace spreadsheets and disconnected systems."
-msgstr "Remplacez les feuilles de calcul et les systèmes déconnectés."
-
 #: app/routes/pricing.tsx:69
 msgid "Request a License"
 msgstr "Demander une licence"
@@ -1225,15 +1065,11 @@ msgstr "Ressources"
 msgid "Response"
 msgstr "Réponse"
 
-#: app/routes/_index.tsx:82
-msgid "REST API, webhooks and MCP"
-msgstr "API REST, webhooks et MCP"
-
 #: app/routes/pricing.tsx:74
 msgid "REST API, webhooks, integrations and MCP"
 msgstr "API REST, webhooks, intégrations et MCP"
 
-#: app/routes/_index.tsx:1104
+#: app/routes/_index.tsx:892
 msgid "Review the code before deployment"
 msgstr "Examinez le code avant le déploiement"
 
@@ -1241,19 +1077,11 @@ msgstr "Examinez le code avant le déploiement"
 msgid "Review the source and deploy the core manufacturing modules in your own environment under AGPL-3.0."
 msgstr "Examinez la source et déployez les modules de fabrication de base dans votre propre environnement sous AGPL-3.0."
 
-#: app/routes/_index.tsx:303
+#: app/routes/_index.tsx:231
 msgid "Revision control with effectivity dates"
 msgstr "Contrôle de révision avec dates d'effectivité"
 
-#: app/routes/_index.tsx:57
-msgid "Revisions move through email"
-msgstr "Les révisions se font par courrier électronique"
-
-#: app/routes/_index.tsx:234
-msgid "Robotics"
-msgstr "Robotique"
-
-#: app/routes/_index.tsx:304
+#: app/routes/_index.tsx:232
 msgid "Rolled-up cost at any configuration"
 msgstr "Coût regroupé à toute configuration"
 
@@ -1262,15 +1090,11 @@ msgstr "Coût regroupé à toute configuration"
 msgid "Rolls up to {rootName} in {0}"
 msgstr "Remonte à {rootName} en {0}"
 
-#: app/routes/_index.tsx:251
-msgid "Row-level security"
-msgstr "Sécurité au niveau des lignes"
-
 #: app/components/api-console.tsx:149
 msgid "Rows limited to your company and permissions"
 msgstr "Lignes limitées à votre entreprise et à vos permissions"
 
-#: app/routes/_index.tsx:302
+#: app/routes/_index.tsx:230
 msgid "Rule-based BOM and routing generation"
 msgstr "Génération de nomenclature et routage basés sur des règles"
 
@@ -1278,24 +1102,24 @@ msgstr "Génération de nomenclature et routage basés sur des règles"
 msgid "Rules-based product configurator, BOMs and routings"
 msgstr "Configurateur de produit basé sur des règles, nomenclatures et gammes"
 
-#: app/routes/_index.tsx:1125
+#: app/routes/_index.tsx:913
 msgid "Run Carbon on infrastructure you control."
 msgstr "Exécutez Carbon sur l'infrastructure que vous contrôlez."
 
-#: app/routes/_index.tsx:348
+#: app/routes/_index.tsx:276
 msgid "Run one facility or multiple legal entities and locations. Carbon handles entity-specific currencies, charts of accounts and taxes with consolidated reporting."
 msgstr "Gérez une ou plusieurs installations et entités juridiques et emplacements. Carbon gère les devises spécifiques à l'entité, les plans comptables et les taxes avec des rapports consolidés."
 
-#: app/routes/_index.tsx:315
+#: app/routes/_index.tsx:243
 msgid "Run production from live data."
 msgstr "Gérez la production à partir de données en direct."
 
 #: app/components/footer.tsx:50
-#: app/routes/_index.tsx:169
+#: app/routes/_index.tsx:127
 msgid "Sales"
 msgstr "Ventes"
 
-#: app/routes/_index.tsx:97
+#: app/routes/_index.tsx:55
 msgid "Sales orders"
 msgstr "Commandes de vente"
 
@@ -1318,7 +1142,7 @@ msgstr "Sélectionnez votre solution d'hébergement préférée"
 #: app/components/footer.tsx:64
 #: app/components/header.tsx:92
 #: app/components/header.tsx:217
-#: app/routes/_index.tsx:1121
+#: app/routes/_index.tsx:909
 #: app/routes/pricing.tsx:215
 msgid "Self-hosted"
 msgstr "Auto-hébergé"
@@ -1343,27 +1167,19 @@ msgstr "Libre-service"
 msgid "Self-service onboarding"
 msgstr "Intégration en libre-service"
 
-#: app/routes/_index.tsx:237
-msgid "Semiconductor"
-msgstr "Semi-conducteur"
-
-#: app/routes/_index.tsx:208
+#: app/routes/_index.tsx:166
 msgid "Send a scoped API key as a bearer token. A single result is the response body; a list comes back with results and a total count."
 msgstr "Envoyez une clé API limitée en tant que jeton de porteur. Un seul résultat est le corps de la réponse ; une liste revient avec les résultats et un décompte total."
 
-#: app/routes/_index.tsx:144
+#: app/routes/_index.tsx:102
 msgid "Serial & lot genealogy"
 msgstr "Généalogie de série et lot"
 
-#: app/routes/_index.tsx:334
+#: app/routes/_index.tsx:262
 msgid "Serial and lot genealogy, forwards and back"
 msgstr "Généalogie de série et lot, avant et arrière"
 
-#: app/routes/_index.tsx:83
-msgid "Serial traceability and actual COGS"
-msgstr "Traçabilité en série et COGS réel"
-
-#: app/routes/_index.tsx:193
+#: app/routes/_index.tsx:151
 msgid "Serial-level trace"
 msgstr "Traçabilité au niveau du numéro de série"
 
@@ -1375,23 +1191,23 @@ msgstr "Couche de service"
 msgid "Shared database with isolated data"
 msgstr "Base de données partagée avec données isolées"
 
-#: app/routes/_index.tsx:186
+#: app/routes/_index.tsx:144
 msgid "Shared schema"
 msgstr "Schéma partagé"
 
-#: app/routes/_index.tsx:1251
+#: app/routes/_index.tsx:1039
 msgid "Ship faster than your competitors can quote."
 msgstr "Livrez plus vite que vos concurrents ne peuvent le faire."
 
-#: app/routes/_index.tsx:173
+#: app/routes/_index.tsx:131
 msgid "Shipping"
 msgstr "Expédition"
 
-#: app/routes/_index.tsx:171
+#: app/routes/_index.tsx:129
 msgid "Shop Floor"
 msgstr ""
 
-#: app/routes/_index.tsx:322
+#: app/routes/_index.tsx:250
 msgid "Shop floor / job traveler"
 msgstr "Atelier / trajet du travail"
 
@@ -1403,13 +1219,9 @@ msgstr "Applications d'Atelier"
 msgid "Shop floor console mode"
 msgstr "Mode console d'atelier"
 
-#: app/routes/_index.tsx:116
+#: app/routes/_index.tsx:74
 msgid "Shortage escalation"
 msgstr "Escalade de pénurie"
-
-#: app/routes/_index.tsx:55
-msgid "Shortages surface during production"
-msgstr "Les pénuries apparaissent pendant la production"
 
 #: app/routes/pricing.tsx:194
 msgid "Simple pricing based on your needs."
@@ -1423,14 +1235,6 @@ msgstr "Mono-locataire"
 msgid "Single-tenant deployment in your cloud account"
 msgstr "Déploiement monolocataire dans votre compte cloud"
 
-#: app/routes/_index.tsx:232
-msgid "SMT, contract manufacture, NPI"
-msgstr "SMT, fabrication sous contrat, NPI"
-
-#: app/routes/_index.tsx:250
-msgid "SOC 2 controls"
-msgstr "Contrôles SOC 2"
-
 #: app/components/wizard-form.tsx:87
 msgid "Software as a Service"
 msgstr "Logiciel en tant que service"
@@ -1439,17 +1243,9 @@ msgstr "Logiciel en tant que service"
 msgid "Source Code"
 msgstr "Code Source"
 
-#: app/routes/_index.tsx:236
-msgid "Space"
-msgstr "Espace"
-
-#: app/routes/_index.tsx:159
+#: app/routes/_index.tsx:117
 msgid "Spare parts consumption"
 msgstr "Consommation de pièces de rechange"
-
-#: app/routes/_index.tsx:52
-msgid "Spreadsheets"
-msgstr "Feuilles de calcul"
 
 #: app/routes/pricing.tsx:107
 msgid "SSO/SAML"
@@ -1464,7 +1260,7 @@ msgstr "Étoiler Carbon sur GitHub"
 msgid "Star on GitHub"
 msgstr "Étoiler sur GitHub"
 
-#: app/routes/_index.tsx:380
+#: app/routes/_index.tsx:308
 #: app/routes/pricing.tsx:41
 msgid "Start 30-Day Trial"
 msgstr "Commencer l'essai gratuit de 30 jours"
@@ -1490,11 +1286,11 @@ msgstr "Histoire"
 msgid "Submit"
 msgstr "Soumettre"
 
-#: app/routes/_index.tsx:145
+#: app/routes/_index.tsx:103
 msgid "Supplier scorecards"
 msgstr "Fiches de notation des fournisseurs"
 
-#: app/routes/_index.tsx:112
+#: app/routes/_index.tsx:70
 msgid "Supply planning runs"
 msgstr "Exécutions de planification de l'approvisionnement"
 
@@ -1506,11 +1302,11 @@ msgstr "Niveau de support"
 msgid "System Status:"
 msgstr "Statut du système :"
 
-#: app/routes/_index.tsx:181
+#: app/routes/_index.tsx:139
 msgid "Systems replaced"
 msgstr "Systèmes remplacés"
 
-#: app/routes/_index.tsx:385
+#: app/routes/_index.tsx:313
 #: app/routes/pricing.tsx:69
 #: app/routes/pricing.tsx:90
 msgid "Talk to a Human"
@@ -1520,7 +1316,7 @@ msgstr "Parler à un humain"
 msgid "Technical support from Carbon"
 msgstr "Support technique de Carbon"
 
-#: app/routes/_index.tsx:158
+#: app/routes/_index.tsx:116
 msgid "Technician labor tracking"
 msgstr "Suivi du travail des techniciens"
 
@@ -1536,7 +1332,7 @@ msgstr "Merci de votre intérêt !"
 msgid "Thank you for your message!"
 msgstr "Merci pour votre message !"
 
-#: app/routes/_index.tsx:884
+#: app/routes/_index.tsx:742
 msgid "The Carbon API is the service layer: the same code the app runs when you click a button. Every call validates its input, recalculates what depends on it and enforces your permissions."
 msgstr "L'API Carbon est la couche de service : le même code que l'application exécute lorsque vous cliquez sur un bouton. Chaque appel valide son entrée, recalcule ce qui en dépend et applique vos permissions."
 
@@ -1548,27 +1344,23 @@ msgstr "La nomenclature et la gamme de l'article copiées sur le travail"
 msgid "The Modern Manufacturing Stack"
 msgstr "La Plateforme Moderne de Fabrication"
 
-#: app/routes/_index.tsx:331
+#: app/routes/_index.tsx:259
 msgid "Trace every unit to its source."
 msgstr "Tracez chaque unité à sa source."
 
-#: app/routes/_index.tsx:316
+#: app/routes/_index.tsx:244
 msgid "Track material, labor, scans, scrap and deviations as work happens. Schedules and job costs update from the same records."
 msgstr "Suivez les matériaux, la main-d'œuvre, les analyses, les rebuts et les écarts au fur et à mesure que le travail se fait. Les horaires et les coûts des tâches se mettent à jour à partir des mêmes enregistrements."
-
-#: app/routes/_index.tsx:1037
-msgid "Trusted"
-msgstr "Fiable"
 
 #: app/components/logo-strip.tsx:81
 msgid "Trusted by the world's most innovative"
 msgstr "Approuvé par les plus innovants du monde"
 
-#: app/routes/_index.tsx:218
+#: app/routes/_index.tsx:176
 msgid "Typed clients in your language"
 msgstr "Clients typés dans votre langue"
 
-#: app/routes/_index.tsx:199
+#: app/routes/_index.tsx:157
 msgid "Typical first deployment"
 msgstr "Premier déploiement typique"
 
@@ -1579,10 +1371,6 @@ msgstr "Support fonctionnel illimité"
 #: app/routes/pricing.tsx:54
 msgid "Unlimited records"
 msgstr "Enregistrements illimités"
-
-#: app/routes/_index.tsx:1044
-msgid "Use append-only ledgers, granular permissions and complete record history to support regulated workflows."
-msgstr "Utilisez des registres d'ajout uniquement, des permissions granulaires et un historique complet des enregistrements pour prendre en charge les flux de travail réglementés."
 
 #: app/routes/pricing.tsx:197
 msgid "Use Carbon's managed cloud or run it on your infrastructure. Cloud plans include a 30-day trial with no sales call."
@@ -1597,7 +1385,7 @@ msgstr "Afficher le guide d'installation"
 msgid "View our source code and contribute"
 msgstr "Consultez notre code source et contribuez"
 
-#: app/routes/_index.tsx:1137
+#: app/routes/_index.tsx:925
 msgid "View the Source"
 msgstr "Voir la source"
 
@@ -1633,7 +1421,7 @@ msgstr "Quelles commandes de vente sont prêtes à être expédiées ?"
 msgid "Why we built Carbon and open-sourced it"
 msgstr "Pourquoi nous avons créé Carbon et l'avons mis en open source"
 
-#: app/routes/_index.tsx:157
+#: app/routes/_index.tsx:115
 msgid "Work center downtime"
 msgstr "Temps d'arrêt du centre de travail"
 
