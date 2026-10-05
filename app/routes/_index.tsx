@@ -3,9 +3,7 @@ import { Trans, useLingui } from "@lingui/react/macro";
 import {
 	ArrowRight,
 	Book,
-	Check,
 	ChevronRight,
-	Copy,
 	Printer,
 	Webhook,
 } from "lucide-react";
@@ -798,84 +796,6 @@ function Agents() {
 	);
 }
 
-const AUDIT_PROMPT = `Evaluate Carbon for my manufacturing business. Review the repository at https://github.com/crbnos/carbon and summarize its relevant capabilities and constraints. Then ask about my products, production process, compliance requirements, current systems, and goals. Finish with 3–5 specific ways Carbon could fit my operation.`;
-
-/**
- * A read-only prompt the visitor can copy in one click and paste into their
- * LLM of choice. Purely client-side; degrades to a selectable block if the
- * clipboard API is unavailable.
- */
-function CopyPrompt({ prompt }: { prompt: string }) {
-	const [copied, setCopied] = useState(false);
-	useEffect(() => {
-		if (!copied) return;
-		const id = setTimeout(() => setCopied(false), 2000);
-		return () => clearTimeout(id);
-	}, [copied]);
-	return (
-		<div className="relative mt-7 border border-border bg-card">
-			<button
-				type="button"
-				onClick={() => {
-					navigator.clipboard?.writeText(prompt).then(
-						() => setCopied(true),
-						() => {},
-					);
-				}}
-				className="absolute right-2 top-2 inline-flex items-center gap-1.5 border border-border bg-background px-2.5 py-1.5 font-mono text-[10px] uppercase leading-none tracking-wide text-muted-foreground transition-colors hover:text-foreground"
-			>
-				{copied ? (
-					<Check className="size-3 text-secondary" strokeWidth={2.5} />
-				) : (
-					<Copy className="size-3" strokeWidth={2} />
-				)}
-				{copied ? <Trans>Copied</Trans> : <Trans>Copy</Trans>}
-			</button>
-			<pre className="max-h-[280px] overflow-auto whitespace-pre-wrap px-4 py-4 pr-16 font-mono text-xs leading-[1.7] text-muted-foreground">
-				{prompt}
-			</pre>
-		</div>
-	);
-}
-
-function TrustOpen() {
-	return (
-		<section
-			id="open"
-			className="theme-invert border-b border-border bg-background py-28 text-foreground sm:py-32"
-		>
-			<div className={shell}>
-				<Reveal className="border border-border">
-					<div className="bg-muted p-10 sm:p-11">
-						<div className="font-mono text-[10px] uppercase leading-none tracking-wide text-secondary">
-							<span className="inline-block bg-secondary/10 dark:bg-secondary-surface px-3 py-1.5">
-								<Trans>Open source</Trans>
-							</span>
-						</div>
-						<h3 className="mt-5 font-display tracking-[-0.01em] text-[clamp(1.625rem,2.6vw,2.375rem)] leading-[1.1]">
-							<Trans>Evaluate the source before you deploy</Trans>
-						</h3>
-						<p className="mt-4 max-w-[40ch] text-[15px] leading-relaxed text-muted-foreground">
-							<Trans>
-								Carbon's source is public. Use the prompt below to review it against
-								your requirements.
-							</Trans>
-						</p>
-						<CopyPrompt prompt={AUDIT_PROMPT} />
-						<div className="mt-7 flex flex-wrap gap-6 font-mono text-xs uppercase leading-none text-muted-foreground">
-							<span>TypeScript</span>
-							<span>React</span>
-							<span>Postgres</span>
-							<span>RLS</span>
-							<span>REST + Webhooks</span>
-						</div>
-					</div>
-				</Reveal>
-			</div>
-		</section>
-	);
-}
-
 const selfHostPillars = [
 	{
 		tag: "CMMC · ITAR",
@@ -1070,7 +990,6 @@ export default function Route() {
 			<FeatureRows />
 			<SelfHost />
 			<OneModel />
-			<TrustOpen />
 			<Agents />
 			<Integrations />
 			<StartCTA />
