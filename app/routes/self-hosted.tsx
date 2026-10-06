@@ -379,7 +379,7 @@ function Byoc() {
 					<LicenseActions />
 				</div>
 
-				<div className="mt-14 border border-border sm:h-[min(64vh,520px)]">
+				<div className="mt-14 border border-border bg-muted/40 p-3 sm:h-[min(72vh,600px)] sm:p-8">
 					<ByocConsole label="Carbon BYOC control plane: environments running in your own cloud account" />
 				</div>
 

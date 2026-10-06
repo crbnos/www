@@ -141,7 +141,7 @@ export function ByocConsole({
 			role="group"
 			aria-label={label}
 			className={cn(
-				"relative flex h-full w-full flex-col bg-screenshot text-left",
+				"shadcn relative flex h-full w-full flex-col overflow-hidden rounded-[12px] border border-border bg-background text-left text-foreground shadow-[0_1px_2px_rgb(0_0_0/0.05),0_8px_24px_-8px_rgb(0_0_0/0.12)]",
 				className,
 			)}
 		>
@@ -157,19 +157,23 @@ export function ByocConsole({
 					{/* top bar */}
 					<div className="flex h-12 shrink-0 items-center gap-3 border-b border-border px-4 sm:px-6">
 						<PanelLeft className="hidden size-4 text-muted-foreground md:block" />
+						<span className="hidden h-4 w-px bg-border md:block" />
 						<div className="text-sm">
-							<span className="text-foreground">Rearden</span>
+							<span className="text-muted-foreground">Rearden</span>
 							<span className="px-2 text-muted-foreground">/</span>
 							<span className="font-medium text-foreground">Overview</span>
 						</div>
-						<div className="ml-auto flex items-center gap-2 font-mono text-[11px] text-muted-foreground">
+						<div className="ml-auto flex items-center gap-2 text-xs text-muted-foreground">
 							<Pill className="hidden sm:inline-flex">
 								synced {tick % 30}s ago
 							</Pill>
 							<Pill>{rows.length} envs</Pill>
-							<span className="hidden items-center gap-2 border border-border px-2.5 py-1 font-sans lg:inline-flex">
+							<span className="hidden h-8 w-48 items-center gap-2 rounded-[6px] border border-input bg-background px-2.5 shadow-[0_1px_2px_rgb(0_0_0/0.05)] lg:inline-flex">
 								<Search className="size-3.5" />
-								Jump to…
+								Search…
+								<kbd className="ml-auto rounded-[4px] border border-border bg-muted px-1.5 font-mono text-[10px] leading-4">
+									⌘K
+								</kbd>
 							</span>
 						</div>
 					</div>
@@ -181,19 +185,19 @@ export function ByocConsole({
 								<div className="text-2xl font-semibold tracking-[-0.01em]">
 									Rearden Metal
 								</div>
-								<div className="mt-1.5 font-mono text-[11px] text-muted-foreground">
+								<div className="mt-1 text-sm text-muted-foreground">
 									rearden · ws_01m33172zmemdb6ya43jnz9bwx
 								</div>
 							</div>
 							<div className="flex gap-2">
-								<span className="hidden border border-border px-3 py-1.5 text-xs font-medium sm:inline-block">
+								<span className="hidden h-8 items-center rounded-[6px] border border-input bg-background px-3 text-xs font-medium shadow-[0_1px_2px_rgb(0_0_0/0.05)] sm:inline-flex">
 									Members
 								</span>
 								<button
 									type="button"
 									onClick={addEnvironment}
 									disabled={!!added}
-									className="inline-flex items-center gap-1.5 bg-foreground px-3 py-1.5 text-xs font-medium text-background transition-[opacity,transform] hover:opacity-90 active:scale-[0.97] disabled:cursor-default disabled:opacity-50"
+									className="inline-flex h-8 items-center gap-1.5 rounded-[6px] bg-primary px-3 text-xs font-medium text-primary-foreground shadow-[0_1px_2px_rgb(0_0_0/0.05)] transition-[opacity,transform] hover:opacity-90 active:scale-[0.97] disabled:cursor-default disabled:opacity-50"
 								>
 									<Plus className="size-3.5" />
 									New environment
@@ -202,7 +206,7 @@ export function ByocConsole({
 						</div>
 
 						{/* stats */}
-						<div className="grid grid-cols-2 gap-px border border-border bg-border lg:grid-cols-4">
+						<div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
 							<Stat
 								label="Environments"
 								value={rows.length}
@@ -217,12 +221,12 @@ export function ByocConsole({
 						<div className="min-h-0">
 							<div className="flex items-baseline justify-between gap-4">
 								<div className="text-sm font-medium">Environments</div>
-								<div className="hidden font-mono text-[11px] text-muted-foreground sm:block">
+								<div className="hidden text-xs text-muted-foreground sm:block">
 									channel head {HEAD}+db3da1b
 								</div>
 							</div>
-							<div className="mt-3 border border-border text-[13px]">
-								<div className={cn(ROW, "text-xs text-muted-foreground")}>
+							<div className="mt-3 overflow-hidden rounded-[10px] border border-border text-[13px]">
+								<div className={cn(ROW, "py-2.5 text-xs font-medium text-muted-foreground")}>
 									<div>Environment</div>
 									<div className="hidden lg:block">Placement</div>
 									<div>Release</div>
@@ -255,36 +259,36 @@ function EnvironmentRow({ row: r }: { row: Row }) {
 			initial={{ opacity: 0, height: 0 }}
 			animate={{ opacity: 1, height: "auto" }}
 			transition={{ type: "spring", duration: 0.4, bounce: 0 }}
-			className={cn(ROW, "overflow-hidden")}
+			className={cn(ROW, "overflow-hidden transition-colors hover:bg-muted/50")}
 		>
 			<div className="flex min-w-0 items-center gap-3">
 				<Dot className={tone} pulse={r.pending} />
 				<div className="min-w-0">
 					<div className="font-medium text-foreground">{r.name}</div>
-					<div className="truncate font-mono text-[11px] text-muted-foreground">
+					<div className="truncate text-xs text-muted-foreground">
 						{r.slug}
 					</div>
 				</div>
 			</div>
 			<div className="hidden items-center gap-2 lg:flex">
-				<ShipWheel className="size-4 shrink-0 text-secondary" strokeWidth={1.75} />
+				<ShipWheel className="size-4 shrink-0 text-muted-foreground" strokeWidth={1.75} />
 				<span className="text-foreground">EKS</span>
 				<span className="text-muted-foreground">· {r.region}</span>
 			</div>
-			<div className="flex items-center gap-2 font-mono tabular-nums">
+			<div className="flex items-center gap-2 tabular-nums">
 				<span>{r.release}</span>
 				{r.target && (
 					<span className="text-muted-foreground">→ {r.target}</span>
 				)}
 				{r.behind && (
 					<>
-						<span className="hidden border border-amber-500/40 bg-amber-500/10 px-1.5 py-0.5 font-sans text-[11px] leading-none text-amber-700 dark:text-amber-300 xl:inline-block">
+						<span className="hidden rounded-[6px] bg-secondary px-2 py-0.5 text-[11px] font-medium text-secondary-foreground xl:inline-block">
 							Behind
 						</span>
 						<button
 							type="button"
 							onClick={r.onUpdate}
-							className="border border-secondary px-2 py-0.5 font-sans text-[11px] font-medium text-secondary transition-[background-color,transform] hover:bg-secondary/10 active:scale-[0.96]"
+							className="h-6 rounded-[6px] border border-input bg-background px-2 text-[11px] font-medium shadow-[0_1px_2px_rgb(0_0_0/0.05)] transition-[background-color,transform] hover:bg-accent active:scale-[0.96]"
 						>
 							Update
 						</button>
@@ -330,18 +334,18 @@ function Sidebar({
 		{ icon: GitFork, name: "Build & Releases" },
 	];
 	return (
-		<div className="hidden w-56 shrink-0 flex-col gap-1 border-r border-border bg-muted/40 p-3 text-[13px] md:flex">
+		<div className="hidden w-56 shrink-0 flex-col gap-0.5 border-r border-border bg-[hsl(var(--sidebar))] p-2 text-[13px] md:flex">
 			<div className="flex items-center gap-2 px-2 py-2 text-muted-foreground">
 				<ArrowLeft className="size-3.5" />
 				Carbon
 			</div>
-			<div className="flex items-center gap-3 border border-border bg-card p-2.5">
-				<div className="flex size-8 items-center justify-center bg-secondary text-sm font-semibold text-secondary-foreground">
+			<div className="flex items-center gap-2.5 rounded-[8px] p-2 hover:bg-accent">
+				<div className="flex size-8 items-center justify-center rounded-[8px] bg-primary text-sm font-semibold text-primary-foreground">
 					R
 				</div>
 				<div className="min-w-0">
 					<div className="truncate font-medium">Rearden Metal</div>
-					<div className="text-[11px] text-muted-foreground tabular-nums">
+					<div className="text-xs text-muted-foreground tabular-nums">
 						{count} environments
 					</div>
 				</div>
@@ -351,8 +355,10 @@ function Sidebar({
 				<div
 					key={name}
 					className={cn(
-						"flex items-center gap-2.5 px-2 py-1.5",
-						active ? "bg-card text-foreground" : "text-muted-foreground",
+						"flex h-8 items-center gap-2 rounded-[6px] px-2",
+						active
+							? "bg-accent font-medium text-accent-foreground"
+							: "text-foreground/80",
 					)}
 				>
 					<Icon className="size-4" strokeWidth={1.75} />
@@ -363,7 +369,7 @@ function Sidebar({
 			{environments.map((e) => (
 				<div
 					key={e.name}
-					className="flex items-center gap-2.5 px-2 py-1.5 text-muted-foreground"
+					className="flex h-8 items-center gap-2 rounded-[6px] px-2 text-foreground/80"
 				>
 					<ShipWheel className="size-4" strokeWidth={1.75} />
 					<span className="flex-1">{e.name}</span>
@@ -377,7 +383,7 @@ function Sidebar({
 				type="button"
 				onClick={onAdd}
 				disabled={!canAdd}
-				className="flex items-center gap-2.5 px-2 py-1.5 text-left text-muted-foreground transition-colors hover:text-foreground disabled:pointer-events-none disabled:opacity-50"
+				className="flex h-8 items-center gap-2 rounded-[6px] px-2 text-left text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground disabled:pointer-events-none disabled:opacity-50"
 			>
 				<Plus className="size-4" strokeWidth={1.75} />
 				New environment
@@ -388,9 +394,8 @@ function Sidebar({
 
 function SideLabel({ children }: { children: string }) {
 	return (
-		<div className="mt-3 flex items-center gap-2 px-2 pb-1 font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
+		<div className="mt-3 flex h-8 items-center px-2 text-xs font-medium text-muted-foreground">
 			{children}
-			<span className="h-px flex-1 bg-border" />
 		</div>
 	);
 }
@@ -405,10 +410,10 @@ function Stat({
 	note?: string;
 }) {
 	return (
-		<div className="bg-card px-4 py-3">
-			<div className="text-xs text-muted-foreground">{label}</div>
+		<div className="rounded-[10px] border border-border bg-card px-4 py-3 shadow-[0_1px_2px_rgb(0_0_0/0.05)]">
+			<div className="text-xs font-medium text-muted-foreground">{label}</div>
 			<div className="mt-1.5 flex items-baseline gap-2">
-				<span className="text-xl font-medium tabular-nums">{value}</span>
+				<span className="text-2xl font-semibold tracking-tight tabular-nums">{value}</span>
 				{note && (
 					<span className="truncate text-xs text-muted-foreground">{note}</span>
 				)}
@@ -427,7 +432,7 @@ function Pill({
 	return (
 		<span
 			className={cn(
-				"inline-flex items-center gap-1.5 border border-border px-2.5 py-1 tabular-nums",
+				"inline-flex h-6 items-center gap-1.5 rounded-[6px] border border-border px-2 font-medium tabular-nums",
 				className,
 			)}
 		>
