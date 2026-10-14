@@ -198,6 +198,7 @@ const integrations: {
 		{ name: "Jira", url: "https://jira.atlassian.com" },
 		{ name: "Mount", url: "https://mount.cloud" },
 		{ name: "Paperless Parts", url: "https://paperlessparts.com" },
+		{ name: "Sense", url: "https://sensemfg.com", invert: true },
 		{ name: "Resend", url: "https://resend.com" },
 		{ name: "Okta", url: "https://okta.com" },
 		{ name: "Microsoft Entra", url: "https://entra.microsoft.com" },
