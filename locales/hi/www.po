@@ -292,6 +292,9 @@ msgstr "संपर्क जानकारी"
 
 #: app/components/header.tsx:150
 #: app/components/header.tsx:243
+#: app/routes/_index.tsx:312
+#: app/routes/pricing.tsx:69
+#: app/routes/pricing.tsx:90
 msgid "Contact Sales"
 msgstr "बिक्रय से संपर्क करें"
 
@@ -359,7 +362,7 @@ msgstr "ग्राहक पोर्टल/वेबसाइट"
 msgid "Customer portals for order status and files"
 msgstr "ऑर्डर स्थिति और फ़ाइलों के लिए ग्राहक पोर्टल"
 
-#: app/components/app-cta-label.tsx:16
+#: app/components/app-cta-label.tsx:11
 msgid "Dashboard"
 msgstr "डैशबोर्ड"
 
@@ -548,7 +551,7 @@ msgstr "आगे-तैनात इंजीनियर"
 
 #: app/routes/_index.tsx:611
 msgid "From CAD to cash."
-msgstr ""
+msgstr "CAD से कैश तक।"
 
 #: app/components/wizard-form.tsx:385
 msgid "Full Name"
@@ -1191,7 +1194,7 @@ msgstr "शिपिंग"
 
 #: app/routes/_index.tsx:127
 msgid "Shop Floor"
-msgstr ""
+msgstr "शॉप फ्लोर"
 
 #: app/routes/_index.tsx:249
 msgid "Shop floor / job traveler"
@@ -1246,12 +1249,8 @@ msgstr "GitHub पर Carbon को Star दें"
 msgid "Star on GitHub"
 msgstr "GitHub पर स्टार करें"
 
-#: app/routes/_index.tsx:307
+#: app/components/app-cta-label.tsx:11
 #: app/routes/pricing.tsx:41
-msgid "Start 30-Day Trial"
-msgstr "30-दिन का ट्रायल शुरू करें"
-
-#: app/components/app-cta-label.tsx:10
 msgid "Start Free"
 msgstr "मुफ्त शुरू करें"
 
@@ -1291,12 +1290,6 @@ msgstr "सिस्टम स्थिति:"
 #: app/routes/_index.tsx:137
 msgid "Systems replaced"
 msgstr "सिस्टम प्रतिस्थापित"
-
-#: app/routes/_index.tsx:312
-#: app/routes/pricing.tsx:69
-#: app/routes/pricing.tsx:90
-msgid "Talk to a Human"
-msgstr "एक इंसान से बात करें"
 
 #: app/routes/pricing.tsx:73
 msgid "Technical support from Carbon"

@@ -277,7 +277,7 @@ function LicenseActions({ className }: { className?: string }) {
 				<Link to="/pricing?mode=self-hosted">View Self-Hosted Pricing</Link>
 			</Button>
 			<Button asChild variant="accentOutline" size="cta">
-				<Link to="/sales">Talk to a Human</Link>
+				<Link to="/sales">Contact Sales</Link>
 			</Button>
 		</div>
 	);

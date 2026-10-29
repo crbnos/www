@@ -292,6 +292,9 @@ msgstr "Contact Information"
 
 #: app/components/header.tsx:150
 #: app/components/header.tsx:243
+#: app/routes/_index.tsx:312
+#: app/routes/pricing.tsx:69
+#: app/routes/pricing.tsx:90
 msgid "Contact Sales"
 msgstr "Contact Sales"
 
@@ -359,7 +362,7 @@ msgstr "Customer Portal/Website"
 msgid "Customer portals for order status and files"
 msgstr "Customer portals for order status and files"
 
-#: app/components/app-cta-label.tsx:16
+#: app/components/app-cta-label.tsx:11
 msgid "Dashboard"
 msgstr "Dashboard"
 
@@ -1246,12 +1249,8 @@ msgstr "Star Carbon on GitHub"
 msgid "Star on GitHub"
 msgstr "Star on GitHub"
 
-#: app/routes/_index.tsx:307
+#: app/components/app-cta-label.tsx:11
 #: app/routes/pricing.tsx:41
-msgid "Start 30-Day Trial"
-msgstr "Start 30-Day Trial"
-
-#: app/components/app-cta-label.tsx:10
 msgid "Start Free"
 msgstr "Start Free"
 
@@ -1291,12 +1290,6 @@ msgstr "System Status:"
 #: app/routes/_index.tsx:137
 msgid "Systems replaced"
 msgstr "Systems replaced"
-
-#: app/routes/_index.tsx:312
-#: app/routes/pricing.tsx:69
-#: app/routes/pricing.tsx:90
-msgid "Talk to a Human"
-msgstr "Talk to a Human"
 
 #: app/routes/pricing.tsx:73
 msgid "Technical support from Carbon"

@@ -38,7 +38,7 @@ function usePlans(deployment: Deployment) {
 			tag: selfHosted ? t`Open source` : t`Self-serve`,
 			priceHeadline: selfHosted ? "$0" : "$40",
 			priceSubtext: selfHosted ? "AGPL-3.0" : t`/user/month`,
-			action: selfHosted ? t`View Installation Guide` : t`Start 30-Day Trial`,
+			action: selfHosted ? t`View Installation Guide` : t`Start Free`,
 			url: selfHosted ? SELF_HOSTING_DOCS_URL : "https://app.carbon.ms",
 			description: selfHosted
 				? t`Core manufacturing modules under AGPL-3.0`
@@ -66,7 +66,7 @@ function usePlans(deployment: Deployment) {
 				: t`Starter plus APIs, automation and support`,
 			priceHeadline: "$100",
 			priceSubtext: t`/user/month`,
-			action: selfHosted ? t`Request a License` : t`Talk to a Human`,
+			action: selfHosted ? t`Request a License` : t`Contact Sales`,
 			url: "/sales",
 			featured: false,
 			features: [
@@ -87,7 +87,7 @@ function usePlans(deployment: Deployment) {
 			tag: selfHosted ? t`Regulated deployment` : t`Bring your own cloud`,
 			priceHeadline: t`Contact us`,
 			priceSubtext: "",
-			action: t`Talk to a Human`,
+			action: t`Contact Sales`,
 			url: "/sales",
 			description: selfHosted
 				? t`Enterprise Edition with a deployment designed for your security boundary`

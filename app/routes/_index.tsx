@@ -304,12 +304,12 @@ function TrialActions({ className }: { className?: string }) {
 		<div className={cn("flex flex-wrap gap-2.5", className)}>
 			<Button asChild variant="accent" size="cta">
 				<a href={APP_URL}>
-					<AppCtaLabel signupLabel={<Trans>Start 30-Day Trial</Trans>} />
+					<AppCtaLabel />
 				</a>
 			</Button>
 			<Button asChild variant="accentOutline" size="cta">
 				<Link to="/sales">
-					<Trans>Talk to a Human</Trans>
+					<Trans>Contact Sales</Trans>
 				</Link>
 			</Button>
 		</div>

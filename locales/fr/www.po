@@ -292,6 +292,9 @@ msgstr "Informations de contact"
 
 #: app/components/header.tsx:150
 #: app/components/header.tsx:243
+#: app/routes/_index.tsx:312
+#: app/routes/pricing.tsx:69
+#: app/routes/pricing.tsx:90
 msgid "Contact Sales"
 msgstr "Contactez les ventes"
 
@@ -359,7 +362,7 @@ msgstr "Portail Client/Site Web"
 msgid "Customer portals for order status and files"
 msgstr "Portails client pour l'état des commandes et les fichiers"
 
-#: app/components/app-cta-label.tsx:16
+#: app/components/app-cta-label.tsx:11
 msgid "Dashboard"
 msgstr "Tableau de bord"
 
@@ -548,7 +551,7 @@ msgstr "Ingénieur déployé à l'avance"
 
 #: app/routes/_index.tsx:611
 msgid "From CAD to cash."
-msgstr ""
+msgstr "De la CAO à l'encaissement."
 
 #: app/components/wizard-form.tsx:385
 msgid "Full Name"
@@ -1191,7 +1194,7 @@ msgstr "Expédition"
 
 #: app/routes/_index.tsx:127
 msgid "Shop Floor"
-msgstr ""
+msgstr "Atelier"
 
 #: app/routes/_index.tsx:249
 msgid "Shop floor / job traveler"
@@ -1246,12 +1249,8 @@ msgstr "Étoiler Carbon sur GitHub"
 msgid "Star on GitHub"
 msgstr "Étoiler sur GitHub"
 
-#: app/routes/_index.tsx:307
+#: app/components/app-cta-label.tsx:11
 #: app/routes/pricing.tsx:41
-msgid "Start 30-Day Trial"
-msgstr "Commencer l'essai gratuit de 30 jours"
-
-#: app/components/app-cta-label.tsx:10
 msgid "Start Free"
 msgstr "Commencer gratuitement"
 
@@ -1291,12 +1290,6 @@ msgstr "Statut du système :"
 #: app/routes/_index.tsx:137
 msgid "Systems replaced"
 msgstr "Systèmes remplacés"
-
-#: app/routes/_index.tsx:312
-#: app/routes/pricing.tsx:69
-#: app/routes/pricing.tsx:90
-msgid "Talk to a Human"
-msgstr "Parler à un humain"
 
 #: app/routes/pricing.tsx:73
 msgid "Technical support from Carbon"

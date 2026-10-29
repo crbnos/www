@@ -228,7 +228,7 @@ export async function loadPlugins() {
             ],
           };
 
-          let data = node.data ?? {};
+          let data: Record<string, unknown> = { ...node.data };
           (node as any).type = "element";
           (node as any).tagName = "div";
           let properties =

@@ -292,6 +292,9 @@ msgstr "联系信息"
 
 #: app/components/header.tsx:150
 #: app/components/header.tsx:243
+#: app/routes/_index.tsx:312
+#: app/routes/pricing.tsx:69
+#: app/routes/pricing.tsx:90
 msgid "Contact Sales"
 msgstr "联系销售"
 
@@ -359,7 +362,7 @@ msgstr "客户门户/网站"
 msgid "Customer portals for order status and files"
 msgstr "客户门户，用于订单状态和文件"
 
-#: app/components/app-cta-label.tsx:16
+#: app/components/app-cta-label.tsx:11
 msgid "Dashboard"
 msgstr "仪表板"
 
@@ -548,7 +551,7 @@ msgstr "前沿部署工程师"
 
 #: app/routes/_index.tsx:611
 msgid "From CAD to cash."
-msgstr ""
+msgstr "从 CAD 到回款。"
 
 #: app/components/wizard-form.tsx:385
 msgid "Full Name"
@@ -1191,7 +1194,7 @@ msgstr "运输"
 
 #: app/routes/_index.tsx:127
 msgid "Shop Floor"
-msgstr ""
+msgstr "车间"
 
 #: app/routes/_index.tsx:249
 msgid "Shop floor / job traveler"
@@ -1246,12 +1249,8 @@ msgstr "在 GitHub 上为 Carbon 加星"
 msgid "Star on GitHub"
 msgstr "在 GitHub 上标星"
 
-#: app/routes/_index.tsx:307
+#: app/components/app-cta-label.tsx:11
 #: app/routes/pricing.tsx:41
-msgid "Start 30-Day Trial"
-msgstr "开始30天试用"
-
-#: app/components/app-cta-label.tsx:10
 msgid "Start Free"
 msgstr "免费开始"
 
@@ -1291,12 +1290,6 @@ msgstr "系统状态："
 #: app/routes/_index.tsx:137
 msgid "Systems replaced"
 msgstr "替换系统"
-
-#: app/routes/_index.tsx:312
-#: app/routes/pricing.tsx:69
-#: app/routes/pricing.tsx:90
-msgid "Talk to a Human"
-msgstr "与人类交谈"
 
 #: app/routes/pricing.tsx:73
 msgid "Technical support from Carbon"

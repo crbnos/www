@@ -292,6 +292,9 @@ msgstr "Kontaktinformationen"
 
 #: app/components/header.tsx:150
 #: app/components/header.tsx:243
+#: app/routes/_index.tsx:312
+#: app/routes/pricing.tsx:69
+#: app/routes/pricing.tsx:90
 msgid "Contact Sales"
 msgstr "Kontakt zum Vertrieb"
 
@@ -359,7 +362,7 @@ msgstr "Kundenportal/Website"
 msgid "Customer portals for order status and files"
 msgstr "Kundenportale für Bestellstatus und Dateien"
 
-#: app/components/app-cta-label.tsx:16
+#: app/components/app-cta-label.tsx:11
 msgid "Dashboard"
 msgstr "Dashboard"
 
@@ -548,7 +551,7 @@ msgstr "Vorwärts eingesetzter Ingenieur"
 
 #: app/routes/_index.tsx:611
 msgid "From CAD to cash."
-msgstr ""
+msgstr "Von CAD bis zur Rechnung."
 
 #: app/components/wizard-form.tsx:385
 msgid "Full Name"
@@ -1191,7 +1194,7 @@ msgstr "Versand"
 
 #: app/routes/_index.tsx:127
 msgid "Shop Floor"
-msgstr ""
+msgstr "Fertigung"
 
 #: app/routes/_index.tsx:249
 msgid "Shop floor / job traveler"
@@ -1246,12 +1249,8 @@ msgstr "Star Carbon auf GitHub"
 msgid "Star on GitHub"
 msgstr "Auf GitHub bewerten"
 
-#: app/routes/_index.tsx:307
+#: app/components/app-cta-label.tsx:11
 #: app/routes/pricing.tsx:41
-msgid "Start 30-Day Trial"
-msgstr "30-Tage-Test starten"
-
-#: app/components/app-cta-label.tsx:10
 msgid "Start Free"
 msgstr "Kostenlos starten"
 
@@ -1291,12 +1290,6 @@ msgstr "Systemstatus:"
 #: app/routes/_index.tsx:137
 msgid "Systems replaced"
 msgstr "Systeme ersetzt"
-
-#: app/routes/_index.tsx:312
-#: app/routes/pricing.tsx:69
-#: app/routes/pricing.tsx:90
-msgid "Talk to a Human"
-msgstr "Sprechen Sie mit einem Menschen"
 
 #: app/routes/pricing.tsx:73
 msgid "Technical support from Carbon"

@@ -292,6 +292,9 @@ msgstr "連絡先情報"
 
 #: app/components/header.tsx:150
 #: app/components/header.tsx:243
+#: app/routes/_index.tsx:312
+#: app/routes/pricing.tsx:69
+#: app/routes/pricing.tsx:90
 msgid "Contact Sales"
 msgstr "営業に連絡"
 
@@ -359,7 +362,7 @@ msgstr "顧客ポータル/ウェブサイト"
 msgid "Customer portals for order status and files"
 msgstr "注文ステータスとファイル用のカスタマーポータル"
 
-#: app/components/app-cta-label.tsx:16
+#: app/components/app-cta-label.tsx:11
 msgid "Dashboard"
 msgstr "ダッシュボード"
 
@@ -548,7 +551,7 @@ msgstr "前方配置エンジニア"
 
 #: app/routes/_index.tsx:611
 msgid "From CAD to cash."
-msgstr ""
+msgstr "CADから入金まで。"
 
 #: app/components/wizard-form.tsx:385
 msgid "Full Name"
@@ -1191,7 +1194,7 @@ msgstr "配送"
 
 #: app/routes/_index.tsx:127
 msgid "Shop Floor"
-msgstr ""
+msgstr "工場フロア"
 
 #: app/routes/_index.tsx:249
 msgid "Shop floor / job traveler"
@@ -1246,12 +1249,8 @@ msgstr "GitHubでCarbonにスターを付ける"
 msgid "Star on GitHub"
 msgstr "GitHubでスターを付ける"
 
-#: app/routes/_index.tsx:307
+#: app/components/app-cta-label.tsx:11
 #: app/routes/pricing.tsx:41
-msgid "Start 30-Day Trial"
-msgstr "30日間の試用版を開始"
-
-#: app/components/app-cta-label.tsx:10
 msgid "Start Free"
 msgstr "無料開始"
 
@@ -1291,12 +1290,6 @@ msgstr "システムステータス:"
 #: app/routes/_index.tsx:137
 msgid "Systems replaced"
 msgstr "置き換えられたシステム"
-
-#: app/routes/_index.tsx:312
-#: app/routes/pricing.tsx:69
-#: app/routes/pricing.tsx:90
-msgid "Talk to a Human"
-msgstr "人間と話す"
 
 #: app/routes/pricing.tsx:73
 msgid "Technical support from Carbon"
