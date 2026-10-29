@@ -12,9 +12,18 @@ const hangingFetch = ((_url: string, init?: RequestInit) =>
   })) as typeof fetch;
 
 describe("fetchStatus", () => {
-  it("reports up when the badge says so", async () => {
-    const ok = (async () => new Response("Up")) as unknown as typeof fetch;
-    expect(await fetchStatus(ok)).toEqual({ up: true });
+  const page = (...statuses: string[]) =>
+    (async () =>
+      Response.json({
+        data: { monitors: statuses.map((status) => ({ status })) },
+      })) as unknown as typeof fetch;
+
+  it("reports up when no monitor is down", async () => {
+    expect(await fetchStatus(page("up", "paused"))).toEqual({ up: true });
+  });
+
+  it("reports down when any monitor is down", async () => {
+    expect(await fetchStatus(page("up", "down"))).toEqual({ up: false });
   });
 
   it("reports down instead of throwing when the status page errors", async () => {
