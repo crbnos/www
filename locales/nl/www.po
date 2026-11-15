@@ -68,6 +68,10 @@ msgstr "Luchtgat en ITAR-gecontroleerde omgevingen"
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "Alle Carbon-handelsmerken, logo's of andere merkelementen mogen nooit worden gewijzigd of voor enig ander doel worden gebruikt dan om Carbon Manufacturing Systems Corporation te vertegenwoordigen."
 
+#: app/routes/careers+/$slug.tsx:275
+msgid "All roles"
+msgstr "Alle vacatures"
+
 #: app/components/hero.tsx:246
 msgid "Analytics"
 msgstr "Analytische gegevens"
@@ -89,6 +93,10 @@ msgstr "API-documentatie"
 #: app/routes/about.tsx:35
 msgid "API-first, realtime subscriptions, forward/finite scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
 msgstr "API-first, realtimeabonnementen, vooruit/eindige planning, en 1.000 kleine details om het plezier van het gebruik van een ERP de moeite waard te maken."
+
+#: app/routes/careers+/$slug.tsx:253
+msgid "Apply for this role"
+msgstr "Solliciteer op deze functie"
 
 #: app/routes/pricing.tsx:81
 msgid "Audit logs, enforced 2FA and backup/restore"
@@ -143,7 +151,11 @@ msgstr "Elke bewerking doorbladeren"
 msgid "Build hardware at the <0/><1>speed of software</1>"
 msgstr "Bouw hardware met de <0/><1>snelheid van software</1>"
 
-#: app/components/footer.tsx:58
+#: app/routes/careers+/_index.tsx:36
+msgid "Build the software that runs factories."
+msgstr "Bouw de software die fabrieken laat draaien."
+
+#: app/components/footer.tsx:59
 msgid "Build vs. buy"
 msgstr "Bouwen vs. kopen"
 
@@ -174,6 +186,15 @@ msgstr "Carbon combineert ERP, MES en QMS in één enkel, geïntegreerd systeem.
 #: app/routes/_index.tsx:410
 msgid "Carbon combines ERP, MRP, MES and QMS. Plan materials, run the shop floor, manage quality and track actual costs in one system."
 msgstr "Carbon combineert ERP, MRP, MES en QMS. Plan materialen, bedrijf de werkvloer, beheer kwaliteit en volg werkelijke kosten in één systeem."
+
+#: app/routes/careers+/_index.tsx:39
+msgid "Carbon is open-source software that runs a manufacturing business from the sales order to the shipped part. We're a team of about ten people, bootstrapped and profitable, working with manufacturers that build hard things."
+msgstr "Carbon is opensourcesoftware die een productiebedrijf runt, van verkooporder tot verzonden onderdeel. We zijn een team van ongeveer tien mensen, zelf gefinancierd en winstgevend, en werken met fabrikanten die moeilijke dingen bouwen."
+
+#: app/components/footer.tsx:49
+#: app/routes/careers+/_index.tsx:33
+msgid "Careers"
+msgstr "Werken bij"
 
 #: app/routes/_index.tsx:263
 msgid "Certificates generated from live data"
@@ -281,7 +302,7 @@ msgstr "Verbind uw robots en machines met uw productiesystemen"
 msgid "Consolidates {count} entities in {0}"
 msgstr "Consolideert {count} entiteiten in {0}"
 
-#: app/components/footer.tsx:49
+#: app/components/footer.tsx:50
 #: app/routes/contact.tsx:155
 msgid "Contact"
 msgstr "Contact"
@@ -422,7 +443,7 @@ msgstr "Implementatie"
 msgid "Developer guides and API reference"
 msgstr "Ontwikkelaarshandleidingen en API-referentie"
 
-#: app/components/footer.tsx:59
+#: app/components/footer.tsx:60
 #: app/components/header.tsx:98
 #: app/components/header.tsx:220
 msgid "Developers"
@@ -444,7 +465,7 @@ msgstr "Discord"
 msgid "Dispatch notifications"
 msgstr "Deelnameberichten verzenden"
 
-#: app/components/footer.tsx:60
+#: app/components/footer.tsx:61
 #: app/components/header.tsx:39
 msgid "Documentation"
 msgstr "Documentatie"
@@ -728,7 +749,7 @@ msgstr "Arbeid, uitval & herbewerking"
 msgid "Lead times & buffers"
 msgstr "Doorlooptijden & buffers"
 
-#: app/components/footer.tsx:61
+#: app/components/footer.tsx:62
 msgid "Learning"
 msgstr "Leren"
 
@@ -740,7 +761,7 @@ msgstr "Leercentrum"
 msgid "Least expensive. Basic onboarding and email support"
 msgstr "Minst duur. Basisonboarding en e-mailondersteuning"
 
-#: app/components/footer.tsx:71
+#: app/components/footer.tsx:72
 msgid "Legal"
 msgstr "Juridisch"
 
@@ -748,7 +769,7 @@ msgstr "Juridisch"
 msgid "Let us handle the infrastructure for you"
 msgstr "Laat ons de infrastructuur voor u beheren"
 
-#: app/components/footer.tsx:62
+#: app/components/footer.tsx:63
 msgid "License"
 msgstr "Licentie"
 
@@ -900,6 +921,10 @@ msgstr "Één server voor elke AI-client"
 msgid "One-time purchase with full ownership"
 msgstr "Eenmalige aankoop met volledig eigendom"
 
+#: app/routes/careers+/_index.tsx:49
+msgid "Open roles"
+msgstr "Openstaande vacatures"
+
 #: app/routes/pricing.tsx:38
 msgid "Open source"
 msgstr "Open source"
@@ -928,6 +953,10 @@ msgstr "operators, taken en werkcentra"
 msgid "Opportunity opened for the customer"
 msgstr "Kans geopend voor de klant"
 
+#: app/routes/careers+/$slug.tsx:321
+msgid "Or email <0>{CAREERS_EMAIL}</0>."
+msgstr "Of mail naar <0>{CAREERS_EMAIL}</0>."
+
 #: app/routes/_index.tsx:971
 msgid "Or self-host the open source core"
 msgstr "Of host de open source-kern zelf"
@@ -935,6 +964,10 @@ msgstr "Of host de open source-kern zelf"
 #: app/routes/_index.tsx:50
 msgid "orders, inventory and actual costs"
 msgstr "bestellingen, inventaris en werkelijke kosten"
+
+#: app/routes/careers+/_index.tsx:87
+msgid "Our code is public at <0>github.com/crbnos/carbon</0>, so you can read it before you apply."
+msgstr "Onze code is openbaar op <0>github.com/crbnos/carbon</0>, zodat je hem kunt lezen voordat je solliciteert."
 
 #: app/components/wizard-form.tsx:76
 msgid "Ownership Model"
@@ -973,17 +1006,17 @@ msgstr "preventief en reactief onderhoud"
 msgid "Preventive maintenance schedules"
 msgstr "Preventieve onderhoudsschema's"
 
-#: app/components/footer.tsx:63
+#: app/components/footer.tsx:64
 #: app/components/header.tsx:82
 #: app/components/header.tsx:210
 msgid "Pricing"
 msgstr "Prijzen"
 
-#: app/components/footer.tsx:74
+#: app/components/footer.tsx:75
 msgid "Privacy"
 msgstr "Privacy"
 
-#: app/components/footer.tsx:55
+#: app/components/footer.tsx:56
 msgid "Product"
 msgstr "Product"
 
@@ -1103,7 +1136,7 @@ msgstr "Voer één faciliteit of meerdere juridische entiteiten en locaties uit.
 msgid "Run production from live data."
 msgstr "Voer productie uit van live gegevens."
 
-#: app/components/footer.tsx:50
+#: app/components/footer.tsx:51
 #: app/routes/_index.tsx:125
 msgid "Sales"
 msgstr "Verkoop"
@@ -1128,7 +1161,7 @@ msgstr "Selecteer uw gewenste ondersteuningsniveau"
 msgid "Select your preferred hosting solution"
 msgstr "Selecteer uw voorkeur voor hosting"
 
-#: app/components/footer.tsx:64
+#: app/components/footer.tsx:65
 #: app/components/header.tsx:92
 #: app/components/header.tsx:217
 #: app/routes/_index.tsx:830
@@ -1228,7 +1261,7 @@ msgstr "Implementatie met één tenant in uw cloudaccount"
 msgid "Software as a Service"
 msgstr "Software as a Service"
 
-#: app/components/footer.tsx:65
+#: app/components/footer.tsx:66
 msgid "Source Code"
 msgstr "Broncode"
 
@@ -1299,7 +1332,7 @@ msgstr "Technische ondersteuning van Carbon"
 msgid "Technician labor tracking"
 msgstr "Arbeidstracking van technicus"
 
-#: app/components/footer.tsx:75
+#: app/components/footer.tsx:76
 msgid "Terms"
 msgstr "Voorwaarden"
 
@@ -1363,6 +1396,10 @@ msgstr "Installatiebericht bekijken"
 #: app/components/header.tsx:32
 msgid "View our source code and contribute"
 msgstr "Bekijk onze broncode en draag bij"
+
+#: app/routes/careers+/_index.tsx:78
+msgid "View role"
+msgstr "Bekijk vacature"
 
 #: app/routes/_index.tsx:846
 msgid "View the Source"

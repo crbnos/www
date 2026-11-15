@@ -68,6 +68,10 @@ msgstr "एयर-गैप्ड और ITAR-नियंत्रित वा
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "सभी कार्बन ट्रेडमार्क, लोगो, या अन्य ब्रांड तत्वों को कभी भी संशोधित नहीं किया जा सकता है या कार्बन मैनुफैक्चरिंग सिस्टम्स कॉर्पोरेशन का प्रतिनिधित्व करने के अलावा किसी अन्य उद्देश्य के लिए उपयोग नहीं किया जा सकता है।"
 
+#: app/routes/careers+/$slug.tsx:275
+msgid "All roles"
+msgstr "सभी पद"
+
 #: app/components/hero.tsx:246
 msgid "Analytics"
 msgstr "विश्लेषण"
@@ -89,6 +93,10 @@ msgstr "API डॉक्स"
 #: app/routes/about.tsx:35
 msgid "API-first, realtime subscriptions, forward/finite scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
 msgstr "API-first, रीयल-टाइम सदस्यताएं, आगे/सीमित शेड्यूलिंग, और ERP का उपयोग करने के रस को निचोड़ के लायक बनाने के लिए 1,000 छोटे विवरण।"
+
+#: app/routes/careers+/$slug.tsx:253
+msgid "Apply for this role"
+msgstr "इस पद के लिए आवेदन करें"
 
 #: app/routes/pricing.tsx:81
 msgid "Audit logs, enforced 2FA and backup/restore"
@@ -143,7 +151,11 @@ msgstr "हर ऑपरेशन को ब्राउज़ करें"
 msgid "Build hardware at the <0/><1>speed of software</1>"
 msgstr "सॉफ़्टवेयर की <0/><1>गति पर हार्डवेयर बनाएं</1>"
 
-#: app/components/footer.tsx:58
+#: app/routes/careers+/_index.tsx:36
+msgid "Build the software that runs factories."
+msgstr "वह सॉफ़्टवेयर बनाइए जो कारख़ाने चलाता है।"
+
+#: app/components/footer.tsx:59
 msgid "Build vs. buy"
 msgstr "निर्माण बनाम खरीद"
 
@@ -174,6 +186,15 @@ msgstr "Carbon ERP, MES, और QMS को एक एकीकृत प्र�
 #: app/routes/_index.tsx:410
 msgid "Carbon combines ERP, MRP, MES and QMS. Plan materials, run the shop floor, manage quality and track actual costs in one system."
 msgstr "Carbon ERP, MRP, MES और QMS को जोड़ता है। सामग्री की योजना बनाएं, दुकान फर्श चलाएं, गुणवत्ता का प्रबंधन करें और एक सिस्टम में वास्तविक लागत ट्रैक करें।"
+
+#: app/routes/careers+/_index.tsx:39
+msgid "Carbon is open-source software that runs a manufacturing business from the sales order to the shipped part. We're a team of about ten people, bootstrapped and profitable, working with manufacturers that build hard things."
+msgstr "Carbon एक ओपन-सोर्स सॉफ़्टवेयर है जो किसी विनिर्माण व्यवसाय को बिक्री ऑर्डर से लेकर भेजे गए पार्ट तक चलाता है। हम लगभग दस लोगों की टीम हैं, स्व-वित्तपोषित और लाभदायक, और कठिन चीज़ें बनाने वाले निर्माताओं के साथ काम करते हैं।"
+
+#: app/components/footer.tsx:49
+#: app/routes/careers+/_index.tsx:33
+msgid "Careers"
+msgstr "करियर"
 
 #: app/routes/_index.tsx:263
 msgid "Certificates generated from live data"
@@ -281,7 +302,7 @@ msgstr "अपने रोबोट और मशीनों को अपन�
 msgid "Consolidates {count} entities in {0}"
 msgstr "{0} में {count} संस्थाओं को समेकित करता है"
 
-#: app/components/footer.tsx:49
+#: app/components/footer.tsx:50
 #: app/routes/contact.tsx:155
 msgid "Contact"
 msgstr "संपर्क"
@@ -422,7 +443,7 @@ msgstr "परिनियोजन"
 msgid "Developer guides and API reference"
 msgstr "डेवलपर गाइड और API संदर्भ"
 
-#: app/components/footer.tsx:59
+#: app/components/footer.tsx:60
 #: app/components/header.tsx:98
 #: app/components/header.tsx:220
 msgid "Developers"
@@ -444,7 +465,7 @@ msgstr "Discord"
 msgid "Dispatch notifications"
 msgstr "तैनाती सूचनाएं"
 
-#: app/components/footer.tsx:60
+#: app/components/footer.tsx:61
 #: app/components/header.tsx:39
 msgid "Documentation"
 msgstr "दस्तावेज़"
@@ -728,7 +749,7 @@ msgstr "श्रम, स्क्रैप और पुनर्कार्�
 msgid "Lead times & buffers"
 msgstr "लीड समय और बफर"
 
-#: app/components/footer.tsx:61
+#: app/components/footer.tsx:62
 msgid "Learning"
 msgstr "सीखना"
 
@@ -740,7 +761,7 @@ msgstr "सीखने का केंद्र"
 msgid "Least expensive. Basic onboarding and email support"
 msgstr "सबसे सस्ता। बुनियादी ऑनबोर्डिंग और ईमेल सहायता"
 
-#: app/components/footer.tsx:71
+#: app/components/footer.tsx:72
 msgid "Legal"
 msgstr "कानूनी"
 
@@ -748,7 +769,7 @@ msgstr "कानूनी"
 msgid "Let us handle the infrastructure for you"
 msgstr "हमें आपके लिए बुनियादी ढांचे को संभालने दें"
 
-#: app/components/footer.tsx:62
+#: app/components/footer.tsx:63
 msgid "License"
 msgstr "लाइसेंस"
 
@@ -900,6 +921,10 @@ msgstr "हर AI क्लाइंट के लिए एक सर्वर"
 msgid "One-time purchase with full ownership"
 msgstr "एकबारी खरीद पूर्ण स्वामित्व के साथ"
 
+#: app/routes/careers+/_index.tsx:49
+msgid "Open roles"
+msgstr "खुले पद"
+
 #: app/routes/pricing.tsx:38
 msgid "Open source"
 msgstr "ओपन सोर्स"
@@ -928,6 +953,10 @@ msgstr "ऑपरेटर, नौकरियां और कार्य क�
 msgid "Opportunity opened for the customer"
 msgstr "ग्राहक के लिए खोली गई अवसर"
 
+#: app/routes/careers+/$slug.tsx:321
+msgid "Or email <0>{CAREERS_EMAIL}</0>."
+msgstr "या <0>{CAREERS_EMAIL}</0> पर ईमेल करें।"
+
 #: app/routes/_index.tsx:971
 msgid "Or self-host the open source core"
 msgstr "या खुले स्रोत कोर को स्व-होस्ट करें"
@@ -935,6 +964,10 @@ msgstr "या खुले स्रोत कोर को स्व-होस
 #: app/routes/_index.tsx:50
 msgid "orders, inventory and actual costs"
 msgstr "ऑर्डर, इन्वेंटरी और वास्तविक लागत"
+
+#: app/routes/careers+/_index.tsx:87
+msgid "Our code is public at <0>github.com/crbnos/carbon</0>, so you can read it before you apply."
+msgstr "हमारा कोड <0>github.com/crbnos/carbon</0> पर सार्वजनिक है, इसलिए आप आवेदन करने से पहले इसे पढ़ सकते हैं।"
 
 #: app/components/wizard-form.tsx:76
 msgid "Ownership Model"
@@ -973,17 +1006,17 @@ msgstr "निवारक और प्रतिक्रियाशील र
 msgid "Preventive maintenance schedules"
 msgstr "निवारक रखरखाव शेड्यूल"
 
-#: app/components/footer.tsx:63
+#: app/components/footer.tsx:64
 #: app/components/header.tsx:82
 #: app/components/header.tsx:210
 msgid "Pricing"
 msgstr "मूल्य निर्धारण"
 
-#: app/components/footer.tsx:74
+#: app/components/footer.tsx:75
 msgid "Privacy"
 msgstr "गोपनीयता"
 
-#: app/components/footer.tsx:55
+#: app/components/footer.tsx:56
 msgid "Product"
 msgstr "उत्पाद"
 
@@ -1103,7 +1136,7 @@ msgstr "एक या एक से अधिक कानूनी इकाइ
 msgid "Run production from live data."
 msgstr "लाइव डेटा से उत्पादन चलाएं।"
 
-#: app/components/footer.tsx:50
+#: app/components/footer.tsx:51
 #: app/routes/_index.tsx:125
 msgid "Sales"
 msgstr "बिक्रय"
@@ -1128,7 +1161,7 @@ msgstr "अपने वांछित समर्थन स्तर का �
 msgid "Select your preferred hosting solution"
 msgstr "अपनी पसंदीदा होस्टिंग समाधान चुनें"
 
-#: app/components/footer.tsx:64
+#: app/components/footer.tsx:65
 #: app/components/header.tsx:92
 #: app/components/header.tsx:217
 #: app/routes/_index.tsx:830
@@ -1228,7 +1261,7 @@ msgstr "आपके क्लाउड खाते में एकल-कि�
 msgid "Software as a Service"
 msgstr "सॉफ्टवेयर एज़ ए सर्विस"
 
-#: app/components/footer.tsx:65
+#: app/components/footer.tsx:66
 msgid "Source Code"
 msgstr "स्रोत कोड"
 
@@ -1299,7 +1332,7 @@ msgstr "Carbon से तकनीकी समर्थन"
 msgid "Technician labor tracking"
 msgstr "तकनीशियन श्रम ट्रैकिंग"
 
-#: app/components/footer.tsx:75
+#: app/components/footer.tsx:76
 msgid "Terms"
 msgstr "शर्तें"
 
@@ -1363,6 +1396,10 @@ msgstr "स्थापना गाइड देखें"
 #: app/components/header.tsx:32
 msgid "View our source code and contribute"
 msgstr "हमारे स्रोत कोड को देखें और योगदान दें"
+
+#: app/routes/careers+/_index.tsx:78
+msgid "View role"
+msgstr "पद देखें"
 
 #: app/routes/_index.tsx:846
 msgid "View the Source"

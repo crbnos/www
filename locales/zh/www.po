@@ -68,6 +68,10 @@ msgstr "隔离式和ITAR控制的环境"
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "所有Carbon商标、徽标或其他品牌元素不得以任何方式修改或用于任何其他目的，仅限用于代表Carbon Manufacturing Systems Corporation。"
 
+#: app/routes/careers+/$slug.tsx:275
+msgid "All roles"
+msgstr "所有职位"
+
 #: app/components/hero.tsx:246
 msgid "Analytics"
 msgstr "分析"
@@ -89,6 +93,10 @@ msgstr "API 文档"
 #: app/routes/about.tsx:35
 msgid "API-first, realtime subscriptions, forward/finite scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
 msgstr "API优先、实时订阅、正向/有限调度，以及1,000多个小细节，让使用ERP物有所值。"
+
+#: app/routes/careers+/$slug.tsx:253
+msgid "Apply for this role"
+msgstr "申请此职位"
 
 #: app/routes/pricing.tsx:81
 msgid "Audit logs, enforced 2FA and backup/restore"
@@ -143,7 +151,11 @@ msgstr "浏览每个操作"
 msgid "Build hardware at the <0/><1>speed of software</1>"
 msgstr "以<0/><1>软件的速度</1>构建硬件"
 
-#: app/components/footer.tsx:58
+#: app/routes/careers+/_index.tsx:36
+msgid "Build the software that runs factories."
+msgstr "打造驱动工厂运转的软件。"
+
+#: app/components/footer.tsx:59
 msgid "Build vs. buy"
 msgstr "自研还是购买"
 
@@ -174,6 +186,15 @@ msgstr "Carbon 将 ERP、MES 和 QMS 整合到一个统一的系统中。"
 #: app/routes/_index.tsx:410
 msgid "Carbon combines ERP, MRP, MES and QMS. Plan materials, run the shop floor, manage quality and track actual costs in one system."
 msgstr "Carbon整合了ERP、MRP、MES和QMS。在一个系统中规划物料、运营车间、管理质量并追踪实际成本。"
+
+#: app/routes/careers+/_index.tsx:39
+msgid "Carbon is open-source software that runs a manufacturing business from the sales order to the shipped part. We're a team of about ten people, bootstrapped and profitable, working with manufacturers that build hard things."
+msgstr "Carbon 是一款开源软件，管理制造企业从销售订单到零件发货的全过程。我们是一支约十人的团队，自筹资金且已盈利，与制造高难度产品的制造商合作。"
+
+#: app/components/footer.tsx:49
+#: app/routes/careers+/_index.tsx:33
+msgid "Careers"
+msgstr "加入我们"
 
 #: app/routes/_index.tsx:263
 msgid "Certificates generated from live data"
@@ -281,7 +302,7 @@ msgstr "将您的机器人和机器连接到您的生产系统"
 msgid "Consolidates {count} entities in {0}"
 msgstr "在 {0} 中汇总 {count} 个实体"
 
-#: app/components/footer.tsx:49
+#: app/components/footer.tsx:50
 #: app/routes/contact.tsx:155
 msgid "Contact"
 msgstr "联系"
@@ -422,7 +443,7 @@ msgstr "部署"
 msgid "Developer guides and API reference"
 msgstr "开发者指南和 API 参考"
 
-#: app/components/footer.tsx:59
+#: app/components/footer.tsx:60
 #: app/components/header.tsx:98
 #: app/components/header.tsx:220
 msgid "Developers"
@@ -444,7 +465,7 @@ msgstr "Discord"
 msgid "Dispatch notifications"
 msgstr "派遣通知"
 
-#: app/components/footer.tsx:60
+#: app/components/footer.tsx:61
 #: app/components/header.tsx:39
 msgid "Documentation"
 msgstr "文档"
@@ -728,7 +749,7 @@ msgstr "人工、废品和返工"
 msgid "Lead times & buffers"
 msgstr "交货期和缓冲"
 
-#: app/components/footer.tsx:61
+#: app/components/footer.tsx:62
 msgid "Learning"
 msgstr "学习"
 
@@ -740,7 +761,7 @@ msgstr "学习中心"
 msgid "Least expensive. Basic onboarding and email support"
 msgstr "最便宜。基础入门和电子邮件支持"
 
-#: app/components/footer.tsx:71
+#: app/components/footer.tsx:72
 msgid "Legal"
 msgstr "法律"
 
@@ -748,7 +769,7 @@ msgstr "法律"
 msgid "Let us handle the infrastructure for you"
 msgstr "让我们为您处理基础设施"
 
-#: app/components/footer.tsx:62
+#: app/components/footer.tsx:63
 msgid "License"
 msgstr "许可证"
 
@@ -900,6 +921,10 @@ msgstr "每个AI客户端一个服务器"
 msgid "One-time purchase with full ownership"
 msgstr "一次性购买，完全所有权"
 
+#: app/routes/careers+/_index.tsx:49
+msgid "Open roles"
+msgstr "开放职位"
+
 #: app/routes/pricing.tsx:38
 msgid "Open source"
 msgstr "开源"
@@ -928,6 +953,10 @@ msgstr "操作员、工作和工作中心"
 msgid "Opportunity opened for the customer"
 msgstr "为客户打开的商机"
 
+#: app/routes/careers+/$slug.tsx:321
+msgid "Or email <0>{CAREERS_EMAIL}</0>."
+msgstr "或发送邮件至 <0>{CAREERS_EMAIL}</0>。"
+
 #: app/routes/_index.tsx:971
 msgid "Or self-host the open source core"
 msgstr "或自托管开源核心"
@@ -935,6 +964,10 @@ msgstr "或自托管开源核心"
 #: app/routes/_index.tsx:50
 msgid "orders, inventory and actual costs"
 msgstr "订单、库存和实际成本"
+
+#: app/routes/careers+/_index.tsx:87
+msgid "Our code is public at <0>github.com/crbnos/carbon</0>, so you can read it before you apply."
+msgstr "我们的代码公开在 <0>github.com/crbnos/carbon</0>，你可以在申请前先阅读。"
 
 #: app/components/wizard-form.tsx:76
 msgid "Ownership Model"
@@ -973,17 +1006,17 @@ msgstr "预防性和反应性维护"
 msgid "Preventive maintenance schedules"
 msgstr "预防性维护计划"
 
-#: app/components/footer.tsx:63
+#: app/components/footer.tsx:64
 #: app/components/header.tsx:82
 #: app/components/header.tsx:210
 msgid "Pricing"
 msgstr "定价"
 
-#: app/components/footer.tsx:74
+#: app/components/footer.tsx:75
 msgid "Privacy"
 msgstr "隐私"
 
-#: app/components/footer.tsx:55
+#: app/components/footer.tsx:56
 msgid "Product"
 msgstr "产品"
 
@@ -1103,7 +1136,7 @@ msgstr "运营一个设施或多个法律实体和位置。Carbon处理特定实
 msgid "Run production from live data."
 msgstr "从实时数据运行生产。"
 
-#: app/components/footer.tsx:50
+#: app/components/footer.tsx:51
 #: app/routes/_index.tsx:125
 msgid "Sales"
 msgstr "销售"
@@ -1128,7 +1161,7 @@ msgstr "选择您所需的支持级别"
 msgid "Select your preferred hosting solution"
 msgstr "选择您偏好的托管解决方案"
 
-#: app/components/footer.tsx:64
+#: app/components/footer.tsx:65
 #: app/components/header.tsx:92
 #: app/components/header.tsx:217
 #: app/routes/_index.tsx:830
@@ -1228,7 +1261,7 @@ msgstr "在你的云账户中单租户部署"
 msgid "Software as a Service"
 msgstr "软件即服务"
 
-#: app/components/footer.tsx:65
+#: app/components/footer.tsx:66
 msgid "Source Code"
 msgstr "源代码"
 
@@ -1299,7 +1332,7 @@ msgstr "Carbon的技术支持"
 msgid "Technician labor tracking"
 msgstr "技术员劳动力追踪"
 
-#: app/components/footer.tsx:75
+#: app/components/footer.tsx:76
 msgid "Terms"
 msgstr "条款"
 
@@ -1363,6 +1396,10 @@ msgstr "查看安装指南"
 #: app/components/header.tsx:32
 msgid "View our source code and contribute"
 msgstr "查看我们的源代码并做出贡献"
+
+#: app/routes/careers+/_index.tsx:78
+msgid "View role"
+msgstr "查看职位"
 
 #: app/routes/_index.tsx:846
 msgid "View the Source"

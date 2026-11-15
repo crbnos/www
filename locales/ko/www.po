@@ -68,6 +68,10 @@ msgstr "에어갭 및 ITAR 통제 환경"
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "모든 Carbon 상표, 로고 또는 기타 브랜드 요소는 Carbon Manufacturing Systems Corporation을 나타내기 위한 목적 이외에는 수정되거나 사용될 수 없습니다."
 
+#: app/routes/careers+/$slug.tsx:275
+msgid "All roles"
+msgstr "모든 직무"
+
 #: app/components/hero.tsx:246
 msgid "Analytics"
 msgstr "분석"
@@ -89,6 +93,10 @@ msgstr "API 문서"
 #: app/routes/about.tsx:35
 msgid "API-first, realtime subscriptions, forward/finite scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
 msgstr "API-first, 실시간 구독, 전방향/유한 일정 관리, 그리고 ERP 사용의 가치를 충분히 누릴 수 있게 하는 1,000가지 작은 세부 사항."
+
+#: app/routes/careers+/$slug.tsx:253
+msgid "Apply for this role"
+msgstr "이 직무에 지원하기"
 
 #: app/routes/pricing.tsx:81
 msgid "Audit logs, enforced 2FA and backup/restore"
@@ -143,7 +151,11 @@ msgstr "모든 작업 탐색"
 msgid "Build hardware at the <0/><1>speed of software</1>"
 msgstr "<0/><1>소프트웨어의 속도로</1> 하드웨어 구축"
 
-#: app/components/footer.tsx:58
+#: app/routes/careers+/_index.tsx:36
+msgid "Build the software that runs factories."
+msgstr "공장을 움직이는 소프트웨어를 만드세요."
+
+#: app/components/footer.tsx:59
 msgid "Build vs. buy"
 msgstr "직접 구축 vs. 구매"
 
@@ -174,6 +186,15 @@ msgstr "Carbon은 ERP, MES, QMS를 하나의 통합 시스템으로 결합합니
 #: app/routes/_index.tsx:410
 msgid "Carbon combines ERP, MRP, MES and QMS. Plan materials, run the shop floor, manage quality and track actual costs in one system."
 msgstr "Carbon은 ERP, MRP, MES 및 QMS를 결합하여 자재 계획, 공장 운영, 품질 관리 및 실제 비용 추적을 한 시스템에서 수행합니다."
+
+#: app/routes/careers+/_index.tsx:39
+msgid "Carbon is open-source software that runs a manufacturing business from the sales order to the shipped part. We're a team of about ten people, bootstrapped and profitable, working with manufacturers that build hard things."
+msgstr "Carbon은 판매 주문부터 출하된 부품까지 제조 비즈니스를 운영하는 오픈소스 소프트웨어입니다. 우리는 약 10명으로 이루어진 팀으로, 외부 투자 없이 수익을 내고 있으며 어려운 제품을 만드는 제조사와 함께 일합니다."
+
+#: app/components/footer.tsx:49
+#: app/routes/careers+/_index.tsx:33
+msgid "Careers"
+msgstr "채용"
 
 #: app/routes/_index.tsx:263
 msgid "Certificates generated from live data"
@@ -281,7 +302,7 @@ msgstr "로봇과 기계를 생산 시스템에 연결하세요"
 msgid "Consolidates {count} entities in {0}"
 msgstr "{0}에 {count}개 엔티티 통합"
 
-#: app/components/footer.tsx:49
+#: app/components/footer.tsx:50
 #: app/routes/contact.tsx:155
 msgid "Contact"
 msgstr "연락처"
@@ -422,7 +443,7 @@ msgstr "배포"
 msgid "Developer guides and API reference"
 msgstr "개발자 가이드 및 API 참조"
 
-#: app/components/footer.tsx:59
+#: app/components/footer.tsx:60
 #: app/components/header.tsx:98
 #: app/components/header.tsx:220
 msgid "Developers"
@@ -444,7 +465,7 @@ msgstr "Discord"
 msgid "Dispatch notifications"
 msgstr "발송 알림"
 
-#: app/components/footer.tsx:60
+#: app/components/footer.tsx:61
 #: app/components/header.tsx:39
 msgid "Documentation"
 msgstr "문서"
@@ -728,7 +749,7 @@ msgstr "인건비, 스크랩 및 재작업"
 msgid "Lead times & buffers"
 msgstr "리드 타임 및 버퍼"
 
-#: app/components/footer.tsx:61
+#: app/components/footer.tsx:62
 msgid "Learning"
 msgstr "학습"
 
@@ -740,7 +761,7 @@ msgstr "학습 센터"
 msgid "Least expensive. Basic onboarding and email support"
 msgstr "가장 저렴합니다. 기본 온보딩 및 이메일 지원"
 
-#: app/components/footer.tsx:71
+#: app/components/footer.tsx:72
 msgid "Legal"
 msgstr "법적"
 
@@ -748,7 +769,7 @@ msgstr "법적"
 msgid "Let us handle the infrastructure for you"
 msgstr "인프라를 저희가 관리해드립니다"
 
-#: app/components/footer.tsx:62
+#: app/components/footer.tsx:63
 msgid "License"
 msgstr "라이선스"
 
@@ -900,6 +921,10 @@ msgstr "모든 AI 클라이언트를 위한 하나의 서버"
 msgid "One-time purchase with full ownership"
 msgstr "일회성 구매로 완전한 소유권 획득"
 
+#: app/routes/careers+/_index.tsx:49
+msgid "Open roles"
+msgstr "채용 중인 직무"
+
 #: app/routes/pricing.tsx:38
 msgid "Open source"
 msgstr "오픈 소스"
@@ -928,6 +953,10 @@ msgstr "운영자, 작업 및 작업 센터"
 msgid "Opportunity opened for the customer"
 msgstr "고객을 위해 기회 개설됨"
 
+#: app/routes/careers+/$slug.tsx:321
+msgid "Or email <0>{CAREERS_EMAIL}</0>."
+msgstr "또는 <0>{CAREERS_EMAIL}</0>로 이메일을 보내주세요."
+
 #: app/routes/_index.tsx:971
 msgid "Or self-host the open source core"
 msgstr "또는 오픈 소스 코어를 자체 호스팅"
@@ -935,6 +964,10 @@ msgstr "또는 오픈 소스 코어를 자체 호스팅"
 #: app/routes/_index.tsx:50
 msgid "orders, inventory and actual costs"
 msgstr "주문, 인벤토리 및 실제 비용"
+
+#: app/routes/careers+/_index.tsx:87
+msgid "Our code is public at <0>github.com/crbnos/carbon</0>, so you can read it before you apply."
+msgstr "우리 코드는 <0>github.com/crbnos/carbon</0>에 공개되어 있으니 지원하기 전에 읽어보실 수 있습니다."
 
 #: app/components/wizard-form.tsx:76
 msgid "Ownership Model"
@@ -973,17 +1006,17 @@ msgstr "예방적 및 반응적 유지보수"
 msgid "Preventive maintenance schedules"
 msgstr "예방적 유지보수 일정"
 
-#: app/components/footer.tsx:63
+#: app/components/footer.tsx:64
 #: app/components/header.tsx:82
 #: app/components/header.tsx:210
 msgid "Pricing"
 msgstr "가격"
 
-#: app/components/footer.tsx:74
+#: app/components/footer.tsx:75
 msgid "Privacy"
 msgstr "개인정보 보호"
 
-#: app/components/footer.tsx:55
+#: app/components/footer.tsx:56
 msgid "Product"
 msgstr "제품"
 
@@ -1103,7 +1136,7 @@ msgstr "하나의 시설 또는 여러 법인 및 위치를 운영하세요. Car
 msgid "Run production from live data."
 msgstr "실시간 데이터에서 생산 실행"
 
-#: app/components/footer.tsx:50
+#: app/components/footer.tsx:51
 #: app/routes/_index.tsx:125
 msgid "Sales"
 msgstr "판매"
@@ -1128,7 +1161,7 @@ msgstr "원하는 지원 수준을 선택하세요"
 msgid "Select your preferred hosting solution"
 msgstr "선호하는 호스팅 솔루션을 선택하세요"
 
-#: app/components/footer.tsx:64
+#: app/components/footer.tsx:65
 #: app/components/header.tsx:92
 #: app/components/header.tsx:217
 #: app/routes/_index.tsx:830
@@ -1228,7 +1261,7 @@ msgstr "클라우드 계정에서 단일 테넌트 배포"
 msgid "Software as a Service"
 msgstr "Software as a Service"
 
-#: app/components/footer.tsx:65
+#: app/components/footer.tsx:66
 msgid "Source Code"
 msgstr "소스 코드"
 
@@ -1299,7 +1332,7 @@ msgstr "Carbon의 기술 지원"
 msgid "Technician labor tracking"
 msgstr "기술자 노동 추적"
 
-#: app/components/footer.tsx:75
+#: app/components/footer.tsx:76
 msgid "Terms"
 msgstr "약관"
 
@@ -1363,6 +1396,10 @@ msgstr "설치 가이드 보기"
 #: app/components/header.tsx:32
 msgid "View our source code and contribute"
 msgstr "우리의 소스 코드를 보고 기여하세요"
+
+#: app/routes/careers+/_index.tsx:78
+msgid "View role"
+msgstr "직무 보기"
 
 #: app/routes/_index.tsx:846
 msgid "View the Source"

@@ -46,6 +46,7 @@ export function Footer() {
             <div className="col-span-2 -mx-1 flex flex-wrap gap-2 sm:flex-col">
               <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="/brand"><Trans>Brand Assets</Trans></Link>
               <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="/learn"><Trans>Blog</Trans></Link>
+              <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="/careers"><Trans>Careers</Trans></Link>
               <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="/contact"><Trans>Contact</Trans></Link>
               <Link className="text-foreground font-medium hover:underline p-1 text-sm" to="/sales"><Trans>Sales</Trans></Link>
             </div>

@@ -68,6 +68,10 @@ msgstr "Hava boşluğu ve ITAR kontrollü ortamlar"
 msgid "All Carbon trademarks, logos, or other brand elements can never be modified or used for any other purpose other than to represent Carbon Manufacturing Systems Corporation."
 msgstr "Tüm Carbon ticari markaları, logoları veya diğer marka öğeleri hiçbir zaman değiştirilemez veya Carbon Manufacturing Systems Corporation'ı temsil etmek dışında başka herhangi bir amaç için kullanılamaz."
 
+#: app/routes/careers+/$slug.tsx:275
+msgid "All roles"
+msgstr "Tüm pozisyonlar"
+
 #: app/components/hero.tsx:246
 msgid "Analytics"
 msgstr "Analitikler"
@@ -89,6 +93,10 @@ msgstr "API Dokümanları"
 #: app/routes/about.tsx:35
 msgid "API-first, realtime subscriptions, forward/finite scheduling, and 1,000 little details to make the juice of using an ERP worth the squeeze."
 msgstr "API-first, gerçek zamanlı abonelikler, ileri/sonlu planlama ve bir ERP kullanmanın zorluğuna değer katacak 1.000 küçük ayrıntı."
+
+#: app/routes/careers+/$slug.tsx:253
+msgid "Apply for this role"
+msgstr "Bu pozisyona başvur"
 
 #: app/routes/pricing.tsx:81
 msgid "Audit logs, enforced 2FA and backup/restore"
@@ -143,7 +151,11 @@ msgstr "Her işlemi gözden geçir"
 msgid "Build hardware at the <0/><1>speed of software</1>"
 msgstr "Donanımı <0/><1>yazılım hızında</1> oluştur"
 
-#: app/components/footer.tsx:58
+#: app/routes/careers+/_index.tsx:36
+msgid "Build the software that runs factories."
+msgstr "Fabrikaları çalıştıran yazılımı geliştirin."
+
+#: app/components/footer.tsx:59
 msgid "Build vs. buy"
 msgstr "Geliştirme vs. Satın Alma"
 
@@ -174,6 +186,15 @@ msgstr "Carbon, ERP, MES ve QMS'yi tek bir birleşik sisteme dönüştürür."
 #: app/routes/_index.tsx:410
 msgid "Carbon combines ERP, MRP, MES and QMS. Plan materials, run the shop floor, manage quality and track actual costs in one system."
 msgstr "Carbon, ERP, MRP, MES ve QMS'i birleştirir. Malzemeleri planlayın, atölye katını yönetin, kaliteyi yönetin ve gerçek maliyetleri bir sistemde takip edin."
+
+#: app/routes/careers+/_index.tsx:39
+msgid "Carbon is open-source software that runs a manufacturing business from the sales order to the shipped part. We're a team of about ten people, bootstrapped and profitable, working with manufacturers that build hard things."
+msgstr "Carbon, bir üretim işletmesini satış siparişinden sevk edilen parçaya kadar yöneten açık kaynaklı bir yazılımdır. Yaklaşık on kişilik, kendi kaynaklarıyla büyüyen ve kârlı bir ekibiz; zor şeyler üreten üreticilerle çalışıyoruz."
+
+#: app/components/footer.tsx:49
+#: app/routes/careers+/_index.tsx:33
+msgid "Careers"
+msgstr "Kariyer"
 
 #: app/routes/_index.tsx:263
 msgid "Certificates generated from live data"
@@ -281,7 +302,7 @@ msgstr "Robotlarınızı ve makinelerinizi üretim sistemlerinize bağlayın"
 msgid "Consolidates {count} entities in {0}"
 msgstr "{count} varlığı {0} içinde konsolide eder"
 
-#: app/components/footer.tsx:49
+#: app/components/footer.tsx:50
 #: app/routes/contact.tsx:155
 msgid "Contact"
 msgstr "İletişim"
@@ -422,7 +443,7 @@ msgstr "Dağıtım"
 msgid "Developer guides and API reference"
 msgstr "Geliştirici kılavuzları ve API referansı"
 
-#: app/components/footer.tsx:59
+#: app/components/footer.tsx:60
 #: app/components/header.tsx:98
 #: app/components/header.tsx:220
 msgid "Developers"
@@ -444,7 +465,7 @@ msgstr "Discord"
 msgid "Dispatch notifications"
 msgstr "Gönderi bildirimleri"
 
-#: app/components/footer.tsx:60
+#: app/components/footer.tsx:61
 #: app/components/header.tsx:39
 msgid "Documentation"
 msgstr "Belgeler"
@@ -728,7 +749,7 @@ msgstr "İşçilik, hurda ve yeniden işleme"
 msgid "Lead times & buffers"
 msgstr "Teslim Süreleri ve Tamponlar"
 
-#: app/components/footer.tsx:61
+#: app/components/footer.tsx:62
 msgid "Learning"
 msgstr "Öğrenme"
 
@@ -740,7 +761,7 @@ msgstr "Öğrenme Merkezi"
 msgid "Least expensive. Basic onboarding and email support"
 msgstr "En ucuz. Temel onboarding ve e-posta desteği"
 
-#: app/components/footer.tsx:71
+#: app/components/footer.tsx:72
 msgid "Legal"
 msgstr "Yasal"
 
@@ -748,7 +769,7 @@ msgstr "Yasal"
 msgid "Let us handle the infrastructure for you"
 msgstr "Altyapıyı sizin için biz yönetelim"
 
-#: app/components/footer.tsx:62
+#: app/components/footer.tsx:63
 msgid "License"
 msgstr "Lisans"
 
@@ -900,6 +921,10 @@ msgstr "Her AI müşterisi için bir sunucu"
 msgid "One-time purchase with full ownership"
 msgstr "Tek seferlik satın alma ile tam sahiplik"
 
+#: app/routes/careers+/_index.tsx:49
+msgid "Open roles"
+msgstr "Açık pozisyonlar"
+
 #: app/routes/pricing.tsx:38
 msgid "Open source"
 msgstr "Açık kaynak"
@@ -928,6 +953,10 @@ msgstr "operatörler, işler ve iş merkezleri"
 msgid "Opportunity opened for the customer"
 msgstr "Müşteri için fırsat açıldı"
 
+#: app/routes/careers+/$slug.tsx:321
+msgid "Or email <0>{CAREERS_EMAIL}</0>."
+msgstr "Ya da <0>{CAREERS_EMAIL}</0> adresine e-posta gönderin."
+
 #: app/routes/_index.tsx:971
 msgid "Or self-host the open source core"
 msgstr "Ya da açık kaynak çekirdeği kendi barındırın"
@@ -935,6 +964,10 @@ msgstr "Ya da açık kaynak çekirdeği kendi barındırın"
 #: app/routes/_index.tsx:50
 msgid "orders, inventory and actual costs"
 msgstr "siparişler, envanter ve gerçek maliyetler"
+
+#: app/routes/careers+/_index.tsx:87
+msgid "Our code is public at <0>github.com/crbnos/carbon</0>, so you can read it before you apply."
+msgstr "Kodumuz <0>github.com/crbnos/carbon</0> adresinde herkese açık, bu yüzden başvurmadan önce okuyabilirsiniz."
 
 #: app/components/wizard-form.tsx:76
 msgid "Ownership Model"
@@ -973,17 +1006,17 @@ msgstr "koruyucu ve reaktif bakım"
 msgid "Preventive maintenance schedules"
 msgstr "Koruyucu bakım takvimi"
 
-#: app/components/footer.tsx:63
+#: app/components/footer.tsx:64
 #: app/components/header.tsx:82
 #: app/components/header.tsx:210
 msgid "Pricing"
 msgstr "Fiyatlandırma"
 
-#: app/components/footer.tsx:74
+#: app/components/footer.tsx:75
 msgid "Privacy"
 msgstr "Gizlilik"
 
-#: app/components/footer.tsx:55
+#: app/components/footer.tsx:56
 msgid "Product"
 msgstr "Ürün"
 
@@ -1103,7 +1136,7 @@ msgstr "Bir tesisi veya birden fazla yasal varlığı ve yeri çalıştırın. C
 msgid "Run production from live data."
 msgstr "Canlı verilerden üretimi çalıştırın."
 
-#: app/components/footer.tsx:50
+#: app/components/footer.tsx:51
 #: app/routes/_index.tsx:125
 msgid "Sales"
 msgstr "Satış"
@@ -1128,7 +1161,7 @@ msgstr "Desiredilen destek seviyesini seçin"
 msgid "Select your preferred hosting solution"
 msgstr "Tercih ettiğiniz barındırma çözümünü seçin"
 
-#: app/components/footer.tsx:64
+#: app/components/footer.tsx:65
 #: app/components/header.tsx:92
 #: app/components/header.tsx:217
 #: app/routes/_index.tsx:830
@@ -1228,7 +1261,7 @@ msgstr "Bulut hesabınızda tek kiracılı dağıtım"
 msgid "Software as a Service"
 msgstr "Hizmet Olarak Yazılım"
 
-#: app/components/footer.tsx:65
+#: app/components/footer.tsx:66
 msgid "Source Code"
 msgstr "Kaynak Kodu"
 
@@ -1299,7 +1332,7 @@ msgstr "Carbon'dan Teknik Destek"
 msgid "Technician labor tracking"
 msgstr "Teknisyen işçi takibi"
 
-#: app/components/footer.tsx:75
+#: app/components/footer.tsx:76
 msgid "Terms"
 msgstr "Şartlar"
 
@@ -1363,6 +1396,10 @@ msgstr "Kurulum Kılavuzunu Görüntüle"
 #: app/components/header.tsx:32
 msgid "View our source code and contribute"
 msgstr "Kaynak kodlarımızı görüntüleyin ve katkıda bulunun"
+
+#: app/routes/careers+/_index.tsx:78
+msgid "View role"
+msgstr "Pozisyonu gör"
 
 #: app/routes/_index.tsx:846
 msgid "View the Source"

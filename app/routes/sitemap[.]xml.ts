@@ -1,6 +1,7 @@
 import type { LoaderFunctionArgs } from "react-router";
 import { machineReadable } from "~/lib/agent/response";
 import { getBlogPosts } from "~/lib/blog.server";
+import { getJobs } from "~/lib/careers";
 import { getComparisons } from "~/lib/compare";
 
 export const config = { runtime: "edge" };
@@ -25,6 +26,7 @@ const STATIC_ENTRIES: SitemapEntry[] = [
   { path: "/learn", changefreq: "weekly", priority: "0.8" },
   { path: "/compare", changefreq: "monthly", priority: "0.7" },
   { path: "/about", changefreq: "yearly", priority: "0.5" },
+  { path: "/careers", changefreq: "weekly", priority: "0.5" },
   { path: "/contact", changefreq: "yearly", priority: "0.5" },
   { path: "/brand", changefreq: "yearly", priority: "0.3" },
   { path: "/privacy", changefreq: "yearly", priority: "0.3" },
@@ -82,7 +84,19 @@ export async function loader(_args: LoaderFunctionArgs) {
     priority: "0.7",
   }));
 
-  const entries = [...STATIC_ENTRIES, ...postEntries, ...compareEntries];
+  const jobEntries: SitemapEntry[] = getJobs().map((job) => ({
+    path: `/careers/${job.slug}`,
+    changefreq: "weekly",
+    priority: "0.5",
+    lastmod: toLastmod(job.datePosted),
+  }));
+
+  const entries = [
+    ...STATIC_ENTRIES,
+    ...postEntries,
+    ...compareEntries,
+    ...jobEntries,
+  ];
 
   const body = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
