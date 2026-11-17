@@ -207,15 +207,15 @@ const ACCOUNT_EXECUTIVE: Job = {
   title: "Account Executive (US)",
   shortTitle: "Account Executive",
   summary:
-    "Run your own demos and build our outbound. On-target earnings are $285,000 a year with no cap.",
+    "Sell Carbon to manufacturers as our first account executive. Find your own deals, run your own demos and build our outbound from scratch.",
   location: "Remote in the United States",
   employmentType: "Full-time",
   travel: "Up to 25% travel to customer sites and trade shows",
   datePosted: "2026-11-17",
   metaDescription:
-    "Carbon is hiring its first US-based account executive to sell Carbon, the open-source ERP, MES and QMS, to manufacturers. On-target earnings are $285,000 a year.",
+    "Carbon is hiring its first US-based account executive to sell Carbon, the open-source ERP, MES and QMS, to manufacturers that build hard things.",
   intro:
-    "Carbon is hiring its first account executive. Until now, our CEO has run every sales cycle himself. New leads come in about once a day, and we've done almost no outbound. You'll be responsible for hunting and running your own deals from the first call to the signed agreement, and for building our outbound from scratch. On-target earnings are $285,000 a year with no cap.",
+    "Carbon is hiring its first account executive. Until now, our CEO has run every sales cycle himself. New leads come in about once a day, and we've done almost no outbound. You'll find and run your own deals from the first call to the signed agreement, and you'll build our outbound from scratch.",
   about: [
     "Carbon is open-source software that runs a manufacturing business from the sales order to the shipped part. Planning, purchasing, inventory, the shop floor, quality, maintenance and accounting all run on one database.",
     "Our customers get the source code, so they can change anything and never get locked in. They run Carbon in our cloud, in their own cloud (including AWS GovCloud), or on their own servers. Our code is public at github.com/crbnos/carbon, so you can read it before you apply.",
@@ -226,14 +226,14 @@ const ACCOUNT_EXECUTIVE: Job = {
       title: "What you'll do",
       items: [
         "Find new deals and run each one from the first call to the signed agreement. We don't have sales engineers or SDRs, so you'll do your own discovery, demos, proposals and contract walkthroughs.",
+        "Build our outbound. You'll find the manufacturers who should be on Carbon but haven't heard of us, through your own outreach, trade shows and factory visits.",
         "Learn how the buyer quotes, plans, buys, builds, inspects and ships, and work out whether Carbon fits. When it doesn't, you'll tell them early.",
         "Demo Carbon yourself. For your bigger deals, you'll set up the buyer's own parts, bills of materials and routings in a demo environment first, so they see their own factory running in Carbon.",
         "Help the buyer decide how to run Carbon (in our cloud, in their own cloud or on their own servers) and whether they need a forward deployed engineer. Then you'll price the deal and write the proposal and the agreement with our CEO.",
-        "Build our outbound. You'll find the manufacturers who should be on Carbon but haven't heard of us, through your own outreach, trade shows and factory visits.",
+        "Build relationships with senior executives at large manufacturers. Moving to a new ERP can be a long process, and your commitment and level of service give them the confidence to make the move to Carbon.",
         "Stay in touch with founders who aren't ready to buy yet, so that Carbon is the obvious choice when they are.",
         "Hand each new customer to the engineer or implementation specialist who will get them live, with a clear record of what they bought and what they're counting on.",
         "Stay with the customers you sign. You'll check in after they go live and handle the renewal.",
-        "Build relationships with senior executives at large manufacturers. Moving to a new ERP can be a long process, and your commitment and level of service give our customers the confidence to make the move to Carbon.",
       ],
     },
     {
@@ -253,12 +253,10 @@ const ACCOUNT_EXECUTIVE: Job = {
     },
     {
       title: "What you'll earn",
-      intro:
-        "You'll earn a salary and a commission on every customer you sign.",
       items: [
         {
-          label: "On-target earnings",
-          text: "$285,000 a year, with no cap on commission.",
+          label: "Salary and commission",
+          text: "a base salary, plus commission on every customer you sign. There's no cap on commission.",
         },
         { label: "Benefits", text: "health insurance." },
       ],
@@ -266,15 +264,14 @@ const ACCOUNT_EXECUTIVE: Job = {
     {
       title: "What you'll bring",
       items: [
-        "You've closed new business with enterprise customers as a full-cycle salesperson.",
-        "You've rarely, if ever, missed your quota.",
+        "You've closed new business with enterprise customers as a full-cycle salesperson, and you've rarely, if ever, missed your quota.",
         "You've sold to manufacturers or worked at one, and you know how bills of materials, routings, work orders, inventory and inspections fit together. If you haven't, you've sold a product technical enough that you can show us you'll learn a factory fast.",
         "You run your own demos. You can learn a deep product and show it live without a sales engineer next to you.",
         "You find your own deals. You've built a pipeline from nothing through outreach, events and your own network.",
         "You're comfortable selling to a founder, a software engineer, and a COO or head of production at a Fortune 500 company in the same week, and you know when to bring one of our engineers into the call.",
         "You tell buyers the truth, including when Carbon isn't the right fit, and you don't run down competitors to win a deal.",
-        "You can travel up to 25% of the time for customer visits and trade shows.",
         "You take ownership, work independently and don't need much direction to get things done.",
+        "You can travel up to 25% of the time for customer visits and trade shows.",
       ],
     },
     {
