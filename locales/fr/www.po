@@ -188,8 +188,8 @@ msgid "Carbon combines ERP, MRP, MES and QMS. Plan materials, run the shop floor
 msgstr "Carbon combine ERP, MRP, MES et QMS. Planifiez les matériaux, gérez l'atelier, gérez la qualité et suivez les coûts réels dans un seul système."
 
 #: app/routes/careers+/_index.tsx:39
-msgid "Carbon is open-source software that runs a manufacturing business from the sales order to the shipped part. We're a team of about ten people, bootstrapped and profitable, working with manufacturers that build hard things."
-msgstr "Carbon est un logiciel open source qui gère une entreprise manufacturière de la commande client à la pièce expédiée. Nous sommes une équipe d'une dizaine de personnes, autofinancée et rentable, au service de fabricants qui construisent des choses difficiles."
+msgid "Carbon is open-source software that runs a manufacturing business from the sales order to the shipped part. We're a team of about 15 people, bootstrapped and profitable, working with manufacturers that build hard things."
+msgstr "Carbon est un logiciel open source qui gère une entreprise manufacturière de la commande client à la pièce expédiée. Nous sommes une équipe d'une quinzaine de personnes, autofinancée et rentable, au service de fabricants qui construisent des choses difficiles."
 
 #: app/components/footer.tsx:49
 #: app/routes/careers+/_index.tsx:33

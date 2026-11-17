@@ -30,6 +30,8 @@ export type Job = {
   datePosted: string;
   metaDescription: string;
   intro: string;
+  /** Replaces the shared "About Carbon" paragraphs for this role only. */
+  about?: string[];
   sections: JobSection[];
 };
 
@@ -116,7 +118,7 @@ const FORWARD_DEPLOYED_ENGINEER: Job = {
     {
       title: "How we work",
       items: [
-        "We're a team of about ten people. You'll work directly with our CEO and our Head of Engineering.",
+        "We're a team of about 15 people. You'll work directly with our CEO and our Head of Engineering.",
         "Some customers have a dedicated FDE, and others share one with a few other customers. You may do both.",
         CHECKRIDE,
       ],
@@ -183,7 +185,7 @@ const SOFTWARE_ENGINEER: Job = {
     {
       title: "How we work",
       items: [
-        "We're a team of about ten people. You'll report to our Head of Engineering, work closely with our CEO, and own security and compliance as your area.",
+        "We're a team of about 15 people. You'll report to our Head of Engineering, work closely with our CEO, and own security and compliance as your area.",
         CHECKRIDE,
       ],
     },
@@ -214,6 +216,11 @@ const ACCOUNT_EXECUTIVE: Job = {
     "Carbon is hiring its first US-based account executive to sell Carbon, the open-source ERP, MES and QMS, to manufacturers. On-target earnings are $285,000 a year.",
   intro:
     "Carbon is hiring its first account executive. Until now, our CEO has run every sales cycle himself. New leads come in about once a day, and we've done almost no outbound. You'll be responsible for hunting and running your own deals from the first call to the signed agreement, and for building our outbound from scratch. On-target earnings are $285,000 a year with no cap.",
+  about: [
+    "Carbon is open-source software that runs a manufacturing business from the sales order to the shipped part. Planning, purchasing, inventory, the shop floor, quality, maintenance and accounting all run on one database.",
+    "Our customers get the source code, so they can change anything and never get locked in. They run Carbon in our cloud, in their own cloud (including AWS GovCloud), or on their own servers. Our code is public at github.com/crbnos/carbon, so you can read it before you apply.",
+    "We work with manufacturers that build hard things, including aerospace, defense, robotics and electronics companies. Carbon is self-funded and profitable.",
+  ],
   sections: [
     {
       title: "What you'll do",
@@ -281,7 +288,7 @@ const ACCOUNT_EXECUTIVE: Job = {
     {
       title: "How we work",
       items: [
-        "We're a team of 10 to 20 people. You'll report to our CEO and work closely with our Head of Engineering and our forward deployed engineers.",
+        "We're a team of about 15 people. You'll report to our CEO and work closely with our Head of Engineering and our forward deployed engineers.",
         "Many of our customers get a forward deployed engineer with their subscription. You'll bring our engineers into your deals when you need them.",
         CHECKRIDE,
       ],

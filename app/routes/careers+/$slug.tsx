@@ -68,7 +68,7 @@ function descriptionHtml(job: Job): string {
   };
   return [
     paragraphs([job.intro]),
-    `<h2>About Carbon</h2>${paragraphs(ABOUT_CARBON)}`,
+    `<h2>About Carbon</h2>${paragraphs(job.about ?? ABOUT_CARBON)}`,
     ...job.sections.map(section),
     `<h2>Eligibility</h2>${paragraphs(ELIGIBILITY)}`,
   ].join("");
@@ -293,7 +293,7 @@ export default function CareerRole() {
             </p>
 
             <Section title="About Carbon">
-              {ABOUT_CARBON.map((paragraph, i) => (
+              {(job.about ?? ABOUT_CARBON).map((paragraph, i) => (
                 <p key={i} className={body}>
                   <WithRepoLink text={paragraph} />
                 </p>
