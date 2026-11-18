@@ -38,7 +38,7 @@ export default function CareersIndex() {
         <p className="mt-6 max-w-[56ch] text-pretty text-lg leading-relaxed text-muted-foreground">
           <Trans>
             Carbon is open-source software that runs a manufacturing business
-            from the sales order to the shipped part. We're a team of about ten
+            from the sales order to the shipped part. We're a team of about 15
             people, bootstrapped and profitable, working with manufacturers that
             build hard things.
           </Trans>
