@@ -210,7 +210,7 @@ const ACCOUNT_EXECUTIVE: Job = {
     "Sell Carbon to manufacturers as our first account executive. Find your own deals, run your own demos and build our outbound from scratch.",
   location: "Remote in the United States",
   employmentType: "Full-time",
-  travel: "Up to 25% travel to customer sites and trade shows",
+  travel: "Up to 25% travel",
   datePosted: "2026-11-17",
   metaDescription:
     "Carbon is hiring its first US-based account executive to sell Carbon, the open-source ERP, MES and QMS, to manufacturers that build hard things.",
