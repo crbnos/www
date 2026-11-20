@@ -60,7 +60,7 @@ msgstr "Adaptive MES UI"
 msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
 msgstr "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
 
-#: app/routes/pricing.tsx:104
+#: app/routes/pricing.tsx:105
 msgid "Air-gapped and ITAR-controlled environments"
 msgstr "Air-gapped and ITAR-controlled environments"
 
@@ -236,7 +236,7 @@ msgstr "Cloud"
 msgid "Cloud + support"
 msgstr "Cloud + support"
 
-#: app/routes/pricing.tsx:102
+#: app/routes/pricing.tsx:103
 msgid "CMMC Level 2 and NIST 800-171 deployment support"
 msgstr "CMMC Level 2 and NIST 800-171 deployment support"
 
@@ -359,7 +359,7 @@ msgstr "Create a workspace, import your data and connect your integrations. Self
 msgid "Custom Development"
 msgstr "Custom Development"
 
-#: app/routes/pricing.tsx:101
+#: app/routes/pricing.tsx:102
 msgid "Custom development, training and integrations"
 msgstr "Custom development, training and integrations"
 
@@ -399,7 +399,7 @@ msgstr "Days to go live"
 msgid "Dedicated database for your organization"
 msgstr "Dedicated database for your organization"
 
-#: app/routes/pricing.tsx:105
+#: app/routes/pricing.tsx:106
 msgid "Dedicated deployment for regulated environments"
 msgstr "Dedicated deployment for regulated environments"
 
@@ -623,7 +623,7 @@ msgstr "Hosting Preference"
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 
-#: app/routes/pricing.tsx:106
+#: app/routes/pricing.tsx:101
 msgid "Implementation specialist"
 msgstr "Implementation specialist"
 

@@ -60,7 +60,7 @@ msgstr "Adaptive MES UI"
 msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
 msgstr "Üretim için uçtan uca sistemler geliştirme konusunda neredeyse on yıl geçirdikten sonra, teknik perspektiften \"ideal\" bir çözümün nasıl görüneceği hakkında oldukça iyi bir fikrim vardı:"
 
-#: app/routes/pricing.tsx:104
+#: app/routes/pricing.tsx:105
 msgid "Air-gapped and ITAR-controlled environments"
 msgstr "Hava boşluğu ve ITAR kontrollü ortamlar"
 
@@ -236,7 +236,7 @@ msgstr "Bulut"
 msgid "Cloud + support"
 msgstr "Bulut + Destek"
 
-#: app/routes/pricing.tsx:102
+#: app/routes/pricing.tsx:103
 msgid "CMMC Level 2 and NIST 800-171 deployment support"
 msgstr "CMMC Seviye 2 ve NIST 800-171 dağıtım desteği"
 
@@ -359,7 +359,7 @@ msgstr "Bir çalışma alanı oluşturun, verilerinizi içeri aktarın ve entegr
 msgid "Custom Development"
 msgstr "Özel Geliştirme"
 
-#: app/routes/pricing.tsx:101
+#: app/routes/pricing.tsx:102
 msgid "Custom development, training and integrations"
 msgstr "Özel geliştirme, eğitim ve entegrasyonlar"
 
@@ -399,7 +399,7 @@ msgstr "Yayına alınana kadar günler"
 msgid "Dedicated database for your organization"
 msgstr "Kuruluşunuz için özel veritabanı"
 
-#: app/routes/pricing.tsx:105
+#: app/routes/pricing.tsx:106
 msgid "Dedicated deployment for regulated environments"
 msgstr "Düzenleme yapılan ortamlar için özel dağıtım"
 
@@ -623,7 +623,7 @@ msgstr "Barındırma Tercihi"
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "Açık kaynak yazılımın inanılmaz bir potansiyele sahip olduğuna inanıyorum çünkü bu sadece bir ürün değil – AI ve robotik çağında üretimin geleceğini inşa etmek için çalışan benzer düşüncelere sahip insanların bir topluluğudur."
 
-#: app/routes/pricing.tsx:106
+#: app/routes/pricing.tsx:101
 msgid "Implementation specialist"
 msgstr "Uygulama uzmanı"
 

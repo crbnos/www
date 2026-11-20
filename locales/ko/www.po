@@ -60,7 +60,7 @@ msgstr "적응형 MES UI"
 msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
 msgstr "제조 산업을 위한 엔드-투-엔드 시스템을 구축하는 데 거의 10년을 보낸 후, 기술적 관점에서 \"이상적인\" 솔루션이 어떻게 보이는지에 대해 상당히 좋은 아이디어를 얻었습니다:"
 
-#: app/routes/pricing.tsx:104
+#: app/routes/pricing.tsx:105
 msgid "Air-gapped and ITAR-controlled environments"
 msgstr "에어갭 및 ITAR 통제 환경"
 
@@ -236,7 +236,7 @@ msgstr "클라우드"
 msgid "Cloud + support"
 msgstr "클라우드 + 지원"
 
-#: app/routes/pricing.tsx:102
+#: app/routes/pricing.tsx:103
 msgid "CMMC Level 2 and NIST 800-171 deployment support"
 msgstr "CMMC Level 2 및 NIST 800-171 배포 지원"
 
@@ -359,7 +359,7 @@ msgstr "워크스페이스를 만들고 데이터를 가져오고 통합을 연�
 msgid "Custom Development"
 msgstr "맞춤 개발"
 
-#: app/routes/pricing.tsx:101
+#: app/routes/pricing.tsx:102
 msgid "Custom development, training and integrations"
 msgstr "사용자 정의 개발, 교육 및 통합"
 
@@ -399,7 +399,7 @@ msgstr "라이브 출시까지의 일 수"
 msgid "Dedicated database for your organization"
 msgstr "조직을 위한 전용 데이터베이스"
 
-#: app/routes/pricing.tsx:105
+#: app/routes/pricing.tsx:106
 msgid "Dedicated deployment for regulated environments"
 msgstr "규제 환경을 위한 전용 배포"
 
@@ -623,7 +623,7 @@ msgstr "호스팅 선호도"
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "오픈소스는 단순한 제품이 아니라 AI와 로봇의 시대에 제조의 미래를 만들기 위해 노력하는 같은 생각을 가진 사람들의 커뮤니티이기 때문에 엄청난 잠재력을 가지고 있다고 믿습니다."
 
-#: app/routes/pricing.tsx:106
+#: app/routes/pricing.tsx:101
 msgid "Implementation specialist"
 msgstr "구현 전문가"
 

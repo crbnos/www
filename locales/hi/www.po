@@ -60,7 +60,7 @@ msgstr "अनुकूली MES UI"
 msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
 msgstr "विनिर्माण के लिए लगभग एक दशक तक अंत-से-अंत सिस्टम बनाने के बाद, मुझे काफी अच्छा अंदाजा था कि एक \"आदर्श\" समाधान तकनीकी दृष्टिकोण से कैसा दिखता है:"
 
-#: app/routes/pricing.tsx:104
+#: app/routes/pricing.tsx:105
 msgid "Air-gapped and ITAR-controlled environments"
 msgstr "एयर-गैप्ड और ITAR-नियंत्रित वातावरण"
 
@@ -236,7 +236,7 @@ msgstr "क्लाउड"
 msgid "Cloud + support"
 msgstr "Cloud + समर्थन"
 
-#: app/routes/pricing.tsx:102
+#: app/routes/pricing.tsx:103
 msgid "CMMC Level 2 and NIST 800-171 deployment support"
 msgstr "CMMC स्तर 2 और NIST 800-171 तैनाती समर्थन"
 
@@ -359,7 +359,7 @@ msgstr "एक कार्यक्षेत्र बनाएं, अपन�
 msgid "Custom Development"
 msgstr "कस्टम विकास"
 
-#: app/routes/pricing.tsx:101
+#: app/routes/pricing.tsx:102
 msgid "Custom development, training and integrations"
 msgstr "कस्टम विकास, प्रशिक्षण और एकीकरण"
 
@@ -399,7 +399,7 @@ msgstr "लाइव जाने के दिन"
 msgid "Dedicated database for your organization"
 msgstr "आपके संगठन के लिए समर्पित डेटाबेस"
 
-#: app/routes/pricing.tsx:105
+#: app/routes/pricing.tsx:106
 msgid "Dedicated deployment for regulated environments"
 msgstr "विनियमित वातावरण के लिए समर्पित तैनाती"
 
@@ -623,7 +623,7 @@ msgstr "होस्टिंग प्राथमिकता"
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "मुझे विश्वास है कि ओपन-सोर्स में असाधारण संभावना है क्योंकि यह केवल एक उत्पाद नहीं है–यह AI और रोबोटिक्स के युग में विनिर्माण का भविष्य बनाने के लिए समान विचारधारा वाले लोगों का एक समुदाय है।"
 
-#: app/routes/pricing.tsx:106
+#: app/routes/pricing.tsx:101
 msgid "Implementation specialist"
 msgstr "कार्यान्वयन विशेषज्ञ"
 

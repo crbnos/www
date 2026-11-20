@@ -60,7 +60,7 @@ msgstr "自适应MES用户界面"
 msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
 msgstr "在花了近十年时间为制造业构建端到端系统后，从技术角度来说，我对什么样的“理想”解决方案有了相当清楚的认识："
 
-#: app/routes/pricing.tsx:104
+#: app/routes/pricing.tsx:105
 msgid "Air-gapped and ITAR-controlled environments"
 msgstr "隔离式和ITAR控制的环境"
 
@@ -236,7 +236,7 @@ msgstr "云"
 msgid "Cloud + support"
 msgstr "云 + 支持"
 
-#: app/routes/pricing.tsx:102
+#: app/routes/pricing.tsx:103
 msgid "CMMC Level 2 and NIST 800-171 deployment support"
 msgstr "CMMC Level 2和NIST 800-171部署支持"
 
@@ -359,7 +359,7 @@ msgstr "创建工作区、导入数据并连接集成。自主托管开源核心
 msgid "Custom Development"
 msgstr "自定义开发"
 
-#: app/routes/pricing.tsx:101
+#: app/routes/pricing.tsx:102
 msgid "Custom development, training and integrations"
 msgstr "自定义开发、培训和集成"
 
@@ -399,7 +399,7 @@ msgstr "上线天数"
 msgid "Dedicated database for your organization"
 msgstr "为您的组织提供专用数据库"
 
-#: app/routes/pricing.tsx:105
+#: app/routes/pricing.tsx:106
 msgid "Dedicated deployment for regulated environments"
 msgstr "为受监管环境提供专项部署"
 
@@ -623,7 +623,7 @@ msgstr "托管偏好"
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "我相信开源具有令人难以置信的潜力，因为它不仅仅是一个产品——它是一个志同道合的人们社区，致力于在人工智能和机器人时代建设制造业的未来。"
 
-#: app/routes/pricing.tsx:106
+#: app/routes/pricing.tsx:101
 msgid "Implementation specialist"
 msgstr "实施专家"
 

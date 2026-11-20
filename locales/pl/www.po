@@ -60,7 +60,7 @@ msgstr "Adaptacyjny interfejs MES"
 msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
 msgstr "Po spędzeniu prawie dekady na budowaniu kompleksowych systemów dla produkcji miałem doskonałe wyobrażenie o tym, jak wyglądało \"idealne\" rozwiązanie z technicznego punktu widzenia:"
 
-#: app/routes/pricing.tsx:104
+#: app/routes/pricing.tsx:105
 msgid "Air-gapped and ITAR-controlled environments"
 msgstr "Środowiska izolowane sieciowo i kontrolowane przez ITAR"
 
@@ -236,7 +236,7 @@ msgstr "Cloud"
 msgid "Cloud + support"
 msgstr "Chmura + wsparcie"
 
-#: app/routes/pricing.tsx:102
+#: app/routes/pricing.tsx:103
 msgid "CMMC Level 2 and NIST 800-171 deployment support"
 msgstr "Wsparcie wdrażania CMMC Level 2 i NIST 800-171"
 
@@ -359,7 +359,7 @@ msgstr "Utwórz obszar roboczy, zaimportuj swoje dane i połącz swoje integracj
 msgid "Custom Development"
 msgstr "Niestandardowe Opracowanie"
 
-#: app/routes/pricing.tsx:101
+#: app/routes/pricing.tsx:102
 msgid "Custom development, training and integrations"
 msgstr "Niestandardowy rozwój, szkolenia i integracje"
 
@@ -399,7 +399,7 @@ msgstr "Dni do uruchomienia"
 msgid "Dedicated database for your organization"
 msgstr "Dedykowana baza danych dla Twojej organizacji"
 
-#: app/routes/pricing.tsx:105
+#: app/routes/pricing.tsx:106
 msgid "Dedicated deployment for regulated environments"
 msgstr "Dedykowane wdrożenie dla środowisk regulowanych"
 
@@ -623,7 +623,7 @@ msgstr "Preferencja hostingu"
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "Uważam, że open-source ma niesamowity potencjał, ponieważ to nie jest po prostu produkt – to społeczność ludzi o podobnych poglądach pracujących nad budowaniem przyszłości produkcji w epoce AI i robotyki."
 
-#: app/routes/pricing.tsx:106
+#: app/routes/pricing.tsx:101
 msgid "Implementation specialist"
 msgstr "Specjalista ds. wdrożenia"
 

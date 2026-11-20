@@ -60,7 +60,7 @@ msgstr "適応MES UI"
 msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
 msgstr "製造業向けのエンドツーエンドシステムを構築して約10年が経ち、技術的な観点から「理想的な」ソリューションがどのような形であるべきかについて、かなり明確なビジョンを持つようになりました。"
 
-#: app/routes/pricing.tsx:104
+#: app/routes/pricing.tsx:105
 msgid "Air-gapped and ITAR-controlled environments"
 msgstr "エアギャップ環境とITAR制御環境"
 
@@ -236,7 +236,7 @@ msgstr "クラウド"
 msgid "Cloud + support"
 msgstr "クラウド + サポート"
 
-#: app/routes/pricing.tsx:102
+#: app/routes/pricing.tsx:103
 msgid "CMMC Level 2 and NIST 800-171 deployment support"
 msgstr "CMMC Level 2とNIST 800-171の展開サポート"
 
@@ -359,7 +359,7 @@ msgstr "ワークスペースを作成し、データをインポートし、統
 msgid "Custom Development"
 msgstr "カスタム開発"
 
-#: app/routes/pricing.tsx:101
+#: app/routes/pricing.tsx:102
 msgid "Custom development, training and integrations"
 msgstr "カスタム開発、トレーニング、統合"
 
@@ -399,7 +399,7 @@ msgstr "運用開始までの日数"
 msgid "Dedicated database for your organization"
 msgstr "あなたの組織専用のデータベース"
 
-#: app/routes/pricing.tsx:105
+#: app/routes/pricing.tsx:106
 msgid "Dedicated deployment for regulated environments"
 msgstr "規制環境向けの専用展開"
 
@@ -623,7 +623,7 @@ msgstr "ホスティング設定"
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "オープンソースは素晴らしい可能性を秘めていると信じています。なぜなら、それは単なる製品ではなく、AIとロボティクスの時代に製造業の未来を構築しようとする志を同じくする人々のコミュニティだからです。"
 
-#: app/routes/pricing.tsx:106
+#: app/routes/pricing.tsx:101
 msgid "Implementation specialist"
 msgstr "導入スペシャリスト"
 
