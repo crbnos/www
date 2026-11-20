@@ -122,7 +122,7 @@ msgstr "Mejor sistema ERP/MRP/MES que he visto en una carrera de 22 años en def
 msgid "Bill of Materials"
 msgstr "Lista de Materiales"
 
-#: app/routes/pricing.tsx:222
+#: app/routes/pricing.tsx:223
 msgid "Billed per user, monthly · 30-day free trial · Cancel anytime"
 msgstr "Facturado por usuario, mensualmente · Prueba gratuita de 30 días · Cancelar en cualquier momento"
 
@@ -228,7 +228,7 @@ msgstr "Claude, ChatGPT, Cursor y Codex cargan solo las operaciones que una tare
 msgid "Close"
 msgstr "Cerrar"
 
-#: app/routes/pricing.tsx:211
+#: app/routes/pricing.tsx:212
 msgid "Cloud"
 msgstr "Nube"
 
@@ -435,7 +435,7 @@ msgstr "Despliega en tu VPC, on-prem o completamente aislado. Mantén CUI dentro
 msgid "Deploy with Docker on your servers or in your VPC"
 msgstr "Despliega con Docker en tus servidores o en tu VPC"
 
-#: app/routes/pricing.tsx:208
+#: app/routes/pricing.tsx:209
 msgid "Deployment"
 msgstr "Implementación"
 
@@ -598,7 +598,7 @@ msgstr "Genera cada configuración a partir de reglas."
 msgid "Get Started"
 msgstr "Comenzar"
 
-#: app/routes/pricing.tsx:257
+#: app/routes/pricing.tsx:258
 msgid "Get started for free."
 msgstr "Empieza gratis."
 
@@ -624,8 +624,8 @@ msgid "I believe open-source has incredible potential because it's not just a pr
 msgstr "Creo que el código abierto tiene un potencial increíble porque no es solo un producto, es una comunidad de personas con ideas afines trabajando para construir el futuro de la manufactura en la era de la IA y la robótica."
 
 #: app/routes/pricing.tsx:106
-msgid "Implementation and data migration"
-msgstr "Implementación y migración de datos"
+msgid "Implementation specialist"
+msgstr "Especialista en implementación"
 
 #: app/components/status-indicator.tsx:8
 msgid "Incident detected"
@@ -648,6 +648,10 @@ msgstr "inspección, cumplimiento y genealogía"
 #: app/routes/_index.tsx:738
 msgid "Integrate every manufacturing workflow."
 msgstr "Integra cada flujo de trabajo de manufactura."
+
+#: app/routes/pricing.tsx:107
+msgid "Integration and data migration support"
+msgstr "Soporte de integración y migración de datos"
 
 #: app/components/wizard-form.tsx:174
 msgid "Integrations"
@@ -773,7 +777,7 @@ msgstr "Déjanos manejar la infraestructura por ti"
 msgid "License"
 msgstr "Licencia"
 
-#: app/routes/pricing.tsx:230
+#: app/routes/pricing.tsx:231
 msgid "Licensed per user, monthly · Community Edition free under AGPL-3.0"
 msgstr "Licenciado por usuario, mensualmente · Edición Comunitaria gratuita bajo AGPL-3.0"
 
@@ -885,7 +889,7 @@ msgstr "Nombre"
 msgid "NCR to CAPA workflow with sign-off"
 msgstr "Flujo de trabajo de NCR a CAPA con aprobación"
 
-#: app/routes/pricing.tsx:264
+#: app/routes/pricing.tsx:265
 msgid "Need APIs, MCP, advanced controls or deployment support? <0>Request an Enterprise license</0>."
 msgstr "¿Necesitas APIs, MCP, controles avanzados o soporte de despliegue? <0>Solicita una licencia Enterprise</0>."
 
@@ -1095,7 +1099,7 @@ msgstr "API REST, webhooks, integraciones y MCP"
 msgid "Review the code before deployment"
 msgstr "Revisa el código antes del despliegue"
 
-#: app/routes/pricing.tsx:260
+#: app/routes/pricing.tsx:261
 msgid "Review the source and deploy the core manufacturing modules in your own environment under AGPL-3.0."
 msgstr "Revisa el código fuente y despliega los módulos de manufactura principales en tu propio entorno bajo AGPL-3.0."
 
@@ -1165,7 +1169,7 @@ msgstr "Selecciona tu solución de alojamiento preferida"
 #: app/components/header.tsx:92
 #: app/components/header.tsx:217
 #: app/routes/_index.tsx:830
-#: app/routes/pricing.tsx:215
+#: app/routes/pricing.tsx:216
 msgid "Self-hosted"
 msgstr "Alojado por sí mismo"
 
@@ -1245,7 +1249,7 @@ msgstr "Modo de consola del piso de producción"
 msgid "Shortage escalation"
 msgstr "Escalada de escasez"
 
-#: app/routes/pricing.tsx:194
+#: app/routes/pricing.tsx:195
 msgid "Simple pricing based on your needs."
 msgstr "Precios simples según tus necesidades."
 
@@ -1269,7 +1273,7 @@ msgstr "Código Fuente"
 msgid "Spare parts consumption"
 msgstr "Consumo de piezas de repuesto"
 
-#: app/routes/pricing.tsx:107
+#: app/routes/pricing.tsx:108
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
@@ -1278,7 +1282,7 @@ msgid "Star Carbon on GitHub"
 msgstr "Destacar Carbon en GitHub"
 
 #: app/routes/about.tsx:105
-#: app/routes/pricing.tsx:284
+#: app/routes/pricing.tsx:285
 msgid "Star on GitHub"
 msgstr "Destacar en GitHub"
 
@@ -1376,7 +1380,7 @@ msgstr "Clientes tipados en tu idioma"
 msgid "Typical first deployment"
 msgstr "Primer despliegue típico"
 
-#: app/routes/pricing.tsx:108
+#: app/routes/pricing.tsx:109
 msgid "Unlimited functional support"
 msgstr "Soporte funcional ilimitado"
 
@@ -1384,12 +1388,12 @@ msgstr "Soporte funcional ilimitado"
 msgid "Unlimited records"
 msgstr "Registros ilimitados"
 
-#: app/routes/pricing.tsx:197
+#: app/routes/pricing.tsx:198
 msgid "Use Carbon's managed cloud or run it on your infrastructure. Cloud plans include a 30-day trial with no sales call."
 msgstr "Utiliza la nube administrada de Carbon o ejecútala en tu infraestructura. Los planes en la nube incluyen una prueba de 30 días sin llamada de ventas."
 
 #: app/routes/pricing.tsx:41
-#: app/routes/pricing.tsx:278
+#: app/routes/pricing.tsx:279
 msgid "View Installation Guide"
 msgstr "Ver guía de instalación"
 

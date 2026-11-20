@@ -103,7 +103,8 @@ function usePlans(deployment: Deployment) {
 				selfHosted
 					? t`Air-gapped and ITAR-controlled environments`
 					: t`Dedicated deployment for regulated environments`,
-				t`Implementation and data migration`,
+				t`Implementation specialist`,
+				t`Integration and data migration support`,
 				t`SSO/SAML`,
 				t`Unlimited functional support`,
 			],

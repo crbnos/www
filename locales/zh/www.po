@@ -122,7 +122,7 @@ msgstr "我在国防和汽车领域22年职业生涯中见过的最好的ERP/MRP
 msgid "Bill of Materials"
 msgstr "物料清单"
 
-#: app/routes/pricing.tsx:222
+#: app/routes/pricing.tsx:223
 msgid "Billed per user, monthly · 30-day free trial · Cancel anytime"
 msgstr "按用户按月计费 · 30天免费试用 · 随时取消"
 
@@ -228,7 +228,7 @@ msgstr "Claude、ChatGPT、Cursor和Codex只加载任务所需的操作，所以
 msgid "Close"
 msgstr "关闭"
 
-#: app/routes/pricing.tsx:211
+#: app/routes/pricing.tsx:212
 msgid "Cloud"
 msgstr "云"
 
@@ -435,7 +435,7 @@ msgstr "在你的VPC、本地或完全隔离的环境中部署。在支持CMMC�
 msgid "Deploy with Docker on your servers or in your VPC"
 msgstr "在你的服务器上或在你的VPC中使用Docker部署"
 
-#: app/routes/pricing.tsx:208
+#: app/routes/pricing.tsx:209
 msgid "Deployment"
 msgstr "部署"
 
@@ -598,7 +598,7 @@ msgstr "从规则生成每个配置。"
 msgid "Get Started"
 msgstr "开始"
 
-#: app/routes/pricing.tsx:257
+#: app/routes/pricing.tsx:258
 msgid "Get started for free."
 msgstr "免费开始。"
 
@@ -624,8 +624,8 @@ msgid "I believe open-source has incredible potential because it's not just a pr
 msgstr "我相信开源具有令人难以置信的潜力，因为它不仅仅是一个产品——它是一个志同道合的人们社区，致力于在人工智能和机器人时代建设制造业的未来。"
 
 #: app/routes/pricing.tsx:106
-msgid "Implementation and data migration"
-msgstr "实施和数据迁移"
+msgid "Implementation specialist"
+msgstr "实施专家"
 
 #: app/components/status-indicator.tsx:8
 msgid "Incident detected"
@@ -648,6 +648,10 @@ msgstr "检查、合规性和系谱"
 #: app/routes/_index.tsx:738
 msgid "Integrate every manufacturing workflow."
 msgstr "集成每个制造工作流。"
+
+#: app/routes/pricing.tsx:107
+msgid "Integration and data migration support"
+msgstr "集成与数据迁移支持"
 
 #: app/components/wizard-form.tsx:174
 msgid "Integrations"
@@ -773,7 +777,7 @@ msgstr "让我们为您处理基础设施"
 msgid "License"
 msgstr "许可证"
 
-#: app/routes/pricing.tsx:230
+#: app/routes/pricing.tsx:231
 msgid "Licensed per user, monthly · Community Edition free under AGPL-3.0"
 msgstr "按用户按月许可 · 社区版在AGPL-3.0下免费"
 
@@ -885,7 +889,7 @@ msgstr "名称"
 msgid "NCR to CAPA workflow with sign-off"
 msgstr "NCR到CAPA工作流程，带签核"
 
-#: app/routes/pricing.tsx:264
+#: app/routes/pricing.tsx:265
 msgid "Need APIs, MCP, advanced controls or deployment support? <0>Request an Enterprise license</0>."
 msgstr "需要APIs、MCP、高级控制或部署支持？<0>请求企业许可</0>。"
 
@@ -1095,7 +1099,7 @@ msgstr "REST API、webhooks、集成和MCP"
 msgid "Review the code before deployment"
 msgstr "部署前审查代码"
 
-#: app/routes/pricing.tsx:260
+#: app/routes/pricing.tsx:261
 msgid "Review the source and deploy the core manufacturing modules in your own environment under AGPL-3.0."
 msgstr "审查源代码并在你自己的环境中在AGPL-3.0下部署核心制造模块。"
 
@@ -1165,7 +1169,7 @@ msgstr "选择您偏好的托管解决方案"
 #: app/components/header.tsx:92
 #: app/components/header.tsx:217
 #: app/routes/_index.tsx:830
-#: app/routes/pricing.tsx:215
+#: app/routes/pricing.tsx:216
 msgid "Self-hosted"
 msgstr "自主托管"
 
@@ -1245,7 +1249,7 @@ msgstr "车间控制台模式"
 msgid "Shortage escalation"
 msgstr "短缺升级"
 
-#: app/routes/pricing.tsx:194
+#: app/routes/pricing.tsx:195
 msgid "Simple pricing based on your needs."
 msgstr "基于你的需求的简单定价。"
 
@@ -1269,7 +1273,7 @@ msgstr "源代码"
 msgid "Spare parts consumption"
 msgstr "备件消耗"
 
-#: app/routes/pricing.tsx:107
+#: app/routes/pricing.tsx:108
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
@@ -1278,7 +1282,7 @@ msgid "Star Carbon on GitHub"
 msgstr "在 GitHub 上为 Carbon 加星"
 
 #: app/routes/about.tsx:105
-#: app/routes/pricing.tsx:284
+#: app/routes/pricing.tsx:285
 msgid "Star on GitHub"
 msgstr "在 GitHub 上标星"
 
@@ -1376,7 +1380,7 @@ msgstr "你的语言中的类型化客户端"
 msgid "Typical first deployment"
 msgstr "典型首次部署"
 
-#: app/routes/pricing.tsx:108
+#: app/routes/pricing.tsx:109
 msgid "Unlimited functional support"
 msgstr "无限功能支持"
 
@@ -1384,12 +1388,12 @@ msgstr "无限功能支持"
 msgid "Unlimited records"
 msgstr "无限记录"
 
-#: app/routes/pricing.tsx:197
+#: app/routes/pricing.tsx:198
 msgid "Use Carbon's managed cloud or run it on your infrastructure. Cloud plans include a 30-day trial with no sales call."
 msgstr "使用Carbon的托管云或在你的基础设施上运行它。云计划包括没有销售电话的30天试用。"
 
 #: app/routes/pricing.tsx:41
-#: app/routes/pricing.tsx:278
+#: app/routes/pricing.tsx:279
 msgid "View Installation Guide"
 msgstr "查看安装指南"
 
