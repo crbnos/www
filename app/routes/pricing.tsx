@@ -98,12 +98,13 @@ function usePlans(deployment: Deployment) {
 					? t`On-prem, private cloud or air-gapped deployment`
 					: t`Single-tenant deployment in your cloud account`,
 				t`Forward-deployed engineer`,
+				t`Implementation specialist`,
 				t`Custom development, training and integrations`,
 				t`CMMC Level 2 and NIST 800-171 deployment support`,
 				selfHosted
 					? t`Air-gapped and ITAR-controlled environments`
 					: t`Dedicated deployment for regulated environments`,
-				t`Implementation and data migration`,
+				t`Integration and data migration support`,
 				t`SSO/SAML`,
 				t`Unlimited functional support`,
 			],

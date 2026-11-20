@@ -60,7 +60,7 @@ msgstr "적응형 MES UI"
 msgid "After spending nearly a decade building end-to-end systems for manufacturing, I had a pretty good idea of what an \"ideal\" solution looked like from a technical perspective:"
 msgstr "제조 산업을 위한 엔드-투-엔드 시스템을 구축하는 데 거의 10년을 보낸 후, 기술적 관점에서 \"이상적인\" 솔루션이 어떻게 보이는지에 대해 상당히 좋은 아이디어를 얻었습니다:"
 
-#: app/routes/pricing.tsx:104
+#: app/routes/pricing.tsx:105
 msgid "Air-gapped and ITAR-controlled environments"
 msgstr "에어갭 및 ITAR 통제 환경"
 
@@ -122,7 +122,7 @@ msgstr "국방 및 자동차 분야의 22년 경력에서 본 최고의 ERP/MRP/
 msgid "Bill of Materials"
 msgstr "자재 명세서"
 
-#: app/routes/pricing.tsx:222
+#: app/routes/pricing.tsx:223
 msgid "Billed per user, monthly · 30-day free trial · Cancel anytime"
 msgstr "사용자당 월별 청구 · 30일 무료 체험 · 언제든지 취소"
 
@@ -228,7 +228,7 @@ msgstr "Claude, ChatGPT, Cursor 및 Codex는 작업에 필요한 작업만 로�
 msgid "Close"
 msgstr "닫기"
 
-#: app/routes/pricing.tsx:211
+#: app/routes/pricing.tsx:212
 msgid "Cloud"
 msgstr "클라우드"
 
@@ -236,7 +236,7 @@ msgstr "클라우드"
 msgid "Cloud + support"
 msgstr "클라우드 + 지원"
 
-#: app/routes/pricing.tsx:102
+#: app/routes/pricing.tsx:103
 msgid "CMMC Level 2 and NIST 800-171 deployment support"
 msgstr "CMMC Level 2 및 NIST 800-171 배포 지원"
 
@@ -359,7 +359,7 @@ msgstr "워크스페이스를 만들고 데이터를 가져오고 통합을 연�
 msgid "Custom Development"
 msgstr "맞춤 개발"
 
-#: app/routes/pricing.tsx:101
+#: app/routes/pricing.tsx:102
 msgid "Custom development, training and integrations"
 msgstr "사용자 정의 개발, 교육 및 통합"
 
@@ -399,7 +399,7 @@ msgstr "라이브 출시까지의 일 수"
 msgid "Dedicated database for your organization"
 msgstr "조직을 위한 전용 데이터베이스"
 
-#: app/routes/pricing.tsx:105
+#: app/routes/pricing.tsx:106
 msgid "Dedicated deployment for regulated environments"
 msgstr "규제 환경을 위한 전용 배포"
 
@@ -435,7 +435,7 @@ msgstr "VPC, 온프레미스 또는 완전한 에어갭 환경에 배포하세�
 msgid "Deploy with Docker on your servers or in your VPC"
 msgstr "Docker를 사용하여 서버 또는 VPC에서 배포"
 
-#: app/routes/pricing.tsx:208
+#: app/routes/pricing.tsx:209
 msgid "Deployment"
 msgstr "배포"
 
@@ -598,7 +598,7 @@ msgstr "규칙에서 각 구성 생성"
 msgid "Get Started"
 msgstr "시작하기"
 
-#: app/routes/pricing.tsx:257
+#: app/routes/pricing.tsx:258
 msgid "Get started for free."
 msgstr "무료로 시작하세요."
 
@@ -623,9 +623,9 @@ msgstr "호스팅 선호도"
 msgid "I believe open-source has incredible potential because it's not just a product–it's a community of like-minded people working to build the future of manufacturing in the age of AI and robotics."
 msgstr "오픈소스는 단순한 제품이 아니라 AI와 로봇의 시대에 제조의 미래를 만들기 위해 노력하는 같은 생각을 가진 사람들의 커뮤니티이기 때문에 엄청난 잠재력을 가지고 있다고 믿습니다."
 
-#: app/routes/pricing.tsx:106
-msgid "Implementation and data migration"
-msgstr "구현 및 데이터 마이그레이션"
+#: app/routes/pricing.tsx:101
+msgid "Implementation specialist"
+msgstr "구현 전문가"
 
 #: app/components/status-indicator.tsx:8
 msgid "Incident detected"
@@ -648,6 +648,10 @@ msgstr "검사, 준수 및 계보"
 #: app/routes/_index.tsx:738
 msgid "Integrate every manufacturing workflow."
 msgstr "모든 제조 워크플로우 통합"
+
+#: app/routes/pricing.tsx:107
+msgid "Integration and data migration support"
+msgstr "통합 및 데이터 마이그레이션 지원"
 
 #: app/components/wizard-form.tsx:174
 msgid "Integrations"
@@ -773,7 +777,7 @@ msgstr "인프라를 저희가 관리해드립니다"
 msgid "License"
 msgstr "라이선스"
 
-#: app/routes/pricing.tsx:230
+#: app/routes/pricing.tsx:231
 msgid "Licensed per user, monthly · Community Edition free under AGPL-3.0"
 msgstr "사용자당 월별 라이선스 · 커뮤니티 에디션은 AGPL-3.0 하에서 무료"
 
@@ -885,7 +889,7 @@ msgstr "이름"
 msgid "NCR to CAPA workflow with sign-off"
 msgstr "서명이 있는 NCR에서 CAPA 워크플로우로"
 
-#: app/routes/pricing.tsx:264
+#: app/routes/pricing.tsx:265
 msgid "Need APIs, MCP, advanced controls or deployment support? <0>Request an Enterprise license</0>."
 msgstr "API, MCP, 고급 제어 또는 배포 지원이 필요하신가요? <0>Enterprise 라이선스 요청</0>"
 
@@ -1095,7 +1099,7 @@ msgstr "REST API, webhook, 통합 및 MCP"
 msgid "Review the code before deployment"
 msgstr "배포 전에 코드 검토"
 
-#: app/routes/pricing.tsx:260
+#: app/routes/pricing.tsx:261
 msgid "Review the source and deploy the core manufacturing modules in your own environment under AGPL-3.0."
 msgstr "소스를 검토하고 AGPL-3.0 라이선스로 자신의 환경에 핵심 제조 모듈을 배포하세요."
 
@@ -1165,7 +1169,7 @@ msgstr "선호하는 호스팅 솔루션을 선택하세요"
 #: app/components/header.tsx:92
 #: app/components/header.tsx:217
 #: app/routes/_index.tsx:830
-#: app/routes/pricing.tsx:215
+#: app/routes/pricing.tsx:216
 msgid "Self-hosted"
 msgstr "자체 호스팅"
 
@@ -1245,7 +1249,7 @@ msgstr "샵 플로어 콘솔 모드"
 msgid "Shortage escalation"
 msgstr "부족 에스컬레이션"
 
-#: app/routes/pricing.tsx:194
+#: app/routes/pricing.tsx:195
 msgid "Simple pricing based on your needs."
 msgstr "필요에 따른 간단한 가격 책정"
 
@@ -1269,7 +1273,7 @@ msgstr "소스 코드"
 msgid "Spare parts consumption"
 msgstr "예비 부품 소비"
 
-#: app/routes/pricing.tsx:107
+#: app/routes/pricing.tsx:108
 msgid "SSO/SAML"
 msgstr "SSO/SAML"
 
@@ -1278,7 +1282,7 @@ msgid "Star Carbon on GitHub"
 msgstr "GitHub에서 Carbon에 별 표시하기"
 
 #: app/routes/about.tsx:105
-#: app/routes/pricing.tsx:284
+#: app/routes/pricing.tsx:285
 msgid "Star on GitHub"
 msgstr "GitHub에서 별 표시"
 
@@ -1376,7 +1380,7 @@ msgstr "귀사의 언어로 된 유형화된 클라이언트"
 msgid "Typical first deployment"
 msgstr "일반적인 첫 배포"
 
-#: app/routes/pricing.tsx:108
+#: app/routes/pricing.tsx:109
 msgid "Unlimited functional support"
 msgstr "무제한 기능 지원"
 
@@ -1384,12 +1388,12 @@ msgstr "무제한 기능 지원"
 msgid "Unlimited records"
 msgstr "무제한 레코드"
 
-#: app/routes/pricing.tsx:197
+#: app/routes/pricing.tsx:198
 msgid "Use Carbon's managed cloud or run it on your infrastructure. Cloud plans include a 30-day trial with no sales call."
 msgstr "Carbon의 관리형 클라우드를 사용하거나 인프라에서 실행하세요. 클라우드 플랜에는 영업 담당자 없이 30일 무료 체험이 포함됩니다."
 
 #: app/routes/pricing.tsx:41
-#: app/routes/pricing.tsx:278
+#: app/routes/pricing.tsx:279
 msgid "View Installation Guide"
 msgstr "설치 가이드 보기"
 
